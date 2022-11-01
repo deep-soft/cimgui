@@ -1,5 +1,297 @@
 local defs = {}
 defs["enum_comments"] = {}
+defs["enum_comments"]["ImDrawFlags_"] = "\
+// Flags for ImDrawList functions\
+\
+// (Legacy: bit 0 must always correspond to ImDrawFlags_Closed to be backward compatible with old API using a bool. Bits 1..3 must be unused)"
+defs["enum_comments"]["ImDrawListFlags_"] = "\
+// Flags for ImDrawList instance. Those are set automatically by ImGui:: functions from ImGuiIO settings, and generally not manipulated directly.\
+\
+// It is however possible to temporarily alter flags between calls to ImDrawList:: functions."
+defs["enum_comments"]["ImFontAtlasFlags_"] = "\
+// Flags for ImFontAtlas build"
+defs["enum_comments"]["ImGuiActivateFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Navigation support\
+\
+//-----------------------------------------------------------------------------"
+defs["enum_comments"]["ImGuiAxis"] = "\
+// X/Y enums are fixed to 0/1 so they may be used to index ImVec2"
+defs["enum_comments"]["ImGuiBackendFlags_"] = "\
+// Backend capabilities flags stored in io.BackendFlags. Set by imgui_impl_xxx or custom backend."
+defs["enum_comments"]["ImGuiButtonFlagsPrivate_"] = "\
+// Extend ImGuiButtonFlags_"
+defs["enum_comments"]["ImGuiButtonFlags_"] = "\
+// Flags for InvisibleButton() [extended in imgui_internal.h]"
+defs["enum_comments"]["ImGuiCol_"] = "\
+// Enumeration for PushStyleColor() / PopStyleColor()"
+defs["enum_comments"]["ImGuiColorEditFlags_"] = "\
+// Flags for ColorEdit3() / ColorEdit4() / ColorPicker3() / ColorPicker4() / ColorButton()"
+defs["enum_comments"]["ImGuiComboFlagsPrivate_"] = "\
+// Extend ImGuiComboFlags_"
+defs["enum_comments"]["ImGuiComboFlags_"] = "\
+// Flags for ImGui::BeginCombo()"
+defs["enum_comments"]["ImGuiCond_"] = "\
+// Enumeration for ImGui::SetWindow***(), SetNextWindow***(), SetNextItem***() functions\
+\
+// Represent a condition.\
+\
+// Important: Treat as a regular enum! Do NOT combine multiple values using binary operators! All the functions above treat 0 as a shortcut to ImGuiCond_Always."
+defs["enum_comments"]["ImGuiConfigFlags_"] = "\
+// Configuration flags stored in io.ConfigFlags. Set by user/application."
+defs["enum_comments"]["ImGuiDataAuthority_"] = "\
+// Store the source authority (dock node vs window) of a field"
+defs["enum_comments"]["ImGuiDataTypePrivate_"] = "\
+// Extend ImGuiDataType_"
+defs["enum_comments"]["ImGuiDataType_"] = "\
+// Standard Drag and Drop payload types. You can define you own payload types using short strings. Types starting with '_' are defined by Dear ImGui.\
+\
+// A primary data type"
+defs["enum_comments"]["ImGuiDebugLogFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Metrics, Debug Tools\
+\
+//-----------------------------------------------------------------------------"
+defs["enum_comments"]["ImGuiDir_"] = "\
+// A cardinal direction"
+defs["enum_comments"]["ImGuiDockNodeFlagsPrivate_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Multi-select support\
+\
+//-----------------------------------------------------------------------------\
+\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Docking support\
+\
+//-----------------------------------------------------------------------------\
+\
+// Extend ImGuiDockNodeFlags_"
+defs["enum_comments"]["ImGuiDockNodeFlags_"] = "\
+// Flags for ImGui::DockSpace(), shared/inherited by child nodes.\
+\
+// (Some flags can be applied to individual nodes directly)\
+\
+// FIXME-DOCK: Also see ImGuiDockNodeFlagsPrivate_ which may involve using the WIP and internal DockBuilder api."
+defs["enum_comments"]["ImGuiDragDropFlags_"] = "\
+// Flags for ImGui::BeginDragDropSource(), ImGui::AcceptDragDropPayload()"
+defs["enum_comments"]["ImGuiFocusedFlags_"] = "\
+// Flags for ImGui::IsWindowFocused()"
+defs["enum_comments"]["ImGuiHoveredFlags_"] = "\
+// Flags for ImGui::IsItemHovered(), ImGui::IsWindowHovered()\
+\
+// Note: if you are trying to check whether your mouse should be dispatched to Dear ImGui or to your app, you should use 'io.WantCaptureMouse' instead! Please read the FAQ!\
+\
+// Note: windows with the ImGuiWindowFlags_NoInputs flag are ignored by IsWindowHovered() calls."
+defs["enum_comments"]["ImGuiInputTextFlagsPrivate_"] = "\
+// Extend ImGuiInputTextFlags_"
+defs["enum_comments"]["ImGuiInputTextFlags_"] = "\
+// Flags for ImGui::InputText()"
+defs["enum_comments"]["ImGuiItemFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Widgets support: flags, enums, data structures\
+\
+//-----------------------------------------------------------------------------\
+\
+// Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().\
+\
+// This is going to be exposed in imgui.h when stabilized enough."
+defs["enum_comments"]["ImGuiItemStatusFlags_"] = "\
+// Storage for LastItem data"
+defs["enum_comments"]["ImGuiKey_"] = "\
+// Keys value 0 to 511 are left unused as legacy native/opaque key values (< 1.87)\
+\
+// Keys value >= 512 are named keys (>= 1.87)"
+defs["enum_comments"]["ImGuiLayoutType_"] = "\
+// FIXME: this is in development, not exposed/functional as a generic feature yet.\
+\
+// Horizontal/Vertical enums are fixed to 0/1 so they may be used to index ImVec2"
+defs["enum_comments"]["ImGuiModFlags_"] = "\
+// Helper \"flags\" version of key-mods to store and compare multiple key-mods easily. Sometimes used for storage (e.g. io.KeyMods) but otherwise not much used in public API."
+defs["enum_comments"]["ImGuiMouseButton_"] = "\
+// Identify a mouse button.\
+\
+// Those values are guaranteed to be stable and we frequently use 0/1 directly. Named enums provided for convenience."
+defs["enum_comments"]["ImGuiMouseCursor_"] = "\
+// Enumeration for GetMouseCursor()\
+\
+// User code may request backend to display given cursor by calling SetMouseCursor(), which is why we have some cursors that are marked unused here"
+defs["enum_comments"]["ImGuiNavInput_"] = "\
+// Gamepad/Keyboard navigation\
+\
+// Since >= 1.87 backends you generally don't need to care about this enum since io.NavInputs[] is setup automatically. This might become private/internal some day.\
+\
+// Keyboard: Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard to enable. NewFrame() will automatically fill io.NavInputs[] based on your io.AddKeyEvent() calls.\
+\
+// Gamepad:  Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad to enable. Backend: set ImGuiBackendFlags_HasGamepad and fill the io.NavInputs[] fields before calling NewFrame(). Note that io.NavInputs[] is cleared by EndFrame().\
+\
+// Read instructions in imgui.cpp for more details. Download PNG/PSD at http://dearimgui.org/controls_sheets."
+defs["enum_comments"]["ImGuiNavReadMode"] = "\
+// FIXME-NAV: Clarify/expose various repeat delay/rate"
+defs["enum_comments"]["ImGuiOldColumnFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Columns support\
+\
+//-----------------------------------------------------------------------------\
+\
+// Flags for internal's BeginColumns(). Prefix using BeginTable() nowadays!"
+defs["enum_comments"]["ImGuiPopupFlags_"] = "\
+// Flags for OpenPopup*(), BeginPopupContext*(), IsPopupOpen() functions.\
+\
+// - To be backward compatible with older API which took an 'int mouse_button = 1' argument, we need to treat\
+\
+//   small flags values as a mouse button index, so we encode the mouse button in the first few bits of the flags.\
+\
+//   It is therefore guaranteed to be legal to pass a mouse button index in ImGuiPopupFlags.\
+\
+// - For the same reason, we exceptionally default the ImGuiPopupFlags argument of BeginPopupContextXXX functions to 1 instead of 0.\
+\
+//   IMPORTANT: because the default parameter is 1 (==ImGuiPopupFlags_MouseButtonRight), if you rely on the default parameter\
+\
+//   and want to another another flag, you need to pass in the ImGuiPopupFlags_MouseButtonRight flag.\
+\
+// - Multiple buttons currently cannot be combined/or-ed in those functions (we could allow it later)."
+defs["enum_comments"]["ImGuiScrollFlags_"] = "\
+// Early work-in-progress API for ScrollToItem()"
+defs["enum_comments"]["ImGuiSelectableFlagsPrivate_"] = "\
+// Extend ImGuiSelectableFlags_"
+defs["enum_comments"]["ImGuiSelectableFlags_"] = "\
+// Flags for ImGui::Selectable()"
+defs["enum_comments"]["ImGuiSliderFlagsPrivate_"] = "\
+// Extend ImGuiSliderFlags_"
+defs["enum_comments"]["ImGuiSliderFlags_"] = "\
+// Flags for DragFloat(), DragInt(), SliderFloat(), SliderInt() etc.\
+\
+// We use the same sets of flags for DragXXX() and SliderXXX() functions as the features are the same and it makes it easier to swap them."
+defs["enum_comments"]["ImGuiSortDirection_"] = "\
+// A sorting direction"
+defs["enum_comments"]["ImGuiStyleVar_"] = "\
+// Enumeration for PushStyleVar() / PopStyleVar() to temporarily modify the ImGuiStyle structure.\
+\
+// - The enum only refers to fields of ImGuiStyle which makes sense to be pushed/popped inside UI code.\
+\
+//   During initialization or between frames, feel free to just poke into ImGuiStyle directly.\
+\
+// - Tip: Use your programming IDE navigation facilities on the names in the _second column_ below to find the actual members and their description.\
+\
+//   In Visual Studio IDE: CTRL+comma (\"Edit.GoToAll\") can follow symbols in comments, whereas CTRL+F12 (\"Edit.GoToImplementation\") cannot.\
+\
+//   With Visual Assist installed: ALT+G (\"VAssistX.GoToImplementation\") can also follow symbols in comments.\
+\
+// - When changing this enum, you need to update the associated internal table GStyleVarInfo[] accordingly. This is where we link enum values to members offset/type."
+defs["enum_comments"]["ImGuiTabBarFlagsPrivate_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Tab bar, Tab item support\
+\
+//-----------------------------------------------------------------------------\
+\
+// Extend ImGuiTabBarFlags_"
+defs["enum_comments"]["ImGuiTabBarFlags_"] = "\
+// Flags for ImGui::BeginTabBar()"
+defs["enum_comments"]["ImGuiTabItemFlagsPrivate_"] = "\
+// Extend ImGuiTabItemFlags_"
+defs["enum_comments"]["ImGuiTabItemFlags_"] = "\
+// Flags for ImGui::BeginTabItem()"
+defs["enum_comments"]["ImGuiTableBgTarget_"] = "\
+// Enum for ImGui::TableSetBgColor()\
+\
+// Background colors are rendering in 3 layers:\
+\
+//  - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.\
+\
+//  - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.\
+\
+//  - Layer 2: draw with CellBg color if set.\
+\
+// The purpose of the two row/columns layers is to let you decide if a background color changes should override or blend with the existing color.\
+\
+// When using ImGuiTableFlags_RowBg on the table, each row has the RowBg0 color automatically set for odd/even rows.\
+\
+// If you set the color of RowBg0 target, your color will override the existing RowBg0 color.\
+\
+// If you set the color of RowBg1 or ColumnBg1 target, your color will blend over the RowBg0 color."
+defs["enum_comments"]["ImGuiTableColumnFlags_"] = "\
+// Flags for ImGui::TableSetupColumn()"
+defs["enum_comments"]["ImGuiTableFlags_"] = "\
+// Flags for ImGui::BeginTable()\
+\
+// - Important! Sizing policies have complex and subtle side effects, much more so than you would expect.\
+\
+//   Read comments/demos carefully + experiment with live demos to get acquainted with them.\
+\
+// - The DEFAULT sizing policies are:\
+\
+//    - Default to ImGuiTableFlags_SizingFixedFit    if ScrollX is on, or if host window has ImGuiWindowFlags_AlwaysAutoResize.\
+\
+//    - Default to ImGuiTableFlags_SizingStretchSame if ScrollX is off.\
+\
+// - When ScrollX is off:\
+\
+//    - Table defaults to ImGuiTableFlags_SizingStretchSame -> all Columns defaults to ImGuiTableColumnFlags_WidthStretch with same weight.\
+\
+//    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.\
+\
+//    - Fixed Columns (if any) will generally obtain their requested width (unless the table cannot fit them all).\
+\
+//    - Stretch Columns will share the remaining width according to their respective weight.\
+\
+//    - Mixed Fixed/Stretch columns is possible but has various side-effects on resizing behaviors.\
+\
+//      The typical use of mixing sizing policies is: any number of LEADING Fixed columns, followed by one or two TRAILING Stretch columns.\
+\
+//      (this is because the visible order of columns have subtle but necessary effects on how they react to manual resizing).\
+\
+// - When ScrollX is on:\
+\
+//    - Table defaults to ImGuiTableFlags_SizingFixedFit -> all Columns defaults to ImGuiTableColumnFlags_WidthFixed\
+\
+//    - Columns sizing policy allowed: Fixed/Auto mostly.\
+\
+//    - Fixed Columns can be enlarged as needed. Table will show an horizontal scrollbar if needed.\
+\
+//    - When using auto-resizing (non-resizable) fixed columns, querying the content width to use item right-alignment e.g. SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.\
+\
+//    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on, UNLESS you have specified a value for 'inner_width' in BeginTable().\
+\
+//      If you specify a value for 'inner_width' then effectively the scrolling space is known and Stretch or mixed Fixed/Stretch columns become meaningful again.\
+\
+// - Read on documentation at the top of imgui_tables.cpp for details."
+defs["enum_comments"]["ImGuiTableRowFlags_"] = "\
+// Flags for ImGui::TableNextRow()"
+defs["enum_comments"]["ImGuiTreeNodeFlagsPrivate_"] = "\
+// Extend ImGuiTreeNodeFlags_"
+defs["enum_comments"]["ImGuiTreeNodeFlags_"] = "\
+// Flags for ImGui::TreeNodeEx(), ImGui::CollapsingHeader*()"
+defs["enum_comments"]["ImGuiViewportFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Viewports\
+\
+//-----------------------------------------------------------------------------\
+\
+// Flags stored in ImGuiViewport::Flags, giving indications to the platform backends."
+defs["enum_comments"]["ImGuiWindowDockStyleCol"] = "\
+// List of colors that are stored at the time of Begin() into Docked Windows.\
+\
+// We currently store the packed colors in a simple array window->DockStyle.Colors[].\
+\
+// A better solution may involve appending into a log of colors in ImGuiContext + store offsets into those arrays in ImGuiWindow,\
+\
+// but it would be more complex as we'd need to double-buffer both as e.g. drop target may refer to window from last frame."
+defs["enum_comments"]["ImGuiWindowFlags_"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Flags & Enumerations\
+\
+//-----------------------------------------------------------------------------\
+\
+// Flags for ImGui::Begin()"
 defs["enums"] = {}
 defs["enums"]["ImDrawFlags_"] = {}
 defs["enums"]["ImDrawFlags_"][1] = {}
@@ -4083,102 +4375,1246 @@ defs["locations"]["StbUndoRecord"] = "imstb_textedit:301"
 defs["locations"]["StbUndoState"] = "imstb_textedit:310"
 defs["struct_comments"] = {}
 defs["struct_comments"]["ImBitVector"] = {}
+defs["struct_comments"]["ImBitVector"]["comments"] = "\
+// Helper: ImBitVector\
+\
+// Store 1-bit per value."
 defs["struct_comments"]["ImColor"] = {}
+defs["struct_comments"]["ImColor"]["comments"] = "\
+// Helpers macros to generate 32-bit encoded colors\
+\
+// User can declare their own format by #defining the 5 _SHIFT/_MASK macros in their imconfig file.\
+\
+// Helper: ImColor() implicitly converts colors to either ImU32 (packed 4x1 byte) or ImVec4 (4x1 float)\
+\
+// Prefer using IM_COL32() macros if you want a guaranteed compile-time ImU32 for usage with ImDrawList API.\
+\
+// **Avoid storing ImColor! Store either u32 of ImVec4. This is not a full-featured color class. MAY OBSOLETE.\
+\
+// **None of the ImGui API are using ImColor directly but you can use it as a convenience to pass colors in either ImU32 or ImVec4 formats. Explicitly cast to ImU32 or ImVec4 if needed."
 defs["struct_comments"]["ImDrawChannel"] = {}
+defs["struct_comments"]["ImDrawChannel"]["comments"] = "\
+// [Internal] For use by ImDrawListSplitter"
 defs["struct_comments"]["ImDrawCmd"] = {}
+defs["struct_comments"]["ImDrawCmd"]["comments"] = "\
+// Special Draw callback value to request renderer backend to reset the graphics/render state.\
+\
+// The renderer backend needs to handle this special value, otherwise it will crash trying to call a function at this address.\
+\
+// This is useful for example if you submitted callbacks which you know have altered the render state and you want it to be restored.\
+\
+// It is not done by default because they are many perfectly useful way of altering render state for imgui contents (e.g. changing shader/blending settings before an Image call).\
+\
+// Typically, 1 command = 1 GPU draw call (unless command is a callback)\
+\
+// - VtxOffset: When 'io.BackendFlags & ImGuiBackendFlags_RendererHasVtxOffset' is enabled,\
+\
+//   this fields allow us to render meshes larger than 64K vertices while keeping 16-bit indices.\
+\
+//   Backends made for <1.71. will typically ignore the VtxOffset fields.\
+\
+// - The ClipRect/TextureId/VtxOffset fields must be contiguous as we memcmp() them together (this is asserted for)."
 defs["struct_comments"]["ImDrawCmdHeader"] = {}
+defs["struct_comments"]["ImDrawCmdHeader"]["comments"] = "\
+// [Internal] For use by ImDrawList"
 defs["struct_comments"]["ImDrawData"] = {}
+defs["struct_comments"]["ImDrawData"]["comments"] = "\
+// All draw data to render a Dear ImGui frame\
+\
+// (NB: the style and the naming convention here is a little inconsistent, we currently preserve them for backward compatibility purpose,\
+\
+// as this is one of the oldest structure exposed by the library! Basically, ImDrawList == CmdList)"
 defs["struct_comments"]["ImDrawDataBuilder"] = {}
 defs["struct_comments"]["ImDrawList"] = {}
+defs["struct_comments"]["ImDrawList"]["comments"] = "\
+// Draw command list\
+\
+// This is the low-level list of polygons that ImGui:: functions are filling. At the end of the frame,\
+\
+// all command lists are passed to your ImGuiIO::RenderDrawListFn function for rendering.\
+\
+// Each dear imgui window contains its own ImDrawList. You can use ImGui::GetWindowDrawList() to\
+\
+// access the current window draw list and draw custom primitives.\
+\
+// You can interleave normal ImGui:: calls and adding primitives to the current draw list.\
+\
+// In single viewport mode, top-left is == GetMainViewport()->Pos (generally 0,0), bottom-right is == GetMainViewport()->Pos+Size (generally io.DisplaySize).\
+\
+// You are totally free to apply whatever transformation matrix to want to the data (depending on the use of the transformation you may want to apply it to ClipRect as well!)\
+\
+// Important: Primitives are always added to the list and not culled (culling is done at higher-level by ImGui:: functions), if you use this API a lot consider coarse culling your drawn objects."
 defs["struct_comments"]["ImDrawListSharedData"] = {}
+defs["struct_comments"]["ImDrawListSharedData"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImDrawList support\
+\
+//-----------------------------------------------------------------------------\
+\
+// ImDrawList: Helper function to calculate a circle's segment count given its radius and a \"maximum error\" value.\
+\
+// Estimation of number of circle segment based on error is derived using method described in https://stackoverflow.com/a/2244088/15194693\
+\
+// Number of segments (N) is calculated using equation:\
+\
+//   N = ceil ( pi / acos(1 - error / r) )     where r > 0, error <= r\
+\
+// Our equation is significantly simpler that one in the post thanks for choosing segment that is\
+\
+// perpendicular to X axis. Follow steps in the article from this starting condition and you will\
+\
+// will get this result.\
+\
+//\
+\
+// Rendering circles with an odd number of segments, while mathematically correct will produce\
+\
+// asymmetrical results on the raster grid. Therefore we're rounding N to next even number (7->8, 8->8, 9->10 etc.)\
+\
+// Raw equation from IM_DRAWLIST_CIRCLE_AUTO_SEGMENT_CALC rewritten for 'r' and 'error'.\
+\
+// ImDrawList: Lookup table size for adaptive arc drawing, cover full circle.\
+\
+// Data shared between all ImDrawList instances\
+\
+// You may want to create your own instance of this if you want to use ImDrawList completely without ImGui. In that case, watch out for future changes to this structure."
 defs["struct_comments"]["ImDrawListSplitter"] = {}
+defs["struct_comments"]["ImDrawListSplitter"]["comments"] = "\
+// Split/Merge functions are used to split the draw list into different layers which can be drawn into out of order.\
+\
+// This is used by the Columns/Tables API, so items of each column can be batched together in a same draw call."
 defs["struct_comments"]["ImDrawVert"] = {}
+defs["struct_comments"]["ImDrawVert"]["comments"] = "\
+// Vertex layout"
 defs["struct_comments"]["ImFont"] = {}
+defs["struct_comments"]["ImFont"]["comments"] = "\
+// Font runtime data and rendering\
+\
+// ImFontAtlas automatically loads a default embedded font for you when you call GetTexDataAsAlpha8() or GetTexDataAsRGBA32()."
 defs["struct_comments"]["ImFontAtlas"] = {}
+defs["struct_comments"]["ImFontAtlas"]["comments"] = "\
+// Load and rasterize multiple TTF/OTF fonts into a same texture. The font atlas will build a single texture holding:\
+\
+//  - One or more fonts.\
+\
+//  - Custom graphics data needed to render the shapes needed by Dear ImGui.\
+\
+//  - Mouse cursor shapes for software cursor rendering (unless setting 'Flags |= ImFontAtlasFlags_NoMouseCursors' in the font atlas).\
+\
+// It is the user-code responsibility to setup/build the atlas, then upload the pixel data into a texture accessible by your graphics api.\
+\
+//  - Optionally, call any of the AddFont*** functions. If you don't call any, the default font embedded in the code will be loaded for you.\
+\
+//  - Call GetTexDataAsAlpha8() or GetTexDataAsRGBA32() to build and retrieve pixels data.\
+\
+//  - Upload the pixels data into a texture within your graphics system (see imgui_impl_xxxx.cpp examples)\
+\
+//  - Call SetTexID(my_tex_id); and pass the pointer/identifier to your texture in a format natural to your graphics API.\
+\
+//    This value will be passed back to you during rendering to identify the texture. Read FAQ entry about ImTextureID for more details.\
+\
+// Common pitfalls:\
+\
+// - If you pass a 'glyph_ranges' array to AddFont*** functions, you need to make sure that your array persist up until the\
+\
+//   atlas is build (when calling GetTexData*** or Build()). We only copy the pointer, not the data.\
+\
+// - Important: By default, AddFontFromMemoryTTF() takes ownership of the data. Even though we are not writing to it, we will free the pointer on destruction.\
+\
+//   You can set font_cfg->FontDataOwnedByAtlas=false to keep ownership of your data and it won't be freed,\
+\
+// - Even though many functions are suffixed with \"TTF\", OTF data is supported just as well.\
+\
+// - This is an old API and it is currently awkward for those and and various other reasons! We will address them in the future!"
 defs["struct_comments"]["ImFontAtlasCustomRect"] = {}
+defs["struct_comments"]["ImFontAtlasCustomRect"]["comments"] = "\
+// See ImFontAtlas::AddCustomRectXXX functions."
 defs["struct_comments"]["ImFontBuilderIO"] = {}
+defs["struct_comments"]["ImFontBuilderIO"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImFontAtlas internal API\
+\
+//-----------------------------------------------------------------------------\
+\
+// This structure is likely to evolve as we add support for incremental atlas updates"
 defs["struct_comments"]["ImFontConfig"] = {}
+defs["struct_comments"]["ImFontConfig"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Font API (ImFontConfig, ImFontGlyph, ImFontAtlasFlags, ImFontAtlas, ImFontGlyphRangesBuilder, ImFont)\
+\
+//-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImFontGlyph"] = {}
+defs["struct_comments"]["ImFontGlyph"]["comments"] = "\
+// Hold rendering data for one glyph.\
+\
+// (Note: some language parsers may fail to convert the 31+1 bitfield members, in this case maybe drop store a single u32 or we can rework this)"
 defs["struct_comments"]["ImFontGlyphRangesBuilder"] = {}
+defs["struct_comments"]["ImFontGlyphRangesBuilder"]["comments"] = "\
+// Helper to build glyph ranges from text/string data. Feed your application strings/characters to it then call BuildRanges().\
+\
+// This is essentially a tightly packed of vector of 64k booleans = 8KB storage."
 defs["struct_comments"]["ImGuiColorMod"] = {}
+defs["struct_comments"]["ImGuiColorMod"]["comments"] = "\
+// Stacked color modifier, backup of modified data so we can restore it"
 defs["struct_comments"]["ImGuiComboPreviewData"] = {}
+defs["struct_comments"]["ImGuiComboPreviewData"]["comments"] = "\
+// Storage data for BeginComboPreview()/EndComboPreview()"
 defs["struct_comments"]["ImGuiContext"] = {}
+defs["struct_comments"]["ImGuiContext"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImGuiContext (main Dear ImGui context)\
+\
+//-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiContextHook"] = {}
 defs["struct_comments"]["ImGuiDataTypeInfo"] = {}
+defs["struct_comments"]["ImGuiDataTypeInfo"]["comments"] = "\
+// Type information associated to one ImGuiDataType. Retrieve with DataTypeGetInfo()."
 defs["struct_comments"]["ImGuiDataTypeTempStorage"] = {}
 defs["struct_comments"]["ImGuiDockContext"] = {}
 defs["struct_comments"]["ImGuiDockNode"] = {}
+defs["struct_comments"]["ImGuiDockNode"]["comments"] = "\
+// sizeof() 156~192"
 defs["struct_comments"]["ImGuiGroupData"] = {}
+defs["struct_comments"]["ImGuiGroupData"]["comments"] = "\
+// Stacked storage data for BeginGroup()/EndGroup()"
 defs["struct_comments"]["ImGuiIO"] = {}
 defs["struct_comments"]["ImGuiInputEvent"] = {}
 defs["struct_comments"]["ImGuiInputEventAppFocused"] = {}
 defs["struct_comments"]["ImGuiInputEventKey"] = {}
 defs["struct_comments"]["ImGuiInputEventMouseButton"] = {}
 defs["struct_comments"]["ImGuiInputEventMousePos"] = {}
+defs["struct_comments"]["ImGuiInputEventMousePos"]["comments"] = "\
+// FIXME: Structures in the union below need to be declared as anonymous unions appears to be an extension?\
+\
+// Using ImVec2() would fail on Clang 'union member 'MousePos' has a non-trivial default constructor'"
 defs["struct_comments"]["ImGuiInputEventMouseViewport"] = {}
 defs["struct_comments"]["ImGuiInputEventMouseWheel"] = {}
 defs["struct_comments"]["ImGuiInputEventText"] = {}
 defs["struct_comments"]["ImGuiInputTextCallbackData"] = {}
+defs["struct_comments"]["ImGuiInputTextCallbackData"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Misc data structures\
+\
+//-----------------------------------------------------------------------------\
+\
+// Shared state of InputText(), passed as an argument to your callback when a ImGuiInputTextFlags_Callback* flag is used.\
+\
+// The callback function should return 0 by default.\
+\
+// Callbacks (follow a flag name and see comments in ImGuiInputTextFlags_ declarations for more details)\
+\
+// - ImGuiInputTextFlags_CallbackEdit:        Callback on buffer edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)\
+\
+// - ImGuiInputTextFlags_CallbackAlways:      Callback on each iteration\
+\
+// - ImGuiInputTextFlags_CallbackCompletion:  Callback on pressing TAB\
+\
+// - ImGuiInputTextFlags_CallbackHistory:     Callback on pressing Up/Down arrows\
+\
+// - ImGuiInputTextFlags_CallbackCharFilter:  Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.\
+\
+// - ImGuiInputTextFlags_CallbackResize:      Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow."
 defs["struct_comments"]["ImGuiInputTextState"] = {}
+defs["struct_comments"]["ImGuiInputTextState"]["comments"] = "\
+// Internal state of the currently focused/edited text input box\
+\
+// For a given item ID, access with ImGui::GetInputTextState()"
 defs["struct_comments"]["ImGuiKeyData"] = {}
+defs["struct_comments"]["ImGuiKeyData"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImGuiIO\
+\
+//-----------------------------------------------------------------------------\
+\
+// Communicate most settings and inputs/outputs to Dear ImGui using this structure.\
+\
+// Access via ImGui::GetIO(). Read 'Programmer guide' section in .cpp file for general usage.\
+\
+//-----------------------------------------------------------------------------\
+\
+// [Internal] Storage used by IsKeyDown(), IsKeyPressed() etc functions.\
+\
+// If prior to 1.87 you used io.KeysDownDuration[] (which was marked as internal), you should use GetKeyData(key)->DownDuration and not io.KeysData[key]->DownDuration."
 defs["struct_comments"]["ImGuiLastItemData"] = {}
+defs["struct_comments"]["ImGuiLastItemData"]["comments"] = "\
+// Status storage for the last submitted item"
 defs["struct_comments"]["ImGuiListClipper"] = {}
+defs["struct_comments"]["ImGuiListClipper"]["comments"] = "\
+// Helper: Manually clip large list of items.\
+\
+// If you have lots evenly spaced items and you have a random access to the list, you can perform coarse\
+\
+// clipping based on visibility to only submit items that are in view.\
+\
+// The clipper calculates the range of visible items and advance the cursor to compensate for the non-visible items we have skipped.\
+\
+// (Dear ImGui already clip items based on their bounds but: it needs to first layout the item to do so, and generally\
+\
+//  fetching/submitting your own data incurs additional cost. Coarse clipping using ImGuiListClipper allows you to easily\
+\
+//  scale using lists with tens of thousands of items without a problem)\
+\
+// Usage:\
+\
+//   ImGuiListClipper clipper;\
+\
+//   clipper.Begin(1000);         // We have 1000 elements, evenly spaced.\
+\
+//   while (clipper.Step())\
+\
+//       for (int i = clipper.DisplayStart; i < clipper.DisplayEnd; i++)\
+\
+//           ImGui::Text(\"line number %d\", i);\
+\
+// Generally what happens is:\
+\
+// - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1) regardless of it being visible or not.\
+\
+// - User code submit that one element.\
+\
+// - Clipper can measure the height of the first element\
+\
+// - Clipper calculate the actual range of elements to display based on the current clipping rectangle, position the cursor before the first visible element.\
+\
+// - User code submit visible elements.\
+\
+// - The clipper also handles various subtleties related to keyboard/gamepad navigation, wrapping etc."
 defs["struct_comments"]["ImGuiListClipperData"] = {}
+defs["struct_comments"]["ImGuiListClipperData"]["comments"] = "\
+// Temporary clipper data, buffers shared/reused between instances"
 defs["struct_comments"]["ImGuiListClipperRange"] = {}
+defs["struct_comments"]["ImGuiListClipperRange"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Clipper support\
+\
+//-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiMenuColumns"] = {}
+defs["struct_comments"]["ImGuiMenuColumns"]["comments"] = "\
+// Simple column measurement, currently used for MenuItem() only.. This is very short-sighted/throw-away code and NOT a generic helper."
 defs["struct_comments"]["ImGuiMetricsConfig"] = {}
 defs["struct_comments"]["ImGuiNavItemData"] = {}
 defs["struct_comments"]["ImGuiNextItemData"] = {}
 defs["struct_comments"]["ImGuiNextWindowData"] = {}
+defs["struct_comments"]["ImGuiNextWindowData"]["comments"] = "\
+// Storage for SetNexWindow** functions"
 defs["struct_comments"]["ImGuiOldColumnData"] = {}
 defs["struct_comments"]["ImGuiOldColumns"] = {}
 defs["struct_comments"]["ImGuiOnceUponAFrame"] = {}
+defs["struct_comments"]["ImGuiOnceUponAFrame"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Helpers (ImGuiOnceUponAFrame, ImGuiTextFilter, ImGuiTextBuffer, ImGuiStorage, ImGuiListClipper, ImColor)\
+\
+//-----------------------------------------------------------------------------\
+\
+// Helper: Unicode defines\
+\
+// Helper: Execute a block of code at maximum once a frame. Convenient if you want to quickly create an UI within deep-nested code that runs multiple times every frame.\
+\
+// Usage: static ImGuiOnceUponAFrame oaf; if (oaf) ImGui::Text(\"This will be called only once per frame\");"
 defs["struct_comments"]["ImGuiPayload"] = {}
+defs["struct_comments"]["ImGuiPayload"]["comments"] = "\
+// Data payload for Drag and Drop operations: AcceptDragDropPayload(), GetDragDropPayload()"
 defs["struct_comments"]["ImGuiPlatformIO"] = {}
+defs["struct_comments"]["ImGuiPlatformIO"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Platform Dependent Interfaces (for e.g. multi-viewport support)\
+\
+//-----------------------------------------------------------------------------\
+\
+// [BETA] (Optional) This is completely optional, for advanced users!\
+\
+// If you are new to Dear ImGui and trying to integrate it into your engine, you can probably ignore this for now.\
+\
+//\
+\
+// This feature allows you to seamlessly drag Dear ImGui windows outside of your application viewport.\
+\
+// This is achieved by creating new Platform/OS windows on the fly, and rendering into them.\
+\
+// Dear ImGui manages the viewport structures, and the backend create and maintain one Platform/OS window for each of those viewports.\
+\
+//\
+\
+// See Glossary https://github.com/ocornut/imgui/wiki/Glossary for details about some of the terminology.\
+\
+// See Thread https://github.com/ocornut/imgui/issues/1542 for gifs, news and questions about this evolving feature.\
+\
+//\
+\
+// About the coordinates system:\
+\
+// - When multi-viewports are enabled, all Dear ImGui coordinates become absolute coordinates (same as OS coordinates!)\
+\
+// - So e.g. ImGui::SetNextWindowPos(ImVec2(0,0)) will position a window relative to your primary monitor!\
+\
+// - If you want to position windows relative to your main application viewport, use ImGui::GetMainViewport()->Pos as a base position.\
+\
+//\
+\
+// Steps to use multi-viewports in your application, when using a default backend from the examples/ folder:\
+\
+// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\
+\
+// - Backend:      The backend initialization will setup all necessary ImGuiPlatformIO's functions and update monitors info every frame.\
+\
+// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\
+\
+// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\
+\
+//\
+\
+// Steps to use multi-viewports in your application, when using a custom backend:\
+\
+// - Important:    THIS IS NOT EASY TO DO and comes with many subtleties not described here!\
+\
+//                 It's also an experimental feature, so some of the requirements may evolve.\
+\
+//                 Consider using default backends if you can. Either way, carefully follow and refer to examples/ backends for details.\
+\
+// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\
+\
+// - Backend:      Hook ImGuiPlatformIO's Platform_* and Renderer_* callbacks (see below).\
+\
+//                 Set 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports' and 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports'.\
+\
+//                 Update ImGuiPlatformIO's Monitors list every frame.\
+\
+//                 Update MousePos every frame, in absolute coordinates.\
+\
+// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\
+\
+//                 You may skip calling RenderPlatformWindowsDefault() if its API is not convenient for your needs. Read comments below.\
+\
+// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\
+\
+//\
+\
+// About ImGui::RenderPlatformWindowsDefault():\
+\
+// - This function is a mostly a _helper_ for the common-most cases, and to facilitate using default backends.\
+\
+// - You can check its simple source code to understand what it does.\
+\
+//   It basically iterates secondary viewports and call 4 functions that are setup in ImGuiPlatformIO, if available:\
+\
+//     Platform_RenderWindow(), Renderer_RenderWindow(), Platform_SwapBuffers(), Renderer_SwapBuffers()\
+\
+//   Those functions pointers exists only for the benefit of RenderPlatformWindowsDefault().\
+\
+// - If you have very specific rendering needs (e.g. flipping multiple swap-chain simultaneously, unusual sync/threading issues, etc.),\
+\
+//   you may be tempted to ignore RenderPlatformWindowsDefault() and write customized code to perform your renderingg.\
+\
+//   You may decide to setup the platform_io's *RenderWindow and *SwapBuffers pointers and call your functions through those pointers,\
+\
+//   or you may decide to never setup those pointers and call your code directly. They are a convenience, not an obligatory interface.\
+\
+//-----------------------------------------------------------------------------\
+\
+// (Optional) Access via ImGui::GetPlatformIO()"
 defs["struct_comments"]["ImGuiPlatformImeData"] = {}
+defs["struct_comments"]["ImGuiPlatformImeData"]["comments"] = "\
+// (Optional) Support for IME (Input Method Editor) via the io.SetPlatformImeDataFn() function."
 defs["struct_comments"]["ImGuiPlatformMonitor"] = {}
+defs["struct_comments"]["ImGuiPlatformMonitor"]["comments"] = "\
+// (Optional) This is required when enabling multi-viewport. Represent the bounds of each connected monitor/display and their DPI.\
+\
+// We use this information for multiple DPI support + clamping the position of popups and tooltips so they don't straddle multiple monitors."
 defs["struct_comments"]["ImGuiPopupData"] = {}
+defs["struct_comments"]["ImGuiPopupData"]["comments"] = "\
+// Storage for current popup stack"
 defs["struct_comments"]["ImGuiPtrOrIndex"] = {}
 defs["struct_comments"]["ImGuiSettingsHandler"] = {}
 defs["struct_comments"]["ImGuiShrinkWidthItem"] = {}
 defs["struct_comments"]["ImGuiSizeCallbackData"] = {}
+defs["struct_comments"]["ImGuiSizeCallbackData"]["comments"] = "\
+// Resizing callback data to apply custom constraint. As enabled by SetNextWindowSizeConstraints(). Callback is called during the next Begin().\
+\
+// NB: For basic min/max size constraint on each axis you don't need to use the callback! The SetNextWindowSizeConstraints() parameters are enough."
 defs["struct_comments"]["ImGuiStackLevelInfo"] = {}
 defs["struct_comments"]["ImGuiStackSizes"] = {}
 defs["struct_comments"]["ImGuiStackTool"] = {}
+defs["struct_comments"]["ImGuiStackTool"]["comments"] = "\
+// State for Stack tool queries"
 defs["struct_comments"]["ImGuiStorage"] = {}
+defs["struct_comments"]["ImGuiStorage"]["comments"] = "\
+// Helper: Key->Value storage\
+\
+// Typically you don't have to worry about this since a storage is held within each Window.\
+\
+// We use it to e.g. store collapse state for a tree (Int 0/1)\
+\
+// This is optimized for efficient lookup (dichotomy into a contiguous buffer) and rare insertion (typically tied to user interactions aka max once a frame)\
+\
+// You can use it as custom user storage for temporary values. Declare your own storage if, for example:\
+\
+// - You want to manipulate the open/close state of a particular sub-tree in your interface (tree node uses Int 0/1 to store their state).\
+\
+// - You want to store custom debug data easily without adding or editing structures in your code (probably not efficient, but convenient)\
+\
+// Types are NOT stored, so it is up to you to make sure your Key don't collide with different types."
 defs["struct_comments"]["ImGuiStoragePair"] = {}
+defs["struct_comments"]["ImGuiStoragePair"]["comments"] = "\
+    // [Internal]"
 defs["struct_comments"]["ImGuiStyle"] = {}
+defs["struct_comments"]["ImGuiStyle"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImGuiStyle\
+\
+//-----------------------------------------------------------------------------\
+\
+// You may modify the ImGui::GetStyle() main instance during initialization and before NewFrame().\
+\
+// During the frame, use ImGui::PushStyleVar(ImGuiStyleVar_XXXX)/PopStyleVar() to alter the main style values,\
+\
+// and ImGui::PushStyleColor(ImGuiCol_XXX)/PopStyleColor() for colors.\
+\
+//-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiStyleMod"] = {}
+defs["struct_comments"]["ImGuiStyleMod"]["comments"] = "\
+// Stacked style modifier, backup of modified data so we can restore it. Data type inferred from the variable."
 defs["struct_comments"]["ImGuiTabBar"] = {}
+defs["struct_comments"]["ImGuiTabBar"]["comments"] = "\
+// Storage for a tab bar (sizeof() 152 bytes)"
 defs["struct_comments"]["ImGuiTabItem"] = {}
+defs["struct_comments"]["ImGuiTabItem"]["comments"] = "\
+// Storage for one active tab item (sizeof() 48 bytes)"
 defs["struct_comments"]["ImGuiTable"] = {}
+defs["struct_comments"]["ImGuiTable"]["comments"] = "\
+// FIXME-TABLE: more transient data could be stored in a per-stacked table structure: DrawSplitter, SortSpecs, incoming RowData"
 defs["struct_comments"]["ImGuiTableCellData"] = {}
+defs["struct_comments"]["ImGuiTableCellData"]["comments"] = "\
+// Transient cell data stored per row.\
+\
+// sizeof() ~ 6"
 defs["struct_comments"]["ImGuiTableColumn"] = {}
+defs["struct_comments"]["ImGuiTableColumn"]["comments"] = "\
+// [Internal] sizeof() ~ 104\
+\
+// We use the terminology \"Enabled\" to refer to a column that is not Hidden by user/api.\
+\
+// We use the terminology \"Clipped\" to refer to a column that is out of sight because of scrolling/clipping.\
+\
+// This is in contrast with some user-facing api such as IsItemVisible() / IsRectVisible() which use \"Visible\" to mean \"not clipped\"."
 defs["struct_comments"]["ImGuiTableColumnSettings"] = {}
+defs["struct_comments"]["ImGuiTableColumnSettings"]["comments"] = "\
+// sizeof() ~ 12"
 defs["struct_comments"]["ImGuiTableColumnSortSpecs"] = {}
+defs["struct_comments"]["ImGuiTableColumnSortSpecs"]["comments"] = "\
+// Sorting specification for one column of a table (sizeof == 12 bytes)"
 defs["struct_comments"]["ImGuiTableInstanceData"] = {}
+defs["struct_comments"]["ImGuiTableInstanceData"]["comments"] = "\
+// Per-instance data that needs preserving across frames (seemingly most others do not need to be preserved aside from debug needs, does that needs they could be moved to ImGuiTableTempData ?)"
 defs["struct_comments"]["ImGuiTableSettings"] = {}
+defs["struct_comments"]["ImGuiTableSettings"]["comments"] = "\
+// This is designed to be stored in a single ImChunkStream (1 header followed by N ImGuiTableColumnSettings, etc.)"
 defs["struct_comments"]["ImGuiTableSortSpecs"] = {}
+defs["struct_comments"]["ImGuiTableSortSpecs"]["comments"] = "\
+// Sorting specifications for a table (often handling sort specs for a single column, occasionally more)\
+\
+// Obtained by calling TableGetSortSpecs().\
+\
+// When 'SpecsDirty == true' you can sort your data. It will be true with sorting specs have changed since last call, or the first time.\
+\
+// Make sure to set 'SpecsDirty = false' after sorting, else you may wastefully sort your data every frame!"
 defs["struct_comments"]["ImGuiTableTempData"] = {}
+defs["struct_comments"]["ImGuiTableTempData"]["comments"] = "\
+// Transient data that are only needed between BeginTable() and EndTable(), those buffers are shared (1 per level of stacked table).\
+\
+// - Accessing those requires chasing an extra pointer so for very frequently used data we leave them in the main table structure.\
+\
+// - We also leave out of this structure data that tend to be particularly useful for debugging/metrics."
 defs["struct_comments"]["ImGuiTextBuffer"] = {}
+defs["struct_comments"]["ImGuiTextBuffer"]["comments"] = "\
+// Helper: Growable text buffer for logging/accumulating text\
+\
+// (this could be called 'ImGuiTextBuilder' / 'ImGuiStringBuilder')"
 defs["struct_comments"]["ImGuiTextFilter"] = {}
+defs["struct_comments"]["ImGuiTextFilter"]["comments"] = "\
+// Helper: Parse and apply text filters. In format \"aaaaa[,bbbb][,ccccc]\""
 defs["struct_comments"]["ImGuiTextRange"] = {}
+defs["struct_comments"]["ImGuiTextRange"]["comments"] = "\
+    // [Internal]"
 defs["struct_comments"]["ImGuiViewport"] = {}
+defs["struct_comments"]["ImGuiViewport"]["comments"] = "\
+// - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\
+\
+// - With multi-viewport enabled, we extend this concept to have multiple active viewports.\
+\
+// - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode.\
+\
+// - About Main Area vs Work Area:\
+\
+//   - Main Area = entire viewport.\
+\
+//   - Work Area = entire viewport minus sections used by main menu bars (for platform windows), or by task bar (for platform monitor).\
+\
+//   - Windows are generally trying to stay within the Work Area of their host viewport."
 defs["struct_comments"]["ImGuiViewportP"] = {}
+defs["struct_comments"]["ImGuiViewportP"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Viewport support\
+\
+//-----------------------------------------------------------------------------\
+\
+// ImGuiViewport Private/Internals fields (cardinal sin: we are using inheritance!)\
+\
+// Every instance of ImGuiViewport is in fact a ImGuiViewportP."
 defs["struct_comments"]["ImGuiWindow"] = {}
+defs["struct_comments"]["ImGuiWindow"]["comments"] = "\
+// Storage for one window"
 defs["struct_comments"]["ImGuiWindowClass"] = {}
+defs["struct_comments"]["ImGuiWindowClass"]["comments"] = "\
+// [ALPHA] Rarely used / very advanced uses only. Use with SetNextWindowClass() and DockSpace() functions.\
+\
+// Important: the content of this class is still highly WIP and likely to change and be refactored\
+\
+// before we stabilize Docking features. Please be mindful if using this.\
+\
+// Provide hints:\
+\
+// - To the platform backend via altered viewport flags (enable/disable OS decoration, OS task bar icons, etc.)\
+\
+// - To the platform backend for OS level parent/child relationships of viewport.\
+\
+// - To the docking system for various options and filtering."
 defs["struct_comments"]["ImGuiWindowDockStyle"] = {}
 defs["struct_comments"]["ImGuiWindowSettings"] = {}
+defs["struct_comments"]["ImGuiWindowSettings"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] Settings support\
+\
+//-----------------------------------------------------------------------------\
+\
+// Windows data saved in imgui.ini file\
+\
+// Because we never destroy or rename ImGuiWindowSettings, we can store the names in a separate buffer easily.\
+\
+// (this is designed to be stored in a ImChunkStream buffer, with the variable-length Name following our structure)"
 defs["struct_comments"]["ImGuiWindowStackData"] = {}
+defs["struct_comments"]["ImGuiWindowStackData"]["comments"] = "\
+// Data saved for each window pushed into the stack"
 defs["struct_comments"]["ImGuiWindowTempData"] = {}
+defs["struct_comments"]["ImGuiWindowTempData"]["comments"] = "\
+//-----------------------------------------------------------------------------\
+\
+// [SECTION] ImGuiWindowTempData, ImGuiWindow\
+\
+//-----------------------------------------------------------------------------\
+\
+// Transient per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the DC variable name in ImGuiWindow.\
+\
+// (That's theory, in practice the delimitation between ImGuiWindow and ImGuiWindowTempData is quite tenuous and could be reconsidered..)\
+\
+// (This doesn't need a constructor because we zero-clear it as part of ImGuiWindow and all frame-temporary data are setup on Begin)"
 defs["struct_comments"]["ImRect"] = {}
+defs["struct_comments"]["ImRect"]["comments"] = "\
+// Helper: ImRect (2D axis aligned bounding-box)\
+\
+// NB: we can't rely on ImVec2 math operators being available here!"
 defs["struct_comments"]["ImVec1"] = {}
+defs["struct_comments"]["ImVec1"]["comments"] = "\
+// Helper: ImVec1 (1D vector)\
+\
+// (this odd construct is used to facilitate the transition between 1D and 2D, and the maintenance of some branches/patches)"
 defs["struct_comments"]["ImVec2"] = {}
+defs["struct_comments"]["ImVec2"]["comments"] = "\
+// ImVec2: 2D vector used to store positions, sizes etc. [Compile-time configurable type]\
+\
+// This is a frequently used type in the API. Consider using IM_VEC2_CLASS_EXTRA to create implicit cast from/to our preferred type."
 defs["struct_comments"]["ImVec2ih"] = {}
+defs["struct_comments"]["ImVec2ih"]["comments"] = "\
+// Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)"
 defs["struct_comments"]["ImVec4"] = {}
+defs["struct_comments"]["ImVec4"]["comments"] = "\
+// ImVec4: 4D vector used to store clipping rectangles, colors etc. [Compile-time configurable type]"
 defs["struct_comments"]["STB_TexteditState"] = {}
 defs["struct_comments"]["StbTexteditRow"] = {}
+defs["struct_comments"]["StbTexteditRow"]["comments"] = "\
+////////////////////////////////////////////////////////////////////////\
+\
+//\
+\
+//     StbTexteditRow\
+\
+//\
+\
+// Result of layout query, used by stb_textedit to determine where\
+\
+// the text in each row is.\
+\
+// result of layout query"
 defs["struct_comments"]["StbUndoRecord"] = {}
+defs["struct_comments"]["StbUndoRecord"]["comments"] = "\
+// [DEAR IMGUI]\
+\
+// This is a slightly modified version of stb_textedit.h 1.14.\
+\
+// Those changes would need to be pushed into nothings/stb:\
+\
+// - Fix in stb_textedit_discard_redo (see https://github.com/nothings/stb/issues/321)\
+\
+// Grep for [DEAR IMGUI] to find the changes.\
+\
+// stb_textedit.h - v1.14  - public domain - Sean Barrett\
+\
+// Development of this library was sponsored by RAD Game Tools\
+\
+//\
+\
+// This C header file implements the guts of a multi-line text-editing\
+\
+// widget; you implement display, word-wrapping, and low-level string\
+\
+// insertion/deletion, and stb_textedit will map user inputs into\
+\
+// insertions & deletions, plus updates to the cursor position,\
+\
+// selection state, and undo state.\
+\
+//\
+\
+// It is intended for use in games and other systems that need to build\
+\
+// their own custom widgets and which do not have heavy text-editing\
+\
+// requirements (this library is not recommended for use for editing large\
+\
+// texts, as its performance does not scale and it has limited undo).\
+\
+//\
+\
+// Non-trivial behaviors are modelled after Windows text controls.\
+\
+//\
+\
+//\
+\
+// LICENSE\
+\
+//\
+\
+// See end of file for license information.\
+\
+//\
+\
+//\
+\
+// DEPENDENCIES\
+\
+//\
+\
+// Uses the C runtime function 'memmove', which you can override\
+\
+// by defining STB_TEXTEDIT_memmove before the implementation.\
+\
+// Uses no other functions. Performs no runtime allocations.\
+\
+//\
+\
+//\
+\
+// VERSION HISTORY\
+\
+//\
+\
+//   1.14 (2021-07-11) page up/down, various fixes\
+\
+//   1.13 (2019-02-07) fix bug in undo size management\
+\
+//   1.12 (2018-01-29) user can change STB_TEXTEDIT_KEYTYPE, fix redo to avoid crash\
+\
+//   1.11 (2017-03-03) fix HOME on last line, dragging off single-line textfield\
+\
+//   1.10 (2016-10-25) supress warnings about casting away const with -Wcast-qual\
+\
+//   1.9  (2016-08-27) customizable move-by-word\
+\
+//   1.8  (2016-04-02) better keyboard handling when mouse button is down\
+\
+//   1.7  (2015-09-13) change y range handling in case baseline is non-0\
+\
+//   1.6  (2015-04-15) allow STB_TEXTEDIT_memmove\
+\
+//   1.5  (2014-09-10) add support for secondary keys for OS X\
+\
+//   1.4  (2014-08-17) fix signed/unsigned warnings\
+\
+//   1.3  (2014-06-19) fix mouse clicking to round to nearest char boundary\
+\
+//   1.2  (2014-05-27) fix some RAD types that had crept into the new code\
+\
+//   1.1  (2013-12-15) move-by-word (requires STB_TEXTEDIT_IS_SPACE )\
+\
+//   1.0  (2012-07-26) improve documentation, initial public release\
+\
+//   0.3  (2012-02-24) bugfixes, single-line mode; insert mode\
+\
+//   0.2  (2011-11-28) fixes to undo/redo\
+\
+//   0.1  (2010-07-08) initial version\
+\
+//\
+\
+// ADDITIONAL CONTRIBUTORS\
+\
+//\
+\
+//   Ulf Winklemann: move-by-word in 1.1\
+\
+//   Fabian Giesen: secondary key inputs in 1.5\
+\
+//   Martins Mozeiko: STB_TEXTEDIT_memmove in 1.6\
+\
+//   Louis Schnellbach: page up/down in 1.14\
+\
+//\
+\
+//   Bugfixes:\
+\
+//      Scott Graham\
+\
+//      Daniel Keller\
+\
+//      Omar Cornut\
+\
+//      Dan Thompson\
+\
+//\
+\
+// USAGE\
+\
+//\
+\
+// This file behaves differently depending on what symbols you define\
+\
+// before including it.\
+\
+//\
+\
+//\
+\
+// Header-file mode:\
+\
+//\
+\
+//   If you do not define STB_TEXTEDIT_IMPLEMENTATION before including this,\
+\
+//   it will operate in \"header file\" mode. In this mode, it declares a\
+\
+//   single public symbol, STB_TexteditState, which encapsulates the current\
+\
+//   state of a text widget (except for the string, which you will store\
+\
+//   separately).\
+\
+//\
+\
+//   To compile in this mode, you must define STB_TEXTEDIT_CHARTYPE to a\
+\
+//   primitive type that defines a single character (e.g. char, wchar_t, etc).\
+\
+//\
+\
+//   To save space or increase undo-ability, you can optionally define the\
+\
+//   following things that are used by the undo system:\
+\
+//\
+\
+//      STB_TEXTEDIT_POSITIONTYPE         small int type encoding a valid cursor position\
+\
+//      STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\
+\
+//      STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\
+\
+//\
+\
+//   If you don't define these, they are set to permissive types and\
+\
+//   moderate sizes. The undo system does no memory allocations, so\
+\
+//   it grows STB_TexteditState by the worst-case storage which is (in bytes):\
+\
+//\
+\
+//        [4 + 3 * sizeof(STB_TEXTEDIT_POSITIONTYPE)] * STB_TEXTEDIT_UNDOSTATECOUNT\
+\
+//      +          sizeof(STB_TEXTEDIT_CHARTYPE)      * STB_TEXTEDIT_UNDOCHARCOUNT\
+\
+//\
+\
+//\
+\
+// Implementation mode:\
+\
+//\
+\
+//   If you define STB_TEXTEDIT_IMPLEMENTATION before including this, it\
+\
+//   will compile the implementation of the text edit widget, depending\
+\
+//   on a large number of symbols which must be defined before the include.\
+\
+//\
+\
+//   The implementation is defined only as static functions. You will then\
+\
+//   need to provide your own APIs in the same file which will access the\
+\
+//   static functions.\
+\
+//\
+\
+//   The basic concept is that you provide a \"string\" object which\
+\
+//   behaves like an array of characters. stb_textedit uses indices to\
+\
+//   refer to positions in the string, implicitly representing positions\
+\
+//   in the displayed textedit. This is true for both plain text and\
+\
+//   rich text; even with rich text stb_truetype interacts with your\
+\
+//   code as if there was an array of all the displayed characters.\
+\
+//\
+\
+// Symbols that must be the same in header-file and implementation mode:\
+\
+//\
+\
+//     STB_TEXTEDIT_CHARTYPE             the character type\
+\
+//     STB_TEXTEDIT_POSITIONTYPE         small type that is a valid cursor position\
+\
+//     STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\
+\
+//     STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\
+\
+//\
+\
+// Symbols you must define for implementation mode:\
+\
+//\
+\
+//    STB_TEXTEDIT_STRING               the type of object representing a string being edited,\
+\
+//                                      typically this is a wrapper object with other data you need\
+\
+//\
+\
+//    STB_TEXTEDIT_STRINGLEN(obj)       the length of the string (ideally O(1))\
+\
+//    STB_TEXTEDIT_LAYOUTROW(&r,obj,n)  returns the results of laying out a line of characters\
+\
+//                                        starting from character #n (see discussion below)\
+\
+//    STB_TEXTEDIT_GETWIDTH(obj,n,i)    returns the pixel delta from the xpos of the i'th character\
+\
+//                                        to the xpos of the i+1'th char for a line of characters\
+\
+//                                        starting at character #n (i.e. accounts for kerning\
+\
+//                                        with previous char)\
+\
+//    STB_TEXTEDIT_KEYTOTEXT(k)         maps a keyboard input to an insertable character\
+\
+//                                        (return type is int, -1 means not valid to insert)\
+\
+//    STB_TEXTEDIT_GETCHAR(obj,i)       returns the i'th character of obj, 0-based\
+\
+//    STB_TEXTEDIT_NEWLINE              the character returned by _GETCHAR() we recognize\
+\
+//                                        as manually wordwrapping for end-of-line positioning\
+\
+//\
+\
+//    STB_TEXTEDIT_DELETECHARS(obj,i,n)      delete n characters starting at i\
+\
+//    STB_TEXTEDIT_INSERTCHARS(obj,i,c*,n)   insert n characters at i (pointed to by STB_TEXTEDIT_CHARTYPE*)\
+\
+//\
+\
+//    STB_TEXTEDIT_K_SHIFT       a power of two that is or'd in to a keyboard input to represent the shift key\
+\
+//\
+\
+//    STB_TEXTEDIT_K_LEFT        keyboard input to move cursor left\
+\
+//    STB_TEXTEDIT_K_RIGHT       keyboard input to move cursor right\
+\
+//    STB_TEXTEDIT_K_UP          keyboard input to move cursor up\
+\
+//    STB_TEXTEDIT_K_DOWN        keyboard input to move cursor down\
+\
+//    STB_TEXTEDIT_K_PGUP        keyboard input to move cursor up a page\
+\
+//    STB_TEXTEDIT_K_PGDOWN      keyboard input to move cursor down a page\
+\
+//    STB_TEXTEDIT_K_LINESTART   keyboard input to move cursor to start of line  // e.g. HOME\
+\
+//    STB_TEXTEDIT_K_LINEEND     keyboard input to move cursor to end of line    // e.g. END\
+\
+//    STB_TEXTEDIT_K_TEXTSTART   keyboard input to move cursor to start of text  // e.g. ctrl-HOME\
+\
+//    STB_TEXTEDIT_K_TEXTEND     keyboard input to move cursor to end of text    // e.g. ctrl-END\
+\
+//    STB_TEXTEDIT_K_DELETE      keyboard input to delete selection or character under cursor\
+\
+//    STB_TEXTEDIT_K_BACKSPACE   keyboard input to delete selection or character left of cursor\
+\
+//    STB_TEXTEDIT_K_UNDO        keyboard input to perform undo\
+\
+//    STB_TEXTEDIT_K_REDO        keyboard input to perform redo\
+\
+//\
+\
+// Optional:\
+\
+//    STB_TEXTEDIT_K_INSERT              keyboard input to toggle insert mode\
+\
+//    STB_TEXTEDIT_IS_SPACE(ch)          true if character is whitespace (e.g. 'isspace'),\
+\
+//                                          required for default WORDLEFT/WORDRIGHT handlers\
+\
+//    STB_TEXTEDIT_MOVEWORDLEFT(obj,i)   custom handler for WORDLEFT, returns index to move cursor to\
+\
+//    STB_TEXTEDIT_MOVEWORDRIGHT(obj,i)  custom handler for WORDRIGHT, returns index to move cursor to\
+\
+//    STB_TEXTEDIT_K_WORDLEFT            keyboard input to move cursor left one word // e.g. ctrl-LEFT\
+\
+//    STB_TEXTEDIT_K_WORDRIGHT           keyboard input to move cursor right one word // e.g. ctrl-RIGHT\
+\
+//    STB_TEXTEDIT_K_LINESTART2          secondary keyboard input to move cursor to start of line\
+\
+//    STB_TEXTEDIT_K_LINEEND2            secondary keyboard input to move cursor to end of line\
+\
+//    STB_TEXTEDIT_K_TEXTSTART2          secondary keyboard input to move cursor to start of text\
+\
+//    STB_TEXTEDIT_K_TEXTEND2            secondary keyboard input to move cursor to end of text\
+\
+//\
+\
+// Keyboard input must be encoded as a single integer value; e.g. a character code\
+\
+// and some bitflags that represent shift states. to simplify the interface, SHIFT must\
+\
+// be a bitflag, so we can test the shifted state of cursor movements to allow selection,\
+\
+// i.e. (STB_TEXTEDIT_K_RIGHT|STB_TEXTEDIT_K_SHIFT) should be shifted right-arrow.\
+\
+//\
+\
+// You can encode other things, such as CONTROL or ALT, in additional bits, and\
+\
+// then test for their presence in e.g. STB_TEXTEDIT_K_WORDLEFT. For example,\
+\
+// my Windows implementations add an additional CONTROL bit, and an additional KEYDOWN\
+\
+// bit. Then all of the STB_TEXTEDIT_K_ values bitwise-or in the KEYDOWN bit,\
+\
+// and I pass both WM_KEYDOWN and WM_CHAR events to the \"key\" function in the\
+\
+// API below. The control keys will only match WM_KEYDOWN events because of the\
+\
+// keydown bit I add, and STB_TEXTEDIT_KEYTOTEXT only tests for the KEYDOWN\
+\
+// bit so it only decodes WM_CHAR events.\
+\
+//\
+\
+// STB_TEXTEDIT_LAYOUTROW returns information about the shape of one displayed\
+\
+// row of characters assuming they start on the i'th character--the width and\
+\
+// the height and the number of characters consumed. This allows this library\
+\
+// to traverse the entire layout incrementally. You need to compute word-wrapping\
+\
+// here.\
+\
+//\
+\
+// Each textfield keeps its own insert mode state, which is not how normal\
+\
+// applications work. To keep an app-wide insert mode, update/copy the\
+\
+// \"insert_mode\" field of STB_TexteditState before/after calling API functions.\
+\
+//\
+\
+// API\
+\
+//\
+\
+//    void stb_textedit_initialize_state(STB_TexteditState *state, int is_single_line)\
+\
+//\
+\
+//    void stb_textedit_click(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\
+\
+//    void stb_textedit_drag(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\
+\
+//    int  stb_textedit_cut(STB_TEXTEDIT_STRING *str, STB_TexteditState *state)\
+\
+//    int  stb_textedit_paste(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXTEDIT_CHARTYPE *text, int len)\
+\
+//    void stb_textedit_key(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXEDIT_KEYTYPE key)\
+\
+//\
+\
+//    Each of these functions potentially updates the string and updates the\
+\
+//    state.\
+\
+//\
+\
+//      initialize_state:\
+\
+//          set the textedit state to a known good default state when initially\
+\
+//          constructing the textedit.\
+\
+//\
+\
+//      click:\
+\
+//          call this with the mouse x,y on a mouse down; it will update the cursor\
+\
+//          and reset the selection start/end to the cursor point. the x,y must\
+\
+//          be relative to the text widget, with (0,0) being the top left.\
+\
+//\
+\
+//      drag:\
+\
+//          call this with the mouse x,y on a mouse drag/up; it will update the\
+\
+//          cursor and the selection end point\
+\
+//\
+\
+//      cut:\
+\
+//          call this to delete the current selection; returns true if there was\
+\
+//          one. you should FIRST copy the current selection to the system paste buffer.\
+\
+//          (To copy, just copy the current selection out of the string yourself.)\
+\
+//\
+\
+//      paste:\
+\
+//          call this to paste text at the current cursor point or over the current\
+\
+//          selection if there is one.\
+\
+//\
+\
+//      key:\
+\
+//          call this for keyboard inputs sent to the textfield. you can use it\
+\
+//          for \"key down\" events or for \"translated\" key events. if you need to\
+\
+//          do both (as in Win32), or distinguish Unicode characters from control\
+\
+//          inputs, set a high bit to distinguish the two; then you can define the\
+\
+//          various definitions like STB_TEXTEDIT_K_LEFT have the is-key-event bit\
+\
+//          set, and make STB_TEXTEDIT_KEYTOCHAR check that the is-key-event bit is\
+\
+//          clear. STB_TEXTEDIT_KEYTYPE defaults to int, but you can #define it to\
+\
+//          anything other type you wante before including.\
+\
+//\
+\
+//\
+\
+//   When rendering, you can read the cursor position and selection state from\
+\
+//   the STB_TexteditState.\
+\
+//\
+\
+//\
+\
+// Notes:\
+\
+//\
+\
+// This is designed to be usable in IMGUI, so it allows for the possibility of\
+\
+// running in an IMGUI that has NOT cached the multi-line layout. For this\
+\
+// reason, it provides an interface that is compatible with computing the\
+\
+// layout incrementally--we try to make sure we make as few passes through\
+\
+// as possible. (For example, to locate the mouse pointer in the text, we\
+\
+// could define functions that return the X and Y positions of characters\
+\
+// and binary search Y and then X, but if we're doing dynamic layout this\
+\
+// will run the layout algorithm many times, so instead we manually search\
+\
+// forward in one pass. Similar logic applies to e.g. up-arrow and\
+\
+// down-arrow movement.)\
+\
+//\
+\
+// If it's run in a widget that *has* cached the layout, then this is less\
+\
+// efficient, but it's not horrible on modern computers. But you wouldn't\
+\
+// want to edit million-line files with it.\
+\
+////////////////////////////////////////////////////////////////////////////\
+\
+////////////////////////////////////////////////////////////////////////////\
+\
+////\
+\
+////   Header-file mode\
+\
+////\
+\
+////\
+\
+////////////////////////////////////////////////////////////////////////\
+\
+//\
+\
+//     STB_TexteditState\
+\
+//\
+\
+// Definition of STB_TexteditState which you should store\
+\
+// per-textfield; it includes cursor position, selection state,\
+\
+// and undo state.\
+\
+//"
 defs["struct_comments"]["StbUndoState"] = {}
 defs["structs"] = {}
 defs["structs"]["ImBitVector"] = {}
@@ -4284,7 +5720,8 @@ defs["structs"]["ImDrawDataBuilder"][1]["template_type"] = "ImDrawList*"
 defs["structs"]["ImDrawDataBuilder"][1]["type"] = "ImVector_ImDrawListPtr"
 defs["structs"]["ImDrawList"] = {}
 defs["structs"]["ImDrawList"][1] = {}
-defs["structs"]["ImDrawList"][1]["comment"] = " // Draw commands. Typically 1 command = 1 GPU draw call, unless the command is a callback."
+defs["structs"]["ImDrawList"][1]["comment"] = "\
+    // This is what you have to render // Draw commands. Typically 1 command = 1 GPU draw call, unless the command is a callback."
 defs["structs"]["ImDrawList"][1]["name"] = "CmdBuffer"
 defs["structs"]["ImDrawList"][1]["template_type"] = "ImDrawCmd"
 defs["structs"]["ImDrawList"][1]["type"] = "ImVector_ImDrawCmd"
@@ -4303,7 +5740,8 @@ defs["structs"]["ImDrawList"][4]["comment"] = " // Flags, you may poke into thes
 defs["structs"]["ImDrawList"][4]["name"] = "Flags"
 defs["structs"]["ImDrawList"][4]["type"] = "ImDrawListFlags"
 defs["structs"]["ImDrawList"][5] = {}
-defs["structs"]["ImDrawList"][5]["comment"] = " // [Internal] generally == VtxBuffer.Size unless we are past 64K vertices, in which case this gets reset to 0."
+defs["structs"]["ImDrawList"][5]["comment"] = "\
+    // [Internal, used while building lists] // [Internal] generally == VtxBuffer.Size unless we are past 64K vertices, in which case this gets reset to 0."
 defs["structs"]["ImDrawList"][5]["name"] = "_VtxCurrentIdx"
 defs["structs"]["ImDrawList"][5]["type"] = "unsigned int"
 defs["structs"]["ImDrawList"][6] = {}
@@ -4379,7 +5817,8 @@ defs["structs"]["ImDrawListSharedData"][7]["comment"] = " // Initial flags at th
 defs["structs"]["ImDrawListSharedData"][7]["name"] = "InitialFlags"
 defs["structs"]["ImDrawListSharedData"][7]["type"] = "ImDrawListFlags"
 defs["structs"]["ImDrawListSharedData"][8] = {}
-defs["structs"]["ImDrawListSharedData"][8]["comment"] = " // Sample points on the quarter of the circle."
+defs["structs"]["ImDrawListSharedData"][8]["comment"] = "\
+    // [Internal] Lookup tables // Sample points on the quarter of the circle."
 defs["structs"]["ImDrawListSharedData"][8]["name"] = "ArcFastVtx[48]"
 defs["structs"]["ImDrawListSharedData"][8]["size"] = 48
 defs["structs"]["ImDrawListSharedData"][8]["type"] = "ImVec2"
@@ -4422,7 +5861,8 @@ defs["structs"]["ImDrawVert"][3]["name"] = "col"
 defs["structs"]["ImDrawVert"][3]["type"] = "ImU32"
 defs["structs"]["ImFont"] = {}
 defs["structs"]["ImFont"][1] = {}
-defs["structs"]["ImFont"][1]["comment"] = " // 12-16 // out //            // Sparse. Glyphs->AdvanceX in a directly indexable way (cache-friendly for CalcTextSize functions which only this this info, and are often bottleneck in large UI)."
+defs["structs"]["ImFont"][1]["comment"] = "\
+    // Members: Hot ~20/24 bytes (for CalcTextSize) // 12-16 // out //            // Sparse. Glyphs->AdvanceX in a directly indexable way (cache-friendly for CalcTextSize functions which only this this info, and are often bottleneck in large UI)."
 defs["structs"]["ImFont"][1]["name"] = "IndexAdvanceX"
 defs["structs"]["ImFont"][1]["template_type"] = "float"
 defs["structs"]["ImFont"][1]["type"] = "ImVector_float"
@@ -4435,7 +5875,8 @@ defs["structs"]["ImFont"][3]["comment"] = " // 4     // in  //            // Hei
 defs["structs"]["ImFont"][3]["name"] = "FontSize"
 defs["structs"]["ImFont"][3]["type"] = "float"
 defs["structs"]["ImFont"][4] = {}
-defs["structs"]["ImFont"][4]["comment"] = " // 12-16 // out //            // Sparse. Index glyphs by Unicode code-point."
+defs["structs"]["ImFont"][4]["comment"] = "\
+    // Members: Hot ~28/40 bytes (for CalcTextSize + render loop) // 12-16 // out //            // Sparse. Index glyphs by Unicode code-point."
 defs["structs"]["ImFont"][4]["name"] = "IndexLookup"
 defs["structs"]["ImFont"][4]["template_type"] = "ImWchar"
 defs["structs"]["ImFont"][4]["type"] = "ImVector_ImWchar"
@@ -4449,7 +5890,8 @@ defs["structs"]["ImFont"][6]["comment"] = " // 4-8   // out // = FindGlyph(FontF
 defs["structs"]["ImFont"][6]["name"] = "FallbackGlyph"
 defs["structs"]["ImFont"][6]["type"] = "const ImFontGlyph*"
 defs["structs"]["ImFont"][7] = {}
-defs["structs"]["ImFont"][7]["comment"] = " // 4-8   // out //            // What we has been loaded into"
+defs["structs"]["ImFont"][7]["comment"] = "\
+    // Members: Cold ~32/40 bytes // 4-8   // out //            // What we has been loaded into"
 defs["structs"]["ImFont"][7]["name"] = "ContainerAtlas"
 defs["structs"]["ImFont"][7]["type"] = "ImFontAtlas*"
 defs["structs"]["ImFont"][8] = {}
@@ -4499,7 +5941,12 @@ defs["structs"]["ImFont"][18]["size"] = 2
 defs["structs"]["ImFont"][18]["type"] = "ImU8"
 defs["structs"]["ImFontAtlas"] = {}
 defs["structs"]["ImFontAtlas"][1] = {}
-defs["structs"]["ImFontAtlas"][1]["comment"] = " // Build flags (see ImFontAtlasFlags_)"
+defs["structs"]["ImFontAtlas"][1]["comment"] = "\
+    //-------------------------------------------\
+\
+    // Members\
+\
+    //------------------------------------------- // Build flags (see ImFontAtlasFlags_)"
 defs["structs"]["ImFontAtlas"][1]["name"] = "Flags"
 defs["structs"]["ImFontAtlas"][1]["type"] = "ImFontAtlasFlags"
 defs["structs"]["ImFontAtlas"][2] = {}
@@ -4519,7 +5966,10 @@ defs["structs"]["ImFontAtlas"][5]["comment"] = " // Marked as Locked by ImGui::N
 defs["structs"]["ImFontAtlas"][5]["name"] = "Locked"
 defs["structs"]["ImFontAtlas"][5]["type"] = "bool"
 defs["structs"]["ImFontAtlas"][6] = {}
-defs["structs"]["ImFontAtlas"][6]["comment"] = " // Set when texture was built matching current font input"
+defs["structs"]["ImFontAtlas"][6]["comment"] = "\
+    // [Internal]\
+\
+    // NB: Access texture data via GetTexData*() calls! Which will setup a default font for you. // Set when texture was built matching current font input"
 defs["structs"]["ImFontAtlas"][6]["name"] = "TexReady"
 defs["structs"]["ImFontAtlas"][6]["type"] = "bool"
 defs["structs"]["ImFontAtlas"][7] = {}
@@ -4571,7 +6021,8 @@ defs["structs"]["ImFontAtlas"][17]["name"] = "TexUvLines[(63)+1]"
 defs["structs"]["ImFontAtlas"][17]["size"] = 64
 defs["structs"]["ImFontAtlas"][17]["type"] = "ImVec4"
 defs["structs"]["ImFontAtlas"][18] = {}
-defs["structs"]["ImFontAtlas"][18]["comment"] = " // Opaque interface to a font builder (default to stb_truetype, can be changed to use FreeType by defining IMGUI_ENABLE_FREETYPE)."
+defs["structs"]["ImFontAtlas"][18]["comment"] = "\
+    // [Internal] Font builder // Opaque interface to a font builder (default to stb_truetype, can be changed to use FreeType by defining IMGUI_ENABLE_FREETYPE)."
 defs["structs"]["ImFontAtlas"][18]["name"] = "FontBuilderIO"
 defs["structs"]["ImFontAtlas"][18]["type"] = "const ImFontBuilderIO*"
 defs["structs"]["ImFontAtlas"][19] = {}
@@ -4579,7 +6030,8 @@ defs["structs"]["ImFontAtlas"][19]["comment"] = " // Shared flags (for all fonts
 defs["structs"]["ImFontAtlas"][19]["name"] = "FontBuilderFlags"
 defs["structs"]["ImFontAtlas"][19]["type"] = "unsigned int"
 defs["structs"]["ImFontAtlas"][20] = {}
-defs["structs"]["ImFontAtlas"][20]["comment"] = " // Custom texture rectangle ID for white pixel and mouse cursors"
+defs["structs"]["ImFontAtlas"][20]["comment"] = "\
+    // [Internal] Packing data // Custom texture rectangle ID for white pixel and mouse cursors"
 defs["structs"]["ImFontAtlas"][20]["name"] = "PackIdMouseCursors"
 defs["structs"]["ImFontAtlas"][20]["type"] = "int"
 defs["structs"]["ImFontAtlas"][21] = {}
@@ -4693,7 +6145,8 @@ defs["structs"]["ImFontConfig"][17]["comment"] = " // -1       // Explicitly spe
 defs["structs"]["ImFontConfig"][17]["name"] = "EllipsisChar"
 defs["structs"]["ImFontConfig"][17]["type"] = "ImWchar"
 defs["structs"]["ImFontConfig"][18] = {}
-defs["structs"]["ImFontConfig"][18]["comment"] = " // Name (strictly to ease debugging)"
+defs["structs"]["ImFontConfig"][18]["comment"] = "\
+    // [Internal] // Name (strictly to ease debugging)"
 defs["structs"]["ImFontConfig"][18]["name"] = "Name[40]"
 defs["structs"]["ImFontConfig"][18]["size"] = 40
 defs["structs"]["ImFontConfig"][18]["type"] = "char"
@@ -4873,7 +6326,8 @@ defs["structs"]["ImGuiContext"][24]["comment"] = " // Test engine user data"
 defs["structs"]["ImGuiContext"][24]["name"] = "TestEngine"
 defs["structs"]["ImGuiContext"][24]["type"] = "void*"
 defs["structs"]["ImGuiContext"][25] = {}
-defs["structs"]["ImGuiContext"][25]["comment"] = " // Windows, sorted in display order, back to front"
+defs["structs"]["ImGuiContext"][25]["comment"] = "\
+    // Windows state // Windows, sorted in display order, back to front"
 defs["structs"]["ImGuiContext"][25]["name"] = "Windows"
 defs["structs"]["ImGuiContext"][25]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][25]["type"] = "ImVector_ImGuiWindowPtr"
@@ -4934,7 +6388,8 @@ defs["structs"]["ImGuiContext"][39] = {}
 defs["structs"]["ImGuiContext"][39]["name"] = "WheelingWindowTimer"
 defs["structs"]["ImGuiContext"][39]["type"] = "float"
 defs["structs"]["ImGuiContext"][40] = {}
-defs["structs"]["ImGuiContext"][40]["comment"] = " // Will call core hooks: DebugHookIdInfo() from GetID functions, used by Stack Tool [next HoveredId/ActiveId to not pull in an extra cache-line]"
+defs["structs"]["ImGuiContext"][40]["comment"] = "\
+    // Item/widgets state and tracking information // Will call core hooks: DebugHookIdInfo() from GetID functions, used by Stack Tool [next HoveredId/ActiveId to not pull in an extra cache-line]"
 defs["structs"]["ImGuiContext"][40]["name"] = "DebugHookIdInfo"
 defs["structs"]["ImGuiContext"][40]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][41] = {}
@@ -5035,7 +6490,8 @@ defs["structs"]["ImGuiContext"][67]["comment"] = " // Store the last non-zero Ac
 defs["structs"]["ImGuiContext"][67]["name"] = "LastActiveIdTimer"
 defs["structs"]["ImGuiContext"][67]["type"] = "float"
 defs["structs"]["ImGuiContext"][68] = {}
-defs["structs"]["ImGuiContext"][68]["comment"] = " // Active widget will want to read mouse wheel. Blocks scrolling the underlying window."
+defs["structs"]["ImGuiContext"][68]["comment"] = "\
+    // Input Ownership // Active widget will want to read mouse wheel. Blocks scrolling the underlying window."
 defs["structs"]["ImGuiContext"][68]["name"] = "ActiveIdUsingMouseWheel"
 defs["structs"]["ImGuiContext"][68]["type"] = "bool"
 defs["structs"]["ImGuiContext"][69] = {}
@@ -5051,7 +6507,8 @@ defs["structs"]["ImGuiContext"][71]["comment"] = " // Active widget will want to
 defs["structs"]["ImGuiContext"][71]["name"] = "ActiveIdUsingKeyInputMask"
 defs["structs"]["ImGuiContext"][71]["type"] = "ImBitArrayForNamedKeys"
 defs["structs"]["ImGuiContext"][72] = {}
-defs["structs"]["ImGuiContext"][72]["comment"] = " // == g.ItemFlagsStack.back()"
+defs["structs"]["ImGuiContext"][72]["comment"] = "\
+    // Next window/item data // == g.ItemFlagsStack.back()"
 defs["structs"]["ImGuiContext"][72]["name"] = "CurrentItemFlags"
 defs["structs"]["ImGuiContext"][72]["type"] = "ImGuiItemFlags"
 defs["structs"]["ImGuiContext"][73] = {}
@@ -5067,7 +6524,8 @@ defs["structs"]["ImGuiContext"][75]["comment"] = " // Storage for SetNextWindow*
 defs["structs"]["ImGuiContext"][75]["name"] = "NextWindowData"
 defs["structs"]["ImGuiContext"][75]["type"] = "ImGuiNextWindowData"
 defs["structs"]["ImGuiContext"][76] = {}
-defs["structs"]["ImGuiContext"][76]["comment"] = " // Stack for PushStyleColor()/PopStyleColor() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][76]["comment"] = "\
+    // Shared stacks // Stack for PushStyleColor()/PopStyleColor() - inherited by Begin()"
 defs["structs"]["ImGuiContext"][76]["name"] = "ColorStack"
 defs["structs"]["ImGuiContext"][76]["template_type"] = "ImGuiColorMod"
 defs["structs"]["ImGuiContext"][76]["type"] = "ImVector_ImGuiColorMod"
@@ -5110,7 +6568,8 @@ defs["structs"]["ImGuiContext"][84] = {}
 defs["structs"]["ImGuiContext"][84]["name"] = "BeginMenuCount"
 defs["structs"]["ImGuiContext"][84]["type"] = "int"
 defs["structs"]["ImGuiContext"][85] = {}
-defs["structs"]["ImGuiContext"][85]["comment"] = " // Active viewports (always 1+, and generally 1 unless multi-viewports are enabled). Each viewports hold their copy of ImDrawData."
+defs["structs"]["ImGuiContext"][85]["comment"] = "\
+    // Viewports // Active viewports (always 1+, and generally 1 unless multi-viewports are enabled). Each viewports hold their copy of ImDrawData."
 defs["structs"]["ImGuiContext"][85]["name"] = "Viewports"
 defs["structs"]["ImGuiContext"][85]["template_type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiContext"][85]["type"] = "ImVector_ImGuiViewportPPtr"
@@ -5141,7 +6600,8 @@ defs["structs"]["ImGuiContext"][92]["comment"] = " // Every time the front-most 
 defs["structs"]["ImGuiContext"][92]["name"] = "ViewportFrontMostStampCount"
 defs["structs"]["ImGuiContext"][92]["type"] = "int"
 defs["structs"]["ImGuiContext"][93] = {}
-defs["structs"]["ImGuiContext"][93]["comment"] = " // Focused window for navigation. Could be called 'FocusedWindow'"
+defs["structs"]["ImGuiContext"][93]["comment"] = "\
+    // Gamepad/keyboard Navigation // Focused window for navigation. Could be called 'FocusedWindow'"
 defs["structs"]["ImGuiContext"][93]["name"] = "NavWindow"
 defs["structs"]["ImGuiContext"][93]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][94] = {}
@@ -5214,7 +6674,8 @@ defs["structs"]["ImGuiContext"][111]["comment"] = " // When user starts using ga
 defs["structs"]["ImGuiContext"][111]["name"] = "NavDisableMouseHover"
 defs["structs"]["ImGuiContext"][111]["type"] = "bool"
 defs["structs"]["ImGuiContext"][112] = {}
-defs["structs"]["ImGuiContext"][112]["comment"] = " // ~~ NavMoveRequest || NavInitRequest this is to perform early out in ItemAdd()"
+defs["structs"]["ImGuiContext"][112]["comment"] = "\
+    // Navigation: Init & Move Requests // ~~ NavMoveRequest || NavInitRequest this is to perform early out in ItemAdd()"
 defs["structs"]["ImGuiContext"][112]["name"] = "NavAnyRequest"
 defs["structs"]["ImGuiContext"][112]["type"] = "bool"
 defs["structs"]["ImGuiContext"][113] = {}
@@ -5300,7 +6761,8 @@ defs["structs"]["ImGuiContext"][134]["comment"] = " // First tabbing request can
 defs["structs"]["ImGuiContext"][134]["name"] = "NavTabbingResultFirst"
 defs["structs"]["ImGuiContext"][134]["type"] = "ImGuiNavItemData"
 defs["structs"]["ImGuiContext"][135] = {}
-defs["structs"]["ImGuiContext"][135]["comment"] = " // Target window when doing CTRL+Tab (or Pad Menu + FocusPrev/Next), this window is temporarily displayed top-most!"
+defs["structs"]["ImGuiContext"][135]["comment"] = "\
+    // Navigation: Windowing (CTRL+TAB for list, or Menu button + keys or directional pads to move/resize) // Target window when doing CTRL+Tab (or Pad Menu + FocusPrev/Next), this window is temporarily displayed top-most!"
 defs["structs"]["ImGuiContext"][135]["name"] = "NavWindowingTarget"
 defs["structs"]["ImGuiContext"][135]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][136] = {}
@@ -5321,13 +6783,16 @@ defs["structs"]["ImGuiContext"][140] = {}
 defs["structs"]["ImGuiContext"][140]["name"] = "NavWindowingToggleLayer"
 defs["structs"]["ImGuiContext"][140]["type"] = "bool"
 defs["structs"]["ImGuiContext"][141] = {}
-defs["structs"]["ImGuiContext"][141]["comment"] = " // 0.0..1.0 animation when fading in a dimming background (for modal window and CTRL+TAB list)"
+defs["structs"]["ImGuiContext"][141]["comment"] = "\
+    // Render // 0.0..1.0 animation when fading in a dimming background (for modal window and CTRL+TAB list)"
 defs["structs"]["ImGuiContext"][141]["name"] = "DimBgRatio"
 defs["structs"]["ImGuiContext"][141]["type"] = "float"
 defs["structs"]["ImGuiContext"][142] = {}
 defs["structs"]["ImGuiContext"][142]["name"] = "MouseCursor"
 defs["structs"]["ImGuiContext"][142]["type"] = "ImGuiMouseCursor"
 defs["structs"]["ImGuiContext"][143] = {}
+defs["structs"]["ImGuiContext"][143]["comment"] = "\
+    // Drag and Drop"
 defs["structs"]["ImGuiContext"][143]["name"] = "DragDropActive"
 defs["structs"]["ImGuiContext"][143]["type"] = "bool"
 defs["structs"]["ImGuiContext"][144] = {}
@@ -5391,6 +6856,8 @@ defs["structs"]["ImGuiContext"][159]["name"] = "DragDropPayloadBufLocal[16]"
 defs["structs"]["ImGuiContext"][159]["size"] = 16
 defs["structs"]["ImGuiContext"][159]["type"] = "unsigned char"
 defs["structs"]["ImGuiContext"][160] = {}
+defs["structs"]["ImGuiContext"][160]["comment"] = "\
+    // Clipper"
 defs["structs"]["ImGuiContext"][160]["name"] = "ClipperTempDataStacked"
 defs["structs"]["ImGuiContext"][160]["type"] = "int"
 defs["structs"]["ImGuiContext"][161] = {}
@@ -5398,6 +6865,8 @@ defs["structs"]["ImGuiContext"][161]["name"] = "ClipperTempData"
 defs["structs"]["ImGuiContext"][161]["template_type"] = "ImGuiListClipperData"
 defs["structs"]["ImGuiContext"][161]["type"] = "ImVector_ImGuiListClipperData"
 defs["structs"]["ImGuiContext"][162] = {}
+defs["structs"]["ImGuiContext"][162]["comment"] = "\
+    // Tables"
 defs["structs"]["ImGuiContext"][162]["name"] = "CurrentTable"
 defs["structs"]["ImGuiContext"][162]["type"] = "ImGuiTable*"
 defs["structs"]["ImGuiContext"][163] = {}
@@ -5424,6 +6893,8 @@ defs["structs"]["ImGuiContext"][167]["name"] = "DrawChannelsTempMergeBuffer"
 defs["structs"]["ImGuiContext"][167]["template_type"] = "ImDrawChannel"
 defs["structs"]["ImGuiContext"][167]["type"] = "ImVector_ImDrawChannel"
 defs["structs"]["ImGuiContext"][168] = {}
+defs["structs"]["ImGuiContext"][168]["comment"] = "\
+    // Tab bars"
 defs["structs"]["ImGuiContext"][168]["name"] = "CurrentTabBar"
 defs["structs"]["ImGuiContext"][168]["type"] = "ImGuiTabBar*"
 defs["structs"]["ImGuiContext"][169] = {}
@@ -5439,6 +6910,8 @@ defs["structs"]["ImGuiContext"][171]["name"] = "ShrinkWidthBuffer"
 defs["structs"]["ImGuiContext"][171]["template_type"] = "ImGuiShrinkWidthItem"
 defs["structs"]["ImGuiContext"][171]["type"] = "ImVector_ImGuiShrinkWidthItem"
 defs["structs"]["ImGuiContext"][172] = {}
+defs["structs"]["ImGuiContext"][172]["comment"] = "\
+    // Widget state"
 defs["structs"]["ImGuiContext"][172]["name"] = "MouseLastValidPos"
 defs["structs"]["ImGuiContext"][172]["type"] = "ImVec2"
 defs["structs"]["ImGuiContext"][173] = {}
@@ -5525,7 +6998,8 @@ defs["structs"]["ImGuiContext"][194]["name"] = "MenusIdSubmittedThisFrame"
 defs["structs"]["ImGuiContext"][194]["template_type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][194]["type"] = "ImVector_ImGuiID"
 defs["structs"]["ImGuiContext"][195] = {}
-defs["structs"]["ImGuiContext"][195]["comment"] = " // Data updated by current frame"
+defs["structs"]["ImGuiContext"][195]["comment"] = "\
+    // Platform support // Data updated by current frame"
 defs["structs"]["ImGuiContext"][195]["name"] = "PlatformImeData"
 defs["structs"]["ImGuiContext"][195]["type"] = "ImGuiPlatformImeData"
 defs["structs"]["ImGuiContext"][196] = {}
@@ -5540,9 +7014,15 @@ defs["structs"]["ImGuiContext"][198]["comment"] = " // '.' or *localeconv()->dec
 defs["structs"]["ImGuiContext"][198]["name"] = "PlatformLocaleDecimalPoint"
 defs["structs"]["ImGuiContext"][198]["type"] = "char"
 defs["structs"]["ImGuiContext"][199] = {}
+defs["structs"]["ImGuiContext"][199]["comment"] = "\
+    // Extensions\
+\
+    // FIXME: We could provide an API to register one slot in an array held in ImGuiContext?"
 defs["structs"]["ImGuiContext"][199]["name"] = "DockContext"
 defs["structs"]["ImGuiContext"][199]["type"] = "ImGuiDockContext"
 defs["structs"]["ImGuiContext"][200] = {}
+defs["structs"]["ImGuiContext"][200]["comment"] = "\
+    // Settings"
 defs["structs"]["ImGuiContext"][200]["name"] = "SettingsLoaded"
 defs["structs"]["ImGuiContext"][200]["type"] = "bool"
 defs["structs"]["ImGuiContext"][201] = {}
@@ -5578,7 +7058,8 @@ defs["structs"]["ImGuiContext"][207]["comment"] = " // Next available HookId"
 defs["structs"]["ImGuiContext"][207]["name"] = "HookIdNext"
 defs["structs"]["ImGuiContext"][207]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][208] = {}
-defs["structs"]["ImGuiContext"][208]["comment"] = " // Currently capturing"
+defs["structs"]["ImGuiContext"][208]["comment"] = "\
+    // Capture/Logging // Currently capturing"
 defs["structs"]["ImGuiContext"][208]["name"] = "LogEnabled"
 defs["structs"]["ImGuiContext"][208]["type"] = "bool"
 defs["structs"]["ImGuiContext"][209] = {}
@@ -5616,6 +7097,8 @@ defs["structs"]["ImGuiContext"][218]["comment"] = " // Default/stored value for 
 defs["structs"]["ImGuiContext"][218]["name"] = "LogDepthToExpandDefault"
 defs["structs"]["ImGuiContext"][218]["type"] = "int"
 defs["structs"]["ImGuiContext"][219] = {}
+defs["structs"]["ImGuiContext"][219]["comment"] = "\
+    // Debug Tools"
 defs["structs"]["ImGuiContext"][219]["name"] = "DebugLogFlags"
 defs["structs"]["ImGuiContext"][219]["type"] = "ImGuiDebugLogFlags"
 defs["structs"]["ImGuiContext"][220] = {}
@@ -5636,7 +7119,8 @@ defs["structs"]["ImGuiContext"][224] = {}
 defs["structs"]["ImGuiContext"][224]["name"] = "DebugStackTool"
 defs["structs"]["ImGuiContext"][224]["type"] = "ImGuiStackTool"
 defs["structs"]["ImGuiContext"][225] = {}
-defs["structs"]["ImGuiContext"][225]["comment"] = " // Calculate estimate of framerate for user over the last 2 seconds."
+defs["structs"]["ImGuiContext"][225]["comment"] = "\
+    // Misc // Calculate estimate of framerate for user over the last 2 seconds."
 defs["structs"]["ImGuiContext"][225]["name"] = "FramerateSecPerFrame[120]"
 defs["structs"]["ImGuiContext"][225]["size"] = 120
 defs["structs"]["ImGuiContext"][225]["type"] = "float"
@@ -5922,7 +7406,12 @@ defs["structs"]["ImGuiGroupData"][11]["name"] = "EmitItem"
 defs["structs"]["ImGuiGroupData"][11]["type"] = "bool"
 defs["structs"]["ImGuiIO"] = {}
 defs["structs"]["ImGuiIO"][1] = {}
-defs["structs"]["ImGuiIO"][1]["comment"] = " // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc."
+defs["structs"]["ImGuiIO"][1]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // Configuration                            // Default value\
+\
+    //------------------------------------------------------------------ // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc."
 defs["structs"]["ImGuiIO"][1]["name"] = "ConfigFlags"
 defs["structs"]["ImGuiIO"][1]["type"] = "ImGuiConfigFlags"
 defs["structs"]["ImGuiIO"][2] = {}
@@ -5994,7 +7483,8 @@ defs["structs"]["ImGuiIO"][18]["comment"] = " // = (1, 1)         // For retina 
 defs["structs"]["ImGuiIO"][18]["name"] = "DisplayFramebufferScale"
 defs["structs"]["ImGuiIO"][18]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][19] = {}
-defs["structs"]["ImGuiIO"][19]["comment"] = " // = false          // Simplified docking mode: disable window splitting, so docking is limited to merging multiple windows together into tab-bars."
+defs["structs"]["ImGuiIO"][19]["comment"] = "\
+    // Docking options (when ImGuiConfigFlags_DockingEnable is set) // = false          // Simplified docking mode: disable window splitting, so docking is limited to merging multiple windows together into tab-bars."
 defs["structs"]["ImGuiIO"][19]["name"] = "ConfigDockingNoSplit"
 defs["structs"]["ImGuiIO"][19]["type"] = "bool"
 defs["structs"]["ImGuiIO"][20] = {}
@@ -6010,7 +7500,8 @@ defs["structs"]["ImGuiIO"][22]["comment"] = "// = false          // [BETA] Make 
 defs["structs"]["ImGuiIO"][22]["name"] = "ConfigDockingTransparentPayload"
 defs["structs"]["ImGuiIO"][22]["type"] = "bool"
 defs["structs"]["ImGuiIO"][23] = {}
-defs["structs"]["ImGuiIO"][23]["comment"] = " // = false;         // Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it. May also set ImGuiViewportFlags_NoAutoMerge on individual viewport."
+defs["structs"]["ImGuiIO"][23]["comment"] = "\
+    // Viewport options (when ImGuiConfigFlags_ViewportsEnable is set) // = false;         // Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it. May also set ImGuiViewportFlags_NoAutoMerge on individual viewport."
 defs["structs"]["ImGuiIO"][23]["name"] = "ConfigViewportsNoAutoMerge"
 defs["structs"]["ImGuiIO"][23]["type"] = "bool"
 defs["structs"]["ImGuiIO"][24] = {}
@@ -6026,7 +7517,8 @@ defs["structs"]["ImGuiIO"][26]["comment"] = " // = false          // Disable def
 defs["structs"]["ImGuiIO"][26]["name"] = "ConfigViewportsNoDefaultParent"
 defs["structs"]["ImGuiIO"][26]["type"] = "bool"
 defs["structs"]["ImGuiIO"][27] = {}
-defs["structs"]["ImGuiIO"][27]["comment"] = " // = false          // Request ImGui to draw a mouse cursor for you (if you are on a platform without a mouse cursor). Cannot be easily renamed to 'io.ConfigXXX' because this is frequently used by backend implementations."
+defs["structs"]["ImGuiIO"][27]["comment"] = "\
+    // Miscellaneous options // = false          // Request ImGui to draw a mouse cursor for you (if you are on a platform without a mouse cursor). Cannot be easily renamed to 'io.ConfigXXX' because this is frequently used by backend implementations."
 defs["structs"]["ImGuiIO"][27]["name"] = "MouseDrawCursor"
 defs["structs"]["ImGuiIO"][27]["type"] = "bool"
 defs["structs"]["ImGuiIO"][28] = {}
@@ -6058,7 +7550,16 @@ defs["structs"]["ImGuiIO"][34]["comment"] = " // = 60.0f          // Timer (in s
 defs["structs"]["ImGuiIO"][34]["name"] = "ConfigMemoryCompactTimer"
 defs["structs"]["ImGuiIO"][34]["type"] = "float"
 defs["structs"]["ImGuiIO"][35] = {}
-defs["structs"]["ImGuiIO"][35]["comment"] = " // = NULL"
+defs["structs"]["ImGuiIO"][35]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // Platform Functions\
+\
+    // (the imgui_impl_xxxx backend files are setting those up for you)\
+\
+    //------------------------------------------------------------------\
+\
+    // Optional: Platform/Renderer backend name (informational only! will be displayed in About Window) + User data for backend/wrappers to store their own stuff. // = NULL"
 defs["structs"]["ImGuiIO"][35]["name"] = "BackendPlatformName"
 defs["structs"]["ImGuiIO"][35]["type"] = "const char*"
 defs["structs"]["ImGuiIO"][36] = {}
@@ -6078,6 +7579,10 @@ defs["structs"]["ImGuiIO"][39]["comment"] = " // = NULL           // User data f
 defs["structs"]["ImGuiIO"][39]["name"] = "BackendLanguageUserData"
 defs["structs"]["ImGuiIO"][39]["type"] = "void*"
 defs["structs"]["ImGuiIO"][40] = {}
+defs["structs"]["ImGuiIO"][40]["comment"] = "\
+    // Optional: Access OS clipboard\
+\
+    // (default to use native Win32 clipboard on Windows, otherwise uses a private clipboard. Override to access OS clipboard on other architectures)"
 defs["structs"]["ImGuiIO"][40]["name"] = "GetClipboardTextFn"
 defs["structs"]["ImGuiIO"][40]["type"] = "const char*(*)(void* user_data)"
 defs["structs"]["ImGuiIO"][41] = {}
@@ -6087,6 +7592,10 @@ defs["structs"]["ImGuiIO"][42] = {}
 defs["structs"]["ImGuiIO"][42]["name"] = "ClipboardUserData"
 defs["structs"]["ImGuiIO"][42]["type"] = "void*"
 defs["structs"]["ImGuiIO"][43] = {}
+defs["structs"]["ImGuiIO"][43]["comment"] = "\
+    // Optional: Notify OS Input Method Editor of the screen position of your cursor for text input position (e.g. when using Japanese/Chinese IME on Windows)\
+\
+    // (default to use native imm32 api on Windows)"
 defs["structs"]["ImGuiIO"][43]["name"] = "SetPlatformImeDataFn"
 defs["structs"]["ImGuiIO"][43]["type"] = "void(*)(ImGuiViewport* viewport,ImGuiPlatformImeData* data)"
 defs["structs"]["ImGuiIO"][44] = {}
@@ -6094,7 +7603,16 @@ defs["structs"]["ImGuiIO"][44]["comment"] = " // Unused field to keep data struc
 defs["structs"]["ImGuiIO"][44]["name"] = "_UnusedPadding"
 defs["structs"]["ImGuiIO"][44]["type"] = "void*"
 defs["structs"]["ImGuiIO"][45] = {}
-defs["structs"]["ImGuiIO"][45]["comment"] = " // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.)."
+defs["structs"]["ImGuiIO"][45]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // Output - Updated by NewFrame() or EndFrame()/Render()\
+\
+    // (when reading from the io.WantCaptureMouse, io.WantCaptureKeyboard flags to dispatch your inputs, it is\
+\
+    //  generally easier and more correct to use their state BEFORE calling NewFrame(). See FAQ for details!)\
+\
+    //------------------------------------------------------------------ // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.)."
 defs["structs"]["ImGuiIO"][45]["name"] = "WantCaptureMouse"
 defs["structs"]["ImGuiIO"][45]["type"] = "bool"
 defs["structs"]["ImGuiIO"][46] = {}
@@ -6150,7 +7668,10 @@ defs["structs"]["ImGuiIO"][58]["comment"] = " // Mouse delta. Note that this is 
 defs["structs"]["ImGuiIO"][58]["name"] = "MouseDelta"
 defs["structs"]["ImGuiIO"][58]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][59] = {}
-defs["structs"]["ImGuiIO"][59]["comment"] = " // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512."
+defs["structs"]["ImGuiIO"][59]["comment"] = "\
+    // Legacy: before 1.87, we required backend to fill io.KeyMap[] (imgui->native map) during initialization and io.KeysDown[] (native indices) every frame.\
+\
+    // This is still temporarily supported as a legacy feature. However the new preferred scheme is for backend to call io.AddKeyEvent(). // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512."
 defs["structs"]["ImGuiIO"][59]["name"] = "KeyMap[ImGuiKey_COUNT]"
 defs["structs"]["ImGuiIO"][59]["size"] = 645
 defs["structs"]["ImGuiIO"][59]["type"] = "int"
@@ -6160,7 +7681,18 @@ defs["structs"]["ImGuiIO"][60]["name"] = "KeysDown[ImGuiKey_COUNT]"
 defs["structs"]["ImGuiIO"][60]["size"] = 645
 defs["structs"]["ImGuiIO"][60]["type"] = "bool"
 defs["structs"]["ImGuiIO"][61] = {}
-defs["structs"]["ImGuiIO"][61]["comment"] = " // Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.)"
+defs["structs"]["ImGuiIO"][61]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // [Internal] Dear ImGui will maintain those fields. Forward compatibility not guaranteed!\
+\
+    //------------------------------------------------------------------\
+\
+    // Main Input State\
+\
+    // (this block used to be written by backend, since 1.87 it is best to NOT write to those directly, call the AddXXX functions above instead)\
+\
+    // (reading from those variables is fair game, as they are extremely unlikely to be moving anywhere) // Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.)"
 defs["structs"]["ImGuiIO"][61]["name"] = "MousePos"
 defs["structs"]["ImGuiIO"][61]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][62] = {}
@@ -6202,7 +7734,8 @@ defs["structs"]["ImGuiIO"][70]["name"] = "NavInputs[ImGuiNavInput_COUNT]"
 defs["structs"]["ImGuiIO"][70]["size"] = 20
 defs["structs"]["ImGuiIO"][70]["type"] = "float"
 defs["structs"]["ImGuiIO"][71] = {}
-defs["structs"]["ImGuiIO"][71]["comment"] = " // Key mods flags (same as io.KeyCtrl/KeyShift/KeyAlt/KeySuper but merged into flags), updated by NewFrame()"
+defs["structs"]["ImGuiIO"][71]["comment"] = "\
+    // Other state maintained from data above + IO function calls // Key mods flags (same as io.KeyCtrl/KeyShift/KeyAlt/KeySuper but merged into flags), updated by NewFrame()"
 defs["structs"]["ImGuiIO"][71]["name"] = "KeyMods"
 defs["structs"]["ImGuiIO"][71]["type"] = "ImGuiModFlags"
 defs["structs"]["ImGuiIO"][72] = {}
@@ -6390,7 +7923,12 @@ defs["structs"]["ImGuiInputTextCallbackData"][3]["comment"] = " // What user pas
 defs["structs"]["ImGuiInputTextCallbackData"][3]["name"] = "UserData"
 defs["structs"]["ImGuiInputTextCallbackData"][3]["type"] = "void*"
 defs["structs"]["ImGuiInputTextCallbackData"][4] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"] = " // Character input                      // Read-write   // [CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;"
+defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"] = "\
+    // Arguments for the different callback events\
+\
+    // - To modify the text buffer in a callback, prefer using the InsertChars() / DeleteChars() function. InsertChars() will take care of calling the resize callback if necessary.\
+\
+    // - If you know your edits are not going to resize the underlying buffer allocation, you may modify the contents of 'Buf[]' directly. You need to update 'BufTextLen' accordingly (0 <= BufTextLen < BufSize) and set 'BufDirty'' to true so InputText can update its internal state. // Character input                      // Read-write   // [CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;"
 defs["structs"]["ImGuiInputTextCallbackData"][4]["name"] = "EventChar"
 defs["structs"]["ImGuiInputTextCallbackData"][4]["type"] = "ImWchar"
 defs["structs"]["ImGuiInputTextCallbackData"][5] = {}
@@ -6847,7 +8385,8 @@ defs["structs"]["ImGuiOnceUponAFrame"][1]["name"] = "RefFrame"
 defs["structs"]["ImGuiOnceUponAFrame"][1]["type"] = "int"
 defs["structs"]["ImGuiPayload"] = {}
 defs["structs"]["ImGuiPayload"][1] = {}
-defs["structs"]["ImGuiPayload"][1]["comment"] = " // Data (copied and owned by dear imgui)"
+defs["structs"]["ImGuiPayload"][1]["comment"] = "\
+    // Members // Data (copied and owned by dear imgui)"
 defs["structs"]["ImGuiPayload"][1]["name"] = "Data"
 defs["structs"]["ImGuiPayload"][1]["type"] = "void*"
 defs["structs"]["ImGuiPayload"][2] = {}
@@ -6855,7 +8394,8 @@ defs["structs"]["ImGuiPayload"][2]["comment"] = " // Data size"
 defs["structs"]["ImGuiPayload"][2]["name"] = "DataSize"
 defs["structs"]["ImGuiPayload"][2]["type"] = "int"
 defs["structs"]["ImGuiPayload"][3] = {}
-defs["structs"]["ImGuiPayload"][3]["comment"] = " // Source item id"
+defs["structs"]["ImGuiPayload"][3]["comment"] = "\
+    // [Internal] // Source item id"
 defs["structs"]["ImGuiPayload"][3]["name"] = "SourceId"
 defs["structs"]["ImGuiPayload"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiPayload"][4] = {}
@@ -6881,7 +8421,38 @@ defs["structs"]["ImGuiPayload"][8]["name"] = "Delivery"
 defs["structs"]["ImGuiPayload"][8]["type"] = "bool"
 defs["structs"]["ImGuiPlatformIO"] = {}
 defs["structs"]["ImGuiPlatformIO"][1] = {}
-defs["structs"]["ImGuiPlatformIO"][1]["comment"] = " // . . U . .  // Create a new platform window for the given viewport"
+defs["structs"]["ImGuiPlatformIO"][1]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // Input - Backend interface/functions + Monitor List\
+\
+    //------------------------------------------------------------------\
+\
+    // (Optional) Platform functions (e.g. Win32, GLFW, SDL2)\
+\
+    // For reference, the second column shows which function are generally calling the Platform Functions:\
+\
+    //   N = ImGui::NewFrame()                        ~ beginning of the dear imgui frame: read info from platform/OS windows (latest size/position)\
+\
+    //   F = ImGui::Begin(), ImGui::EndFrame()        ~ during the dear imgui frame\
+\
+    //   U = ImGui::UpdatePlatformWindows()           ~ after the dear imgui frame: create and update all platform/OS windows\
+\
+    //   R = ImGui::RenderPlatformWindowsDefault()    ~ render\
+\
+    //   D = ImGui::DestroyPlatformWindows()          ~ shutdown\
+\
+    // The general idea is that NewFrame() we will read the current Platform/OS state, and UpdatePlatformWindows() will write to it.\
+\
+    //\
+\
+    // The functions are designed so we can mix and match 2 imgui_impl_xxxx files, one for the Platform (~window/input handling), one for Renderer.\
+\
+    // Custom engine backends will often provide both Platform and Renderer interfaces and so may not need to use all functions.\
+\
+    // Platform functions are typically called before their Renderer counterpart, apart from Destroy which are called the other way.\
+\
+    // Platform function --------------------------------------------------- Called by ----- // . . U . .  // Create a new platform window for the given viewport"
 defs["structs"]["ImGuiPlatformIO"][1]["name"] = "Platform_CreateWindow"
 defs["structs"]["ImGuiPlatformIO"][1]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][2] = {}
@@ -6953,7 +8524,8 @@ defs["structs"]["ImGuiPlatformIO"][18]["comment"] = " // (Optional) For a Vulkan
 defs["structs"]["ImGuiPlatformIO"][18]["name"] = "Platform_CreateVkSurface"
 defs["structs"]["ImGuiPlatformIO"][18]["type"] = "int(*)(ImGuiViewport* vp,ImU64 vk_inst,const void* vk_allocators,ImU64* out_vk_surface)"
 defs["structs"]["ImGuiPlatformIO"][19] = {}
-defs["structs"]["ImGuiPlatformIO"][19]["comment"] = " // . . U . .  // Create swap chain, frame buffers etc. (called after Platform_CreateWindow)"
+defs["structs"]["ImGuiPlatformIO"][19]["comment"] = "\
+    // (Optional) Renderer functions (e.g. DirectX, OpenGL, Vulkan) // . . U . .  // Create swap chain, frame buffers etc. (called after Platform_CreateWindow)"
 defs["structs"]["ImGuiPlatformIO"][19]["name"] = "Renderer_CreateWindow"
 defs["structs"]["ImGuiPlatformIO"][19]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][20] = {}
@@ -6973,11 +8545,26 @@ defs["structs"]["ImGuiPlatformIO"][23]["comment"] = " // . . . R .  // (Optional
 defs["structs"]["ImGuiPlatformIO"][23]["name"] = "Renderer_SwapBuffers"
 defs["structs"]["ImGuiPlatformIO"][23]["type"] = "void(*)(ImGuiViewport* vp,void* render_arg)"
 defs["structs"]["ImGuiPlatformIO"][24] = {}
+defs["structs"]["ImGuiPlatformIO"][24]["comment"] = "\
+    // (Optional) Monitor list\
+\
+    // - Updated by: app/backend. Update every frame to dynamically support changing monitor or DPI configuration.\
+\
+    // - Used by: dear imgui to query DPI info, clamp popups/tooltips within same monitor and not have them straddle monitors."
 defs["structs"]["ImGuiPlatformIO"][24]["name"] = "Monitors"
 defs["structs"]["ImGuiPlatformIO"][24]["template_type"] = "ImGuiPlatformMonitor"
 defs["structs"]["ImGuiPlatformIO"][24]["type"] = "ImVector_ImGuiPlatformMonitor"
 defs["structs"]["ImGuiPlatformIO"][25] = {}
-defs["structs"]["ImGuiPlatformIO"][25]["comment"] = " // Main viewports, followed by all secondary viewports."
+defs["structs"]["ImGuiPlatformIO"][25]["comment"] = "\
+    //------------------------------------------------------------------\
+\
+    // Output - List of viewports to render into platform windows\
+\
+    //------------------------------------------------------------------\
+\
+    // Viewports list (the list is updated by calling ImGui::EndFrame or ImGui::Render)\
+\
+    // (in the future we will attempt to organize this feature to remove the need for a \"main viewport\") // Main viewports, followed by all secondary viewports."
 defs["structs"]["ImGuiPlatformIO"][25]["name"] = "Viewports"
 defs["structs"]["ImGuiPlatformIO"][25]["template_type"] = "ImGuiViewport*"
 defs["structs"]["ImGuiPlatformIO"][25]["type"] = "ImVector_ImGuiViewportPtr"
@@ -8299,7 +9886,16 @@ defs["structs"]["ImGuiViewport"][9]["comment"] = " // The ImDrawData correspondi
 defs["structs"]["ImGuiViewport"][9]["name"] = "DrawData"
 defs["structs"]["ImGuiViewport"][9]["type"] = "ImDrawData*"
 defs["structs"]["ImGuiViewport"][10] = {}
-defs["structs"]["ImGuiViewport"][10]["comment"] = " // void* to hold custom data structure for the renderer (e.g. swap chain, framebuffers etc.). generally set by your Renderer_CreateWindow function."
+defs["structs"]["ImGuiViewport"][10]["comment"] = "\
+    // Platform/Backend Dependent Data\
+\
+    // Our design separate the Renderer and Platform backends to facilitate combining default backends with each others.\
+\
+    // When our create your own backend for a custom engine, it is possible that both Renderer and Platform will be handled\
+\
+    // by the same system and you may not need to use all the UserData/Handle fields.\
+\
+    // The library never uses those fields, they are merely storage to facilitate backend implementation. // void* to hold custom data structure for the renderer (e.g. swap chain, framebuffers etc.). generally set by your Renderer_CreateWindow function."
 defs["structs"]["ImGuiViewport"][10]["name"] = "RendererUserData"
 defs["structs"]["ImGuiViewport"][10]["type"] = "void*"
 defs["structs"]["ImGuiViewport"][11] = {}
@@ -8661,7 +10257,10 @@ defs["structs"]["ImGuiWindow"][65]["comment"] = " // Temporary per-window data, 
 defs["structs"]["ImGuiWindow"][65]["name"] = "DC"
 defs["structs"]["ImGuiWindow"][65]["type"] = "ImGuiWindowTempData"
 defs["structs"]["ImGuiWindow"][66] = {}
-defs["structs"]["ImGuiWindow"][66]["comment"] = " // == Window->Rect() just after setup in Begin(). == window->Rect() for root window."
+defs["structs"]["ImGuiWindow"][66]["comment"] = "\
+    // The best way to understand what those rectangles are is to use the 'Metrics->Tools->Show Windows Rectangles' viewer.\
+\
+    // The main 'OuterRect', omitted as a field, is window->Rect(). // == Window->Rect() just after setup in Begin(). == window->Rect() for root window."
 defs["structs"]["ImGuiWindow"][66]["name"] = "OuterRectClipped"
 defs["structs"]["ImGuiWindow"][66]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][67] = {}
@@ -8789,7 +10388,8 @@ defs["structs"]["ImGuiWindow"][98]["name"] = "MemoryCompacted"
 defs["structs"]["ImGuiWindow"][98]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][99] = {}
 defs["structs"]["ImGuiWindow"][99]["bitfield"] = "1"
-defs["structs"]["ImGuiWindow"][99]["comment"] = " // When docking artifacts are actually visible. When this is set, DockNode is guaranteed to be != NULL. ~~ (DockNode != NULL) && (DockNode->Windows.Size > 1)."
+defs["structs"]["ImGuiWindow"][99]["comment"] = "\
+    // Docking // When docking artifacts are actually visible. When this is set, DockNode is guaranteed to be != NULL. ~~ (DockNode != NULL) && (DockNode->Windows.Size > 1)."
 defs["structs"]["ImGuiWindow"][99]["name"] = "DockIsActive"
 defs["structs"]["ImGuiWindow"][99]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][100] = {}
@@ -8917,7 +10517,8 @@ defs["structs"]["ImGuiWindowStackData"][3]["name"] = "StackSizesOnBegin"
 defs["structs"]["ImGuiWindowStackData"][3]["type"] = "ImGuiStackSizes"
 defs["structs"]["ImGuiWindowTempData"] = {}
 defs["structs"]["ImGuiWindowTempData"][1] = {}
-defs["structs"]["ImGuiWindowTempData"][1]["comment"] = " // Current emitting position, in absolute coordinates."
+defs["structs"]["ImGuiWindowTempData"][1]["comment"] = "\
+    // Layout // Current emitting position, in absolute coordinates."
 defs["structs"]["ImGuiWindowTempData"][1]["name"] = "CursorPos"
 defs["structs"]["ImGuiWindowTempData"][1]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][2] = {}
@@ -8967,7 +10568,8 @@ defs["structs"]["ImGuiWindowTempData"][14]["comment"] = "// Record the loss of p
 defs["structs"]["ImGuiWindowTempData"][14]["name"] = "CursorStartPosLossyness"
 defs["structs"]["ImGuiWindowTempData"][14]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][15] = {}
-defs["structs"]["ImGuiWindowTempData"][15]["comment"] = " // Current layer, 0..31 (we currently only use 0..1)"
+defs["structs"]["ImGuiWindowTempData"][15]["comment"] = "\
+    // Keyboard/Gamepad navigation // Current layer, 0..31 (we currently only use 0..1)"
 defs["structs"]["ImGuiWindowTempData"][15]["name"] = "NavLayerCurrent"
 defs["structs"]["ImGuiWindowTempData"][15]["type"] = "ImGuiNavLayer"
 defs["structs"]["ImGuiWindowTempData"][16] = {}
@@ -8990,7 +10592,8 @@ defs["structs"]["ImGuiWindowTempData"][20]["comment"] = " // Set when scrolling 
 defs["structs"]["ImGuiWindowTempData"][20]["name"] = "NavHasScroll"
 defs["structs"]["ImGuiWindowTempData"][20]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][21] = {}
-defs["structs"]["ImGuiWindowTempData"][21]["comment"] = " // FIXME: Remove this"
+defs["structs"]["ImGuiWindowTempData"][21]["comment"] = "\
+    // Miscellaneous // FIXME: Remove this"
 defs["structs"]["ImGuiWindowTempData"][21]["name"] = "MenuBarAppending"
 defs["structs"]["ImGuiWindowTempData"][21]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][22] = {}
@@ -9033,7 +10636,10 @@ defs["structs"]["ImGuiWindowTempData"][31]["comment"] = " // Layout type of pare
 defs["structs"]["ImGuiWindowTempData"][31]["name"] = "ParentLayoutType"
 defs["structs"]["ImGuiWindowTempData"][31]["type"] = "ImGuiLayoutType"
 defs["structs"]["ImGuiWindowTempData"][32] = {}
-defs["structs"]["ImGuiWindowTempData"][32]["comment"] = " // Current item width (>0.0: width in pixels, <0.0: align xx pixels to the right of window)."
+defs["structs"]["ImGuiWindowTempData"][32]["comment"] = "\
+    // Local parameters stacks\
+\
+    // We store the current settings outside of the vectors to increase memory locality (reduce cache misses). The vectors are rarely modified. Also it allows us to not heap allocate for short-lived windows which are not using those settings. // Current item width (>0.0: width in pixels, <0.0: align xx pixels to the right of window)."
 defs["structs"]["ImGuiWindowTempData"][32]["name"] = "ItemWidth"
 defs["structs"]["ImGuiWindowTempData"][32]["type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][33] = {}
@@ -9092,23 +10698,55 @@ defs["structs"]["ImVec4"][4]["name"] = "w"
 defs["structs"]["ImVec4"][4]["type"] = "float"
 defs["structs"]["STB_TexteditState"] = {}
 defs["structs"]["STB_TexteditState"][1] = {}
+defs["structs"]["STB_TexteditState"][1]["comment"] = "\
+   /////////////////////\
+\
+   //\
+\
+   // public data\
+\
+   //"
 defs["structs"]["STB_TexteditState"][1]["name"] = "cursor"
 defs["structs"]["STB_TexteditState"][1]["type"] = "int"
 defs["structs"]["STB_TexteditState"][2] = {}
-defs["structs"]["STB_TexteditState"][2]["comment"] = " // selection start point"
+defs["structs"]["STB_TexteditState"][2]["comment"] = "\
+   // position of the text cursor within the string // selection start point"
 defs["structs"]["STB_TexteditState"][2]["name"] = "select_start"
 defs["structs"]["STB_TexteditState"][2]["type"] = "int"
 defs["structs"]["STB_TexteditState"][3] = {}
 defs["structs"]["STB_TexteditState"][3]["name"] = "select_end"
 defs["structs"]["STB_TexteditState"][3]["type"] = "int"
 defs["structs"]["STB_TexteditState"][4] = {}
+defs["structs"]["STB_TexteditState"][4]["comment"] = "\
+   // selection start and end point in characters; if equal, no selection.\
+\
+   // note that start may be less than or greater than end (e.g. when\
+\
+   // dragging the mouse, start is where the initial click was, and you\
+\
+   // can drag in either direction)"
 defs["structs"]["STB_TexteditState"][4]["name"] = "insert_mode"
 defs["structs"]["STB_TexteditState"][4]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][5] = {}
+defs["structs"]["STB_TexteditState"][5]["comment"] = "\
+   // each textfield keeps its own insert mode state. to keep an app-wide\
+\
+   // insert mode, copy this value in/out of the app state"
 defs["structs"]["STB_TexteditState"][5]["name"] = "row_count_per_page"
 defs["structs"]["STB_TexteditState"][5]["type"] = "int"
 defs["structs"]["STB_TexteditState"][6] = {}
-defs["structs"]["STB_TexteditState"][6]["comment"] = " // not implemented yet"
+defs["structs"]["STB_TexteditState"][6]["comment"] = "\
+   // page size in number of row.\
+\
+   // this value MUST be set to >0 for pageup or pagedown in multilines documents.\
+\
+   /////////////////////\
+\
+   //\
+\
+   // private data\
+\
+   // // not implemented yet"
 defs["structs"]["STB_TexteditState"][6]["name"] = "cursor_at_end_of_line"
 defs["structs"]["STB_TexteditState"][6]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][7] = {}
@@ -9162,6 +10800,8 @@ defs["structs"]["StbTexteditRow"][6]["name"] = "num_chars"
 defs["structs"]["StbTexteditRow"][6]["type"] = "int"
 defs["structs"]["StbUndoRecord"] = {}
 defs["structs"]["StbUndoRecord"][1] = {}
+defs["structs"]["StbUndoRecord"][1]["comment"] = "\
+   // private data"
 defs["structs"]["StbUndoRecord"][1]["name"] = "where"
 defs["structs"]["StbUndoRecord"][1]["type"] = "int"
 defs["structs"]["StbUndoRecord"][2] = {}
@@ -9175,6 +10815,8 @@ defs["structs"]["StbUndoRecord"][4]["name"] = "char_storage"
 defs["structs"]["StbUndoRecord"][4]["type"] = "int"
 defs["structs"]["StbUndoState"] = {}
 defs["structs"]["StbUndoState"][1] = {}
+defs["structs"]["StbUndoState"][1]["comment"] = "\
+   // private data"
 defs["structs"]["StbUndoState"][1]["name"] = "undo_rec[99]"
 defs["structs"]["StbUndoState"][1]["size"] = 99
 defs["structs"]["StbUndoState"][1]["type"] = "StbUndoRecord"
