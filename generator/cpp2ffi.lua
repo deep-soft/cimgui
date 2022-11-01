@@ -417,7 +417,7 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 					else
 						error"no linenumdict"
 					end
-					table.insert(itemarr,{re_name=re_name,item=item,locat=loca})--,comments=comments})
+					table.insert(itemarr,{re_name=re_name,item=item,locat=loca,comments=comments})
 					items[re_name] = items[re_name] or {}
 					table.insert(items[re_name],item)
 				end
@@ -1677,6 +1677,7 @@ function M.Parser()
 			print("enumtype",enumtype) 
 			outtab.enumtypes[enumname] = enumtype
 		end
+		outtab.enum_comments[enumname] = it.comments
 		outtab.enums[enumname] = {}
 		table.insert(enumsordered,enumname)
 		local inner = strip_end(it.item:match("%b{}"):sub(2,-2))
@@ -1725,7 +1726,7 @@ function M.Parser()
 	par.enums_for_table = enums_for_table
 	function par:gen_structs_and_enums_table()
 		print"--------------gen_structs_and_enums_table"
-		local outtab = {enums={},structs={},locations={},enumtypes={}}
+		local outtab = {enums={},structs={},locations={},enumtypes={},struct_comments={},enum_comments={}}
 		self.typedefs_table = {}
 		local enumsordered = {}
 		unnamed_enum_counter = 0
@@ -1759,6 +1760,7 @@ function M.Parser()
 				if not structname then print("NO NAME",cleanst,it.item) end
 				if structname and not self.typenames[structname] then
 					outtab.structs[structname] = {}
+					outtab.struct_comments[structname] = {comments=it.comments}
 					outtab.locations[structname] = it.locat
 					for j=3,#strtab-1 do
 						self:parse_struct_line(strtab[j],outtab.structs[structname],comstab[j])
