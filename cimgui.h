@@ -1823,13 +1823,13 @@ struct ImGuiInputEvent
     ImGuiInputSource Source;
     union
     {
-        ImGuiInputEventMousePos MousePos;
-        ImGuiInputEventMouseWheel MouseWheel;
-        ImGuiInputEventMouseButton MouseButton;
-        ImGuiInputEventMouseViewport MouseViewport;
-        ImGuiInputEventKey Key;
-        ImGuiInputEventText Text;
-        ImGuiInputEventAppFocused AppFocused;
+        ImGuiInputEventMousePos MousePos; // if Type == ImGuiInputEventType_MousePos
+        ImGuiInputEventMouseWheel MouseWheel; // if Type == ImGuiInputEventType_MouseWheel
+        ImGuiInputEventMouseButton MouseButton; // if Type == ImGuiInputEventType_MouseButton
+        ImGuiInputEventMouseViewport MouseViewport; // if Type == ImGuiInputEventType_MouseViewport
+        ImGuiInputEventKey Key; // if Type == ImGuiInputEventType_Key
+        ImGuiInputEventText Text; // if Type == ImGuiInputEventType_Text
+        ImGuiInputEventAppFocused AppFocused; // if Type == ImGuiInputEventType_Focus
     };
     bool AddedByTestEngine;
 };
