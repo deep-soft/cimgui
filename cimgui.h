@@ -180,7 +180,9 @@ typedef int ImGuiTableRowFlags;
 typedef int ImGuiTreeNodeFlags;
 typedef int ImGuiViewportFlags;
 typedef int ImGuiWindowFlags;
+
 typedef void* ImTextureID;
+
 typedef unsigned short ImDrawIdx;
 typedef unsigned int ImGuiID;
 typedef signed char ImS8;
@@ -193,6 +195,9 @@ typedef signed long long ImS64;
 typedef unsigned long long ImU64;
 typedef unsigned short ImWchar16;
 typedef unsigned int ImWchar32;
+
+
+
 typedef ImWchar16 ImWchar;
 typedef int (*ImGuiInputTextCallback)(ImGuiInputTextCallbackData* data);
 typedef void (*ImGuiSizeCallback)(ImGuiSizeCallbackData* data);
@@ -231,6 +236,7 @@ typedef enum {
     ImGuiWindowFlags_NoNavFocus = 1 << 19,
     ImGuiWindowFlags_UnsavedDocument = 1 << 20,
     ImGuiWindowFlags_NoDocking = 1 << 21,
+
     ImGuiWindowFlags_NoNav = ImGuiWindowFlags_NoNavInputs | ImGuiWindowFlags_NoNavFocus,
     ImGuiWindowFlags_NoDecoration = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoCollapse,
     ImGuiWindowFlags_NoInputs = ImGuiWindowFlags_NoMouseInputs | ImGuiWindowFlags_NoNavInputs | ImGuiWindowFlags_NoNavFocus,
@@ -264,6 +270,9 @@ typedef enum {
     ImGuiInputTextFlags_CharsScientific = 1 << 17,
     ImGuiInputTextFlags_CallbackResize = 1 << 18,
     ImGuiInputTextFlags_CallbackEdit = 1 << 19
+
+
+
 }ImGuiInputTextFlags_;
 typedef enum {
     ImGuiTreeNodeFlags_None = 0,
@@ -376,6 +385,10 @@ typedef enum {
     ImGuiTableFlags_SortMulti = 1 << 26,
     ImGuiTableFlags_SortTristate = 1 << 27,
     ImGuiTableFlags_SizingMask_ = ImGuiTableFlags_SizingFixedFit | ImGuiTableFlags_SizingFixedSame | ImGuiTableFlags_SizingStretchProp | ImGuiTableFlags_SizingStretchSame
+
+
+
+
 }ImGuiTableFlags_;
 typedef enum {
     ImGuiTableColumnFlags_None = 0,
@@ -405,6 +418,9 @@ typedef enum {
     ImGuiTableColumnFlags_IndentMask_ = ImGuiTableColumnFlags_IndentEnable | ImGuiTableColumnFlags_IndentDisable,
     ImGuiTableColumnFlags_StatusMask_ = ImGuiTableColumnFlags_IsEnabled | ImGuiTableColumnFlags_IsVisible | ImGuiTableColumnFlags_IsSorted | ImGuiTableColumnFlags_IsHovered,
     ImGuiTableColumnFlags_NoDirectResize_ = 1 << 30
+
+
+
 }ImGuiTableColumnFlags_;
 typedef enum {
     ImGuiTableRowFlags_None = 0,
@@ -568,8 +584,17 @@ typedef enum {
     ImGuiKey_NamedKey_BEGIN = 512,
     ImGuiKey_NamedKey_END = ImGuiKey_COUNT,
     ImGuiKey_NamedKey_COUNT = ImGuiKey_NamedKey_END - ImGuiKey_NamedKey_BEGIN,
+
+
+
+
     ImGuiKey_KeysData_SIZE = ImGuiKey_COUNT,
     ImGuiKey_KeysData_OFFSET = 0
+
+
+
+
+
 }ImGuiKey_;
 typedef enum {
     ImGuiModFlags_None = 0,
@@ -758,6 +783,9 @@ typedef enum {
     ImGuiSliderFlags_NoRoundToFormat = 1 << 6,
     ImGuiSliderFlags_NoInput = 1 << 7,
     ImGuiSliderFlags_InvalidMask_ = 0x7000000F
+
+
+
 }ImGuiSliderFlags_;
 typedef enum {
     ImGuiMouseButton_Left = 0,
@@ -840,6 +868,7 @@ typedef struct ImVector_ImWchar {int Size;int Capacity;ImWchar* Data;} ImVector_
 
 struct ImGuiIO
 {
+
     ImGuiConfigFlags ConfigFlags;
     ImGuiBackendFlags BackendFlags;
     ImVec2 DisplaySize;
@@ -853,6 +882,7 @@ struct ImGuiIO
     float KeyRepeatDelay;
     float KeyRepeatRate;
     void* UserData;
+
     ImFontAtlas*Fonts;
     float FontGlobalScale;
     bool FontAllowUserScaling;
@@ -883,7 +913,11 @@ struct ImGuiIO
     void (*SetClipboardTextFn)(void* user_data, const char* text);
     void* ClipboardUserData;
     void (*SetPlatformImeDataFn)(ImGuiViewport* viewport, ImGuiPlatformImeData* data);
+
+
+
     void* _UnusedPadding;
+
     bool WantCaptureMouse;
     bool WantCaptureKeyboard;
     bool WantTextInput;
@@ -898,6 +932,7 @@ struct ImGuiIO
     int MetricsActiveWindows;
     int MetricsActiveAllocations;
     ImVec2 MouseDelta;
+
     int KeyMap[ImGuiKey_COUNT];
     bool KeysDown[ImGuiKey_COUNT];
     ImVec2 MousePos;
@@ -1031,6 +1066,7 @@ typedef struct ImVector_ImGuiStoragePair {int Size;int Capacity;ImGuiStoragePair
 
 struct ImGuiStorage
 {
+
     ImVector_ImGuiStoragePair Data;
 };
 typedef struct ImGuiStoragePair ImGuiStoragePair;
@@ -1210,6 +1246,7 @@ typedef struct ImVector_ImFontConfig {int Size;int Capacity;ImFontConfig* Data;}
 
 struct ImFontAtlas
 {
+
     ImFontAtlasFlags Flags;
     ImTextureID TexID;
     int TexDesiredWidth;
@@ -1335,6 +1372,7 @@ struct ImGuiPlatformImeData
     ImVec2 InputPos;
     float InputLineHeight;
 };
+
 struct ImBitVector;
 struct ImRect;
 struct ImDrawDataBuilder;
@@ -1389,6 +1427,8 @@ typedef int ImGuiSeparatorFlags;
 typedef int ImGuiTextFlags;
 typedef int ImGuiTooltipFlags;
 typedef void (*ImGuiErrorLogCallback)(void* user_data, const char* fmt, ...);
+
+
 extern ImGuiContext* GImGui;
 typedef struct StbUndoRecord StbUndoRecord;
 struct StbUndoRecord
@@ -1409,10 +1449,14 @@ struct StbUndoState
 typedef struct STB_TexteditState STB_TexteditState;
 struct STB_TexteditState
 {
+
    int cursor;
+
    int select_start;
    int select_end;
+
    unsigned char insert_mode;
+
    int row_count_per_page;
    unsigned char cursor_at_end_of_line;
    unsigned char initialized;
@@ -1761,6 +1805,7 @@ struct ImGuiPtrOrIndex
 };
 typedef struct ImBitArray_ImGuiKey_NamedKey_COUNT__lessImGuiKey_NamedKey_BEGIN {ImU32 Storage[(ImGuiKey_NamedKey_COUNT+31)>>5];} ImBitArray_ImGuiKey_NamedKey_COUNT__lessImGuiKey_NamedKey_BEGIN;
 
+
 typedef ImBitArray_ImGuiKey_NamedKey_COUNT__lessImGuiKey_NamedKey_BEGIN ImBitArrayForNamedKeys;
 typedef enum {
     ImGuiKey_LegacyNativeKey_BEGIN = 0,
@@ -2012,6 +2057,7 @@ struct ImGuiDockNode
     ImGuiAxis SplitAxis;
     ImGuiWindowClass WindowClass;
     ImU32 LastBgColor;
+
     ImGuiWindow* HostWindow;
     ImGuiWindow* VisibleWindow;
     ImGuiDockNode* CentralNode;
@@ -2551,6 +2597,7 @@ struct ImGuiWindow
     ImGuiCond SetWindowDockAllowFlags : 8;
     ImVec2 SetWindowPosVal;
     ImVec2 SetWindowPosPivot;
+
     ImVector_ImGuiID IDStack;
     ImGuiWindowTempData DC;
     ImRect OuterRectClipped;
@@ -2562,6 +2609,7 @@ struct ImGuiWindow
     ImRect ContentRegionRect;
     ImVec2ih HitTestHoleSize;
     ImVec2ih HitTestHoleOffset;
+
     int LastFrameActive;
     int LastFrameJustFocused;
     float LastTimeActive;
@@ -2571,6 +2619,7 @@ struct ImGuiWindow
     float FontWindowScale;
     float FontDpiScale;
     int SettingsOffset;
+
     ImDrawList* DrawList;
     ImDrawList DrawListInst;
     ImGuiWindow* ParentWindow;
@@ -2580,9 +2629,11 @@ struct ImGuiWindow
     ImGuiWindow* RootWindowDockTree;
     ImGuiWindow* RootWindowForTitleBarHighlight;
     ImGuiWindow* RootWindowForNav;
+
     ImGuiWindow* NavLastChildNavWindow;
     ImGuiID NavLastIds[ImGuiNavLayer_COUNT];
     ImRect NavRectRel[ImGuiNavLayer_COUNT];
+
     int MemoryDrawListIdxCapacity;
     int MemoryDrawListVtxCapacity;
     bool MemoryCompacted;
@@ -2840,8 +2891,10 @@ struct ImGuiTableTempData
 {
     int TableIndex;
     float LastTimeActive;
+
     ImVec2 UserOuterSize;
     ImDrawListSplitter DrawSplitter;
+
     ImRect HostBackupWorkRect;
     ImRect HostBackupParentWorkRect;
     ImVec2 HostBackupPrevLineSize;

@@ -449,7 +449,7 @@
       "cimguiname": "ImGui_ImplOpenGL2_Init",
       "defaults": {},
       "funcname": "ImGui_ImplOpenGL2_Init",
-      "location": "imgui_impl_opengl2:24",
+      "location": "imgui_impl_opengl2:21",
       "ov_cimguiname": "ImGui_ImplOpenGL2_Init",
       "ret": "bool",
       "signature": "()",
@@ -589,7 +589,7 @@
         "glsl_version": "NULL"
       },
       "funcname": "ImGui_ImplOpenGL3_Init",
-      "location": "imgui_impl_opengl3:25",
+      "location": "imgui_impl_opengl3:21",
       "ov_cimguiname": "ImGui_ImplOpenGL3_Init",
       "ret": "bool",
       "signature": "(const char*)",
