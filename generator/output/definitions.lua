@@ -650,8 +650,7 @@ defs["ImColor_SetHSV"][1]["argsT"][5]["type"] = "float"
 defs["ImColor_SetHSV"][1]["argsoriginal"] = "(float h,float s,float v,float a=1.0f)"
 defs["ImColor_SetHSV"][1]["call_args"] = "(h,s,v,a)"
 defs["ImColor_SetHSV"][1]["cimguiname"] = "ImColor_SetHSV"
-defs["ImColor_SetHSV"][1]["comment"] = "\
-    // FIXME-OBSOLETE: May need to obsolete/cleanup those helpers."
+defs["ImColor_SetHSV"][1]["comment"] = "    // FIXME-OBSOLETE: May need to obsolete/cleanup those helpers."
 defs["ImColor_SetHSV"][1]["defaults"] = {}
 defs["ImColor_SetHSV"][1]["defaults"]["a"] = "1.0f"
 defs["ImColor_SetHSV"][1]["funcname"] = "SetHSV"
@@ -687,8 +686,7 @@ defs["ImDrawCmd_GetTexID"][1]["argsT"][1]["type"] = "ImDrawCmd*"
 defs["ImDrawCmd_GetTexID"][1]["argsoriginal"] = "()"
 defs["ImDrawCmd_GetTexID"][1]["call_args"] = "()"
 defs["ImDrawCmd_GetTexID"][1]["cimguiname"] = "ImDrawCmd_GetTexID"
-defs["ImDrawCmd_GetTexID"][1]["comment"] = "\
-    // Since 1.83: returns ImTextureID associated with this draw call. Warning: DO NOT assume this is always same as 'TextureId' (we will change this function for an upcoming feature)"
+defs["ImDrawCmd_GetTexID"][1]["comment"] = "    // Since 1.83: returns ImTextureID associated with this draw call. Warning: DO NOT assume this is always same as 'TextureId' (we will change this function for an upcoming feature)"
 defs["ImDrawCmd_GetTexID"][1]["defaults"] = {}
 defs["ImDrawCmd_GetTexID"][1]["funcname"] = "GetTexID"
 defs["ImDrawCmd_GetTexID"][1]["location"] = "imgui:2527"
@@ -846,8 +844,7 @@ defs["ImDrawData_ImDrawData"][1]["argsT"] = {}
 defs["ImDrawData_ImDrawData"][1]["argsoriginal"] = "()"
 defs["ImDrawData_ImDrawData"][1]["call_args"] = "()"
 defs["ImDrawData_ImDrawData"][1]["cimguiname"] = "ImDrawData_ImDrawData"
-defs["ImDrawData_ImDrawData"][1]["comment"] = "\
-    // Functions"
+defs["ImDrawData_ImDrawData"][1]["comment"] = "    // Functions"
 defs["ImDrawData_ImDrawData"][1]["constructor"] = true
 defs["ImDrawData_ImDrawData"][1]["defaults"] = {}
 defs["ImDrawData_ImDrawData"][1]["funcname"] = "ImDrawData"
@@ -1180,8 +1177,7 @@ defs["ImDrawList_AddCallback"][1]["argsT"][3]["type"] = "void*"
 defs["ImDrawList_AddCallback"][1]["argsoriginal"] = "(ImDrawCallback callback,void* callback_data)"
 defs["ImDrawList_AddCallback"][1]["call_args"] = "(callback,callback_data)"
 defs["ImDrawList_AddCallback"][1]["cimguiname"] = "ImDrawList_AddCallback"
-defs["ImDrawList_AddCallback"][1]["comment"] = "\
-    // Advanced // Your rendering function must check for 'UserCallback' in ImDrawCmd and call the function instead of rendering triangles."
+defs["ImDrawList_AddCallback"][1]["comment"] = "    // Advanced // Your rendering function must check for 'UserCallback' in ImDrawCmd and call the function instead of rendering triangles."
 defs["ImDrawList_AddCallback"][1]["defaults"] = {}
 defs["ImDrawList_AddCallback"][1]["funcname"] = "AddCallback"
 defs["ImDrawList_AddCallback"][1]["location"] = "imgui:2700"
@@ -1330,14 +1326,7 @@ defs["ImDrawList_AddImage"][1]["argsT"][7]["type"] = "ImU32"
 defs["ImDrawList_AddImage"][1]["argsoriginal"] = "(ImTextureID user_texture_id,const ImVec2& p_min,const ImVec2& p_max,const ImVec2& uv_min=ImVec2(0,0),const ImVec2& uv_max=ImVec2(1,1),ImU32 col=(((ImU32)(255)<<24)|((ImU32)(255)<<16)|((ImU32)(255)<<8)|((ImU32)(255)<<0)))"
 defs["ImDrawList_AddImage"][1]["call_args"] = "(user_texture_id,p_min,p_max,uv_min,uv_max,col)"
 defs["ImDrawList_AddImage"][1]["cimguiname"] = "ImDrawList_AddImage"
-defs["ImDrawList_AddImage"][1]["comment"] = "\
-    // Image primitives\
-\
-    // - Read FAQ to understand what ImTextureID is.\
-\
-    // - \"p_min\" and \"p_max\" represent the upper-left and lower-right corners of the rectangle.\
-\
-    // - \"uv_min\" and \"uv_max\" represent the normalized texture coordinates to use for those corners. Using (0,0)->(1,1) texture coordinates will generally display the entire texture."
+defs["ImDrawList_AddImage"][1]["comment"] = "    // - \"uv_min\" and \"uv_max\" represent the normalized texture coordinates to use for those corners. Using (0,0)->(1,1) texture coordinates will generally display the entire texture."
 defs["ImDrawList_AddImage"][1]["defaults"] = {}
 defs["ImDrawList_AddImage"][1]["defaults"]["col"] = "4294967295"
 defs["ImDrawList_AddImage"][1]["defaults"]["uv_max"] = "ImVec2(1,1)"
@@ -1467,20 +1456,7 @@ defs["ImDrawList_AddLine"][1]["argsT"][5]["type"] = "float"
 defs["ImDrawList_AddLine"][1]["argsoriginal"] = "(const ImVec2& p1,const ImVec2& p2,ImU32 col,float thickness=1.0f)"
 defs["ImDrawList_AddLine"][1]["call_args"] = "(p1,p2,col,thickness)"
 defs["ImDrawList_AddLine"][1]["cimguiname"] = "ImDrawList_AddLine"
-defs["ImDrawList_AddLine"][1]["comment"] = "\
-    // Primitives\
-\
-    // - Filled shapes must always use clockwise winding order. The anti-aliasing fringe depends on it. Counter-clockwise shapes will have \"inward\" anti-aliasing.\
-\
-    // - For rectangular primitives, \"p_min\" and \"p_max\" represent the upper-left and lower-right corners.\
-\
-    // - For circle primitives, use \"num_segments == 0\" to automatically calculate tessellation (preferred).\
-\
-    //   In older versions (until Dear ImGui 1.77) the AddCircle functions defaulted to num_segments == 12.\
-\
-    //   In future versions we will use textures to provide cheaper and higher-quality circles.\
-\
-    //   Use AddNgon() and AddNgonFilled() functions if you need to guaranteed a specific number of sides."
+defs["ImDrawList_AddLine"][1]["comment"] = "    //   Use AddNgon() and AddNgonFilled() functions if you need to guaranteed a specific number of sides."
 defs["ImDrawList_AddLine"][1]["defaults"] = {}
 defs["ImDrawList_AddLine"][1]["defaults"]["thickness"] = "1.0f"
 defs["ImDrawList_AddLine"][1]["funcname"] = "AddLine"
@@ -1960,18 +1936,7 @@ defs["ImDrawList_ChannelsSplit"][1]["argsT"][2]["type"] = "int"
 defs["ImDrawList_ChannelsSplit"][1]["argsoriginal"] = "(int count)"
 defs["ImDrawList_ChannelsSplit"][1]["call_args"] = "(count)"
 defs["ImDrawList_ChannelsSplit"][1]["cimguiname"] = "ImDrawList_ChannelsSplit"
-defs["ImDrawList_ChannelsSplit"][1]["comment"] = "\
-    // Advanced: Channels\
-\
-    // - Use to split render into layers. By switching channels to can render out-of-order (e.g. submit FG primitives before BG primitives)\
-\
-    // - Use to minimize draw calls (e.g. if going back-and-forth between multiple clipping rectangles, prefer to append into separate channels then merge at the end)\
-\
-    // - FIXME-OBSOLETE: This API shouldn't have been in ImDrawList in the first place!\
-\
-    //   Prefer using your own persistent instance of ImDrawListSplitter as you can stack them.\
-\
-    //   Using the ImDrawList::ChannelsXXXX you cannot stack a split over another."
+defs["ImDrawList_ChannelsSplit"][1]["comment"] = "    //   Using the ImDrawList::ChannelsXXXX you cannot stack a split over another."
 defs["ImDrawList_ChannelsSplit"][1]["defaults"] = {}
 defs["ImDrawList_ChannelsSplit"][1]["funcname"] = "ChannelsSplit"
 defs["ImDrawList_ChannelsSplit"][1]["location"] = "imgui:2710"
@@ -2053,8 +2018,7 @@ defs["ImDrawList_ImDrawList"][1]["argsT"][1]["type"] = "const ImDrawListSharedDa
 defs["ImDrawList_ImDrawList"][1]["argsoriginal"] = "(const ImDrawListSharedData* shared_data)"
 defs["ImDrawList_ImDrawList"][1]["call_args"] = "(shared_data)"
 defs["ImDrawList_ImDrawList"][1]["cimguiname"] = "ImDrawList_ImDrawList"
-defs["ImDrawList_ImDrawList"][1]["comment"] = "\
-    // If you want to create ImDrawList instances, pass them ImGui::GetDrawListSharedData() or create and use your own ImDrawListSharedData (so you can use ImDrawList without ImGui)"
+defs["ImDrawList_ImDrawList"][1]["comment"] = "    // If you want to create ImDrawList instances, pass them ImGui::GetDrawListSharedData() or create and use your own ImDrawListSharedData (so you can use ImDrawList without ImGui)"
 defs["ImDrawList_ImDrawList"][1]["constructor"] = true
 defs["ImDrawList_ImDrawList"][1]["defaults"] = {}
 defs["ImDrawList_ImDrawList"][1]["funcname"] = "ImDrawList"
@@ -2199,10 +2163,7 @@ defs["ImDrawList_PathClear"][1]["argsT"][1]["type"] = "ImDrawList*"
 defs["ImDrawList_PathClear"][1]["argsoriginal"] = "()"
 defs["ImDrawList_PathClear"][1]["call_args"] = "()"
 defs["ImDrawList_PathClear"][1]["cimguiname"] = "ImDrawList_PathClear"
-defs["ImDrawList_PathClear"][1]["comment"] = "\
-    // Stateful path API, add points then finish with PathFillConvex() or PathStroke()\
-\
-    // - Filled shapes must always use clockwise winding order. The anti-aliasing fringe depends on it. Counter-clockwise shapes will have \"inward\" anti-aliasing."
+defs["ImDrawList_PathClear"][1]["comment"] = "    // - Filled shapes must always use clockwise winding order. The anti-aliasing fringe depends on it. Counter-clockwise shapes will have \"inward\" anti-aliasing."
 defs["ImDrawList_PathClear"][1]["defaults"] = {}
 defs["ImDrawList_PathClear"][1]["funcname"] = "PathClear"
 defs["ImDrawList_PathClear"][1]["location"] = "imgui:2688"
@@ -2493,12 +2454,7 @@ defs["ImDrawList_PrimReserve"][1]["argsT"][3]["type"] = "int"
 defs["ImDrawList_PrimReserve"][1]["argsoriginal"] = "(int idx_count,int vtx_count)"
 defs["ImDrawList_PrimReserve"][1]["call_args"] = "(idx_count,vtx_count)"
 defs["ImDrawList_PrimReserve"][1]["cimguiname"] = "ImDrawList_PrimReserve"
-defs["ImDrawList_PrimReserve"][1]["comment"] = "\
-    // Advanced: Primitives allocations\
-\
-    // - We render triangles (three vertices)\
-\
-    // - All primitives needs to be reserved via PrimReserve() beforehand."
+defs["ImDrawList_PrimReserve"][1]["comment"] = "    // - All primitives needs to be reserved via PrimReserve() beforehand."
 defs["ImDrawList_PrimReserve"][1]["defaults"] = {}
 defs["ImDrawList_PrimReserve"][1]["funcname"] = "PrimReserve"
 defs["ImDrawList_PrimReserve"][1]["location"] = "imgui:2717"
@@ -2862,8 +2818,7 @@ defs["ImDrawList__ResetForNewFrame"][1]["argsT"][1]["type"] = "ImDrawList*"
 defs["ImDrawList__ResetForNewFrame"][1]["argsoriginal"] = "()"
 defs["ImDrawList__ResetForNewFrame"][1]["call_args"] = "()"
 defs["ImDrawList__ResetForNewFrame"][1]["cimguiname"] = "ImDrawList__ResetForNewFrame"
-defs["ImDrawList__ResetForNewFrame"][1]["comment"] = "\
-    // [Internal helpers]"
+defs["ImDrawList__ResetForNewFrame"][1]["comment"] = "    // [Internal helpers]"
 defs["ImDrawList__ResetForNewFrame"][1]["defaults"] = {}
 defs["ImDrawList__ResetForNewFrame"][1]["funcname"] = "_ResetForNewFrame"
 defs["ImDrawList__ResetForNewFrame"][1]["location"] = "imgui:2732"
@@ -3010,26 +2965,7 @@ defs["ImFontAtlas_AddCustomRectRegular"][1]["argsT"][3]["type"] = "int"
 defs["ImFontAtlas_AddCustomRectRegular"][1]["argsoriginal"] = "(int width,int height)"
 defs["ImFontAtlas_AddCustomRectRegular"][1]["call_args"] = "(width,height)"
 defs["ImFontAtlas_AddCustomRectRegular"][1]["cimguiname"] = "ImFontAtlas_AddCustomRectRegular"
-defs["ImFontAtlas_AddCustomRectRegular"][1]["comment"] = "\
-    //-------------------------------------------\
-\
-    // [BETA] Custom Rectangles/Glyphs API\
-\
-    //-------------------------------------------\
-\
-    // You can request arbitrary rectangles to be packed into the atlas, for your own purposes.\
-\
-    // - After calling Build(), you can query the rectangle position and render your pixels.\
-\
-    // - If you render colored output, set 'atlas->TexPixelsUseColors = true' as this may help some backends decide of prefered texture format.\
-\
-    // - You can also request your rectangles to be mapped as font glyph (given a font + Unicode point),\
-\
-    //   so you can render e.g. custom colorful icons and use them as regular glyphs.\
-\
-    // - Read docs/FONTS.md for more details about using colorful icons.\
-\
-    // - Note: this API may be redesigned later in order to support multi-monitor varying DPI settings."
+defs["ImFontAtlas_AddCustomRectRegular"][1]["comment"] = "    // - Note: this API may be redesigned later in order to support multi-monitor varying DPI settings."
 defs["ImFontAtlas_AddCustomRectRegular"][1]["defaults"] = {}
 defs["ImFontAtlas_AddCustomRectRegular"][1]["funcname"] = "AddCustomRectRegular"
 defs["ImFontAtlas_AddCustomRectRegular"][1]["location"] = "imgui:2917"
@@ -3228,16 +3164,7 @@ defs["ImFontAtlas_Build"][1]["argsT"][1]["type"] = "ImFontAtlas*"
 defs["ImFontAtlas_Build"][1]["argsoriginal"] = "()"
 defs["ImFontAtlas_Build"][1]["call_args"] = "()"
 defs["ImFontAtlas_Build"][1]["cimguiname"] = "ImFontAtlas_Build"
-defs["ImFontAtlas_Build"][1]["comment"] = "\
-    // Build atlas, retrieve pixel data.\
-\
-    // User is in charge of copying the pixels into graphics memory (e.g. create a texture with your engine). Then store your texture handle with SetTexID().\
-\
-    // The pitch is always = Width * BytesPerPixels (1 or 4)\
-\
-    // Building in RGBA32 format is provided for convenience and compatibility, but note that unless you manually manipulate or copy color data into\
-\
-    // the texture (e.g. when using the AddCustomRect*** api), then the RGB pixels emitted will always be white (~75% of memory/bandwidth waste. // Build pixels data. This is called automatically for you by the GetTexData*** functions."
+defs["ImFontAtlas_Build"][1]["comment"] = "    // the texture (e.g. when using the AddCustomRect*** api), then the RGB pixels emitted will always be white (~75% of memory/bandwidth waste. // Build pixels data. This is called automatically for you by the GetTexData*** functions."
 defs["ImFontAtlas_Build"][1]["defaults"] = {}
 defs["ImFontAtlas_Build"][1]["funcname"] = "Build"
 defs["ImFontAtlas_Build"][1]["location"] = "imgui:2884"
@@ -3265,8 +3192,7 @@ defs["ImFontAtlas_CalcCustomRectUV"][1]["argsT"][4]["type"] = "ImVec2*"
 defs["ImFontAtlas_CalcCustomRectUV"][1]["argsoriginal"] = "(const ImFontAtlasCustomRect* rect,ImVec2* out_uv_min,ImVec2* out_uv_max)"
 defs["ImFontAtlas_CalcCustomRectUV"][1]["call_args"] = "(rect,out_uv_min,out_uv_max)"
 defs["ImFontAtlas_CalcCustomRectUV"][1]["cimguiname"] = "ImFontAtlas_CalcCustomRectUV"
-defs["ImFontAtlas_CalcCustomRectUV"][1]["comment"] = "\
-    // [Internal]"
+defs["ImFontAtlas_CalcCustomRectUV"][1]["comment"] = "    // [Internal]"
 defs["ImFontAtlas_CalcCustomRectUV"][1]["defaults"] = {}
 defs["ImFontAtlas_CalcCustomRectUV"][1]["funcname"] = "CalcCustomRectUV"
 defs["ImFontAtlas_CalcCustomRectUV"][1]["location"] = "imgui:2922"
@@ -3439,18 +3365,7 @@ defs["ImFontAtlas_GetGlyphRangesDefault"][1]["argsT"][1]["type"] = "ImFontAtlas*
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["argsoriginal"] = "()"
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["call_args"] = "()"
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["cimguiname"] = "ImFontAtlas_GetGlyphRangesDefault"
-defs["ImFontAtlas_GetGlyphRangesDefault"][1]["comment"] = "\
-    //-------------------------------------------\
-\
-    // Glyph Ranges\
-\
-    //-------------------------------------------\
-\
-    // Helpers to retrieve list of common Unicode ranges (2 value per range, values are inclusive, zero-terminated list)\
-\
-    // NB: Make sure that your string are UTF-8 and NOT in your local code page. In C++11, you can create UTF-8 string literal using the u8\"Hello world\" syntax. See FAQ for details.\
-\
-    // NB: Consider using ImFontGlyphRangesBuilder to build glyph ranges from textual data. // Basic Latin, Extended Latin"
+defs["ImFontAtlas_GetGlyphRangesDefault"][1]["comment"] = "    // NB: Consider using ImFontGlyphRangesBuilder to build glyph ranges from textual data. // Basic Latin, Extended Latin"
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["defaults"] = {}
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["funcname"] = "GetGlyphRangesDefault"
 defs["ImFontAtlas_GetGlyphRangesDefault"][1]["location"] = "imgui:2897"
@@ -4011,8 +3926,7 @@ defs["ImFont_BuildLookupTable"][1]["argsT"][1]["type"] = "ImFont*"
 defs["ImFont_BuildLookupTable"][1]["argsoriginal"] = "()"
 defs["ImFont_BuildLookupTable"][1]["call_args"] = "()"
 defs["ImFont_BuildLookupTable"][1]["cimguiname"] = "ImFont_BuildLookupTable"
-defs["ImFont_BuildLookupTable"][1]["comment"] = "\
-    // [Internal] Don't use!"
+defs["ImFont_BuildLookupTable"][1]["comment"] = "    // [Internal] Don't use!"
 defs["ImFont_BuildLookupTable"][1]["defaults"] = {}
 defs["ImFont_BuildLookupTable"][1]["funcname"] = "BuildLookupTable"
 defs["ImFont_BuildLookupTable"][1]["location"] = "imgui:3007"
@@ -4052,10 +3966,7 @@ defs["ImFont_CalcTextSizeA"][1]["argsT"][8]["type"] = "const char**"
 defs["ImFont_CalcTextSizeA"][1]["argsoriginal"] = "(float size,float max_width,float wrap_width,const char* text_begin,const char* text_end=((void*)0),const char** remaining=((void*)0))"
 defs["ImFont_CalcTextSizeA"][1]["call_args"] = "(size,max_width,wrap_width,text_begin,text_end,remaining)"
 defs["ImFont_CalcTextSizeA"][1]["cimguiname"] = "ImFont_CalcTextSizeA"
-defs["ImFont_CalcTextSizeA"][1]["comment"] = "\
-    // 'max_width' stops rendering after a certain width (could be turned into a 2d size). FLT_MAX to disable.\
-\
-    // 'wrap_width' enable automatic word-wrapping across multiple lines to fit into given width. 0.0f to disable. // utf8"
+defs["ImFont_CalcTextSizeA"][1]["comment"] = "    // 'wrap_width' enable automatic word-wrapping across multiple lines to fit into given width. 0.0f to disable. // utf8"
 defs["ImFont_CalcTextSizeA"][1]["defaults"] = {}
 defs["ImFont_CalcTextSizeA"][1]["defaults"]["remaining"] = "NULL"
 defs["ImFont_CalcTextSizeA"][1]["defaults"]["text_end"] = "NULL"
@@ -4224,8 +4135,7 @@ defs["ImFont_ImFont"][1]["argsT"] = {}
 defs["ImFont_ImFont"][1]["argsoriginal"] = "()"
 defs["ImFont_ImFont"][1]["call_args"] = "()"
 defs["ImFont_ImFont"][1]["cimguiname"] = "ImFont_ImFont"
-defs["ImFont_ImFont"][1]["comment"] = "\
-    // Methods"
+defs["ImFont_ImFont"][1]["comment"] = "    // Methods"
 defs["ImFont_ImFont"][1]["constructor"] = true
 defs["ImFont_ImFont"][1]["defaults"] = {}
 defs["ImFont_ImFont"][1]["funcname"] = "ImFont"
@@ -4940,14 +4850,7 @@ defs["ImGuiIO_AddKeyEvent"][1]["argsT"][3]["type"] = "bool"
 defs["ImGuiIO_AddKeyEvent"][1]["argsoriginal"] = "(ImGuiKey key,bool down)"
 defs["ImGuiIO_AddKeyEvent"][1]["call_args"] = "(key,down)"
 defs["ImGuiIO_AddKeyEvent"][1]["cimguiname"] = "ImGuiIO_AddKeyEvent"
-defs["ImGuiIO_AddKeyEvent"][1]["comment"] = "\
-    //------------------------------------------------------------------\
-\
-    // Input - Call before calling NewFrame()\
-\
-    //------------------------------------------------------------------\
-\
-    // Input Functions // Queue a new key down/up event. Key should be \"translated\" (as in, generally ImGuiKey_A matches the key end-user would use to emit an 'A' character)"
+defs["ImGuiIO_AddKeyEvent"][1]["comment"] = "    // Input Functions // Queue a new key down/up event. Key should be \"translated\" (as in, generally ImGuiKey_A matches the key end-user would use to emit an 'A' character)"
 defs["ImGuiIO_AddKeyEvent"][1]["defaults"] = {}
 defs["ImGuiIO_AddKeyEvent"][1]["funcname"] = "AddKeyEvent"
 defs["ImGuiIO_AddKeyEvent"][1]["location"] = "imgui:2063"
@@ -5274,10 +5177,7 @@ defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["argsT"] = {}
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["argsoriginal"] = "()"
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["call_args"] = "()"
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["cimguiname"] = "ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"
-defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["comment"] = "\
-    // Helper functions for text manipulation.\
-\
-    // Use those function to benefit from the CallbackResize behaviors. Calling those function reset the selection."
+defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["comment"] = "    // Use those function to benefit from the CallbackResize behaviors. Calling those function reset the selection."
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["constructor"] = true
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["defaults"] = {}
 defs["ImGuiInputTextCallbackData_ImGuiInputTextCallbackData"][1]["funcname"] = "ImGuiInputTextCallbackData"
@@ -5412,8 +5312,7 @@ defs["ImGuiInputTextState_CursorAnimReset"][1]["argsT"][1]["type"] = "ImGuiInput
 defs["ImGuiInputTextState_CursorAnimReset"][1]["argsoriginal"] = "()"
 defs["ImGuiInputTextState_CursorAnimReset"][1]["call_args"] = "()"
 defs["ImGuiInputTextState_CursorAnimReset"][1]["cimguiname"] = "ImGuiInputTextState_CursorAnimReset"
-defs["ImGuiInputTextState_CursorAnimReset"][1]["comment"] = "\
-    // Cursor & Selection // After a user-input the cursor stays on for a while without blinking"
+defs["ImGuiInputTextState_CursorAnimReset"][1]["comment"] = "    // Cursor & Selection // After a user-input the cursor stays on for a while without blinking"
 defs["ImGuiInputTextState_CursorAnimReset"][1]["defaults"] = {}
 defs["ImGuiInputTextState_CursorAnimReset"][1]["funcname"] = "CursorAnimReset"
 defs["ImGuiInputTextState_CursorAnimReset"][1]["location"] = "imgui_internal:1041"
@@ -5812,8 +5711,7 @@ defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["argsT"][3]["type"] = "in
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["argsoriginal"] = "(int item_min,int item_max)"
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["call_args"] = "(item_min,item_max)"
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["cimguiname"] = "ImGuiListClipper_ForceDisplayRangeByIndices"
-defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["comment"] = "\
-    // Call ForceDisplayRangeByIndices() before first call to Step() if you need a range of items to be displayed regardless of visibility. // item_max is exclusive e.g. use (42, 42+1) to make item 42 always visible BUT due to alignment/padding of certain items it is likely that an extra item may be included on either end of the display range."
+defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["comment"] = "    // Call ForceDisplayRangeByIndices() before first call to Step() if you need a range of items to be displayed regardless of visibility. // item_max is exclusive e.g. use (42, 42+1) to make item 42 always visible BUT due to alignment/padding of certain items it is likely that an extra item may be included on either end of the display range."
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["defaults"] = {}
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["funcname"] = "ForceDisplayRangeByIndices"
 defs["ImGuiListClipper_ForceDisplayRangeByIndices"][1]["location"] = "imgui:2432"
@@ -5829,10 +5727,7 @@ defs["ImGuiListClipper_ImGuiListClipper"][1]["argsT"] = {}
 defs["ImGuiListClipper_ImGuiListClipper"][1]["argsoriginal"] = "()"
 defs["ImGuiListClipper_ImGuiListClipper"][1]["call_args"] = "()"
 defs["ImGuiListClipper_ImGuiListClipper"][1]["cimguiname"] = "ImGuiListClipper_ImGuiListClipper"
-defs["ImGuiListClipper_ImGuiListClipper"][1]["comment"] = "\
-    // items_count: Use INT_MAX if you don't know how many items you have (in which case the cursor won't be advanced in the final step)\
-\
-    // items_height: Use -1.0f to be calculated automatically on first step. Otherwise pass in the distance between your items, typically GetTextLineHeightWithSpacing() or GetFrameHeightWithSpacing()."
+defs["ImGuiListClipper_ImGuiListClipper"][1]["comment"] = "    // items_height: Use -1.0f to be calculated automatically on first step. Otherwise pass in the distance between your items, typically GetTextLineHeightWithSpacing() or GetFrameHeightWithSpacing()."
 defs["ImGuiListClipper_ImGuiListClipper"][1]["constructor"] = true
 defs["ImGuiListClipper_ImGuiListClipper"][1]["defaults"] = {}
 defs["ImGuiListClipper_ImGuiListClipper"][1]["funcname"] = "ImGuiListClipper"
@@ -6785,8 +6680,7 @@ defs["ImGuiStorage_BuildSortByKey"][1]["argsT"][1]["type"] = "ImGuiStorage*"
 defs["ImGuiStorage_BuildSortByKey"][1]["argsoriginal"] = "()"
 defs["ImGuiStorage_BuildSortByKey"][1]["call_args"] = "()"
 defs["ImGuiStorage_BuildSortByKey"][1]["cimguiname"] = "ImGuiStorage_BuildSortByKey"
-defs["ImGuiStorage_BuildSortByKey"][1]["comment"] = "\
-    // For quicker full rebuild of a storage (instead of an incremental one), you may add all your contents and then sort once."
+defs["ImGuiStorage_BuildSortByKey"][1]["comment"] = "    // For quicker full rebuild of a storage (instead of an incremental one), you may add all your contents and then sort once."
 defs["ImGuiStorage_BuildSortByKey"][1]["defaults"] = {}
 defs["ImGuiStorage_BuildSortByKey"][1]["funcname"] = "BuildSortByKey"
 defs["ImGuiStorage_BuildSortByKey"][1]["location"] = "imgui:2391"
@@ -6805,12 +6699,7 @@ defs["ImGuiStorage_Clear"][1]["argsT"][1]["type"] = "ImGuiStorage*"
 defs["ImGuiStorage_Clear"][1]["argsoriginal"] = "()"
 defs["ImGuiStorage_Clear"][1]["call_args"] = "()"
 defs["ImGuiStorage_Clear"][1]["cimguiname"] = "ImGuiStorage_Clear"
-defs["ImGuiStorage_Clear"][1]["comment"] = "\
-    // - Get***() functions find pair, never add/allocate. Pairs are sorted so a query is O(log N)\
-\
-    // - Set***() functions find pair, insertion on demand if missing.\
-\
-    // - Sorted insertion is costly, paid once. A typical frame shouldn't need to insert any new pair."
+defs["ImGuiStorage_Clear"][1]["comment"] = "    // - Sorted insertion is costly, paid once. A typical frame shouldn't need to insert any new pair."
 defs["ImGuiStorage_Clear"][1]["defaults"] = {}
 defs["ImGuiStorage_Clear"][1]["funcname"] = "Clear"
 defs["ImGuiStorage_Clear"][1]["location"] = "imgui:2368"
@@ -6960,14 +6849,7 @@ defs["ImGuiStorage_GetIntRef"][1]["argsT"][3]["type"] = "int"
 defs["ImGuiStorage_GetIntRef"][1]["argsoriginal"] = "(ImGuiID key,int default_val=0)"
 defs["ImGuiStorage_GetIntRef"][1]["call_args"] = "(key,default_val)"
 defs["ImGuiStorage_GetIntRef"][1]["cimguiname"] = "ImGuiStorage_GetIntRef"
-defs["ImGuiStorage_GetIntRef"][1]["comment"] = "\
-    // - Get***Ref() functions finds pair, insert on demand if missing, return pointer. Useful if you intend to do Get+Set.\
-\
-    // - References are only valid until a new value is added to the storage. Calling a Set***() function or a Get***Ref() function invalidates the pointer.\
-\
-    // - A typical use case where this is convenient for quick hacking (e.g. add storage during a live Edit&Continue session if you can't modify existing struct)\
-\
-    //      float* pvar = ImGui::GetFloatRef(key); ImGui::SliderFloat(\"var\", pvar, 0, 100.0f); some_var += *pvar;"
+defs["ImGuiStorage_GetIntRef"][1]["comment"] = "    //      float* pvar = ImGui::GetFloatRef(key); ImGui::SliderFloat(\"var\", pvar, 0, 100.0f); some_var += *pvar;"
 defs["ImGuiStorage_GetIntRef"][1]["defaults"] = {}
 defs["ImGuiStorage_GetIntRef"][1]["defaults"]["default_val"] = "0"
 defs["ImGuiStorage_GetIntRef"][1]["funcname"] = "GetIntRef"
@@ -7037,8 +6919,7 @@ defs["ImGuiStorage_SetAllInt"][1]["argsT"][2]["type"] = "int"
 defs["ImGuiStorage_SetAllInt"][1]["argsoriginal"] = "(int val)"
 defs["ImGuiStorage_SetAllInt"][1]["call_args"] = "(val)"
 defs["ImGuiStorage_SetAllInt"][1]["cimguiname"] = "ImGuiStorage_SetAllInt"
-defs["ImGuiStorage_SetAllInt"][1]["comment"] = "\
-    // Use on your own storage if you know only integer are being stored (open/close all tree nodes)"
+defs["ImGuiStorage_SetAllInt"][1]["comment"] = "    // Use on your own storage if you know only integer are being stored (open/close all tree nodes)"
 defs["ImGuiStorage_SetAllInt"][1]["defaults"] = {}
 defs["ImGuiStorage_SetAllInt"][1]["funcname"] = "SetAllInt"
 defs["ImGuiStorage_SetAllInt"][1]["location"] = "imgui:2388"
@@ -8130,8 +8011,7 @@ defs["ImGuiViewportP_CalcWorkRectPos"][1]["argsT"][3]["type"] = "const ImVec2"
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["argsoriginal"] = "(const ImVec2& off_min)"
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["call_args"] = "(off_min)"
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["cimguiname"] = "ImGuiViewportP_CalcWorkRectPos"
-defs["ImGuiViewportP_CalcWorkRectPos"][1]["comment"] = "\
-    // Calculate work rect pos/size given a set of offset (we have 1 pair of offset for rect locked from last frame data, and 1 pair for currently building rect)"
+defs["ImGuiViewportP_CalcWorkRectPos"][1]["comment"] = "    // Calculate work rect pos/size given a set of offset (we have 1 pair of offset for rect locked from last frame data, and 1 pair for currently building rect)"
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["defaults"] = {}
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["funcname"] = "CalcWorkRectPos"
 defs["ImGuiViewportP_CalcWorkRectPos"][1]["location"] = "imgui_internal:1615"
@@ -8222,8 +8102,7 @@ defs["ImGuiViewportP_GetMainRect"][1]["argsT"][2]["type"] = "ImGuiViewportP*"
 defs["ImGuiViewportP_GetMainRect"][1]["argsoriginal"] = "()"
 defs["ImGuiViewportP_GetMainRect"][1]["call_args"] = "()"
 defs["ImGuiViewportP_GetMainRect"][1]["cimguiname"] = "ImGuiViewportP_GetMainRect"
-defs["ImGuiViewportP_GetMainRect"][1]["comment"] = "\
-    // Helpers to retrieve ImRect (we don't need to store BuildWorkRect as every access tend to change it, hence the code asymmetry)"
+defs["ImGuiViewportP_GetMainRect"][1]["comment"] = "    // Helpers to retrieve ImRect (we don't need to store BuildWorkRect as every access tend to change it, hence the code asymmetry)"
 defs["ImGuiViewportP_GetMainRect"][1]["defaults"] = {}
 defs["ImGuiViewportP_GetMainRect"][1]["funcname"] = "GetMainRect"
 defs["ImGuiViewportP_GetMainRect"][1]["location"] = "imgui_internal:1620"
@@ -8320,8 +8199,7 @@ defs["ImGuiViewport_GetCenter"][1]["argsT"][2]["type"] = "ImGuiViewport*"
 defs["ImGuiViewport_GetCenter"][1]["argsoriginal"] = "()"
 defs["ImGuiViewport_GetCenter"][1]["call_args"] = "()"
 defs["ImGuiViewport_GetCenter"][1]["cimguiname"] = "ImGuiViewport_GetCenter"
-defs["ImGuiViewport_GetCenter"][1]["comment"] = "\
-    // Helpers"
+defs["ImGuiViewport_GetCenter"][1]["comment"] = "    // Helpers"
 defs["ImGuiViewport_GetCenter"][1]["defaults"] = {}
 defs["ImGuiViewport_GetCenter"][1]["funcname"] = "GetCenter"
 defs["ImGuiViewport_GetCenter"][1]["location"] = "imgui:3075"
@@ -8644,8 +8522,7 @@ defs["ImGuiWindow_Rect"][1]["argsT"][2]["type"] = "ImGuiWindow*"
 defs["ImGuiWindow_Rect"][1]["argsoriginal"] = "()"
 defs["ImGuiWindow_Rect"][1]["call_args"] = "()"
 defs["ImGuiWindow_Rect"][1]["cimguiname"] = "ImGuiWindow_Rect"
-defs["ImGuiWindow_Rect"][1]["comment"] = "\
-    // We don't use g.FontSize because the window may be != g.CurrentWidow."
+defs["ImGuiWindow_Rect"][1]["comment"] = "    // We don't use g.FontSize because the window may be != g.CurrentWidow."
 defs["ImGuiWindow_Rect"][1]["defaults"] = {}
 defs["ImGuiWindow_Rect"][1]["funcname"] = "Rect"
 defs["ImGuiWindow_Rect"][1]["location"] = "imgui_internal:2375"
@@ -8783,10 +8660,7 @@ defs["ImPool_GetAliveCount"][1]["argsT"][1]["type"] = "ImPool*"
 defs["ImPool_GetAliveCount"][1]["argsoriginal"] = "()"
 defs["ImPool_GetAliveCount"][1]["call_args"] = "()"
 defs["ImPool_GetAliveCount"][1]["cimguiname"] = "ImPool_GetAliveCount"
-defs["ImPool_GetAliveCount"][1]["comment"] = "\
-    // To iterate a ImPool: for (int n = 0; n < pool.GetMapSize(); n++) if (T* t = pool.TryGetMapData(n)) { ... }\
-\
-    // Can be avoided if you know .Remove() has never been called on the pool, or AliveCount == GetMapSize() // Number of active/alive items in the pool (for display purpose)"
+defs["ImPool_GetAliveCount"][1]["comment"] = "    // Can be avoided if you know .Remove() has never been called on the pool, or AliveCount == GetMapSize() // Number of active/alive items in the pool (for display purpose)"
 defs["ImPool_GetAliveCount"][1]["defaults"] = {}
 defs["ImPool_GetAliveCount"][1]["funcname"] = "GetAliveCount"
 defs["ImPool_GetAliveCount"][1]["location"] = "imgui_internal:668"
@@ -9798,8 +9672,7 @@ defs["ImSpan_ImSpan"][1]["argsT"] = {}
 defs["ImSpan_ImSpan"][1]["argsoriginal"] = "()"
 defs["ImSpan_ImSpan"][1]["call_args"] = "()"
 defs["ImSpan_ImSpan"][1]["cimguiname"] = "ImSpan_ImSpan"
-defs["ImSpan_ImSpan"][1]["comment"] = "\
-    // Constructors, destructor"
+defs["ImSpan_ImSpan"][1]["comment"] = "    // Constructors, destructor"
 defs["ImSpan_ImSpan"][1]["constructor"] = true
 defs["ImSpan_ImSpan"][1]["defaults"] = {}
 defs["ImSpan_ImSpan"][1]["funcname"] = "ImSpan"
@@ -9955,8 +9828,7 @@ defs["ImSpan_index_from_ptr"][1]["argsT"][2]["type"] = "const T*"
 defs["ImSpan_index_from_ptr"][1]["argsoriginal"] = "(const T* it)"
 defs["ImSpan_index_from_ptr"][1]["call_args"] = "(it)"
 defs["ImSpan_index_from_ptr"][1]["cimguiname"] = "ImSpan_index_from_ptr"
-defs["ImSpan_index_from_ptr"][1]["comment"] = "\
-    // Utilities"
+defs["ImSpan_index_from_ptr"][1]["comment"] = "    // Utilities"
 defs["ImSpan_index_from_ptr"][1]["defaults"] = {}
 defs["ImSpan_index_from_ptr"][1]["funcname"] = "index_from_ptr"
 defs["ImSpan_index_from_ptr"][1]["location"] = "imgui_internal:616"
@@ -10284,8 +10156,7 @@ defs["ImVector_ImVector"][1]["argsT"] = {}
 defs["ImVector_ImVector"][1]["argsoriginal"] = "()"
 defs["ImVector_ImVector"][1]["call_args"] = "()"
 defs["ImVector_ImVector"][1]["cimguiname"] = "ImVector_ImVector"
-defs["ImVector_ImVector"][1]["comment"] = "\
-    // Constructors, destructor"
+defs["ImVector_ImVector"][1]["comment"] = "    // Constructors, destructor"
 defs["ImVector_ImVector"][1]["constructor"] = true
 defs["ImVector_ImVector"][1]["defaults"] = {}
 defs["ImVector_ImVector"][1]["funcname"] = "ImVector"
@@ -10879,8 +10750,7 @@ defs["ImVector_push_back"][1]["argsT"][2]["type"] = "const T"
 defs["ImVector_push_back"][1]["argsoriginal"] = "(const T& v)"
 defs["ImVector_push_back"][1]["call_args"] = "(v)"
 defs["ImVector_push_back"][1]["cimguiname"] = "ImVector_push_back"
-defs["ImVector_push_back"][1]["comment"] = "\
-    // NB: It is illegal to call push_back/push_front/insert with a reference pointing inside the ImVector data itself! e.g. v.push_back(v[10]) is forbidden."
+defs["ImVector_push_back"][1]["comment"] = "    // NB: It is illegal to call push_back/push_front/insert with a reference pointing inside the ImVector data itself! e.g. v.push_back(v[10]) is forbidden."
 defs["ImVector_push_back"][1]["defaults"] = {}
 defs["ImVector_push_back"][1]["funcname"] = "push_back"
 defs["ImVector_push_back"][1]["location"] = "imgui:1894"
@@ -11143,8 +11013,7 @@ defs["igAddContextHook"][1]["argsT"][2]["type"] = "const ImGuiContextHook*"
 defs["igAddContextHook"][1]["argsoriginal"] = "(ImGuiContext* context,const ImGuiContextHook* hook)"
 defs["igAddContextHook"][1]["call_args"] = "(context,hook)"
 defs["igAddContextHook"][1]["cimguiname"] = "igAddContextHook"
-defs["igAddContextHook"][1]["comment"] = "\
-    // Generic context hooks"
+defs["igAddContextHook"][1]["comment"] = "    // Generic context hooks"
 defs["igAddContextHook"][1]["defaults"] = {}
 defs["igAddContextHook"][1]["funcname"] = "AddContextHook"
 defs["igAddContextHook"][1]["location"] = "imgui_internal:2791"
@@ -11258,30 +11127,7 @@ defs["igBegin"][1]["argsT"][3]["type"] = "ImGuiWindowFlags"
 defs["igBegin"][1]["argsoriginal"] = "(const char* name,bool* p_open=((void*)0),ImGuiWindowFlags flags=0)"
 defs["igBegin"][1]["call_args"] = "(name,p_open,flags)"
 defs["igBegin"][1]["cimguiname"] = "igBegin"
-defs["igBegin"][1]["comment"] = "\
-    // Windows\
-\
-    // - Begin() = push window to the stack and start appending to it. End() = pop window from the stack.\
-\
-    // - Passing 'bool* p_open != NULL' shows a window-closing widget in the upper-right corner of the window,\
-\
-    //   which clicking will set the boolean to false when clicked.\
-\
-    // - You may append multiple times to the same window during the same frame by calling Begin()/End() pairs multiple times.\
-\
-    //   Some information such as 'flags' or 'p_open' will only be considered by the first call to Begin().\
-\
-    // - Begin() return false to indicate the window is collapsed or fully clipped, so you may early out and omit submitting\
-\
-    //   anything to the window. Always call a matching End() for each Begin() call, regardless of its return value!\
-\
-    //   [Important: due to legacy reason, this is inconsistent with most other functions such as BeginMenu/EndMenu,\
-\
-    //    BeginPopup/EndPopup, etc. where the EndXXX call should only be called if the corresponding BeginXXX function\
-\
-    //    returned true. Begin and BeginChild are the only odd ones out. Will be fixed in a future update.]\
-\
-    // - Note that the bottom of window stack always contains a window called \"Debug\"."
+defs["igBegin"][1]["comment"] = "    // - Note that the bottom of window stack always contains a window called \"Debug\"."
 defs["igBegin"][1]["defaults"] = {}
 defs["igBegin"][1]["defaults"]["flags"] = "0"
 defs["igBegin"][1]["defaults"]["p_open"] = "NULL"
@@ -11312,22 +11158,7 @@ defs["igBeginChild"][1]["argsT"][4]["type"] = "ImGuiWindowFlags"
 defs["igBeginChild"][1]["argsoriginal"] = "(const char* str_id,const ImVec2& size=ImVec2(0,0),bool border=false,ImGuiWindowFlags flags=0)"
 defs["igBeginChild"][1]["call_args"] = "(str_id,size,border,flags)"
 defs["igBeginChild"][1]["cimguiname"] = "igBeginChild"
-defs["igBeginChild"][1]["comment"] = "\
-    // Child Windows\
-\
-    // - Use child windows to begin into a self-contained independent scrolling/clipping regions within a host window. Child windows can embed their own child.\
-\
-    // - For each independent axis of 'size': ==0.0f: use remaining host window size / >0.0f: fixed size / <0.0f: use remaining window size minus abs(size) / Each axis can use a different mode, e.g. ImVec2(0,400).\
-\
-    // - BeginChild() returns false to indicate the window is collapsed or fully clipped, so you may early out and omit submitting anything to the window.\
-\
-    //   Always call a matching EndChild() for each BeginChild() call, regardless of its return value.\
-\
-    //   [Important: due to legacy reason, this is inconsistent with most other functions such as BeginMenu/EndMenu,\
-\
-    //    BeginPopup/EndPopup, etc. where the EndXXX call should only be called if the corresponding BeginXXX function\
-\
-    //    returned true. Begin and BeginChild are the only odd ones out. Will be fixed in a future update.]"
+defs["igBeginChild"][1]["comment"] = "    //    returned true. Begin and BeginChild are the only odd ones out. Will be fixed in a future update.]"
 defs["igBeginChild"][1]["defaults"] = {}
 defs["igBeginChild"][1]["defaults"]["border"] = "false"
 defs["igBeginChild"][1]["defaults"]["flags"] = "0"
@@ -11392,8 +11223,7 @@ defs["igBeginChildEx"][1]["argsT"][5]["type"] = "ImGuiWindowFlags"
 defs["igBeginChildEx"][1]["argsoriginal"] = "(const char* name,ImGuiID id,const ImVec2& size_arg,bool border,ImGuiWindowFlags flags)"
 defs["igBeginChildEx"][1]["call_args"] = "(name,id,size_arg,border,flags)"
 defs["igBeginChildEx"][1]["cimguiname"] = "igBeginChildEx"
-defs["igBeginChildEx"][1]["comment"] = "\
-    // Popups, Modals, Tooltips"
+defs["igBeginChildEx"][1]["comment"] = "    // Popups, Modals, Tooltips"
 defs["igBeginChildEx"][1]["defaults"] = {}
 defs["igBeginChildEx"][1]["funcname"] = "BeginChildEx"
 defs["igBeginChildEx"][1]["location"] = "imgui_internal:2882"
@@ -11473,12 +11303,7 @@ defs["igBeginCombo"][1]["argsT"][3]["type"] = "ImGuiComboFlags"
 defs["igBeginCombo"][1]["argsoriginal"] = "(const char* label,const char* preview_value,ImGuiComboFlags flags=0)"
 defs["igBeginCombo"][1]["call_args"] = "(label,preview_value,flags)"
 defs["igBeginCombo"][1]["cimguiname"] = "igBeginCombo"
-defs["igBeginCombo"][1]["comment"] = "\
-    // Widgets: Combo Box\
-\
-    // - The BeginCombo()/EndCombo() api allows you to manage your contents and selection state however you want it, by creating e.g. Selectable() items.\
-\
-    // - The old Combo() api are helpers over BeginCombo()/EndCombo() which are kept available for convenience purpose. This is analogous to how ListBox are created."
+defs["igBeginCombo"][1]["comment"] = "    // - The old Combo() api are helpers over BeginCombo()/EndCombo() which are kept available for convenience purpose. This is analogous to how ListBox are created."
 defs["igBeginCombo"][1]["defaults"] = {}
 defs["igBeginCombo"][1]["defaults"]["flags"] = "0"
 defs["igBeginCombo"][1]["funcname"] = "BeginCombo"
@@ -11505,8 +11330,7 @@ defs["igBeginComboPopup"][1]["argsT"][3]["type"] = "ImGuiComboFlags"
 defs["igBeginComboPopup"][1]["argsoriginal"] = "(ImGuiID popup_id,const ImRect& bb,ImGuiComboFlags flags)"
 defs["igBeginComboPopup"][1]["call_args"] = "(popup_id,bb,flags)"
 defs["igBeginComboPopup"][1]["cimguiname"] = "igBeginComboPopup"
-defs["igBeginComboPopup"][1]["comment"] = "\
-    // Combos"
+defs["igBeginComboPopup"][1]["comment"] = "    // Combos"
 defs["igBeginComboPopup"][1]["defaults"] = {}
 defs["igBeginComboPopup"][1]["funcname"] = "BeginComboPopup"
 defs["igBeginComboPopup"][1]["location"] = "imgui_internal:2902"
@@ -11542,14 +11366,7 @@ defs["igBeginDisabled"][1]["argsT"][1]["type"] = "bool"
 defs["igBeginDisabled"][1]["argsoriginal"] = "(bool disabled=true)"
 defs["igBeginDisabled"][1]["call_args"] = "(disabled)"
 defs["igBeginDisabled"][1]["cimguiname"] = "igBeginDisabled"
-defs["igBeginDisabled"][1]["comment"] = "\
-    // Disabling [BETA API]\
-\
-    // - Disable all user interactions and dim items visuals (applying style.DisabledAlpha over current colors)\
-\
-    // - Those can be nested but it cannot be used to enable an already disabled section (a single BeginDisabled(true) in the stack is enough to keep everything disabled)\
-\
-    // - BeginDisabled(false) essentially does nothing useful but is provided to facilitate use of boolean expressions. If you can avoid calling BeginDisabled(False)/EndDisabled() best to avoid it."
+defs["igBeginDisabled"][1]["comment"] = "    // - BeginDisabled(false) essentially does nothing useful but is provided to facilitate use of boolean expressions. If you can avoid calling BeginDisabled(False)/EndDisabled() best to avoid it."
 defs["igBeginDisabled"][1]["defaults"] = {}
 defs["igBeginDisabled"][1]["defaults"]["disabled"] = "true"
 defs["igBeginDisabled"][1]["funcname"] = "BeginDisabled"
@@ -11630,16 +11447,7 @@ defs["igBeginDragDropSource"][1]["argsT"][1]["type"] = "ImGuiDragDropFlags"
 defs["igBeginDragDropSource"][1]["argsoriginal"] = "(ImGuiDragDropFlags flags=0)"
 defs["igBeginDragDropSource"][1]["call_args"] = "(flags)"
 defs["igBeginDragDropSource"][1]["cimguiname"] = "igBeginDragDropSource"
-defs["igBeginDragDropSource"][1]["comment"] = "\
-    // Drag and Drop\
-\
-    // - On source items, call BeginDragDropSource(), if it returns true also call SetDragDropPayload() + EndDragDropSource().\
-\
-    // - On target candidates, call BeginDragDropTarget(), if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().\
-\
-    // - If you stop calling BeginDragDropSource() the payload is preserved however it won't have a preview tooltip (we currently display a fallback \"...\" tooltip, see #1725)\
-\
-    // - An item can be both drag source and drop target. // call after submitting an item which may be dragged. when this return true, you can call SetDragDropPayload() + EndDragDropSource()"
+defs["igBeginDragDropSource"][1]["comment"] = "    // - An item can be both drag source and drop target. // call after submitting an item which may be dragged. when this return true, you can call SetDragDropPayload() + EndDragDropSource()"
 defs["igBeginDragDropSource"][1]["defaults"] = {}
 defs["igBeginDragDropSource"][1]["defaults"]["flags"] = "0"
 defs["igBeginDragDropSource"][1]["funcname"] = "BeginDragDropSource"
@@ -11719,18 +11527,7 @@ defs["igBeginListBox"][1]["argsT"][2]["type"] = "const ImVec2"
 defs["igBeginListBox"][1]["argsoriginal"] = "(const char* label,const ImVec2& size=ImVec2(0,0))"
 defs["igBeginListBox"][1]["call_args"] = "(label,size)"
 defs["igBeginListBox"][1]["cimguiname"] = "igBeginListBox"
-defs["igBeginListBox"][1]["comment"] = "\
-    // Widgets: List Boxes\
-\
-    // - This is essentially a thin wrapper to using BeginChild/EndChild with some stylistic changes.\
-\
-    // - The BeginListBox()/EndListBox() api allows you to manage your contents and selection state however you want it, by creating e.g. Selectable() or any items.\
-\
-    // - The simplified/old ListBox() api are helpers over BeginListBox()/EndListBox() which are kept available for convenience purpose. This is analoguous to how Combos are created.\
-\
-    // - Choose frame width:   size.x > 0.0f: custom  /  size.x < 0.0f or -FLT_MIN: right-align   /  size.x = 0.0f (default): use current ItemWidth\
-\
-    // - Choose frame height:  size.y > 0.0f: custom  /  size.y < 0.0f or -FLT_MIN: bottom-align  /  size.y = 0.0f (default): arbitrary default height which can fit ~7 items // open a framed scrolling region"
+defs["igBeginListBox"][1]["comment"] = "    // - Choose frame height:  size.y > 0.0f: custom  /  size.y < 0.0f or -FLT_MIN: bottom-align  /  size.y = 0.0f (default): arbitrary default height which can fit ~7 items // open a framed scrolling region"
 defs["igBeginListBox"][1]["defaults"] = {}
 defs["igBeginListBox"][1]["defaults"]["size"] = "ImVec2(0,0)"
 defs["igBeginListBox"][1]["funcname"] = "BeginListBox"
@@ -11789,16 +11586,7 @@ defs["igBeginMenuBar"][1]["argsT"] = {}
 defs["igBeginMenuBar"][1]["argsoriginal"] = "()"
 defs["igBeginMenuBar"][1]["call_args"] = "()"
 defs["igBeginMenuBar"][1]["cimguiname"] = "igBeginMenuBar"
-defs["igBeginMenuBar"][1]["comment"] = "\
-    // Widgets: Menus\
-\
-    // - Use BeginMenuBar() on a window ImGuiWindowFlags_MenuBar to append to its menu bar.\
-\
-    // - Use BeginMainMenuBar() to create a menu bar at the top of the screen and append to it.\
-\
-    // - Use BeginMenu() to create a menu. You can call BeginMenu() multiple time with the same identifier to append more items to it.\
-\
-    // - Not that MenuItem() keyboardshortcuts are displayed as a convenience but _not processed_ by Dear ImGui at the moment. // append to menu-bar of current window (requires ImGuiWindowFlags_MenuBar flag set on parent window)."
+defs["igBeginMenuBar"][1]["comment"] = "    // - Not that MenuItem() keyboardshortcuts are displayed as a convenience but _not processed_ by Dear ImGui at the moment. // append to menu-bar of current window (requires ImGuiWindowFlags_MenuBar flag set on parent window)."
 defs["igBeginMenuBar"][1]["defaults"] = {}
 defs["igBeginMenuBar"][1]["funcname"] = "BeginMenuBar"
 defs["igBeginMenuBar"][1]["location"] = "imgui:655"
@@ -11847,28 +11635,7 @@ defs["igBeginPopup"][1]["argsT"][2]["type"] = "ImGuiWindowFlags"
 defs["igBeginPopup"][1]["argsoriginal"] = "(const char* str_id,ImGuiWindowFlags flags=0)"
 defs["igBeginPopup"][1]["call_args"] = "(str_id,flags)"
 defs["igBeginPopup"][1]["cimguiname"] = "igBeginPopup"
-defs["igBeginPopup"][1]["comment"] = "\
-    // Popups, Modals\
-\
-    //  - They block normal mouse hovering detection (and therefore most mouse interactions) behind them.\
-\
-    //  - If not modal: they can be closed by clicking anywhere outside them, or by pressing ESCAPE.\
-\
-    //  - Their visibility state (~bool) is held internally instead of being held by the programmer as we are used to with regular Begin*() calls.\
-\
-    //  - The 3 properties above are related: we need to retain popup visibility state in the library because popups may be closed as any time.\
-\
-    //  - You can bypass the hovering restriction by using ImGuiHoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered() or IsWindowHovered().\
-\
-    //  - IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup and BeginPopup generally needs to be at the same level of the stack.\
-\
-    //    This is sometimes leading to confusing mistakes. May rework this in the future.\
-\
-    // Popups: begin/end functions\
-\
-    //  - BeginPopup(): query popup state, if open start appending into the window. Call EndPopup() afterwards. ImGuiWindowFlags are forwarded to the window.\
-\
-    //  - BeginPopupModal(): block every interactions behind the window, cannot be closed by user, add a dimming background, has a title bar. // return true if the popup is open, and you can start outputting to it."
+defs["igBeginPopup"][1]["comment"] = "    //  - BeginPopupModal(): block every interactions behind the window, cannot be closed by user, add a dimming background, has a title bar. // return true if the popup is open, and you can start outputting to it."
 defs["igBeginPopup"][1]["defaults"] = {}
 defs["igBeginPopup"][1]["defaults"]["flags"] = "0"
 defs["igBeginPopup"][1]["funcname"] = "BeginPopup"
@@ -11892,16 +11659,7 @@ defs["igBeginPopupContextItem"][1]["argsT"][2]["type"] = "ImGuiPopupFlags"
 defs["igBeginPopupContextItem"][1]["argsoriginal"] = "(const char* str_id=((void*)0),ImGuiPopupFlags popup_flags=1)"
 defs["igBeginPopupContextItem"][1]["call_args"] = "(str_id,popup_flags)"
 defs["igBeginPopupContextItem"][1]["cimguiname"] = "igBeginPopupContextItem"
-defs["igBeginPopupContextItem"][1]["comment"] = "\
-    // Popups: open+begin combined functions helpers\
-\
-    //  - Helpers to do OpenPopup+BeginPopup where the Open action is triggered by e.g. hovering an item and right-clicking.\
-\
-    //  - They are convenient to easily create context menus, hence the name.\
-\
-    //  - IMPORTANT: Notice that BeginPopupContextXXX takes ImGuiPopupFlags just like OpenPopup() and unlike BeginPopup(). For full consistency, we may add ImGuiWindowFlags to the BeginPopupContextXXX functions in the future.\
-\
-    //  - IMPORTANT: Notice that we exceptionally default their flags to 1 (== ImGuiPopupFlags_MouseButtonRight) for backward compatibility with older API taking 'int mouse_button = 1' parameter, so if you add other flags remember to re-add the ImGuiPopupFlags_MouseButtonRight. // open+begin popup when clicked on last item. Use str_id==NULL to associate the popup to previous item. If you want to use that on a non-interactive item such as Text() you need to pass in an explicit ID here. read comments in .cpp!"
+defs["igBeginPopupContextItem"][1]["comment"] = "    //  - IMPORTANT: Notice that we exceptionally default their flags to 1 (== ImGuiPopupFlags_MouseButtonRight) for backward compatibility with older API taking 'int mouse_button = 1' parameter, so if you add other flags remember to re-add the ImGuiPopupFlags_MouseButtonRight. // open+begin popup when clicked on last item. Use str_id==NULL to associate the popup to previous item. If you want to use that on a non-interactive item such as Text() you need to pass in an explicit ID here. read comments in .cpp!"
 defs["igBeginPopupContextItem"][1]["defaults"] = {}
 defs["igBeginPopupContextItem"][1]["defaults"]["popup_flags"] = "1"
 defs["igBeginPopupContextItem"][1]["defaults"]["str_id"] = "NULL"
@@ -12026,10 +11784,7 @@ defs["igBeginTabBar"][1]["argsT"][2]["type"] = "ImGuiTabBarFlags"
 defs["igBeginTabBar"][1]["argsoriginal"] = "(const char* str_id,ImGuiTabBarFlags flags=0)"
 defs["igBeginTabBar"][1]["call_args"] = "(str_id,flags)"
 defs["igBeginTabBar"][1]["cimguiname"] = "igBeginTabBar"
-defs["igBeginTabBar"][1]["comment"] = "\
-    // Tab Bars, Tabs\
-\
-    // Note: Tabs are automatically created by the docking system. Use this to create tab bars/tabs yourself without docking being involved. // create and append into a TabBar"
+defs["igBeginTabBar"][1]["comment"] = "    // Note: Tabs are automatically created by the docking system. Use this to create tab bars/tabs yourself without docking being involved. // create and append into a TabBar"
 defs["igBeginTabBar"][1]["defaults"] = {}
 defs["igBeginTabBar"][1]["defaults"]["flags"] = "0"
 defs["igBeginTabBar"][1]["funcname"] = "BeginTabBar"
@@ -12059,8 +11814,7 @@ defs["igBeginTabBarEx"][1]["argsT"][4]["type"] = "ImGuiDockNode*"
 defs["igBeginTabBarEx"][1]["argsoriginal"] = "(ImGuiTabBar* tab_bar,const ImRect& bb,ImGuiTabBarFlags flags,ImGuiDockNode* dock_node)"
 defs["igBeginTabBarEx"][1]["call_args"] = "(tab_bar,bb,flags,dock_node)"
 defs["igBeginTabBarEx"][1]["cimguiname"] = "igBeginTabBarEx"
-defs["igBeginTabBarEx"][1]["comment"] = "\
-    // Tab Bars"
+defs["igBeginTabBarEx"][1]["comment"] = "    // Tab Bars"
 defs["igBeginTabBarEx"][1]["defaults"] = {}
 defs["igBeginTabBarEx"][1]["funcname"] = "BeginTabBarEx"
 defs["igBeginTabBarEx"][1]["location"] = "imgui_internal:3074"
@@ -12120,52 +11874,7 @@ defs["igBeginTable"][1]["argsT"][5]["type"] = "float"
 defs["igBeginTable"][1]["argsoriginal"] = "(const char* str_id,int column,ImGuiTableFlags flags=0,const ImVec2& outer_size=ImVec2(0.0f,0.0f),float inner_width=0.0f)"
 defs["igBeginTable"][1]["call_args"] = "(str_id,column,flags,outer_size,inner_width)"
 defs["igBeginTable"][1]["cimguiname"] = "igBeginTable"
-defs["igBeginTable"][1]["comment"] = "\
-    // Tables\
-\
-    // - Full-featured replacement for old Columns API.\
-\
-    // - See Demo->Tables for demo code. See top of imgui_tables.cpp for general commentary.\
-\
-    // - See ImGuiTableFlags_ and ImGuiTableColumnFlags_ enums for a description of available flags.\
-\
-    // The typical call flow is:\
-\
-    // - 1. Call BeginTable(), early out if returning false.\
-\
-    // - 2. Optionally call TableSetupColumn() to submit column name/flags/defaults.\
-\
-    // - 3. Optionally call TableSetupScrollFreeze() to request scroll freezing of columns/rows.\
-\
-    // - 4. Optionally call TableHeadersRow() to submit a header row. Names are pulled from TableSetupColumn() data.\
-\
-    // - 5. Populate contents:\
-\
-    //    - In most situations you can use TableNextRow() + TableSetColumnIndex(N) to start appending into a column.\
-\
-    //    - If you are using tables as a sort of grid, where every columns is holding the same type of contents,\
-\
-    //      you may prefer using TableNextColumn() instead of TableNextRow() + TableSetColumnIndex().\
-\
-    //      TableNextColumn() will automatically wrap-around into the next row if needed.\
-\
-    //    - IMPORTANT: Comparatively to the old Columns() API, we need to call TableNextColumn() for the first column!\
-\
-    //    - Summary of possible call flow:\
-\
-    //        --------------------------------------------------------------------------------------------------------\
-\
-    //        TableNextRow() -> TableSetColumnIndex(0) -> Text(\"Hello 0\") -> TableSetColumnIndex(1) -> Text(\"Hello 1\")  // OK\
-\
-    //        TableNextRow() -> TableNextColumn()      -> Text(\"Hello 0\") -> TableNextColumn()      -> Text(\"Hello 1\")  // OK\
-\
-    //                          TableNextColumn()      -> Text(\"Hello 0\") -> TableNextColumn()      -> Text(\"Hello 1\")  // OK: TableNextColumn() automatically gets to next row!\
-\
-    //        TableNextRow()                           -> Text(\"Hello 0\")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!\
-\
-    //        --------------------------------------------------------------------------------------------------------\
-\
-    // - 5. Call EndTable()"
+defs["igBeginTable"][1]["comment"] = "    // - 5. Call EndTable()"
 defs["igBeginTable"][1]["defaults"] = {}
 defs["igBeginTable"][1]["defaults"]["flags"] = "0"
 defs["igBeginTable"][1]["defaults"]["inner_width"] = "0.0f"
@@ -12222,10 +11931,7 @@ defs["igBeginTooltip"][1]["argsT"] = {}
 defs["igBeginTooltip"][1]["argsoriginal"] = "()"
 defs["igBeginTooltip"][1]["call_args"] = "()"
 defs["igBeginTooltip"][1]["cimguiname"] = "igBeginTooltip"
-defs["igBeginTooltip"][1]["comment"] = "\
-    // Tooltips\
-\
-    // - Tooltip are windows following the mouse. They do not take focus away. // begin/append a tooltip window. to create full-featured tooltip (with any kind of items)."
+defs["igBeginTooltip"][1]["comment"] = "    // - Tooltip are windows following the mouse. They do not take focus away. // begin/append a tooltip window. to create full-featured tooltip (with any kind of items)."
 defs["igBeginTooltip"][1]["defaults"] = {}
 defs["igBeginTooltip"][1]["funcname"] = "BeginTooltip"
 defs["igBeginTooltip"][1]["location"] = "imgui:666"
@@ -12279,8 +11985,7 @@ defs["igBeginViewportSideBar"][1]["argsT"][5]["type"] = "ImGuiWindowFlags"
 defs["igBeginViewportSideBar"][1]["argsoriginal"] = "(const char* name,ImGuiViewport* viewport,ImGuiDir dir,float size,ImGuiWindowFlags window_flags)"
 defs["igBeginViewportSideBar"][1]["call_args"] = "(name,viewport,dir,size,window_flags)"
 defs["igBeginViewportSideBar"][1]["cimguiname"] = "igBeginViewportSideBar"
-defs["igBeginViewportSideBar"][1]["comment"] = "\
-    // Menus"
+defs["igBeginViewportSideBar"][1]["comment"] = "    // Menus"
 defs["igBeginViewportSideBar"][1]["defaults"] = {}
 defs["igBeginViewportSideBar"][1]["funcname"] = "BeginViewportSideBar"
 defs["igBeginViewportSideBar"][1]["location"] = "imgui_internal:2897"
@@ -12445,12 +12150,7 @@ defs["igButton"][1]["argsT"][2]["type"] = "const ImVec2"
 defs["igButton"][1]["argsoriginal"] = "(const char* label,const ImVec2& size=ImVec2(0,0))"
 defs["igButton"][1]["call_args"] = "(label,size)"
 defs["igButton"][1]["cimguiname"] = "igButton"
-defs["igButton"][1]["comment"] = "\
-    // Widgets: Main\
-\
-    // - Most widgets return true when the value has been changed or when pressed/selected\
-\
-    // - You may also use one of the many IsItemXXX functions (e.g. IsItemActive, IsItemHovered, etc.) to query widget state. // button"
+defs["igButton"][1]["comment"] = "    // - You may also use one of the many IsItemXXX functions (e.g. IsItemActive, IsItemHovered, etc.) to query widget state. // button"
 defs["igButton"][1]["defaults"] = {}
 defs["igButton"][1]["defaults"]["size"] = "ImVec2(0,0)"
 defs["igButton"][1]["funcname"] = "Button"
@@ -12483,8 +12183,7 @@ defs["igButtonBehavior"][1]["argsT"][5]["type"] = "ImGuiButtonFlags"
 defs["igButtonBehavior"][1]["argsoriginal"] = "(const ImRect& bb,ImGuiID id,bool* out_hovered,bool* out_held,ImGuiButtonFlags flags=0)"
 defs["igButtonBehavior"][1]["call_args"] = "(bb,id,out_hovered,out_held,flags)"
 defs["igButtonBehavior"][1]["cimguiname"] = "igButtonBehavior"
-defs["igButtonBehavior"][1]["comment"] = "\
-    // Widgets low-level behaviors"
+defs["igButtonBehavior"][1]["comment"] = "    // Widgets low-level behaviors"
 defs["igButtonBehavior"][1]["defaults"] = {}
 defs["igButtonBehavior"][1]["defaults"]["flags"] = "0"
 defs["igButtonBehavior"][1]["funcname"] = "ButtonBehavior"
@@ -12615,8 +12314,7 @@ defs["igCalcTextSize"][1]["argsT"][5]["type"] = "float"
 defs["igCalcTextSize"][1]["argsoriginal"] = "(const char* text,const char* text_end=((void*)0),bool hide_text_after_double_hash=false,float wrap_width=-1.0f)"
 defs["igCalcTextSize"][1]["call_args"] = "(text,text_end,hide_text_after_double_hash,wrap_width)"
 defs["igCalcTextSize"][1]["cimguiname"] = "igCalcTextSize"
-defs["igCalcTextSize"][1]["comment"] = "\
-    // Text Utilities"
+defs["igCalcTextSize"][1]["comment"] = "    // Text Utilities"
 defs["igCalcTextSize"][1]["defaults"] = {}
 defs["igCalcTextSize"][1]["defaults"]["hide_text_after_double_hash"] = "false"
 defs["igCalcTextSize"][1]["defaults"]["text_end"] = "NULL"
@@ -13203,8 +12901,7 @@ defs["igColorConvertU32ToFloat4"][1]["argsT"][2]["type"] = "ImU32"
 defs["igColorConvertU32ToFloat4"][1]["argsoriginal"] = "(ImU32 in)"
 defs["igColorConvertU32ToFloat4"][1]["call_args"] = "(in)"
 defs["igColorConvertU32ToFloat4"][1]["cimguiname"] = "igColorConvertU32ToFloat4"
-defs["igColorConvertU32ToFloat4"][1]["comment"] = "\
-    // Color Utilities"
+defs["igColorConvertU32ToFloat4"][1]["comment"] = "    // Color Utilities"
 defs["igColorConvertU32ToFloat4"][1]["defaults"] = {}
 defs["igColorConvertU32ToFloat4"][1]["funcname"] = "ColorConvertU32ToFloat4"
 defs["igColorConvertU32ToFloat4"][1]["location"] = "imgui:901"
@@ -13231,12 +12928,7 @@ defs["igColorEdit3"][1]["argsT"][3]["type"] = "ImGuiColorEditFlags"
 defs["igColorEdit3"][1]["argsoriginal"] = "(const char* label,float col[3],ImGuiColorEditFlags flags=0)"
 defs["igColorEdit3"][1]["call_args"] = "(label,col,flags)"
 defs["igColorEdit3"][1]["cimguiname"] = "igColorEdit3"
-defs["igColorEdit3"][1]["comment"] = "\
-    // Widgets: Color Editor/Picker (tip: the ColorEdit* functions have a little color square that can be left-clicked to open a picker, and right-clicked to open an option menu.)\
-\
-    // - Note that in C++ a 'float v[X]' function argument is the _same_ as 'float* v', the array syntax is just a way to document the number of elements that are expected to be accessible.\
-\
-    // - You can pass the address of a first float element out of a contiguous structure, e.g. &myvector.x"
+defs["igColorEdit3"][1]["comment"] = "    // - You can pass the address of a first float element out of a contiguous structure, e.g. &myvector.x"
 defs["igColorEdit3"][1]["defaults"] = {}
 defs["igColorEdit3"][1]["defaults"]["flags"] = "0"
 defs["igColorEdit3"][1]["funcname"] = "ColorEdit3"
@@ -13389,8 +13081,7 @@ defs["igColorTooltip"][1]["argsT"][3]["type"] = "ImGuiColorEditFlags"
 defs["igColorTooltip"][1]["argsoriginal"] = "(const char* text,const float* col,ImGuiColorEditFlags flags)"
 defs["igColorTooltip"][1]["call_args"] = "(text,col,flags)"
 defs["igColorTooltip"][1]["cimguiname"] = "igColorTooltip"
-defs["igColorTooltip"][1]["comment"] = "\
-    // Color"
+defs["igColorTooltip"][1]["comment"] = "    // Color"
 defs["igColorTooltip"][1]["defaults"] = {}
 defs["igColorTooltip"][1]["funcname"] = "ColorTooltip"
 defs["igColorTooltip"][1]["location"] = "imgui_internal:3165"
@@ -13416,10 +13107,7 @@ defs["igColumns"][1]["argsT"][3]["type"] = "bool"
 defs["igColumns"][1]["argsoriginal"] = "(int count=1,const char* id=((void*)0),bool border=true)"
 defs["igColumns"][1]["call_args"] = "(count,id,border)"
 defs["igColumns"][1]["cimguiname"] = "igColumns"
-defs["igColumns"][1]["comment"] = "\
-    // Legacy Columns API (prefer using Tables!)\
-\
-    // - You can also use SameLine(pos_x) to mimic simplified columns."
+defs["igColumns"][1]["comment"] = "    // - You can also use SameLine(pos_x) to mimic simplified columns."
 defs["igColumns"][1]["defaults"] = {}
 defs["igColumns"][1]["defaults"]["border"] = "true"
 defs["igColumns"][1]["defaults"]["count"] = "1"
@@ -13539,14 +13227,7 @@ defs["igCreateContext"][1]["argsT"][1]["type"] = "ImFontAtlas*"
 defs["igCreateContext"][1]["argsoriginal"] = "(ImFontAtlas* shared_font_atlas=((void*)0))"
 defs["igCreateContext"][1]["call_args"] = "(shared_font_atlas)"
 defs["igCreateContext"][1]["cimguiname"] = "igCreateContext"
-defs["igCreateContext"][1]["comment"] = "\
-    // Context creation and access\
-\
-    // - Each context create its own ImFontAtlas by default. You may instance one yourself and pass it to CreateContext() to share a font atlas between contexts.\
-\
-    // - DLL users: heaps and globals are not shared across DLL boundaries! You will need to call SetCurrentContext() + SetAllocatorFunctions()\
-\
-    //   for each static/DLL boundary you are calling from. Read \"Context and Memory Allocators\" section of imgui.cpp for details."
+defs["igCreateContext"][1]["comment"] = "    //   for each static/DLL boundary you are calling from. Read \"Context and Memory Allocators\" section of imgui.cpp for details."
 defs["igCreateContext"][1]["defaults"] = {}
 defs["igCreateContext"][1]["defaults"]["shared_font_atlas"] = "NULL"
 defs["igCreateContext"][1]["funcname"] = "CreateContext"
@@ -13729,8 +13410,7 @@ defs["igDataTypeGetInfo"][1]["argsT"][1]["type"] = "ImGuiDataType"
 defs["igDataTypeGetInfo"][1]["argsoriginal"] = "(ImGuiDataType data_type)"
 defs["igDataTypeGetInfo"][1]["call_args"] = "(data_type)"
 defs["igDataTypeGetInfo"][1]["cimguiname"] = "igDataTypeGetInfo"
-defs["igDataTypeGetInfo"][1]["comment"] = "\
-    // Data type helpers"
+defs["igDataTypeGetInfo"][1]["comment"] = "    // Data type helpers"
 defs["igDataTypeGetInfo"][1]["defaults"] = {}
 defs["igDataTypeGetInfo"][1]["funcname"] = "DataTypeGetInfo"
 defs["igDataTypeGetInfo"][1]["location"] = "imgui_internal:3150"
@@ -13839,8 +13519,7 @@ defs["igDebugLog"][1]["argsT"][2]["type"] = "..."
 defs["igDebugLog"][1]["argsoriginal"] = "(const char* fmt,...)"
 defs["igDebugLog"][1]["call_args"] = "(fmt,...)"
 defs["igDebugLog"][1]["cimguiname"] = "igDebugLog"
-defs["igDebugLog"][1]["comment"] = "\
-    // Debug Log"
+defs["igDebugLog"][1]["comment"] = "    // Debug Log"
 defs["igDebugLog"][1]["defaults"] = {}
 defs["igDebugLog"][1]["funcname"] = "DebugLog"
 defs["igDebugLog"][1]["isvararg"] = "...)"
@@ -14273,8 +13952,7 @@ defs["igDebugTextEncoding"][1]["argsT"][1]["type"] = "const char*"
 defs["igDebugTextEncoding"][1]["argsoriginal"] = "(const char* text)"
 defs["igDebugTextEncoding"][1]["call_args"] = "(text)"
 defs["igDebugTextEncoding"][1]["cimguiname"] = "igDebugTextEncoding"
-defs["igDebugTextEncoding"][1]["comment"] = "\
-    // Debug Utilities"
+defs["igDebugTextEncoding"][1]["comment"] = "    // Debug Utilities"
 defs["igDebugTextEncoding"][1]["defaults"] = {}
 defs["igDebugTextEncoding"][1]["funcname"] = "DebugTextEncoding"
 defs["igDebugTextEncoding"][1]["location"] = "imgui:955"
@@ -14450,24 +14128,7 @@ defs["igDockBuilderDockWindow"][1]["argsT"][2]["type"] = "ImGuiID"
 defs["igDockBuilderDockWindow"][1]["argsoriginal"] = "(const char* window_name,ImGuiID node_id)"
 defs["igDockBuilderDockWindow"][1]["call_args"] = "(window_name,node_id)"
 defs["igDockBuilderDockWindow"][1]["cimguiname"] = "igDockBuilderDockWindow"
-defs["igDockBuilderDockWindow"][1]["comment"] = "\
-    // Docking - Builder function needs to be generally called before the node is used/submitted.\
-\
-    // - The DockBuilderXXX functions are designed to _eventually_ become a public API, but it is too early to expose it and guarantee stability.\
-\
-    // - Do not hold on ImGuiDockNode* pointers! They may be invalidated by any split/merge/remove operation and every frame.\
-\
-    // - To create a DockSpace() node, make sure to set the ImGuiDockNodeFlags_DockSpace flag when calling DockBuilderAddNode().\
-\
-    //   You can create dockspace nodes (attached to a window) _or_ floating nodes (carry its own window) with this API.\
-\
-    // - DockBuilderSplitNode() create 2 child nodes within 1 node. The initial node becomes a parent node.\
-\
-    // - If you intend to split the node immediately after creation using DockBuilderSplitNode(), make sure\
-\
-    //   to call DockBuilderSetNodeSize() beforehand. If you don't, the resulting split sizes may not be reliable.\
-\
-    // - Call DockBuilderFinish() after you are done."
+defs["igDockBuilderDockWindow"][1]["comment"] = "    // - Call DockBuilderFinish() after you are done."
 defs["igDockBuilderDockWindow"][1]["defaults"] = {}
 defs["igDockBuilderDockWindow"][1]["funcname"] = "DockBuilderDockWindow"
 defs["igDockBuilderDockWindow"][1]["location"] = "imgui_internal:2988"
@@ -14781,10 +14442,7 @@ defs["igDockContextInitialize"][1]["argsT"][1]["type"] = "ImGuiContext*"
 defs["igDockContextInitialize"][1]["argsoriginal"] = "(ImGuiContext* ctx)"
 defs["igDockContextInitialize"][1]["call_args"] = "(ctx)"
 defs["igDockContextInitialize"][1]["cimguiname"] = "igDockContextInitialize"
-defs["igDockContextInitialize"][1]["comment"] = "\
-    // Docking\
-\
-    // (some functions are only declared in imgui.cpp, see Docking section)"
+defs["igDockContextInitialize"][1]["comment"] = "    // (some functions are only declared in imgui.cpp, see Docking section)"
 defs["igDockContextInitialize"][1]["defaults"] = {}
 defs["igDockContextInitialize"][1]["funcname"] = "DockContextInitialize"
 defs["igDockContextInitialize"][1]["location"] = "imgui_internal:2954"
@@ -15084,32 +14742,7 @@ defs["igDockSpace"][1]["argsT"][4]["type"] = "const ImGuiWindowClass*"
 defs["igDockSpace"][1]["argsoriginal"] = "(ImGuiID id,const ImVec2& size=ImVec2(0,0),ImGuiDockNodeFlags flags=0,const ImGuiWindowClass* window_class=((void*)0))"
 defs["igDockSpace"][1]["call_args"] = "(id,size,flags,window_class)"
 defs["igDockSpace"][1]["cimguiname"] = "igDockSpace"
-defs["igDockSpace"][1]["comment"] = "\
-    // Docking\
-\
-    // [BETA API] Enable with io.ConfigFlags |= ImGuiConfigFlags_DockingEnable.\
-\
-    // Note: You can use most Docking facilities without calling any API. You DO NOT need to call DockSpace() to use Docking!\
-\
-    // - Drag from window title bar or their tab to dock/undock. Hold SHIFT to disable docking/undocking.\
-\
-    // - Drag from window menu button (upper-left button) to undock an entire node (all windows).\
-\
-    // - When io.ConfigDockingWithShift == true, you instead need to hold SHIFT to _enable_ docking/undocking.\
-\
-    // About dockspaces:\
-\
-    // - Use DockSpace() to create an explicit dock node _within_ an existing window. See Docking demo for details.\
-\
-    // - Use DockSpaceOverViewport() to create an explicit dock node covering the screen or a specific viewport.\
-\
-    //   This is often used with ImGuiDockNodeFlags_PassthruCentralNode.\
-\
-    // - Important: Dockspaces need to be submitted _before_ any window they can host. Submit it early in your frame!\
-\
-    // - Important: Dockspaces need to be kept alive if hidden, otherwise windows docked into it will be undocked.\
-\
-    //   e.g. if you have multiple tabs with a dockspace inside each tab: submit the non-visible dockspaces with ImGuiDockNodeFlags_KeepAliveOnly."
+defs["igDockSpace"][1]["comment"] = "    //   e.g. if you have multiple tabs with a dockspace inside each tab: submit the non-visible dockspaces with ImGuiDockNodeFlags_KeepAliveOnly."
 defs["igDockSpace"][1]["defaults"] = {}
 defs["igDockSpace"][1]["defaults"]["flags"] = "0"
 defs["igDockSpace"][1]["defaults"]["size"] = "ImVec2(0,0)"
@@ -15218,30 +14851,7 @@ defs["igDragFloat"][1]["argsT"][7]["type"] = "ImGuiSliderFlags"
 defs["igDragFloat"][1]["argsoriginal"] = "(const char* label,float* v,float v_speed=1.0f,float v_min=0.0f,float v_max=0.0f,const char* format=\"%.3f\",ImGuiSliderFlags flags=0)"
 defs["igDragFloat"][1]["call_args"] = "(label,v,v_speed,v_min,v_max,format,flags)"
 defs["igDragFloat"][1]["cimguiname"] = "igDragFloat"
-defs["igDragFloat"][1]["comment"] = "\
-    // Widgets: Drag Sliders\
-\
-    // - CTRL+Click on any drag box to turn them into an input box. Manually input values aren't clamped by default and can go off-bounds. Use ImGuiSliderFlags_AlwaysClamp to always clamp.\
-\
-    // - For all the Float2/Float3/Float4/Int2/Int3/Int4 versions of every functions, note that a 'float v[X]' function argument is the same as 'float* v',\
-\
-    //   the array syntax is just a way to document the number of elements that are expected to be accessible. You can pass address of your first element out of a contiguous set, e.g. &myvector.x\
-\
-    // - Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. \"%.3f\" -> 1.234; \"%5.2f secs\" -> 01.23 secs; \"Biscuit: %.0f\" -> Biscuit: 1; etc.\
-\
-    // - Format string may also be set to NULL or use the default format (\"%f\" or \"%d\").\
-\
-    // - Speed are per-pixel of mouse movement (v_speed=0.2f: mouse needs to move by 5 pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed is Max(v_speed, minimum_step_at_given_precision).\
-\
-    // - Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual input can override those limits if ImGuiSliderFlags_AlwaysClamp is not used.\
-\
-    // - Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.\
-\
-    // - We use the same sets of flags for DragXXX() and SliderXXX() functions as the features are the same and it makes it easier to swap them.\
-\
-    // - Legacy: Pre-1.78 there are DragXXX() function signatures that takes a final `float power=1.0f' argument instead of the `ImGuiSliderFlags flags=0' argument.\
-\
-    //   If you get a warning converting a float to ImGuiSliderFlags, read https://github.com/ocornut/imgui/issues/3361 // If v_min >= v_max we have no bound"
+defs["igDragFloat"][1]["comment"] = "    //   If you get a warning converting a float to ImGuiSliderFlags, read https://github.com/ocornut/imgui/issues/3361 // If v_min >= v_max we have no bound"
 defs["igDragFloat"][1]["defaults"] = {}
 defs["igDragFloat"][1]["defaults"]["flags"] = "0"
 defs["igDragFloat"][1]["defaults"]["format"] = "\"%.3f\""
@@ -16110,8 +15720,7 @@ defs["igErrorCheckEndFrameRecover"][1]["argsT"][2]["type"] = "void*"
 defs["igErrorCheckEndFrameRecover"][1]["argsoriginal"] = "(ImGuiErrorLogCallback log_callback,void* user_data=((void*)0))"
 defs["igErrorCheckEndFrameRecover"][1]["call_args"] = "(log_callback,user_data)"
 defs["igErrorCheckEndFrameRecover"][1]["cimguiname"] = "igErrorCheckEndFrameRecover"
-defs["igErrorCheckEndFrameRecover"][1]["comment"] = "\
-    // Debug Tools"
+defs["igErrorCheckEndFrameRecover"][1]["comment"] = "    // Debug Tools"
 defs["igErrorCheckEndFrameRecover"][1]["defaults"] = {}
 defs["igErrorCheckEndFrameRecover"][1]["defaults"]["user_data"] = "NULL"
 defs["igErrorCheckEndFrameRecover"][1]["funcname"] = "ErrorCheckEndFrameRecover"
@@ -16476,8 +16085,7 @@ defs["igFocusWindow"][1]["argsT"][1]["type"] = "ImGuiWindow*"
 defs["igFocusWindow"][1]["argsoriginal"] = "(ImGuiWindow* window)"
 defs["igFocusWindow"][1]["call_args"] = "(window)"
 defs["igFocusWindow"][1]["cimguiname"] = "igFocusWindow"
-defs["igFocusWindow"][1]["comment"] = "\
-    // Windows: Display Order and Focus Order"
+defs["igFocusWindow"][1]["comment"] = "    // Windows: Display Order and Focus Order"
 defs["igFocusWindow"][1]["defaults"] = {}
 defs["igFocusWindow"][1]["funcname"] = "FocusWindow"
 defs["igFocusWindow"][1]["location"] = "imgui_internal:2764"
@@ -16513,8 +16121,7 @@ defs["igGcCompactTransientMiscBuffers"][1]["argsT"] = {}
 defs["igGcCompactTransientMiscBuffers"][1]["argsoriginal"] = "()"
 defs["igGcCompactTransientMiscBuffers"][1]["call_args"] = "()"
 defs["igGcCompactTransientMiscBuffers"][1]["cimguiname"] = "igGcCompactTransientMiscBuffers"
-defs["igGcCompactTransientMiscBuffers"][1]["comment"] = "\
-    // Garbage collection"
+defs["igGcCompactTransientMiscBuffers"][1]["comment"] = "    // Garbage collection"
 defs["igGcCompactTransientMiscBuffers"][1]["defaults"] = {}
 defs["igGcCompactTransientMiscBuffers"][1]["funcname"] = "GcCompactTransientMiscBuffers"
 defs["igGcCompactTransientMiscBuffers"][1]["location"] = "imgui_internal:3177"
@@ -16591,8 +16198,7 @@ defs["igGetBackgroundDrawList"][1]["argsT"] = {}
 defs["igGetBackgroundDrawList"][1]["argsoriginal"] = "()"
 defs["igGetBackgroundDrawList"][1]["call_args"] = "()"
 defs["igGetBackgroundDrawList"][1]["cimguiname"] = "igGetBackgroundDrawList"
-defs["igGetBackgroundDrawList"][1]["comment"] = "\
-    // Background/Foreground Draw Lists // get background draw list for the viewport associated to the current window. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents."
+defs["igGetBackgroundDrawList"][1]["comment"] = "    // Background/Foreground Draw Lists // get background draw list for the viewport associated to the current window. this draw list will be the first rendering one. Useful to quickly draw shapes/text behind dear imgui contents."
 defs["igGetBackgroundDrawList"][1]["defaults"] = {}
 defs["igGetBackgroundDrawList"][1]["funcname"] = "GetBackgroundDrawList"
 defs["igGetBackgroundDrawList"][1]["location"] = "imgui:880"
@@ -16628,10 +16234,7 @@ defs["igGetClipboardText"][1]["argsT"] = {}
 defs["igGetClipboardText"][1]["argsoriginal"] = "()"
 defs["igGetClipboardText"][1]["call_args"] = "()"
 defs["igGetClipboardText"][1]["cimguiname"] = "igGetClipboardText"
-defs["igGetClipboardText"][1]["comment"] = "\
-    // Clipboard Utilities\
-\
-    // - Also see the LogToClipboard() function to capture GUI into clipboard, or easily output text data to the clipboard."
+defs["igGetClipboardText"][1]["comment"] = "    // - Also see the LogToClipboard() function to capture GUI into clipboard, or easily output text data to the clipboard."
 defs["igGetClipboardText"][1]["defaults"] = {}
 defs["igGetClipboardText"][1]["funcname"] = "GetClipboardText"
 defs["igGetClipboardText"][1]["location"] = "imgui:942"
@@ -16854,12 +16457,7 @@ defs["igGetContentRegionAvail"][1]["argsT"][1]["type"] = "ImVec2*"
 defs["igGetContentRegionAvail"][1]["argsoriginal"] = "()"
 defs["igGetContentRegionAvail"][1]["call_args"] = "()"
 defs["igGetContentRegionAvail"][1]["cimguiname"] = "igGetContentRegionAvail"
-defs["igGetContentRegionAvail"][1]["comment"] = "\
-    // Content region\
-\
-    // - Retrieve available space from a given point. GetContentRegionAvail() is frequently useful.\
-\
-    // - Those functions are bound to be redesigned (they are confusing, incomplete and the Min/Max return values are in local window coordinates which increases confusion) // == GetContentRegionMax() - GetCursorPos()"
+defs["igGetContentRegionAvail"][1]["comment"] = "    // - Those functions are bound to be redesigned (they are confusing, incomplete and the Min/Max return values are in local window coordinates which increases confusion) // == GetContentRegionMax() - GetCursorPos()"
 defs["igGetContentRegionAvail"][1]["defaults"] = {}
 defs["igGetContentRegionAvail"][1]["funcname"] = "GetContentRegionAvail"
 defs["igGetContentRegionAvail"][1]["location"] = "imgui:384"
@@ -16934,8 +16532,7 @@ defs["igGetCurrentTable"][1]["argsT"] = {}
 defs["igGetCurrentTable"][1]["argsoriginal"] = "()"
 defs["igGetCurrentTable"][1]["call_args"] = "()"
 defs["igGetCurrentTable"][1]["cimguiname"] = "igGetCurrentTable"
-defs["igGetCurrentTable"][1]["comment"] = "\
-    // Tables: Internals"
+defs["igGetCurrentTable"][1]["comment"] = "    // Tables: Internals"
 defs["igGetCurrentTable"][1]["defaults"] = {}
 defs["igGetCurrentTable"][1]["funcname"] = "GetCurrentTable"
 defs["igGetCurrentTable"][1]["location"] = "imgui_internal:3031"
@@ -16968,16 +16565,7 @@ defs["igGetCurrentWindowRead"][1]["argsT"] = {}
 defs["igGetCurrentWindowRead"][1]["argsoriginal"] = "()"
 defs["igGetCurrentWindowRead"][1]["call_args"] = "()"
 defs["igGetCurrentWindowRead"][1]["cimguiname"] = "igGetCurrentWindowRead"
-defs["igGetCurrentWindowRead"][1]["comment"] = "\
-    // Windows\
-\
-    // We should always have a CurrentWindow in the stack (there is an implicit \"Debug\" window)\
-\
-    // If this ever crash because g.CurrentWindow is NULL it means that either\
-\
-    // - ImGui::NewFrame() has never been called, which is illegal.\
-\
-    // - You are calling ImGui functions after ImGui::EndFrame()/ImGui::Render() and before the next ImGui::NewFrame(), which is also illegal."
+defs["igGetCurrentWindowRead"][1]["comment"] = "    // - You are calling ImGui functions after ImGui::EndFrame()/ImGui::Render() and before the next ImGui::NewFrame(), which is also illegal."
 defs["igGetCurrentWindowRead"][1]["defaults"] = {}
 defs["igGetCurrentWindowRead"][1]["funcname"] = "GetCurrentWindowRead"
 defs["igGetCurrentWindowRead"][1]["location"] = "imgui_internal:2746"
@@ -17208,10 +16796,7 @@ defs["igGetFont"][1]["argsT"] = {}
 defs["igGetFont"][1]["argsoriginal"] = "()"
 defs["igGetFont"][1]["call_args"] = "()"
 defs["igGetFont"][1]["cimguiname"] = "igGetFont"
-defs["igGetFont"][1]["comment"] = "\
-    // Style read access\
-\
-    // - Use the style editor (ShowStyleEditor() function) to interactively see what the colors are) // get current font"
+defs["igGetFont"][1]["comment"] = "    // - Use the style editor (ShowStyleEditor() function) to interactively see what the colors are) // get current font"
 defs["igGetFont"][1]["defaults"] = {}
 defs["igGetFont"][1]["funcname"] = "GetFont"
 defs["igGetFont"][1]["location"] = "imgui:425"
@@ -17471,8 +17056,7 @@ defs["igGetIO"][1]["argsT"] = {}
 defs["igGetIO"][1]["argsoriginal"] = "()"
 defs["igGetIO"][1]["call_args"] = "()"
 defs["igGetIO"][1]["cimguiname"] = "igGetIO"
-defs["igGetIO"][1]["comment"] = "\
-    // Main // access the IO structure (mouse/keyboard/gamepad inputs, time, various configuration options/flags)"
+defs["igGetIO"][1]["comment"] = "    // Main // access the IO structure (mouse/keyboard/gamepad inputs, time, various configuration options/flags)"
 defs["igGetIO"][1]["defaults"] = {}
 defs["igGetIO"][1]["funcname"] = "GetIO"
 defs["igGetIO"][1]["location"] = "imgui:296"
@@ -17526,10 +17110,7 @@ defs["igGetItemID"][1]["argsT"] = {}
 defs["igGetItemID"][1]["argsoriginal"] = "()"
 defs["igGetItemID"][1]["call_args"] = "()"
 defs["igGetItemID"][1]["cimguiname"] = "igGetItemID"
-defs["igGetItemID"][1]["comment"] = "\
-//#endif\
-\
-    // Basic Accessors // Get ID of last item (~~ often same ImGui::GetID(label) beforehand)"
+defs["igGetItemID"][1]["comment"] = "    // Basic Accessors // Get ID of last item (~~ often same ImGui::GetID(label) beforehand)"
 defs["igGetItemID"][1]["defaults"] = {}
 defs["igGetItemID"][1]["funcname"] = "GetItemID"
 defs["igGetItemID"][1]["location"] = "imgui_internal:2831"
@@ -17710,14 +17291,7 @@ defs["igGetMainViewport"][1]["argsT"] = {}
 defs["igGetMainViewport"][1]["argsoriginal"] = "()"
 defs["igGetMainViewport"][1]["call_args"] = "()"
 defs["igGetMainViewport"][1]["cimguiname"] = "igGetMainViewport"
-defs["igGetMainViewport"][1]["comment"] = "\
-    // Viewports\
-\
-    // - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\
-\
-    // - In 'docking' branch with multi-viewport enabled, we extend this concept to have multiple active viewports.\
-\
-    // - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode. // return primary/default viewport. This can never be NULL."
+defs["igGetMainViewport"][1]["comment"] = "    // - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode. // return primary/default viewport. This can never be NULL."
 defs["igGetMainViewport"][1]["defaults"] = {}
 defs["igGetMainViewport"][1]["funcname"] = "GetMainViewport"
 defs["igGetMainViewport"][1]["location"] = "imgui:877"
@@ -17933,12 +17507,7 @@ defs["igGetPlatformIO"][1]["argsT"] = {}
 defs["igGetPlatformIO"][1]["argsoriginal"] = "()"
 defs["igGetPlatformIO"][1]["call_args"] = "()"
 defs["igGetPlatformIO"][1]["cimguiname"] = "igGetPlatformIO"
-defs["igGetPlatformIO"][1]["comment"] = "\
-    // (Optional) Platform/OS interface for multi-viewport support\
-\
-    // Read comments around the ImGuiPlatformIO structure for more details.\
-\
-    // Note: You may use GetWindowViewport() to get the current viewport of the current window. // platform/renderer functions, for backend to setup + viewports list."
+defs["igGetPlatformIO"][1]["comment"] = "    // Note: You may use GetWindowViewport() to get the current viewport of the current window. // platform/renderer functions, for backend to setup + viewports list."
 defs["igGetPlatformIO"][1]["defaults"] = {}
 defs["igGetPlatformIO"][1]["funcname"] = "GetPlatformIO"
 defs["igGetPlatformIO"][1]["location"] = "imgui:970"
@@ -18013,8 +17582,7 @@ defs["igGetScrollX"][1]["argsT"] = {}
 defs["igGetScrollX"][1]["argsoriginal"] = "()"
 defs["igGetScrollX"][1]["call_args"] = "()"
 defs["igGetScrollX"][1]["cimguiname"] = "igGetScrollX"
-defs["igGetScrollX"][1]["comment"] = "\
-    // Windows Scrolling // get scrolling amount [0 .. GetScrollMaxX()]"
+defs["igGetScrollX"][1]["comment"] = "    // Windows Scrolling // get scrolling amount [0 .. GetScrollMaxX()]"
 defs["igGetScrollX"][1]["defaults"] = {}
 defs["igGetScrollX"][1]["funcname"] = "GetScrollX"
 defs["igGetScrollX"][1]["location"] = "imgui:390"
@@ -18630,8 +18198,7 @@ defs["igImAlphaBlendColors"][1]["argsT"][2]["type"] = "ImU32"
 defs["igImAlphaBlendColors"][1]["argsoriginal"] = "(ImU32 col_a,ImU32 col_b)"
 defs["igImAlphaBlendColors"][1]["call_args"] = "(col_a,col_b)"
 defs["igImAlphaBlendColors"][1]["cimguiname"] = "igImAlphaBlendColors"
-defs["igImAlphaBlendColors"][1]["comment"] = "\
-// Helpers: Color Blending"
+defs["igImAlphaBlendColors"][1]["comment"] = "// Helpers: Color Blending"
 defs["igImAlphaBlendColors"][1]["defaults"] = {}
 defs["igImAlphaBlendColors"][1]["funcname"] = "ImAlphaBlendColors"
 defs["igImAlphaBlendColors"][1]["location"] = "imgui_internal:324"
@@ -18665,8 +18232,7 @@ defs["igImBezierCubicCalc"][1]["argsT"][6]["type"] = "float"
 defs["igImBezierCubicCalc"][1]["argsoriginal"] = "(const ImVec2& p1,const ImVec2& p2,const ImVec2& p3,const ImVec2& p4,float t)"
 defs["igImBezierCubicCalc"][1]["call_args"] = "(p1,p2,p3,p4,t)"
 defs["igImBezierCubicCalc"][1]["cimguiname"] = "igImBezierCubicCalc"
-defs["igImBezierCubicCalc"][1]["comment"] = "\
-// Helpers: Geometry"
+defs["igImBezierCubicCalc"][1]["comment"] = "// Helpers: Geometry"
 defs["igImBezierCubicCalc"][1]["defaults"] = {}
 defs["igImBezierCubicCalc"][1]["funcname"] = "ImBezierCubicCalc"
 defs["igImBezierCubicCalc"][1]["location"] = "imgui_internal:476"
@@ -18862,8 +18428,7 @@ defs["igImBitArrayTestBit"][1]["argsT"][2]["type"] = "int"
 defs["igImBitArrayTestBit"][1]["argsoriginal"] = "(const ImU32* arr,int n)"
 defs["igImBitArrayTestBit"][1]["call_args"] = "(arr,n)"
 defs["igImBitArrayTestBit"][1]["cimguiname"] = "igImBitArrayTestBit"
-defs["igImBitArrayTestBit"][1]["comment"] = "\
-// Helper: ImBitArray"
+defs["igImBitArrayTestBit"][1]["comment"] = "// Helper: ImBitArray"
 defs["igImBitArrayTestBit"][1]["defaults"] = {}
 defs["igImBitArrayTestBit"][1]["funcname"] = "ImBitArrayTestBit"
 defs["igImBitArrayTestBit"][1]["location"] = "imgui_internal:546"
@@ -19405,8 +18970,7 @@ defs["igImFontAtlasGetBuilderForStbTruetype"][1]["argsT"] = {}
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["argsoriginal"] = "()"
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["call_args"] = "()"
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["cimguiname"] = "igImFontAtlasGetBuilderForStbTruetype"
-defs["igImFontAtlasGetBuilderForStbTruetype"][1]["comment"] = "\
-// Helper for font builder"
+defs["igImFontAtlasGetBuilderForStbTruetype"][1]["comment"] = "// Helper for font builder"
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["defaults"] = {}
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["funcname"] = "ImFontAtlasGetBuilderForStbTruetype"
 defs["igImFontAtlasGetBuilderForStbTruetype"][1]["location"] = "imgui_internal:3225"
@@ -19434,8 +18998,7 @@ defs["igImFormatString"][1]["argsT"][4]["type"] = "..."
 defs["igImFormatString"][1]["argsoriginal"] = "(char* buf,size_t buf_size,const char* fmt,...)"
 defs["igImFormatString"][1]["call_args"] = "(buf,buf_size,fmt,...)"
 defs["igImFormatString"][1]["cimguiname"] = "igImFormatString"
-defs["igImFormatString"][1]["comment"] = "\
-// Helpers: Formatting"
+defs["igImFormatString"][1]["comment"] = "// Helpers: Formatting"
 defs["igImFormatString"][1]["defaults"] = {}
 defs["igImFormatString"][1]["funcname"] = "ImFormatString"
 defs["igImFormatString"][1]["isvararg"] = "...)"
@@ -19564,92 +19127,7 @@ defs["igImHashData"][1]["argsT"][3]["type"] = "ImU32"
 defs["igImHashData"][1]["argsoriginal"] = "(const void* data,size_t data_size,ImU32 seed=0)"
 defs["igImHashData"][1]["call_args"] = "(data,data_size,seed)"
 defs["igImHashData"][1]["cimguiname"] = "igImHashData"
-defs["igImHashData"][1]["comment"] = "\
-//-----------------------------------------------------------------------------\
-\
-// [SECTION] Macros\
-\
-//-----------------------------------------------------------------------------\
-\
-// Internal Drag and Drop payload types. String starting with '_' are reserved for Dear ImGui.\
-\
-// Debug Printing Into TTY\
-\
-// (since IMGUI_VERSION_NUM >= 18729: IMGUI_DEBUG_LOG was reworked into IMGUI_DEBUG_PRINTF (and removed framecount from it). If you were using a #define IMGUI_DEBUG_LOG please rename)\
-\
-// Debug Logging for ShowDebugLogWindow(). This is designed for relatively rare events so please don't spam.\
-\
-// Static Asserts\
-\
-// \"Paranoid\" Debug Asserts are meant to only be enabled during specific debugging/work, otherwise would slow down the code too much.\
-\
-// We currently don't have many of those so the effect is currently negligible, but onward intent to add more aggressive ones in the code.\
-\
-//#define IMGUI_DEBUG_PARANOID\
-\
-// Error handling\
-\
-// Down the line in some frameworks/languages we would like to have a way to redirect those to the programmer and recover from more faults.\
-\
-// Misc Macros\
-\
-// Enforce cdecl calling convention for functions called by the standard library, in case compilation settings changed the default to e.g. __vectorcall\
-\
-// Warnings\
-\
-// Debug Tools\
-\
-// Use 'Metrics/Debugger->Tools->Item Picker' to break into the call-stack of a specific item.\
-\
-// This will call IM_DEBUG_BREAK() which you may redefine yourself. See https://github.com/scottt/debugbreak for more reference.\
-\
-//-----------------------------------------------------------------------------\
-\
-// [SECTION] Generic helpers\
-\
-// Note that the ImXXX helpers functions are lower-level than ImGui functions.\
-\
-// ImGui functions or the ImGui context are never called/used from other ImXXX functions.\
-\
-//-----------------------------------------------------------------------------\
-\
-// - Helpers: Hashing\
-\
-// - Helpers: Sorting\
-\
-// - Helpers: Bit manipulation\
-\
-// - Helpers: String\
-\
-// - Helpers: Formatting\
-\
-// - Helpers: UTF-8 <> wchar conversions\
-\
-// - Helpers: ImVec2/ImVec4 operators\
-\
-// - Helpers: Maths\
-\
-// - Helpers: Geometry\
-\
-// - Helper: ImVec1\
-\
-// - Helper: ImVec2ih\
-\
-// - Helper: ImRect\
-\
-// - Helper: ImBitArray\
-\
-// - Helper: ImBitVector\
-\
-// - Helper: ImSpan<>, ImSpanAllocator<>\
-\
-// - Helper: ImPool<>\
-\
-// - Helper: ImChunkStream<>\
-\
-//-----------------------------------------------------------------------------\
-\
-// Helpers: Hashing"
+defs["igImHashData"][1]["comment"] = "// Helpers: Hashing"
 defs["igImHashData"][1]["defaults"] = {}
 defs["igImHashData"][1]["defaults"]["seed"] = "0"
 defs["igImHashData"][1]["funcname"] = "ImHashData"
@@ -19734,8 +19212,7 @@ defs["igImIsPowerOfTwo"][1]["argsT"][1]["type"] = "int"
 defs["igImIsPowerOfTwo"][1]["argsoriginal"] = "(int v)"
 defs["igImIsPowerOfTwo"][1]["call_args"] = "(v)"
 defs["igImIsPowerOfTwo"][1]["cimguiname"] = "igImIsPowerOfTwo"
-defs["igImIsPowerOfTwo"][1]["comment"] = "\
-// Helpers: Bit manipulation"
+defs["igImIsPowerOfTwo"][1]["comment"] = "// Helpers: Bit manipulation"
 defs["igImIsPowerOfTwo"][1]["defaults"] = {}
 defs["igImIsPowerOfTwo"][1]["funcname"] = "ImIsPowerOfTwo"
 defs["igImIsPowerOfTwo"][1]["location"] = "imgui_internal:327"
@@ -20007,8 +19484,7 @@ defs["igImMin"][1]["argsT"][3]["type"] = "const ImVec2"
 defs["igImMin"][1]["argsoriginal"] = "(const ImVec2& lhs,const ImVec2& rhs)"
 defs["igImMin"][1]["call_args"] = "(lhs,rhs)"
 defs["igImMin"][1]["cimguiname"] = "igImMin"
-defs["igImMin"][1]["comment"] = "\
-// - Misc maths helpers"
+defs["igImMin"][1]["comment"] = "// - Misc maths helpers"
 defs["igImMin"][1]["defaults"] = {}
 defs["igImMin"][1]["funcname"] = "ImMin"
 defs["igImMin"][1]["location"] = "imgui_internal:453"
@@ -20206,12 +19682,7 @@ defs["igImPow"][1]["argsT"][2]["type"] = "float"
 defs["igImPow"][1]["argsoriginal"] = "(float x,float y)"
 defs["igImPow"][1]["call_args"] = "(x,y)"
 defs["igImPow"][1]["cimguiname"] = "igImPow"
-defs["igImPow"][1]["comment"] = "\
-// Helpers: Maths\
-\
-// - Wrapper for standard libs functions. (Note that imgui_demo.cpp does _not_ use them to keep the code easy to copy)\
-\
-//#define ImFloorStd(X)     floorf(X)           // We use our own, see ImFloor() and ImFloorSigned() // DragBehaviorT/SliderBehaviorT uses ImPow with either float/double and need the precision"
+defs["igImPow"][1]["comment"] = "//#define ImFloorStd(X)     floorf(X)           // We use our own, see ImFloor() and ImFloorSigned() // DragBehaviorT/SliderBehaviorT uses ImPow with either float/double and need the precision"
 defs["igImPow"][1]["defaults"] = {}
 defs["igImPow"][1]["funcname"] = "ImPow"
 defs["igImPow"][1]["location"] = "imgui_internal:427"
@@ -20261,8 +19732,7 @@ defs["igImQsort"][1]["argsT"][4]["type"] = "int(*)(void const*,void const*)"
 defs["igImQsort"][1]["argsoriginal"] = "(void* base,size_t count,size_t size_of_element,int(*compare_func)(void const*,void const*))"
 defs["igImQsort"][1]["call_args"] = "(base,count,size_of_element,compare_func)"
 defs["igImQsort"][1]["cimguiname"] = "igImQsort"
-defs["igImQsort"][1]["comment"] = "\
-// Helpers: Sorting"
+defs["igImQsort"][1]["comment"] = "// Helpers: Sorting"
 defs["igImQsort"][1]["defaults"] = {}
 defs["igImQsort"][1]["funcname"] = "ImQsort"
 defs["igImQsort"][1]["location"] = "imgui_internal:320"
@@ -20547,8 +20017,7 @@ defs["igImStricmp"][1]["argsT"][2]["type"] = "const char*"
 defs["igImStricmp"][1]["argsoriginal"] = "(const char* str1,const char* str2)"
 defs["igImStricmp"][1]["call_args"] = "(str1,str2)"
 defs["igImStricmp"][1]["cimguiname"] = "igImStricmp"
-defs["igImStricmp"][1]["comment"] = "\
-// Helpers: String"
+defs["igImStricmp"][1]["comment"] = "// Helpers: String"
 defs["igImStricmp"][1]["defaults"] = {}
 defs["igImStricmp"][1]["funcname"] = "ImStricmp"
 defs["igImStricmp"][1]["location"] = "imgui_internal:332"
@@ -20688,8 +20157,7 @@ defs["igImTextCharToUtf8"][1]["argsT"][2]["type"] = "unsigned int"
 defs["igImTextCharToUtf8"][1]["argsoriginal"] = "(char out_buf[5],unsigned int c)"
 defs["igImTextCharToUtf8"][1]["call_args"] = "(out_buf,c)"
 defs["igImTextCharToUtf8"][1]["cimguiname"] = "igImTextCharToUtf8"
-defs["igImTextCharToUtf8"][1]["comment"] = "\
-// Helpers: UTF-8 <> wchar conversions // return out_buf"
+defs["igImTextCharToUtf8"][1]["comment"] = "// Helpers: UTF-8 <> wchar conversions // return out_buf"
 defs["igImTextCharToUtf8"][1]["defaults"] = {}
 defs["igImTextCharToUtf8"][1]["funcname"] = "ImTextCharToUtf8"
 defs["igImTextCharToUtf8"][1]["location"] = "imgui_internal:360"
@@ -21112,8 +20580,7 @@ defs["igInitialize"][1]["argsT"] = {}
 defs["igInitialize"][1]["argsoriginal"] = "()"
 defs["igInitialize"][1]["call_args"] = "()"
 defs["igInitialize"][1]["cimguiname"] = "igInitialize"
-defs["igInitialize"][1]["comment"] = "\
-    // Init"
+defs["igInitialize"][1]["comment"] = "    // Init"
 defs["igInitialize"][1]["defaults"] = {}
 defs["igInitialize"][1]["funcname"] = "Initialize"
 defs["igInitialize"][1]["location"] = "imgui_internal:2779"
@@ -21511,12 +20978,7 @@ defs["igInputText"][1]["argsT"][6]["type"] = "void*"
 defs["igInputText"][1]["argsoriginal"] = "(const char* label,char* buf,size_t buf_size,ImGuiInputTextFlags flags=0,ImGuiInputTextCallback callback=((void*)0),void* user_data=((void*)0))"
 defs["igInputText"][1]["call_args"] = "(label,buf,buf_size,flags,callback,user_data)"
 defs["igInputText"][1]["cimguiname"] = "igInputText"
-defs["igInputText"][1]["comment"] = "\
-    // Widgets: Input with Keyboard\
-\
-    // - If you want to use InputText() with std::string or any custom dynamic string type, see misc/cpp/imgui_stdlib.h and comments in imgui_demo.cpp.\
-\
-    // - Most of the ImGuiInputTextFlags flags are only useful for InputText() and not for InputFloatX, InputIntX, InputDouble etc."
+defs["igInputText"][1]["comment"] = "    // - Most of the ImGuiInputTextFlags flags are only useful for InputText() and not for InputFloatX, InputIntX, InputDouble etc."
 defs["igInputText"][1]["defaults"] = {}
 defs["igInputText"][1]["defaults"]["callback"] = "NULL"
 defs["igInputText"][1]["defaults"]["flags"] = "0"
@@ -21560,8 +21022,7 @@ defs["igInputTextEx"][1]["argsT"][8]["type"] = "void*"
 defs["igInputTextEx"][1]["argsoriginal"] = "(const char* label,const char* hint,char* buf,int buf_size,const ImVec2& size_arg,ImGuiInputTextFlags flags,ImGuiInputTextCallback callback=((void*)0),void* user_data=((void*)0))"
 defs["igInputTextEx"][1]["call_args"] = "(label,hint,buf,buf_size,size_arg,flags,callback,user_data)"
 defs["igInputTextEx"][1]["cimguiname"] = "igInputTextEx"
-defs["igInputTextEx"][1]["comment"] = "\
-    // InputText"
+defs["igInputTextEx"][1]["comment"] = "    // InputText"
 defs["igInputTextEx"][1]["defaults"] = {}
 defs["igInputTextEx"][1]["defaults"]["callback"] = "NULL"
 defs["igInputTextEx"][1]["defaults"]["user_data"] = "NULL"
@@ -21835,8 +21296,7 @@ defs["igIsDragDropActive"][1]["argsT"] = {}
 defs["igIsDragDropActive"][1]["argsoriginal"] = "()"
 defs["igIsDragDropActive"][1]["call_args"] = "()"
 defs["igIsDragDropActive"][1]["cimguiname"] = "igIsDragDropActive"
-defs["igIsDragDropActive"][1]["comment"] = "\
-    // Drag and Drop"
+defs["igIsDragDropActive"][1]["comment"] = "    // Drag and Drop"
 defs["igIsDragDropActive"][1]["defaults"] = {}
 defs["igIsDragDropActive"][1]["funcname"] = "IsDragDropActive"
 defs["igIsDragDropActive"][1]["location"] = "imgui_internal:3004"
@@ -22014,12 +21474,7 @@ defs["igIsItemHovered"][1]["argsT"][1]["type"] = "ImGuiHoveredFlags"
 defs["igIsItemHovered"][1]["argsoriginal"] = "(ImGuiHoveredFlags flags=0)"
 defs["igIsItemHovered"][1]["call_args"] = "(flags)"
 defs["igIsItemHovered"][1]["cimguiname"] = "igIsItemHovered"
-defs["igIsItemHovered"][1]["comment"] = "\
-    // Item/Widgets Utilities and Query Functions\
-\
-    // - Most of the functions are referring to the previous Item that has been submitted.\
-\
-    // - See Demo Window under \"Widgets->Querying Status\" for an interactive visualization of most of those functions. // is the last item hovered? (and usable, aka not blocked by a popup, etc.). See ImGuiHoveredFlags for more options."
+defs["igIsItemHovered"][1]["comment"] = "    // - See Demo Window under \"Widgets->Querying Status\" for an interactive visualization of most of those functions. // is the last item hovered? (and usable, aka not blocked by a popup, etc.). See ImGuiHoveredFlags for more options."
 defs["igIsItemHovered"][1]["defaults"] = {}
 defs["igIsItemHovered"][1]["defaults"]["flags"] = "0"
 defs["igIsItemHovered"][1]["funcname"] = "IsItemHovered"
@@ -22091,18 +21546,7 @@ defs["igIsKeyDown"][1]["argsT"][1]["type"] = "ImGuiKey"
 defs["igIsKeyDown"][1]["argsoriginal"] = "(ImGuiKey key)"
 defs["igIsKeyDown"][1]["call_args"] = "(key)"
 defs["igIsKeyDown"][1]["cimguiname"] = "igIsKeyDown"
-defs["igIsKeyDown"][1]["comment"] = "\
-    // Inputs Utilities: Keyboard\
-\
-    // Without IMGUI_DISABLE_OBSOLETE_KEYIO: (legacy support)\
-\
-    //   - For 'ImGuiKey key' you can still use your legacy native/user indices according to how your backend/engine stored them in io.KeysDown[].\
-\
-    // With IMGUI_DISABLE_OBSOLETE_KEYIO: (this is the way forward)\
-\
-    //   - Any use of 'ImGuiKey' will assert when key < 512 will be passed, previously reserved as native/user keys indices\
-\
-    //   - GetKeyIndex() is pass-through and therefore deprecated (gone if IMGUI_DISABLE_OBSOLETE_KEYIO is defined) // is key being held."
+defs["igIsKeyDown"][1]["comment"] = "    //   - GetKeyIndex() is pass-through and therefore deprecated (gone if IMGUI_DISABLE_OBSOLETE_KEYIO is defined) // is key being held."
 defs["igIsKeyDown"][1]["defaults"] = {}
 defs["igIsKeyDown"][1]["funcname"] = "IsKeyDown"
 defs["igIsKeyDown"][1]["location"] = "imgui:912"
@@ -22253,14 +21697,7 @@ defs["igIsMouseDown"][1]["argsT"][1]["type"] = "ImGuiMouseButton"
 defs["igIsMouseDown"][1]["argsoriginal"] = "(ImGuiMouseButton button)"
 defs["igIsMouseDown"][1]["call_args"] = "(button)"
 defs["igIsMouseDown"][1]["cimguiname"] = "igIsMouseDown"
-defs["igIsMouseDown"][1]["comment"] = "\
-    // Inputs Utilities: Mouse\
-\
-    // - To refer to a mouse button, you may use named enums in your code e.g. ImGuiMouseButton_Left, ImGuiMouseButton_Right.\
-\
-    // - You can also use regular integer: it is forever guaranteed that 0=Left, 1=Right, 2=Middle.\
-\
-    // - Dragging operations are only reported after mouse has moved a certain distance away from the initial clicking position (see 'lock_threshold' and 'io.MouseDraggingThreshold') // is mouse button held?"
+defs["igIsMouseDown"][1]["comment"] = "    // - Dragging operations are only reported after mouse has moved a certain distance away from the initial clicking position (see 'lock_threshold' and 'io.MouseDraggingThreshold') // is mouse button held?"
 defs["igIsMouseDown"][1]["defaults"] = {}
 defs["igIsMouseDown"][1]["funcname"] = "IsMouseDown"
 defs["igIsMouseDown"][1]["location"] = "imgui:923"
@@ -22395,10 +21832,7 @@ defs["igIsNamedKey"][1]["argsT"][1]["type"] = "ImGuiKey"
 defs["igIsNamedKey"][1]["argsoriginal"] = "(ImGuiKey key)"
 defs["igIsNamedKey"][1]["call_args"] = "(key)"
 defs["igIsNamedKey"][1]["cimguiname"] = "igIsNamedKey"
-defs["igIsNamedKey"][1]["comment"] = "\
-    // Inputs\
-\
-    // FIXME: Eventually we should aim to move e.g. IsActiveIdUsingKey() into IsKeyXXX functions."
+defs["igIsNamedKey"][1]["comment"] = "    // FIXME: Eventually we should aim to move e.g. IsActiveIdUsingKey() into IsKeyXXX functions."
 defs["igIsNamedKey"][1]["defaults"] = {}
 defs["igIsNamedKey"][1]["funcname"] = "IsNamedKey"
 defs["igIsNamedKey"][1]["location"] = "imgui_internal:2934"
@@ -22462,14 +21896,7 @@ defs["igIsPopupOpen"][1]["argsT"][2]["type"] = "ImGuiPopupFlags"
 defs["igIsPopupOpen"][1]["argsoriginal"] = "(const char* str_id,ImGuiPopupFlags flags=0)"
 defs["igIsPopupOpen"][1]["call_args"] = "(str_id,flags)"
 defs["igIsPopupOpen"][1]["cimguiname"] = "igIsPopupOpen"
-defs["igIsPopupOpen"][1]["comment"] = "\
-    // Popups: query functions\
-\
-    //  - IsPopupOpen(): return true if the popup is open at the current BeginPopup() level of the popup stack.\
-\
-    //  - IsPopupOpen() with ImGuiPopupFlags_AnyPopupId: return true if any popup is open at the current BeginPopup() level of the popup stack.\
-\
-    //  - IsPopupOpen() with ImGuiPopupFlags_AnyPopupId + ImGuiPopupFlags_AnyPopupLevel: return true if any popup is open. // return true if the popup is open."
+defs["igIsPopupOpen"][1]["comment"] = "    //  - IsPopupOpen() with ImGuiPopupFlags_AnyPopupId + ImGuiPopupFlags_AnyPopupLevel: return true if any popup is open. // return true if the popup is open."
 defs["igIsPopupOpen"][1]["defaults"] = {}
 defs["igIsPopupOpen"][1]["defaults"]["flags"] = "0"
 defs["igIsPopupOpen"][1]["funcname"] = "IsPopupOpen"
@@ -22511,8 +21938,7 @@ defs["igIsRectVisible"][1]["argsT"][1]["type"] = "const ImVec2"
 defs["igIsRectVisible"][1]["argsoriginal"] = "(const ImVec2& size)"
 defs["igIsRectVisible"][1]["call_args"] = "(size)"
 defs["igIsRectVisible"][1]["cimguiname"] = "igIsRectVisible"
-defs["igIsRectVisible"][1]["comment"] = "\
-    // Miscellaneous Utilities // test if rectangle (of given size, starting from cursor position) is visible / not clipped."
+defs["igIsRectVisible"][1]["comment"] = "    // Miscellaneous Utilities // test if rectangle (of given size, starting from cursor position) is visible / not clipped."
 defs["igIsRectVisible"][1]["defaults"] = {}
 defs["igIsRectVisible"][1]["funcname"] = "IsRectVisible"
 defs["igIsRectVisible"][1]["location"] = "imgui:886"
@@ -22573,10 +21999,7 @@ defs["igIsWindowAppearing"][1]["argsT"] = {}
 defs["igIsWindowAppearing"][1]["argsoriginal"] = "()"
 defs["igIsWindowAppearing"][1]["call_args"] = "()"
 defs["igIsWindowAppearing"][1]["cimguiname"] = "igIsWindowAppearing"
-defs["igIsWindowAppearing"][1]["comment"] = "\
-    // Windows Utilities\
-\
-    // - 'current window' = the window we are appending into while inside a Begin()/End() block. 'next window' = next window we will Begin() into."
+defs["igIsWindowAppearing"][1]["comment"] = "    // - 'current window' = the window we are appending into while inside a Begin()/End() block. 'next window' = next window we will Begin() into."
 defs["igIsWindowAppearing"][1]["defaults"] = {}
 defs["igIsWindowAppearing"][1]["funcname"] = "IsWindowAppearing"
 defs["igIsWindowAppearing"][1]["location"] = "imgui:349"
@@ -22795,8 +22218,7 @@ defs["igItemSize"][1]["argsT"][2]["type"] = "float"
 defs["igItemSize"][1]["argsoriginal"] = "(const ImVec2& size,float text_baseline_y=-1.0f)"
 defs["igItemSize"][1]["call_args"] = "(size,text_baseline_y)"
 defs["igItemSize"][1]["cimguiname"] = "igItemSize"
-defs["igItemSize"][1]["comment"] = "\
-    // Basic Helpers for widget code"
+defs["igItemSize"][1]["comment"] = "    // Basic Helpers for widget code"
 defs["igItemSize"][1]["defaults"] = {}
 defs["igItemSize"][1]["defaults"]["text_baseline_y"] = "-1.0f"
 defs["igItemSize"][1]["funcname"] = "ItemSize"
@@ -22979,14 +22401,7 @@ defs["igLoadIniSettingsFromDisk"][1]["argsT"][1]["type"] = "const char*"
 defs["igLoadIniSettingsFromDisk"][1]["argsoriginal"] = "(const char* ini_filename)"
 defs["igLoadIniSettingsFromDisk"][1]["call_args"] = "(ini_filename)"
 defs["igLoadIniSettingsFromDisk"][1]["cimguiname"] = "igLoadIniSettingsFromDisk"
-defs["igLoadIniSettingsFromDisk"][1]["comment"] = "\
-    // Settings/.Ini Utilities\
-\
-    // - The disk functions are automatically called if io.IniFilename != NULL (default is \"imgui.ini\").\
-\
-    // - Set io.IniFilename to NULL to load/save manually. Read io.WantSaveIniSettings description about handling .ini saving manually.\
-\
-    // - Important: default value \"imgui.ini\" is relative to current working dir! Most apps will want to lock this to an absolute path (e.g. same path as executables). // call after CreateContext() and before the first call to NewFrame(). NewFrame() automatically calls LoadIniSettingsFromDisk(io.IniFilename)."
+defs["igLoadIniSettingsFromDisk"][1]["comment"] = "    // - Important: default value \"imgui.ini\" is relative to current working dir! Most apps will want to lock this to an absolute path (e.g. same path as executables). // call after CreateContext() and before the first call to NewFrame(). NewFrame() automatically calls LoadIniSettingsFromDisk(io.IniFilename)."
 defs["igLoadIniSettingsFromDisk"][1]["defaults"] = {}
 defs["igLoadIniSettingsFromDisk"][1]["funcname"] = "LoadIniSettingsFromDisk"
 defs["igLoadIniSettingsFromDisk"][1]["location"] = "imgui:949"
@@ -23033,8 +22448,7 @@ defs["igLogBegin"][1]["argsT"][2]["type"] = "int"
 defs["igLogBegin"][1]["argsoriginal"] = "(ImGuiLogType type,int auto_open_depth)"
 defs["igLogBegin"][1]["call_args"] = "(type,auto_open_depth)"
 defs["igLogBegin"][1]["cimguiname"] = "igLogBegin"
-defs["igLogBegin"][1]["comment"] = "\
-    // Logging/Capture // -> BeginCapture() when we design v2 api, for now stay under the radar by using the old name."
+defs["igLogBegin"][1]["comment"] = "    // Logging/Capture // -> BeginCapture() when we design v2 api, for now stay under the radar by using the old name."
 defs["igLogBegin"][1]["defaults"] = {}
 defs["igLogBegin"][1]["funcname"] = "LogBegin"
 defs["igLogBegin"][1]["location"] = "imgui_internal:2876"
@@ -23250,10 +22664,7 @@ defs["igLogToTTY"][1]["argsT"][1]["type"] = "int"
 defs["igLogToTTY"][1]["argsoriginal"] = "(int auto_open_depth=-1)"
 defs["igLogToTTY"][1]["call_args"] = "(auto_open_depth)"
 defs["igLogToTTY"][1]["cimguiname"] = "igLogToTTY"
-defs["igLogToTTY"][1]["comment"] = "\
-    // Logging/Capture\
-\
-    // - All text output from the interface can be captured into tty/file/clipboard. By default, tree nodes are automatically opened during logging. // start logging to tty (stdout)"
+defs["igLogToTTY"][1]["comment"] = "    // - All text output from the interface can be captured into tty/file/clipboard. By default, tree nodes are automatically opened during logging. // start logging to tty (stdout)"
 defs["igLogToTTY"][1]["defaults"] = {}
 defs["igLogToTTY"][1]["defaults"]["auto_open_depth"] = "-1"
 defs["igLogToTTY"][1]["funcname"] = "LogToTTY"
@@ -23271,8 +22682,7 @@ defs["igMarkIniSettingsDirty"][1]["argsT"] = {}
 defs["igMarkIniSettingsDirty"][1]["argsoriginal"] = "()"
 defs["igMarkIniSettingsDirty"][1]["call_args"] = "()"
 defs["igMarkIniSettingsDirty"][1]["cimguiname"] = "igMarkIniSettingsDirty"
-defs["igMarkIniSettingsDirty"][1]["comment"] = "\
-    // Settings"
+defs["igMarkIniSettingsDirty"][1]["comment"] = "    // Settings"
 defs["igMarkIniSettingsDirty"][1]["defaults"] = {}
 defs["igMarkIniSettingsDirty"][1]["funcname"] = "MarkIniSettingsDirty"
 defs["igMarkIniSettingsDirty"][1]["location"] = "imgui_internal:2805"
@@ -23482,8 +22892,7 @@ defs["igNavInitWindow"][1]["argsT"][2]["type"] = "bool"
 defs["igNavInitWindow"][1]["argsoriginal"] = "(ImGuiWindow* window,bool force_reinit)"
 defs["igNavInitWindow"][1]["call_args"] = "(window,force_reinit)"
 defs["igNavInitWindow"][1]["cimguiname"] = "igNavInitWindow"
-defs["igNavInitWindow"][1]["comment"] = "\
-    // Gamepad/Keyboard Navigation"
+defs["igNavInitWindow"][1]["comment"] = "    // Gamepad/Keyboard Navigation"
 defs["igNavInitWindow"][1]["defaults"] = {}
 defs["igNavInitWindow"][1]["funcname"] = "NavInitWindow"
 defs["igNavInitWindow"][1]["location"] = "imgui_internal:2907"
@@ -23702,22 +23111,7 @@ defs["igOpenPopup"][1]["argsT"][2]["type"] = "ImGuiPopupFlags"
 defs["igOpenPopup"][1]["argsoriginal"] = "(const char* str_id,ImGuiPopupFlags popup_flags=0)"
 defs["igOpenPopup"][1]["call_args"] = "(str_id,popup_flags)"
 defs["igOpenPopup"][1]["cimguiname"] = "igOpenPopup"
-defs["igOpenPopup"][1]["comment"] = "\
-    // Popups: open/close functions\
-\
-    //  - OpenPopup(): set popup state to open. ImGuiPopupFlags are available for opening options.\
-\
-    //  - If not modal: they can be closed by clicking anywhere outside them, or by pressing ESCAPE.\
-\
-    //  - CloseCurrentPopup(): use inside the BeginPopup()/EndPopup() scope to close manually.\
-\
-    //  - CloseCurrentPopup() is called by default by Selectable()/MenuItem() when activated (FIXME: need some options).\
-\
-    //  - Use ImGuiPopupFlags_NoOpenOverExistingPopup to avoid opening a popup if there's already one at the same level. This is equivalent to e.g. testing for !IsAnyPopupOpen() prior to OpenPopup().\
-\
-    //  - Use IsWindowAppearing() after BeginPopup() to tell if a window just opened.\
-\
-    //  - IMPORTANT: Notice that for OpenPopupOnItemClick() we exceptionally default flags to 1 (== ImGuiPopupFlags_MouseButtonRight) for backward compatibility with older API taking 'int mouse_button = 1' parameter // call to mark popup as open (don't call every frame!)."
+defs["igOpenPopup"][1]["comment"] = "    //  - IMPORTANT: Notice that for OpenPopupOnItemClick() we exceptionally default flags to 1 (== ImGuiPopupFlags_MouseButtonRight) for backward compatibility with older API taking 'int mouse_button = 1' parameter // call to mark popup as open (don't call every frame!)."
 defs["igOpenPopup"][1]["defaults"] = {}
 defs["igOpenPopup"][1]["defaults"]["popup_flags"] = "0"
 defs["igOpenPopup"][1]["funcname"] = "OpenPopup"
@@ -23838,8 +23232,7 @@ defs["igPlotEx"][1]["argsT"][10]["type"] = "ImVec2"
 defs["igPlotEx"][1]["argsoriginal"] = "(ImGuiPlotType plot_type,const char* label,float(*values_getter)(void* data,int idx),void* data,int values_count,int values_offset,const char* overlay_text,float scale_min,float scale_max,ImVec2 frame_size)"
 defs["igPlotEx"][1]["call_args"] = "(plot_type,label,values_getter,data,values_count,values_offset,overlay_text,scale_min,scale_max,frame_size)"
 defs["igPlotEx"][1]["cimguiname"] = "igPlotEx"
-defs["igPlotEx"][1]["comment"] = "\
-    // Plot"
+defs["igPlotEx"][1]["comment"] = "    // Plot"
 defs["igPlotEx"][1]["defaults"] = {}
 defs["igPlotEx"][1]["funcname"] = "PlotEx"
 defs["igPlotEx"][1]["location"] = "imgui_internal:3170"
@@ -23981,10 +23374,7 @@ defs["igPlotLines"][1]["argsT"][9]["type"] = "int"
 defs["igPlotLines"][1]["argsoriginal"] = "(const char* label,const float* values,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.40282346638528859811704183484516925e+38F,float scale_max=3.40282346638528859811704183484516925e+38F,ImVec2 graph_size=ImVec2(0,0),int stride=sizeof(float))"
 defs["igPlotLines"][1]["call_args"] = "(label,values,values_count,values_offset,overlay_text,scale_min,scale_max,graph_size,stride)"
 defs["igPlotLines"][1]["cimguiname"] = "igPlotLines"
-defs["igPlotLines"][1]["comment"] = "\
-    // Widgets: Data Plotting\
-\
-    // - Consider using ImPlot (https://github.com/epezent/implot) which is much better!"
+defs["igPlotLines"][1]["comment"] = "    // - Consider using ImPlot (https://github.com/epezent/implot) which is much better!"
 defs["igPlotLines"][1]["defaults"] = {}
 defs["igPlotLines"][1]["defaults"]["graph_size"] = "ImVec2(0,0)"
 defs["igPlotLines"][1]["defaults"]["overlay_text"] = "NULL"
@@ -24333,10 +23723,7 @@ defs["igPushClipRect"][1]["argsT"][3]["type"] = "bool"
 defs["igPushClipRect"][1]["argsoriginal"] = "(const ImVec2& clip_rect_min,const ImVec2& clip_rect_max,bool intersect_with_current_clip_rect)"
 defs["igPushClipRect"][1]["call_args"] = "(clip_rect_min,clip_rect_max,intersect_with_current_clip_rect)"
 defs["igPushClipRect"][1]["cimguiname"] = "igPushClipRect"
-defs["igPushClipRect"][1]["comment"] = "\
-    // Clipping\
-\
-    // - Mouse hovering is affected by ImGui::PushClipRect() calls, unlike direct calls to ImDrawList::PushClipRect() which are render only."
+defs["igPushClipRect"][1]["comment"] = "    // - Mouse hovering is affected by ImGui::PushClipRect() calls, unlike direct calls to ImDrawList::PushClipRect() which are render only."
 defs["igPushClipRect"][1]["defaults"] = {}
 defs["igPushClipRect"][1]["funcname"] = "PushClipRect"
 defs["igPushClipRect"][1]["location"] = "imgui:844"
@@ -24391,12 +23778,7 @@ defs["igPushFocusScope"][1]["argsT"][1]["type"] = "ImGuiID"
 defs["igPushFocusScope"][1]["argsoriginal"] = "(ImGuiID id)"
 defs["igPushFocusScope"][1]["call_args"] = "(id)"
 defs["igPushFocusScope"][1]["cimguiname"] = "igPushFocusScope"
-defs["igPushFocusScope"][1]["comment"] = "\
-    // Focus Scope (WIP)\
-\
-    // This is generally used to identify a selection set (multiple of which may be in the same window), as selection\
-\
-    // patterns generally need to react (e.g. clear selection) when landing on an item of the set."
+defs["igPushFocusScope"][1]["comment"] = "    // patterns generally need to react (e.g. clear selection) when landing on an item of the set."
 defs["igPushFocusScope"][1]["defaults"] = {}
 defs["igPushFocusScope"][1]["funcname"] = "PushFocusScope"
 defs["igPushFocusScope"][1]["location"] = "imgui_internal:2927"
@@ -24416,8 +23798,7 @@ defs["igPushFont"][1]["argsT"][1]["type"] = "ImFont*"
 defs["igPushFont"][1]["argsoriginal"] = "(ImFont* font)"
 defs["igPushFont"][1]["call_args"] = "(font)"
 defs["igPushFont"][1]["cimguiname"] = "igPushFont"
-defs["igPushFont"][1]["comment"] = "\
-    // Parameters stacks (shared) // use NULL as a shortcut to push default font"
+defs["igPushFont"][1]["comment"] = "    // Parameters stacks (shared) // use NULL as a shortcut to push default font"
 defs["igPushFont"][1]["defaults"] = {}
 defs["igPushFont"][1]["funcname"] = "PushFont"
 defs["igPushFont"][1]["location"] = "imgui:402"
@@ -24437,28 +23818,7 @@ defs["igPushID"][1]["argsT"][1]["type"] = "const char*"
 defs["igPushID"][1]["argsoriginal"] = "(const char* str_id)"
 defs["igPushID"][1]["call_args"] = "(str_id)"
 defs["igPushID"][1]["cimguiname"] = "igPushID"
-defs["igPushID"][1]["comment"] = "\
-    // ID stack/scopes\
-\
-    // Read the FAQ (docs/FAQ.md or http://dearimgui.org/faq) for more details about how ID are handled in dear imgui.\
-\
-    // - Those questions are answered and impacted by understanding of the ID stack system:\
-\
-    //   - \"Q: Why is my widget not reacting when I click on it?\"\
-\
-    //   - \"Q: How can I have widgets with an empty label?\"\
-\
-    //   - \"Q: How can I have multiple widgets with the same label?\"\
-\
-    // - Short version: ID are hashes of the entire ID stack. If you are creating widgets in a loop you most likely\
-\
-    //   want to push a unique identifier (e.g. object pointer, loop index) to uniquely differentiate them.\
-\
-    // - You can also use the \"Label##foobar\" syntax within widget label to distinguish them from each others.\
-\
-    // - In this header file we use the \"label\"/\"name\" terminology to denote a string that will be displayed + used as an ID,\
-\
-    //   whereas \"str_id\" denote a string that is only used as an ID and not normally displayed. // push string into the ID stack (will hash string)."
+defs["igPushID"][1]["comment"] = "    //   whereas \"str_id\" denote a string that is only used as an ID and not normally displayed. // push string into the ID stack (will hash string)."
 defs["igPushID"][1]["defaults"] = {}
 defs["igPushID"][1]["funcname"] = "PushID"
 defs["igPushID"][1]["location"] = "imgui:475"
@@ -24541,8 +23901,7 @@ defs["igPushItemFlag"][1]["argsT"][2]["type"] = "bool"
 defs["igPushItemFlag"][1]["argsoriginal"] = "(ImGuiItemFlags option,bool enabled)"
 defs["igPushItemFlag"][1]["call_args"] = "(option,enabled)"
 defs["igPushItemFlag"][1]["cimguiname"] = "igPushItemFlag"
-defs["igPushItemFlag"][1]["comment"] = "\
-    // Parameter stacks"
+defs["igPushItemFlag"][1]["comment"] = "    // Parameter stacks"
 defs["igPushItemFlag"][1]["defaults"] = {}
 defs["igPushItemFlag"][1]["funcname"] = "PushItemFlag"
 defs["igPushItemFlag"][1]["location"] = "imgui_internal:2861"
@@ -24562,8 +23921,7 @@ defs["igPushItemWidth"][1]["argsT"][1]["type"] = "float"
 defs["igPushItemWidth"][1]["argsoriginal"] = "(float item_width)"
 defs["igPushItemWidth"][1]["call_args"] = "(item_width)"
 defs["igPushItemWidth"][1]["cimguiname"] = "igPushItemWidth"
-defs["igPushItemWidth"][1]["comment"] = "\
-    // Parameters stacks (current window) // push width of items for common large \"item+label\" widgets. >0.0f: width in pixels, <0.0f align xx pixels to the right of window (so -FLT_MIN always align width to the right side)."
+defs["igPushItemWidth"][1]["comment"] = "    // Parameters stacks (current window) // push width of items for common large \"item+label\" widgets. >0.0f: width in pixels, <0.0f align xx pixels to the right of window (so -FLT_MIN always align width to the right side)."
 defs["igPushItemWidth"][1]["defaults"] = {}
 defs["igPushItemWidth"][1]["funcname"] = "PushItemWidth"
 defs["igPushItemWidth"][1]["location"] = "imgui:416"
@@ -24853,8 +24211,7 @@ defs["igRenderArrow"][1]["argsT"][5]["type"] = "float"
 defs["igRenderArrow"][1]["argsoriginal"] = "(ImDrawList* draw_list,ImVec2 pos,ImU32 col,ImGuiDir dir,float scale=1.0f)"
 defs["igRenderArrow"][1]["call_args"] = "(draw_list,pos,col,dir,scale)"
 defs["igRenderArrow"][1]["cimguiname"] = "igRenderArrow"
-defs["igRenderArrow"][1]["comment"] = "\
-    // Render helpers (those functions don't access any ImGui state!)"
+defs["igRenderArrow"][1]["comment"] = "    // Render helpers (those functions don't access any ImGui state!)"
 defs["igRenderArrow"][1]["defaults"] = {}
 defs["igRenderArrow"][1]["defaults"]["scale"] = "1.0f"
 defs["igRenderArrow"][1]["funcname"] = "RenderArrow"
@@ -25248,12 +24605,7 @@ defs["igRenderText"][1]["argsT"][4]["type"] = "bool"
 defs["igRenderText"][1]["argsoriginal"] = "(ImVec2 pos,const char* text,const char* text_end=((void*)0),bool hide_text_after_hash=true)"
 defs["igRenderText"][1]["call_args"] = "(pos,text,text_end,hide_text_after_hash)"
 defs["igRenderText"][1]["cimguiname"] = "igRenderText"
-defs["igRenderText"][1]["comment"] = "\
-    // Render helpers\
-\
-    // AVOID USING OUTSIDE OF IMGUI.CPP! NOT FOR PUBLIC CONSUMPTION. THOSE FUNCTIONS ARE A MESS. THEIR SIGNATURE AND BEHAVIOR WILL CHANGE, THEY NEED TO BE REFACTORED INTO SOMETHING DECENT.\
-\
-    // NB: All position are in absolute pixels coordinates (we are never using window coordinates internally)"
+defs["igRenderText"][1]["comment"] = "    // NB: All position are in absolute pixels coordinates (we are never using window coordinates internally)"
 defs["igRenderText"][1]["defaults"] = {}
 defs["igRenderText"][1]["defaults"]["hide_text_after_hash"] = "true"
 defs["igRenderText"][1]["defaults"]["text_end"] = "NULL"
@@ -25536,8 +24888,7 @@ defs["igScrollToBringRectIntoView"][1]["argsT"][2]["type"] = "const ImRect"
 defs["igScrollToBringRectIntoView"][1]["argsoriginal"] = "(ImGuiWindow* window,const ImRect& rect)"
 defs["igScrollToBringRectIntoView"][1]["call_args"] = "(window,rect)"
 defs["igScrollToBringRectIntoView"][1]["cimguiname"] = "igScrollToBringRectIntoView"
-defs["igScrollToBringRectIntoView"][1]["comment"] = "\
-//#ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS"
+defs["igScrollToBringRectIntoView"][1]["comment"] = "//#ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS"
 defs["igScrollToBringRectIntoView"][1]["defaults"] = {}
 defs["igScrollToBringRectIntoView"][1]["funcname"] = "ScrollToBringRectIntoView"
 defs["igScrollToBringRectIntoView"][1]["location"] = "imgui_internal:2827"
@@ -25557,8 +24908,7 @@ defs["igScrollToItem"][1]["argsT"][1]["type"] = "ImGuiScrollFlags"
 defs["igScrollToItem"][1]["argsoriginal"] = "(ImGuiScrollFlags flags=0)"
 defs["igScrollToItem"][1]["call_args"] = "(flags)"
 defs["igScrollToItem"][1]["cimguiname"] = "igScrollToItem"
-defs["igScrollToItem"][1]["comment"] = "\
-    // Early work-in-progress API (ScrollToItem() will become public)"
+defs["igScrollToItem"][1]["comment"] = "    // Early work-in-progress API (ScrollToItem() will become public)"
 defs["igScrollToItem"][1]["defaults"] = {}
 defs["igScrollToItem"][1]["defaults"]["flags"] = "0"
 defs["igScrollToItem"][1]["funcname"] = "ScrollToItem"
@@ -25700,12 +25050,7 @@ defs["igSelectable"][1]["argsT"][4]["type"] = "const ImVec2"
 defs["igSelectable"][1]["argsoriginal"] = "(const char* label,bool selected=false,ImGuiSelectableFlags flags=0,const ImVec2& size=ImVec2(0,0))"
 defs["igSelectable"][1]["call_args"] = "(label,selected,flags,size)"
 defs["igSelectable"][1]["cimguiname"] = "igSelectable"
-defs["igSelectable"][1]["comment"] = "\
-    // Widgets: Selectables\
-\
-    // - A selectable highlights when hovered, and can display another color when selected.\
-\
-    // - Neighbors selectable extend their highlight bounds in order to leave no gap between them. This is so a series of selected Selectable appear contiguous. // \"bool selected\" carry the selection state (read-only). Selectable() is clicked is returns true so you can modify your selection state. size.x==0.0: use remaining width, size.x>0.0: specify width. size.y==0.0: use label height, size.y>0.0: specify height"
+defs["igSelectable"][1]["comment"] = "    // - Neighbors selectable extend their highlight bounds in order to leave no gap between them. This is so a series of selected Selectable appear contiguous. // \"bool selected\" carry the selection state (read-only). Selectable() is clicked is returns true so you can modify your selection state. size.x==0.0: use remaining width, size.x>0.0: specify width. size.y==0.0: use label height, size.y>0.0: specify height"
 defs["igSelectable"][1]["defaults"] = {}
 defs["igSelectable"][1]["defaults"]["flags"] = "0"
 defs["igSelectable"][1]["defaults"]["selected"] = "false"
@@ -25755,20 +25100,7 @@ defs["igSeparator"][1]["argsT"] = {}
 defs["igSeparator"][1]["argsoriginal"] = "()"
 defs["igSeparator"][1]["call_args"] = "()"
 defs["igSeparator"][1]["cimguiname"] = "igSeparator"
-defs["igSeparator"][1]["comment"] = "\
-    // Cursor / Layout\
-\
-    // - By \"cursor\" we mean the current output position.\
-\
-    // - The typical widget behavior is to output themselves at the current cursor position, then move the cursor one line down.\
-\
-    // - You can call SameLine() between widgets to undo the last carriage return and output at the right of the preceding widget.\
-\
-    // - Attention! We currently have inconsistencies between window-local and absolute positions we will aim to fix with future API:\
-\
-    //    Window-local coordinates:   SameLine(), GetCursorPos(), SetCursorPos(), GetCursorStartPos(), GetContentRegionMax(), GetWindowContentRegion*(), PushTextWrapPos()\
-\
-    //    Absolute coordinate:        GetCursorScreenPos(), SetCursorScreenPos(), all ImDrawList:: functions. // separator, generally horizontal. inside a menu bar or in horizontal layout mode, this becomes a vertical separator."
+defs["igSeparator"][1]["comment"] = "    //    Absolute coordinate:        GetCursorScreenPos(), SetCursorScreenPos(), all ImDrawList:: functions. // separator, generally horizontal. inside a menu bar or in horizontal layout mode, this becomes a vertical separator."
 defs["igSeparator"][1]["defaults"] = {}
 defs["igSeparator"][1]["funcname"] = "Separator"
 defs["igSeparator"][1]["location"] = "imgui:440"
@@ -25870,14 +25202,7 @@ defs["igSetAllocatorFunctions"][1]["argsT"][3]["type"] = "void*"
 defs["igSetAllocatorFunctions"][1]["argsoriginal"] = "(ImGuiMemAllocFunc alloc_func,ImGuiMemFreeFunc free_func,void* user_data=((void*)0))"
 defs["igSetAllocatorFunctions"][1]["call_args"] = "(alloc_func,free_func,user_data)"
 defs["igSetAllocatorFunctions"][1]["cimguiname"] = "igSetAllocatorFunctions"
-defs["igSetAllocatorFunctions"][1]["comment"] = "\
-    // Memory Allocators\
-\
-    // - Those functions are not reliant on the current context.\
-\
-    // - DLL users: heaps and globals are not shared across DLL boundaries! You will need to call SetCurrentContext() + SetAllocatorFunctions()\
-\
-    //   for each static/DLL boundary you are calling from. Read \"Context and Memory Allocators\" section of imgui.cpp for more details."
+defs["igSetAllocatorFunctions"][1]["comment"] = "    //   for each static/DLL boundary you are calling from. Read \"Context and Memory Allocators\" section of imgui.cpp for more details."
 defs["igSetAllocatorFunctions"][1]["defaults"] = {}
 defs["igSetAllocatorFunctions"][1]["defaults"]["user_data"] = "NULL"
 defs["igSetAllocatorFunctions"][1]["funcname"] = "SetAllocatorFunctions"
@@ -26002,8 +25327,7 @@ defs["igSetCurrentFont"][1]["argsT"][1]["type"] = "ImFont*"
 defs["igSetCurrentFont"][1]["argsoriginal"] = "(ImFont* font)"
 defs["igSetCurrentFont"][1]["call_args"] = "(font)"
 defs["igSetCurrentFont"][1]["cimguiname"] = "igSetCurrentFont"
-defs["igSetCurrentFont"][1]["comment"] = "\
-    // Fonts, drawing"
+defs["igSetCurrentFont"][1]["comment"] = "    // Fonts, drawing"
 defs["igSetCurrentFont"][1]["defaults"] = {}
 defs["igSetCurrentFont"][1]["funcname"] = "SetCurrentFont"
 defs["igSetCurrentFont"][1]["location"] = "imgui_internal:2774"
@@ -26210,10 +25534,7 @@ defs["igSetItemDefaultFocus"][1]["argsT"] = {}
 defs["igSetItemDefaultFocus"][1]["argsoriginal"] = "()"
 defs["igSetItemDefaultFocus"][1]["call_args"] = "()"
 defs["igSetItemDefaultFocus"][1]["cimguiname"] = "igSetItemDefaultFocus"
-defs["igSetItemDefaultFocus"][1]["comment"] = "\
-    // Focus, Activation\
-\
-    // - Prefer using \"SetItemDefaultFocus()\" over \"if (IsWindowAppearing()) SetScrollHereY()\" when applicable to signify \"this is the default item\" // make last item the default focused item of a window."
+defs["igSetItemDefaultFocus"][1]["comment"] = "    // - Prefer using \"SetItemDefaultFocus()\" over \"if (IsWindowAppearing()) SetScrollHereY()\" when applicable to signify \"this is the default item\" // make last item the default focused item of a window."
 defs["igSetItemDefaultFocus"][1]["defaults"] = {}
 defs["igSetItemDefaultFocus"][1]["funcname"] = "SetItemDefaultFocus"
 defs["igSetItemDefaultFocus"][1]["location"] = "imgui:849"
@@ -26580,10 +25901,7 @@ defs["igSetNextWindowPos"][1]["argsT"][3]["type"] = "const ImVec2"
 defs["igSetNextWindowPos"][1]["argsoriginal"] = "(const ImVec2& pos,ImGuiCond cond=0,const ImVec2& pivot=ImVec2(0,0))"
 defs["igSetNextWindowPos"][1]["call_args"] = "(pos,cond,pivot)"
 defs["igSetNextWindowPos"][1]["cimguiname"] = "igSetNextWindowPos"
-defs["igSetNextWindowPos"][1]["comment"] = "\
-    // Window manipulation\
-\
-    // - Prefer using SetNextXXX functions (before Begin) rather that SetXXX functions (after Begin). // set next window position. call before Begin(). use pivot=(0.5f,0.5f) to center on given point, etc."
+defs["igSetNextWindowPos"][1]["comment"] = "    // - Prefer using SetNextXXX functions (before Begin) rather that SetXXX functions (after Begin). // set next window position. call before Begin(). use pivot=(0.5f,0.5f) to center on given point, etc."
 defs["igSetNextWindowPos"][1]["defaults"] = {}
 defs["igSetNextWindowPos"][1]["defaults"]["cond"] = "0"
 defs["igSetNextWindowPos"][1]["defaults"]["pivot"] = "ImVec2(0,0)"
@@ -26605,8 +25923,7 @@ defs["igSetNextWindowScroll"][1]["argsT"][1]["type"] = "const ImVec2"
 defs["igSetNextWindowScroll"][1]["argsoriginal"] = "(const ImVec2& scroll)"
 defs["igSetNextWindowScroll"][1]["call_args"] = "(scroll)"
 defs["igSetNextWindowScroll"][1]["cimguiname"] = "igSetNextWindowScroll"
-defs["igSetNextWindowScroll"][1]["comment"] = "\
-    // Scrolling // Use -1.0f on one axis to leave as-is"
+defs["igSetNextWindowScroll"][1]["comment"] = "    // Scrolling // Use -1.0f on one axis to leave as-is"
 defs["igSetNextWindowScroll"][1]["defaults"] = {}
 defs["igSetNextWindowScroll"][1]["funcname"] = "SetNextWindowScroll"
 defs["igSetNextWindowScroll"][1]["location"] = "imgui_internal:2816"
@@ -27010,8 +26327,7 @@ defs["igSetWindowClipRectBeforeSetChannel"][1]["argsT"][2]["type"] = "const ImRe
 defs["igSetWindowClipRectBeforeSetChannel"][1]["argsoriginal"] = "(ImGuiWindow* window,const ImRect& clip_rect)"
 defs["igSetWindowClipRectBeforeSetChannel"][1]["call_args"] = "(window,clip_rect)"
 defs["igSetWindowClipRectBeforeSetChannel"][1]["cimguiname"] = "igSetWindowClipRectBeforeSetChannel"
-defs["igSetWindowClipRectBeforeSetChannel"][1]["comment"] = "\
-    // Internal Columns API (this is not exposed because we will encourage transitioning to the Tables API)"
+defs["igSetWindowClipRectBeforeSetChannel"][1]["comment"] = "    // Internal Columns API (this is not exposed because we will encourage transitioning to the Tables API)"
 defs["igSetWindowClipRectBeforeSetChannel"][1]["defaults"] = {}
 defs["igSetWindowClipRectBeforeSetChannel"][1]["funcname"] = "SetWindowClipRectBeforeSetChannel"
 defs["igSetWindowClipRectBeforeSetChannel"][1]["location"] = "imgui_internal:3010"
@@ -27402,8 +26718,7 @@ defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["argsT"][7]["type"] = "ImU32
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["argsoriginal"] = "(ImDrawList* draw_list,int vert_start_idx,int vert_end_idx,ImVec2 gradient_p0,ImVec2 gradient_p1,ImU32 col0,ImU32 col1)"
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["call_args"] = "(draw_list,vert_start_idx,vert_end_idx,gradient_p0,gradient_p1,col0,col1)"
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["cimguiname"] = "igShadeVertsLinearColorGradientKeepAlpha"
-defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["comment"] = "\
-    // Shade functions (write over already created vertices)"
+defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["comment"] = "    // Shade functions (write over already created vertices)"
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["defaults"] = {}
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["funcname"] = "ShadeVertsLinearColorGradientKeepAlpha"
 defs["igShadeVertsLinearColorGradientKeepAlpha"][1]["location"] = "imgui_internal:3173"
@@ -27505,8 +26820,7 @@ defs["igShowDemoWindow"][1]["argsT"][1]["type"] = "bool*"
 defs["igShowDemoWindow"][1]["argsoriginal"] = "(bool* p_open=((void*)0))"
 defs["igShowDemoWindow"][1]["call_args"] = "(p_open)"
 defs["igShowDemoWindow"][1]["cimguiname"] = "igShowDemoWindow"
-defs["igShowDemoWindow"][1]["comment"] = "\
-    // Demo, Debug, Information // create Demo window. demonstrate most ImGui features. call this to learn about the library! try to make it always available in your application!"
+defs["igShowDemoWindow"][1]["comment"] = "    // Demo, Debug, Information // create Demo window. demonstrate most ImGui features. call this to learn about the library! try to make it always available in your application!"
 defs["igShowDemoWindow"][1]["defaults"] = {}
 defs["igShowDemoWindow"][1]["defaults"]["p_open"] = "NULL"
 defs["igShowDemoWindow"][1]["funcname"] = "ShowDemoWindow"
@@ -27804,18 +27118,7 @@ defs["igSliderFloat"][1]["argsT"][6]["type"] = "ImGuiSliderFlags"
 defs["igSliderFloat"][1]["argsoriginal"] = "(const char* label,float* v,float v_min,float v_max,const char* format=\"%.3f\",ImGuiSliderFlags flags=0)"
 defs["igSliderFloat"][1]["call_args"] = "(label,v,v_min,v_max,format,flags)"
 defs["igSliderFloat"][1]["cimguiname"] = "igSliderFloat"
-defs["igSliderFloat"][1]["comment"] = "\
-    // Widgets: Regular Sliders\
-\
-    // - CTRL+Click on any slider to turn them into an input box. Manually input values aren't clamped by default and can go off-bounds. Use ImGuiSliderFlags_AlwaysClamp to always clamp.\
-\
-    // - Adjust format string to decorate the value with a prefix, a suffix, or adapt the editing and display precision e.g. \"%.3f\" -> 1.234; \"%5.2f secs\" -> 01.23 secs; \"Biscuit: %.0f\" -> Biscuit: 1; etc.\
-\
-    // - Format string may also be set to NULL or use the default format (\"%f\" or \"%d\").\
-\
-    // - Legacy: Pre-1.78 there are SliderXXX() function signatures that takes a final `float power=1.0f' argument instead of the `ImGuiSliderFlags flags=0' argument.\
-\
-    //   If you get a warning converting a float to ImGuiSliderFlags, read https://github.com/ocornut/imgui/issues/3361 // adjust format to decorate the value with a prefix or a suffix for in-slider labels or unit display."
+defs["igSliderFloat"][1]["comment"] = "    //   If you get a warning converting a float to ImGuiSliderFlags, read https://github.com/ocornut/imgui/issues/3361 // adjust format to decorate the value with a prefix or a suffix for in-slider labels or unit display."
 defs["igSliderFloat"][1]["defaults"] = {}
 defs["igSliderFloat"][1]["defaults"]["flags"] = "0"
 defs["igSliderFloat"][1]["defaults"]["format"] = "\"%.3f\""
@@ -28321,8 +27624,7 @@ defs["igStyleColorsDark"][1]["argsT"][1]["type"] = "ImGuiStyle*"
 defs["igStyleColorsDark"][1]["argsoriginal"] = "(ImGuiStyle* dst=((void*)0))"
 defs["igStyleColorsDark"][1]["call_args"] = "(dst)"
 defs["igStyleColorsDark"][1]["cimguiname"] = "igStyleColorsDark"
-defs["igStyleColorsDark"][1]["comment"] = "\
-    // Styles // new, recommended style (default)"
+defs["igStyleColorsDark"][1]["comment"] = "    // Styles // new, recommended style (default)"
 defs["igStyleColorsDark"][1]["defaults"] = {}
 defs["igStyleColorsDark"][1]["defaults"]["dst"] = "NULL"
 defs["igStyleColorsDark"][1]["funcname"] = "StyleColorsDark"
@@ -29250,18 +28552,7 @@ defs["igTableGetSortSpecs"][1]["argsT"] = {}
 defs["igTableGetSortSpecs"][1]["argsoriginal"] = "()"
 defs["igTableGetSortSpecs"][1]["call_args"] = "()"
 defs["igTableGetSortSpecs"][1]["cimguiname"] = "igTableGetSortSpecs"
-defs["igTableGetSortSpecs"][1]["comment"] = "\
-    // Tables: Sorting & Miscellaneous functions\
-\
-    // - Sorting: call TableGetSortSpecs() to retrieve latest sort specs for the table. NULL when not sorting.\
-\
-    //   When 'sort_specs->SpecsDirty == true' you should sort your data. It will be true when sorting specs have\
-\
-    //   changed since last call, or the first time. Make sure to set 'SpecsDirty = false' after sorting,\
-\
-    //   else you may wastefully sort your data every frame!\
-\
-    // - Functions args 'int column_n' treat the default value of -1 as the same as passing the current column index. // get latest sort specs for the table (NULL if not sorting).  Lifetime: don't hold on this pointer over multiple frames or past any subsequent call to BeginTable()."
+defs["igTableGetSortSpecs"][1]["comment"] = "    // - Functions args 'int column_n' treat the default value of -1 as the same as passing the current column index. // get latest sort specs for the table (NULL if not sorting).  Lifetime: don't hold on this pointer over multiple frames or past any subsequent call to BeginTable()."
 defs["igTableGetSortSpecs"][1]["defaults"] = {}
 defs["igTableGetSortSpecs"][1]["funcname"] = "TableGetSortSpecs"
 defs["igTableGetSortSpecs"][1]["location"] = "imgui:763"
@@ -29318,8 +28609,7 @@ defs["igTableLoadSettings"][1]["argsT"][1]["type"] = "ImGuiTable*"
 defs["igTableLoadSettings"][1]["argsoriginal"] = "(ImGuiTable* table)"
 defs["igTableLoadSettings"][1]["call_args"] = "(table)"
 defs["igTableLoadSettings"][1]["cimguiname"] = "igTableLoadSettings"
-defs["igTableLoadSettings"][1]["comment"] = "\
-    // Tables: Settings"
+defs["igTableLoadSettings"][1]["comment"] = "    // Tables: Settings"
 defs["igTableLoadSettings"][1]["defaults"] = {}
 defs["igTableLoadSettings"][1]["funcname"] = "TableLoadSettings"
 defs["igTableLoadSettings"][1]["location"] = "imgui_internal:3065"
@@ -29400,8 +28690,7 @@ defs["igTableOpenContextMenu"][1]["argsT"][1]["type"] = "int"
 defs["igTableOpenContextMenu"][1]["argsoriginal"] = "(int column_n=-1)"
 defs["igTableOpenContextMenu"][1]["call_args"] = "(column_n)"
 defs["igTableOpenContextMenu"][1]["cimguiname"] = "igTableOpenContextMenu"
-defs["igTableOpenContextMenu"][1]["comment"] = "\
-    // Tables: Candidates for public API"
+defs["igTableOpenContextMenu"][1]["comment"] = "    // Tables: Candidates for public API"
 defs["igTableOpenContextMenu"][1]["defaults"] = {}
 defs["igTableOpenContextMenu"][1]["defaults"]["column_n"] = "-1"
 defs["igTableOpenContextMenu"][1]["funcname"] = "TableOpenContextMenu"
@@ -29735,22 +29024,7 @@ defs["igTableSetupColumn"][1]["argsT"][4]["type"] = "ImGuiID"
 defs["igTableSetupColumn"][1]["argsoriginal"] = "(const char* label,ImGuiTableColumnFlags flags=0,float init_width_or_weight=0.0f,ImGuiID user_id=0)"
 defs["igTableSetupColumn"][1]["call_args"] = "(label,flags,init_width_or_weight,user_id)"
 defs["igTableSetupColumn"][1]["cimguiname"] = "igTableSetupColumn"
-defs["igTableSetupColumn"][1]["comment"] = "\
-    // Tables: Headers & Columns declaration\
-\
-    // - Use TableSetupColumn() to specify label, resizing policy, default width/weight, id, various other flags etc.\
-\
-    // - Use TableHeadersRow() to create a header row and automatically submit a TableHeader() for each column.\
-\
-    //   Headers are required to perform: reordering, sorting, and opening the context menu.\
-\
-    //   The context menu can also be made available in columns body using ImGuiTableFlags_ContextMenuInBody.\
-\
-    // - You may manually submit headers using TableNextRow() + TableHeader() calls, but this is only useful in\
-\
-    //   some advanced use cases (e.g. adding custom widgets in header row).\
-\
-    // - Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when scrolled."
+defs["igTableSetupColumn"][1]["comment"] = "    // - Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when scrolled."
 defs["igTableSetupColumn"][1]["defaults"] = {}
 defs["igTableSetupColumn"][1]["defaults"]["flags"] = "0"
 defs["igTableSetupColumn"][1]["defaults"]["init_width_or_weight"] = "0.0f"
@@ -30133,8 +29407,7 @@ defs["igTextEx"][1]["argsT"][3]["type"] = "ImGuiTextFlags"
 defs["igTextEx"][1]["argsoriginal"] = "(const char* text,const char* text_end=((void*)0),ImGuiTextFlags flags=0)"
 defs["igTextEx"][1]["call_args"] = "(text,text_end,flags)"
 defs["igTextEx"][1]["cimguiname"] = "igTextEx"
-defs["igTextEx"][1]["comment"] = "\
-    // Widgets"
+defs["igTextEx"][1]["comment"] = "    // Widgets"
 defs["igTextEx"][1]["defaults"] = {}
 defs["igTextEx"][1]["defaults"]["flags"] = "0"
 defs["igTextEx"][1]["defaults"]["text_end"] = "NULL"
@@ -30159,8 +29432,7 @@ defs["igTextUnformatted"][1]["argsT"][2]["type"] = "const char*"
 defs["igTextUnformatted"][1]["argsoriginal"] = "(const char* text,const char* text_end=((void*)0))"
 defs["igTextUnformatted"][1]["call_args"] = "(text,text_end)"
 defs["igTextUnformatted"][1]["cimguiname"] = "igTextUnformatted"
-defs["igTextUnformatted"][1]["comment"] = "\
-    // Widgets: Text // raw text without formatting. Roughly equivalent to Text(\"%s\", text) but: A) doesn't require null terminated string if 'text_end' is specified, B) it's faster, no memory copy is done, no buffer size limits, recommended for long chunks of text."
+defs["igTextUnformatted"][1]["comment"] = "    // Widgets: Text // raw text without formatting. Roughly equivalent to Text(\"%s\", text) but: A) doesn't require null terminated string if 'text_end' is specified, B) it's faster, no memory copy is done, no buffer size limits, recommended for long chunks of text."
 defs["igTextUnformatted"][1]["defaults"] = {}
 defs["igTextUnformatted"][1]["defaults"]["text_end"] = "NULL"
 defs["igTextUnformatted"][1]["funcname"] = "TextUnformatted"
@@ -30255,8 +29527,7 @@ defs["igTranslateWindowsInViewport"][1]["argsT"][3]["type"] = "const ImVec2"
 defs["igTranslateWindowsInViewport"][1]["argsoriginal"] = "(ImGuiViewportP* viewport,const ImVec2& old_pos,const ImVec2& new_pos)"
 defs["igTranslateWindowsInViewport"][1]["call_args"] = "(viewport,old_pos,new_pos)"
 defs["igTranslateWindowsInViewport"][1]["cimguiname"] = "igTranslateWindowsInViewport"
-defs["igTranslateWindowsInViewport"][1]["comment"] = "\
-    // Viewports"
+defs["igTranslateWindowsInViewport"][1]["comment"] = "    // Viewports"
 defs["igTranslateWindowsInViewport"][1]["defaults"] = {}
 defs["igTranslateWindowsInViewport"][1]["funcname"] = "TranslateWindowsInViewport"
 defs["igTranslateWindowsInViewport"][1]["location"] = "imgui_internal:2796"
@@ -30276,10 +29547,7 @@ defs["igTreeNode"][1]["argsT"][1]["type"] = "const char*"
 defs["igTreeNode"][1]["argsoriginal"] = "(const char* label)"
 defs["igTreeNode"][1]["call_args"] = "(label)"
 defs["igTreeNode"][1]["cimguiname"] = "igTreeNode"
-defs["igTreeNode"][1]["comment"] = "\
-    // Widgets: Trees\
-\
-    // - TreeNode functions return true when the node is open, in which case you need to also call TreePop() when you are finished displaying the tree node contents."
+defs["igTreeNode"][1]["comment"] = "    // - TreeNode functions return true when the node is open, in which case you need to also call TreePop() when you are finished displaying the tree node contents."
 defs["igTreeNode"][1]["defaults"] = {}
 defs["igTreeNode"][1]["funcname"] = "TreeNode"
 defs["igTreeNode"][1]["location"] = "imgui:601"
@@ -30700,8 +29968,7 @@ defs["igUpdateInputEvents"][1]["argsT"][1]["type"] = "bool"
 defs["igUpdateInputEvents"][1]["argsoriginal"] = "(bool trickle_fast_inputs)"
 defs["igUpdateInputEvents"][1]["call_args"] = "(trickle_fast_inputs)"
 defs["igUpdateInputEvents"][1]["cimguiname"] = "igUpdateInputEvents"
-defs["igUpdateInputEvents"][1]["comment"] = "\
-    // NewFrame"
+defs["igUpdateInputEvents"][1]["comment"] = "    // NewFrame"
 defs["igUpdateInputEvents"][1]["defaults"] = {}
 defs["igUpdateInputEvents"][1]["funcname"] = "UpdateInputEvents"
 defs["igUpdateInputEvents"][1]["location"] = "imgui_internal:2783"
@@ -30918,10 +30185,7 @@ defs["igValue"][1]["argsT"][2]["type"] = "bool"
 defs["igValue"][1]["argsoriginal"] = "(const char* prefix,bool b)"
 defs["igValue"][1]["call_args"] = "(prefix,b)"
 defs["igValue"][1]["cimguiname"] = "igValue"
-defs["igValue"][1]["comment"] = "\
-    // Widgets: Value() Helpers.\
-\
-    // - Those are merely shortcut to calling Text() with a format string. Output single value in \"name: value\" format (tip: freely declare more in your code to handle your types. you can add functions to the ImGui namespace)"
+defs["igValue"][1]["comment"] = "    // - Those are merely shortcut to calling Text() with a format string. Output single value in \"name: value\" format (tip: freely declare more in your code to handle your types. you can add functions to the ImGui namespace)"
 defs["igValue"][1]["defaults"] = {}
 defs["igValue"][1]["funcname"] = "Value"
 defs["igValue"][1]["location"] = "imgui:645"
