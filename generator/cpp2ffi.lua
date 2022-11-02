@@ -129,6 +129,20 @@ local function clean_comments(txt)
 	txt = txt:gsub("%s*//[^\n]*","")
 	return txt,comms
 end
+--dont keep commens above empty line
+local function clean_outercomms(oc)
+	local oc2 = {}
+	for i,v in ipairs(oc) do
+		--print("comm",v)
+		if v:match"^\n*%s*\n" then
+			v=v:gsub("\n*%s*\n","")
+			--print"clean"
+			oc2 = {}
+		end
+		table.insert(oc2,v)
+	end
+	return table.concat(oc2)--,"\n")
+end
 local function strip(cad)
     return cad:gsub("^%s*(.-)%s*$","%1") --remove initial and final spaces
 end
@@ -360,6 +374,7 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 				--]]
 				--------------------
 				if re_name=="comment_re" or re_name=="comment2_re" then
+					--print("parit",item)
 					--[[
 					table.insert(outercomms,item)
 					-- comments to previous item
@@ -382,7 +397,8 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 					--item,inercoms = clean_comments(item)
 					local itemold = item
 					item = item:gsub("extern __attribute__%(%(dllexport%)%) ","")
-					local comments = table.concat(outercomms,"\n") --..inercoms
+					local comments = clean_outercomms(outercomms) 
+					--local comments = table.concat(outercomms,"\n") --..inercoms
 					if comments=="" then comments=nil end
 					outercomms = {}
 					local loca
@@ -2397,11 +2413,22 @@ M.func_header_generate = func_header_generate
 
 local code = [[
 
-enum pedro : int ;
+int pedro;
+//linea1
+
+
+
+//linea2
+enum coco
+{
+uno,
+dos
+};
 
 ]]																		  
 local parser = M.Parser()
-for line in code:gmatch("[^\n]+") do
+--for line in code:gmatch("[^\n]+") do
+for line in code:gmatch'(.-)\r?\n' do
 	--print("inserting",line)
 	parser:insert(line,"11")
 end
