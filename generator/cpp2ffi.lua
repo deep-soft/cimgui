@@ -133,11 +133,13 @@ end
 local function clean_outercomms(oc)
 	local oc2 = {}
 	for i,v in ipairs(oc) do
-		--print("comm",v)
-		if v:match"^\n*%s*\n" then
-			v=v:gsub("\n*%s*\n","")
-			--print"clean"
+		if v:match"^\n*%s+\n" then
+			--print(string.format("%q %q",v,v:match"^\n*%s*\n"))
+			v=v:gsub("\n*%s+\n","")
+			--print("clean",v)
 			oc2 = {}
+		else
+			--print"dont clean"
 		end
 		table.insert(oc2,v)
 	end
@@ -2204,7 +2206,7 @@ local function location(file,locpathT,defines,COMPILER)
                 local loc_num_real = loc_num + loc_num_incr
                 loc_num_incr = loc_num_incr + 1
 				--if doprint then print(which_locationold,which_location) end
-				if line:match("%S") then --nothing on emptyline
+				--if line:match("%S") then --nothing on emptyline
                 if (which_locationold~=which_location) or (loc_num_realold and loc_num_realold < loc_num_real) then
                     --old line complete
 					--doprint = false
@@ -2216,7 +2218,7 @@ local function location(file,locpathT,defines,COMPILER)
                     which_locationold,loc_num_realold = which_location,loc_num_real
                 --return line,loc_num_real, which_location
                 end
-				end
+				--end
             end
         until false --forever
     end
