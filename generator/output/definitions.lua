@@ -4369,9 +4369,11 @@ defs["ImGuiContext_ImGuiContext"][1]["cimguiname"] = "ImGuiContext_ImGuiContext"
 defs["ImGuiContext_ImGuiContext"][1]["comment"] = " // Different to ensure initial submission\
         PlatformImeViewport = 0;\
         PlatformLocaleDecimalPoint = '.';\
+\
         SettingsLoaded = false;\
         SettingsDirtyTimer = 0.0f;\
         HookIdNext = 0;\
+\
         LogEnabled = false;\
         LogType = ImGuiLogType_None;\
         LogNextPrefix = LogNextSuffix =                                        ((void *)0)                                           ;\
@@ -4380,9 +4382,11 @@ defs["ImGuiContext_ImGuiContext"][1]["comment"] = " // Different to ensure initi
         LogLineFirstItem = false;\
         LogDepthRef = 0;\
         LogDepthToExpand = LogDepthToExpandDefault = 2;\
+\
         DebugLogFlags = ImGuiDebugLogFlags_OutputToTTY;\
         DebugItemPickerActive = false;\
         DebugItemPickerBreakId = 0;\
+\
         memset(FramerateSecPerFrame, 0, sizeof(FramerateSecPerFrame));\
         FramerateSecPerFrameIdx = FramerateSecPerFrameCount = 0;\
         FramerateSecPerFrameAccum = 0.0f;\

@@ -1,192 +1,188 @@
 {
   "enum_comments": {
     "ImDrawFlags_": {
-      "prevcomments": "\n// Flags for ImDrawList functions\n// (Legacy: bit 0 must always correspond to ImDrawFlags_Closed to be backward compatible with old API using a bool. Bits 1..3 must be unused)"
+      "prevcomments": "// Flags for ImDrawList functions\n// (Legacy: bit 0 must always correspond to ImDrawFlags_Closed to be backward compatible with old API using a bool. Bits 1..3 must be unused)"
     },
     "ImDrawListFlags_": {
-      "prevcomments": "\n// Flags for ImDrawList instance. Those are set automatically by ImGui:: functions from ImGuiIO settings, and generally not manipulated directly.\n// It is however possible to temporarily alter flags between calls to ImDrawList:: functions."
+      "prevcomments": "// Flags for ImDrawList instance. Those are set automatically by ImGui:: functions from ImGuiIO settings, and generally not manipulated directly.\n// It is however possible to temporarily alter flags between calls to ImDrawList:: functions."
     },
     "ImFontAtlasFlags_": {
-      "prevcomments": "\n// Flags for ImFontAtlas build"
+      "prevcomments": "// Flags for ImFontAtlas build"
     },
-    "ImGuiActivateFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Navigation support\n//-----------------------------------------------------------------------------"
-    },
+    "ImGuiActivateFlags_": [],
     "ImGuiAxis": {
-      "prevcomments": "\n// X/Y enums are fixed to 0/1 so they may be used to index ImVec2"
+      "prevcomments": "// X/Y enums are fixed to 0/1 so they may be used to index ImVec2"
     },
     "ImGuiBackendFlags_": {
-      "prevcomments": "\n// Backend capabilities flags stored in io.BackendFlags. Set by imgui_impl_xxx or custom backend."
+      "prevcomments": "// Backend capabilities flags stored in io.BackendFlags. Set by imgui_impl_xxx or custom backend."
     },
     "ImGuiButtonFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiButtonFlags_"
+      "prevcomments": "// Extend ImGuiButtonFlags_"
     },
     "ImGuiButtonFlags_": {
-      "prevcomments": "\n// Flags for InvisibleButton() [extended in imgui_internal.h]"
+      "prevcomments": "// Flags for InvisibleButton() [extended in imgui_internal.h]"
     },
     "ImGuiCol_": {
-      "prevcomments": "\n// Enumeration for PushStyleColor() / PopStyleColor()"
+      "prevcomments": "// Enumeration for PushStyleColor() / PopStyleColor()"
     },
     "ImGuiColorEditFlags_": {
-      "prevcomments": "\n// Flags for ColorEdit3() / ColorEdit4() / ColorPicker3() / ColorPicker4() / ColorButton()"
+      "prevcomments": "// Flags for ColorEdit3() / ColorEdit4() / ColorPicker3() / ColorPicker4() / ColorButton()"
     },
     "ImGuiComboFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiComboFlags_"
+      "prevcomments": "// Extend ImGuiComboFlags_"
     },
     "ImGuiComboFlags_": {
-      "prevcomments": "\n// Flags for ImGui::BeginCombo()"
+      "prevcomments": "// Flags for ImGui::BeginCombo()"
     },
     "ImGuiCond_": {
-      "prevcomments": "\n// Enumeration for ImGui::SetWindow***(), SetNextWindow***(), SetNextItem***() functions\n// Represent a condition.\n// Important: Treat as a regular enum! Do NOT combine multiple values using binary operators! All the functions above treat 0 as a shortcut to ImGuiCond_Always."
+      "prevcomments": "// Enumeration for ImGui::SetWindow***(), SetNextWindow***(), SetNextItem***() functions\n// Represent a condition.\n// Important: Treat as a regular enum! Do NOT combine multiple values using binary operators! All the functions above treat 0 as a shortcut to ImGuiCond_Always."
     },
     "ImGuiConfigFlags_": {
-      "prevcomments": "\n// Configuration flags stored in io.ConfigFlags. Set by user/application."
+      "prevcomments": "// Configuration flags stored in io.ConfigFlags. Set by user/application."
     },
     "ImGuiContextHookType": [],
     "ImGuiDataAuthority_": {
-      "prevcomments": "\n// Store the source authority (dock node vs window) of a field"
+      "prevcomments": "// Store the source authority (dock node vs window) of a field"
     },
     "ImGuiDataTypePrivate_": {
-      "prevcomments": "\n// Extend ImGuiDataType_"
+      "prevcomments": "// Extend ImGuiDataType_"
     },
     "ImGuiDataType_": {
-      "prevcomments": "\n// Standard Drag and Drop payload types. You can define you own payload types using short strings. Types starting with '_' are defined by Dear ImGui.\n// A primary data type"
+      "prevcomments": "// A primary data type"
     },
-    "ImGuiDebugLogFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Metrics, Debug Tools\n//-----------------------------------------------------------------------------"
-    },
+    "ImGuiDebugLogFlags_": [],
     "ImGuiDir_": {
-      "prevcomments": "\n// A cardinal direction"
+      "prevcomments": "// A cardinal direction"
     },
     "ImGuiDockNodeFlagsPrivate_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Multi-select support\n//-----------------------------------------------------------------------------\n//-----------------------------------------------------------------------------\n// [SECTION] Docking support\n//-----------------------------------------------------------------------------\n// Extend ImGuiDockNodeFlags_"
+      "prevcomments": "// Extend ImGuiDockNodeFlags_"
     },
     "ImGuiDockNodeFlags_": {
-      "prevcomments": "\n// Flags for ImGui::DockSpace(), shared/inherited by child nodes.\n// (Some flags can be applied to individual nodes directly)\n// FIXME-DOCK: Also see ImGuiDockNodeFlagsPrivate_ which may involve using the WIP and internal DockBuilder api."
+      "prevcomments": "// Flags for ImGui::DockSpace(), shared/inherited by child nodes.\n// (Some flags can be applied to individual nodes directly)\n// FIXME-DOCK: Also see ImGuiDockNodeFlagsPrivate_ which may involve using the WIP and internal DockBuilder api."
     },
     "ImGuiDockNodeState": [],
     "ImGuiDragDropFlags_": {
-      "prevcomments": "\n// Flags for ImGui::BeginDragDropSource(), ImGui::AcceptDragDropPayload()"
+      "prevcomments": "// Flags for ImGui::BeginDragDropSource(), ImGui::AcceptDragDropPayload()"
     },
     "ImGuiFocusedFlags_": {
-      "prevcomments": "\n// Flags for ImGui::IsWindowFocused()"
+      "prevcomments": "// Flags for ImGui::IsWindowFocused()"
     },
     "ImGuiHoveredFlags_": {
-      "prevcomments": "\n// Flags for ImGui::IsItemHovered(), ImGui::IsWindowHovered()\n// Note: if you are trying to check whether your mouse should be dispatched to Dear ImGui or to your app, you should use 'io.WantCaptureMouse' instead! Please read the FAQ!\n// Note: windows with the ImGuiWindowFlags_NoInputs flag are ignored by IsWindowHovered() calls."
+      "prevcomments": "// Flags for ImGui::IsItemHovered(), ImGui::IsWindowHovered()\n// Note: if you are trying to check whether your mouse should be dispatched to Dear ImGui or to your app, you should use 'io.WantCaptureMouse' instead! Please read the FAQ!\n// Note: windows with the ImGuiWindowFlags_NoInputs flag are ignored by IsWindowHovered() calls."
     },
     "ImGuiInputEventType": [],
     "ImGuiInputSource": [],
     "ImGuiInputTextFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiInputTextFlags_"
+      "prevcomments": "// Extend ImGuiInputTextFlags_"
     },
     "ImGuiInputTextFlags_": {
-      "prevcomments": "\n// Flags for ImGui::InputText()"
+      "prevcomments": "// Flags for ImGui::InputText()"
     },
     "ImGuiItemFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Widgets support: flags, enums, data structures\n//-----------------------------------------------------------------------------\n// Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().\n// This is going to be exposed in imgui.h when stabilized enough."
+      "prevcomments": "// Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().\n// This is going to be exposed in imgui.h when stabilized enough."
     },
     "ImGuiItemStatusFlags_": {
-      "prevcomments": "\n// Storage for LastItem data"
+      "prevcomments": "// Storage for LastItem data"
     },
     "ImGuiKeyPrivate_": [],
     "ImGuiKey_": {
-      "prevcomments": "\n// Keys value 0 to 511 are left unused as legacy native/opaque key values (< 1.87)\n// Keys value >= 512 are named keys (>= 1.87)"
+      "prevcomments": "// Keys value 0 to 511 are left unused as legacy native/opaque key values (< 1.87)\n// Keys value >= 512 are named keys (>= 1.87)"
     },
     "ImGuiLayoutType_": {
-      "prevcomments": "\n// FIXME: this is in development, not exposed/functional as a generic feature yet.\n// Horizontal/Vertical enums are fixed to 0/1 so they may be used to index ImVec2"
+      "prevcomments": "// FIXME: this is in development, not exposed/functional as a generic feature yet.\n// Horizontal/Vertical enums are fixed to 0/1 so they may be used to index ImVec2"
     },
     "ImGuiLogType": [],
     "ImGuiModFlags_": {
-      "prevcomments": "\n// Helper \"flags\" version of key-mods to store and compare multiple key-mods easily. Sometimes used for storage (e.g. io.KeyMods) but otherwise not much used in public API."
+      "prevcomments": "// Helper \"flags\" version of key-mods to store and compare multiple key-mods easily. Sometimes used for storage (e.g. io.KeyMods) but otherwise not much used in public API."
     },
     "ImGuiMouseButton_": {
-      "prevcomments": "\n// Identify a mouse button.\n// Those values are guaranteed to be stable and we frequently use 0/1 directly. Named enums provided for convenience."
+      "prevcomments": "// Identify a mouse button.\n// Those values are guaranteed to be stable and we frequently use 0/1 directly. Named enums provided for convenience."
     },
     "ImGuiMouseCursor_": {
-      "prevcomments": "\n// Enumeration for GetMouseCursor()\n// User code may request backend to display given cursor by calling SetMouseCursor(), which is why we have some cursors that are marked unused here"
+      "prevcomments": "// Enumeration for GetMouseCursor()\n// User code may request backend to display given cursor by calling SetMouseCursor(), which is why we have some cursors that are marked unused here"
     },
     "ImGuiNavDirSourceFlags_": [],
     "ImGuiNavHighlightFlags_": [],
     "ImGuiNavInput_": {
-      "prevcomments": "\n// Gamepad/Keyboard navigation\n// Since >= 1.87 backends you generally don't need to care about this enum since io.NavInputs[] is setup automatically. This might become private/internal some day.\n// Keyboard: Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard to enable. NewFrame() will automatically fill io.NavInputs[] based on your io.AddKeyEvent() calls.\n// Gamepad:  Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad to enable. Backend: set ImGuiBackendFlags_HasGamepad and fill the io.NavInputs[] fields before calling NewFrame(). Note that io.NavInputs[] is cleared by EndFrame().\n// Read instructions in imgui.cpp for more details. Download PNG/PSD at http://dearimgui.org/controls_sheets."
+      "prevcomments": "// Gamepad/Keyboard navigation\n// Since >= 1.87 backends you generally don't need to care about this enum since io.NavInputs[] is setup automatically. This might become private/internal some day.\n// Keyboard: Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard to enable. NewFrame() will automatically fill io.NavInputs[] based on your io.AddKeyEvent() calls.\n// Gamepad:  Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad to enable. Backend: set ImGuiBackendFlags_HasGamepad and fill the io.NavInputs[] fields before calling NewFrame(). Note that io.NavInputs[] is cleared by EndFrame().\n// Read instructions in imgui.cpp for more details. Download PNG/PSD at http://dearimgui.org/controls_sheets."
     },
     "ImGuiNavLayer": [],
     "ImGuiNavMoveFlags_": [],
     "ImGuiNavReadMode": {
-      "prevcomments": "\n// FIXME-NAV: Clarify/expose various repeat delay/rate"
+      "prevcomments": "// FIXME-NAV: Clarify/expose various repeat delay/rate"
     },
     "ImGuiNextItemDataFlags_": [],
     "ImGuiNextWindowDataFlags_": [],
     "ImGuiOldColumnFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Columns support\n//-----------------------------------------------------------------------------\n// Flags for internal's BeginColumns(). Prefix using BeginTable() nowadays!"
+      "prevcomments": "// Flags for internal's BeginColumns(). Prefix using BeginTable() nowadays!"
     },
     "ImGuiPlotType": [],
     "ImGuiPopupFlags_": {
-      "prevcomments": "\n// Flags for OpenPopup*(), BeginPopupContext*(), IsPopupOpen() functions.\n// - To be backward compatible with older API which took an 'int mouse_button = 1' argument, we need to treat\n//   small flags values as a mouse button index, so we encode the mouse button in the first few bits of the flags.\n//   It is therefore guaranteed to be legal to pass a mouse button index in ImGuiPopupFlags.\n// - For the same reason, we exceptionally default the ImGuiPopupFlags argument of BeginPopupContextXXX functions to 1 instead of 0.\n//   IMPORTANT: because the default parameter is 1 (==ImGuiPopupFlags_MouseButtonRight), if you rely on the default parameter\n//   and want to another another flag, you need to pass in the ImGuiPopupFlags_MouseButtonRight flag.\n// - Multiple buttons currently cannot be combined/or-ed in those functions (we could allow it later)."
+      "prevcomments": "// Flags for OpenPopup*(), BeginPopupContext*(), IsPopupOpen() functions.\n// - To be backward compatible with older API which took an 'int mouse_button = 1' argument, we need to treat\n//   small flags values as a mouse button index, so we encode the mouse button in the first few bits of the flags.\n//   It is therefore guaranteed to be legal to pass a mouse button index in ImGuiPopupFlags.\n// - For the same reason, we exceptionally default the ImGuiPopupFlags argument of BeginPopupContextXXX functions to 1 instead of 0.\n//   IMPORTANT: because the default parameter is 1 (==ImGuiPopupFlags_MouseButtonRight), if you rely on the default parameter\n//   and want to another another flag, you need to pass in the ImGuiPopupFlags_MouseButtonRight flag.\n// - Multiple buttons currently cannot be combined/or-ed in those functions (we could allow it later)."
     },
     "ImGuiPopupPositionPolicy": [],
     "ImGuiScrollFlags_": {
-      "prevcomments": "\n// Early work-in-progress API for ScrollToItem()"
+      "prevcomments": "// Early work-in-progress API for ScrollToItem()"
     },
     "ImGuiSelectableFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiSelectableFlags_"
+      "prevcomments": "// Extend ImGuiSelectableFlags_"
     },
     "ImGuiSelectableFlags_": {
-      "prevcomments": "\n// Flags for ImGui::Selectable()"
+      "prevcomments": "// Flags for ImGui::Selectable()"
     },
     "ImGuiSeparatorFlags_": [],
     "ImGuiSliderFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiSliderFlags_"
+      "prevcomments": "// Extend ImGuiSliderFlags_"
     },
     "ImGuiSliderFlags_": {
-      "prevcomments": "\n// Flags for DragFloat(), DragInt(), SliderFloat(), SliderInt() etc.\n// We use the same sets of flags for DragXXX() and SliderXXX() functions as the features are the same and it makes it easier to swap them."
+      "prevcomments": "// Flags for DragFloat(), DragInt(), SliderFloat(), SliderInt() etc.\n// We use the same sets of flags for DragXXX() and SliderXXX() functions as the features are the same and it makes it easier to swap them."
     },
     "ImGuiSortDirection_": {
-      "prevcomments": "\n// A sorting direction"
+      "prevcomments": "// A sorting direction"
     },
     "ImGuiStyleVar_": {
-      "prevcomments": "\n// Enumeration for PushStyleVar() / PopStyleVar() to temporarily modify the ImGuiStyle structure.\n// - The enum only refers to fields of ImGuiStyle which makes sense to be pushed/popped inside UI code.\n//   During initialization or between frames, feel free to just poke into ImGuiStyle directly.\n// - Tip: Use your programming IDE navigation facilities on the names in the _second column_ below to find the actual members and their description.\n//   In Visual Studio IDE: CTRL+comma (\"Edit.GoToAll\") can follow symbols in comments, whereas CTRL+F12 (\"Edit.GoToImplementation\") cannot.\n//   With Visual Assist installed: ALT+G (\"VAssistX.GoToImplementation\") can also follow symbols in comments.\n// - When changing this enum, you need to update the associated internal table GStyleVarInfo[] accordingly. This is where we link enum values to members offset/type."
+      "prevcomments": "// Enumeration for PushStyleVar() / PopStyleVar() to temporarily modify the ImGuiStyle structure.\n// - The enum only refers to fields of ImGuiStyle which makes sense to be pushed/popped inside UI code.\n//   During initialization or between frames, feel free to just poke into ImGuiStyle directly.\n// - Tip: Use your programming IDE navigation facilities on the names in the _second column_ below to find the actual members and their description.\n//   In Visual Studio IDE: CTRL+comma (\"Edit.GoToAll\") can follow symbols in comments, whereas CTRL+F12 (\"Edit.GoToImplementation\") cannot.\n//   With Visual Assist installed: ALT+G (\"VAssistX.GoToImplementation\") can also follow symbols in comments.\n// - When changing this enum, you need to update the associated internal table GStyleVarInfo[] accordingly. This is where we link enum values to members offset/type."
     },
     "ImGuiTabBarFlagsPrivate_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Tab bar, Tab item support\n//-----------------------------------------------------------------------------\n// Extend ImGuiTabBarFlags_"
+      "prevcomments": "// Extend ImGuiTabBarFlags_"
     },
     "ImGuiTabBarFlags_": {
-      "prevcomments": "\n// Flags for ImGui::BeginTabBar()"
+      "prevcomments": "// Flags for ImGui::BeginTabBar()"
     },
     "ImGuiTabItemFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiTabItemFlags_"
+      "prevcomments": "// Extend ImGuiTabItemFlags_"
     },
     "ImGuiTabItemFlags_": {
-      "prevcomments": "\n// Flags for ImGui::BeginTabItem()"
+      "prevcomments": "// Flags for ImGui::BeginTabItem()"
     },
     "ImGuiTableBgTarget_": {
-      "prevcomments": "\n// Enum for ImGui::TableSetBgColor()\n// Background colors are rendering in 3 layers:\n//  - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.\n//  - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.\n//  - Layer 2: draw with CellBg color if set.\n// The purpose of the two row/columns layers is to let you decide if a background color changes should override or blend with the existing color.\n// When using ImGuiTableFlags_RowBg on the table, each row has the RowBg0 color automatically set for odd/even rows.\n// If you set the color of RowBg0 target, your color will override the existing RowBg0 color.\n// If you set the color of RowBg1 or ColumnBg1 target, your color will blend over the RowBg0 color."
+      "prevcomments": "// Enum for ImGui::TableSetBgColor()\n// Background colors are rendering in 3 layers:\n//  - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.\n//  - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.\n//  - Layer 2: draw with CellBg color if set.\n// The purpose of the two row/columns layers is to let you decide if a background color changes should override or blend with the existing color.\n// When using ImGuiTableFlags_RowBg on the table, each row has the RowBg0 color automatically set for odd/even rows.\n// If you set the color of RowBg0 target, your color will override the existing RowBg0 color.\n// If you set the color of RowBg1 or ColumnBg1 target, your color will blend over the RowBg0 color."
     },
     "ImGuiTableColumnFlags_": {
-      "prevcomments": "\n// Flags for ImGui::TableSetupColumn()"
+      "prevcomments": "// Flags for ImGui::TableSetupColumn()"
     },
     "ImGuiTableFlags_": {
-      "prevcomments": "\n// Flags for ImGui::BeginTable()\n// - Important! Sizing policies have complex and subtle side effects, much more so than you would expect.\n//   Read comments/demos carefully + experiment with live demos to get acquainted with them.\n// - The DEFAULT sizing policies are:\n//    - Default to ImGuiTableFlags_SizingFixedFit    if ScrollX is on, or if host window has ImGuiWindowFlags_AlwaysAutoResize.\n//    - Default to ImGuiTableFlags_SizingStretchSame if ScrollX is off.\n// - When ScrollX is off:\n//    - Table defaults to ImGuiTableFlags_SizingStretchSame -> all Columns defaults to ImGuiTableColumnFlags_WidthStretch with same weight.\n//    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.\n//    - Fixed Columns (if any) will generally obtain their requested width (unless the table cannot fit them all).\n//    - Stretch Columns will share the remaining width according to their respective weight.\n//    - Mixed Fixed/Stretch columns is possible but has various side-effects on resizing behaviors.\n//      The typical use of mixing sizing policies is: any number of LEADING Fixed columns, followed by one or two TRAILING Stretch columns.\n//      (this is because the visible order of columns have subtle but necessary effects on how they react to manual resizing).\n// - When ScrollX is on:\n//    - Table defaults to ImGuiTableFlags_SizingFixedFit -> all Columns defaults to ImGuiTableColumnFlags_WidthFixed\n//    - Columns sizing policy allowed: Fixed/Auto mostly.\n//    - Fixed Columns can be enlarged as needed. Table will show an horizontal scrollbar if needed.\n//    - When using auto-resizing (non-resizable) fixed columns, querying the content width to use item right-alignment e.g. SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.\n//    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on, UNLESS you have specified a value for 'inner_width' in BeginTable().\n//      If you specify a value for 'inner_width' then effectively the scrolling space is known and Stretch or mixed Fixed/Stretch columns become meaningful again.\n// - Read on documentation at the top of imgui_tables.cpp for details."
+      "prevcomments": "// Flags for ImGui::BeginTable()\n// - Important! Sizing policies have complex and subtle side effects, much more so than you would expect.\n//   Read comments/demos carefully + experiment with live demos to get acquainted with them.\n// - The DEFAULT sizing policies are:\n//    - Default to ImGuiTableFlags_SizingFixedFit    if ScrollX is on, or if host window has ImGuiWindowFlags_AlwaysAutoResize.\n//    - Default to ImGuiTableFlags_SizingStretchSame if ScrollX is off.\n// - When ScrollX is off:\n//    - Table defaults to ImGuiTableFlags_SizingStretchSame -> all Columns defaults to ImGuiTableColumnFlags_WidthStretch with same weight.\n//    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.\n//    - Fixed Columns (if any) will generally obtain their requested width (unless the table cannot fit them all).\n//    - Stretch Columns will share the remaining width according to their respective weight.\n//    - Mixed Fixed/Stretch columns is possible but has various side-effects on resizing behaviors.\n//      The typical use of mixing sizing policies is: any number of LEADING Fixed columns, followed by one or two TRAILING Stretch columns.\n//      (this is because the visible order of columns have subtle but necessary effects on how they react to manual resizing).\n// - When ScrollX is on:\n//    - Table defaults to ImGuiTableFlags_SizingFixedFit -> all Columns defaults to ImGuiTableColumnFlags_WidthFixed\n//    - Columns sizing policy allowed: Fixed/Auto mostly.\n//    - Fixed Columns can be enlarged as needed. Table will show an horizontal scrollbar if needed.\n//    - When using auto-resizing (non-resizable) fixed columns, querying the content width to use item right-alignment e.g. SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.\n//    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on, UNLESS you have specified a value for 'inner_width' in BeginTable().\n//      If you specify a value for 'inner_width' then effectively the scrolling space is known and Stretch or mixed Fixed/Stretch columns become meaningful again.\n// - Read on documentation at the top of imgui_tables.cpp for details."
     },
     "ImGuiTableRowFlags_": {
-      "prevcomments": "\n// Flags for ImGui::TableNextRow()"
+      "prevcomments": "// Flags for ImGui::TableNextRow()"
     },
     "ImGuiTextFlags_": [],
     "ImGuiTooltipFlags_": [],
     "ImGuiTreeNodeFlagsPrivate_": {
-      "prevcomments": "\n// Extend ImGuiTreeNodeFlags_"
+      "prevcomments": "// Extend ImGuiTreeNodeFlags_"
     },
     "ImGuiTreeNodeFlags_": {
-      "prevcomments": "\n// Flags for ImGui::TreeNodeEx(), ImGui::CollapsingHeader*()"
+      "prevcomments": "// Flags for ImGui::TreeNodeEx(), ImGui::CollapsingHeader*()"
     },
     "ImGuiViewportFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Viewports\n//-----------------------------------------------------------------------------\n// Flags stored in ImGuiViewport::Flags, giving indications to the platform backends."
+      "prevcomments": "// Flags stored in ImGuiViewport::Flags, giving indications to the platform backends."
     },
     "ImGuiWindowDockStyleCol": {
-      "prevcomments": "\n// List of colors that are stored at the time of Begin() into Docked Windows.\n// We currently store the packed colors in a simple array window->DockStyle.Colors[].\n// A better solution may involve appending into a log of colors in ImGuiContext + store offsets into those arrays in ImGuiWindow,\n// but it would be more complex as we'd need to double-buffer both as e.g. drop target may refer to window from last frame."
+      "prevcomments": "// List of colors that are stored at the time of Begin() into Docked Windows.\n// We currently store the packed colors in a simple array window->DockStyle.Colors[].\n// A better solution may involve appending into a log of colors in ImGuiContext + store offsets into those arrays in ImGuiWindow,\n// but it would be more complex as we'd need to double-buffer both as e.g. drop target may refer to window from last frame."
     },
     "ImGuiWindowFlags_": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Flags & Enumerations\n//-----------------------------------------------------------------------------\n// Flags for ImGui::Begin()"
+      "prevcomments": "// Flags for ImGui::Begin()"
     }
   },
   "enums": {
@@ -5182,77 +5178,71 @@
   },
   "struct_comments": {
     "ImBitVector": {
-      "prevcomments": "\n// Helper: ImBitVector\n// Store 1-bit per value."
+      "prevcomments": "// Helper: ImBitVector\n// Store 1-bit per value."
     },
     "ImColor": {
-      "prevcomments": "\n// Helpers macros to generate 32-bit encoded colors\n// User can declare their own format by #defining the 5 _SHIFT/_MASK macros in their imconfig file.\n// Helper: ImColor() implicitly converts colors to either ImU32 (packed 4x1 byte) or ImVec4 (4x1 float)\n// Prefer using IM_COL32() macros if you want a guaranteed compile-time ImU32 for usage with ImDrawList API.\n// **Avoid storing ImColor! Store either u32 of ImVec4. This is not a full-featured color class. MAY OBSOLETE.\n// **None of the ImGui API are using ImColor directly but you can use it as a convenience to pass colors in either ImU32 or ImVec4 formats. Explicitly cast to ImU32 or ImVec4 if needed."
+      "prevcomments": "// Helpers macros to generate 32-bit encoded colors\n// User can declare their own format by #defining the 5 _SHIFT/_MASK macros in their imconfig file.\n// Helper: ImColor() implicitly converts colors to either ImU32 (packed 4x1 byte) or ImVec4 (4x1 float)\n// Prefer using IM_COL32() macros if you want a guaranteed compile-time ImU32 for usage with ImDrawList API.\n// **Avoid storing ImColor! Store either u32 of ImVec4. This is not a full-featured color class. MAY OBSOLETE.\n// **None of the ImGui API are using ImColor directly but you can use it as a convenience to pass colors in either ImU32 or ImVec4 formats. Explicitly cast to ImU32 or ImVec4 if needed."
     },
     "ImDrawChannel": {
-      "prevcomments": "\n// [Internal] For use by ImDrawListSplitter"
+      "prevcomments": "// [Internal] For use by ImDrawListSplitter"
     },
     "ImDrawCmd": {
-      "prevcomments": "\n// Special Draw callback value to request renderer backend to reset the graphics/render state.\n// The renderer backend needs to handle this special value, otherwise it will crash trying to call a function at this address.\n// This is useful for example if you submitted callbacks which you know have altered the render state and you want it to be restored.\n// It is not done by default because they are many perfectly useful way of altering render state for imgui contents (e.g. changing shader/blending settings before an Image call).\n// Typically, 1 command = 1 GPU draw call (unless command is a callback)\n// - VtxOffset: When 'io.BackendFlags & ImGuiBackendFlags_RendererHasVtxOffset' is enabled,\n//   this fields allow us to render meshes larger than 64K vertices while keeping 16-bit indices.\n//   Backends made for <1.71. will typically ignore the VtxOffset fields.\n// - The ClipRect/TextureId/VtxOffset fields must be contiguous as we memcmp() them together (this is asserted for)."
+      "prevcomments": "// Typically, 1 command = 1 GPU draw call (unless command is a callback)\n// - VtxOffset: When 'io.BackendFlags & ImGuiBackendFlags_RendererHasVtxOffset' is enabled,\n//   this fields allow us to render meshes larger than 64K vertices while keeping 16-bit indices.\n//   Backends made for <1.71. will typically ignore the VtxOffset fields.\n// - The ClipRect/TextureId/VtxOffset fields must be contiguous as we memcmp() them together (this is asserted for)."
     },
     "ImDrawCmdHeader": {
       "prevcomments": "\n// [Internal] For use by ImDrawList"
     },
     "ImDrawData": {
-      "prevcomments": "\n// All draw data to render a Dear ImGui frame\n// (NB: the style and the naming convention here is a little inconsistent, we currently preserve them for backward compatibility purpose,\n// as this is one of the oldest structure exposed by the library! Basically, ImDrawList == CmdList)"
+      "prevcomments": "// All draw data to render a Dear ImGui frame\n// (NB: the style and the naming convention here is a little inconsistent, we currently preserve them for backward compatibility purpose,\n// as this is one of the oldest structure exposed by the library! Basically, ImDrawList == CmdList)"
     },
     "ImDrawDataBuilder": [],
     "ImDrawList": {
-      "prevcomments": "\n// Draw command list\n// This is the low-level list of polygons that ImGui:: functions are filling. At the end of the frame,\n// all command lists are passed to your ImGuiIO::RenderDrawListFn function for rendering.\n// Each dear imgui window contains its own ImDrawList. You can use ImGui::GetWindowDrawList() to\n// access the current window draw list and draw custom primitives.\n// You can interleave normal ImGui:: calls and adding primitives to the current draw list.\n// In single viewport mode, top-left is == GetMainViewport()->Pos (generally 0,0), bottom-right is == GetMainViewport()->Pos+Size (generally io.DisplaySize).\n// You are totally free to apply whatever transformation matrix to want to the data (depending on the use of the transformation you may want to apply it to ClipRect as well!)\n// Important: Primitives are always added to the list and not culled (culling is done at higher-level by ImGui:: functions), if you use this API a lot consider coarse culling your drawn objects."
+      "prevcomments": "// Draw command list\n// This is the low-level list of polygons that ImGui:: functions are filling. At the end of the frame,\n// all command lists are passed to your ImGuiIO::RenderDrawListFn function for rendering.\n// Each dear imgui window contains its own ImDrawList. You can use ImGui::GetWindowDrawList() to\n// access the current window draw list and draw custom primitives.\n// You can interleave normal ImGui:: calls and adding primitives to the current draw list.\n// In single viewport mode, top-left is == GetMainViewport()->Pos (generally 0,0), bottom-right is == GetMainViewport()->Pos+Size (generally io.DisplaySize).\n// You are totally free to apply whatever transformation matrix to want to the data (depending on the use of the transformation you may want to apply it to ClipRect as well!)\n// Important: Primitives are always added to the list and not culled (culling is done at higher-level by ImGui:: functions), if you use this API a lot consider coarse culling your drawn objects."
     },
     "ImDrawListSharedData": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImDrawList support\n//-----------------------------------------------------------------------------\n// ImDrawList: Helper function to calculate a circle's segment count given its radius and a \"maximum error\" value.\n// Estimation of number of circle segment based on error is derived using method described in https://stackoverflow.com/a/2244088/15194693\n// Number of segments (N) is calculated using equation:\n//   N = ceil ( pi / acos(1 - error / r) )     where r > 0, error <= r\n// Our equation is significantly simpler that one in the post thanks for choosing segment that is\n// perpendicular to X axis. Follow steps in the article from this starting condition and you will\n// will get this result.\n//\n// Rendering circles with an odd number of segments, while mathematically correct will produce\n// asymmetrical results on the raster grid. Therefore we're rounding N to next even number (7->8, 8->8, 9->10 etc.)\n// Raw equation from IM_DRAWLIST_CIRCLE_AUTO_SEGMENT_CALC rewritten for 'r' and 'error'.\n// ImDrawList: Lookup table size for adaptive arc drawing, cover full circle.\n// Data shared between all ImDrawList instances\n// You may want to create your own instance of this if you want to use ImDrawList completely without ImGui. In that case, watch out for future changes to this structure."
+      "prevcomments": "// Data shared between all ImDrawList instances\n// You may want to create your own instance of this if you want to use ImDrawList completely without ImGui. In that case, watch out for future changes to this structure."
     },
     "ImDrawListSplitter": {
-      "prevcomments": "\n// Split/Merge functions are used to split the draw list into different layers which can be drawn into out of order.\n// This is used by the Columns/Tables API, so items of each column can be batched together in a same draw call."
+      "prevcomments": "// Split/Merge functions are used to split the draw list into different layers which can be drawn into out of order.\n// This is used by the Columns/Tables API, so items of each column can be batched together in a same draw call."
     },
-    "ImDrawVert": {
-      "prevcomments": "\n// Vertex layout"
-    },
+    "ImDrawVert": [],
     "ImFont": {
-      "prevcomments": "\n// Font runtime data and rendering\n// ImFontAtlas automatically loads a default embedded font for you when you call GetTexDataAsAlpha8() or GetTexDataAsRGBA32()."
+      "prevcomments": "// Font runtime data and rendering\n// ImFontAtlas automatically loads a default embedded font for you when you call GetTexDataAsAlpha8() or GetTexDataAsRGBA32()."
     },
     "ImFontAtlas": {
-      "prevcomments": "\n// Load and rasterize multiple TTF/OTF fonts into a same texture. The font atlas will build a single texture holding:\n//  - One or more fonts.\n//  - Custom graphics data needed to render the shapes needed by Dear ImGui.\n//  - Mouse cursor shapes for software cursor rendering (unless setting 'Flags |= ImFontAtlasFlags_NoMouseCursors' in the font atlas).\n// It is the user-code responsibility to setup/build the atlas, then upload the pixel data into a texture accessible by your graphics api.\n//  - Optionally, call any of the AddFont*** functions. If you don't call any, the default font embedded in the code will be loaded for you.\n//  - Call GetTexDataAsAlpha8() or GetTexDataAsRGBA32() to build and retrieve pixels data.\n//  - Upload the pixels data into a texture within your graphics system (see imgui_impl_xxxx.cpp examples)\n//  - Call SetTexID(my_tex_id); and pass the pointer/identifier to your texture in a format natural to your graphics API.\n//    This value will be passed back to you during rendering to identify the texture. Read FAQ entry about ImTextureID for more details.\n// Common pitfalls:\n// - If you pass a 'glyph_ranges' array to AddFont*** functions, you need to make sure that your array persist up until the\n//   atlas is build (when calling GetTexData*** or Build()). We only copy the pointer, not the data.\n// - Important: By default, AddFontFromMemoryTTF() takes ownership of the data. Even though we are not writing to it, we will free the pointer on destruction.\n//   You can set font_cfg->FontDataOwnedByAtlas=false to keep ownership of your data and it won't be freed,\n// - Even though many functions are suffixed with \"TTF\", OTF data is supported just as well.\n// - This is an old API and it is currently awkward for those and and various other reasons! We will address them in the future!"
+      "prevcomments": "// Load and rasterize multiple TTF/OTF fonts into a same texture. The font atlas will build a single texture holding:\n//  - One or more fonts.\n//  - Custom graphics data needed to render the shapes needed by Dear ImGui.\n//  - Mouse cursor shapes for software cursor rendering (unless setting 'Flags |= ImFontAtlasFlags_NoMouseCursors' in the font atlas).\n// It is the user-code responsibility to setup/build the atlas, then upload the pixel data into a texture accessible by your graphics api.\n//  - Optionally, call any of the AddFont*** functions. If you don't call any, the default font embedded in the code will be loaded for you.\n//  - Call GetTexDataAsAlpha8() or GetTexDataAsRGBA32() to build and retrieve pixels data.\n//  - Upload the pixels data into a texture within your graphics system (see imgui_impl_xxxx.cpp examples)\n//  - Call SetTexID(my_tex_id); and pass the pointer/identifier to your texture in a format natural to your graphics API.\n//    This value will be passed back to you during rendering to identify the texture. Read FAQ entry about ImTextureID for more details.\n// Common pitfalls:\n// - If you pass a 'glyph_ranges' array to AddFont*** functions, you need to make sure that your array persist up until the\n//   atlas is build (when calling GetTexData*** or Build()). We only copy the pointer, not the data.\n// - Important: By default, AddFontFromMemoryTTF() takes ownership of the data. Even though we are not writing to it, we will free the pointer on destruction.\n//   You can set font_cfg->FontDataOwnedByAtlas=false to keep ownership of your data and it won't be freed,\n// - Even though many functions are suffixed with \"TTF\", OTF data is supported just as well.\n// - This is an old API and it is currently awkward for those and and various other reasons! We will address them in the future!"
     },
     "ImFontAtlasCustomRect": {
-      "prevcomments": "\n// See ImFontAtlas::AddCustomRectXXX functions."
+      "prevcomments": "// See ImFontAtlas::AddCustomRectXXX functions."
     },
     "ImFontBuilderIO": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImFontAtlas internal API\n//-----------------------------------------------------------------------------\n// This structure is likely to evolve as we add support for incremental atlas updates"
+      "prevcomments": "// This structure is likely to evolve as we add support for incremental atlas updates"
     },
-    "ImFontConfig": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Font API (ImFontConfig, ImFontGlyph, ImFontAtlasFlags, ImFontAtlas, ImFontGlyphRangesBuilder, ImFont)\n//-----------------------------------------------------------------------------"
-    },
+    "ImFontConfig": [],
     "ImFontGlyph": {
-      "prevcomments": "\n// Hold rendering data for one glyph.\n// (Note: some language parsers may fail to convert the 31+1 bitfield members, in this case maybe drop store a single u32 or we can rework this)"
+      "prevcomments": "// Hold rendering data for one glyph.\n// (Note: some language parsers may fail to convert the 31+1 bitfield members, in this case maybe drop store a single u32 or we can rework this)"
     },
     "ImFontGlyphRangesBuilder": {
-      "prevcomments": "\n// Helper to build glyph ranges from text/string data. Feed your application strings/characters to it then call BuildRanges().\n// This is essentially a tightly packed of vector of 64k booleans = 8KB storage."
+      "prevcomments": "// Helper to build glyph ranges from text/string data. Feed your application strings/characters to it then call BuildRanges().\n// This is essentially a tightly packed of vector of 64k booleans = 8KB storage."
     },
     "ImGuiColorMod": {
-      "prevcomments": "\n// Stacked color modifier, backup of modified data so we can restore it"
+      "prevcomments": "// Stacked color modifier, backup of modified data so we can restore it"
     },
     "ImGuiComboPreviewData": {
-      "prevcomments": "\n// Storage data for BeginComboPreview()/EndComboPreview()"
+      "prevcomments": "// Storage data for BeginComboPreview()/EndComboPreview()"
     },
-    "ImGuiContext": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImGuiContext (main Dear ImGui context)\n//-----------------------------------------------------------------------------"
-    },
+    "ImGuiContext": [],
     "ImGuiContextHook": [],
     "ImGuiDataTypeInfo": {
-      "prevcomments": "\n// Type information associated to one ImGuiDataType. Retrieve with DataTypeGetInfo()."
+      "prevcomments": "// Type information associated to one ImGuiDataType. Retrieve with DataTypeGetInfo()."
     },
     "ImGuiDataTypeTempStorage": [],
     "ImGuiDockContext": [],
     "ImGuiDockNode": {
-      "prevcomments": "\n// sizeof() 156~192"
+      "prevcomments": "// sizeof() 156~192"
     },
     "ImGuiGroupData": {
-      "prevcomments": "\n// Stacked storage data for BeginGroup()/EndGroup()"
+      "prevcomments": "// Stacked storage data for BeginGroup()/EndGroup()"
     },
     "ImGuiIO": [],
     "ImGuiInputEvent": [],
@@ -5260,169 +5250,161 @@
     "ImGuiInputEventKey": [],
     "ImGuiInputEventMouseButton": [],
     "ImGuiInputEventMousePos": {
-      "prevcomments": "\n// FIXME: Structures in the union below need to be declared as anonymous unions appears to be an extension?\n// Using ImVec2() would fail on Clang 'union member 'MousePos' has a non-trivial default constructor'"
+      "prevcomments": "// FIXME: Structures in the union below need to be declared as anonymous unions appears to be an extension?\n// Using ImVec2() would fail on Clang 'union member 'MousePos' has a non-trivial default constructor'"
     },
     "ImGuiInputEventMouseViewport": [],
     "ImGuiInputEventMouseWheel": [],
     "ImGuiInputEventText": [],
     "ImGuiInputTextCallbackData": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Misc data structures\n//-----------------------------------------------------------------------------\n// Shared state of InputText(), passed as an argument to your callback when a ImGuiInputTextFlags_Callback* flag is used.\n// The callback function should return 0 by default.\n// Callbacks (follow a flag name and see comments in ImGuiInputTextFlags_ declarations for more details)\n// - ImGuiInputTextFlags_CallbackEdit:        Callback on buffer edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)\n// - ImGuiInputTextFlags_CallbackAlways:      Callback on each iteration\n// - ImGuiInputTextFlags_CallbackCompletion:  Callback on pressing TAB\n// - ImGuiInputTextFlags_CallbackHistory:     Callback on pressing Up/Down arrows\n// - ImGuiInputTextFlags_CallbackCharFilter:  Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.\n// - ImGuiInputTextFlags_CallbackResize:      Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow."
+      "prevcomments": "// Shared state of InputText(), passed as an argument to your callback when a ImGuiInputTextFlags_Callback* flag is used.\n// The callback function should return 0 by default.\n// Callbacks (follow a flag name and see comments in ImGuiInputTextFlags_ declarations for more details)\n// - ImGuiInputTextFlags_CallbackEdit:        Callback on buffer edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)\n// - ImGuiInputTextFlags_CallbackAlways:      Callback on each iteration\n// - ImGuiInputTextFlags_CallbackCompletion:  Callback on pressing TAB\n// - ImGuiInputTextFlags_CallbackHistory:     Callback on pressing Up/Down arrows\n// - ImGuiInputTextFlags_CallbackCharFilter:  Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.\n// - ImGuiInputTextFlags_CallbackResize:      Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow."
     },
     "ImGuiInputTextState": {
-      "prevcomments": "\n// Internal state of the currently focused/edited text input box\n// For a given item ID, access with ImGui::GetInputTextState()"
+      "prevcomments": "// Internal state of the currently focused/edited text input box\n// For a given item ID, access with ImGui::GetInputTextState()"
     },
     "ImGuiKeyData": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImGuiIO\n//-----------------------------------------------------------------------------\n// Communicate most settings and inputs/outputs to Dear ImGui using this structure.\n// Access via ImGui::GetIO(). Read 'Programmer guide' section in .cpp file for general usage.\n//-----------------------------------------------------------------------------\n// [Internal] Storage used by IsKeyDown(), IsKeyPressed() etc functions.\n// If prior to 1.87 you used io.KeysDownDuration[] (which was marked as internal), you should use GetKeyData(key)->DownDuration and not io.KeysData[key]->DownDuration."
+      "prevcomments": "// [Internal] Storage used by IsKeyDown(), IsKeyPressed() etc functions.\n// If prior to 1.87 you used io.KeysDownDuration[] (which was marked as internal), you should use GetKeyData(key)->DownDuration and not io.KeysData[key]->DownDuration."
     },
     "ImGuiLastItemData": {
-      "prevcomments": "\n// Status storage for the last submitted item"
+      "prevcomments": "// Status storage for the last submitted item"
     },
     "ImGuiListClipper": {
-      "prevcomments": "\n// Helper: Manually clip large list of items.\n// If you have lots evenly spaced items and you have a random access to the list, you can perform coarse\n// clipping based on visibility to only submit items that are in view.\n// The clipper calculates the range of visible items and advance the cursor to compensate for the non-visible items we have skipped.\n// (Dear ImGui already clip items based on their bounds but: it needs to first layout the item to do so, and generally\n//  fetching/submitting your own data incurs additional cost. Coarse clipping using ImGuiListClipper allows you to easily\n//  scale using lists with tens of thousands of items without a problem)\n// Usage:\n//   ImGuiListClipper clipper;\n//   clipper.Begin(1000);         // We have 1000 elements, evenly spaced.\n//   while (clipper.Step())\n//       for (int i = clipper.DisplayStart; i < clipper.DisplayEnd; i++)\n//           ImGui::Text(\"line number %d\", i);\n// Generally what happens is:\n// - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1) regardless of it being visible or not.\n// - User code submit that one element.\n// - Clipper can measure the height of the first element\n// - Clipper calculate the actual range of elements to display based on the current clipping rectangle, position the cursor before the first visible element.\n// - User code submit visible elements.\n// - The clipper also handles various subtleties related to keyboard/gamepad navigation, wrapping etc."
+      "prevcomments": "// Helper: Manually clip large list of items.\n// If you have lots evenly spaced items and you have a random access to the list, you can perform coarse\n// clipping based on visibility to only submit items that are in view.\n// The clipper calculates the range of visible items and advance the cursor to compensate for the non-visible items we have skipped.\n// (Dear ImGui already clip items based on their bounds but: it needs to first layout the item to do so, and generally\n//  fetching/submitting your own data incurs additional cost. Coarse clipping using ImGuiListClipper allows you to easily\n//  scale using lists with tens of thousands of items without a problem)\n// Usage:\n//   ImGuiListClipper clipper;\n//   clipper.Begin(1000);         // We have 1000 elements, evenly spaced.\n//   while (clipper.Step())\n//       for (int i = clipper.DisplayStart; i < clipper.DisplayEnd; i++)\n//           ImGui::Text(\"line number %d\", i);\n// Generally what happens is:\n// - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1) regardless of it being visible or not.\n// - User code submit that one element.\n// - Clipper can measure the height of the first element\n// - Clipper calculate the actual range of elements to display based on the current clipping rectangle, position the cursor before the first visible element.\n// - User code submit visible elements.\n// - The clipper also handles various subtleties related to keyboard/gamepad navigation, wrapping etc."
     },
     "ImGuiListClipperData": {
-      "prevcomments": "\n// Temporary clipper data, buffers shared/reused between instances"
+      "prevcomments": "// Temporary clipper data, buffers shared/reused between instances"
     },
-    "ImGuiListClipperRange": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Clipper support\n//-----------------------------------------------------------------------------"
-    },
+    "ImGuiListClipperRange": [],
     "ImGuiMenuColumns": {
-      "prevcomments": "\n// Simple column measurement, currently used for MenuItem() only.. This is very short-sighted/throw-away code and NOT a generic helper."
+      "prevcomments": "// Simple column measurement, currently used for MenuItem() only.. This is very short-sighted/throw-away code and NOT a generic helper."
     },
     "ImGuiMetricsConfig": [],
     "ImGuiNavItemData": [],
     "ImGuiNextItemData": [],
     "ImGuiNextWindowData": {
-      "prevcomments": "\n// Storage for SetNexWindow** functions"
+      "prevcomments": "// Storage for SetNexWindow** functions"
     },
     "ImGuiOldColumnData": [],
     "ImGuiOldColumns": [],
     "ImGuiOnceUponAFrame": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Helpers (ImGuiOnceUponAFrame, ImGuiTextFilter, ImGuiTextBuffer, ImGuiStorage, ImGuiListClipper, ImColor)\n//-----------------------------------------------------------------------------\n// Helper: Unicode defines\n// Helper: Execute a block of code at maximum once a frame. Convenient if you want to quickly create an UI within deep-nested code that runs multiple times every frame.\n// Usage: static ImGuiOnceUponAFrame oaf; if (oaf) ImGui::Text(\"This will be called only once per frame\");"
+      "prevcomments": "// Helper: Execute a block of code at maximum once a frame. Convenient if you want to quickly create an UI within deep-nested code that runs multiple times every frame.\n// Usage: static ImGuiOnceUponAFrame oaf; if (oaf) ImGui::Text(\"This will be called only once per frame\");"
     },
     "ImGuiPayload": {
-      "prevcomments": "\n// Data payload for Drag and Drop operations: AcceptDragDropPayload(), GetDragDropPayload()"
+      "prevcomments": "// Data payload for Drag and Drop operations: AcceptDragDropPayload(), GetDragDropPayload()"
     },
     "ImGuiPlatformIO": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Platform Dependent Interfaces (for e.g. multi-viewport support)\n//-----------------------------------------------------------------------------\n// [BETA] (Optional) This is completely optional, for advanced users!\n// If you are new to Dear ImGui and trying to integrate it into your engine, you can probably ignore this for now.\n//\n// This feature allows you to seamlessly drag Dear ImGui windows outside of your application viewport.\n// This is achieved by creating new Platform/OS windows on the fly, and rendering into them.\n// Dear ImGui manages the viewport structures, and the backend create and maintain one Platform/OS window for each of those viewports.\n//\n// See Glossary https://github.com/ocornut/imgui/wiki/Glossary for details about some of the terminology.\n// See Thread https://github.com/ocornut/imgui/issues/1542 for gifs, news and questions about this evolving feature.\n//\n// About the coordinates system:\n// - When multi-viewports are enabled, all Dear ImGui coordinates become absolute coordinates (same as OS coordinates!)\n// - So e.g. ImGui::SetNextWindowPos(ImVec2(0,0)) will position a window relative to your primary monitor!\n// - If you want to position windows relative to your main application viewport, use ImGui::GetMainViewport()->Pos as a base position.\n//\n// Steps to use multi-viewports in your application, when using a default backend from the examples/ folder:\n// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\n// - Backend:      The backend initialization will setup all necessary ImGuiPlatformIO's functions and update monitors info every frame.\n// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\n// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\n//\n// Steps to use multi-viewports in your application, when using a custom backend:\n// - Important:    THIS IS NOT EASY TO DO and comes with many subtleties not described here!\n//                 It's also an experimental feature, so some of the requirements may evolve.\n//                 Consider using default backends if you can. Either way, carefully follow and refer to examples/ backends for details.\n// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\n// - Backend:      Hook ImGuiPlatformIO's Platform_* and Renderer_* callbacks (see below).\n//                 Set 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports' and 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports'.\n//                 Update ImGuiPlatformIO's Monitors list every frame.\n//                 Update MousePos every frame, in absolute coordinates.\n// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\n//                 You may skip calling RenderPlatformWindowsDefault() if its API is not convenient for your needs. Read comments below.\n// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\n//\n// About ImGui::RenderPlatformWindowsDefault():\n// - This function is a mostly a _helper_ for the common-most cases, and to facilitate using default backends.\n// - You can check its simple source code to understand what it does.\n//   It basically iterates secondary viewports and call 4 functions that are setup in ImGuiPlatformIO, if available:\n//     Platform_RenderWindow(), Renderer_RenderWindow(), Platform_SwapBuffers(), Renderer_SwapBuffers()\n//   Those functions pointers exists only for the benefit of RenderPlatformWindowsDefault().\n// - If you have very specific rendering needs (e.g. flipping multiple swap-chain simultaneously, unusual sync/threading issues, etc.),\n//   you may be tempted to ignore RenderPlatformWindowsDefault() and write customized code to perform your renderingg.\n//   You may decide to setup the platform_io's *RenderWindow and *SwapBuffers pointers and call your functions through those pointers,\n//   or you may decide to never setup those pointers and call your code directly. They are a convenience, not an obligatory interface.\n//-----------------------------------------------------------------------------\n// (Optional) Access via ImGui::GetPlatformIO()"
+      "prevcomments": "// (Optional) Access via ImGui::GetPlatformIO()"
     },
     "ImGuiPlatformImeData": {
-      "prevcomments": "\n// (Optional) Support for IME (Input Method Editor) via the io.SetPlatformImeDataFn() function."
+      "prevcomments": "// (Optional) Support for IME (Input Method Editor) via the io.SetPlatformImeDataFn() function."
     },
     "ImGuiPlatformMonitor": {
-      "prevcomments": "\n// (Optional) This is required when enabling multi-viewport. Represent the bounds of each connected monitor/display and their DPI.\n// We use this information for multiple DPI support + clamping the position of popups and tooltips so they don't straddle multiple monitors."
+      "prevcomments": "// (Optional) This is required when enabling multi-viewport. Represent the bounds of each connected monitor/display and their DPI.\n// We use this information for multiple DPI support + clamping the position of popups and tooltips so they don't straddle multiple monitors."
     },
     "ImGuiPopupData": {
-      "prevcomments": "\n// Storage for current popup stack"
+      "prevcomments": "// Storage for current popup stack"
     },
     "ImGuiPtrOrIndex": [],
     "ImGuiSettingsHandler": [],
     "ImGuiShrinkWidthItem": [],
     "ImGuiSizeCallbackData": {
-      "prevcomments": "\n// Resizing callback data to apply custom constraint. As enabled by SetNextWindowSizeConstraints(). Callback is called during the next Begin().\n// NB: For basic min/max size constraint on each axis you don't need to use the callback! The SetNextWindowSizeConstraints() parameters are enough."
+      "prevcomments": "// Resizing callback data to apply custom constraint. As enabled by SetNextWindowSizeConstraints(). Callback is called during the next Begin().\n// NB: For basic min/max size constraint on each axis you don't need to use the callback! The SetNextWindowSizeConstraints() parameters are enough."
     },
     "ImGuiStackLevelInfo": [],
     "ImGuiStackSizes": [],
     "ImGuiStackTool": {
-      "prevcomments": "\n// State for Stack tool queries"
+      "prevcomments": "// State for Stack tool queries"
     },
     "ImGuiStorage": {
-      "prevcomments": "\n// Helper: Key->Value storage\n// Typically you don't have to worry about this since a storage is held within each Window.\n// We use it to e.g. store collapse state for a tree (Int 0/1)\n// This is optimized for efficient lookup (dichotomy into a contiguous buffer) and rare insertion (typically tied to user interactions aka max once a frame)\n// You can use it as custom user storage for temporary values. Declare your own storage if, for example:\n// - You want to manipulate the open/close state of a particular sub-tree in your interface (tree node uses Int 0/1 to store their state).\n// - You want to store custom debug data easily without adding or editing structures in your code (probably not efficient, but convenient)\n// Types are NOT stored, so it is up to you to make sure your Key don't collide with different types."
+      "prevcomments": "// Helper: Key->Value storage\n// Typically you don't have to worry about this since a storage is held within each Window.\n// We use it to e.g. store collapse state for a tree (Int 0/1)\n// This is optimized for efficient lookup (dichotomy into a contiguous buffer) and rare insertion (typically tied to user interactions aka max once a frame)\n// You can use it as custom user storage for temporary values. Declare your own storage if, for example:\n// - You want to manipulate the open/close state of a particular sub-tree in your interface (tree node uses Int 0/1 to store their state).\n// - You want to store custom debug data easily without adding or editing structures in your code (probably not efficient, but convenient)\n// Types are NOT stored, so it is up to you to make sure your Key don't collide with different types."
     },
     "ImGuiStoragePair": {
       "prevcomments": "\n    // [Internal]"
     },
-    "ImGuiStyle": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImGuiStyle\n//-----------------------------------------------------------------------------\n// You may modify the ImGui::GetStyle() main instance during initialization and before NewFrame().\n// During the frame, use ImGui::PushStyleVar(ImGuiStyleVar_XXXX)/PopStyleVar() to alter the main style values,\n// and ImGui::PushStyleColor(ImGuiCol_XXX)/PopStyleColor() for colors.\n//-----------------------------------------------------------------------------"
-    },
+    "ImGuiStyle": [],
     "ImGuiStyleMod": {
-      "prevcomments": "\n// Stacked style modifier, backup of modified data so we can restore it. Data type inferred from the variable."
+      "prevcomments": "// Stacked style modifier, backup of modified data so we can restore it. Data type inferred from the variable."
     },
     "ImGuiTabBar": {
-      "prevcomments": "\n// Storage for a tab bar (sizeof() 152 bytes)"
+      "prevcomments": "// Storage for a tab bar (sizeof() 152 bytes)"
     },
     "ImGuiTabItem": {
-      "prevcomments": "\n// Storage for one active tab item (sizeof() 48 bytes)"
+      "prevcomments": "// Storage for one active tab item (sizeof() 48 bytes)"
     },
     "ImGuiTable": {
-      "prevcomments": "\n// FIXME-TABLE: more transient data could be stored in a per-stacked table structure: DrawSplitter, SortSpecs, incoming RowData"
+      "prevcomments": "// FIXME-TABLE: more transient data could be stored in a per-stacked table structure: DrawSplitter, SortSpecs, incoming RowData"
     },
     "ImGuiTableCellData": {
-      "prevcomments": "\n// Transient cell data stored per row.\n// sizeof() ~ 6"
+      "prevcomments": "// Transient cell data stored per row.\n// sizeof() ~ 6"
     },
     "ImGuiTableColumn": {
-      "prevcomments": "\n// [Internal] sizeof() ~ 104\n// We use the terminology \"Enabled\" to refer to a column that is not Hidden by user/api.\n// We use the terminology \"Clipped\" to refer to a column that is out of sight because of scrolling/clipping.\n// This is in contrast with some user-facing api such as IsItemVisible() / IsRectVisible() which use \"Visible\" to mean \"not clipped\"."
+      "prevcomments": "// [Internal] sizeof() ~ 104\n// We use the terminology \"Enabled\" to refer to a column that is not Hidden by user/api.\n// We use the terminology \"Clipped\" to refer to a column that is out of sight because of scrolling/clipping.\n// This is in contrast with some user-facing api such as IsItemVisible() / IsRectVisible() which use \"Visible\" to mean \"not clipped\"."
     },
     "ImGuiTableColumnSettings": {
-      "prevcomments": "\n// sizeof() ~ 12"
+      "prevcomments": "// sizeof() ~ 12"
     },
     "ImGuiTableColumnSortSpecs": {
-      "prevcomments": "\n// Sorting specification for one column of a table (sizeof == 12 bytes)"
+      "prevcomments": "// Sorting specification for one column of a table (sizeof == 12 bytes)"
     },
     "ImGuiTableInstanceData": {
-      "prevcomments": "\n// Per-instance data that needs preserving across frames (seemingly most others do not need to be preserved aside from debug needs, does that needs they could be moved to ImGuiTableTempData ?)"
+      "prevcomments": "// Per-instance data that needs preserving across frames (seemingly most others do not need to be preserved aside from debug needs, does that needs they could be moved to ImGuiTableTempData ?)"
     },
     "ImGuiTableSettings": {
-      "prevcomments": "\n// This is designed to be stored in a single ImChunkStream (1 header followed by N ImGuiTableColumnSettings, etc.)"
+      "prevcomments": "// This is designed to be stored in a single ImChunkStream (1 header followed by N ImGuiTableColumnSettings, etc.)"
     },
     "ImGuiTableSortSpecs": {
-      "prevcomments": "\n// Sorting specifications for a table (often handling sort specs for a single column, occasionally more)\n// Obtained by calling TableGetSortSpecs().\n// When 'SpecsDirty == true' you can sort your data. It will be true with sorting specs have changed since last call, or the first time.\n// Make sure to set 'SpecsDirty = false' after sorting, else you may wastefully sort your data every frame!"
+      "prevcomments": "// Sorting specifications for a table (often handling sort specs for a single column, occasionally more)\n// Obtained by calling TableGetSortSpecs().\n// When 'SpecsDirty == true' you can sort your data. It will be true with sorting specs have changed since last call, or the first time.\n// Make sure to set 'SpecsDirty = false' after sorting, else you may wastefully sort your data every frame!"
     },
     "ImGuiTableTempData": {
-      "prevcomments": "\n// Transient data that are only needed between BeginTable() and EndTable(), those buffers are shared (1 per level of stacked table).\n// - Accessing those requires chasing an extra pointer so for very frequently used data we leave them in the main table structure.\n// - We also leave out of this structure data that tend to be particularly useful for debugging/metrics."
+      "prevcomments": "// Transient data that are only needed between BeginTable() and EndTable(), those buffers are shared (1 per level of stacked table).\n// - Accessing those requires chasing an extra pointer so for very frequently used data we leave them in the main table structure.\n// - We also leave out of this structure data that tend to be particularly useful for debugging/metrics."
     },
     "ImGuiTextBuffer": {
-      "prevcomments": "\n// Helper: Growable text buffer for logging/accumulating text\n// (this could be called 'ImGuiTextBuilder' / 'ImGuiStringBuilder')"
+      "prevcomments": "// Helper: Growable text buffer for logging/accumulating text\n// (this could be called 'ImGuiTextBuilder' / 'ImGuiStringBuilder')"
     },
     "ImGuiTextFilter": {
-      "prevcomments": "\n// Helper: Parse and apply text filters. In format \"aaaaa[,bbbb][,ccccc]\""
+      "prevcomments": "// Helper: Parse and apply text filters. In format \"aaaaa[,bbbb][,ccccc]\""
     },
     "ImGuiTextRange": {
-      "prevcomments": "\n    // [Internal]"
+      "prevcomments": "    // [Internal]"
     },
     "ImGuiViewport": {
-      "prevcomments": "\n// - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\n// - With multi-viewport enabled, we extend this concept to have multiple active viewports.\n// - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode.\n// - About Main Area vs Work Area:\n//   - Main Area = entire viewport.\n//   - Work Area = entire viewport minus sections used by main menu bars (for platform windows), or by task bar (for platform monitor).\n//   - Windows are generally trying to stay within the Work Area of their host viewport."
+      "prevcomments": "// - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\n// - With multi-viewport enabled, we extend this concept to have multiple active viewports.\n// - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode.\n// - About Main Area vs Work Area:\n//   - Main Area = entire viewport.\n//   - Work Area = entire viewport minus sections used by main menu bars (for platform windows), or by task bar (for platform monitor).\n//   - Windows are generally trying to stay within the Work Area of their host viewport."
     },
     "ImGuiViewportP": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Viewport support\n//-----------------------------------------------------------------------------\n// ImGuiViewport Private/Internals fields (cardinal sin: we are using inheritance!)\n// Every instance of ImGuiViewport is in fact a ImGuiViewportP."
+      "prevcomments": "// ImGuiViewport Private/Internals fields (cardinal sin: we are using inheritance!)\n// Every instance of ImGuiViewport is in fact a ImGuiViewportP."
     },
     "ImGuiWindow": {
-      "prevcomments": "\n// Storage for one window"
+      "prevcomments": "// Storage for one window"
     },
     "ImGuiWindowClass": {
-      "prevcomments": "\n// [ALPHA] Rarely used / very advanced uses only. Use with SetNextWindowClass() and DockSpace() functions.\n// Important: the content of this class is still highly WIP and likely to change and be refactored\n// before we stabilize Docking features. Please be mindful if using this.\n// Provide hints:\n// - To the platform backend via altered viewport flags (enable/disable OS decoration, OS task bar icons, etc.)\n// - To the platform backend for OS level parent/child relationships of viewport.\n// - To the docking system for various options and filtering."
+      "prevcomments": "// [ALPHA] Rarely used / very advanced uses only. Use with SetNextWindowClass() and DockSpace() functions.\n// Important: the content of this class is still highly WIP and likely to change and be refactored\n// before we stabilize Docking features. Please be mindful if using this.\n// Provide hints:\n// - To the platform backend via altered viewport flags (enable/disable OS decoration, OS task bar icons, etc.)\n// - To the platform backend for OS level parent/child relationships of viewport.\n// - To the docking system for various options and filtering."
     },
     "ImGuiWindowDockStyle": [],
     "ImGuiWindowSettings": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] Settings support\n//-----------------------------------------------------------------------------\n// Windows data saved in imgui.ini file\n// Because we never destroy or rename ImGuiWindowSettings, we can store the names in a separate buffer easily.\n// (this is designed to be stored in a ImChunkStream buffer, with the variable-length Name following our structure)"
+      "prevcomments": "// Windows data saved in imgui.ini file\n// Because we never destroy or rename ImGuiWindowSettings, we can store the names in a separate buffer easily.\n// (this is designed to be stored in a ImChunkStream buffer, with the variable-length Name following our structure)"
     },
     "ImGuiWindowStackData": {
-      "prevcomments": "\n// Data saved for each window pushed into the stack"
+      "prevcomments": "// Data saved for each window pushed into the stack"
     },
     "ImGuiWindowTempData": {
-      "prevcomments": "\n//-----------------------------------------------------------------------------\n// [SECTION] ImGuiWindowTempData, ImGuiWindow\n//-----------------------------------------------------------------------------\n// Transient per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the DC variable name in ImGuiWindow.\n// (That's theory, in practice the delimitation between ImGuiWindow and ImGuiWindowTempData is quite tenuous and could be reconsidered..)\n// (This doesn't need a constructor because we zero-clear it as part of ImGuiWindow and all frame-temporary data are setup on Begin)"
+      "prevcomments": "// Transient per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the DC variable name in ImGuiWindow.\n// (That's theory, in practice the delimitation between ImGuiWindow and ImGuiWindowTempData is quite tenuous and could be reconsidered..)\n// (This doesn't need a constructor because we zero-clear it as part of ImGuiWindow and all frame-temporary data are setup on Begin)"
     },
     "ImRect": {
-      "prevcomments": "\n// Helper: ImRect (2D axis aligned bounding-box)\n// NB: we can't rely on ImVec2 math operators being available here!"
+      "prevcomments": "// Helper: ImRect (2D axis aligned bounding-box)\n// NB: we can't rely on ImVec2 math operators being available here!"
     },
-    "ImVec1": {
-      "prevcomments": "\n// Helper: ImVec1 (1D vector)\n// (this odd construct is used to facilitate the transition between 1D and 2D, and the maintenance of some branches/patches)"
-    },
-    "ImVec2": {
-      "prevcomments": "\n// ImVec2: 2D vector used to store positions, sizes etc. [Compile-time configurable type]\n// This is a frequently used type in the API. Consider using IM_VEC2_CLASS_EXTRA to create implicit cast from/to our preferred type."
-    },
+    "ImVec1": [],
+    "ImVec2": [],
     "ImVec2ih": {
-      "prevcomments": "\n// Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)"
+      "prevcomments": "// Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)"
     },
     "ImVec4": {
-      "prevcomments": "\n// ImVec4: 4D vector used to store clipping rectangles, colors etc. [Compile-time configurable type]"
+      "prevcomments": "// ImVec4: 4D vector used to store clipping rectangles, colors etc. [Compile-time configurable type]"
     },
     "STB_TexteditState": [],
     "StbTexteditRow": {
-      "prevcomments": "\n////////////////////////////////////////////////////////////////////////\n//\n//     StbTexteditRow\n//\n// Result of layout query, used by stb_textedit to determine where\n// the text in each row is.\n// result of layout query"
+      "prevcomments": "// result of layout query"
     },
     "StbUndoRecord": {
-      "prevcomments": "\n// [DEAR IMGUI]\n// This is a slightly modified version of stb_textedit.h 1.14.\n// Those changes would need to be pushed into nothings/stb:\n// - Fix in stb_textedit_discard_redo (see https://github.com/nothings/stb/issues/321)\n// Grep for [DEAR IMGUI] to find the changes.\n// stb_textedit.h - v1.14  - public domain - Sean Barrett\n// Development of this library was sponsored by RAD Game Tools\n//\n// This C header file implements the guts of a multi-line text-editing\n// widget; you implement display, word-wrapping, and low-level string\n// insertion/deletion, and stb_textedit will map user inputs into\n// insertions & deletions, plus updates to the cursor position,\n// selection state, and undo state.\n//\n// It is intended for use in games and other systems that need to build\n// their own custom widgets and which do not have heavy text-editing\n// requirements (this library is not recommended for use for editing large\n// texts, as its performance does not scale and it has limited undo).\n//\n// Non-trivial behaviors are modelled after Windows text controls.\n//\n//\n// LICENSE\n//\n// See end of file for license information.\n//\n//\n// DEPENDENCIES\n//\n// Uses the C runtime function 'memmove', which you can override\n// by defining STB_TEXTEDIT_memmove before the implementation.\n// Uses no other functions. Performs no runtime allocations.\n//\n//\n// VERSION HISTORY\n//\n//   1.14 (2021-07-11) page up/down, various fixes\n//   1.13 (2019-02-07) fix bug in undo size management\n//   1.12 (2018-01-29) user can change STB_TEXTEDIT_KEYTYPE, fix redo to avoid crash\n//   1.11 (2017-03-03) fix HOME on last line, dragging off single-line textfield\n//   1.10 (2016-10-25) supress warnings about casting away const with -Wcast-qual\n//   1.9  (2016-08-27) customizable move-by-word\n//   1.8  (2016-04-02) better keyboard handling when mouse button is down\n//   1.7  (2015-09-13) change y range handling in case baseline is non-0\n//   1.6  (2015-04-15) allow STB_TEXTEDIT_memmove\n//   1.5  (2014-09-10) add support for secondary keys for OS X\n//   1.4  (2014-08-17) fix signed/unsigned warnings\n//   1.3  (2014-06-19) fix mouse clicking to round to nearest char boundary\n//   1.2  (2014-05-27) fix some RAD types that had crept into the new code\n//   1.1  (2013-12-15) move-by-word (requires STB_TEXTEDIT_IS_SPACE )\n//   1.0  (2012-07-26) improve documentation, initial public release\n//   0.3  (2012-02-24) bugfixes, single-line mode; insert mode\n//   0.2  (2011-11-28) fixes to undo/redo\n//   0.1  (2010-07-08) initial version\n//\n// ADDITIONAL CONTRIBUTORS\n//\n//   Ulf Winklemann: move-by-word in 1.1\n//   Fabian Giesen: secondary key inputs in 1.5\n//   Martins Mozeiko: STB_TEXTEDIT_memmove in 1.6\n//   Louis Schnellbach: page up/down in 1.14\n//\n//   Bugfixes:\n//      Scott Graham\n//      Daniel Keller\n//      Omar Cornut\n//      Dan Thompson\n//\n// USAGE\n//\n// This file behaves differently depending on what symbols you define\n// before including it.\n//\n//\n// Header-file mode:\n//\n//   If you do not define STB_TEXTEDIT_IMPLEMENTATION before including this,\n//   it will operate in \"header file\" mode. In this mode, it declares a\n//   single public symbol, STB_TexteditState, which encapsulates the current\n//   state of a text widget (except for the string, which you will store\n//   separately).\n//\n//   To compile in this mode, you must define STB_TEXTEDIT_CHARTYPE to a\n//   primitive type that defines a single character (e.g. char, wchar_t, etc).\n//\n//   To save space or increase undo-ability, you can optionally define the\n//   following things that are used by the undo system:\n//\n//      STB_TEXTEDIT_POSITIONTYPE         small int type encoding a valid cursor position\n//      STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\n//      STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\n//\n//   If you don't define these, they are set to permissive types and\n//   moderate sizes. The undo system does no memory allocations, so\n//   it grows STB_TexteditState by the worst-case storage which is (in bytes):\n//\n//        [4 + 3 * sizeof(STB_TEXTEDIT_POSITIONTYPE)] * STB_TEXTEDIT_UNDOSTATECOUNT\n//      +          sizeof(STB_TEXTEDIT_CHARTYPE)      * STB_TEXTEDIT_UNDOCHARCOUNT\n//\n//\n// Implementation mode:\n//\n//   If you define STB_TEXTEDIT_IMPLEMENTATION before including this, it\n//   will compile the implementation of the text edit widget, depending\n//   on a large number of symbols which must be defined before the include.\n//\n//   The implementation is defined only as static functions. You will then\n//   need to provide your own APIs in the same file which will access the\n//   static functions.\n//\n//   The basic concept is that you provide a \"string\" object which\n//   behaves like an array of characters. stb_textedit uses indices to\n//   refer to positions in the string, implicitly representing positions\n//   in the displayed textedit. This is true for both plain text and\n//   rich text; even with rich text stb_truetype interacts with your\n//   code as if there was an array of all the displayed characters.\n//\n// Symbols that must be the same in header-file and implementation mode:\n//\n//     STB_TEXTEDIT_CHARTYPE             the character type\n//     STB_TEXTEDIT_POSITIONTYPE         small type that is a valid cursor position\n//     STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\n//     STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\n//\n// Symbols you must define for implementation mode:\n//\n//    STB_TEXTEDIT_STRING               the type of object representing a string being edited,\n//                                      typically this is a wrapper object with other data you need\n//\n//    STB_TEXTEDIT_STRINGLEN(obj)       the length of the string (ideally O(1))\n//    STB_TEXTEDIT_LAYOUTROW(&r,obj,n)  returns the results of laying out a line of characters\n//                                        starting from character #n (see discussion below)\n//    STB_TEXTEDIT_GETWIDTH(obj,n,i)    returns the pixel delta from the xpos of the i'th character\n//                                        to the xpos of the i+1'th char for a line of characters\n//                                        starting at character #n (i.e. accounts for kerning\n//                                        with previous char)\n//    STB_TEXTEDIT_KEYTOTEXT(k)         maps a keyboard input to an insertable character\n//                                        (return type is int, -1 means not valid to insert)\n//    STB_TEXTEDIT_GETCHAR(obj,i)       returns the i'th character of obj, 0-based\n//    STB_TEXTEDIT_NEWLINE              the character returned by _GETCHAR() we recognize\n//                                        as manually wordwrapping for end-of-line positioning\n//\n//    STB_TEXTEDIT_DELETECHARS(obj,i,n)      delete n characters starting at i\n//    STB_TEXTEDIT_INSERTCHARS(obj,i,c*,n)   insert n characters at i (pointed to by STB_TEXTEDIT_CHARTYPE*)\n//\n//    STB_TEXTEDIT_K_SHIFT       a power of two that is or'd in to a keyboard input to represent the shift key\n//\n//    STB_TEXTEDIT_K_LEFT        keyboard input to move cursor left\n//    STB_TEXTEDIT_K_RIGHT       keyboard input to move cursor right\n//    STB_TEXTEDIT_K_UP          keyboard input to move cursor up\n//    STB_TEXTEDIT_K_DOWN        keyboard input to move cursor down\n//    STB_TEXTEDIT_K_PGUP        keyboard input to move cursor up a page\n//    STB_TEXTEDIT_K_PGDOWN      keyboard input to move cursor down a page\n//    STB_TEXTEDIT_K_LINESTART   keyboard input to move cursor to start of line  // e.g. HOME\n//    STB_TEXTEDIT_K_LINEEND     keyboard input to move cursor to end of line    // e.g. END\n//    STB_TEXTEDIT_K_TEXTSTART   keyboard input to move cursor to start of text  // e.g. ctrl-HOME\n//    STB_TEXTEDIT_K_TEXTEND     keyboard input to move cursor to end of text    // e.g. ctrl-END\n//    STB_TEXTEDIT_K_DELETE      keyboard input to delete selection or character under cursor\n//    STB_TEXTEDIT_K_BACKSPACE   keyboard input to delete selection or character left of cursor\n//    STB_TEXTEDIT_K_UNDO        keyboard input to perform undo\n//    STB_TEXTEDIT_K_REDO        keyboard input to perform redo\n//\n// Optional:\n//    STB_TEXTEDIT_K_INSERT              keyboard input to toggle insert mode\n//    STB_TEXTEDIT_IS_SPACE(ch)          true if character is whitespace (e.g. 'isspace'),\n//                                          required for default WORDLEFT/WORDRIGHT handlers\n//    STB_TEXTEDIT_MOVEWORDLEFT(obj,i)   custom handler for WORDLEFT, returns index to move cursor to\n//    STB_TEXTEDIT_MOVEWORDRIGHT(obj,i)  custom handler for WORDRIGHT, returns index to move cursor to\n//    STB_TEXTEDIT_K_WORDLEFT            keyboard input to move cursor left one word // e.g. ctrl-LEFT\n//    STB_TEXTEDIT_K_WORDRIGHT           keyboard input to move cursor right one word // e.g. ctrl-RIGHT\n//    STB_TEXTEDIT_K_LINESTART2          secondary keyboard input to move cursor to start of line\n//    STB_TEXTEDIT_K_LINEEND2            secondary keyboard input to move cursor to end of line\n//    STB_TEXTEDIT_K_TEXTSTART2          secondary keyboard input to move cursor to start of text\n//    STB_TEXTEDIT_K_TEXTEND2            secondary keyboard input to move cursor to end of text\n//\n// Keyboard input must be encoded as a single integer value; e.g. a character code\n// and some bitflags that represent shift states. to simplify the interface, SHIFT must\n// be a bitflag, so we can test the shifted state of cursor movements to allow selection,\n// i.e. (STB_TEXTEDIT_K_RIGHT|STB_TEXTEDIT_K_SHIFT) should be shifted right-arrow.\n//\n// You can encode other things, such as CONTROL or ALT, in additional bits, and\n// then test for their presence in e.g. STB_TEXTEDIT_K_WORDLEFT. For example,\n// my Windows implementations add an additional CONTROL bit, and an additional KEYDOWN\n// bit. Then all of the STB_TEXTEDIT_K_ values bitwise-or in the KEYDOWN bit,\n// and I pass both WM_KEYDOWN and WM_CHAR events to the \"key\" function in the\n// API below. The control keys will only match WM_KEYDOWN events because of the\n// keydown bit I add, and STB_TEXTEDIT_KEYTOTEXT only tests for the KEYDOWN\n// bit so it only decodes WM_CHAR events.\n//\n// STB_TEXTEDIT_LAYOUTROW returns information about the shape of one displayed\n// row of characters assuming they start on the i'th character--the width and\n// the height and the number of characters consumed. This allows this library\n// to traverse the entire layout incrementally. You need to compute word-wrapping\n// here.\n//\n// Each textfield keeps its own insert mode state, which is not how normal\n// applications work. To keep an app-wide insert mode, update/copy the\n// \"insert_mode\" field of STB_TexteditState before/after calling API functions.\n//\n// API\n//\n//    void stb_textedit_initialize_state(STB_TexteditState *state, int is_single_line)\n//\n//    void stb_textedit_click(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\n//    void stb_textedit_drag(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\n//    int  stb_textedit_cut(STB_TEXTEDIT_STRING *str, STB_TexteditState *state)\n//    int  stb_textedit_paste(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXTEDIT_CHARTYPE *text, int len)\n//    void stb_textedit_key(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXEDIT_KEYTYPE key)\n//\n//    Each of these functions potentially updates the string and updates the\n//    state.\n//\n//      initialize_state:\n//          set the textedit state to a known good default state when initially\n//          constructing the textedit.\n//\n//      click:\n//          call this with the mouse x,y on a mouse down; it will update the cursor\n//          and reset the selection start/end to the cursor point. the x,y must\n//          be relative to the text widget, with (0,0) being the top left.\n//\n//      drag:\n//          call this with the mouse x,y on a mouse drag/up; it will update the\n//          cursor and the selection end point\n//\n//      cut:\n//          call this to delete the current selection; returns true if there was\n//          one. you should FIRST copy the current selection to the system paste buffer.\n//          (To copy, just copy the current selection out of the string yourself.)\n//\n//      paste:\n//          call this to paste text at the current cursor point or over the current\n//          selection if there is one.\n//\n//      key:\n//          call this for keyboard inputs sent to the textfield. you can use it\n//          for \"key down\" events or for \"translated\" key events. if you need to\n//          do both (as in Win32), or distinguish Unicode characters from control\n//          inputs, set a high bit to distinguish the two; then you can define the\n//          various definitions like STB_TEXTEDIT_K_LEFT have the is-key-event bit\n//          set, and make STB_TEXTEDIT_KEYTOCHAR check that the is-key-event bit is\n//          clear. STB_TEXTEDIT_KEYTYPE defaults to int, but you can #define it to\n//          anything other type you wante before including.\n//\n//\n//   When rendering, you can read the cursor position and selection state from\n//   the STB_TexteditState.\n//\n//\n// Notes:\n//\n// This is designed to be usable in IMGUI, so it allows for the possibility of\n// running in an IMGUI that has NOT cached the multi-line layout. For this\n// reason, it provides an interface that is compatible with computing the\n// layout incrementally--we try to make sure we make as few passes through\n// as possible. (For example, to locate the mouse pointer in the text, we\n// could define functions that return the X and Y positions of characters\n// and binary search Y and then X, but if we're doing dynamic layout this\n// will run the layout algorithm many times, so instead we manually search\n// forward in one pass. Similar logic applies to e.g. up-arrow and\n// down-arrow movement.)\n//\n// If it's run in a widget that *has* cached the layout, then this is less\n// efficient, but it's not horrible on modern computers. But you wouldn't\n// want to edit million-line files with it.\n////////////////////////////////////////////////////////////////////////////\n////////////////////////////////////////////////////////////////////////////\n////\n////   Header-file mode\n////\n////\n////////////////////////////////////////////////////////////////////////\n//\n//     STB_TexteditState\n//\n// Definition of STB_TexteditState which you should store\n// per-textfield; it includes cursor position, selection state,\n// and undo state.\n//"
+      "prevcomments": "////////////////////////////////////////////////////////////////////////\n//\n//     STB_TexteditState\n//\n// Definition of STB_TexteditState which you should store\n// per-textfield; it includes cursor position, selection state,\n// and undo state.\n//"
     },
     "StbUndoState": []
   },
@@ -5636,7 +5618,7 @@
       {
         "comment": {
           "comments": " // [Internal] generally == VtxBuffer.Size unless we are past 64K vertices, in which case this gets reset to 0.",
-          "prevcomments": "\n    // [Internal, used while building lists]"
+          "prevcomments": "    // [Internal, used while building lists]"
         },
         "name": "_VtxCurrentIdx",
         "type": "unsigned int"
@@ -5768,7 +5750,7 @@
       {
         "comment": {
           "comments": " // Sample points on the quarter of the circle.",
-          "prevcomments": "\n    // [Internal] Lookup tables"
+          "prevcomments": "    // [Internal] Lookup tables"
         },
         "name": "ArcFastVtx[48]",
         "size": 48,
@@ -5865,7 +5847,7 @@
       {
         "comment": {
           "comments": " // 12-16 // out //            // Sparse. Index glyphs by Unicode code-point.",
-          "prevcomments": "\n    // Members: Hot ~28/40 bytes (for CalcTextSize + render loop)"
+          "prevcomments": "    // Members: Hot ~28/40 bytes (for CalcTextSize + render loop)"
         },
         "name": "IndexLookup",
         "template_type": "ImWchar",
@@ -5889,7 +5871,7 @@
       {
         "comment": {
           "comments": " // 4-8   // out //            // What we has been loaded into",
-          "prevcomments": "\n    // Members: Cold ~32/40 bytes"
+          "prevcomments": "    // Members: Cold ~32/40 bytes"
         },
         "name": "ContainerAtlas",
         "type": "ImFontAtlas*"
@@ -5976,8 +5958,7 @@
     "ImFontAtlas": [
       {
         "comment": {
-          "comments": " // Build flags (see ImFontAtlasFlags_)",
-          "prevcomments": "\n    //-------------------------------------------\n    // Members\n    //-------------------------------------------"
+          "comments": " // Build flags (see ImFontAtlasFlags_)"
         },
         "name": "Flags",
         "type": "ImFontAtlasFlags"
@@ -6013,7 +5994,7 @@
       {
         "comment": {
           "comments": " // Set when texture was built matching current font input",
-          "prevcomments": "\n    // [Internal]\n    // NB: Access texture data via GetTexData*() calls! Which will setup a default font for you."
+          "prevcomments": "    // [Internal]\n    // NB: Access texture data via GetTexData*() calls! Which will setup a default font for you."
         },
         "name": "TexReady",
         "type": "bool"
@@ -6102,7 +6083,7 @@
       {
         "comment": {
           "comments": " // Opaque interface to a font builder (default to stb_truetype, can be changed to use FreeType by defining IMGUI_ENABLE_FREETYPE).",
-          "prevcomments": "\n    // [Internal] Font builder"
+          "prevcomments": "    // [Internal] Font builder"
         },
         "name": "FontBuilderIO",
         "type": "const ImFontBuilderIO*"
@@ -6117,7 +6098,7 @@
       {
         "comment": {
           "comments": " // Custom texture rectangle ID for white pixel and mouse cursors",
-          "prevcomments": "\n    // [Internal] Packing data"
+          "prevcomments": "    // [Internal] Packing data"
         },
         "name": "PackIdMouseCursors",
         "type": "int"
@@ -6318,7 +6299,7 @@
       {
         "comment": {
           "comments": " // Name (strictly to ease debugging)",
-          "prevcomments": "\n    // [Internal]"
+          "prevcomments": "    // [Internal]"
         },
         "name": "Name[40]",
         "size": 40,
@@ -6625,7 +6606,7 @@
       {
         "comment": {
           "comments": " // Windows, sorted in display order, back to front",
-          "prevcomments": "\n    // Windows state"
+          "prevcomments": "    // Windows state"
         },
         "name": "Windows",
         "template_type": "ImGuiWindow*",
@@ -6729,7 +6710,7 @@
       {
         "comment": {
           "comments": " // Will call core hooks: DebugHookIdInfo() from GetID functions, used by Stack Tool [next HoveredId/ActiveId to not pull in an extra cache-line]",
-          "prevcomments": "\n    // Item/widgets state and tracking information"
+          "prevcomments": "    // Item/widgets state and tracking information"
         },
         "name": "DebugHookIdInfo",
         "type": "ImGuiID"
@@ -6904,7 +6885,7 @@
       {
         "comment": {
           "comments": " // Active widget will want to read mouse wheel. Blocks scrolling the underlying window.",
-          "prevcomments": "\n    // Input Ownership"
+          "prevcomments": "    // Input Ownership"
         },
         "name": "ActiveIdUsingMouseWheel",
         "type": "bool"
@@ -6933,7 +6914,7 @@
       {
         "comment": {
           "comments": " // == g.ItemFlagsStack.back()",
-          "prevcomments": "\n    // Next window/item data"
+          "prevcomments": "    // Next window/item data"
         },
         "name": "CurrentItemFlags",
         "type": "ImGuiItemFlags"
@@ -6962,7 +6943,7 @@
       {
         "comment": {
           "comments": " // Stack for PushStyleColor()/PopStyleColor() - inherited by Begin()",
-          "prevcomments": "\n    // Shared stacks"
+          "prevcomments": "    // Shared stacks"
         },
         "name": "ColorStack",
         "template_type": "ImGuiColorMod",
@@ -7032,7 +7013,7 @@
       {
         "comment": {
           "comments": " // Active viewports (always 1+, and generally 1 unless multi-viewports are enabled). Each viewports hold their copy of ImDrawData.",
-          "prevcomments": "\n    // Viewports"
+          "prevcomments": "    // Viewports"
         },
         "name": "Viewports",
         "template_type": "ImGuiViewportP*",
@@ -7086,7 +7067,7 @@
       {
         "comment": {
           "comments": " // Focused window for navigation. Could be called 'FocusedWindow'",
-          "prevcomments": "\n    // Gamepad/keyboard Navigation"
+          "prevcomments": "    // Gamepad/keyboard Navigation"
         },
         "name": "NavWindow",
         "type": "ImGuiWindow*"
@@ -7214,7 +7195,7 @@
       {
         "comment": {
           "comments": " // ~~ NavMoveRequest || NavInitRequest this is to perform early out in ItemAdd()",
-          "prevcomments": "\n    // Navigation: Init & Move Requests"
+          "prevcomments": "    // Navigation: Init & Move Requests"
         },
         "name": "NavAnyRequest",
         "type": "bool"
@@ -7364,7 +7345,7 @@
       {
         "comment": {
           "comments": " // Target window when doing CTRL+Tab (or Pad Menu + FocusPrev/Next), this window is temporarily displayed top-most!",
-          "prevcomments": "\n    // Navigation: Windowing (CTRL+TAB for list, or Menu button + keys or directional pads to move/resize)"
+          "prevcomments": "    // Navigation: Windowing (CTRL+TAB for list, or Menu button + keys or directional pads to move/resize)"
         },
         "name": "NavWindowingTarget",
         "type": "ImGuiWindow*"
@@ -7401,7 +7382,7 @@
       {
         "comment": {
           "comments": " // 0.0..1.0 animation when fading in a dimming background (for modal window and CTRL+TAB list)",
-          "prevcomments": "\n    // Render"
+          "prevcomments": "    // Render"
         },
         "name": "DimBgRatio",
         "type": "float"
@@ -7413,7 +7394,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Drag and Drop"
+          "prevcomments": "    // Drag and Drop"
         },
         "name": "DragDropActive",
         "type": "bool"
@@ -7522,7 +7503,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Clipper"
+          "prevcomments": "    // Clipper"
         },
         "name": "ClipperTempDataStacked",
         "type": "int"
@@ -7535,7 +7516,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Tables"
+          "prevcomments": "    // Tables"
         },
         "name": "CurrentTable",
         "type": "ImGuiTable*"
@@ -7579,7 +7560,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Tab bars"
+          "prevcomments": "    // Tab bars"
         },
         "name": "CurrentTabBar",
         "type": "ImGuiTabBar*"
@@ -7604,7 +7585,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Widget state"
+          "prevcomments": "    // Widget state"
         },
         "name": "MouseLastValidPos",
         "type": "ImVec2"
@@ -7754,7 +7735,7 @@
       {
         "comment": {
           "comments": " // Data updated by current frame",
-          "prevcomments": "\n    // Platform support"
+          "prevcomments": "    // Platform support"
         },
         "name": "PlatformImeData",
         "type": "ImGuiPlatformImeData"
@@ -7780,14 +7761,14 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Extensions\n    // FIXME: We could provide an API to register one slot in an array held in ImGuiContext?"
+          "prevcomments": "    // Extensions\n    // FIXME: We could provide an API to register one slot in an array held in ImGuiContext?"
         },
         "name": "DockContext",
         "type": "ImGuiDockContext"
       },
       {
         "comment": {
-          "prevcomments": "\n    // Settings"
+          "prevcomments": "    // Settings"
         },
         "name": "SettingsLoaded",
         "type": "bool"
@@ -7848,7 +7829,7 @@
       {
         "comment": {
           "comments": " // Currently capturing",
-          "prevcomments": "\n    // Capture/Logging"
+          "prevcomments": "    // Capture/Logging"
         },
         "name": "LogEnabled",
         "type": "bool"
@@ -7913,7 +7894,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Debug Tools"
+          "prevcomments": "    // Debug Tools"
         },
         "name": "DebugLogFlags",
         "type": "ImGuiDebugLogFlags"
@@ -7950,7 +7931,7 @@
       {
         "comment": {
           "comments": " // Calculate estimate of framerate for user over the last 2 seconds.",
-          "prevcomments": "\n    // Misc"
+          "prevcomments": "    // Misc"
         },
         "name": "FramerateSecPerFrame[120]",
         "size": 120,
@@ -8427,8 +8408,7 @@
     "ImGuiIO": [
       {
         "comment": {
-          "comments": " // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc.",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // Configuration                            // Default value\n    //------------------------------------------------------------------"
+          "comments": " // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc."
         },
         "name": "ConfigFlags",
         "type": "ImGuiConfigFlags"
@@ -8555,7 +8535,7 @@
       {
         "comment": {
           "comments": " // = false          // Simplified docking mode: disable window splitting, so docking is limited to merging multiple windows together into tab-bars.",
-          "prevcomments": "\n    // Docking options (when ImGuiConfigFlags_DockingEnable is set)"
+          "prevcomments": "    // Docking options (when ImGuiConfigFlags_DockingEnable is set)"
         },
         "name": "ConfigDockingNoSplit",
         "type": "bool"
@@ -8584,7 +8564,7 @@
       {
         "comment": {
           "comments": " // = false;         // Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it. May also set ImGuiViewportFlags_NoAutoMerge on individual viewport.",
-          "prevcomments": "\n    // Viewport options (when ImGuiConfigFlags_ViewportsEnable is set)"
+          "prevcomments": "    // Viewport options (when ImGuiConfigFlags_ViewportsEnable is set)"
         },
         "name": "ConfigViewportsNoAutoMerge",
         "type": "bool"
@@ -8613,7 +8593,7 @@
       {
         "comment": {
           "comments": " // = false          // Request ImGui to draw a mouse cursor for you (if you are on a platform without a mouse cursor). Cannot be easily renamed to 'io.ConfigXXX' because this is frequently used by backend implementations.",
-          "prevcomments": "\n    // Miscellaneous options"
+          "prevcomments": "    // Miscellaneous options"
         },
         "name": "MouseDrawCursor",
         "type": "bool"
@@ -8670,7 +8650,7 @@
       {
         "comment": {
           "comments": " // = NULL",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // Platform Functions\n    // (the imgui_impl_xxxx backend files are setting those up for you)\n    //------------------------------------------------------------------\n    // Optional: Platform/Renderer backend name (informational only! will be displayed in About Window) + User data for backend/wrappers to store their own stuff."
+          "prevcomments": "    // Optional: Platform/Renderer backend name (informational only! will be displayed in About Window) + User data for backend/wrappers to store their own stuff."
         },
         "name": "BackendPlatformName",
         "type": "const char*"
@@ -8705,7 +8685,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Optional: Access OS clipboard\n    // (default to use native Win32 clipboard on Windows, otherwise uses a private clipboard. Override to access OS clipboard on other architectures)"
+          "prevcomments": "    // Optional: Access OS clipboard\n    // (default to use native Win32 clipboard on Windows, otherwise uses a private clipboard. Override to access OS clipboard on other architectures)"
         },
         "name": "GetClipboardTextFn",
         "type": "const char*(*)(void* user_data)"
@@ -8722,7 +8702,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // Optional: Notify OS Input Method Editor of the screen position of your cursor for text input position (e.g. when using Japanese/Chinese IME on Windows)\n    // (default to use native imm32 api on Windows)"
+          "prevcomments": "    // Optional: Notify OS Input Method Editor of the screen position of your cursor for text input position (e.g. when using Japanese/Chinese IME on Windows)\n    // (default to use native imm32 api on Windows)"
         },
         "name": "SetPlatformImeDataFn",
         "type": "void(*)(ImGuiViewport* viewport,ImGuiPlatformImeData* data)"
@@ -8736,8 +8716,7 @@
       },
       {
         "comment": {
-          "comments": " // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.).",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // Output - Updated by NewFrame() or EndFrame()/Render()\n    // (when reading from the io.WantCaptureMouse, io.WantCaptureKeyboard flags to dispatch your inputs, it is\n    //  generally easier and more correct to use their state BEFORE calling NewFrame(). See FAQ for details!)\n    //------------------------------------------------------------------"
+          "comments": " // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.)."
         },
         "name": "WantCaptureMouse",
         "type": "bool"
@@ -8835,8 +8814,7 @@
       },
       {
         "comment": {
-          "comments": " // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512.",
-          "prevcomments": "\n    // Legacy: before 1.87, we required backend to fill io.KeyMap[] (imgui->native map) during initialization and io.KeysDown[] (native indices) every frame.\n    // This is still temporarily supported as a legacy feature. However the new preferred scheme is for backend to call io.AddKeyEvent()."
+          "comments": " // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512."
         },
         "name": "KeyMap[ImGuiKey_COUNT]",
         "size": 645,
@@ -8853,7 +8831,7 @@
       {
         "comment": {
           "comments": " // Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.)",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // [Internal] Dear ImGui will maintain those fields. Forward compatibility not guaranteed!\n    //------------------------------------------------------------------\n    // Main Input State\n    // (this block used to be written by backend, since 1.87 it is best to NOT write to those directly, call the AddXXX functions above instead)\n    // (reading from those variables is fair game, as they are extremely unlikely to be moving anywhere)"
+          "prevcomments": "    // Main Input State\n    // (this block used to be written by backend, since 1.87 it is best to NOT write to those directly, call the AddXXX functions above instead)\n    // (reading from those variables is fair game, as they are extremely unlikely to be moving anywhere)"
         },
         "name": "MousePos",
         "type": "ImVec2"
@@ -8926,7 +8904,7 @@
       {
         "comment": {
           "comments": " // Key mods flags (same as io.KeyCtrl/KeyShift/KeyAlt/KeySuper but merged into flags), updated by NewFrame()",
-          "prevcomments": "\n    // Other state maintained from data above + IO function calls"
+          "prevcomments": "    // Other state maintained from data above + IO function calls"
         },
         "name": "KeyMods",
         "type": "ImGuiModFlags"
@@ -9241,7 +9219,7 @@
       {
         "comment": {
           "comments": " // Character input                      // Read-write   // [CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;",
-          "prevcomments": "\n    // Arguments for the different callback events\n    // - To modify the text buffer in a callback, prefer using the InsertChars() / DeleteChars() function. InsertChars() will take care of calling the resize callback if necessary.\n    // - If you know your edits are not going to resize the underlying buffer allocation, you may modify the contents of 'Buf[]' directly. You need to update 'BufTextLen' accordingly (0 <= BufTextLen < BufSize) and set 'BufDirty'' to true so InputText can update its internal state."
+          "prevcomments": "    // Arguments for the different callback events\n    // - To modify the text buffer in a callback, prefer using the InsertChars() / DeleteChars() function. InsertChars() will take care of calling the resize callback if necessary.\n    // - If you know your edits are not going to resize the underlying buffer allocation, you may modify the contents of 'Buf[]' directly. You need to update 'BufTextLen' accordingly (0 <= BufTextLen < BufSize) and set 'BufDirty'' to true so InputText can update its internal state."
         },
         "name": "EventChar",
         "type": "ImWchar"
@@ -10042,7 +10020,7 @@
       {
         "comment": {
           "comments": " // Source item id",
-          "prevcomments": "\n    // [Internal]"
+          "prevcomments": "    // [Internal]"
         },
         "name": "SourceId",
         "type": "ImGuiID"
@@ -10088,7 +10066,7 @@
       {
         "comment": {
           "comments": " // . . U . .  // Create a new platform window for the given viewport",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // Input - Backend interface/functions + Monitor List\n    //------------------------------------------------------------------\n    // (Optional) Platform functions (e.g. Win32, GLFW, SDL2)\n    // For reference, the second column shows which function are generally calling the Platform Functions:\n    //   N = ImGui::NewFrame()                        ~ beginning of the dear imgui frame: read info from platform/OS windows (latest size/position)\n    //   F = ImGui::Begin(), ImGui::EndFrame()        ~ during the dear imgui frame\n    //   U = ImGui::UpdatePlatformWindows()           ~ after the dear imgui frame: create and update all platform/OS windows\n    //   R = ImGui::RenderPlatformWindowsDefault()    ~ render\n    //   D = ImGui::DestroyPlatformWindows()          ~ shutdown\n    // The general idea is that NewFrame() we will read the current Platform/OS state, and UpdatePlatformWindows() will write to it.\n    //\n    // The functions are designed so we can mix and match 2 imgui_impl_xxxx files, one for the Platform (~window/input handling), one for Renderer.\n    // Custom engine backends will often provide both Platform and Renderer interfaces and so may not need to use all functions.\n    // Platform functions are typically called before their Renderer counterpart, apart from Destroy which are called the other way.\n    // Platform function --------------------------------------------------- Called by -----"
+          "prevcomments": "    // Platform function --------------------------------------------------- Called by -----"
         },
         "name": "Platform_CreateWindow",
         "type": "void(*)(ImGuiViewport* vp)"
@@ -10215,7 +10193,7 @@
       {
         "comment": {
           "comments": " // . . U . .  // Create swap chain, frame buffers etc. (called after Platform_CreateWindow)",
-          "prevcomments": "\n    // (Optional) Renderer functions (e.g. DirectX, OpenGL, Vulkan)"
+          "prevcomments": "    // (Optional) Renderer functions (e.g. DirectX, OpenGL, Vulkan)"
         },
         "name": "Renderer_CreateWindow",
         "type": "void(*)(ImGuiViewport* vp)"
@@ -10250,7 +10228,7 @@
       },
       {
         "comment": {
-          "prevcomments": "\n    // (Optional) Monitor list\n    // - Updated by: app/backend. Update every frame to dynamically support changing monitor or DPI configuration.\n    // - Used by: dear imgui to query DPI info, clamp popups/tooltips within same monitor and not have them straddle monitors."
+          "prevcomments": "    // (Optional) Monitor list\n    // - Updated by: app/backend. Update every frame to dynamically support changing monitor or DPI configuration.\n    // - Used by: dear imgui to query DPI info, clamp popups/tooltips within same monitor and not have them straddle monitors."
         },
         "name": "Monitors",
         "template_type": "ImGuiPlatformMonitor",
@@ -10259,7 +10237,7 @@
       {
         "comment": {
           "comments": " // Main viewports, followed by all secondary viewports.",
-          "prevcomments": "\n    //------------------------------------------------------------------\n    // Output - List of viewports to render into platform windows\n    //------------------------------------------------------------------\n    // Viewports list (the list is updated by calling ImGui::EndFrame or ImGui::Render)\n    // (in the future we will attempt to organize this feature to remove the need for a \"main viewport\")"
+          "prevcomments": "    // Viewports list (the list is updated by calling ImGui::EndFrame or ImGui::Render)\n    // (in the future we will attempt to organize this feature to remove the need for a \"main viewport\")"
         },
         "name": "Viewports",
         "template_type": "ImGuiViewport*",
@@ -12537,7 +12515,7 @@
       {
         "comment": {
           "comments": " // void* to hold custom data structure for the renderer (e.g. swap chain, framebuffers etc.). generally set by your Renderer_CreateWindow function.",
-          "prevcomments": "\n    // Platform/Backend Dependent Data\n    // Our design separate the Renderer and Platform backends to facilitate combining default backends with each others.\n    // When our create your own backend for a custom engine, it is possible that both Renderer and Platform will be handled\n    // by the same system and you may not need to use all the UserData/Handle fields.\n    // The library never uses those fields, they are merely storage to facilitate backend implementation."
+          "prevcomments": "    // Platform/Backend Dependent Data\n    // Our design separate the Renderer and Platform backends to facilitate combining default backends with each others.\n    // When our create your own backend for a custom engine, it is possible that both Renderer and Platform will be handled\n    // by the same system and you may not need to use all the UserData/Handle fields.\n    // The library never uses those fields, they are merely storage to facilitate backend implementation."
         },
         "name": "RendererUserData",
         "type": "void*"
@@ -13160,7 +13138,7 @@
       {
         "comment": {
           "comments": " // == Window->Rect() just after setup in Begin(). == window->Rect() for root window.",
-          "prevcomments": "\n    // The best way to understand what those rectangles are is to use the 'Metrics->Tools->Show Windows Rectangles' viewer.\n    // The main 'OuterRect', omitted as a field, is window->Rect()."
+          "prevcomments": "    // The best way to understand what those rectangles are is to use the 'Metrics->Tools->Show Windows Rectangles' viewer.\n    // The main 'OuterRect', omitted as a field, is window->Rect()."
         },
         "name": "OuterRectClipped",
         "type": "ImRect"
@@ -13380,7 +13358,7 @@
         "bitfield": "1",
         "comment": {
           "comments": " // When docking artifacts are actually visible. When this is set, DockNode is guaranteed to be != NULL. ~~ (DockNode != NULL) && (DockNode->Windows.Size > 1).",
-          "prevcomments": "\n    // Docking"
+          "prevcomments": "    // Docking"
         },
         "name": "DockIsActive",
         "type": "bool"
@@ -13687,7 +13665,7 @@
       {
         "comment": {
           "comments": " // Current layer, 0..31 (we currently only use 0..1)",
-          "prevcomments": "\n    // Keyboard/Gamepad navigation"
+          "prevcomments": "    // Keyboard/Gamepad navigation"
         },
         "name": "NavLayerCurrent",
         "type": "ImGuiNavLayer"
@@ -13728,7 +13706,7 @@
       {
         "comment": {
           "comments": " // FIXME: Remove this",
-          "prevcomments": "\n    // Miscellaneous"
+          "prevcomments": "    // Miscellaneous"
         },
         "name": "MenuBarAppending",
         "type": "bool"
@@ -13803,7 +13781,7 @@
       {
         "comment": {
           "comments": " // Current item width (>0.0: width in pixels, <0.0: align xx pixels to the right of window).",
-          "prevcomments": "\n    // Local parameters stacks\n    // We store the current settings outside of the vectors to increase memory locality (reduce cache misses). The vectors are rarely modified. Also it allows us to not heap allocate for short-lived windows which are not using those settings."
+          "prevcomments": "    // Local parameters stacks\n    // We store the current settings outside of the vectors to increase memory locality (reduce cache misses). The vectors are rarely modified. Also it allows us to not heap allocate for short-lived windows which are not using those settings."
         },
         "name": "ItemWidth",
         "type": "float"
@@ -13903,16 +13881,13 @@
     ],
     "STB_TexteditState": [
       {
-        "comment": {
-          "prevcomments": "\n   /////////////////////\n   //\n   // public data\n   //"
-        },
+        "comment": [],
         "name": "cursor",
         "type": "int"
       },
       {
         "comment": {
-          "comments": " // selection start point",
-          "prevcomments": "\n   // position of the text cursor within the string"
+          "comments": " // selection start point"
         },
         "name": "select_start",
         "type": "int"
@@ -13923,23 +13898,19 @@
         "type": "int"
       },
       {
-        "comment": {
-          "prevcomments": "\n   // selection start and end point in characters; if equal, no selection.\n   // note that start may be less than or greater than end (e.g. when\n   // dragging the mouse, start is where the initial click was, and you\n   // can drag in either direction)"
-        },
+        "comment": [],
         "name": "insert_mode",
         "type": "unsigned char"
       },
       {
-        "comment": {
-          "prevcomments": "\n   // each textfield keeps its own insert mode state. to keep an app-wide\n   // insert mode, copy this value in/out of the app state"
-        },
+        "comment": [],
         "name": "row_count_per_page",
         "type": "int"
       },
       {
         "comment": {
           "comments": " // not implemented yet",
-          "prevcomments": "\n   // page size in number of row.\n   // this value MUST be set to >0 for pageup or pagedown in multilines documents.\n   /////////////////////\n   //\n   // private data\n   //"
+          "prevcomments": "   /////////////////////\n   //\n   // private data\n   //"
         },
         "name": "cursor_at_end_of_line",
         "type": "unsigned char"
