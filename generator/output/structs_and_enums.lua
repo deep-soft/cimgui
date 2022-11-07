@@ -1,63 +1,163 @@
 local defs = {}
 defs["enum_comments"] = {}
-defs["enum_comments"]["ImDrawFlags_"] = "// Flags for ImDrawList functions\
+defs["enum_comments"]["ImDrawFlags_"] = {}
+defs["enum_comments"]["ImDrawFlags_"]["prevcomments"] = "\
+// Flags for ImDrawList functions\
 // (Legacy: bit 0 must always correspond to ImDrawFlags_Closed to be backward compatible with old API using a bool. Bits 1..3 must be unused)"
-defs["enum_comments"]["ImDrawListFlags_"] = "// Flags for ImDrawList instance. Those are set automatically by ImGui:: functions from ImGuiIO settings, and generally not manipulated directly.\
+defs["enum_comments"]["ImDrawListFlags_"] = {}
+defs["enum_comments"]["ImDrawListFlags_"]["prevcomments"] = "\
+// Flags for ImDrawList instance. Those are set automatically by ImGui:: functions from ImGuiIO settings, and generally not manipulated directly.\
 // It is however possible to temporarily alter flags between calls to ImDrawList:: functions."
-defs["enum_comments"]["ImFontAtlasFlags_"] = "// Flags for ImFontAtlas build"
-defs["enum_comments"]["ImGuiActivateFlags_"] = "//-----------------------------------------------------------------------------\
+defs["enum_comments"]["ImFontAtlasFlags_"] = {}
+defs["enum_comments"]["ImFontAtlasFlags_"]["prevcomments"] = "\
+// Flags for ImFontAtlas build"
+defs["enum_comments"]["ImGuiActivateFlags_"] = {}
+defs["enum_comments"]["ImGuiActivateFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] Navigation support\
 //-----------------------------------------------------------------------------"
-defs["enum_comments"]["ImGuiAxis"] = "// X/Y enums are fixed to 0/1 so they may be used to index ImVec2"
-defs["enum_comments"]["ImGuiBackendFlags_"] = "// Backend capabilities flags stored in io.BackendFlags. Set by imgui_impl_xxx or custom backend."
-defs["enum_comments"]["ImGuiButtonFlagsPrivate_"] = "// Extend ImGuiButtonFlags_"
-defs["enum_comments"]["ImGuiButtonFlags_"] = "// Flags for InvisibleButton() [extended in imgui_internal.h]"
-defs["enum_comments"]["ImGuiCol_"] = "// Enumeration for PushStyleColor() / PopStyleColor()"
-defs["enum_comments"]["ImGuiColorEditFlags_"] = "// Flags for ColorEdit3() / ColorEdit4() / ColorPicker3() / ColorPicker4() / ColorButton()"
-defs["enum_comments"]["ImGuiComboFlagsPrivate_"] = "// Extend ImGuiComboFlags_"
-defs["enum_comments"]["ImGuiComboFlags_"] = "// Flags for ImGui::BeginCombo()"
-defs["enum_comments"]["ImGuiCond_"] = "// Enumeration for ImGui::SetWindow***(), SetNextWindow***(), SetNextItem***() functions\
+defs["enum_comments"]["ImGuiAxis"] = {}
+defs["enum_comments"]["ImGuiAxis"]["prevcomments"] = "\
+// X/Y enums are fixed to 0/1 so they may be used to index ImVec2"
+defs["enum_comments"]["ImGuiBackendFlags_"] = {}
+defs["enum_comments"]["ImGuiBackendFlags_"]["prevcomments"] = "\
+// Backend capabilities flags stored in io.BackendFlags. Set by imgui_impl_xxx or custom backend."
+defs["enum_comments"]["ImGuiButtonFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiButtonFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiButtonFlags_"
+defs["enum_comments"]["ImGuiButtonFlags_"] = {}
+defs["enum_comments"]["ImGuiButtonFlags_"]["prevcomments"] = "\
+// Flags for InvisibleButton() [extended in imgui_internal.h]"
+defs["enum_comments"]["ImGuiCol_"] = {}
+defs["enum_comments"]["ImGuiCol_"]["prevcomments"] = "\
+// Enumeration for PushStyleColor() / PopStyleColor()"
+defs["enum_comments"]["ImGuiColorEditFlags_"] = {}
+defs["enum_comments"]["ImGuiColorEditFlags_"]["prevcomments"] = "\
+// Flags for ColorEdit3() / ColorEdit4() / ColorPicker3() / ColorPicker4() / ColorButton()"
+defs["enum_comments"]["ImGuiComboFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiComboFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiComboFlags_"
+defs["enum_comments"]["ImGuiComboFlags_"] = {}
+defs["enum_comments"]["ImGuiComboFlags_"]["prevcomments"] = "\
+// Flags for ImGui::BeginCombo()"
+defs["enum_comments"]["ImGuiCond_"] = {}
+defs["enum_comments"]["ImGuiCond_"]["prevcomments"] = "\
+// Enumeration for ImGui::SetWindow***(), SetNextWindow***(), SetNextItem***() functions\
 // Represent a condition.\
 // Important: Treat as a regular enum! Do NOT combine multiple values using binary operators! All the functions above treat 0 as a shortcut to ImGuiCond_Always."
-defs["enum_comments"]["ImGuiConfigFlags_"] = "// Configuration flags stored in io.ConfigFlags. Set by user/application."
-defs["enum_comments"]["ImGuiDataAuthority_"] = "// Store the source authority (dock node vs window) of a field"
-defs["enum_comments"]["ImGuiDataTypePrivate_"] = "// Extend ImGuiDataType_"
-defs["enum_comments"]["ImGuiDataType_"] = "// A primary data type"
-defs["enum_comments"]["ImGuiDebugLogFlags_"] = "//-----------------------------------------------------------------------------\
+defs["enum_comments"]["ImGuiConfigFlags_"] = {}
+defs["enum_comments"]["ImGuiConfigFlags_"]["prevcomments"] = "\
+// Configuration flags stored in io.ConfigFlags. Set by user/application."
+defs["enum_comments"]["ImGuiContextHookType"] = {}
+defs["enum_comments"]["ImGuiDataAuthority_"] = {}
+defs["enum_comments"]["ImGuiDataAuthority_"]["prevcomments"] = "\
+// Store the source authority (dock node vs window) of a field"
+defs["enum_comments"]["ImGuiDataTypePrivate_"] = {}
+defs["enum_comments"]["ImGuiDataTypePrivate_"]["prevcomments"] = "\
+// Extend ImGuiDataType_"
+defs["enum_comments"]["ImGuiDataType_"] = {}
+defs["enum_comments"]["ImGuiDataType_"]["prevcomments"] = "\
+// Standard Drag and Drop payload types. You can define you own payload types using short strings. Types starting with '_' are defined by Dear ImGui.\
+// A primary data type"
+defs["enum_comments"]["ImGuiDebugLogFlags_"] = {}
+defs["enum_comments"]["ImGuiDebugLogFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] Metrics, Debug Tools\
 //-----------------------------------------------------------------------------"
-defs["enum_comments"]["ImGuiDir_"] = "// A cardinal direction"
-defs["enum_comments"]["ImGuiDockNodeFlagsPrivate_"] = "// Extend ImGuiDockNodeFlags_"
-defs["enum_comments"]["ImGuiDockNodeFlags_"] = "// Flags for ImGui::DockSpace(), shared/inherited by child nodes.\
+defs["enum_comments"]["ImGuiDir_"] = {}
+defs["enum_comments"]["ImGuiDir_"]["prevcomments"] = "\
+// A cardinal direction"
+defs["enum_comments"]["ImGuiDockNodeFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiDockNodeFlagsPrivate_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Multi-select support\
+//-----------------------------------------------------------------------------\
+//-----------------------------------------------------------------------------\
+// [SECTION] Docking support\
+//-----------------------------------------------------------------------------\
+// Extend ImGuiDockNodeFlags_"
+defs["enum_comments"]["ImGuiDockNodeFlags_"] = {}
+defs["enum_comments"]["ImGuiDockNodeFlags_"]["prevcomments"] = "\
+// Flags for ImGui::DockSpace(), shared/inherited by child nodes.\
 // (Some flags can be applied to individual nodes directly)\
 // FIXME-DOCK: Also see ImGuiDockNodeFlagsPrivate_ which may involve using the WIP and internal DockBuilder api."
-defs["enum_comments"]["ImGuiDragDropFlags_"] = "// Flags for ImGui::BeginDragDropSource(), ImGui::AcceptDragDropPayload()"
-defs["enum_comments"]["ImGuiFocusedFlags_"] = "// Flags for ImGui::IsWindowFocused()"
-defs["enum_comments"]["ImGuiHoveredFlags_"] = "// Flags for ImGui::IsItemHovered(), ImGui::IsWindowHovered()\
+defs["enum_comments"]["ImGuiDockNodeState"] = {}
+defs["enum_comments"]["ImGuiDragDropFlags_"] = {}
+defs["enum_comments"]["ImGuiDragDropFlags_"]["prevcomments"] = "\
+// Flags for ImGui::BeginDragDropSource(), ImGui::AcceptDragDropPayload()"
+defs["enum_comments"]["ImGuiFocusedFlags_"] = {}
+defs["enum_comments"]["ImGuiFocusedFlags_"]["prevcomments"] = "\
+// Flags for ImGui::IsWindowFocused()"
+defs["enum_comments"]["ImGuiHoveredFlags_"] = {}
+defs["enum_comments"]["ImGuiHoveredFlags_"]["prevcomments"] = "\
+// Flags for ImGui::IsItemHovered(), ImGui::IsWindowHovered()\
 // Note: if you are trying to check whether your mouse should be dispatched to Dear ImGui or to your app, you should use 'io.WantCaptureMouse' instead! Please read the FAQ!\
 // Note: windows with the ImGuiWindowFlags_NoInputs flag are ignored by IsWindowHovered() calls."
-defs["enum_comments"]["ImGuiInputTextFlagsPrivate_"] = "// Extend ImGuiInputTextFlags_"
-defs["enum_comments"]["ImGuiInputTextFlags_"] = "// Flags for ImGui::InputText()"
-defs["enum_comments"]["ImGuiItemFlags_"] = "// Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().\
+defs["enum_comments"]["ImGuiInputEventType"] = {}
+defs["enum_comments"]["ImGuiInputSource"] = {}
+defs["enum_comments"]["ImGuiInputTextFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiInputTextFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiInputTextFlags_"
+defs["enum_comments"]["ImGuiInputTextFlags_"] = {}
+defs["enum_comments"]["ImGuiInputTextFlags_"]["prevcomments"] = "\
+// Flags for ImGui::InputText()"
+defs["enum_comments"]["ImGuiItemFlags_"] = {}
+defs["enum_comments"]["ImGuiItemFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Widgets support: flags, enums, data structures\
+//-----------------------------------------------------------------------------\
+// Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().\
 // This is going to be exposed in imgui.h when stabilized enough."
-defs["enum_comments"]["ImGuiItemStatusFlags_"] = "// Storage for LastItem data"
-defs["enum_comments"]["ImGuiKey_"] = "// Keys value 0 to 511 are left unused as legacy native/opaque key values (< 1.87)\
+defs["enum_comments"]["ImGuiItemStatusFlags_"] = {}
+defs["enum_comments"]["ImGuiItemStatusFlags_"]["prevcomments"] = "\
+// Storage for LastItem data"
+defs["enum_comments"]["ImGuiKeyPrivate_"] = {}
+defs["enum_comments"]["ImGuiKey_"] = {}
+defs["enum_comments"]["ImGuiKey_"]["prevcomments"] = "\
+// Keys value 0 to 511 are left unused as legacy native/opaque key values (< 1.87)\
 // Keys value >= 512 are named keys (>= 1.87)"
-defs["enum_comments"]["ImGuiLayoutType_"] = "// FIXME: this is in development, not exposed/functional as a generic feature yet.\
+defs["enum_comments"]["ImGuiLayoutType_"] = {}
+defs["enum_comments"]["ImGuiLayoutType_"]["prevcomments"] = "\
+// FIXME: this is in development, not exposed/functional as a generic feature yet.\
 // Horizontal/Vertical enums are fixed to 0/1 so they may be used to index ImVec2"
-defs["enum_comments"]["ImGuiModFlags_"] = "// Helper \"flags\" version of key-mods to store and compare multiple key-mods easily. Sometimes used for storage (e.g. io.KeyMods) but otherwise not much used in public API."
-defs["enum_comments"]["ImGuiMouseButton_"] = "// Identify a mouse button.\
+defs["enum_comments"]["ImGuiLogType"] = {}
+defs["enum_comments"]["ImGuiModFlags_"] = {}
+defs["enum_comments"]["ImGuiModFlags_"]["prevcomments"] = "\
+// Helper \"flags\" version of key-mods to store and compare multiple key-mods easily. Sometimes used for storage (e.g. io.KeyMods) but otherwise not much used in public API."
+defs["enum_comments"]["ImGuiMouseButton_"] = {}
+defs["enum_comments"]["ImGuiMouseButton_"]["prevcomments"] = "\
+// Identify a mouse button.\
 // Those values are guaranteed to be stable and we frequently use 0/1 directly. Named enums provided for convenience."
-defs["enum_comments"]["ImGuiMouseCursor_"] = "// Enumeration for GetMouseCursor()\
+defs["enum_comments"]["ImGuiMouseCursor_"] = {}
+defs["enum_comments"]["ImGuiMouseCursor_"]["prevcomments"] = "\
+// Enumeration for GetMouseCursor()\
 // User code may request backend to display given cursor by calling SetMouseCursor(), which is why we have some cursors that are marked unused here"
-defs["enum_comments"]["ImGuiNavInput_"] = "// Gamepad/Keyboard navigation\
+defs["enum_comments"]["ImGuiNavDirSourceFlags_"] = {}
+defs["enum_comments"]["ImGuiNavHighlightFlags_"] = {}
+defs["enum_comments"]["ImGuiNavInput_"] = {}
+defs["enum_comments"]["ImGuiNavInput_"]["prevcomments"] = "\
+// Gamepad/Keyboard navigation\
 // Since >= 1.87 backends you generally don't need to care about this enum since io.NavInputs[] is setup automatically. This might become private/internal some day.\
 // Keyboard: Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard to enable. NewFrame() will automatically fill io.NavInputs[] based on your io.AddKeyEvent() calls.\
 // Gamepad:  Set io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad to enable. Backend: set ImGuiBackendFlags_HasGamepad and fill the io.NavInputs[] fields before calling NewFrame(). Note that io.NavInputs[] is cleared by EndFrame().\
 // Read instructions in imgui.cpp for more details. Download PNG/PSD at http://dearimgui.org/controls_sheets."
-defs["enum_comments"]["ImGuiNavReadMode"] = "// FIXME-NAV: Clarify/expose various repeat delay/rate"
-defs["enum_comments"]["ImGuiOldColumnFlags_"] = "// Flags for internal's BeginColumns(). Prefix using BeginTable() nowadays!"
-defs["enum_comments"]["ImGuiPopupFlags_"] = "// Flags for OpenPopup*(), BeginPopupContext*(), IsPopupOpen() functions.\
+defs["enum_comments"]["ImGuiNavLayer"] = {}
+defs["enum_comments"]["ImGuiNavMoveFlags_"] = {}
+defs["enum_comments"]["ImGuiNavReadMode"] = {}
+defs["enum_comments"]["ImGuiNavReadMode"]["prevcomments"] = "\
+// FIXME-NAV: Clarify/expose various repeat delay/rate"
+defs["enum_comments"]["ImGuiNextItemDataFlags_"] = {}
+defs["enum_comments"]["ImGuiNextWindowDataFlags_"] = {}
+defs["enum_comments"]["ImGuiOldColumnFlags_"] = {}
+defs["enum_comments"]["ImGuiOldColumnFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Columns support\
+//-----------------------------------------------------------------------------\
+// Flags for internal's BeginColumns(). Prefix using BeginTable() nowadays!"
+defs["enum_comments"]["ImGuiPlotType"] = {}
+defs["enum_comments"]["ImGuiPopupFlags_"] = {}
+defs["enum_comments"]["ImGuiPopupFlags_"]["prevcomments"] = "\
+// Flags for OpenPopup*(), BeginPopupContext*(), IsPopupOpen() functions.\
 // - To be backward compatible with older API which took an 'int mouse_button = 1' argument, we need to treat\
 //   small flags values as a mouse button index, so we encode the mouse button in the first few bits of the flags.\
 //   It is therefore guaranteed to be legal to pass a mouse button index in ImGuiPopupFlags.\
@@ -65,25 +165,54 @@ defs["enum_comments"]["ImGuiPopupFlags_"] = "// Flags for OpenPopup*(), BeginPop
 //   IMPORTANT: because the default parameter is 1 (==ImGuiPopupFlags_MouseButtonRight), if you rely on the default parameter\
 //   and want to another another flag, you need to pass in the ImGuiPopupFlags_MouseButtonRight flag.\
 // - Multiple buttons currently cannot be combined/or-ed in those functions (we could allow it later)."
-defs["enum_comments"]["ImGuiScrollFlags_"] = "// Early work-in-progress API for ScrollToItem()"
-defs["enum_comments"]["ImGuiSelectableFlagsPrivate_"] = "// Extend ImGuiSelectableFlags_"
-defs["enum_comments"]["ImGuiSelectableFlags_"] = "// Flags for ImGui::Selectable()"
-defs["enum_comments"]["ImGuiSliderFlagsPrivate_"] = "// Extend ImGuiSliderFlags_"
-defs["enum_comments"]["ImGuiSliderFlags_"] = "// Flags for DragFloat(), DragInt(), SliderFloat(), SliderInt() etc.\
+defs["enum_comments"]["ImGuiPopupPositionPolicy"] = {}
+defs["enum_comments"]["ImGuiScrollFlags_"] = {}
+defs["enum_comments"]["ImGuiScrollFlags_"]["prevcomments"] = "\
+// Early work-in-progress API for ScrollToItem()"
+defs["enum_comments"]["ImGuiSelectableFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiSelectableFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiSelectableFlags_"
+defs["enum_comments"]["ImGuiSelectableFlags_"] = {}
+defs["enum_comments"]["ImGuiSelectableFlags_"]["prevcomments"] = "\
+// Flags for ImGui::Selectable()"
+defs["enum_comments"]["ImGuiSeparatorFlags_"] = {}
+defs["enum_comments"]["ImGuiSliderFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiSliderFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiSliderFlags_"
+defs["enum_comments"]["ImGuiSliderFlags_"] = {}
+defs["enum_comments"]["ImGuiSliderFlags_"]["prevcomments"] = "\
+// Flags for DragFloat(), DragInt(), SliderFloat(), SliderInt() etc.\
 // We use the same sets of flags for DragXXX() and SliderXXX() functions as the features are the same and it makes it easier to swap them."
-defs["enum_comments"]["ImGuiSortDirection_"] = "// A sorting direction"
-defs["enum_comments"]["ImGuiStyleVar_"] = "// Enumeration for PushStyleVar() / PopStyleVar() to temporarily modify the ImGuiStyle structure.\
+defs["enum_comments"]["ImGuiSortDirection_"] = {}
+defs["enum_comments"]["ImGuiSortDirection_"]["prevcomments"] = "\
+// A sorting direction"
+defs["enum_comments"]["ImGuiStyleVar_"] = {}
+defs["enum_comments"]["ImGuiStyleVar_"]["prevcomments"] = "\
+// Enumeration for PushStyleVar() / PopStyleVar() to temporarily modify the ImGuiStyle structure.\
 // - The enum only refers to fields of ImGuiStyle which makes sense to be pushed/popped inside UI code.\
 //   During initialization or between frames, feel free to just poke into ImGuiStyle directly.\
 // - Tip: Use your programming IDE navigation facilities on the names in the _second column_ below to find the actual members and their description.\
 //   In Visual Studio IDE: CTRL+comma (\"Edit.GoToAll\") can follow symbols in comments, whereas CTRL+F12 (\"Edit.GoToImplementation\") cannot.\
 //   With Visual Assist installed: ALT+G (\"VAssistX.GoToImplementation\") can also follow symbols in comments.\
 // - When changing this enum, you need to update the associated internal table GStyleVarInfo[] accordingly. This is where we link enum values to members offset/type."
-defs["enum_comments"]["ImGuiTabBarFlagsPrivate_"] = "// Extend ImGuiTabBarFlags_"
-defs["enum_comments"]["ImGuiTabBarFlags_"] = "// Flags for ImGui::BeginTabBar()"
-defs["enum_comments"]["ImGuiTabItemFlagsPrivate_"] = "// Extend ImGuiTabItemFlags_"
-defs["enum_comments"]["ImGuiTabItemFlags_"] = "// Flags for ImGui::BeginTabItem()"
-defs["enum_comments"]["ImGuiTableBgTarget_"] = "// Enum for ImGui::TableSetBgColor()\
+defs["enum_comments"]["ImGuiTabBarFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiTabBarFlagsPrivate_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Tab bar, Tab item support\
+//-----------------------------------------------------------------------------\
+// Extend ImGuiTabBarFlags_"
+defs["enum_comments"]["ImGuiTabBarFlags_"] = {}
+defs["enum_comments"]["ImGuiTabBarFlags_"]["prevcomments"] = "\
+// Flags for ImGui::BeginTabBar()"
+defs["enum_comments"]["ImGuiTabItemFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiTabItemFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiTabItemFlags_"
+defs["enum_comments"]["ImGuiTabItemFlags_"] = {}
+defs["enum_comments"]["ImGuiTabItemFlags_"]["prevcomments"] = "\
+// Flags for ImGui::BeginTabItem()"
+defs["enum_comments"]["ImGuiTableBgTarget_"] = {}
+defs["enum_comments"]["ImGuiTableBgTarget_"]["prevcomments"] = "\
+// Enum for ImGui::TableSetBgColor()\
 // Background colors are rendering in 3 layers:\
 //  - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.\
 //  - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.\
@@ -92,8 +221,12 @@ defs["enum_comments"]["ImGuiTableBgTarget_"] = "// Enum for ImGui::TableSetBgCol
 // When using ImGuiTableFlags_RowBg on the table, each row has the RowBg0 color automatically set for odd/even rows.\
 // If you set the color of RowBg0 target, your color will override the existing RowBg0 color.\
 // If you set the color of RowBg1 or ColumnBg1 target, your color will blend over the RowBg0 color."
-defs["enum_comments"]["ImGuiTableColumnFlags_"] = "// Flags for ImGui::TableSetupColumn()"
-defs["enum_comments"]["ImGuiTableFlags_"] = "// Flags for ImGui::BeginTable()\
+defs["enum_comments"]["ImGuiTableColumnFlags_"] = {}
+defs["enum_comments"]["ImGuiTableColumnFlags_"]["prevcomments"] = "\
+// Flags for ImGui::TableSetupColumn()"
+defs["enum_comments"]["ImGuiTableFlags_"] = {}
+defs["enum_comments"]["ImGuiTableFlags_"]["prevcomments"] = "\
+// Flags for ImGui::BeginTable()\
 // - Important! Sizing policies have complex and subtle side effects, much more so than you would expect.\
 //   Read comments/demos carefully + experiment with live demos to get acquainted with them.\
 // - The DEFAULT sizing policies are:\
@@ -115,15 +248,35 @@ defs["enum_comments"]["ImGuiTableFlags_"] = "// Flags for ImGui::BeginTable()\
 //    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on, UNLESS you have specified a value for 'inner_width' in BeginTable().\
 //      If you specify a value for 'inner_width' then effectively the scrolling space is known and Stretch or mixed Fixed/Stretch columns become meaningful again.\
 // - Read on documentation at the top of imgui_tables.cpp for details."
-defs["enum_comments"]["ImGuiTableRowFlags_"] = "// Flags for ImGui::TableNextRow()"
-defs["enum_comments"]["ImGuiTreeNodeFlagsPrivate_"] = "// Extend ImGuiTreeNodeFlags_"
-defs["enum_comments"]["ImGuiTreeNodeFlags_"] = "// Flags for ImGui::TreeNodeEx(), ImGui::CollapsingHeader*()"
-defs["enum_comments"]["ImGuiViewportFlags_"] = "// Flags stored in ImGuiViewport::Flags, giving indications to the platform backends."
-defs["enum_comments"]["ImGuiWindowDockStyleCol"] = "// List of colors that are stored at the time of Begin() into Docked Windows.\
+defs["enum_comments"]["ImGuiTableRowFlags_"] = {}
+defs["enum_comments"]["ImGuiTableRowFlags_"]["prevcomments"] = "\
+// Flags for ImGui::TableNextRow()"
+defs["enum_comments"]["ImGuiTextFlags_"] = {}
+defs["enum_comments"]["ImGuiTooltipFlags_"] = {}
+defs["enum_comments"]["ImGuiTreeNodeFlagsPrivate_"] = {}
+defs["enum_comments"]["ImGuiTreeNodeFlagsPrivate_"]["prevcomments"] = "\
+// Extend ImGuiTreeNodeFlags_"
+defs["enum_comments"]["ImGuiTreeNodeFlags_"] = {}
+defs["enum_comments"]["ImGuiTreeNodeFlags_"]["prevcomments"] = "\
+// Flags for ImGui::TreeNodeEx(), ImGui::CollapsingHeader*()"
+defs["enum_comments"]["ImGuiViewportFlags_"] = {}
+defs["enum_comments"]["ImGuiViewportFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Viewports\
+//-----------------------------------------------------------------------------\
+// Flags stored in ImGuiViewport::Flags, giving indications to the platform backends."
+defs["enum_comments"]["ImGuiWindowDockStyleCol"] = {}
+defs["enum_comments"]["ImGuiWindowDockStyleCol"]["prevcomments"] = "\
+// List of colors that are stored at the time of Begin() into Docked Windows.\
 // We currently store the packed colors in a simple array window->DockStyle.Colors[].\
 // A better solution may involve appending into a log of colors in ImGuiContext + store offsets into those arrays in ImGuiWindow,\
 // but it would be more complex as we'd need to double-buffer both as e.g. drop target may refer to window from last frame."
-defs["enum_comments"]["ImGuiWindowFlags_"] = "// Flags for ImGui::Begin()"
+defs["enum_comments"]["ImGuiWindowFlags_"] = {}
+defs["enum_comments"]["ImGuiWindowFlags_"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Flags & Enumerations\
+//-----------------------------------------------------------------------------\
+// Flags for ImGui::Begin()"
 defs["enums"] = {}
 defs["enums"]["ImDrawFlags_"] = {}
 defs["enums"]["ImDrawFlags_"][1] = {}
@@ -4207,33 +4360,43 @@ defs["locations"]["StbUndoRecord"] = "imstb_textedit:301"
 defs["locations"]["StbUndoState"] = "imstb_textedit:310"
 defs["struct_comments"] = {}
 defs["struct_comments"]["ImBitVector"] = {}
-defs["struct_comments"]["ImBitVector"]["comments"] = "// Helper: ImBitVector\
+defs["struct_comments"]["ImBitVector"]["prevcomments"] = "\
+// Helper: ImBitVector\
 // Store 1-bit per value."
 defs["struct_comments"]["ImColor"] = {}
-defs["struct_comments"]["ImColor"]["comments"] = "// Helpers macros to generate 32-bit encoded colors\
+defs["struct_comments"]["ImColor"]["prevcomments"] = "\
+// Helpers macros to generate 32-bit encoded colors\
 // User can declare their own format by #defining the 5 _SHIFT/_MASK macros in their imconfig file.\
 // Helper: ImColor() implicitly converts colors to either ImU32 (packed 4x1 byte) or ImVec4 (4x1 float)\
 // Prefer using IM_COL32() macros if you want a guaranteed compile-time ImU32 for usage with ImDrawList API.\
 // **Avoid storing ImColor! Store either u32 of ImVec4. This is not a full-featured color class. MAY OBSOLETE.\
 // **None of the ImGui API are using ImColor directly but you can use it as a convenience to pass colors in either ImU32 or ImVec4 formats. Explicitly cast to ImU32 or ImVec4 if needed."
 defs["struct_comments"]["ImDrawChannel"] = {}
-defs["struct_comments"]["ImDrawChannel"]["comments"] = "// [Internal] For use by ImDrawListSplitter"
+defs["struct_comments"]["ImDrawChannel"]["prevcomments"] = "\
+// [Internal] For use by ImDrawListSplitter"
 defs["struct_comments"]["ImDrawCmd"] = {}
-defs["struct_comments"]["ImDrawCmd"]["comments"] = "// Typically, 1 command = 1 GPU draw call (unless command is a callback)\
+defs["struct_comments"]["ImDrawCmd"]["prevcomments"] = "\
+// Special Draw callback value to request renderer backend to reset the graphics/render state.\
+// The renderer backend needs to handle this special value, otherwise it will crash trying to call a function at this address.\
+// This is useful for example if you submitted callbacks which you know have altered the render state and you want it to be restored.\
+// It is not done by default because they are many perfectly useful way of altering render state for imgui contents (e.g. changing shader/blending settings before an Image call).\
+// Typically, 1 command = 1 GPU draw call (unless command is a callback)\
 // - VtxOffset: When 'io.BackendFlags & ImGuiBackendFlags_RendererHasVtxOffset' is enabled,\
 //   this fields allow us to render meshes larger than 64K vertices while keeping 16-bit indices.\
 //   Backends made for <1.71. will typically ignore the VtxOffset fields.\
 // - The ClipRect/TextureId/VtxOffset fields must be contiguous as we memcmp() them together (this is asserted for)."
 defs["struct_comments"]["ImDrawCmdHeader"] = {}
-defs["struct_comments"]["ImDrawCmdHeader"]["comments"] = "\
+defs["struct_comments"]["ImDrawCmdHeader"]["prevcomments"] = "\
 // [Internal] For use by ImDrawList"
 defs["struct_comments"]["ImDrawData"] = {}
-defs["struct_comments"]["ImDrawData"]["comments"] = "// All draw data to render a Dear ImGui frame\
+defs["struct_comments"]["ImDrawData"]["prevcomments"] = "\
+// All draw data to render a Dear ImGui frame\
 // (NB: the style and the naming convention here is a little inconsistent, we currently preserve them for backward compatibility purpose,\
 // as this is one of the oldest structure exposed by the library! Basically, ImDrawList == CmdList)"
 defs["struct_comments"]["ImDrawDataBuilder"] = {}
 defs["struct_comments"]["ImDrawList"] = {}
-defs["struct_comments"]["ImDrawList"]["comments"] = "// Draw command list\
+defs["struct_comments"]["ImDrawList"]["prevcomments"] = "\
+// Draw command list\
 // This is the low-level list of polygons that ImGui:: functions are filling. At the end of the frame,\
 // all command lists are passed to your ImGuiIO::RenderDrawListFn function for rendering.\
 // Each dear imgui window contains its own ImDrawList. You can use ImGui::GetWindowDrawList() to\
@@ -4243,18 +4406,38 @@ defs["struct_comments"]["ImDrawList"]["comments"] = "// Draw command list\
 // You are totally free to apply whatever transformation matrix to want to the data (depending on the use of the transformation you may want to apply it to ClipRect as well!)\
 // Important: Primitives are always added to the list and not culled (culling is done at higher-level by ImGui:: functions), if you use this API a lot consider coarse culling your drawn objects."
 defs["struct_comments"]["ImDrawListSharedData"] = {}
-defs["struct_comments"]["ImDrawListSharedData"]["comments"] = "// Data shared between all ImDrawList instances\
+defs["struct_comments"]["ImDrawListSharedData"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] ImDrawList support\
+//-----------------------------------------------------------------------------\
+// ImDrawList: Helper function to calculate a circle's segment count given its radius and a \"maximum error\" value.\
+// Estimation of number of circle segment based on error is derived using method described in https://stackoverflow.com/a/2244088/15194693\
+// Number of segments (N) is calculated using equation:\
+//   N = ceil ( pi / acos(1 - error / r) )     where r > 0, error <= r\
+// Our equation is significantly simpler that one in the post thanks for choosing segment that is\
+// perpendicular to X axis. Follow steps in the article from this starting condition and you will\
+// will get this result.\
+//\
+// Rendering circles with an odd number of segments, while mathematically correct will produce\
+// asymmetrical results on the raster grid. Therefore we're rounding N to next even number (7->8, 8->8, 9->10 etc.)\
+// Raw equation from IM_DRAWLIST_CIRCLE_AUTO_SEGMENT_CALC rewritten for 'r' and 'error'.\
+// ImDrawList: Lookup table size for adaptive arc drawing, cover full circle.\
+// Data shared between all ImDrawList instances\
 // You may want to create your own instance of this if you want to use ImDrawList completely without ImGui. In that case, watch out for future changes to this structure."
 defs["struct_comments"]["ImDrawListSplitter"] = {}
-defs["struct_comments"]["ImDrawListSplitter"]["comments"] = "// Split/Merge functions are used to split the draw list into different layers which can be drawn into out of order.\
+defs["struct_comments"]["ImDrawListSplitter"]["prevcomments"] = "\
+// Split/Merge functions are used to split the draw list into different layers which can be drawn into out of order.\
 // This is used by the Columns/Tables API, so items of each column can be batched together in a same draw call."
 defs["struct_comments"]["ImDrawVert"] = {}
-defs["struct_comments"]["ImDrawVert"]["comments"] = "// Vertex layout"
+defs["struct_comments"]["ImDrawVert"]["prevcomments"] = "\
+// Vertex layout"
 defs["struct_comments"]["ImFont"] = {}
-defs["struct_comments"]["ImFont"]["comments"] = "// Font runtime data and rendering\
+defs["struct_comments"]["ImFont"]["prevcomments"] = "\
+// Font runtime data and rendering\
 // ImFontAtlas automatically loads a default embedded font for you when you call GetTexDataAsAlpha8() or GetTexDataAsRGBA32()."
 defs["struct_comments"]["ImFontAtlas"] = {}
-defs["struct_comments"]["ImFontAtlas"]["comments"] = "// Load and rasterize multiple TTF/OTF fonts into a same texture. The font atlas will build a single texture holding:\
+defs["struct_comments"]["ImFontAtlas"]["prevcomments"] = "\
+// Load and rasterize multiple TTF/OTF fonts into a same texture. The font atlas will build a single texture holding:\
 //  - One or more fonts.\
 //  - Custom graphics data needed to render the shapes needed by Dear ImGui.\
 //  - Mouse cursor shapes for software cursor rendering (unless setting 'Flags |= ImFontAtlasFlags_NoMouseCursors' in the font atlas).\
@@ -4272,49 +4455,68 @@ defs["struct_comments"]["ImFontAtlas"]["comments"] = "// Load and rasterize mult
 // - Even though many functions are suffixed with \"TTF\", OTF data is supported just as well.\
 // - This is an old API and it is currently awkward for those and and various other reasons! We will address them in the future!"
 defs["struct_comments"]["ImFontAtlasCustomRect"] = {}
-defs["struct_comments"]["ImFontAtlasCustomRect"]["comments"] = "// See ImFontAtlas::AddCustomRectXXX functions."
+defs["struct_comments"]["ImFontAtlasCustomRect"]["prevcomments"] = "\
+// See ImFontAtlas::AddCustomRectXXX functions."
 defs["struct_comments"]["ImFontBuilderIO"] = {}
-defs["struct_comments"]["ImFontBuilderIO"]["comments"] = "// This structure is likely to evolve as we add support for incremental atlas updates"
+defs["struct_comments"]["ImFontBuilderIO"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] ImFontAtlas internal API\
+//-----------------------------------------------------------------------------\
+// This structure is likely to evolve as we add support for incremental atlas updates"
 defs["struct_comments"]["ImFontConfig"] = {}
-defs["struct_comments"]["ImFontConfig"]["comments"] = "//-----------------------------------------------------------------------------\
+defs["struct_comments"]["ImFontConfig"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] Font API (ImFontConfig, ImFontGlyph, ImFontAtlasFlags, ImFontAtlas, ImFontGlyphRangesBuilder, ImFont)\
 //-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImFontGlyph"] = {}
-defs["struct_comments"]["ImFontGlyph"]["comments"] = "// Hold rendering data for one glyph.\
+defs["struct_comments"]["ImFontGlyph"]["prevcomments"] = "\
+// Hold rendering data for one glyph.\
 // (Note: some language parsers may fail to convert the 31+1 bitfield members, in this case maybe drop store a single u32 or we can rework this)"
 defs["struct_comments"]["ImFontGlyphRangesBuilder"] = {}
-defs["struct_comments"]["ImFontGlyphRangesBuilder"]["comments"] = "// Helper to build glyph ranges from text/string data. Feed your application strings/characters to it then call BuildRanges().\
+defs["struct_comments"]["ImFontGlyphRangesBuilder"]["prevcomments"] = "\
+// Helper to build glyph ranges from text/string data. Feed your application strings/characters to it then call BuildRanges().\
 // This is essentially a tightly packed of vector of 64k booleans = 8KB storage."
 defs["struct_comments"]["ImGuiColorMod"] = {}
-defs["struct_comments"]["ImGuiColorMod"]["comments"] = "// Stacked color modifier, backup of modified data so we can restore it"
+defs["struct_comments"]["ImGuiColorMod"]["prevcomments"] = "\
+// Stacked color modifier, backup of modified data so we can restore it"
 defs["struct_comments"]["ImGuiComboPreviewData"] = {}
-defs["struct_comments"]["ImGuiComboPreviewData"]["comments"] = "// Storage data for BeginComboPreview()/EndComboPreview()"
+defs["struct_comments"]["ImGuiComboPreviewData"]["prevcomments"] = "\
+// Storage data for BeginComboPreview()/EndComboPreview()"
 defs["struct_comments"]["ImGuiContext"] = {}
-defs["struct_comments"]["ImGuiContext"]["comments"] = "//-----------------------------------------------------------------------------\
+defs["struct_comments"]["ImGuiContext"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] ImGuiContext (main Dear ImGui context)\
 //-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiContextHook"] = {}
 defs["struct_comments"]["ImGuiDataTypeInfo"] = {}
-defs["struct_comments"]["ImGuiDataTypeInfo"]["comments"] = "// Type information associated to one ImGuiDataType. Retrieve with DataTypeGetInfo()."
+defs["struct_comments"]["ImGuiDataTypeInfo"]["prevcomments"] = "\
+// Type information associated to one ImGuiDataType. Retrieve with DataTypeGetInfo()."
 defs["struct_comments"]["ImGuiDataTypeTempStorage"] = {}
 defs["struct_comments"]["ImGuiDockContext"] = {}
 defs["struct_comments"]["ImGuiDockNode"] = {}
-defs["struct_comments"]["ImGuiDockNode"]["comments"] = "// sizeof() 156~192"
+defs["struct_comments"]["ImGuiDockNode"]["prevcomments"] = "\
+// sizeof() 156~192"
 defs["struct_comments"]["ImGuiGroupData"] = {}
-defs["struct_comments"]["ImGuiGroupData"]["comments"] = "// Stacked storage data for BeginGroup()/EndGroup()"
+defs["struct_comments"]["ImGuiGroupData"]["prevcomments"] = "\
+// Stacked storage data for BeginGroup()/EndGroup()"
 defs["struct_comments"]["ImGuiIO"] = {}
 defs["struct_comments"]["ImGuiInputEvent"] = {}
 defs["struct_comments"]["ImGuiInputEventAppFocused"] = {}
 defs["struct_comments"]["ImGuiInputEventKey"] = {}
 defs["struct_comments"]["ImGuiInputEventMouseButton"] = {}
 defs["struct_comments"]["ImGuiInputEventMousePos"] = {}
-defs["struct_comments"]["ImGuiInputEventMousePos"]["comments"] = "// FIXME: Structures in the union below need to be declared as anonymous unions appears to be an extension?\
+defs["struct_comments"]["ImGuiInputEventMousePos"]["prevcomments"] = "\
+// FIXME: Structures in the union below need to be declared as anonymous unions appears to be an extension?\
 // Using ImVec2() would fail on Clang 'union member 'MousePos' has a non-trivial default constructor'"
 defs["struct_comments"]["ImGuiInputEventMouseViewport"] = {}
 defs["struct_comments"]["ImGuiInputEventMouseWheel"] = {}
 defs["struct_comments"]["ImGuiInputEventText"] = {}
 defs["struct_comments"]["ImGuiInputTextCallbackData"] = {}
-defs["struct_comments"]["ImGuiInputTextCallbackData"]["comments"] = "// Shared state of InputText(), passed as an argument to your callback when a ImGuiInputTextFlags_Callback* flag is used.\
+defs["struct_comments"]["ImGuiInputTextCallbackData"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Misc data structures\
+//-----------------------------------------------------------------------------\
+// Shared state of InputText(), passed as an argument to your callback when a ImGuiInputTextFlags_Callback* flag is used.\
 // The callback function should return 0 by default.\
 // Callbacks (follow a flag name and see comments in ImGuiInputTextFlags_ declarations for more details)\
 // - ImGuiInputTextFlags_CallbackEdit:        Callback on buffer edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)\
@@ -4324,15 +4526,25 @@ defs["struct_comments"]["ImGuiInputTextCallbackData"]["comments"] = "// Shared s
 // - ImGuiInputTextFlags_CallbackCharFilter:  Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.\
 // - ImGuiInputTextFlags_CallbackResize:      Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow."
 defs["struct_comments"]["ImGuiInputTextState"] = {}
-defs["struct_comments"]["ImGuiInputTextState"]["comments"] = "// Internal state of the currently focused/edited text input box\
+defs["struct_comments"]["ImGuiInputTextState"]["prevcomments"] = "\
+// Internal state of the currently focused/edited text input box\
 // For a given item ID, access with ImGui::GetInputTextState()"
 defs["struct_comments"]["ImGuiKeyData"] = {}
-defs["struct_comments"]["ImGuiKeyData"]["comments"] = "// [Internal] Storage used by IsKeyDown(), IsKeyPressed() etc functions.\
+defs["struct_comments"]["ImGuiKeyData"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] ImGuiIO\
+//-----------------------------------------------------------------------------\
+// Communicate most settings and inputs/outputs to Dear ImGui using this structure.\
+// Access via ImGui::GetIO(). Read 'Programmer guide' section in .cpp file for general usage.\
+//-----------------------------------------------------------------------------\
+// [Internal] Storage used by IsKeyDown(), IsKeyPressed() etc functions.\
 // If prior to 1.87 you used io.KeysDownDuration[] (which was marked as internal), you should use GetKeyData(key)->DownDuration and not io.KeysData[key]->DownDuration."
 defs["struct_comments"]["ImGuiLastItemData"] = {}
-defs["struct_comments"]["ImGuiLastItemData"]["comments"] = "// Status storage for the last submitted item"
+defs["struct_comments"]["ImGuiLastItemData"]["prevcomments"] = "\
+// Status storage for the last submitted item"
 defs["struct_comments"]["ImGuiListClipper"] = {}
-defs["struct_comments"]["ImGuiListClipper"]["comments"] = "// Helper: Manually clip large list of items.\
+defs["struct_comments"]["ImGuiListClipper"]["prevcomments"] = "\
+// Helper: Manually clip large list of items.\
 // If you have lots evenly spaced items and you have a random access to the list, you can perform coarse\
 // clipping based on visibility to only submit items that are in view.\
 // The clipper calculates the range of visible items and advance the cursor to compensate for the non-visible items we have skipped.\
@@ -4353,46 +4565,111 @@ defs["struct_comments"]["ImGuiListClipper"]["comments"] = "// Helper: Manually c
 // - User code submit visible elements.\
 // - The clipper also handles various subtleties related to keyboard/gamepad navigation, wrapping etc."
 defs["struct_comments"]["ImGuiListClipperData"] = {}
-defs["struct_comments"]["ImGuiListClipperData"]["comments"] = "// Temporary clipper data, buffers shared/reused between instances"
+defs["struct_comments"]["ImGuiListClipperData"]["prevcomments"] = "\
+// Temporary clipper data, buffers shared/reused between instances"
 defs["struct_comments"]["ImGuiListClipperRange"] = {}
-defs["struct_comments"]["ImGuiListClipperRange"]["comments"] = "//-----------------------------------------------------------------------------\
+defs["struct_comments"]["ImGuiListClipperRange"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] Clipper support\
 //-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiMenuColumns"] = {}
-defs["struct_comments"]["ImGuiMenuColumns"]["comments"] = "// Simple column measurement, currently used for MenuItem() only.. This is very short-sighted/throw-away code and NOT a generic helper."
+defs["struct_comments"]["ImGuiMenuColumns"]["prevcomments"] = "\
+// Simple column measurement, currently used for MenuItem() only.. This is very short-sighted/throw-away code and NOT a generic helper."
 defs["struct_comments"]["ImGuiMetricsConfig"] = {}
 defs["struct_comments"]["ImGuiNavItemData"] = {}
 defs["struct_comments"]["ImGuiNextItemData"] = {}
 defs["struct_comments"]["ImGuiNextWindowData"] = {}
-defs["struct_comments"]["ImGuiNextWindowData"]["comments"] = "// Storage for SetNexWindow** functions"
+defs["struct_comments"]["ImGuiNextWindowData"]["prevcomments"] = "\
+// Storage for SetNexWindow** functions"
 defs["struct_comments"]["ImGuiOldColumnData"] = {}
 defs["struct_comments"]["ImGuiOldColumns"] = {}
 defs["struct_comments"]["ImGuiOnceUponAFrame"] = {}
-defs["struct_comments"]["ImGuiOnceUponAFrame"]["comments"] = "// Helper: Execute a block of code at maximum once a frame. Convenient if you want to quickly create an UI within deep-nested code that runs multiple times every frame.\
+defs["struct_comments"]["ImGuiOnceUponAFrame"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Helpers (ImGuiOnceUponAFrame, ImGuiTextFilter, ImGuiTextBuffer, ImGuiStorage, ImGuiListClipper, ImColor)\
+//-----------------------------------------------------------------------------\
+// Helper: Unicode defines\
+// Helper: Execute a block of code at maximum once a frame. Convenient if you want to quickly create an UI within deep-nested code that runs multiple times every frame.\
 // Usage: static ImGuiOnceUponAFrame oaf; if (oaf) ImGui::Text(\"This will be called only once per frame\");"
 defs["struct_comments"]["ImGuiPayload"] = {}
-defs["struct_comments"]["ImGuiPayload"]["comments"] = "// Data payload for Drag and Drop operations: AcceptDragDropPayload(), GetDragDropPayload()"
+defs["struct_comments"]["ImGuiPayload"]["prevcomments"] = "\
+// Data payload for Drag and Drop operations: AcceptDragDropPayload(), GetDragDropPayload()"
 defs["struct_comments"]["ImGuiPlatformIO"] = {}
-defs["struct_comments"]["ImGuiPlatformIO"]["comments"] = "// (Optional) Access via ImGui::GetPlatformIO()"
+defs["struct_comments"]["ImGuiPlatformIO"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Platform Dependent Interfaces (for e.g. multi-viewport support)\
+//-----------------------------------------------------------------------------\
+// [BETA] (Optional) This is completely optional, for advanced users!\
+// If you are new to Dear ImGui and trying to integrate it into your engine, you can probably ignore this for now.\
+//\
+// This feature allows you to seamlessly drag Dear ImGui windows outside of your application viewport.\
+// This is achieved by creating new Platform/OS windows on the fly, and rendering into them.\
+// Dear ImGui manages the viewport structures, and the backend create and maintain one Platform/OS window for each of those viewports.\
+//\
+// See Glossary https://github.com/ocornut/imgui/wiki/Glossary for details about some of the terminology.\
+// See Thread https://github.com/ocornut/imgui/issues/1542 for gifs, news and questions about this evolving feature.\
+//\
+// About the coordinates system:\
+// - When multi-viewports are enabled, all Dear ImGui coordinates become absolute coordinates (same as OS coordinates!)\
+// - So e.g. ImGui::SetNextWindowPos(ImVec2(0,0)) will position a window relative to your primary monitor!\
+// - If you want to position windows relative to your main application viewport, use ImGui::GetMainViewport()->Pos as a base position.\
+//\
+// Steps to use multi-viewports in your application, when using a default backend from the examples/ folder:\
+// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\
+// - Backend:      The backend initialization will setup all necessary ImGuiPlatformIO's functions and update monitors info every frame.\
+// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\
+// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\
+//\
+// Steps to use multi-viewports in your application, when using a custom backend:\
+// - Important:    THIS IS NOT EASY TO DO and comes with many subtleties not described here!\
+//                 It's also an experimental feature, so some of the requirements may evolve.\
+//                 Consider using default backends if you can. Either way, carefully follow and refer to examples/ backends for details.\
+// - Application:  Enable feature with 'io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable'.\
+// - Backend:      Hook ImGuiPlatformIO's Platform_* and Renderer_* callbacks (see below).\
+//                 Set 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports' and 'io.BackendFlags |= ImGuiBackendFlags_PlatformHasViewports'.\
+//                 Update ImGuiPlatformIO's Monitors list every frame.\
+//                 Update MousePos every frame, in absolute coordinates.\
+// - Application:  In your main loop, call ImGui::UpdatePlatformWindows(), ImGui::RenderPlatformWindowsDefault() after EndFrame() or Render().\
+//                 You may skip calling RenderPlatformWindowsDefault() if its API is not convenient for your needs. Read comments below.\
+// - Application:  Fix absolute coordinates used in ImGui::SetWindowPos() or ImGui::SetNextWindowPos() calls.\
+//\
+// About ImGui::RenderPlatformWindowsDefault():\
+// - This function is a mostly a _helper_ for the common-most cases, and to facilitate using default backends.\
+// - You can check its simple source code to understand what it does.\
+//   It basically iterates secondary viewports and call 4 functions that are setup in ImGuiPlatformIO, if available:\
+//     Platform_RenderWindow(), Renderer_RenderWindow(), Platform_SwapBuffers(), Renderer_SwapBuffers()\
+//   Those functions pointers exists only for the benefit of RenderPlatformWindowsDefault().\
+// - If you have very specific rendering needs (e.g. flipping multiple swap-chain simultaneously, unusual sync/threading issues, etc.),\
+//   you may be tempted to ignore RenderPlatformWindowsDefault() and write customized code to perform your renderingg.\
+//   You may decide to setup the platform_io's *RenderWindow and *SwapBuffers pointers and call your functions through those pointers,\
+//   or you may decide to never setup those pointers and call your code directly. They are a convenience, not an obligatory interface.\
+//-----------------------------------------------------------------------------\
+// (Optional) Access via ImGui::GetPlatformIO()"
 defs["struct_comments"]["ImGuiPlatformImeData"] = {}
-defs["struct_comments"]["ImGuiPlatformImeData"]["comments"] = "// (Optional) Support for IME (Input Method Editor) via the io.SetPlatformImeDataFn() function."
+defs["struct_comments"]["ImGuiPlatformImeData"]["prevcomments"] = "\
+// (Optional) Support for IME (Input Method Editor) via the io.SetPlatformImeDataFn() function."
 defs["struct_comments"]["ImGuiPlatformMonitor"] = {}
-defs["struct_comments"]["ImGuiPlatformMonitor"]["comments"] = "// (Optional) This is required when enabling multi-viewport. Represent the bounds of each connected monitor/display and their DPI.\
+defs["struct_comments"]["ImGuiPlatformMonitor"]["prevcomments"] = "\
+// (Optional) This is required when enabling multi-viewport. Represent the bounds of each connected monitor/display and their DPI.\
 // We use this information for multiple DPI support + clamping the position of popups and tooltips so they don't straddle multiple monitors."
 defs["struct_comments"]["ImGuiPopupData"] = {}
-defs["struct_comments"]["ImGuiPopupData"]["comments"] = "// Storage for current popup stack"
+defs["struct_comments"]["ImGuiPopupData"]["prevcomments"] = "\
+// Storage for current popup stack"
 defs["struct_comments"]["ImGuiPtrOrIndex"] = {}
 defs["struct_comments"]["ImGuiSettingsHandler"] = {}
 defs["struct_comments"]["ImGuiShrinkWidthItem"] = {}
 defs["struct_comments"]["ImGuiSizeCallbackData"] = {}
-defs["struct_comments"]["ImGuiSizeCallbackData"]["comments"] = "// Resizing callback data to apply custom constraint. As enabled by SetNextWindowSizeConstraints(). Callback is called during the next Begin().\
+defs["struct_comments"]["ImGuiSizeCallbackData"]["prevcomments"] = "\
+// Resizing callback data to apply custom constraint. As enabled by SetNextWindowSizeConstraints(). Callback is called during the next Begin().\
 // NB: For basic min/max size constraint on each axis you don't need to use the callback! The SetNextWindowSizeConstraints() parameters are enough."
 defs["struct_comments"]["ImGuiStackLevelInfo"] = {}
 defs["struct_comments"]["ImGuiStackSizes"] = {}
 defs["struct_comments"]["ImGuiStackTool"] = {}
-defs["struct_comments"]["ImGuiStackTool"]["comments"] = "// State for Stack tool queries"
+defs["struct_comments"]["ImGuiStackTool"]["prevcomments"] = "\
+// State for Stack tool queries"
 defs["struct_comments"]["ImGuiStorage"] = {}
-defs["struct_comments"]["ImGuiStorage"]["comments"] = "// Helper: Key->Value storage\
+defs["struct_comments"]["ImGuiStorage"]["prevcomments"] = "\
+// Helper: Key->Value storage\
 // Typically you don't have to worry about this since a storage is held within each Window.\
 // We use it to e.g. store collapse state for a tree (Int 0/1)\
 // This is optimized for efficient lookup (dichotomy into a contiguous buffer) and rare insertion (typically tied to user interactions aka max once a frame)\
@@ -4401,10 +4678,11 @@ defs["struct_comments"]["ImGuiStorage"]["comments"] = "// Helper: Key->Value sto
 // - You want to store custom debug data easily without adding or editing structures in your code (probably not efficient, but convenient)\
 // Types are NOT stored, so it is up to you to make sure your Key don't collide with different types."
 defs["struct_comments"]["ImGuiStoragePair"] = {}
-defs["struct_comments"]["ImGuiStoragePair"]["comments"] = "\
+defs["struct_comments"]["ImGuiStoragePair"]["prevcomments"] = "\
     // [Internal]"
 defs["struct_comments"]["ImGuiStyle"] = {}
-defs["struct_comments"]["ImGuiStyle"]["comments"] = "//-----------------------------------------------------------------------------\
+defs["struct_comments"]["ImGuiStyle"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
 // [SECTION] ImGuiStyle\
 //-----------------------------------------------------------------------------\
 // You may modify the ImGui::GetStyle() main instance during initialization and before NewFrame().\
@@ -4412,47 +4690,63 @@ defs["struct_comments"]["ImGuiStyle"]["comments"] = "//-------------------------
 // and ImGui::PushStyleColor(ImGuiCol_XXX)/PopStyleColor() for colors.\
 //-----------------------------------------------------------------------------"
 defs["struct_comments"]["ImGuiStyleMod"] = {}
-defs["struct_comments"]["ImGuiStyleMod"]["comments"] = "// Stacked style modifier, backup of modified data so we can restore it. Data type inferred from the variable."
+defs["struct_comments"]["ImGuiStyleMod"]["prevcomments"] = "\
+// Stacked style modifier, backup of modified data so we can restore it. Data type inferred from the variable."
 defs["struct_comments"]["ImGuiTabBar"] = {}
-defs["struct_comments"]["ImGuiTabBar"]["comments"] = "// Storage for a tab bar (sizeof() 152 bytes)"
+defs["struct_comments"]["ImGuiTabBar"]["prevcomments"] = "\
+// Storage for a tab bar (sizeof() 152 bytes)"
 defs["struct_comments"]["ImGuiTabItem"] = {}
-defs["struct_comments"]["ImGuiTabItem"]["comments"] = "// Storage for one active tab item (sizeof() 48 bytes)"
+defs["struct_comments"]["ImGuiTabItem"]["prevcomments"] = "\
+// Storage for one active tab item (sizeof() 48 bytes)"
 defs["struct_comments"]["ImGuiTable"] = {}
-defs["struct_comments"]["ImGuiTable"]["comments"] = "// FIXME-TABLE: more transient data could be stored in a per-stacked table structure: DrawSplitter, SortSpecs, incoming RowData"
+defs["struct_comments"]["ImGuiTable"]["prevcomments"] = "\
+// FIXME-TABLE: more transient data could be stored in a per-stacked table structure: DrawSplitter, SortSpecs, incoming RowData"
 defs["struct_comments"]["ImGuiTableCellData"] = {}
-defs["struct_comments"]["ImGuiTableCellData"]["comments"] = "// Transient cell data stored per row.\
+defs["struct_comments"]["ImGuiTableCellData"]["prevcomments"] = "\
+// Transient cell data stored per row.\
 // sizeof() ~ 6"
 defs["struct_comments"]["ImGuiTableColumn"] = {}
-defs["struct_comments"]["ImGuiTableColumn"]["comments"] = "// [Internal] sizeof() ~ 104\
+defs["struct_comments"]["ImGuiTableColumn"]["prevcomments"] = "\
+// [Internal] sizeof() ~ 104\
 // We use the terminology \"Enabled\" to refer to a column that is not Hidden by user/api.\
 // We use the terminology \"Clipped\" to refer to a column that is out of sight because of scrolling/clipping.\
 // This is in contrast with some user-facing api such as IsItemVisible() / IsRectVisible() which use \"Visible\" to mean \"not clipped\"."
 defs["struct_comments"]["ImGuiTableColumnSettings"] = {}
-defs["struct_comments"]["ImGuiTableColumnSettings"]["comments"] = "// sizeof() ~ 12"
+defs["struct_comments"]["ImGuiTableColumnSettings"]["prevcomments"] = "\
+// sizeof() ~ 12"
 defs["struct_comments"]["ImGuiTableColumnSortSpecs"] = {}
-defs["struct_comments"]["ImGuiTableColumnSortSpecs"]["comments"] = "// Sorting specification for one column of a table (sizeof == 12 bytes)"
+defs["struct_comments"]["ImGuiTableColumnSortSpecs"]["prevcomments"] = "\
+// Sorting specification for one column of a table (sizeof == 12 bytes)"
 defs["struct_comments"]["ImGuiTableInstanceData"] = {}
-defs["struct_comments"]["ImGuiTableInstanceData"]["comments"] = "// Per-instance data that needs preserving across frames (seemingly most others do not need to be preserved aside from debug needs, does that needs they could be moved to ImGuiTableTempData ?)"
+defs["struct_comments"]["ImGuiTableInstanceData"]["prevcomments"] = "\
+// Per-instance data that needs preserving across frames (seemingly most others do not need to be preserved aside from debug needs, does that needs they could be moved to ImGuiTableTempData ?)"
 defs["struct_comments"]["ImGuiTableSettings"] = {}
-defs["struct_comments"]["ImGuiTableSettings"]["comments"] = "// This is designed to be stored in a single ImChunkStream (1 header followed by N ImGuiTableColumnSettings, etc.)"
+defs["struct_comments"]["ImGuiTableSettings"]["prevcomments"] = "\
+// This is designed to be stored in a single ImChunkStream (1 header followed by N ImGuiTableColumnSettings, etc.)"
 defs["struct_comments"]["ImGuiTableSortSpecs"] = {}
-defs["struct_comments"]["ImGuiTableSortSpecs"]["comments"] = "// Sorting specifications for a table (often handling sort specs for a single column, occasionally more)\
+defs["struct_comments"]["ImGuiTableSortSpecs"]["prevcomments"] = "\
+// Sorting specifications for a table (often handling sort specs for a single column, occasionally more)\
 // Obtained by calling TableGetSortSpecs().\
 // When 'SpecsDirty == true' you can sort your data. It will be true with sorting specs have changed since last call, or the first time.\
 // Make sure to set 'SpecsDirty = false' after sorting, else you may wastefully sort your data every frame!"
 defs["struct_comments"]["ImGuiTableTempData"] = {}
-defs["struct_comments"]["ImGuiTableTempData"]["comments"] = "// Transient data that are only needed between BeginTable() and EndTable(), those buffers are shared (1 per level of stacked table).\
+defs["struct_comments"]["ImGuiTableTempData"]["prevcomments"] = "\
+// Transient data that are only needed between BeginTable() and EndTable(), those buffers are shared (1 per level of stacked table).\
 // - Accessing those requires chasing an extra pointer so for very frequently used data we leave them in the main table structure.\
 // - We also leave out of this structure data that tend to be particularly useful for debugging/metrics."
 defs["struct_comments"]["ImGuiTextBuffer"] = {}
-defs["struct_comments"]["ImGuiTextBuffer"]["comments"] = "// Helper: Growable text buffer for logging/accumulating text\
+defs["struct_comments"]["ImGuiTextBuffer"]["prevcomments"] = "\
+// Helper: Growable text buffer for logging/accumulating text\
 // (this could be called 'ImGuiTextBuilder' / 'ImGuiStringBuilder')"
 defs["struct_comments"]["ImGuiTextFilter"] = {}
-defs["struct_comments"]["ImGuiTextFilter"]["comments"] = "// Helper: Parse and apply text filters. In format \"aaaaa[,bbbb][,ccccc]\""
+defs["struct_comments"]["ImGuiTextFilter"]["prevcomments"] = "\
+// Helper: Parse and apply text filters. In format \"aaaaa[,bbbb][,ccccc]\""
 defs["struct_comments"]["ImGuiTextRange"] = {}
-defs["struct_comments"]["ImGuiTextRange"]["comments"] = "    // [Internal]"
+defs["struct_comments"]["ImGuiTextRange"]["prevcomments"] = "\
+    // [Internal]"
 defs["struct_comments"]["ImGuiViewport"] = {}
-defs["struct_comments"]["ImGuiViewport"]["comments"] = "// - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\
+defs["struct_comments"]["ImGuiViewport"]["prevcomments"] = "\
+// - Currently represents the Platform Window created by the application which is hosting our Dear ImGui windows.\
 // - With multi-viewport enabled, we extend this concept to have multiple active viewports.\
 // - In the future we will extend this concept further to also represent Platform Monitor and support a \"no main platform window\" operation mode.\
 // - About Main Area vs Work Area:\
@@ -4460,12 +4754,18 @@ defs["struct_comments"]["ImGuiViewport"]["comments"] = "// - Currently represent
 //   - Work Area = entire viewport minus sections used by main menu bars (for platform windows), or by task bar (for platform monitor).\
 //   - Windows are generally trying to stay within the Work Area of their host viewport."
 defs["struct_comments"]["ImGuiViewportP"] = {}
-defs["struct_comments"]["ImGuiViewportP"]["comments"] = "// ImGuiViewport Private/Internals fields (cardinal sin: we are using inheritance!)\
+defs["struct_comments"]["ImGuiViewportP"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Viewport support\
+//-----------------------------------------------------------------------------\
+// ImGuiViewport Private/Internals fields (cardinal sin: we are using inheritance!)\
 // Every instance of ImGuiViewport is in fact a ImGuiViewportP."
 defs["struct_comments"]["ImGuiWindow"] = {}
-defs["struct_comments"]["ImGuiWindow"]["comments"] = "// Storage for one window"
+defs["struct_comments"]["ImGuiWindow"]["prevcomments"] = "\
+// Storage for one window"
 defs["struct_comments"]["ImGuiWindowClass"] = {}
-defs["struct_comments"]["ImGuiWindowClass"]["comments"] = "// [ALPHA] Rarely used / very advanced uses only. Use with SetNextWindowClass() and DockSpace() functions.\
+defs["struct_comments"]["ImGuiWindowClass"]["prevcomments"] = "\
+// [ALPHA] Rarely used / very advanced uses only. Use with SetNextWindowClass() and DockSpace() functions.\
 // Important: the content of this class is still highly WIP and likely to change and be refactored\
 // before we stabilize Docking features. Please be mindful if using this.\
 // Provide hints:\
@@ -4474,33 +4774,326 @@ defs["struct_comments"]["ImGuiWindowClass"]["comments"] = "// [ALPHA] Rarely use
 // - To the docking system for various options and filtering."
 defs["struct_comments"]["ImGuiWindowDockStyle"] = {}
 defs["struct_comments"]["ImGuiWindowSettings"] = {}
-defs["struct_comments"]["ImGuiWindowSettings"]["comments"] = "// Windows data saved in imgui.ini file\
+defs["struct_comments"]["ImGuiWindowSettings"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] Settings support\
+//-----------------------------------------------------------------------------\
+// Windows data saved in imgui.ini file\
 // Because we never destroy or rename ImGuiWindowSettings, we can store the names in a separate buffer easily.\
 // (this is designed to be stored in a ImChunkStream buffer, with the variable-length Name following our structure)"
 defs["struct_comments"]["ImGuiWindowStackData"] = {}
-defs["struct_comments"]["ImGuiWindowStackData"]["comments"] = "// Data saved for each window pushed into the stack"
+defs["struct_comments"]["ImGuiWindowStackData"]["prevcomments"] = "\
+// Data saved for each window pushed into the stack"
 defs["struct_comments"]["ImGuiWindowTempData"] = {}
-defs["struct_comments"]["ImGuiWindowTempData"]["comments"] = "// Transient per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the DC variable name in ImGuiWindow.\
+defs["struct_comments"]["ImGuiWindowTempData"]["prevcomments"] = "\
+//-----------------------------------------------------------------------------\
+// [SECTION] ImGuiWindowTempData, ImGuiWindow\
+//-----------------------------------------------------------------------------\
+// Transient per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the DC variable name in ImGuiWindow.\
 // (That's theory, in practice the delimitation between ImGuiWindow and ImGuiWindowTempData is quite tenuous and could be reconsidered..)\
 // (This doesn't need a constructor because we zero-clear it as part of ImGuiWindow and all frame-temporary data are setup on Begin)"
 defs["struct_comments"]["ImRect"] = {}
-defs["struct_comments"]["ImRect"]["comments"] = "// Helper: ImRect (2D axis aligned bounding-box)\
+defs["struct_comments"]["ImRect"]["prevcomments"] = "\
+// Helper: ImRect (2D axis aligned bounding-box)\
 // NB: we can't rely on ImVec2 math operators being available here!"
 defs["struct_comments"]["ImVec1"] = {}
-defs["struct_comments"]["ImVec1"]["comments"] = "// Helper: ImVec1 (1D vector)\
+defs["struct_comments"]["ImVec1"]["prevcomments"] = "\
+// Helper: ImVec1 (1D vector)\
 // (this odd construct is used to facilitate the transition between 1D and 2D, and the maintenance of some branches/patches)"
 defs["struct_comments"]["ImVec2"] = {}
-defs["struct_comments"]["ImVec2"]["comments"] = "// ImVec2: 2D vector used to store positions, sizes etc. [Compile-time configurable type]\
+defs["struct_comments"]["ImVec2"]["prevcomments"] = "\
+// ImVec2: 2D vector used to store positions, sizes etc. [Compile-time configurable type]\
 // This is a frequently used type in the API. Consider using IM_VEC2_CLASS_EXTRA to create implicit cast from/to our preferred type."
 defs["struct_comments"]["ImVec2ih"] = {}
-defs["struct_comments"]["ImVec2ih"]["comments"] = "// Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)"
+defs["struct_comments"]["ImVec2ih"]["prevcomments"] = "\
+// Helper: ImVec2ih (2D vector, half-size integer, for long-term packed storage)"
 defs["struct_comments"]["ImVec4"] = {}
-defs["struct_comments"]["ImVec4"]["comments"] = "// ImVec4: 4D vector used to store clipping rectangles, colors etc. [Compile-time configurable type]"
+defs["struct_comments"]["ImVec4"]["prevcomments"] = "\
+// ImVec4: 4D vector used to store clipping rectangles, colors etc. [Compile-time configurable type]"
 defs["struct_comments"]["STB_TexteditState"] = {}
 defs["struct_comments"]["StbTexteditRow"] = {}
-defs["struct_comments"]["StbTexteditRow"]["comments"] = "// result of layout query"
+defs["struct_comments"]["StbTexteditRow"]["prevcomments"] = "\
+////////////////////////////////////////////////////////////////////////\
+//\
+//     StbTexteditRow\
+//\
+// Result of layout query, used by stb_textedit to determine where\
+// the text in each row is.\
+// result of layout query"
 defs["struct_comments"]["StbUndoRecord"] = {}
-defs["struct_comments"]["StbUndoRecord"]["comments"] = "////////////////////////////////////////////////////////////////////////\
+defs["struct_comments"]["StbUndoRecord"]["prevcomments"] = "\
+// [DEAR IMGUI]\
+// This is a slightly modified version of stb_textedit.h 1.14.\
+// Those changes would need to be pushed into nothings/stb:\
+// - Fix in stb_textedit_discard_redo (see https://github.com/nothings/stb/issues/321)\
+// Grep for [DEAR IMGUI] to find the changes.\
+// stb_textedit.h - v1.14  - public domain - Sean Barrett\
+// Development of this library was sponsored by RAD Game Tools\
+//\
+// This C header file implements the guts of a multi-line text-editing\
+// widget; you implement display, word-wrapping, and low-level string\
+// insertion/deletion, and stb_textedit will map user inputs into\
+// insertions & deletions, plus updates to the cursor position,\
+// selection state, and undo state.\
+//\
+// It is intended for use in games and other systems that need to build\
+// their own custom widgets and which do not have heavy text-editing\
+// requirements (this library is not recommended for use for editing large\
+// texts, as its performance does not scale and it has limited undo).\
+//\
+// Non-trivial behaviors are modelled after Windows text controls.\
+//\
+//\
+// LICENSE\
+//\
+// See end of file for license information.\
+//\
+//\
+// DEPENDENCIES\
+//\
+// Uses the C runtime function 'memmove', which you can override\
+// by defining STB_TEXTEDIT_memmove before the implementation.\
+// Uses no other functions. Performs no runtime allocations.\
+//\
+//\
+// VERSION HISTORY\
+//\
+//   1.14 (2021-07-11) page up/down, various fixes\
+//   1.13 (2019-02-07) fix bug in undo size management\
+//   1.12 (2018-01-29) user can change STB_TEXTEDIT_KEYTYPE, fix redo to avoid crash\
+//   1.11 (2017-03-03) fix HOME on last line, dragging off single-line textfield\
+//   1.10 (2016-10-25) supress warnings about casting away const with -Wcast-qual\
+//   1.9  (2016-08-27) customizable move-by-word\
+//   1.8  (2016-04-02) better keyboard handling when mouse button is down\
+//   1.7  (2015-09-13) change y range handling in case baseline is non-0\
+//   1.6  (2015-04-15) allow STB_TEXTEDIT_memmove\
+//   1.5  (2014-09-10) add support for secondary keys for OS X\
+//   1.4  (2014-08-17) fix signed/unsigned warnings\
+//   1.3  (2014-06-19) fix mouse clicking to round to nearest char boundary\
+//   1.2  (2014-05-27) fix some RAD types that had crept into the new code\
+//   1.1  (2013-12-15) move-by-word (requires STB_TEXTEDIT_IS_SPACE )\
+//   1.0  (2012-07-26) improve documentation, initial public release\
+//   0.3  (2012-02-24) bugfixes, single-line mode; insert mode\
+//   0.2  (2011-11-28) fixes to undo/redo\
+//   0.1  (2010-07-08) initial version\
+//\
+// ADDITIONAL CONTRIBUTORS\
+//\
+//   Ulf Winklemann: move-by-word in 1.1\
+//   Fabian Giesen: secondary key inputs in 1.5\
+//   Martins Mozeiko: STB_TEXTEDIT_memmove in 1.6\
+//   Louis Schnellbach: page up/down in 1.14\
+//\
+//   Bugfixes:\
+//      Scott Graham\
+//      Daniel Keller\
+//      Omar Cornut\
+//      Dan Thompson\
+//\
+// USAGE\
+//\
+// This file behaves differently depending on what symbols you define\
+// before including it.\
+//\
+//\
+// Header-file mode:\
+//\
+//   If you do not define STB_TEXTEDIT_IMPLEMENTATION before including this,\
+//   it will operate in \"header file\" mode. In this mode, it declares a\
+//   single public symbol, STB_TexteditState, which encapsulates the current\
+//   state of a text widget (except for the string, which you will store\
+//   separately).\
+//\
+//   To compile in this mode, you must define STB_TEXTEDIT_CHARTYPE to a\
+//   primitive type that defines a single character (e.g. char, wchar_t, etc).\
+//\
+//   To save space or increase undo-ability, you can optionally define the\
+//   following things that are used by the undo system:\
+//\
+//      STB_TEXTEDIT_POSITIONTYPE         small int type encoding a valid cursor position\
+//      STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\
+//      STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\
+//\
+//   If you don't define these, they are set to permissive types and\
+//   moderate sizes. The undo system does no memory allocations, so\
+//   it grows STB_TexteditState by the worst-case storage which is (in bytes):\
+//\
+//        [4 + 3 * sizeof(STB_TEXTEDIT_POSITIONTYPE)] * STB_TEXTEDIT_UNDOSTATECOUNT\
+//      +          sizeof(STB_TEXTEDIT_CHARTYPE)      * STB_TEXTEDIT_UNDOCHARCOUNT\
+//\
+//\
+// Implementation mode:\
+//\
+//   If you define STB_TEXTEDIT_IMPLEMENTATION before including this, it\
+//   will compile the implementation of the text edit widget, depending\
+//   on a large number of symbols which must be defined before the include.\
+//\
+//   The implementation is defined only as static functions. You will then\
+//   need to provide your own APIs in the same file which will access the\
+//   static functions.\
+//\
+//   The basic concept is that you provide a \"string\" object which\
+//   behaves like an array of characters. stb_textedit uses indices to\
+//   refer to positions in the string, implicitly representing positions\
+//   in the displayed textedit. This is true for both plain text and\
+//   rich text; even with rich text stb_truetype interacts with your\
+//   code as if there was an array of all the displayed characters.\
+//\
+// Symbols that must be the same in header-file and implementation mode:\
+//\
+//     STB_TEXTEDIT_CHARTYPE             the character type\
+//     STB_TEXTEDIT_POSITIONTYPE         small type that is a valid cursor position\
+//     STB_TEXTEDIT_UNDOSTATECOUNT       the number of undo states to allow\
+//     STB_TEXTEDIT_UNDOCHARCOUNT        the number of characters to store in the undo buffer\
+//\
+// Symbols you must define for implementation mode:\
+//\
+//    STB_TEXTEDIT_STRING               the type of object representing a string being edited,\
+//                                      typically this is a wrapper object with other data you need\
+//\
+//    STB_TEXTEDIT_STRINGLEN(obj)       the length of the string (ideally O(1))\
+//    STB_TEXTEDIT_LAYOUTROW(&r,obj,n)  returns the results of laying out a line of characters\
+//                                        starting from character #n (see discussion below)\
+//    STB_TEXTEDIT_GETWIDTH(obj,n,i)    returns the pixel delta from the xpos of the i'th character\
+//                                        to the xpos of the i+1'th char for a line of characters\
+//                                        starting at character #n (i.e. accounts for kerning\
+//                                        with previous char)\
+//    STB_TEXTEDIT_KEYTOTEXT(k)         maps a keyboard input to an insertable character\
+//                                        (return type is int, -1 means not valid to insert)\
+//    STB_TEXTEDIT_GETCHAR(obj,i)       returns the i'th character of obj, 0-based\
+//    STB_TEXTEDIT_NEWLINE              the character returned by _GETCHAR() we recognize\
+//                                        as manually wordwrapping for end-of-line positioning\
+//\
+//    STB_TEXTEDIT_DELETECHARS(obj,i,n)      delete n characters starting at i\
+//    STB_TEXTEDIT_INSERTCHARS(obj,i,c*,n)   insert n characters at i (pointed to by STB_TEXTEDIT_CHARTYPE*)\
+//\
+//    STB_TEXTEDIT_K_SHIFT       a power of two that is or'd in to a keyboard input to represent the shift key\
+//\
+//    STB_TEXTEDIT_K_LEFT        keyboard input to move cursor left\
+//    STB_TEXTEDIT_K_RIGHT       keyboard input to move cursor right\
+//    STB_TEXTEDIT_K_UP          keyboard input to move cursor up\
+//    STB_TEXTEDIT_K_DOWN        keyboard input to move cursor down\
+//    STB_TEXTEDIT_K_PGUP        keyboard input to move cursor up a page\
+//    STB_TEXTEDIT_K_PGDOWN      keyboard input to move cursor down a page\
+//    STB_TEXTEDIT_K_LINESTART   keyboard input to move cursor to start of line  // e.g. HOME\
+//    STB_TEXTEDIT_K_LINEEND     keyboard input to move cursor to end of line    // e.g. END\
+//    STB_TEXTEDIT_K_TEXTSTART   keyboard input to move cursor to start of text  // e.g. ctrl-HOME\
+//    STB_TEXTEDIT_K_TEXTEND     keyboard input to move cursor to end of text    // e.g. ctrl-END\
+//    STB_TEXTEDIT_K_DELETE      keyboard input to delete selection or character under cursor\
+//    STB_TEXTEDIT_K_BACKSPACE   keyboard input to delete selection or character left of cursor\
+//    STB_TEXTEDIT_K_UNDO        keyboard input to perform undo\
+//    STB_TEXTEDIT_K_REDO        keyboard input to perform redo\
+//\
+// Optional:\
+//    STB_TEXTEDIT_K_INSERT              keyboard input to toggle insert mode\
+//    STB_TEXTEDIT_IS_SPACE(ch)          true if character is whitespace (e.g. 'isspace'),\
+//                                          required for default WORDLEFT/WORDRIGHT handlers\
+//    STB_TEXTEDIT_MOVEWORDLEFT(obj,i)   custom handler for WORDLEFT, returns index to move cursor to\
+//    STB_TEXTEDIT_MOVEWORDRIGHT(obj,i)  custom handler for WORDRIGHT, returns index to move cursor to\
+//    STB_TEXTEDIT_K_WORDLEFT            keyboard input to move cursor left one word // e.g. ctrl-LEFT\
+//    STB_TEXTEDIT_K_WORDRIGHT           keyboard input to move cursor right one word // e.g. ctrl-RIGHT\
+//    STB_TEXTEDIT_K_LINESTART2          secondary keyboard input to move cursor to start of line\
+//    STB_TEXTEDIT_K_LINEEND2            secondary keyboard input to move cursor to end of line\
+//    STB_TEXTEDIT_K_TEXTSTART2          secondary keyboard input to move cursor to start of text\
+//    STB_TEXTEDIT_K_TEXTEND2            secondary keyboard input to move cursor to end of text\
+//\
+// Keyboard input must be encoded as a single integer value; e.g. a character code\
+// and some bitflags that represent shift states. to simplify the interface, SHIFT must\
+// be a bitflag, so we can test the shifted state of cursor movements to allow selection,\
+// i.e. (STB_TEXTEDIT_K_RIGHT|STB_TEXTEDIT_K_SHIFT) should be shifted right-arrow.\
+//\
+// You can encode other things, such as CONTROL or ALT, in additional bits, and\
+// then test for their presence in e.g. STB_TEXTEDIT_K_WORDLEFT. For example,\
+// my Windows implementations add an additional CONTROL bit, and an additional KEYDOWN\
+// bit. Then all of the STB_TEXTEDIT_K_ values bitwise-or in the KEYDOWN bit,\
+// and I pass both WM_KEYDOWN and WM_CHAR events to the \"key\" function in the\
+// API below. The control keys will only match WM_KEYDOWN events because of the\
+// keydown bit I add, and STB_TEXTEDIT_KEYTOTEXT only tests for the KEYDOWN\
+// bit so it only decodes WM_CHAR events.\
+//\
+// STB_TEXTEDIT_LAYOUTROW returns information about the shape of one displayed\
+// row of characters assuming they start on the i'th character--the width and\
+// the height and the number of characters consumed. This allows this library\
+// to traverse the entire layout incrementally. You need to compute word-wrapping\
+// here.\
+//\
+// Each textfield keeps its own insert mode state, which is not how normal\
+// applications work. To keep an app-wide insert mode, update/copy the\
+// \"insert_mode\" field of STB_TexteditState before/after calling API functions.\
+//\
+// API\
+//\
+//    void stb_textedit_initialize_state(STB_TexteditState *state, int is_single_line)\
+//\
+//    void stb_textedit_click(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\
+//    void stb_textedit_drag(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, float x, float y)\
+//    int  stb_textedit_cut(STB_TEXTEDIT_STRING *str, STB_TexteditState *state)\
+//    int  stb_textedit_paste(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXTEDIT_CHARTYPE *text, int len)\
+//    void stb_textedit_key(STB_TEXTEDIT_STRING *str, STB_TexteditState *state, STB_TEXEDIT_KEYTYPE key)\
+//\
+//    Each of these functions potentially updates the string and updates the\
+//    state.\
+//\
+//      initialize_state:\
+//          set the textedit state to a known good default state when initially\
+//          constructing the textedit.\
+//\
+//      click:\
+//          call this with the mouse x,y on a mouse down; it will update the cursor\
+//          and reset the selection start/end to the cursor point. the x,y must\
+//          be relative to the text widget, with (0,0) being the top left.\
+//\
+//      drag:\
+//          call this with the mouse x,y on a mouse drag/up; it will update the\
+//          cursor and the selection end point\
+//\
+//      cut:\
+//          call this to delete the current selection; returns true if there was\
+//          one. you should FIRST copy the current selection to the system paste buffer.\
+//          (To copy, just copy the current selection out of the string yourself.)\
+//\
+//      paste:\
+//          call this to paste text at the current cursor point or over the current\
+//          selection if there is one.\
+//\
+//      key:\
+//          call this for keyboard inputs sent to the textfield. you can use it\
+//          for \"key down\" events or for \"translated\" key events. if you need to\
+//          do both (as in Win32), or distinguish Unicode characters from control\
+//          inputs, set a high bit to distinguish the two; then you can define the\
+//          various definitions like STB_TEXTEDIT_K_LEFT have the is-key-event bit\
+//          set, and make STB_TEXTEDIT_KEYTOCHAR check that the is-key-event bit is\
+//          clear. STB_TEXTEDIT_KEYTYPE defaults to int, but you can #define it to\
+//          anything other type you wante before including.\
+//\
+//\
+//   When rendering, you can read the cursor position and selection state from\
+//   the STB_TexteditState.\
+//\
+//\
+// Notes:\
+//\
+// This is designed to be usable in IMGUI, so it allows for the possibility of\
+// running in an IMGUI that has NOT cached the multi-line layout. For this\
+// reason, it provides an interface that is compatible with computing the\
+// layout incrementally--we try to make sure we make as few passes through\
+// as possible. (For example, to locate the mouse pointer in the text, we\
+// could define functions that return the X and Y positions of characters\
+// and binary search Y and then X, but if we're doing dynamic layout this\
+// will run the layout algorithm many times, so instead we manually search\
+// forward in one pass. Similar logic applies to e.g. up-arrow and\
+// down-arrow movement.)\
+//\
+// If it's run in a widget that *has* cached the layout, then this is less\
+// efficient, but it's not horrible on modern computers. But you wouldn't\
+// want to edit million-line files with it.\
+////////////////////////////////////////////////////////////////////////////\
+////////////////////////////////////////////////////////////////////////////\
+////\
+////   Header-file mode\
+////\
+////\
+////////////////////////////////////////////////////////////////////////\
 //\
 //     STB_TexteditState\
 //\
@@ -4512,4186 +5105,5346 @@ defs["struct_comments"]["StbUndoState"] = {}
 defs["structs"] = {}
 defs["structs"]["ImBitVector"] = {}
 defs["structs"]["ImBitVector"][1] = {}
+defs["structs"]["ImBitVector"][1]["comment"] = {}
 defs["structs"]["ImBitVector"][1]["name"] = "Storage"
 defs["structs"]["ImBitVector"][1]["template_type"] = "ImU32"
 defs["structs"]["ImBitVector"][1]["type"] = "ImVector_ImU32"
 defs["structs"]["ImColor"] = {}
 defs["structs"]["ImColor"][1] = {}
+defs["structs"]["ImColor"][1]["comment"] = {}
 defs["structs"]["ImColor"][1]["name"] = "Value"
 defs["structs"]["ImColor"][1]["type"] = "ImVec4"
 defs["structs"]["ImDrawChannel"] = {}
 defs["structs"]["ImDrawChannel"][1] = {}
+defs["structs"]["ImDrawChannel"][1]["comment"] = {}
 defs["structs"]["ImDrawChannel"][1]["name"] = "_CmdBuffer"
 defs["structs"]["ImDrawChannel"][1]["template_type"] = "ImDrawCmd"
 defs["structs"]["ImDrawChannel"][1]["type"] = "ImVector_ImDrawCmd"
 defs["structs"]["ImDrawChannel"][2] = {}
+defs["structs"]["ImDrawChannel"][2]["comment"] = {}
 defs["structs"]["ImDrawChannel"][2]["name"] = "_IdxBuffer"
 defs["structs"]["ImDrawChannel"][2]["template_type"] = "ImDrawIdx"
 defs["structs"]["ImDrawChannel"][2]["type"] = "ImVector_ImDrawIdx"
 defs["structs"]["ImDrawCmd"] = {}
 defs["structs"]["ImDrawCmd"][1] = {}
-defs["structs"]["ImDrawCmd"][1]["comment"] = " // 4*4  // Clipping rectangle (x1, y1, x2, y2). Subtract ImDrawData->DisplayPos to get clipping rectangle in \"viewport\" coordinates"
+defs["structs"]["ImDrawCmd"][1]["comment"] = {}
+defs["structs"]["ImDrawCmd"][1]["comment"]["comments"] = " // 4*4  // Clipping rectangle (x1, y1, x2, y2). Subtract ImDrawData->DisplayPos to get clipping rectangle in \"viewport\" coordinates"
 defs["structs"]["ImDrawCmd"][1]["name"] = "ClipRect"
 defs["structs"]["ImDrawCmd"][1]["type"] = "ImVec4"
 defs["structs"]["ImDrawCmd"][2] = {}
-defs["structs"]["ImDrawCmd"][2]["comment"] = " // 4-8  // User-provided texture ID. Set by user in ImfontAtlas::SetTexID() for fonts or passed to Image*() functions. Ignore if never using images or multiple fonts atlas."
+defs["structs"]["ImDrawCmd"][2]["comment"] = {}
+defs["structs"]["ImDrawCmd"][2]["comment"]["comments"] = " // 4-8  // User-provided texture ID. Set by user in ImfontAtlas::SetTexID() for fonts or passed to Image*() functions. Ignore if never using images or multiple fonts atlas."
 defs["structs"]["ImDrawCmd"][2]["name"] = "TextureId"
 defs["structs"]["ImDrawCmd"][2]["type"] = "ImTextureID"
 defs["structs"]["ImDrawCmd"][3] = {}
-defs["structs"]["ImDrawCmd"][3]["comment"] = " // 4    // Start offset in vertex buffer. ImGuiBackendFlags_RendererHasVtxOffset: always 0, otherwise may be >0 to support meshes larger than 64K vertices with 16-bit indices."
+defs["structs"]["ImDrawCmd"][3]["comment"] = {}
+defs["structs"]["ImDrawCmd"][3]["comment"]["comments"] = " // 4    // Start offset in vertex buffer. ImGuiBackendFlags_RendererHasVtxOffset: always 0, otherwise may be >0 to support meshes larger than 64K vertices with 16-bit indices."
 defs["structs"]["ImDrawCmd"][3]["name"] = "VtxOffset"
 defs["structs"]["ImDrawCmd"][3]["type"] = "unsigned int"
 defs["structs"]["ImDrawCmd"][4] = {}
-defs["structs"]["ImDrawCmd"][4]["comment"] = " // 4    // Start offset in index buffer."
+defs["structs"]["ImDrawCmd"][4]["comment"] = {}
+defs["structs"]["ImDrawCmd"][4]["comment"]["comments"] = " // 4    // Start offset in index buffer."
 defs["structs"]["ImDrawCmd"][4]["name"] = "IdxOffset"
 defs["structs"]["ImDrawCmd"][4]["type"] = "unsigned int"
 defs["structs"]["ImDrawCmd"][5] = {}
-defs["structs"]["ImDrawCmd"][5]["comment"] = " // 4    // Number of indices (multiple of 3) to be rendered as triangles. Vertices are stored in the callee ImDrawList's vtx_buffer[] array, indices in idx_buffer[]."
+defs["structs"]["ImDrawCmd"][5]["comment"] = {}
+defs["structs"]["ImDrawCmd"][5]["comment"]["comments"] = " // 4    // Number of indices (multiple of 3) to be rendered as triangles. Vertices are stored in the callee ImDrawList's vtx_buffer[] array, indices in idx_buffer[]."
 defs["structs"]["ImDrawCmd"][5]["name"] = "ElemCount"
 defs["structs"]["ImDrawCmd"][5]["type"] = "unsigned int"
 defs["structs"]["ImDrawCmd"][6] = {}
-defs["structs"]["ImDrawCmd"][6]["comment"] = " // 4-8  // If != NULL, call the function instead of rendering the vertices. clip_rect and texture_id will be set normally."
+defs["structs"]["ImDrawCmd"][6]["comment"] = {}
+defs["structs"]["ImDrawCmd"][6]["comment"]["comments"] = " // 4-8  // If != NULL, call the function instead of rendering the vertices. clip_rect and texture_id will be set normally."
 defs["structs"]["ImDrawCmd"][6]["name"] = "UserCallback"
 defs["structs"]["ImDrawCmd"][6]["type"] = "ImDrawCallback"
 defs["structs"]["ImDrawCmd"][7] = {}
-defs["structs"]["ImDrawCmd"][7]["comment"] = " // 4-8  // The draw callback code can access this."
+defs["structs"]["ImDrawCmd"][7]["comment"] = {}
+defs["structs"]["ImDrawCmd"][7]["comment"]["comments"] = " // 4-8  // The draw callback code can access this."
 defs["structs"]["ImDrawCmd"][7]["name"] = "UserCallbackData"
 defs["structs"]["ImDrawCmd"][7]["type"] = "void*"
 defs["structs"]["ImDrawCmdHeader"] = {}
 defs["structs"]["ImDrawCmdHeader"][1] = {}
+defs["structs"]["ImDrawCmdHeader"][1]["comment"] = {}
 defs["structs"]["ImDrawCmdHeader"][1]["name"] = "ClipRect"
 defs["structs"]["ImDrawCmdHeader"][1]["type"] = "ImVec4"
 defs["structs"]["ImDrawCmdHeader"][2] = {}
+defs["structs"]["ImDrawCmdHeader"][2]["comment"] = {}
 defs["structs"]["ImDrawCmdHeader"][2]["name"] = "TextureId"
 defs["structs"]["ImDrawCmdHeader"][2]["type"] = "ImTextureID"
 defs["structs"]["ImDrawCmdHeader"][3] = {}
+defs["structs"]["ImDrawCmdHeader"][3]["comment"] = {}
 defs["structs"]["ImDrawCmdHeader"][3]["name"] = "VtxOffset"
 defs["structs"]["ImDrawCmdHeader"][3]["type"] = "unsigned int"
 defs["structs"]["ImDrawData"] = {}
 defs["structs"]["ImDrawData"][1] = {}
-defs["structs"]["ImDrawData"][1]["comment"] = " // Only valid after Render() is called and before the next NewFrame() is called."
+defs["structs"]["ImDrawData"][1]["comment"] = {}
+defs["structs"]["ImDrawData"][1]["comment"]["comments"] = " // Only valid after Render() is called and before the next NewFrame() is called."
 defs["structs"]["ImDrawData"][1]["name"] = "Valid"
 defs["structs"]["ImDrawData"][1]["type"] = "bool"
 defs["structs"]["ImDrawData"][2] = {}
-defs["structs"]["ImDrawData"][2]["comment"] = " // Number of ImDrawList* to render"
+defs["structs"]["ImDrawData"][2]["comment"] = {}
+defs["structs"]["ImDrawData"][2]["comment"]["comments"] = " // Number of ImDrawList* to render"
 defs["structs"]["ImDrawData"][2]["name"] = "CmdListsCount"
 defs["structs"]["ImDrawData"][2]["type"] = "int"
 defs["structs"]["ImDrawData"][3] = {}
-defs["structs"]["ImDrawData"][3]["comment"] = " // For convenience, sum of all ImDrawList's IdxBuffer.Size"
+defs["structs"]["ImDrawData"][3]["comment"] = {}
+defs["structs"]["ImDrawData"][3]["comment"]["comments"] = " // For convenience, sum of all ImDrawList's IdxBuffer.Size"
 defs["structs"]["ImDrawData"][3]["name"] = "TotalIdxCount"
 defs["structs"]["ImDrawData"][3]["type"] = "int"
 defs["structs"]["ImDrawData"][4] = {}
-defs["structs"]["ImDrawData"][4]["comment"] = " // For convenience, sum of all ImDrawList's VtxBuffer.Size"
+defs["structs"]["ImDrawData"][4]["comment"] = {}
+defs["structs"]["ImDrawData"][4]["comment"]["comments"] = " // For convenience, sum of all ImDrawList's VtxBuffer.Size"
 defs["structs"]["ImDrawData"][4]["name"] = "TotalVtxCount"
 defs["structs"]["ImDrawData"][4]["type"] = "int"
 defs["structs"]["ImDrawData"][5] = {}
-defs["structs"]["ImDrawData"][5]["comment"] = " // Array of ImDrawList* to render. The ImDrawList are owned by ImGuiContext and only pointed to from here."
+defs["structs"]["ImDrawData"][5]["comment"] = {}
+defs["structs"]["ImDrawData"][5]["comment"]["comments"] = " // Array of ImDrawList* to render. The ImDrawList are owned by ImGuiContext and only pointed to from here."
 defs["structs"]["ImDrawData"][5]["name"] = "CmdLists"
 defs["structs"]["ImDrawData"][5]["type"] = "ImDrawList**"
 defs["structs"]["ImDrawData"][6] = {}
-defs["structs"]["ImDrawData"][6]["comment"] = " // Top-left position of the viewport to render (== top-left of the orthogonal projection matrix to use) (== GetMainViewport()->Pos for the main viewport, == (0.0) in most single-viewport applications)"
+defs["structs"]["ImDrawData"][6]["comment"] = {}
+defs["structs"]["ImDrawData"][6]["comment"]["comments"] = " // Top-left position of the viewport to render (== top-left of the orthogonal projection matrix to use) (== GetMainViewport()->Pos for the main viewport, == (0.0) in most single-viewport applications)"
 defs["structs"]["ImDrawData"][6]["name"] = "DisplayPos"
 defs["structs"]["ImDrawData"][6]["type"] = "ImVec2"
 defs["structs"]["ImDrawData"][7] = {}
-defs["structs"]["ImDrawData"][7]["comment"] = " // Size of the viewport to render (== GetMainViewport()->Size for the main viewport, == io.DisplaySize in most single-viewport applications)"
+defs["structs"]["ImDrawData"][7]["comment"] = {}
+defs["structs"]["ImDrawData"][7]["comment"]["comments"] = " // Size of the viewport to render (== GetMainViewport()->Size for the main viewport, == io.DisplaySize in most single-viewport applications)"
 defs["structs"]["ImDrawData"][7]["name"] = "DisplaySize"
 defs["structs"]["ImDrawData"][7]["type"] = "ImVec2"
 defs["structs"]["ImDrawData"][8] = {}
-defs["structs"]["ImDrawData"][8]["comment"] = " // Amount of pixels for each unit of DisplaySize. Based on io.DisplayFramebufferScale. Generally (1,1) on normal display, (2,2) on OSX with Retina display."
+defs["structs"]["ImDrawData"][8]["comment"] = {}
+defs["structs"]["ImDrawData"][8]["comment"]["comments"] = " // Amount of pixels for each unit of DisplaySize. Based on io.DisplayFramebufferScale. Generally (1,1) on normal display, (2,2) on OSX with Retina display."
 defs["structs"]["ImDrawData"][8]["name"] = "FramebufferScale"
 defs["structs"]["ImDrawData"][8]["type"] = "ImVec2"
 defs["structs"]["ImDrawData"][9] = {}
-defs["structs"]["ImDrawData"][9]["comment"] = " // Viewport carrying the ImDrawData instance, might be of use to the renderer (generally not)."
+defs["structs"]["ImDrawData"][9]["comment"] = {}
+defs["structs"]["ImDrawData"][9]["comment"]["comments"] = " // Viewport carrying the ImDrawData instance, might be of use to the renderer (generally not)."
 defs["structs"]["ImDrawData"][9]["name"] = "OwnerViewport"
 defs["structs"]["ImDrawData"][9]["type"] = "ImGuiViewport*"
 defs["structs"]["ImDrawDataBuilder"] = {}
 defs["structs"]["ImDrawDataBuilder"][1] = {}
-defs["structs"]["ImDrawDataBuilder"][1]["comment"] = " // Global layers for: regular, tooltip"
+defs["structs"]["ImDrawDataBuilder"][1]["comment"] = {}
+defs["structs"]["ImDrawDataBuilder"][1]["comment"]["comments"] = " // Global layers for: regular, tooltip"
 defs["structs"]["ImDrawDataBuilder"][1]["name"] = "Layers[2]"
 defs["structs"]["ImDrawDataBuilder"][1]["size"] = 2
 defs["structs"]["ImDrawDataBuilder"][1]["template_type"] = "ImDrawList*"
 defs["structs"]["ImDrawDataBuilder"][1]["type"] = "ImVector_ImDrawListPtr"
 defs["structs"]["ImDrawList"] = {}
 defs["structs"]["ImDrawList"][1] = {}
-defs["structs"]["ImDrawList"][1]["comment"] = "\
-    // This is what you have to render // Draw commands. Typically 1 command = 1 GPU draw call, unless the command is a callback."
+defs["structs"]["ImDrawList"][1]["comment"] = {}
+defs["structs"]["ImDrawList"][1]["comment"]["comments"] = " // Draw commands. Typically 1 command = 1 GPU draw call, unless the command is a callback."
+defs["structs"]["ImDrawList"][1]["comment"]["prevcomments"] = "\
+    // This is what you have to render"
 defs["structs"]["ImDrawList"][1]["name"] = "CmdBuffer"
 defs["structs"]["ImDrawList"][1]["template_type"] = "ImDrawCmd"
 defs["structs"]["ImDrawList"][1]["type"] = "ImVector_ImDrawCmd"
 defs["structs"]["ImDrawList"][2] = {}
-defs["structs"]["ImDrawList"][2]["comment"] = " // Index buffer. Each command consume ImDrawCmd::ElemCount of those"
+defs["structs"]["ImDrawList"][2]["comment"] = {}
+defs["structs"]["ImDrawList"][2]["comment"]["comments"] = " // Index buffer. Each command consume ImDrawCmd::ElemCount of those"
 defs["structs"]["ImDrawList"][2]["name"] = "IdxBuffer"
 defs["structs"]["ImDrawList"][2]["template_type"] = "ImDrawIdx"
 defs["structs"]["ImDrawList"][2]["type"] = "ImVector_ImDrawIdx"
 defs["structs"]["ImDrawList"][3] = {}
-defs["structs"]["ImDrawList"][3]["comment"] = " // Vertex buffer."
+defs["structs"]["ImDrawList"][3]["comment"] = {}
+defs["structs"]["ImDrawList"][3]["comment"]["comments"] = " // Vertex buffer."
 defs["structs"]["ImDrawList"][3]["name"] = "VtxBuffer"
 defs["structs"]["ImDrawList"][3]["template_type"] = "ImDrawVert"
 defs["structs"]["ImDrawList"][3]["type"] = "ImVector_ImDrawVert"
 defs["structs"]["ImDrawList"][4] = {}
-defs["structs"]["ImDrawList"][4]["comment"] = " // Flags, you may poke into these to adjust anti-aliasing settings per-primitive."
+defs["structs"]["ImDrawList"][4]["comment"] = {}
+defs["structs"]["ImDrawList"][4]["comment"]["comments"] = " // Flags, you may poke into these to adjust anti-aliasing settings per-primitive."
 defs["structs"]["ImDrawList"][4]["name"] = "Flags"
 defs["structs"]["ImDrawList"][4]["type"] = "ImDrawListFlags"
 defs["structs"]["ImDrawList"][5] = {}
-defs["structs"]["ImDrawList"][5]["comment"] = "    // [Internal, used while building lists] // [Internal] generally == VtxBuffer.Size unless we are past 64K vertices, in which case this gets reset to 0."
+defs["structs"]["ImDrawList"][5]["comment"] = {}
+defs["structs"]["ImDrawList"][5]["comment"]["comments"] = " // [Internal] generally == VtxBuffer.Size unless we are past 64K vertices, in which case this gets reset to 0."
+defs["structs"]["ImDrawList"][5]["comment"]["prevcomments"] = "\
+    // [Internal, used while building lists]"
 defs["structs"]["ImDrawList"][5]["name"] = "_VtxCurrentIdx"
 defs["structs"]["ImDrawList"][5]["type"] = "unsigned int"
 defs["structs"]["ImDrawList"][6] = {}
-defs["structs"]["ImDrawList"][6]["comment"] = " // Pointer to shared draw data (you can use ImGui::GetDrawListSharedData() to get the one from current ImGui context)"
+defs["structs"]["ImDrawList"][6]["comment"] = {}
+defs["structs"]["ImDrawList"][6]["comment"]["comments"] = " // Pointer to shared draw data (you can use ImGui::GetDrawListSharedData() to get the one from current ImGui context)"
 defs["structs"]["ImDrawList"][6]["name"] = "_Data"
 defs["structs"]["ImDrawList"][6]["type"] = "const ImDrawListSharedData*"
 defs["structs"]["ImDrawList"][7] = {}
-defs["structs"]["ImDrawList"][7]["comment"] = " // Pointer to owner window's name for debugging"
+defs["structs"]["ImDrawList"][7]["comment"] = {}
+defs["structs"]["ImDrawList"][7]["comment"]["comments"] = " // Pointer to owner window's name for debugging"
 defs["structs"]["ImDrawList"][7]["name"] = "_OwnerName"
 defs["structs"]["ImDrawList"][7]["type"] = "const char*"
 defs["structs"]["ImDrawList"][8] = {}
-defs["structs"]["ImDrawList"][8]["comment"] = " // [Internal] point within VtxBuffer.Data after each add command (to avoid using the ImVector<> operators too much)"
+defs["structs"]["ImDrawList"][8]["comment"] = {}
+defs["structs"]["ImDrawList"][8]["comment"]["comments"] = " // [Internal] point within VtxBuffer.Data after each add command (to avoid using the ImVector<> operators too much)"
 defs["structs"]["ImDrawList"][8]["name"] = "_VtxWritePtr"
 defs["structs"]["ImDrawList"][8]["type"] = "ImDrawVert*"
 defs["structs"]["ImDrawList"][9] = {}
-defs["structs"]["ImDrawList"][9]["comment"] = " // [Internal] point within IdxBuffer.Data after each add command (to avoid using the ImVector<> operators too much)"
+defs["structs"]["ImDrawList"][9]["comment"] = {}
+defs["structs"]["ImDrawList"][9]["comment"]["comments"] = " // [Internal] point within IdxBuffer.Data after each add command (to avoid using the ImVector<> operators too much)"
 defs["structs"]["ImDrawList"][9]["name"] = "_IdxWritePtr"
 defs["structs"]["ImDrawList"][9]["type"] = "ImDrawIdx*"
 defs["structs"]["ImDrawList"][10] = {}
-defs["structs"]["ImDrawList"][10]["comment"] = " // [Internal]"
+defs["structs"]["ImDrawList"][10]["comment"] = {}
+defs["structs"]["ImDrawList"][10]["comment"]["comments"] = " // [Internal]"
 defs["structs"]["ImDrawList"][10]["name"] = "_ClipRectStack"
 defs["structs"]["ImDrawList"][10]["template_type"] = "ImVec4"
 defs["structs"]["ImDrawList"][10]["type"] = "ImVector_ImVec4"
 defs["structs"]["ImDrawList"][11] = {}
-defs["structs"]["ImDrawList"][11]["comment"] = " // [Internal]"
+defs["structs"]["ImDrawList"][11]["comment"] = {}
+defs["structs"]["ImDrawList"][11]["comment"]["comments"] = " // [Internal]"
 defs["structs"]["ImDrawList"][11]["name"] = "_TextureIdStack"
 defs["structs"]["ImDrawList"][11]["template_type"] = "ImTextureID"
 defs["structs"]["ImDrawList"][11]["type"] = "ImVector_ImTextureID"
 defs["structs"]["ImDrawList"][12] = {}
-defs["structs"]["ImDrawList"][12]["comment"] = " // [Internal] current path building"
+defs["structs"]["ImDrawList"][12]["comment"] = {}
+defs["structs"]["ImDrawList"][12]["comment"]["comments"] = " // [Internal] current path building"
 defs["structs"]["ImDrawList"][12]["name"] = "_Path"
 defs["structs"]["ImDrawList"][12]["template_type"] = "ImVec2"
 defs["structs"]["ImDrawList"][12]["type"] = "ImVector_ImVec2"
 defs["structs"]["ImDrawList"][13] = {}
-defs["structs"]["ImDrawList"][13]["comment"] = " // [Internal] template of active commands. Fields should match those of CmdBuffer.back()."
+defs["structs"]["ImDrawList"][13]["comment"] = {}
+defs["structs"]["ImDrawList"][13]["comment"]["comments"] = " // [Internal] template of active commands. Fields should match those of CmdBuffer.back()."
 defs["structs"]["ImDrawList"][13]["name"] = "_CmdHeader"
 defs["structs"]["ImDrawList"][13]["type"] = "ImDrawCmdHeader"
 defs["structs"]["ImDrawList"][14] = {}
-defs["structs"]["ImDrawList"][14]["comment"] = " // [Internal] for channels api (note: prefer using your own persistent instance of ImDrawListSplitter!)"
+defs["structs"]["ImDrawList"][14]["comment"] = {}
+defs["structs"]["ImDrawList"][14]["comment"]["comments"] = " // [Internal] for channels api (note: prefer using your own persistent instance of ImDrawListSplitter!)"
 defs["structs"]["ImDrawList"][14]["name"] = "_Splitter"
 defs["structs"]["ImDrawList"][14]["type"] = "ImDrawListSplitter"
 defs["structs"]["ImDrawList"][15] = {}
-defs["structs"]["ImDrawList"][15]["comment"] = " // [Internal] anti-alias fringe is scaled by this value, this helps to keep things sharp while zooming at vertex buffer content"
+defs["structs"]["ImDrawList"][15]["comment"] = {}
+defs["structs"]["ImDrawList"][15]["comment"]["comments"] = " // [Internal] anti-alias fringe is scaled by this value, this helps to keep things sharp while zooming at vertex buffer content"
 defs["structs"]["ImDrawList"][15]["name"] = "_FringeScale"
 defs["structs"]["ImDrawList"][15]["type"] = "float"
 defs["structs"]["ImDrawListSharedData"] = {}
 defs["structs"]["ImDrawListSharedData"][1] = {}
-defs["structs"]["ImDrawListSharedData"][1]["comment"] = " // UV of white pixel in the atlas"
+defs["structs"]["ImDrawListSharedData"][1]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][1]["comment"]["comments"] = " // UV of white pixel in the atlas"
 defs["structs"]["ImDrawListSharedData"][1]["name"] = "TexUvWhitePixel"
 defs["structs"]["ImDrawListSharedData"][1]["type"] = "ImVec2"
 defs["structs"]["ImDrawListSharedData"][2] = {}
-defs["structs"]["ImDrawListSharedData"][2]["comment"] = " // Current/default font (optional, for simplified AddText overload)"
+defs["structs"]["ImDrawListSharedData"][2]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][2]["comment"]["comments"] = " // Current/default font (optional, for simplified AddText overload)"
 defs["structs"]["ImDrawListSharedData"][2]["name"] = "Font"
 defs["structs"]["ImDrawListSharedData"][2]["type"] = "ImFont*"
 defs["structs"]["ImDrawListSharedData"][3] = {}
-defs["structs"]["ImDrawListSharedData"][3]["comment"] = " // Current/default font size (optional, for simplified AddText overload)"
+defs["structs"]["ImDrawListSharedData"][3]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][3]["comment"]["comments"] = " // Current/default font size (optional, for simplified AddText overload)"
 defs["structs"]["ImDrawListSharedData"][3]["name"] = "FontSize"
 defs["structs"]["ImDrawListSharedData"][3]["type"] = "float"
 defs["structs"]["ImDrawListSharedData"][4] = {}
-defs["structs"]["ImDrawListSharedData"][4]["comment"] = " // Tessellation tolerance when using PathBezierCurveTo()"
+defs["structs"]["ImDrawListSharedData"][4]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][4]["comment"]["comments"] = " // Tessellation tolerance when using PathBezierCurveTo()"
 defs["structs"]["ImDrawListSharedData"][4]["name"] = "CurveTessellationTol"
 defs["structs"]["ImDrawListSharedData"][4]["type"] = "float"
 defs["structs"]["ImDrawListSharedData"][5] = {}
-defs["structs"]["ImDrawListSharedData"][5]["comment"] = " // Number of circle segments to use per pixel of radius for AddCircle() etc"
+defs["structs"]["ImDrawListSharedData"][5]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][5]["comment"]["comments"] = " // Number of circle segments to use per pixel of radius for AddCircle() etc"
 defs["structs"]["ImDrawListSharedData"][5]["name"] = "CircleSegmentMaxError"
 defs["structs"]["ImDrawListSharedData"][5]["type"] = "float"
 defs["structs"]["ImDrawListSharedData"][6] = {}
-defs["structs"]["ImDrawListSharedData"][6]["comment"] = " // Value for PushClipRectFullscreen()"
+defs["structs"]["ImDrawListSharedData"][6]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][6]["comment"]["comments"] = " // Value for PushClipRectFullscreen()"
 defs["structs"]["ImDrawListSharedData"][6]["name"] = "ClipRectFullscreen"
 defs["structs"]["ImDrawListSharedData"][6]["type"] = "ImVec4"
 defs["structs"]["ImDrawListSharedData"][7] = {}
-defs["structs"]["ImDrawListSharedData"][7]["comment"] = " // Initial flags at the beginning of the frame (it is possible to alter flags on a per-drawlist basis afterwards)"
+defs["structs"]["ImDrawListSharedData"][7]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][7]["comment"]["comments"] = " // Initial flags at the beginning of the frame (it is possible to alter flags on a per-drawlist basis afterwards)"
 defs["structs"]["ImDrawListSharedData"][7]["name"] = "InitialFlags"
 defs["structs"]["ImDrawListSharedData"][7]["type"] = "ImDrawListFlags"
 defs["structs"]["ImDrawListSharedData"][8] = {}
-defs["structs"]["ImDrawListSharedData"][8]["comment"] = "    // [Internal] Lookup tables // Sample points on the quarter of the circle."
+defs["structs"]["ImDrawListSharedData"][8]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][8]["comment"]["comments"] = " // Sample points on the quarter of the circle."
+defs["structs"]["ImDrawListSharedData"][8]["comment"]["prevcomments"] = "\
+    // [Internal] Lookup tables"
 defs["structs"]["ImDrawListSharedData"][8]["name"] = "ArcFastVtx[48]"
 defs["structs"]["ImDrawListSharedData"][8]["size"] = 48
 defs["structs"]["ImDrawListSharedData"][8]["type"] = "ImVec2"
 defs["structs"]["ImDrawListSharedData"][9] = {}
-defs["structs"]["ImDrawListSharedData"][9]["comment"] = " // Cutoff radius after which arc drawing will fallback to slower PathArcTo()"
+defs["structs"]["ImDrawListSharedData"][9]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][9]["comment"]["comments"] = " // Cutoff radius after which arc drawing will fallback to slower PathArcTo()"
 defs["structs"]["ImDrawListSharedData"][9]["name"] = "ArcFastRadiusCutoff"
 defs["structs"]["ImDrawListSharedData"][9]["type"] = "float"
 defs["structs"]["ImDrawListSharedData"][10] = {}
-defs["structs"]["ImDrawListSharedData"][10]["comment"] = " // Precomputed segment count for given radius before we calculate it dynamically (to avoid calculation overhead)"
+defs["structs"]["ImDrawListSharedData"][10]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][10]["comment"]["comments"] = " // Precomputed segment count for given radius before we calculate it dynamically (to avoid calculation overhead)"
 defs["structs"]["ImDrawListSharedData"][10]["name"] = "CircleSegmentCounts[64]"
 defs["structs"]["ImDrawListSharedData"][10]["size"] = 64
 defs["structs"]["ImDrawListSharedData"][10]["type"] = "ImU8"
 defs["structs"]["ImDrawListSharedData"][11] = {}
-defs["structs"]["ImDrawListSharedData"][11]["comment"] = " // UV of anti-aliased lines in the atlas"
+defs["structs"]["ImDrawListSharedData"][11]["comment"] = {}
+defs["structs"]["ImDrawListSharedData"][11]["comment"]["comments"] = " // UV of anti-aliased lines in the atlas"
 defs["structs"]["ImDrawListSharedData"][11]["name"] = "TexUvLines"
 defs["structs"]["ImDrawListSharedData"][11]["type"] = "const ImVec4*"
 defs["structs"]["ImDrawListSplitter"] = {}
 defs["structs"]["ImDrawListSplitter"][1] = {}
-defs["structs"]["ImDrawListSplitter"][1]["comment"] = " // Current channel number (0)"
+defs["structs"]["ImDrawListSplitter"][1]["comment"] = {}
+defs["structs"]["ImDrawListSplitter"][1]["comment"]["comments"] = " // Current channel number (0)"
 defs["structs"]["ImDrawListSplitter"][1]["name"] = "_Current"
 defs["structs"]["ImDrawListSplitter"][1]["type"] = "int"
 defs["structs"]["ImDrawListSplitter"][2] = {}
-defs["structs"]["ImDrawListSplitter"][2]["comment"] = " // Number of active channels (1+)"
+defs["structs"]["ImDrawListSplitter"][2]["comment"] = {}
+defs["structs"]["ImDrawListSplitter"][2]["comment"]["comments"] = " // Number of active channels (1+)"
 defs["structs"]["ImDrawListSplitter"][2]["name"] = "_Count"
 defs["structs"]["ImDrawListSplitter"][2]["type"] = "int"
 defs["structs"]["ImDrawListSplitter"][3] = {}
-defs["structs"]["ImDrawListSplitter"][3]["comment"] = " // Draw channels (not resized down so _Count might be < Channels.Size)"
+defs["structs"]["ImDrawListSplitter"][3]["comment"] = {}
+defs["structs"]["ImDrawListSplitter"][3]["comment"]["comments"] = " // Draw channels (not resized down so _Count might be < Channels.Size)"
 defs["structs"]["ImDrawListSplitter"][3]["name"] = "_Channels"
 defs["structs"]["ImDrawListSplitter"][3]["template_type"] = "ImDrawChannel"
 defs["structs"]["ImDrawListSplitter"][3]["type"] = "ImVector_ImDrawChannel"
 defs["structs"]["ImDrawVert"] = {}
 defs["structs"]["ImDrawVert"][1] = {}
+defs["structs"]["ImDrawVert"][1]["comment"] = {}
 defs["structs"]["ImDrawVert"][1]["name"] = "pos"
 defs["structs"]["ImDrawVert"][1]["type"] = "ImVec2"
 defs["structs"]["ImDrawVert"][2] = {}
+defs["structs"]["ImDrawVert"][2]["comment"] = {}
 defs["structs"]["ImDrawVert"][2]["name"] = "uv"
 defs["structs"]["ImDrawVert"][2]["type"] = "ImVec2"
 defs["structs"]["ImDrawVert"][3] = {}
+defs["structs"]["ImDrawVert"][3]["comment"] = {}
 defs["structs"]["ImDrawVert"][3]["name"] = "col"
 defs["structs"]["ImDrawVert"][3]["type"] = "ImU32"
 defs["structs"]["ImFont"] = {}
 defs["structs"]["ImFont"][1] = {}
-defs["structs"]["ImFont"][1]["comment"] = "\
-    // Members: Hot ~20/24 bytes (for CalcTextSize) // 12-16 // out //            // Sparse. Glyphs->AdvanceX in a directly indexable way (cache-friendly for CalcTextSize functions which only this this info, and are often bottleneck in large UI)."
+defs["structs"]["ImFont"][1]["comment"] = {}
+defs["structs"]["ImFont"][1]["comment"]["comments"] = " // 12-16 // out //            // Sparse. Glyphs->AdvanceX in a directly indexable way (cache-friendly for CalcTextSize functions which only this this info, and are often bottleneck in large UI)."
+defs["structs"]["ImFont"][1]["comment"]["prevcomments"] = "\
+    // Members: Hot ~20/24 bytes (for CalcTextSize)"
 defs["structs"]["ImFont"][1]["name"] = "IndexAdvanceX"
 defs["structs"]["ImFont"][1]["template_type"] = "float"
 defs["structs"]["ImFont"][1]["type"] = "ImVector_float"
 defs["structs"]["ImFont"][2] = {}
-defs["structs"]["ImFont"][2]["comment"] = " // 4     // out // = FallbackGlyph->AdvanceX"
+defs["structs"]["ImFont"][2]["comment"] = {}
+defs["structs"]["ImFont"][2]["comment"]["comments"] = " // 4     // out // = FallbackGlyph->AdvanceX"
 defs["structs"]["ImFont"][2]["name"] = "FallbackAdvanceX"
 defs["structs"]["ImFont"][2]["type"] = "float"
 defs["structs"]["ImFont"][3] = {}
-defs["structs"]["ImFont"][3]["comment"] = " // 4     // in  //            // Height of characters/line, set during loading (don't change after loading)"
+defs["structs"]["ImFont"][3]["comment"] = {}
+defs["structs"]["ImFont"][3]["comment"]["comments"] = " // 4     // in  //            // Height of characters/line, set during loading (don't change after loading)"
 defs["structs"]["ImFont"][3]["name"] = "FontSize"
 defs["structs"]["ImFont"][3]["type"] = "float"
 defs["structs"]["ImFont"][4] = {}
-defs["structs"]["ImFont"][4]["comment"] = "    // Members: Hot ~28/40 bytes (for CalcTextSize + render loop) // 12-16 // out //            // Sparse. Index glyphs by Unicode code-point."
+defs["structs"]["ImFont"][4]["comment"] = {}
+defs["structs"]["ImFont"][4]["comment"]["comments"] = " // 12-16 // out //            // Sparse. Index glyphs by Unicode code-point."
+defs["structs"]["ImFont"][4]["comment"]["prevcomments"] = "\
+    // Members: Hot ~28/40 bytes (for CalcTextSize + render loop)"
 defs["structs"]["ImFont"][4]["name"] = "IndexLookup"
 defs["structs"]["ImFont"][4]["template_type"] = "ImWchar"
 defs["structs"]["ImFont"][4]["type"] = "ImVector_ImWchar"
 defs["structs"]["ImFont"][5] = {}
-defs["structs"]["ImFont"][5]["comment"] = " // 12-16 // out //            // All glyphs."
+defs["structs"]["ImFont"][5]["comment"] = {}
+defs["structs"]["ImFont"][5]["comment"]["comments"] = " // 12-16 // out //            // All glyphs."
 defs["structs"]["ImFont"][5]["name"] = "Glyphs"
 defs["structs"]["ImFont"][5]["template_type"] = "ImFontGlyph"
 defs["structs"]["ImFont"][5]["type"] = "ImVector_ImFontGlyph"
 defs["structs"]["ImFont"][6] = {}
-defs["structs"]["ImFont"][6]["comment"] = " // 4-8   // out // = FindGlyph(FontFallbackChar)"
+defs["structs"]["ImFont"][6]["comment"] = {}
+defs["structs"]["ImFont"][6]["comment"]["comments"] = " // 4-8   // out // = FindGlyph(FontFallbackChar)"
 defs["structs"]["ImFont"][6]["name"] = "FallbackGlyph"
 defs["structs"]["ImFont"][6]["type"] = "const ImFontGlyph*"
 defs["structs"]["ImFont"][7] = {}
-defs["structs"]["ImFont"][7]["comment"] = "    // Members: Cold ~32/40 bytes // 4-8   // out //            // What we has been loaded into"
+defs["structs"]["ImFont"][7]["comment"] = {}
+defs["structs"]["ImFont"][7]["comment"]["comments"] = " // 4-8   // out //            // What we has been loaded into"
+defs["structs"]["ImFont"][7]["comment"]["prevcomments"] = "\
+    // Members: Cold ~32/40 bytes"
 defs["structs"]["ImFont"][7]["name"] = "ContainerAtlas"
 defs["structs"]["ImFont"][7]["type"] = "ImFontAtlas*"
 defs["structs"]["ImFont"][8] = {}
-defs["structs"]["ImFont"][8]["comment"] = " // 4-8   // in  //            // Pointer within ContainerAtlas->ConfigData"
+defs["structs"]["ImFont"][8]["comment"] = {}
+defs["structs"]["ImFont"][8]["comment"]["comments"] = " // 4-8   // in  //            // Pointer within ContainerAtlas->ConfigData"
 defs["structs"]["ImFont"][8]["name"] = "ConfigData"
 defs["structs"]["ImFont"][8]["type"] = "const ImFontConfig*"
 defs["structs"]["ImFont"][9] = {}
-defs["structs"]["ImFont"][9]["comment"] = " // 2     // in  // ~ 1        // Number of ImFontConfig involved in creating this font. Bigger than 1 when merging multiple font sources into one ImFont."
+defs["structs"]["ImFont"][9]["comment"] = {}
+defs["structs"]["ImFont"][9]["comment"]["comments"] = " // 2     // in  // ~ 1        // Number of ImFontConfig involved in creating this font. Bigger than 1 when merging multiple font sources into one ImFont."
 defs["structs"]["ImFont"][9]["name"] = "ConfigDataCount"
 defs["structs"]["ImFont"][9]["type"] = "short"
 defs["structs"]["ImFont"][10] = {}
-defs["structs"]["ImFont"][10]["comment"] = " // 2     // out // = FFFD/'?' // Character used if a glyph isn't found."
+defs["structs"]["ImFont"][10]["comment"] = {}
+defs["structs"]["ImFont"][10]["comment"]["comments"] = " // 2     // out // = FFFD/'?' // Character used if a glyph isn't found."
 defs["structs"]["ImFont"][10]["name"] = "FallbackChar"
 defs["structs"]["ImFont"][10]["type"] = "ImWchar"
 defs["structs"]["ImFont"][11] = {}
-defs["structs"]["ImFont"][11]["comment"] = " // 2     // out // = '...'    // Character used for ellipsis rendering."
+defs["structs"]["ImFont"][11]["comment"] = {}
+defs["structs"]["ImFont"][11]["comment"]["comments"] = " // 2     // out // = '...'    // Character used for ellipsis rendering."
 defs["structs"]["ImFont"][11]["name"] = "EllipsisChar"
 defs["structs"]["ImFont"][11]["type"] = "ImWchar"
 defs["structs"]["ImFont"][12] = {}
-defs["structs"]["ImFont"][12]["comment"] = " // 2     // out // = '.'      // Character used for ellipsis rendering (if a single '...' character isn't found)"
+defs["structs"]["ImFont"][12]["comment"] = {}
+defs["structs"]["ImFont"][12]["comment"]["comments"] = " // 2     // out // = '.'      // Character used for ellipsis rendering (if a single '...' character isn't found)"
 defs["structs"]["ImFont"][12]["name"] = "DotChar"
 defs["structs"]["ImFont"][12]["type"] = "ImWchar"
 defs["structs"]["ImFont"][13] = {}
-defs["structs"]["ImFont"][13]["comment"] = " // 1     // out //"
+defs["structs"]["ImFont"][13]["comment"] = {}
+defs["structs"]["ImFont"][13]["comment"]["comments"] = " // 1     // out //"
 defs["structs"]["ImFont"][13]["name"] = "DirtyLookupTables"
 defs["structs"]["ImFont"][13]["type"] = "bool"
 defs["structs"]["ImFont"][14] = {}
-defs["structs"]["ImFont"][14]["comment"] = " // 4     // in  // = 1.f      // Base font scale, multiplied by the per-window font scale which you can adjust with SetWindowFontScale()"
+defs["structs"]["ImFont"][14]["comment"] = {}
+defs["structs"]["ImFont"][14]["comment"]["comments"] = " // 4     // in  // = 1.f      // Base font scale, multiplied by the per-window font scale which you can adjust with SetWindowFontScale()"
 defs["structs"]["ImFont"][14]["name"] = "Scale"
 defs["structs"]["ImFont"][14]["type"] = "float"
 defs["structs"]["ImFont"][15] = {}
-defs["structs"]["ImFont"][15]["comment"] = " // 4+4   // out //            // Ascent: distance from top to bottom of e.g. 'A' [0..FontSize]"
+defs["structs"]["ImFont"][15]["comment"] = {}
+defs["structs"]["ImFont"][15]["comment"]["comments"] = " // 4+4   // out //            // Ascent: distance from top to bottom of e.g. 'A' [0..FontSize]"
 defs["structs"]["ImFont"][15]["name"] = "Ascent"
 defs["structs"]["ImFont"][15]["type"] = "float"
 defs["structs"]["ImFont"][16] = {}
-defs["structs"]["ImFont"][16]["comment"] = " // 4+4   // out //            // Ascent: distance from top to bottom of e.g. 'A' [0..FontSize]"
+defs["structs"]["ImFont"][16]["comment"] = defs["structs"]["ImFont"][15]["comment"]
 defs["structs"]["ImFont"][16]["name"] = "Descent"
 defs["structs"]["ImFont"][16]["type"] = "float"
 defs["structs"]["ImFont"][17] = {}
-defs["structs"]["ImFont"][17]["comment"] = "// 4     // out //            // Total surface in pixels to get an idea of the font rasterization/texture cost (not exact, we approximate the cost of padding between glyphs)"
+defs["structs"]["ImFont"][17]["comment"] = {}
+defs["structs"]["ImFont"][17]["comment"]["comments"] = "// 4     // out //            // Total surface in pixels to get an idea of the font rasterization/texture cost (not exact, we approximate the cost of padding between glyphs)"
 defs["structs"]["ImFont"][17]["name"] = "MetricsTotalSurface"
 defs["structs"]["ImFont"][17]["type"] = "int"
 defs["structs"]["ImFont"][18] = {}
-defs["structs"]["ImFont"][18]["comment"] = " // 2 bytes if ImWchar=ImWchar16, 34 bytes if ImWchar==ImWchar32. Store 1-bit for each block of 4K codepoints that has one active glyph. This is mainly used to facilitate iterations across all used codepoints."
+defs["structs"]["ImFont"][18]["comment"] = {}
+defs["structs"]["ImFont"][18]["comment"]["comments"] = " // 2 bytes if ImWchar=ImWchar16, 34 bytes if ImWchar==ImWchar32. Store 1-bit for each block of 4K codepoints that has one active glyph. This is mainly used to facilitate iterations across all used codepoints."
 defs["structs"]["ImFont"][18]["name"] = "Used4kPagesMap[(0xFFFF+1)/4096/8]"
 defs["structs"]["ImFont"][18]["size"] = 2
 defs["structs"]["ImFont"][18]["type"] = "ImU8"
 defs["structs"]["ImFontAtlas"] = {}
 defs["structs"]["ImFontAtlas"][1] = {}
-defs["structs"]["ImFontAtlas"][1]["comment"] = "    //-------------------------------------------\
+defs["structs"]["ImFontAtlas"][1]["comment"] = {}
+defs["structs"]["ImFontAtlas"][1]["comment"]["comments"] = " // Build flags (see ImFontAtlasFlags_)"
+defs["structs"]["ImFontAtlas"][1]["comment"]["prevcomments"] = "\
+    //-------------------------------------------\
     // Members\
-    //------------------------------------------- // Build flags (see ImFontAtlasFlags_)"
+    //-------------------------------------------"
 defs["structs"]["ImFontAtlas"][1]["name"] = "Flags"
 defs["structs"]["ImFontAtlas"][1]["type"] = "ImFontAtlasFlags"
 defs["structs"]["ImFontAtlas"][2] = {}
-defs["structs"]["ImFontAtlas"][2]["comment"] = " // User data to refer to the texture once it has been uploaded to user's graphic systems. It is passed back to you during rendering via the ImDrawCmd structure."
+defs["structs"]["ImFontAtlas"][2]["comment"] = {}
+defs["structs"]["ImFontAtlas"][2]["comment"]["comments"] = " // User data to refer to the texture once it has been uploaded to user's graphic systems. It is passed back to you during rendering via the ImDrawCmd structure."
 defs["structs"]["ImFontAtlas"][2]["name"] = "TexID"
 defs["structs"]["ImFontAtlas"][2]["type"] = "ImTextureID"
 defs["structs"]["ImFontAtlas"][3] = {}
-defs["structs"]["ImFontAtlas"][3]["comment"] = " // Texture width desired by user before Build(). Must be a power-of-two. If have many glyphs your graphics API have texture size restrictions you may want to increase texture width to decrease height."
+defs["structs"]["ImFontAtlas"][3]["comment"] = {}
+defs["structs"]["ImFontAtlas"][3]["comment"]["comments"] = " // Texture width desired by user before Build(). Must be a power-of-two. If have many glyphs your graphics API have texture size restrictions you may want to increase texture width to decrease height."
 defs["structs"]["ImFontAtlas"][3]["name"] = "TexDesiredWidth"
 defs["structs"]["ImFontAtlas"][3]["type"] = "int"
 defs["structs"]["ImFontAtlas"][4] = {}
-defs["structs"]["ImFontAtlas"][4]["comment"] = " // Padding between glyphs within texture in pixels. Defaults to 1. If your rendering method doesn't rely on bilinear filtering you may set this to 0 (will also need to set AntiAliasedLinesUseTex = false)."
+defs["structs"]["ImFontAtlas"][4]["comment"] = {}
+defs["structs"]["ImFontAtlas"][4]["comment"]["comments"] = " // Padding between glyphs within texture in pixels. Defaults to 1. If your rendering method doesn't rely on bilinear filtering you may set this to 0 (will also need to set AntiAliasedLinesUseTex = false)."
 defs["structs"]["ImFontAtlas"][4]["name"] = "TexGlyphPadding"
 defs["structs"]["ImFontAtlas"][4]["type"] = "int"
 defs["structs"]["ImFontAtlas"][5] = {}
-defs["structs"]["ImFontAtlas"][5]["comment"] = " // Marked as Locked by ImGui::NewFrame() so attempt to modify the atlas will assert."
+defs["structs"]["ImFontAtlas"][5]["comment"] = {}
+defs["structs"]["ImFontAtlas"][5]["comment"]["comments"] = " // Marked as Locked by ImGui::NewFrame() so attempt to modify the atlas will assert."
 defs["structs"]["ImFontAtlas"][5]["name"] = "Locked"
 defs["structs"]["ImFontAtlas"][5]["type"] = "bool"
 defs["structs"]["ImFontAtlas"][6] = {}
-defs["structs"]["ImFontAtlas"][6]["comment"] = "    // [Internal]\
-    // NB: Access texture data via GetTexData*() calls! Which will setup a default font for you. // Set when texture was built matching current font input"
+defs["structs"]["ImFontAtlas"][6]["comment"] = {}
+defs["structs"]["ImFontAtlas"][6]["comment"]["comments"] = " // Set when texture was built matching current font input"
+defs["structs"]["ImFontAtlas"][6]["comment"]["prevcomments"] = "\
+    // [Internal]\
+    // NB: Access texture data via GetTexData*() calls! Which will setup a default font for you."
 defs["structs"]["ImFontAtlas"][6]["name"] = "TexReady"
 defs["structs"]["ImFontAtlas"][6]["type"] = "bool"
 defs["structs"]["ImFontAtlas"][7] = {}
-defs["structs"]["ImFontAtlas"][7]["comment"] = " // Tell whether our texture data is known to use colors (rather than just alpha channel), in order to help backend select a format."
+defs["structs"]["ImFontAtlas"][7]["comment"] = {}
+defs["structs"]["ImFontAtlas"][7]["comment"]["comments"] = " // Tell whether our texture data is known to use colors (rather than just alpha channel), in order to help backend select a format."
 defs["structs"]["ImFontAtlas"][7]["name"] = "TexPixelsUseColors"
 defs["structs"]["ImFontAtlas"][7]["type"] = "bool"
 defs["structs"]["ImFontAtlas"][8] = {}
-defs["structs"]["ImFontAtlas"][8]["comment"] = " // 1 component per pixel, each component is unsigned 8-bit. Total size = TexWidth * TexHeight"
+defs["structs"]["ImFontAtlas"][8]["comment"] = {}
+defs["structs"]["ImFontAtlas"][8]["comment"]["comments"] = " // 1 component per pixel, each component is unsigned 8-bit. Total size = TexWidth * TexHeight"
 defs["structs"]["ImFontAtlas"][8]["name"] = "TexPixelsAlpha8"
 defs["structs"]["ImFontAtlas"][8]["type"] = "unsigned char*"
 defs["structs"]["ImFontAtlas"][9] = {}
-defs["structs"]["ImFontAtlas"][9]["comment"] = " // 4 component per pixel, each component is unsigned 8-bit. Total size = TexWidth * TexHeight * 4"
+defs["structs"]["ImFontAtlas"][9]["comment"] = {}
+defs["structs"]["ImFontAtlas"][9]["comment"]["comments"] = " // 4 component per pixel, each component is unsigned 8-bit. Total size = TexWidth * TexHeight * 4"
 defs["structs"]["ImFontAtlas"][9]["name"] = "TexPixelsRGBA32"
 defs["structs"]["ImFontAtlas"][9]["type"] = "unsigned int*"
 defs["structs"]["ImFontAtlas"][10] = {}
-defs["structs"]["ImFontAtlas"][10]["comment"] = " // Texture width calculated during Build()."
+defs["structs"]["ImFontAtlas"][10]["comment"] = {}
+defs["structs"]["ImFontAtlas"][10]["comment"]["comments"] = " // Texture width calculated during Build()."
 defs["structs"]["ImFontAtlas"][10]["name"] = "TexWidth"
 defs["structs"]["ImFontAtlas"][10]["type"] = "int"
 defs["structs"]["ImFontAtlas"][11] = {}
-defs["structs"]["ImFontAtlas"][11]["comment"] = " // Texture height calculated during Build()."
+defs["structs"]["ImFontAtlas"][11]["comment"] = {}
+defs["structs"]["ImFontAtlas"][11]["comment"]["comments"] = " // Texture height calculated during Build()."
 defs["structs"]["ImFontAtlas"][11]["name"] = "TexHeight"
 defs["structs"]["ImFontAtlas"][11]["type"] = "int"
 defs["structs"]["ImFontAtlas"][12] = {}
-defs["structs"]["ImFontAtlas"][12]["comment"] = " // = (1.0f/TexWidth, 1.0f/TexHeight)"
+defs["structs"]["ImFontAtlas"][12]["comment"] = {}
+defs["structs"]["ImFontAtlas"][12]["comment"]["comments"] = " // = (1.0f/TexWidth, 1.0f/TexHeight)"
 defs["structs"]["ImFontAtlas"][12]["name"] = "TexUvScale"
 defs["structs"]["ImFontAtlas"][12]["type"] = "ImVec2"
 defs["structs"]["ImFontAtlas"][13] = {}
-defs["structs"]["ImFontAtlas"][13]["comment"] = " // Texture coordinates to a white pixel"
+defs["structs"]["ImFontAtlas"][13]["comment"] = {}
+defs["structs"]["ImFontAtlas"][13]["comment"]["comments"] = " // Texture coordinates to a white pixel"
 defs["structs"]["ImFontAtlas"][13]["name"] = "TexUvWhitePixel"
 defs["structs"]["ImFontAtlas"][13]["type"] = "ImVec2"
 defs["structs"]["ImFontAtlas"][14] = {}
-defs["structs"]["ImFontAtlas"][14]["comment"] = " // Hold all the fonts returned by AddFont*. Fonts[0] is the default font upon calling ImGui::NewFrame(), use ImGui::PushFont()/PopFont() to change the current font."
+defs["structs"]["ImFontAtlas"][14]["comment"] = {}
+defs["structs"]["ImFontAtlas"][14]["comment"]["comments"] = " // Hold all the fonts returned by AddFont*. Fonts[0] is the default font upon calling ImGui::NewFrame(), use ImGui::PushFont()/PopFont() to change the current font."
 defs["structs"]["ImFontAtlas"][14]["name"] = "Fonts"
 defs["structs"]["ImFontAtlas"][14]["template_type"] = "ImFont*"
 defs["structs"]["ImFontAtlas"][14]["type"] = "ImVector_ImFontPtr"
 defs["structs"]["ImFontAtlas"][15] = {}
-defs["structs"]["ImFontAtlas"][15]["comment"] = " // Rectangles for packing custom texture data into the atlas."
+defs["structs"]["ImFontAtlas"][15]["comment"] = {}
+defs["structs"]["ImFontAtlas"][15]["comment"]["comments"] = " // Rectangles for packing custom texture data into the atlas."
 defs["structs"]["ImFontAtlas"][15]["name"] = "CustomRects"
 defs["structs"]["ImFontAtlas"][15]["template_type"] = "ImFontAtlasCustomRect"
 defs["structs"]["ImFontAtlas"][15]["type"] = "ImVector_ImFontAtlasCustomRect"
 defs["structs"]["ImFontAtlas"][16] = {}
-defs["structs"]["ImFontAtlas"][16]["comment"] = " // Configuration data"
+defs["structs"]["ImFontAtlas"][16]["comment"] = {}
+defs["structs"]["ImFontAtlas"][16]["comment"]["comments"] = " // Configuration data"
 defs["structs"]["ImFontAtlas"][16]["name"] = "ConfigData"
 defs["structs"]["ImFontAtlas"][16]["template_type"] = "ImFontConfig"
 defs["structs"]["ImFontAtlas"][16]["type"] = "ImVector_ImFontConfig"
 defs["structs"]["ImFontAtlas"][17] = {}
-defs["structs"]["ImFontAtlas"][17]["comment"] = " // UVs for baked anti-aliased lines"
+defs["structs"]["ImFontAtlas"][17]["comment"] = {}
+defs["structs"]["ImFontAtlas"][17]["comment"]["comments"] = " // UVs for baked anti-aliased lines"
 defs["structs"]["ImFontAtlas"][17]["name"] = "TexUvLines[(63)+1]"
 defs["structs"]["ImFontAtlas"][17]["size"] = 64
 defs["structs"]["ImFontAtlas"][17]["type"] = "ImVec4"
 defs["structs"]["ImFontAtlas"][18] = {}
-defs["structs"]["ImFontAtlas"][18]["comment"] = "    // [Internal] Font builder // Opaque interface to a font builder (default to stb_truetype, can be changed to use FreeType by defining IMGUI_ENABLE_FREETYPE)."
+defs["structs"]["ImFontAtlas"][18]["comment"] = {}
+defs["structs"]["ImFontAtlas"][18]["comment"]["comments"] = " // Opaque interface to a font builder (default to stb_truetype, can be changed to use FreeType by defining IMGUI_ENABLE_FREETYPE)."
+defs["structs"]["ImFontAtlas"][18]["comment"]["prevcomments"] = "\
+    // [Internal] Font builder"
 defs["structs"]["ImFontAtlas"][18]["name"] = "FontBuilderIO"
 defs["structs"]["ImFontAtlas"][18]["type"] = "const ImFontBuilderIO*"
 defs["structs"]["ImFontAtlas"][19] = {}
-defs["structs"]["ImFontAtlas"][19]["comment"] = " // Shared flags (for all fonts) for custom font builder. THIS IS BUILD IMPLEMENTATION DEPENDENT. Per-font override is also available in ImFontConfig."
+defs["structs"]["ImFontAtlas"][19]["comment"] = {}
+defs["structs"]["ImFontAtlas"][19]["comment"]["comments"] = " // Shared flags (for all fonts) for custom font builder. THIS IS BUILD IMPLEMENTATION DEPENDENT. Per-font override is also available in ImFontConfig."
 defs["structs"]["ImFontAtlas"][19]["name"] = "FontBuilderFlags"
 defs["structs"]["ImFontAtlas"][19]["type"] = "unsigned int"
 defs["structs"]["ImFontAtlas"][20] = {}
-defs["structs"]["ImFontAtlas"][20]["comment"] = "    // [Internal] Packing data // Custom texture rectangle ID for white pixel and mouse cursors"
+defs["structs"]["ImFontAtlas"][20]["comment"] = {}
+defs["structs"]["ImFontAtlas"][20]["comment"]["comments"] = " // Custom texture rectangle ID for white pixel and mouse cursors"
+defs["structs"]["ImFontAtlas"][20]["comment"]["prevcomments"] = "\
+    // [Internal] Packing data"
 defs["structs"]["ImFontAtlas"][20]["name"] = "PackIdMouseCursors"
 defs["structs"]["ImFontAtlas"][20]["type"] = "int"
 defs["structs"]["ImFontAtlas"][21] = {}
-defs["structs"]["ImFontAtlas"][21]["comment"] = " // Custom texture rectangle ID for baked anti-aliased lines"
+defs["structs"]["ImFontAtlas"][21]["comment"] = {}
+defs["structs"]["ImFontAtlas"][21]["comment"]["comments"] = " // Custom texture rectangle ID for baked anti-aliased lines"
 defs["structs"]["ImFontAtlas"][21]["name"] = "PackIdLines"
 defs["structs"]["ImFontAtlas"][21]["type"] = "int"
 defs["structs"]["ImFontAtlasCustomRect"] = {}
 defs["structs"]["ImFontAtlasCustomRect"][1] = {}
-defs["structs"]["ImFontAtlasCustomRect"][1]["comment"] = " // Input    // Desired rectangle dimension"
+defs["structs"]["ImFontAtlasCustomRect"][1]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][1]["comment"]["comments"] = " // Input    // Desired rectangle dimension"
 defs["structs"]["ImFontAtlasCustomRect"][1]["name"] = "Width"
 defs["structs"]["ImFontAtlasCustomRect"][1]["type"] = "unsigned short"
 defs["structs"]["ImFontAtlasCustomRect"][2] = {}
-defs["structs"]["ImFontAtlasCustomRect"][2]["comment"] = " // Input    // Desired rectangle dimension"
+defs["structs"]["ImFontAtlasCustomRect"][2]["comment"] = defs["structs"]["ImFontAtlasCustomRect"][1]["comment"]
 defs["structs"]["ImFontAtlasCustomRect"][2]["name"] = "Height"
 defs["structs"]["ImFontAtlasCustomRect"][2]["type"] = "unsigned short"
 defs["structs"]["ImFontAtlasCustomRect"][3] = {}
-defs["structs"]["ImFontAtlasCustomRect"][3]["comment"] = " // Output   // Packed position in Atlas"
+defs["structs"]["ImFontAtlasCustomRect"][3]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][3]["comment"]["comments"] = " // Output   // Packed position in Atlas"
 defs["structs"]["ImFontAtlasCustomRect"][3]["name"] = "X"
 defs["structs"]["ImFontAtlasCustomRect"][3]["type"] = "unsigned short"
 defs["structs"]["ImFontAtlasCustomRect"][4] = {}
-defs["structs"]["ImFontAtlasCustomRect"][4]["comment"] = " // Output   // Packed position in Atlas"
+defs["structs"]["ImFontAtlasCustomRect"][4]["comment"] = defs["structs"]["ImFontAtlasCustomRect"][3]["comment"]
 defs["structs"]["ImFontAtlasCustomRect"][4]["name"] = "Y"
 defs["structs"]["ImFontAtlasCustomRect"][4]["type"] = "unsigned short"
 defs["structs"]["ImFontAtlasCustomRect"][5] = {}
-defs["structs"]["ImFontAtlasCustomRect"][5]["comment"] = " // Input    // For custom font glyphs only (ID < 0x110000)"
+defs["structs"]["ImFontAtlasCustomRect"][5]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][5]["comment"]["comments"] = " // Input    // For custom font glyphs only (ID < 0x110000)"
 defs["structs"]["ImFontAtlasCustomRect"][5]["name"] = "GlyphID"
 defs["structs"]["ImFontAtlasCustomRect"][5]["type"] = "unsigned int"
 defs["structs"]["ImFontAtlasCustomRect"][6] = {}
-defs["structs"]["ImFontAtlasCustomRect"][6]["comment"] = " // Input    // For custom font glyphs only: glyph xadvance"
+defs["structs"]["ImFontAtlasCustomRect"][6]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][6]["comment"]["comments"] = " // Input    // For custom font glyphs only: glyph xadvance"
 defs["structs"]["ImFontAtlasCustomRect"][6]["name"] = "GlyphAdvanceX"
 defs["structs"]["ImFontAtlasCustomRect"][6]["type"] = "float"
 defs["structs"]["ImFontAtlasCustomRect"][7] = {}
-defs["structs"]["ImFontAtlasCustomRect"][7]["comment"] = " // Input    // For custom font glyphs only: glyph display offset"
+defs["structs"]["ImFontAtlasCustomRect"][7]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][7]["comment"]["comments"] = " // Input    // For custom font glyphs only: glyph display offset"
 defs["structs"]["ImFontAtlasCustomRect"][7]["name"] = "GlyphOffset"
 defs["structs"]["ImFontAtlasCustomRect"][7]["type"] = "ImVec2"
 defs["structs"]["ImFontAtlasCustomRect"][8] = {}
-defs["structs"]["ImFontAtlasCustomRect"][8]["comment"] = " // Input    // For custom font glyphs only: target font"
+defs["structs"]["ImFontAtlasCustomRect"][8]["comment"] = {}
+defs["structs"]["ImFontAtlasCustomRect"][8]["comment"]["comments"] = " // Input    // For custom font glyphs only: target font"
 defs["structs"]["ImFontAtlasCustomRect"][8]["name"] = "Font"
 defs["structs"]["ImFontAtlasCustomRect"][8]["type"] = "ImFont*"
 defs["structs"]["ImFontBuilderIO"] = {}
 defs["structs"]["ImFontBuilderIO"][1] = {}
+defs["structs"]["ImFontBuilderIO"][1]["comment"] = {}
 defs["structs"]["ImFontBuilderIO"][1]["name"] = "FontBuilder_Build"
 defs["structs"]["ImFontBuilderIO"][1]["type"] = "bool(*)(ImFontAtlas* atlas)"
 defs["structs"]["ImFontConfig"] = {}
 defs["structs"]["ImFontConfig"][1] = {}
-defs["structs"]["ImFontConfig"][1]["comment"] = " //          // TTF/OTF data"
+defs["structs"]["ImFontConfig"][1]["comment"] = {}
+defs["structs"]["ImFontConfig"][1]["comment"]["comments"] = " //          // TTF/OTF data"
 defs["structs"]["ImFontConfig"][1]["name"] = "FontData"
 defs["structs"]["ImFontConfig"][1]["type"] = "void*"
 defs["structs"]["ImFontConfig"][2] = {}
-defs["structs"]["ImFontConfig"][2]["comment"] = " //          // TTF/OTF data size"
+defs["structs"]["ImFontConfig"][2]["comment"] = {}
+defs["structs"]["ImFontConfig"][2]["comment"]["comments"] = " //          // TTF/OTF data size"
 defs["structs"]["ImFontConfig"][2]["name"] = "FontDataSize"
 defs["structs"]["ImFontConfig"][2]["type"] = "int"
 defs["structs"]["ImFontConfig"][3] = {}
-defs["structs"]["ImFontConfig"][3]["comment"] = " // true     // TTF/OTF data ownership taken by the container ImFontAtlas (will delete memory itself)."
+defs["structs"]["ImFontConfig"][3]["comment"] = {}
+defs["structs"]["ImFontConfig"][3]["comment"]["comments"] = " // true     // TTF/OTF data ownership taken by the container ImFontAtlas (will delete memory itself)."
 defs["structs"]["ImFontConfig"][3]["name"] = "FontDataOwnedByAtlas"
 defs["structs"]["ImFontConfig"][3]["type"] = "bool"
 defs["structs"]["ImFontConfig"][4] = {}
-defs["structs"]["ImFontConfig"][4]["comment"] = " // 0        // Index of font within TTF/OTF file"
+defs["structs"]["ImFontConfig"][4]["comment"] = {}
+defs["structs"]["ImFontConfig"][4]["comment"]["comments"] = " // 0        // Index of font within TTF/OTF file"
 defs["structs"]["ImFontConfig"][4]["name"] = "FontNo"
 defs["structs"]["ImFontConfig"][4]["type"] = "int"
 defs["structs"]["ImFontConfig"][5] = {}
-defs["structs"]["ImFontConfig"][5]["comment"] = " //          // Size in pixels for rasterizer (more or less maps to the resulting font height)."
+defs["structs"]["ImFontConfig"][5]["comment"] = {}
+defs["structs"]["ImFontConfig"][5]["comment"]["comments"] = " //          // Size in pixels for rasterizer (more or less maps to the resulting font height)."
 defs["structs"]["ImFontConfig"][5]["name"] = "SizePixels"
 defs["structs"]["ImFontConfig"][5]["type"] = "float"
 defs["structs"]["ImFontConfig"][6] = {}
-defs["structs"]["ImFontConfig"][6]["comment"] = " // 3        // Rasterize at higher quality for sub-pixel positioning. Note the difference between 2 and 3 is minimal so you can reduce this to 2 to save memory. Read https://github.com/nothings/stb/blob/master/tests/oversample/README.md for details."
+defs["structs"]["ImFontConfig"][6]["comment"] = {}
+defs["structs"]["ImFontConfig"][6]["comment"]["comments"] = " // 3        // Rasterize at higher quality for sub-pixel positioning. Note the difference between 2 and 3 is minimal so you can reduce this to 2 to save memory. Read https://github.com/nothings/stb/blob/master/tests/oversample/README.md for details."
 defs["structs"]["ImFontConfig"][6]["name"] = "OversampleH"
 defs["structs"]["ImFontConfig"][6]["type"] = "int"
 defs["structs"]["ImFontConfig"][7] = {}
-defs["structs"]["ImFontConfig"][7]["comment"] = " // 1        // Rasterize at higher quality for sub-pixel positioning. This is not really useful as we don't use sub-pixel positions on the Y axis."
+defs["structs"]["ImFontConfig"][7]["comment"] = {}
+defs["structs"]["ImFontConfig"][7]["comment"]["comments"] = " // 1        // Rasterize at higher quality for sub-pixel positioning. This is not really useful as we don't use sub-pixel positions on the Y axis."
 defs["structs"]["ImFontConfig"][7]["name"] = "OversampleV"
 defs["structs"]["ImFontConfig"][7]["type"] = "int"
 defs["structs"]["ImFontConfig"][8] = {}
-defs["structs"]["ImFontConfig"][8]["comment"] = " // false    // Align every glyph to pixel boundary. Useful e.g. if you are merging a non-pixel aligned font with the default font. If enabled, you can set OversampleH/V to 1."
+defs["structs"]["ImFontConfig"][8]["comment"] = {}
+defs["structs"]["ImFontConfig"][8]["comment"]["comments"] = " // false    // Align every glyph to pixel boundary. Useful e.g. if you are merging a non-pixel aligned font with the default font. If enabled, you can set OversampleH/V to 1."
 defs["structs"]["ImFontConfig"][8]["name"] = "PixelSnapH"
 defs["structs"]["ImFontConfig"][8]["type"] = "bool"
 defs["structs"]["ImFontConfig"][9] = {}
-defs["structs"]["ImFontConfig"][9]["comment"] = " // 0, 0     // Extra spacing (in pixels) between glyphs. Only X axis is supported for now."
+defs["structs"]["ImFontConfig"][9]["comment"] = {}
+defs["structs"]["ImFontConfig"][9]["comment"]["comments"] = " // 0, 0     // Extra spacing (in pixels) between glyphs. Only X axis is supported for now."
 defs["structs"]["ImFontConfig"][9]["name"] = "GlyphExtraSpacing"
 defs["structs"]["ImFontConfig"][9]["type"] = "ImVec2"
 defs["structs"]["ImFontConfig"][10] = {}
-defs["structs"]["ImFontConfig"][10]["comment"] = " // 0, 0     // Offset all glyphs from this font input."
+defs["structs"]["ImFontConfig"][10]["comment"] = {}
+defs["structs"]["ImFontConfig"][10]["comment"]["comments"] = " // 0, 0     // Offset all glyphs from this font input."
 defs["structs"]["ImFontConfig"][10]["name"] = "GlyphOffset"
 defs["structs"]["ImFontConfig"][10]["type"] = "ImVec2"
 defs["structs"]["ImFontConfig"][11] = {}
-defs["structs"]["ImFontConfig"][11]["comment"] = " // NULL     // Pointer to a user-provided list of Unicode range (2 value per range, values are inclusive, zero-terminated list). THE ARRAY DATA NEEDS TO PERSIST AS LONG AS THE FONT IS ALIVE."
+defs["structs"]["ImFontConfig"][11]["comment"] = {}
+defs["structs"]["ImFontConfig"][11]["comment"]["comments"] = " // NULL     // Pointer to a user-provided list of Unicode range (2 value per range, values are inclusive, zero-terminated list). THE ARRAY DATA NEEDS TO PERSIST AS LONG AS THE FONT IS ALIVE."
 defs["structs"]["ImFontConfig"][11]["name"] = "GlyphRanges"
 defs["structs"]["ImFontConfig"][11]["type"] = "const ImWchar*"
 defs["structs"]["ImFontConfig"][12] = {}
-defs["structs"]["ImFontConfig"][12]["comment"] = " // 0        // Minimum AdvanceX for glyphs, set Min to align font icons, set both Min/Max to enforce mono-space font"
+defs["structs"]["ImFontConfig"][12]["comment"] = {}
+defs["structs"]["ImFontConfig"][12]["comment"]["comments"] = " // 0        // Minimum AdvanceX for glyphs, set Min to align font icons, set both Min/Max to enforce mono-space font"
 defs["structs"]["ImFontConfig"][12]["name"] = "GlyphMinAdvanceX"
 defs["structs"]["ImFontConfig"][12]["type"] = "float"
 defs["structs"]["ImFontConfig"][13] = {}
-defs["structs"]["ImFontConfig"][13]["comment"] = " // FLT_MAX  // Maximum AdvanceX for glyphs"
+defs["structs"]["ImFontConfig"][13]["comment"] = {}
+defs["structs"]["ImFontConfig"][13]["comment"]["comments"] = " // FLT_MAX  // Maximum AdvanceX for glyphs"
 defs["structs"]["ImFontConfig"][13]["name"] = "GlyphMaxAdvanceX"
 defs["structs"]["ImFontConfig"][13]["type"] = "float"
 defs["structs"]["ImFontConfig"][14] = {}
-defs["structs"]["ImFontConfig"][14]["comment"] = " // false    // Merge into previous ImFont, so you can combine multiple inputs font into one ImFont (e.g. ASCII font + icons + Japanese glyphs). You may want to use GlyphOffset.y when merge font of different heights."
+defs["structs"]["ImFontConfig"][14]["comment"] = {}
+defs["structs"]["ImFontConfig"][14]["comment"]["comments"] = " // false    // Merge into previous ImFont, so you can combine multiple inputs font into one ImFont (e.g. ASCII font + icons + Japanese glyphs). You may want to use GlyphOffset.y when merge font of different heights."
 defs["structs"]["ImFontConfig"][14]["name"] = "MergeMode"
 defs["structs"]["ImFontConfig"][14]["type"] = "bool"
 defs["structs"]["ImFontConfig"][15] = {}
-defs["structs"]["ImFontConfig"][15]["comment"] = " // 0        // Settings for custom font builder. THIS IS BUILDER IMPLEMENTATION DEPENDENT. Leave as zero if unsure."
+defs["structs"]["ImFontConfig"][15]["comment"] = {}
+defs["structs"]["ImFontConfig"][15]["comment"]["comments"] = " // 0        // Settings for custom font builder. THIS IS BUILDER IMPLEMENTATION DEPENDENT. Leave as zero if unsure."
 defs["structs"]["ImFontConfig"][15]["name"] = "FontBuilderFlags"
 defs["structs"]["ImFontConfig"][15]["type"] = "unsigned int"
 defs["structs"]["ImFontConfig"][16] = {}
-defs["structs"]["ImFontConfig"][16]["comment"] = " // 1.0f     // Brighten (>1.0f) or darken (<1.0f) font output. Brightening small fonts may be a good workaround to make them more readable."
+defs["structs"]["ImFontConfig"][16]["comment"] = {}
+defs["structs"]["ImFontConfig"][16]["comment"]["comments"] = " // 1.0f     // Brighten (>1.0f) or darken (<1.0f) font output. Brightening small fonts may be a good workaround to make them more readable."
 defs["structs"]["ImFontConfig"][16]["name"] = "RasterizerMultiply"
 defs["structs"]["ImFontConfig"][16]["type"] = "float"
 defs["structs"]["ImFontConfig"][17] = {}
-defs["structs"]["ImFontConfig"][17]["comment"] = " // -1       // Explicitly specify unicode codepoint of ellipsis character. When fonts are being merged first specified ellipsis will be used."
+defs["structs"]["ImFontConfig"][17]["comment"] = {}
+defs["structs"]["ImFontConfig"][17]["comment"]["comments"] = " // -1       // Explicitly specify unicode codepoint of ellipsis character. When fonts are being merged first specified ellipsis will be used."
 defs["structs"]["ImFontConfig"][17]["name"] = "EllipsisChar"
 defs["structs"]["ImFontConfig"][17]["type"] = "ImWchar"
 defs["structs"]["ImFontConfig"][18] = {}
-defs["structs"]["ImFontConfig"][18]["comment"] = "    // [Internal] // Name (strictly to ease debugging)"
+defs["structs"]["ImFontConfig"][18]["comment"] = {}
+defs["structs"]["ImFontConfig"][18]["comment"]["comments"] = " // Name (strictly to ease debugging)"
+defs["structs"]["ImFontConfig"][18]["comment"]["prevcomments"] = "\
+    // [Internal]"
 defs["structs"]["ImFontConfig"][18]["name"] = "Name[40]"
 defs["structs"]["ImFontConfig"][18]["size"] = 40
 defs["structs"]["ImFontConfig"][18]["type"] = "char"
 defs["structs"]["ImFontConfig"][19] = {}
+defs["structs"]["ImFontConfig"][19]["comment"] = {}
 defs["structs"]["ImFontConfig"][19]["name"] = "DstFont"
 defs["structs"]["ImFontConfig"][19]["type"] = "ImFont*"
 defs["structs"]["ImFontGlyph"] = {}
 defs["structs"]["ImFontGlyph"][1] = {}
 defs["structs"]["ImFontGlyph"][1]["bitfield"] = "1"
-defs["structs"]["ImFontGlyph"][1]["comment"] = " // Flag to indicate glyph is colored and should generally ignore tinting (make it usable with no shift on little-endian as this is used in loops)"
+defs["structs"]["ImFontGlyph"][1]["comment"] = {}
+defs["structs"]["ImFontGlyph"][1]["comment"]["comments"] = " // Flag to indicate glyph is colored and should generally ignore tinting (make it usable with no shift on little-endian as this is used in loops)"
 defs["structs"]["ImFontGlyph"][1]["name"] = "Colored"
 defs["structs"]["ImFontGlyph"][1]["type"] = "unsigned int"
 defs["structs"]["ImFontGlyph"][2] = {}
 defs["structs"]["ImFontGlyph"][2]["bitfield"] = "1"
-defs["structs"]["ImFontGlyph"][2]["comment"] = " // Flag to indicate glyph has no visible pixels (e.g. space). Allow early out when rendering."
+defs["structs"]["ImFontGlyph"][2]["comment"] = {}
+defs["structs"]["ImFontGlyph"][2]["comment"]["comments"] = " // Flag to indicate glyph has no visible pixels (e.g. space). Allow early out when rendering."
 defs["structs"]["ImFontGlyph"][2]["name"] = "Visible"
 defs["structs"]["ImFontGlyph"][2]["type"] = "unsigned int"
 defs["structs"]["ImFontGlyph"][3] = {}
 defs["structs"]["ImFontGlyph"][3]["bitfield"] = "30"
-defs["structs"]["ImFontGlyph"][3]["comment"] = " // 0x0000..0x10FFFF"
+defs["structs"]["ImFontGlyph"][3]["comment"] = {}
+defs["structs"]["ImFontGlyph"][3]["comment"]["comments"] = " // 0x0000..0x10FFFF"
 defs["structs"]["ImFontGlyph"][3]["name"] = "Codepoint"
 defs["structs"]["ImFontGlyph"][3]["type"] = "unsigned int"
 defs["structs"]["ImFontGlyph"][4] = {}
-defs["structs"]["ImFontGlyph"][4]["comment"] = " // Distance to next character (= data from font + ImFontConfig::GlyphExtraSpacing.x baked in)"
+defs["structs"]["ImFontGlyph"][4]["comment"] = {}
+defs["structs"]["ImFontGlyph"][4]["comment"]["comments"] = " // Distance to next character (= data from font + ImFontConfig::GlyphExtraSpacing.x baked in)"
 defs["structs"]["ImFontGlyph"][4]["name"] = "AdvanceX"
 defs["structs"]["ImFontGlyph"][4]["type"] = "float"
 defs["structs"]["ImFontGlyph"][5] = {}
-defs["structs"]["ImFontGlyph"][5]["comment"] = " // Glyph corners"
+defs["structs"]["ImFontGlyph"][5]["comment"] = {}
+defs["structs"]["ImFontGlyph"][5]["comment"]["comments"] = " // Glyph corners"
 defs["structs"]["ImFontGlyph"][5]["name"] = "X0"
 defs["structs"]["ImFontGlyph"][5]["type"] = "float"
 defs["structs"]["ImFontGlyph"][6] = {}
-defs["structs"]["ImFontGlyph"][6]["comment"] = " // Glyph corners"
+defs["structs"]["ImFontGlyph"][6]["comment"] = defs["structs"]["ImFontGlyph"][5]["comment"]
 defs["structs"]["ImFontGlyph"][6]["name"] = "Y0"
 defs["structs"]["ImFontGlyph"][6]["type"] = "float"
 defs["structs"]["ImFontGlyph"][7] = {}
-defs["structs"]["ImFontGlyph"][7]["comment"] = " // Glyph corners"
+defs["structs"]["ImFontGlyph"][7]["comment"] = defs["structs"]["ImFontGlyph"][5]["comment"]
 defs["structs"]["ImFontGlyph"][7]["name"] = "X1"
 defs["structs"]["ImFontGlyph"][7]["type"] = "float"
 defs["structs"]["ImFontGlyph"][8] = {}
-defs["structs"]["ImFontGlyph"][8]["comment"] = " // Glyph corners"
+defs["structs"]["ImFontGlyph"][8]["comment"] = defs["structs"]["ImFontGlyph"][5]["comment"]
 defs["structs"]["ImFontGlyph"][8]["name"] = "Y1"
 defs["structs"]["ImFontGlyph"][8]["type"] = "float"
 defs["structs"]["ImFontGlyph"][9] = {}
-defs["structs"]["ImFontGlyph"][9]["comment"] = " // Texture coordinates"
+defs["structs"]["ImFontGlyph"][9]["comment"] = {}
+defs["structs"]["ImFontGlyph"][9]["comment"]["comments"] = " // Texture coordinates"
 defs["structs"]["ImFontGlyph"][9]["name"] = "U0"
 defs["structs"]["ImFontGlyph"][9]["type"] = "float"
 defs["structs"]["ImFontGlyph"][10] = {}
-defs["structs"]["ImFontGlyph"][10]["comment"] = " // Texture coordinates"
+defs["structs"]["ImFontGlyph"][10]["comment"] = defs["structs"]["ImFontGlyph"][9]["comment"]
 defs["structs"]["ImFontGlyph"][10]["name"] = "V0"
 defs["structs"]["ImFontGlyph"][10]["type"] = "float"
 defs["structs"]["ImFontGlyph"][11] = {}
-defs["structs"]["ImFontGlyph"][11]["comment"] = " // Texture coordinates"
+defs["structs"]["ImFontGlyph"][11]["comment"] = defs["structs"]["ImFontGlyph"][9]["comment"]
 defs["structs"]["ImFontGlyph"][11]["name"] = "U1"
 defs["structs"]["ImFontGlyph"][11]["type"] = "float"
 defs["structs"]["ImFontGlyph"][12] = {}
-defs["structs"]["ImFontGlyph"][12]["comment"] = " // Texture coordinates"
+defs["structs"]["ImFontGlyph"][12]["comment"] = defs["structs"]["ImFontGlyph"][9]["comment"]
 defs["structs"]["ImFontGlyph"][12]["name"] = "V1"
 defs["structs"]["ImFontGlyph"][12]["type"] = "float"
 defs["structs"]["ImFontGlyphRangesBuilder"] = {}
 defs["structs"]["ImFontGlyphRangesBuilder"][1] = {}
-defs["structs"]["ImFontGlyphRangesBuilder"][1]["comment"] = " // Store 1-bit per Unicode code point (0=unused, 1=used)"
+defs["structs"]["ImFontGlyphRangesBuilder"][1]["comment"] = {}
+defs["structs"]["ImFontGlyphRangesBuilder"][1]["comment"]["comments"] = " // Store 1-bit per Unicode code point (0=unused, 1=used)"
 defs["structs"]["ImFontGlyphRangesBuilder"][1]["name"] = "UsedChars"
 defs["structs"]["ImFontGlyphRangesBuilder"][1]["template_type"] = "ImU32"
 defs["structs"]["ImFontGlyphRangesBuilder"][1]["type"] = "ImVector_ImU32"
 defs["structs"]["ImGuiColorMod"] = {}
 defs["structs"]["ImGuiColorMod"][1] = {}
+defs["structs"]["ImGuiColorMod"][1]["comment"] = {}
 defs["structs"]["ImGuiColorMod"][1]["name"] = "Col"
 defs["structs"]["ImGuiColorMod"][1]["type"] = "ImGuiCol"
 defs["structs"]["ImGuiColorMod"][2] = {}
+defs["structs"]["ImGuiColorMod"][2]["comment"] = {}
 defs["structs"]["ImGuiColorMod"][2]["name"] = "BackupValue"
 defs["structs"]["ImGuiColorMod"][2]["type"] = "ImVec4"
 defs["structs"]["ImGuiComboPreviewData"] = {}
 defs["structs"]["ImGuiComboPreviewData"][1] = {}
+defs["structs"]["ImGuiComboPreviewData"][1]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][1]["name"] = "PreviewRect"
 defs["structs"]["ImGuiComboPreviewData"][1]["type"] = "ImRect"
 defs["structs"]["ImGuiComboPreviewData"][2] = {}
+defs["structs"]["ImGuiComboPreviewData"][2]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][2]["name"] = "BackupCursorPos"
 defs["structs"]["ImGuiComboPreviewData"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiComboPreviewData"][3] = {}
+defs["structs"]["ImGuiComboPreviewData"][3]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][3]["name"] = "BackupCursorMaxPos"
 defs["structs"]["ImGuiComboPreviewData"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiComboPreviewData"][4] = {}
+defs["structs"]["ImGuiComboPreviewData"][4]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][4]["name"] = "BackupCursorPosPrevLine"
 defs["structs"]["ImGuiComboPreviewData"][4]["type"] = "ImVec2"
 defs["structs"]["ImGuiComboPreviewData"][5] = {}
+defs["structs"]["ImGuiComboPreviewData"][5]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][5]["name"] = "BackupPrevLineTextBaseOffset"
 defs["structs"]["ImGuiComboPreviewData"][5]["type"] = "float"
 defs["structs"]["ImGuiComboPreviewData"][6] = {}
+defs["structs"]["ImGuiComboPreviewData"][6]["comment"] = {}
 defs["structs"]["ImGuiComboPreviewData"][6]["name"] = "BackupLayout"
 defs["structs"]["ImGuiComboPreviewData"][6]["type"] = "ImGuiLayoutType"
 defs["structs"]["ImGuiContext"] = {}
 defs["structs"]["ImGuiContext"][1] = {}
+defs["structs"]["ImGuiContext"][1]["comment"] = {}
 defs["structs"]["ImGuiContext"][1]["name"] = "Initialized"
 defs["structs"]["ImGuiContext"][1]["type"] = "bool"
 defs["structs"]["ImGuiContext"][2] = {}
-defs["structs"]["ImGuiContext"][2]["comment"] = " // IO.Fonts-> is owned by the ImGuiContext and will be destructed along with it."
+defs["structs"]["ImGuiContext"][2]["comment"] = {}
+defs["structs"]["ImGuiContext"][2]["comment"]["comments"] = " // IO.Fonts-> is owned by the ImGuiContext and will be destructed along with it."
 defs["structs"]["ImGuiContext"][2]["name"] = "FontAtlasOwnedByContext"
 defs["structs"]["ImGuiContext"][2]["type"] = "bool"
 defs["structs"]["ImGuiContext"][3] = {}
+defs["structs"]["ImGuiContext"][3]["comment"] = {}
 defs["structs"]["ImGuiContext"][3]["name"] = "IO"
 defs["structs"]["ImGuiContext"][3]["type"] = "ImGuiIO"
 defs["structs"]["ImGuiContext"][4] = {}
+defs["structs"]["ImGuiContext"][4]["comment"] = {}
 defs["structs"]["ImGuiContext"][4]["name"] = "PlatformIO"
 defs["structs"]["ImGuiContext"][4]["type"] = "ImGuiPlatformIO"
 defs["structs"]["ImGuiContext"][5] = {}
-defs["structs"]["ImGuiContext"][5]["comment"] = " // Input events which will be tricked/written into IO structure."
+defs["structs"]["ImGuiContext"][5]["comment"] = {}
+defs["structs"]["ImGuiContext"][5]["comment"]["comments"] = " // Input events which will be tricked/written into IO structure."
 defs["structs"]["ImGuiContext"][5]["name"] = "InputEventsQueue"
 defs["structs"]["ImGuiContext"][5]["template_type"] = "ImGuiInputEvent"
 defs["structs"]["ImGuiContext"][5]["type"] = "ImVector_ImGuiInputEvent"
 defs["structs"]["ImGuiContext"][6] = {}
-defs["structs"]["ImGuiContext"][6]["comment"] = " // Past input events processed in NewFrame(). This is to allow domain-specific application to access e.g mouse/pen trail."
+defs["structs"]["ImGuiContext"][6]["comment"] = {}
+defs["structs"]["ImGuiContext"][6]["comment"]["comments"] = " // Past input events processed in NewFrame(). This is to allow domain-specific application to access e.g mouse/pen trail."
 defs["structs"]["ImGuiContext"][6]["name"] = "InputEventsTrail"
 defs["structs"]["ImGuiContext"][6]["template_type"] = "ImGuiInputEvent"
 defs["structs"]["ImGuiContext"][6]["type"] = "ImVector_ImGuiInputEvent"
 defs["structs"]["ImGuiContext"][7] = {}
+defs["structs"]["ImGuiContext"][7]["comment"] = {}
 defs["structs"]["ImGuiContext"][7]["name"] = "Style"
 defs["structs"]["ImGuiContext"][7]["type"] = "ImGuiStyle"
 defs["structs"]["ImGuiContext"][8] = {}
-defs["structs"]["ImGuiContext"][8]["comment"] = " // = g.IO.ConfigFlags at the time of NewFrame()"
+defs["structs"]["ImGuiContext"][8]["comment"] = {}
+defs["structs"]["ImGuiContext"][8]["comment"]["comments"] = " // = g.IO.ConfigFlags at the time of NewFrame()"
 defs["structs"]["ImGuiContext"][8]["name"] = "ConfigFlagsCurrFrame"
 defs["structs"]["ImGuiContext"][8]["type"] = "ImGuiConfigFlags"
 defs["structs"]["ImGuiContext"][9] = {}
+defs["structs"]["ImGuiContext"][9]["comment"] = {}
 defs["structs"]["ImGuiContext"][9]["name"] = "ConfigFlagsLastFrame"
 defs["structs"]["ImGuiContext"][9]["type"] = "ImGuiConfigFlags"
 defs["structs"]["ImGuiContext"][10] = {}
-defs["structs"]["ImGuiContext"][10]["comment"] = " // (Shortcut) == FontStack.empty() ? IO.Font : FontStack.back()"
+defs["structs"]["ImGuiContext"][10]["comment"] = {}
+defs["structs"]["ImGuiContext"][10]["comment"]["comments"] = " // (Shortcut) == FontStack.empty() ? IO.Font : FontStack.back()"
 defs["structs"]["ImGuiContext"][10]["name"] = "Font"
 defs["structs"]["ImGuiContext"][10]["type"] = "ImFont*"
 defs["structs"]["ImGuiContext"][11] = {}
-defs["structs"]["ImGuiContext"][11]["comment"] = " // (Shortcut) == FontBaseSize * g.CurrentWindow->FontWindowScale == window->FontSize(). Text height for current window."
+defs["structs"]["ImGuiContext"][11]["comment"] = {}
+defs["structs"]["ImGuiContext"][11]["comment"]["comments"] = " // (Shortcut) == FontBaseSize * g.CurrentWindow->FontWindowScale == window->FontSize(). Text height for current window."
 defs["structs"]["ImGuiContext"][11]["name"] = "FontSize"
 defs["structs"]["ImGuiContext"][11]["type"] = "float"
 defs["structs"]["ImGuiContext"][12] = {}
-defs["structs"]["ImGuiContext"][12]["comment"] = " // (Shortcut) == IO.FontGlobalScale * Font->Scale * Font->FontSize. Base text height."
+defs["structs"]["ImGuiContext"][12]["comment"] = {}
+defs["structs"]["ImGuiContext"][12]["comment"]["comments"] = " // (Shortcut) == IO.FontGlobalScale * Font->Scale * Font->FontSize. Base text height."
 defs["structs"]["ImGuiContext"][12]["name"] = "FontBaseSize"
 defs["structs"]["ImGuiContext"][12]["type"] = "float"
 defs["structs"]["ImGuiContext"][13] = {}
+defs["structs"]["ImGuiContext"][13]["comment"] = {}
 defs["structs"]["ImGuiContext"][13]["name"] = "DrawListSharedData"
 defs["structs"]["ImGuiContext"][13]["type"] = "ImDrawListSharedData"
 defs["structs"]["ImGuiContext"][14] = {}
+defs["structs"]["ImGuiContext"][14]["comment"] = {}
 defs["structs"]["ImGuiContext"][14]["name"] = "Time"
 defs["structs"]["ImGuiContext"][14]["type"] = "double"
 defs["structs"]["ImGuiContext"][15] = {}
+defs["structs"]["ImGuiContext"][15]["comment"] = {}
 defs["structs"]["ImGuiContext"][15]["name"] = "FrameCount"
 defs["structs"]["ImGuiContext"][15]["type"] = "int"
 defs["structs"]["ImGuiContext"][16] = {}
+defs["structs"]["ImGuiContext"][16]["comment"] = {}
 defs["structs"]["ImGuiContext"][16]["name"] = "FrameCountEnded"
 defs["structs"]["ImGuiContext"][16]["type"] = "int"
 defs["structs"]["ImGuiContext"][17] = {}
+defs["structs"]["ImGuiContext"][17]["comment"] = {}
 defs["structs"]["ImGuiContext"][17]["name"] = "FrameCountPlatformEnded"
 defs["structs"]["ImGuiContext"][17]["type"] = "int"
 defs["structs"]["ImGuiContext"][18] = {}
+defs["structs"]["ImGuiContext"][18]["comment"] = {}
 defs["structs"]["ImGuiContext"][18]["name"] = "FrameCountRendered"
 defs["structs"]["ImGuiContext"][18]["type"] = "int"
 defs["structs"]["ImGuiContext"][19] = {}
-defs["structs"]["ImGuiContext"][19]["comment"] = " // Set by NewFrame(), cleared by EndFrame()"
+defs["structs"]["ImGuiContext"][19]["comment"] = {}
+defs["structs"]["ImGuiContext"][19]["comment"]["comments"] = " // Set by NewFrame(), cleared by EndFrame()"
 defs["structs"]["ImGuiContext"][19]["name"] = "WithinFrameScope"
 defs["structs"]["ImGuiContext"][19]["type"] = "bool"
 defs["structs"]["ImGuiContext"][20] = {}
-defs["structs"]["ImGuiContext"][20]["comment"] = " // Set by NewFrame(), cleared by EndFrame() when the implicit debug window has been pushed"
+defs["structs"]["ImGuiContext"][20]["comment"] = {}
+defs["structs"]["ImGuiContext"][20]["comment"]["comments"] = " // Set by NewFrame(), cleared by EndFrame() when the implicit debug window has been pushed"
 defs["structs"]["ImGuiContext"][20]["name"] = "WithinFrameScopeWithImplicitWindow"
 defs["structs"]["ImGuiContext"][20]["type"] = "bool"
 defs["structs"]["ImGuiContext"][21] = {}
-defs["structs"]["ImGuiContext"][21]["comment"] = " // Set within EndChild()"
+defs["structs"]["ImGuiContext"][21]["comment"] = {}
+defs["structs"]["ImGuiContext"][21]["comment"]["comments"] = " // Set within EndChild()"
 defs["structs"]["ImGuiContext"][21]["name"] = "WithinEndChild"
 defs["structs"]["ImGuiContext"][21]["type"] = "bool"
 defs["structs"]["ImGuiContext"][22] = {}
-defs["structs"]["ImGuiContext"][22]["comment"] = " // Request full GC"
+defs["structs"]["ImGuiContext"][22]["comment"] = {}
+defs["structs"]["ImGuiContext"][22]["comment"]["comments"] = " // Request full GC"
 defs["structs"]["ImGuiContext"][22]["name"] = "GcCompactAll"
 defs["structs"]["ImGuiContext"][22]["type"] = "bool"
 defs["structs"]["ImGuiContext"][23] = {}
-defs["structs"]["ImGuiContext"][23]["comment"] = " // Will call test engine hooks: ImGuiTestEngineHook_ItemAdd(), ImGuiTestEngineHook_ItemInfo(), ImGuiTestEngineHook_Log()"
+defs["structs"]["ImGuiContext"][23]["comment"] = {}
+defs["structs"]["ImGuiContext"][23]["comment"]["comments"] = " // Will call test engine hooks: ImGuiTestEngineHook_ItemAdd(), ImGuiTestEngineHook_ItemInfo(), ImGuiTestEngineHook_Log()"
 defs["structs"]["ImGuiContext"][23]["name"] = "TestEngineHookItems"
 defs["structs"]["ImGuiContext"][23]["type"] = "bool"
 defs["structs"]["ImGuiContext"][24] = {}
-defs["structs"]["ImGuiContext"][24]["comment"] = " // Test engine user data"
+defs["structs"]["ImGuiContext"][24]["comment"] = {}
+defs["structs"]["ImGuiContext"][24]["comment"]["comments"] = " // Test engine user data"
 defs["structs"]["ImGuiContext"][24]["name"] = "TestEngine"
 defs["structs"]["ImGuiContext"][24]["type"] = "void*"
 defs["structs"]["ImGuiContext"][25] = {}
-defs["structs"]["ImGuiContext"][25]["comment"] = "    // Windows state // Windows, sorted in display order, back to front"
+defs["structs"]["ImGuiContext"][25]["comment"] = {}
+defs["structs"]["ImGuiContext"][25]["comment"]["comments"] = " // Windows, sorted in display order, back to front"
+defs["structs"]["ImGuiContext"][25]["comment"]["prevcomments"] = "\
+    // Windows state"
 defs["structs"]["ImGuiContext"][25]["name"] = "Windows"
 defs["structs"]["ImGuiContext"][25]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][25]["type"] = "ImVector_ImGuiWindowPtr"
 defs["structs"]["ImGuiContext"][26] = {}
-defs["structs"]["ImGuiContext"][26]["comment"] = " // Root windows, sorted in focus order, back to front."
+defs["structs"]["ImGuiContext"][26]["comment"] = {}
+defs["structs"]["ImGuiContext"][26]["comment"]["comments"] = " // Root windows, sorted in focus order, back to front."
 defs["structs"]["ImGuiContext"][26]["name"] = "WindowsFocusOrder"
 defs["structs"]["ImGuiContext"][26]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][26]["type"] = "ImVector_ImGuiWindowPtr"
 defs["structs"]["ImGuiContext"][27] = {}
-defs["structs"]["ImGuiContext"][27]["comment"] = " // Temporary buffer used in EndFrame() to reorder windows so parents are kept before their child"
+defs["structs"]["ImGuiContext"][27]["comment"] = {}
+defs["structs"]["ImGuiContext"][27]["comment"]["comments"] = " // Temporary buffer used in EndFrame() to reorder windows so parents are kept before their child"
 defs["structs"]["ImGuiContext"][27]["name"] = "WindowsTempSortBuffer"
 defs["structs"]["ImGuiContext"][27]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][27]["type"] = "ImVector_ImGuiWindowPtr"
 defs["structs"]["ImGuiContext"][28] = {}
+defs["structs"]["ImGuiContext"][28]["comment"] = {}
 defs["structs"]["ImGuiContext"][28]["name"] = "CurrentWindowStack"
 defs["structs"]["ImGuiContext"][28]["template_type"] = "ImGuiWindowStackData"
 defs["structs"]["ImGuiContext"][28]["type"] = "ImVector_ImGuiWindowStackData"
 defs["structs"]["ImGuiContext"][29] = {}
-defs["structs"]["ImGuiContext"][29]["comment"] = " // Map window's ImGuiID to ImGuiWindow*"
+defs["structs"]["ImGuiContext"][29]["comment"] = {}
+defs["structs"]["ImGuiContext"][29]["comment"]["comments"] = " // Map window's ImGuiID to ImGuiWindow*"
 defs["structs"]["ImGuiContext"][29]["name"] = "WindowsById"
 defs["structs"]["ImGuiContext"][29]["type"] = "ImGuiStorage"
 defs["structs"]["ImGuiContext"][30] = {}
-defs["structs"]["ImGuiContext"][30]["comment"] = " // Number of unique windows submitted by frame"
+defs["structs"]["ImGuiContext"][30]["comment"] = {}
+defs["structs"]["ImGuiContext"][30]["comment"]["comments"] = " // Number of unique windows submitted by frame"
 defs["structs"]["ImGuiContext"][30]["name"] = "WindowsActiveCount"
 defs["structs"]["ImGuiContext"][30]["type"] = "int"
 defs["structs"]["ImGuiContext"][31] = {}
-defs["structs"]["ImGuiContext"][31]["comment"] = " // Padding around resizable windows for which hovering on counts as hovering the window == ImMax(style.TouchExtraPadding, WINDOWS_HOVER_PADDING)"
+defs["structs"]["ImGuiContext"][31]["comment"] = {}
+defs["structs"]["ImGuiContext"][31]["comment"]["comments"] = " // Padding around resizable windows for which hovering on counts as hovering the window == ImMax(style.TouchExtraPadding, WINDOWS_HOVER_PADDING)"
 defs["structs"]["ImGuiContext"][31]["name"] = "WindowsHoverPadding"
 defs["structs"]["ImGuiContext"][31]["type"] = "ImVec2"
 defs["structs"]["ImGuiContext"][32] = {}
-defs["structs"]["ImGuiContext"][32]["comment"] = " // Window being drawn into"
+defs["structs"]["ImGuiContext"][32]["comment"] = {}
+defs["structs"]["ImGuiContext"][32]["comment"]["comments"] = " // Window being drawn into"
 defs["structs"]["ImGuiContext"][32]["name"] = "CurrentWindow"
 defs["structs"]["ImGuiContext"][32]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][33] = {}
-defs["structs"]["ImGuiContext"][33]["comment"] = " // Window the mouse is hovering. Will typically catch mouse inputs."
+defs["structs"]["ImGuiContext"][33]["comment"] = {}
+defs["structs"]["ImGuiContext"][33]["comment"]["comments"] = " // Window the mouse is hovering. Will typically catch mouse inputs."
 defs["structs"]["ImGuiContext"][33]["name"] = "HoveredWindow"
 defs["structs"]["ImGuiContext"][33]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][34] = {}
-defs["structs"]["ImGuiContext"][34]["comment"] = " // Hovered window ignoring MovingWindow. Only set if MovingWindow is set."
+defs["structs"]["ImGuiContext"][34]["comment"] = {}
+defs["structs"]["ImGuiContext"][34]["comment"]["comments"] = " // Hovered window ignoring MovingWindow. Only set if MovingWindow is set."
 defs["structs"]["ImGuiContext"][34]["name"] = "HoveredWindowUnderMovingWindow"
 defs["structs"]["ImGuiContext"][34]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][35] = {}
-defs["structs"]["ImGuiContext"][35]["comment"] = " // [Debug] Hovered dock node."
+defs["structs"]["ImGuiContext"][35]["comment"] = {}
+defs["structs"]["ImGuiContext"][35]["comment"]["comments"] = " // [Debug] Hovered dock node."
 defs["structs"]["ImGuiContext"][35]["name"] = "HoveredDockNode"
 defs["structs"]["ImGuiContext"][35]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiContext"][36] = {}
-defs["structs"]["ImGuiContext"][36]["comment"] = " // Track the window we clicked on (in order to preserve focus). The actual window that is moved is generally MovingWindow->RootWindowDockTree."
+defs["structs"]["ImGuiContext"][36]["comment"] = {}
+defs["structs"]["ImGuiContext"][36]["comment"]["comments"] = " // Track the window we clicked on (in order to preserve focus). The actual window that is moved is generally MovingWindow->RootWindowDockTree."
 defs["structs"]["ImGuiContext"][36]["name"] = "MovingWindow"
 defs["structs"]["ImGuiContext"][36]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][37] = {}
-defs["structs"]["ImGuiContext"][37]["comment"] = " // Track the window we started mouse-wheeling on. Until a timer elapse or mouse has moved, generally keep scrolling the same window even if during the course of scrolling the mouse ends up hovering a child window."
+defs["structs"]["ImGuiContext"][37]["comment"] = {}
+defs["structs"]["ImGuiContext"][37]["comment"]["comments"] = " // Track the window we started mouse-wheeling on. Until a timer elapse or mouse has moved, generally keep scrolling the same window even if during the course of scrolling the mouse ends up hovering a child window."
 defs["structs"]["ImGuiContext"][37]["name"] = "WheelingWindow"
 defs["structs"]["ImGuiContext"][37]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][38] = {}
+defs["structs"]["ImGuiContext"][38]["comment"] = {}
 defs["structs"]["ImGuiContext"][38]["name"] = "WheelingWindowRefMousePos"
 defs["structs"]["ImGuiContext"][38]["type"] = "ImVec2"
 defs["structs"]["ImGuiContext"][39] = {}
+defs["structs"]["ImGuiContext"][39]["comment"] = {}
 defs["structs"]["ImGuiContext"][39]["name"] = "WheelingWindowTimer"
 defs["structs"]["ImGuiContext"][39]["type"] = "float"
 defs["structs"]["ImGuiContext"][40] = {}
-defs["structs"]["ImGuiContext"][40]["comment"] = "    // Item/widgets state and tracking information // Will call core hooks: DebugHookIdInfo() from GetID functions, used by Stack Tool [next HoveredId/ActiveId to not pull in an extra cache-line]"
+defs["structs"]["ImGuiContext"][40]["comment"] = {}
+defs["structs"]["ImGuiContext"][40]["comment"]["comments"] = " // Will call core hooks: DebugHookIdInfo() from GetID functions, used by Stack Tool [next HoveredId/ActiveId to not pull in an extra cache-line]"
+defs["structs"]["ImGuiContext"][40]["comment"]["prevcomments"] = "\
+    // Item/widgets state and tracking information"
 defs["structs"]["ImGuiContext"][40]["name"] = "DebugHookIdInfo"
 defs["structs"]["ImGuiContext"][40]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][41] = {}
-defs["structs"]["ImGuiContext"][41]["comment"] = " // Hovered widget, filled during the frame"
+defs["structs"]["ImGuiContext"][41]["comment"] = {}
+defs["structs"]["ImGuiContext"][41]["comment"]["comments"] = " // Hovered widget, filled during the frame"
 defs["structs"]["ImGuiContext"][41]["name"] = "HoveredId"
 defs["structs"]["ImGuiContext"][41]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][42] = {}
+defs["structs"]["ImGuiContext"][42]["comment"] = {}
 defs["structs"]["ImGuiContext"][42]["name"] = "HoveredIdPreviousFrame"
 defs["structs"]["ImGuiContext"][42]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][43] = {}
+defs["structs"]["ImGuiContext"][43]["comment"] = {}
 defs["structs"]["ImGuiContext"][43]["name"] = "HoveredIdAllowOverlap"
 defs["structs"]["ImGuiContext"][43]["type"] = "bool"
 defs["structs"]["ImGuiContext"][44] = {}
-defs["structs"]["ImGuiContext"][44]["comment"] = " // Hovered widget will use mouse wheel. Blocks scrolling the underlying window."
+defs["structs"]["ImGuiContext"][44]["comment"] = {}
+defs["structs"]["ImGuiContext"][44]["comment"]["comments"] = " // Hovered widget will use mouse wheel. Blocks scrolling the underlying window."
 defs["structs"]["ImGuiContext"][44]["name"] = "HoveredIdUsingMouseWheel"
 defs["structs"]["ImGuiContext"][44]["type"] = "bool"
 defs["structs"]["ImGuiContext"][45] = {}
+defs["structs"]["ImGuiContext"][45]["comment"] = {}
 defs["structs"]["ImGuiContext"][45]["name"] = "HoveredIdPreviousFrameUsingMouseWheel"
 defs["structs"]["ImGuiContext"][45]["type"] = "bool"
 defs["structs"]["ImGuiContext"][46] = {}
-defs["structs"]["ImGuiContext"][46]["comment"] = " // At least one widget passed the rect test, but has been discarded by disabled flag or popup inhibit. May be true even if HoveredId == 0."
+defs["structs"]["ImGuiContext"][46]["comment"] = {}
+defs["structs"]["ImGuiContext"][46]["comment"]["comments"] = " // At least one widget passed the rect test, but has been discarded by disabled flag or popup inhibit. May be true even if HoveredId == 0."
 defs["structs"]["ImGuiContext"][46]["name"] = "HoveredIdDisabled"
 defs["structs"]["ImGuiContext"][46]["type"] = "bool"
 defs["structs"]["ImGuiContext"][47] = {}
-defs["structs"]["ImGuiContext"][47]["comment"] = " // Measure contiguous hovering time"
+defs["structs"]["ImGuiContext"][47]["comment"] = {}
+defs["structs"]["ImGuiContext"][47]["comment"]["comments"] = " // Measure contiguous hovering time"
 defs["structs"]["ImGuiContext"][47]["name"] = "HoveredIdTimer"
 defs["structs"]["ImGuiContext"][47]["type"] = "float"
 defs["structs"]["ImGuiContext"][48] = {}
-defs["structs"]["ImGuiContext"][48]["comment"] = " // Measure contiguous hovering time where the item has not been active"
+defs["structs"]["ImGuiContext"][48]["comment"] = {}
+defs["structs"]["ImGuiContext"][48]["comment"]["comments"] = " // Measure contiguous hovering time where the item has not been active"
 defs["structs"]["ImGuiContext"][48]["name"] = "HoveredIdNotActiveTimer"
 defs["structs"]["ImGuiContext"][48]["type"] = "float"
 defs["structs"]["ImGuiContext"][49] = {}
-defs["structs"]["ImGuiContext"][49]["comment"] = " // Active widget"
+defs["structs"]["ImGuiContext"][49]["comment"] = {}
+defs["structs"]["ImGuiContext"][49]["comment"]["comments"] = " // Active widget"
 defs["structs"]["ImGuiContext"][49]["name"] = "ActiveId"
 defs["structs"]["ImGuiContext"][49]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][50] = {}
-defs["structs"]["ImGuiContext"][50]["comment"] = " // Active widget has been seen this frame (we can't use a bool as the ActiveId may change within the frame)"
+defs["structs"]["ImGuiContext"][50]["comment"] = {}
+defs["structs"]["ImGuiContext"][50]["comment"]["comments"] = " // Active widget has been seen this frame (we can't use a bool as the ActiveId may change within the frame)"
 defs["structs"]["ImGuiContext"][50]["name"] = "ActiveIdIsAlive"
 defs["structs"]["ImGuiContext"][50]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][51] = {}
+defs["structs"]["ImGuiContext"][51]["comment"] = {}
 defs["structs"]["ImGuiContext"][51]["name"] = "ActiveIdTimer"
 defs["structs"]["ImGuiContext"][51]["type"] = "float"
 defs["structs"]["ImGuiContext"][52] = {}
-defs["structs"]["ImGuiContext"][52]["comment"] = " // Set at the time of activation for one frame"
+defs["structs"]["ImGuiContext"][52]["comment"] = {}
+defs["structs"]["ImGuiContext"][52]["comment"]["comments"] = " // Set at the time of activation for one frame"
 defs["structs"]["ImGuiContext"][52]["name"] = "ActiveIdIsJustActivated"
 defs["structs"]["ImGuiContext"][52]["type"] = "bool"
 defs["structs"]["ImGuiContext"][53] = {}
-defs["structs"]["ImGuiContext"][53]["comment"] = " // Active widget allows another widget to steal active id (generally for overlapping widgets, but not always)"
+defs["structs"]["ImGuiContext"][53]["comment"] = {}
+defs["structs"]["ImGuiContext"][53]["comment"]["comments"] = " // Active widget allows another widget to steal active id (generally for overlapping widgets, but not always)"
 defs["structs"]["ImGuiContext"][53]["name"] = "ActiveIdAllowOverlap"
 defs["structs"]["ImGuiContext"][53]["type"] = "bool"
 defs["structs"]["ImGuiContext"][54] = {}
-defs["structs"]["ImGuiContext"][54]["comment"] = " // Disable losing active id if the active id window gets unfocused."
+defs["structs"]["ImGuiContext"][54]["comment"] = {}
+defs["structs"]["ImGuiContext"][54]["comment"]["comments"] = " // Disable losing active id if the active id window gets unfocused."
 defs["structs"]["ImGuiContext"][54]["name"] = "ActiveIdNoClearOnFocusLoss"
 defs["structs"]["ImGuiContext"][54]["type"] = "bool"
 defs["structs"]["ImGuiContext"][55] = {}
-defs["structs"]["ImGuiContext"][55]["comment"] = " // Track whether the active id led to a press (this is to allow changing between PressOnClick and PressOnRelease without pressing twice). Used by range_select branch."
+defs["structs"]["ImGuiContext"][55]["comment"] = {}
+defs["structs"]["ImGuiContext"][55]["comment"]["comments"] = " // Track whether the active id led to a press (this is to allow changing between PressOnClick and PressOnRelease without pressing twice). Used by range_select branch."
 defs["structs"]["ImGuiContext"][55]["name"] = "ActiveIdHasBeenPressedBefore"
 defs["structs"]["ImGuiContext"][55]["type"] = "bool"
 defs["structs"]["ImGuiContext"][56] = {}
-defs["structs"]["ImGuiContext"][56]["comment"] = " // Was the value associated to the widget Edited over the course of the Active state."
+defs["structs"]["ImGuiContext"][56]["comment"] = {}
+defs["structs"]["ImGuiContext"][56]["comment"]["comments"] = " // Was the value associated to the widget Edited over the course of the Active state."
 defs["structs"]["ImGuiContext"][56]["name"] = "ActiveIdHasBeenEditedBefore"
 defs["structs"]["ImGuiContext"][56]["type"] = "bool"
 defs["structs"]["ImGuiContext"][57] = {}
+defs["structs"]["ImGuiContext"][57]["comment"] = {}
 defs["structs"]["ImGuiContext"][57]["name"] = "ActiveIdHasBeenEditedThisFrame"
 defs["structs"]["ImGuiContext"][57]["type"] = "bool"
 defs["structs"]["ImGuiContext"][58] = {}
-defs["structs"]["ImGuiContext"][58]["comment"] = " // Clicked offset from upper-left corner, if applicable (currently only set by ButtonBehavior)"
+defs["structs"]["ImGuiContext"][58]["comment"] = {}
+defs["structs"]["ImGuiContext"][58]["comment"]["comments"] = " // Clicked offset from upper-left corner, if applicable (currently only set by ButtonBehavior)"
 defs["structs"]["ImGuiContext"][58]["name"] = "ActiveIdClickOffset"
 defs["structs"]["ImGuiContext"][58]["type"] = "ImVec2"
 defs["structs"]["ImGuiContext"][59] = {}
+defs["structs"]["ImGuiContext"][59]["comment"] = {}
 defs["structs"]["ImGuiContext"][59]["name"] = "ActiveIdWindow"
 defs["structs"]["ImGuiContext"][59]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][60] = {}
-defs["structs"]["ImGuiContext"][60]["comment"] = " // Activating with mouse or nav (gamepad/keyboard)"
+defs["structs"]["ImGuiContext"][60]["comment"] = {}
+defs["structs"]["ImGuiContext"][60]["comment"]["comments"] = " // Activating with mouse or nav (gamepad/keyboard)"
 defs["structs"]["ImGuiContext"][60]["name"] = "ActiveIdSource"
 defs["structs"]["ImGuiContext"][60]["type"] = "ImGuiInputSource"
 defs["structs"]["ImGuiContext"][61] = {}
+defs["structs"]["ImGuiContext"][61]["comment"] = {}
 defs["structs"]["ImGuiContext"][61]["name"] = "ActiveIdMouseButton"
 defs["structs"]["ImGuiContext"][61]["type"] = "int"
 defs["structs"]["ImGuiContext"][62] = {}
+defs["structs"]["ImGuiContext"][62]["comment"] = {}
 defs["structs"]["ImGuiContext"][62]["name"] = "ActiveIdPreviousFrame"
 defs["structs"]["ImGuiContext"][62]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][63] = {}
+defs["structs"]["ImGuiContext"][63]["comment"] = {}
 defs["structs"]["ImGuiContext"][63]["name"] = "ActiveIdPreviousFrameIsAlive"
 defs["structs"]["ImGuiContext"][63]["type"] = "bool"
 defs["structs"]["ImGuiContext"][64] = {}
+defs["structs"]["ImGuiContext"][64]["comment"] = {}
 defs["structs"]["ImGuiContext"][64]["name"] = "ActiveIdPreviousFrameHasBeenEditedBefore"
 defs["structs"]["ImGuiContext"][64]["type"] = "bool"
 defs["structs"]["ImGuiContext"][65] = {}
+defs["structs"]["ImGuiContext"][65]["comment"] = {}
 defs["structs"]["ImGuiContext"][65]["name"] = "ActiveIdPreviousFrameWindow"
 defs["structs"]["ImGuiContext"][65]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][66] = {}
-defs["structs"]["ImGuiContext"][66]["comment"] = " // Store the last non-zero ActiveId, useful for animation."
+defs["structs"]["ImGuiContext"][66]["comment"] = {}
+defs["structs"]["ImGuiContext"][66]["comment"]["comments"] = " // Store the last non-zero ActiveId, useful for animation."
 defs["structs"]["ImGuiContext"][66]["name"] = "LastActiveId"
 defs["structs"]["ImGuiContext"][66]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][67] = {}
-defs["structs"]["ImGuiContext"][67]["comment"] = " // Store the last non-zero ActiveId timer since the beginning of activation, useful for animation."
+defs["structs"]["ImGuiContext"][67]["comment"] = {}
+defs["structs"]["ImGuiContext"][67]["comment"]["comments"] = " // Store the last non-zero ActiveId timer since the beginning of activation, useful for animation."
 defs["structs"]["ImGuiContext"][67]["name"] = "LastActiveIdTimer"
 defs["structs"]["ImGuiContext"][67]["type"] = "float"
 defs["structs"]["ImGuiContext"][68] = {}
-defs["structs"]["ImGuiContext"][68]["comment"] = "    // Input Ownership // Active widget will want to read mouse wheel. Blocks scrolling the underlying window."
+defs["structs"]["ImGuiContext"][68]["comment"] = {}
+defs["structs"]["ImGuiContext"][68]["comment"]["comments"] = " // Active widget will want to read mouse wheel. Blocks scrolling the underlying window."
+defs["structs"]["ImGuiContext"][68]["comment"]["prevcomments"] = "\
+    // Input Ownership"
 defs["structs"]["ImGuiContext"][68]["name"] = "ActiveIdUsingMouseWheel"
 defs["structs"]["ImGuiContext"][68]["type"] = "bool"
 defs["structs"]["ImGuiContext"][69] = {}
-defs["structs"]["ImGuiContext"][69]["comment"] = " // Active widget will want to read those nav move requests (e.g. can activate a button and move away from it)"
+defs["structs"]["ImGuiContext"][69]["comment"] = {}
+defs["structs"]["ImGuiContext"][69]["comment"]["comments"] = " // Active widget will want to read those nav move requests (e.g. can activate a button and move away from it)"
 defs["structs"]["ImGuiContext"][69]["name"] = "ActiveIdUsingNavDirMask"
 defs["structs"]["ImGuiContext"][69]["type"] = "ImU32"
 defs["structs"]["ImGuiContext"][70] = {}
-defs["structs"]["ImGuiContext"][70]["comment"] = " // Active widget will want to read those nav inputs."
+defs["structs"]["ImGuiContext"][70]["comment"] = {}
+defs["structs"]["ImGuiContext"][70]["comment"]["comments"] = " // Active widget will want to read those nav inputs."
 defs["structs"]["ImGuiContext"][70]["name"] = "ActiveIdUsingNavInputMask"
 defs["structs"]["ImGuiContext"][70]["type"] = "ImU32"
 defs["structs"]["ImGuiContext"][71] = {}
-defs["structs"]["ImGuiContext"][71]["comment"] = " // Active widget will want to read those key inputs. When we grow the ImGuiKey enum we'll need to either to order the enum to make useful keys come first, either redesign this into e.g. a small array."
+defs["structs"]["ImGuiContext"][71]["comment"] = {}
+defs["structs"]["ImGuiContext"][71]["comment"]["comments"] = " // Active widget will want to read those key inputs. When we grow the ImGuiKey enum we'll need to either to order the enum to make useful keys come first, either redesign this into e.g. a small array."
 defs["structs"]["ImGuiContext"][71]["name"] = "ActiveIdUsingKeyInputMask"
 defs["structs"]["ImGuiContext"][71]["type"] = "ImBitArrayForNamedKeys"
 defs["structs"]["ImGuiContext"][72] = {}
-defs["structs"]["ImGuiContext"][72]["comment"] = "    // Next window/item data // == g.ItemFlagsStack.back()"
+defs["structs"]["ImGuiContext"][72]["comment"] = {}
+defs["structs"]["ImGuiContext"][72]["comment"]["comments"] = " // == g.ItemFlagsStack.back()"
+defs["structs"]["ImGuiContext"][72]["comment"]["prevcomments"] = "\
+    // Next window/item data"
 defs["structs"]["ImGuiContext"][72]["name"] = "CurrentItemFlags"
 defs["structs"]["ImGuiContext"][72]["type"] = "ImGuiItemFlags"
 defs["structs"]["ImGuiContext"][73] = {}
-defs["structs"]["ImGuiContext"][73]["comment"] = " // Storage for SetNextItem** functions"
+defs["structs"]["ImGuiContext"][73]["comment"] = {}
+defs["structs"]["ImGuiContext"][73]["comment"]["comments"] = " // Storage for SetNextItem** functions"
 defs["structs"]["ImGuiContext"][73]["name"] = "NextItemData"
 defs["structs"]["ImGuiContext"][73]["type"] = "ImGuiNextItemData"
 defs["structs"]["ImGuiContext"][74] = {}
-defs["structs"]["ImGuiContext"][74]["comment"] = " // Storage for last submitted item (setup by ItemAdd)"
+defs["structs"]["ImGuiContext"][74]["comment"] = {}
+defs["structs"]["ImGuiContext"][74]["comment"]["comments"] = " // Storage for last submitted item (setup by ItemAdd)"
 defs["structs"]["ImGuiContext"][74]["name"] = "LastItemData"
 defs["structs"]["ImGuiContext"][74]["type"] = "ImGuiLastItemData"
 defs["structs"]["ImGuiContext"][75] = {}
-defs["structs"]["ImGuiContext"][75]["comment"] = " // Storage for SetNextWindow** functions"
+defs["structs"]["ImGuiContext"][75]["comment"] = {}
+defs["structs"]["ImGuiContext"][75]["comment"]["comments"] = " // Storage for SetNextWindow** functions"
 defs["structs"]["ImGuiContext"][75]["name"] = "NextWindowData"
 defs["structs"]["ImGuiContext"][75]["type"] = "ImGuiNextWindowData"
 defs["structs"]["ImGuiContext"][76] = {}
-defs["structs"]["ImGuiContext"][76]["comment"] = "    // Shared stacks // Stack for PushStyleColor()/PopStyleColor() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][76]["comment"] = {}
+defs["structs"]["ImGuiContext"][76]["comment"]["comments"] = " // Stack for PushStyleColor()/PopStyleColor() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][76]["comment"]["prevcomments"] = "\
+    // Shared stacks"
 defs["structs"]["ImGuiContext"][76]["name"] = "ColorStack"
 defs["structs"]["ImGuiContext"][76]["template_type"] = "ImGuiColorMod"
 defs["structs"]["ImGuiContext"][76]["type"] = "ImVector_ImGuiColorMod"
 defs["structs"]["ImGuiContext"][77] = {}
-defs["structs"]["ImGuiContext"][77]["comment"] = " // Stack for PushStyleVar()/PopStyleVar() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][77]["comment"] = {}
+defs["structs"]["ImGuiContext"][77]["comment"]["comments"] = " // Stack for PushStyleVar()/PopStyleVar() - inherited by Begin()"
 defs["structs"]["ImGuiContext"][77]["name"] = "StyleVarStack"
 defs["structs"]["ImGuiContext"][77]["template_type"] = "ImGuiStyleMod"
 defs["structs"]["ImGuiContext"][77]["type"] = "ImVector_ImGuiStyleMod"
 defs["structs"]["ImGuiContext"][78] = {}
-defs["structs"]["ImGuiContext"][78]["comment"] = " // Stack for PushFont()/PopFont() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][78]["comment"] = {}
+defs["structs"]["ImGuiContext"][78]["comment"]["comments"] = " // Stack for PushFont()/PopFont() - inherited by Begin()"
 defs["structs"]["ImGuiContext"][78]["name"] = "FontStack"
 defs["structs"]["ImGuiContext"][78]["template_type"] = "ImFont*"
 defs["structs"]["ImGuiContext"][78]["type"] = "ImVector_ImFontPtr"
 defs["structs"]["ImGuiContext"][79] = {}
-defs["structs"]["ImGuiContext"][79]["comment"] = " // Stack for PushFocusScope()/PopFocusScope() - not inherited by Begin(), unless child window"
+defs["structs"]["ImGuiContext"][79]["comment"] = {}
+defs["structs"]["ImGuiContext"][79]["comment"]["comments"] = " // Stack for PushFocusScope()/PopFocusScope() - not inherited by Begin(), unless child window"
 defs["structs"]["ImGuiContext"][79]["name"] = "FocusScopeStack"
 defs["structs"]["ImGuiContext"][79]["template_type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][79]["type"] = "ImVector_ImGuiID"
 defs["structs"]["ImGuiContext"][80] = {}
-defs["structs"]["ImGuiContext"][80]["comment"] = " // Stack for PushItemFlag()/PopItemFlag() - inherited by Begin()"
+defs["structs"]["ImGuiContext"][80]["comment"] = {}
+defs["structs"]["ImGuiContext"][80]["comment"]["comments"] = " // Stack for PushItemFlag()/PopItemFlag() - inherited by Begin()"
 defs["structs"]["ImGuiContext"][80]["name"] = "ItemFlagsStack"
 defs["structs"]["ImGuiContext"][80]["template_type"] = "ImGuiItemFlags"
 defs["structs"]["ImGuiContext"][80]["type"] = "ImVector_ImGuiItemFlags"
 defs["structs"]["ImGuiContext"][81] = {}
-defs["structs"]["ImGuiContext"][81]["comment"] = " // Stack for BeginGroup()/EndGroup() - not inherited by Begin()"
+defs["structs"]["ImGuiContext"][81]["comment"] = {}
+defs["structs"]["ImGuiContext"][81]["comment"]["comments"] = " // Stack for BeginGroup()/EndGroup() - not inherited by Begin()"
 defs["structs"]["ImGuiContext"][81]["name"] = "GroupStack"
 defs["structs"]["ImGuiContext"][81]["template_type"] = "ImGuiGroupData"
 defs["structs"]["ImGuiContext"][81]["type"] = "ImVector_ImGuiGroupData"
 defs["structs"]["ImGuiContext"][82] = {}
-defs["structs"]["ImGuiContext"][82]["comment"] = " // Which popups are open (persistent)"
+defs["structs"]["ImGuiContext"][82]["comment"] = {}
+defs["structs"]["ImGuiContext"][82]["comment"]["comments"] = " // Which popups are open (persistent)"
 defs["structs"]["ImGuiContext"][82]["name"] = "OpenPopupStack"
 defs["structs"]["ImGuiContext"][82]["template_type"] = "ImGuiPopupData"
 defs["structs"]["ImGuiContext"][82]["type"] = "ImVector_ImGuiPopupData"
 defs["structs"]["ImGuiContext"][83] = {}
-defs["structs"]["ImGuiContext"][83]["comment"] = " // Which level of BeginPopup() we are in (reset every frame)"
+defs["structs"]["ImGuiContext"][83]["comment"] = {}
+defs["structs"]["ImGuiContext"][83]["comment"]["comments"] = " // Which level of BeginPopup() we are in (reset every frame)"
 defs["structs"]["ImGuiContext"][83]["name"] = "BeginPopupStack"
 defs["structs"]["ImGuiContext"][83]["template_type"] = "ImGuiPopupData"
 defs["structs"]["ImGuiContext"][83]["type"] = "ImVector_ImGuiPopupData"
 defs["structs"]["ImGuiContext"][84] = {}
+defs["structs"]["ImGuiContext"][84]["comment"] = {}
 defs["structs"]["ImGuiContext"][84]["name"] = "BeginMenuCount"
 defs["structs"]["ImGuiContext"][84]["type"] = "int"
 defs["structs"]["ImGuiContext"][85] = {}
-defs["structs"]["ImGuiContext"][85]["comment"] = "    // Viewports // Active viewports (always 1+, and generally 1 unless multi-viewports are enabled). Each viewports hold their copy of ImDrawData."
+defs["structs"]["ImGuiContext"][85]["comment"] = {}
+defs["structs"]["ImGuiContext"][85]["comment"]["comments"] = " // Active viewports (always 1+, and generally 1 unless multi-viewports are enabled). Each viewports hold their copy of ImDrawData."
+defs["structs"]["ImGuiContext"][85]["comment"]["prevcomments"] = "\
+    // Viewports"
 defs["structs"]["ImGuiContext"][85]["name"] = "Viewports"
 defs["structs"]["ImGuiContext"][85]["template_type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiContext"][85]["type"] = "ImVector_ImGuiViewportPPtr"
 defs["structs"]["ImGuiContext"][86] = {}
-defs["structs"]["ImGuiContext"][86]["comment"] = " // == CurrentViewport->DpiScale"
+defs["structs"]["ImGuiContext"][86]["comment"] = {}
+defs["structs"]["ImGuiContext"][86]["comment"]["comments"] = " // == CurrentViewport->DpiScale"
 defs["structs"]["ImGuiContext"][86]["name"] = "CurrentDpiScale"
 defs["structs"]["ImGuiContext"][86]["type"] = "float"
 defs["structs"]["ImGuiContext"][87] = {}
-defs["structs"]["ImGuiContext"][87]["comment"] = " // We track changes of viewport (happening in Begin) so we can call Platform_OnChangedViewport()"
+defs["structs"]["ImGuiContext"][87]["comment"] = {}
+defs["structs"]["ImGuiContext"][87]["comment"]["comments"] = " // We track changes of viewport (happening in Begin) so we can call Platform_OnChangedViewport()"
 defs["structs"]["ImGuiContext"][87]["name"] = "CurrentViewport"
 defs["structs"]["ImGuiContext"][87]["type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiContext"][88] = {}
+defs["structs"]["ImGuiContext"][88]["comment"] = {}
 defs["structs"]["ImGuiContext"][88]["name"] = "MouseViewport"
 defs["structs"]["ImGuiContext"][88]["type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiContext"][89] = {}
-defs["structs"]["ImGuiContext"][89]["comment"] = " // Last known viewport that was hovered by mouse (even if we are not hovering any viewport any more) + honoring the _NoInputs flag."
+defs["structs"]["ImGuiContext"][89]["comment"] = {}
+defs["structs"]["ImGuiContext"][89]["comment"]["comments"] = " // Last known viewport that was hovered by mouse (even if we are not hovering any viewport any more) + honoring the _NoInputs flag."
 defs["structs"]["ImGuiContext"][89]["name"] = "MouseLastHoveredViewport"
 defs["structs"]["ImGuiContext"][89]["type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiContext"][90] = {}
+defs["structs"]["ImGuiContext"][90]["comment"] = {}
 defs["structs"]["ImGuiContext"][90]["name"] = "PlatformLastFocusedViewportId"
 defs["structs"]["ImGuiContext"][90]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][91] = {}
-defs["structs"]["ImGuiContext"][91]["comment"] = " // Virtual monitor used as fallback if backend doesn't provide monitor information."
+defs["structs"]["ImGuiContext"][91]["comment"] = {}
+defs["structs"]["ImGuiContext"][91]["comment"]["comments"] = " // Virtual monitor used as fallback if backend doesn't provide monitor information."
 defs["structs"]["ImGuiContext"][91]["name"] = "FallbackMonitor"
 defs["structs"]["ImGuiContext"][91]["type"] = "ImGuiPlatformMonitor"
 defs["structs"]["ImGuiContext"][92] = {}
-defs["structs"]["ImGuiContext"][92]["comment"] = " // Every time the front-most window changes, we stamp its viewport with an incrementing counter"
+defs["structs"]["ImGuiContext"][92]["comment"] = {}
+defs["structs"]["ImGuiContext"][92]["comment"]["comments"] = " // Every time the front-most window changes, we stamp its viewport with an incrementing counter"
 defs["structs"]["ImGuiContext"][92]["name"] = "ViewportFrontMostStampCount"
 defs["structs"]["ImGuiContext"][92]["type"] = "int"
 defs["structs"]["ImGuiContext"][93] = {}
-defs["structs"]["ImGuiContext"][93]["comment"] = "    // Gamepad/keyboard Navigation // Focused window for navigation. Could be called 'FocusedWindow'"
+defs["structs"]["ImGuiContext"][93]["comment"] = {}
+defs["structs"]["ImGuiContext"][93]["comment"]["comments"] = " // Focused window for navigation. Could be called 'FocusedWindow'"
+defs["structs"]["ImGuiContext"][93]["comment"]["prevcomments"] = "\
+    // Gamepad/keyboard Navigation"
 defs["structs"]["ImGuiContext"][93]["name"] = "NavWindow"
 defs["structs"]["ImGuiContext"][93]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][94] = {}
-defs["structs"]["ImGuiContext"][94]["comment"] = " // Focused item for navigation"
+defs["structs"]["ImGuiContext"][94]["comment"] = {}
+defs["structs"]["ImGuiContext"][94]["comment"]["comments"] = " // Focused item for navigation"
 defs["structs"]["ImGuiContext"][94]["name"] = "NavId"
 defs["structs"]["ImGuiContext"][94]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][95] = {}
-defs["structs"]["ImGuiContext"][95]["comment"] = " // Identify a selection scope (selection code often wants to \"clear other items\" when landing on an item of the selection set)"
+defs["structs"]["ImGuiContext"][95]["comment"] = {}
+defs["structs"]["ImGuiContext"][95]["comment"]["comments"] = " // Identify a selection scope (selection code often wants to \"clear other items\" when landing on an item of the selection set)"
 defs["structs"]["ImGuiContext"][95]["name"] = "NavFocusScopeId"
 defs["structs"]["ImGuiContext"][95]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][96] = {}
-defs["structs"]["ImGuiContext"][96]["comment"] = " // ~~ (g.ActiveId == 0) && IsNavInputPressed(ImGuiNavInput_Activate) ? NavId : 0, also set when calling ActivateItem()"
+defs["structs"]["ImGuiContext"][96]["comment"] = {}
+defs["structs"]["ImGuiContext"][96]["comment"]["comments"] = " // ~~ (g.ActiveId == 0) && IsNavInputPressed(ImGuiNavInput_Activate) ? NavId : 0, also set when calling ActivateItem()"
 defs["structs"]["ImGuiContext"][96]["name"] = "NavActivateId"
 defs["structs"]["ImGuiContext"][96]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][97] = {}
-defs["structs"]["ImGuiContext"][97]["comment"] = " // ~~ IsNavInputDown(ImGuiNavInput_Activate) ? NavId : 0"
+defs["structs"]["ImGuiContext"][97]["comment"] = {}
+defs["structs"]["ImGuiContext"][97]["comment"]["comments"] = " // ~~ IsNavInputDown(ImGuiNavInput_Activate) ? NavId : 0"
 defs["structs"]["ImGuiContext"][97]["name"] = "NavActivateDownId"
 defs["structs"]["ImGuiContext"][97]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][98] = {}
-defs["structs"]["ImGuiContext"][98]["comment"] = " // ~~ IsNavInputPressed(ImGuiNavInput_Activate) ? NavId : 0"
+defs["structs"]["ImGuiContext"][98]["comment"] = {}
+defs["structs"]["ImGuiContext"][98]["comment"]["comments"] = " // ~~ IsNavInputPressed(ImGuiNavInput_Activate) ? NavId : 0"
 defs["structs"]["ImGuiContext"][98]["name"] = "NavActivatePressedId"
 defs["structs"]["ImGuiContext"][98]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][99] = {}
-defs["structs"]["ImGuiContext"][99]["comment"] = " // ~~ IsNavInputPressed(ImGuiNavInput_Input) ? NavId : 0; ImGuiActivateFlags_PreferInput will be set and NavActivateId will be 0."
+defs["structs"]["ImGuiContext"][99]["comment"] = {}
+defs["structs"]["ImGuiContext"][99]["comment"]["comments"] = " // ~~ IsNavInputPressed(ImGuiNavInput_Input) ? NavId : 0; ImGuiActivateFlags_PreferInput will be set and NavActivateId will be 0."
 defs["structs"]["ImGuiContext"][99]["name"] = "NavActivateInputId"
 defs["structs"]["ImGuiContext"][99]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][100] = {}
+defs["structs"]["ImGuiContext"][100]["comment"] = {}
 defs["structs"]["ImGuiContext"][100]["name"] = "NavActivateFlags"
 defs["structs"]["ImGuiContext"][100]["type"] = "ImGuiActivateFlags"
 defs["structs"]["ImGuiContext"][101] = {}
-defs["structs"]["ImGuiContext"][101]["comment"] = " // Just navigated to this id (result of a successfully MoveRequest)."
+defs["structs"]["ImGuiContext"][101]["comment"] = {}
+defs["structs"]["ImGuiContext"][101]["comment"]["comments"] = " // Just navigated to this id (result of a successfully MoveRequest)."
 defs["structs"]["ImGuiContext"][101]["name"] = "NavJustMovedToId"
 defs["structs"]["ImGuiContext"][101]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][102] = {}
-defs["structs"]["ImGuiContext"][102]["comment"] = " // Just navigated to this focus scope id (result of a successfully MoveRequest)."
+defs["structs"]["ImGuiContext"][102]["comment"] = {}
+defs["structs"]["ImGuiContext"][102]["comment"]["comments"] = " // Just navigated to this focus scope id (result of a successfully MoveRequest)."
 defs["structs"]["ImGuiContext"][102]["name"] = "NavJustMovedToFocusScopeId"
 defs["structs"]["ImGuiContext"][102]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][103] = {}
+defs["structs"]["ImGuiContext"][103]["comment"] = {}
 defs["structs"]["ImGuiContext"][103]["name"] = "NavJustMovedToKeyMods"
 defs["structs"]["ImGuiContext"][103]["type"] = "ImGuiModFlags"
 defs["structs"]["ImGuiContext"][104] = {}
-defs["structs"]["ImGuiContext"][104]["comment"] = " // Set by ActivateItem(), queued until next frame."
+defs["structs"]["ImGuiContext"][104]["comment"] = {}
+defs["structs"]["ImGuiContext"][104]["comment"]["comments"] = " // Set by ActivateItem(), queued until next frame."
 defs["structs"]["ImGuiContext"][104]["name"] = "NavNextActivateId"
 defs["structs"]["ImGuiContext"][104]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][105] = {}
+defs["structs"]["ImGuiContext"][105]["comment"] = {}
 defs["structs"]["ImGuiContext"][105]["name"] = "NavNextActivateFlags"
 defs["structs"]["ImGuiContext"][105]["type"] = "ImGuiActivateFlags"
 defs["structs"]["ImGuiContext"][106] = {}
-defs["structs"]["ImGuiContext"][106]["comment"] = " // Keyboard or Gamepad mode? THIS WILL ONLY BE None or NavGamepad or NavKeyboard."
+defs["structs"]["ImGuiContext"][106]["comment"] = {}
+defs["structs"]["ImGuiContext"][106]["comment"]["comments"] = " // Keyboard or Gamepad mode? THIS WILL ONLY BE None or NavGamepad or NavKeyboard."
 defs["structs"]["ImGuiContext"][106]["name"] = "NavInputSource"
 defs["structs"]["ImGuiContext"][106]["type"] = "ImGuiInputSource"
 defs["structs"]["ImGuiContext"][107] = {}
-defs["structs"]["ImGuiContext"][107]["comment"] = " // Layer we are navigating on. For now the system is hard-coded for 0=main contents and 1=menu/title bar, may expose layers later."
+defs["structs"]["ImGuiContext"][107]["comment"] = {}
+defs["structs"]["ImGuiContext"][107]["comment"]["comments"] = " // Layer we are navigating on. For now the system is hard-coded for 0=main contents and 1=menu/title bar, may expose layers later."
 defs["structs"]["ImGuiContext"][107]["name"] = "NavLayer"
 defs["structs"]["ImGuiContext"][107]["type"] = "ImGuiNavLayer"
 defs["structs"]["ImGuiContext"][108] = {}
-defs["structs"]["ImGuiContext"][108]["comment"] = " // Nav widget has been seen this frame ~~ NavRectRel is valid"
+defs["structs"]["ImGuiContext"][108]["comment"] = {}
+defs["structs"]["ImGuiContext"][108]["comment"]["comments"] = " // Nav widget has been seen this frame ~~ NavRectRel is valid"
 defs["structs"]["ImGuiContext"][108]["name"] = "NavIdIsAlive"
 defs["structs"]["ImGuiContext"][108]["type"] = "bool"
 defs["structs"]["ImGuiContext"][109] = {}
-defs["structs"]["ImGuiContext"][109]["comment"] = " // When set we will update mouse position if (io.ConfigFlags & ImGuiConfigFlags_NavEnableSetMousePos) if set (NB: this not enabled by default)"
+defs["structs"]["ImGuiContext"][109]["comment"] = {}
+defs["structs"]["ImGuiContext"][109]["comment"]["comments"] = " // When set we will update mouse position if (io.ConfigFlags & ImGuiConfigFlags_NavEnableSetMousePos) if set (NB: this not enabled by default)"
 defs["structs"]["ImGuiContext"][109]["name"] = "NavMousePosDirty"
 defs["structs"]["ImGuiContext"][109]["type"] = "bool"
 defs["structs"]["ImGuiContext"][110] = {}
-defs["structs"]["ImGuiContext"][110]["comment"] = " // When user starts using mouse, we hide gamepad/keyboard highlight (NB: but they are still available, which is why NavDisableHighlight isn't always != NavDisableMouseHover)"
+defs["structs"]["ImGuiContext"][110]["comment"] = {}
+defs["structs"]["ImGuiContext"][110]["comment"]["comments"] = " // When user starts using mouse, we hide gamepad/keyboard highlight (NB: but they are still available, which is why NavDisableHighlight isn't always != NavDisableMouseHover)"
 defs["structs"]["ImGuiContext"][110]["name"] = "NavDisableHighlight"
 defs["structs"]["ImGuiContext"][110]["type"] = "bool"
 defs["structs"]["ImGuiContext"][111] = {}
-defs["structs"]["ImGuiContext"][111]["comment"] = " // When user starts using gamepad/keyboard, we hide mouse hovering highlight until mouse is touched again."
+defs["structs"]["ImGuiContext"][111]["comment"] = {}
+defs["structs"]["ImGuiContext"][111]["comment"]["comments"] = " // When user starts using gamepad/keyboard, we hide mouse hovering highlight until mouse is touched again."
 defs["structs"]["ImGuiContext"][111]["name"] = "NavDisableMouseHover"
 defs["structs"]["ImGuiContext"][111]["type"] = "bool"
 defs["structs"]["ImGuiContext"][112] = {}
-defs["structs"]["ImGuiContext"][112]["comment"] = "    // Navigation: Init & Move Requests // ~~ NavMoveRequest || NavInitRequest this is to perform early out in ItemAdd()"
+defs["structs"]["ImGuiContext"][112]["comment"] = {}
+defs["structs"]["ImGuiContext"][112]["comment"]["comments"] = " // ~~ NavMoveRequest || NavInitRequest this is to perform early out in ItemAdd()"
+defs["structs"]["ImGuiContext"][112]["comment"]["prevcomments"] = "\
+    // Navigation: Init & Move Requests"
 defs["structs"]["ImGuiContext"][112]["name"] = "NavAnyRequest"
 defs["structs"]["ImGuiContext"][112]["type"] = "bool"
 defs["structs"]["ImGuiContext"][113] = {}
-defs["structs"]["ImGuiContext"][113]["comment"] = " // Init request for appearing window to select first item"
+defs["structs"]["ImGuiContext"][113]["comment"] = {}
+defs["structs"]["ImGuiContext"][113]["comment"]["comments"] = " // Init request for appearing window to select first item"
 defs["structs"]["ImGuiContext"][113]["name"] = "NavInitRequest"
 defs["structs"]["ImGuiContext"][113]["type"] = "bool"
 defs["structs"]["ImGuiContext"][114] = {}
+defs["structs"]["ImGuiContext"][114]["comment"] = {}
 defs["structs"]["ImGuiContext"][114]["name"] = "NavInitRequestFromMove"
 defs["structs"]["ImGuiContext"][114]["type"] = "bool"
 defs["structs"]["ImGuiContext"][115] = {}
-defs["structs"]["ImGuiContext"][115]["comment"] = " // Init request result (first item of the window, or one for which SetItemDefaultFocus() was called)"
+defs["structs"]["ImGuiContext"][115]["comment"] = {}
+defs["structs"]["ImGuiContext"][115]["comment"]["comments"] = " // Init request result (first item of the window, or one for which SetItemDefaultFocus() was called)"
 defs["structs"]["ImGuiContext"][115]["name"] = "NavInitResultId"
 defs["structs"]["ImGuiContext"][115]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][116] = {}
-defs["structs"]["ImGuiContext"][116]["comment"] = " // Init request result rectangle (relative to parent window)"
+defs["structs"]["ImGuiContext"][116]["comment"] = {}
+defs["structs"]["ImGuiContext"][116]["comment"]["comments"] = " // Init request result rectangle (relative to parent window)"
 defs["structs"]["ImGuiContext"][116]["name"] = "NavInitResultRectRel"
 defs["structs"]["ImGuiContext"][116]["type"] = "ImRect"
 defs["structs"]["ImGuiContext"][117] = {}
-defs["structs"]["ImGuiContext"][117]["comment"] = " // Move request submitted, will process result on next NewFrame()"
+defs["structs"]["ImGuiContext"][117]["comment"] = {}
+defs["structs"]["ImGuiContext"][117]["comment"]["comments"] = " // Move request submitted, will process result on next NewFrame()"
 defs["structs"]["ImGuiContext"][117]["name"] = "NavMoveSubmitted"
 defs["structs"]["ImGuiContext"][117]["type"] = "bool"
 defs["structs"]["ImGuiContext"][118] = {}
-defs["structs"]["ImGuiContext"][118]["comment"] = " // Move request submitted, still scoring incoming items"
+defs["structs"]["ImGuiContext"][118]["comment"] = {}
+defs["structs"]["ImGuiContext"][118]["comment"]["comments"] = " // Move request submitted, still scoring incoming items"
 defs["structs"]["ImGuiContext"][118]["name"] = "NavMoveScoringItems"
 defs["structs"]["ImGuiContext"][118]["type"] = "bool"
 defs["structs"]["ImGuiContext"][119] = {}
+defs["structs"]["ImGuiContext"][119]["comment"] = {}
 defs["structs"]["ImGuiContext"][119]["name"] = "NavMoveForwardToNextFrame"
 defs["structs"]["ImGuiContext"][119]["type"] = "bool"
 defs["structs"]["ImGuiContext"][120] = {}
+defs["structs"]["ImGuiContext"][120]["comment"] = {}
 defs["structs"]["ImGuiContext"][120]["name"] = "NavMoveFlags"
 defs["structs"]["ImGuiContext"][120]["type"] = "ImGuiNavMoveFlags"
 defs["structs"]["ImGuiContext"][121] = {}
+defs["structs"]["ImGuiContext"][121]["comment"] = {}
 defs["structs"]["ImGuiContext"][121]["name"] = "NavMoveScrollFlags"
 defs["structs"]["ImGuiContext"][121]["type"] = "ImGuiScrollFlags"
 defs["structs"]["ImGuiContext"][122] = {}
+defs["structs"]["ImGuiContext"][122]["comment"] = {}
 defs["structs"]["ImGuiContext"][122]["name"] = "NavMoveKeyMods"
 defs["structs"]["ImGuiContext"][122]["type"] = "ImGuiModFlags"
 defs["structs"]["ImGuiContext"][123] = {}
-defs["structs"]["ImGuiContext"][123]["comment"] = " // Direction of the move request (left/right/up/down)"
+defs["structs"]["ImGuiContext"][123]["comment"] = {}
+defs["structs"]["ImGuiContext"][123]["comment"]["comments"] = " // Direction of the move request (left/right/up/down)"
 defs["structs"]["ImGuiContext"][123]["name"] = "NavMoveDir"
 defs["structs"]["ImGuiContext"][123]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiContext"][124] = {}
+defs["structs"]["ImGuiContext"][124]["comment"] = {}
 defs["structs"]["ImGuiContext"][124]["name"] = "NavMoveDirForDebug"
 defs["structs"]["ImGuiContext"][124]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiContext"][125] = {}
-defs["structs"]["ImGuiContext"][125]["comment"] = " // FIXME-NAV: Describe the purpose of this better. Might want to rename?"
+defs["structs"]["ImGuiContext"][125]["comment"] = {}
+defs["structs"]["ImGuiContext"][125]["comment"]["comments"] = " // FIXME-NAV: Describe the purpose of this better. Might want to rename?"
 defs["structs"]["ImGuiContext"][125]["name"] = "NavMoveClipDir"
 defs["structs"]["ImGuiContext"][125]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiContext"][126] = {}
-defs["structs"]["ImGuiContext"][126]["comment"] = " // Rectangle used for scoring, in screen space. Based of window->NavRectRel[], modified for directional navigation scoring."
+defs["structs"]["ImGuiContext"][126]["comment"] = {}
+defs["structs"]["ImGuiContext"][126]["comment"]["comments"] = " // Rectangle used for scoring, in screen space. Based of window->NavRectRel[], modified for directional navigation scoring."
 defs["structs"]["ImGuiContext"][126]["name"] = "NavScoringRect"
 defs["structs"]["ImGuiContext"][126]["type"] = "ImRect"
 defs["structs"]["ImGuiContext"][127] = {}
-defs["structs"]["ImGuiContext"][127]["comment"] = " // Some nav operations (such as PageUp/PageDown) enforce a region which clipper will attempt to always keep submitted"
+defs["structs"]["ImGuiContext"][127]["comment"] = {}
+defs["structs"]["ImGuiContext"][127]["comment"]["comments"] = " // Some nav operations (such as PageUp/PageDown) enforce a region which clipper will attempt to always keep submitted"
 defs["structs"]["ImGuiContext"][127]["name"] = "NavScoringNoClipRect"
 defs["structs"]["ImGuiContext"][127]["type"] = "ImRect"
 defs["structs"]["ImGuiContext"][128] = {}
-defs["structs"]["ImGuiContext"][128]["comment"] = " // Metrics for debugging"
+defs["structs"]["ImGuiContext"][128]["comment"] = {}
+defs["structs"]["ImGuiContext"][128]["comment"]["comments"] = " // Metrics for debugging"
 defs["structs"]["ImGuiContext"][128]["name"] = "NavScoringDebugCount"
 defs["structs"]["ImGuiContext"][128]["type"] = "int"
 defs["structs"]["ImGuiContext"][129] = {}
-defs["structs"]["ImGuiContext"][129]["comment"] = " // Generally -1 or +1, 0 when tabbing without a nav id"
+defs["structs"]["ImGuiContext"][129]["comment"] = {}
+defs["structs"]["ImGuiContext"][129]["comment"]["comments"] = " // Generally -1 or +1, 0 when tabbing without a nav id"
 defs["structs"]["ImGuiContext"][129]["name"] = "NavTabbingDir"
 defs["structs"]["ImGuiContext"][129]["type"] = "int"
 defs["structs"]["ImGuiContext"][130] = {}
-defs["structs"]["ImGuiContext"][130]["comment"] = " // >0 when counting items for tabbing"
+defs["structs"]["ImGuiContext"][130]["comment"] = {}
+defs["structs"]["ImGuiContext"][130]["comment"]["comments"] = " // >0 when counting items for tabbing"
 defs["structs"]["ImGuiContext"][130]["name"] = "NavTabbingCounter"
 defs["structs"]["ImGuiContext"][130]["type"] = "int"
 defs["structs"]["ImGuiContext"][131] = {}
-defs["structs"]["ImGuiContext"][131]["comment"] = " // Best move request candidate within NavWindow"
+defs["structs"]["ImGuiContext"][131]["comment"] = {}
+defs["structs"]["ImGuiContext"][131]["comment"]["comments"] = " // Best move request candidate within NavWindow"
 defs["structs"]["ImGuiContext"][131]["name"] = "NavMoveResultLocal"
 defs["structs"]["ImGuiContext"][131]["type"] = "ImGuiNavItemData"
 defs["structs"]["ImGuiContext"][132] = {}
-defs["structs"]["ImGuiContext"][132]["comment"] = " // Best move request candidate within NavWindow that are mostly visible (when using ImGuiNavMoveFlags_AlsoScoreVisibleSet flag)"
+defs["structs"]["ImGuiContext"][132]["comment"] = {}
+defs["structs"]["ImGuiContext"][132]["comment"]["comments"] = " // Best move request candidate within NavWindow that are mostly visible (when using ImGuiNavMoveFlags_AlsoScoreVisibleSet flag)"
 defs["structs"]["ImGuiContext"][132]["name"] = "NavMoveResultLocalVisible"
 defs["structs"]["ImGuiContext"][132]["type"] = "ImGuiNavItemData"
 defs["structs"]["ImGuiContext"][133] = {}
-defs["structs"]["ImGuiContext"][133]["comment"] = " // Best move request candidate within NavWindow's flattened hierarchy (when using ImGuiWindowFlags_NavFlattened flag)"
+defs["structs"]["ImGuiContext"][133]["comment"] = {}
+defs["structs"]["ImGuiContext"][133]["comment"]["comments"] = " // Best move request candidate within NavWindow's flattened hierarchy (when using ImGuiWindowFlags_NavFlattened flag)"
 defs["structs"]["ImGuiContext"][133]["name"] = "NavMoveResultOther"
 defs["structs"]["ImGuiContext"][133]["type"] = "ImGuiNavItemData"
 defs["structs"]["ImGuiContext"][134] = {}
-defs["structs"]["ImGuiContext"][134]["comment"] = " // First tabbing request candidate within NavWindow and flattened hierarchy"
+defs["structs"]["ImGuiContext"][134]["comment"] = {}
+defs["structs"]["ImGuiContext"][134]["comment"]["comments"] = " // First tabbing request candidate within NavWindow and flattened hierarchy"
 defs["structs"]["ImGuiContext"][134]["name"] = "NavTabbingResultFirst"
 defs["structs"]["ImGuiContext"][134]["type"] = "ImGuiNavItemData"
 defs["structs"]["ImGuiContext"][135] = {}
-defs["structs"]["ImGuiContext"][135]["comment"] = "    // Navigation: Windowing (CTRL+TAB for list, or Menu button + keys or directional pads to move/resize) // Target window when doing CTRL+Tab (or Pad Menu + FocusPrev/Next), this window is temporarily displayed top-most!"
+defs["structs"]["ImGuiContext"][135]["comment"] = {}
+defs["structs"]["ImGuiContext"][135]["comment"]["comments"] = " // Target window when doing CTRL+Tab (or Pad Menu + FocusPrev/Next), this window is temporarily displayed top-most!"
+defs["structs"]["ImGuiContext"][135]["comment"]["prevcomments"] = "\
+    // Navigation: Windowing (CTRL+TAB for list, or Menu button + keys or directional pads to move/resize)"
 defs["structs"]["ImGuiContext"][135]["name"] = "NavWindowingTarget"
 defs["structs"]["ImGuiContext"][135]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][136] = {}
-defs["structs"]["ImGuiContext"][136]["comment"] = " // Record of last valid NavWindowingTarget until DimBgRatio and NavWindowingHighlightAlpha becomes 0.0f, so the fade-out can stay on it."
+defs["structs"]["ImGuiContext"][136]["comment"] = {}
+defs["structs"]["ImGuiContext"][136]["comment"]["comments"] = " // Record of last valid NavWindowingTarget until DimBgRatio and NavWindowingHighlightAlpha becomes 0.0f, so the fade-out can stay on it."
 defs["structs"]["ImGuiContext"][136]["name"] = "NavWindowingTargetAnim"
 defs["structs"]["ImGuiContext"][136]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][137] = {}
-defs["structs"]["ImGuiContext"][137]["comment"] = " // Internal window actually listing the CTRL+Tab contents"
+defs["structs"]["ImGuiContext"][137]["comment"] = {}
+defs["structs"]["ImGuiContext"][137]["comment"]["comments"] = " // Internal window actually listing the CTRL+Tab contents"
 defs["structs"]["ImGuiContext"][137]["name"] = "NavWindowingListWindow"
 defs["structs"]["ImGuiContext"][137]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiContext"][138] = {}
+defs["structs"]["ImGuiContext"][138]["comment"] = {}
 defs["structs"]["ImGuiContext"][138]["name"] = "NavWindowingTimer"
 defs["structs"]["ImGuiContext"][138]["type"] = "float"
 defs["structs"]["ImGuiContext"][139] = {}
+defs["structs"]["ImGuiContext"][139]["comment"] = {}
 defs["structs"]["ImGuiContext"][139]["name"] = "NavWindowingHighlightAlpha"
 defs["structs"]["ImGuiContext"][139]["type"] = "float"
 defs["structs"]["ImGuiContext"][140] = {}
+defs["structs"]["ImGuiContext"][140]["comment"] = {}
 defs["structs"]["ImGuiContext"][140]["name"] = "NavWindowingToggleLayer"
 defs["structs"]["ImGuiContext"][140]["type"] = "bool"
 defs["structs"]["ImGuiContext"][141] = {}
-defs["structs"]["ImGuiContext"][141]["comment"] = "    // Render // 0.0..1.0 animation when fading in a dimming background (for modal window and CTRL+TAB list)"
+defs["structs"]["ImGuiContext"][141]["comment"] = {}
+defs["structs"]["ImGuiContext"][141]["comment"]["comments"] = " // 0.0..1.0 animation when fading in a dimming background (for modal window and CTRL+TAB list)"
+defs["structs"]["ImGuiContext"][141]["comment"]["prevcomments"] = "\
+    // Render"
 defs["structs"]["ImGuiContext"][141]["name"] = "DimBgRatio"
 defs["structs"]["ImGuiContext"][141]["type"] = "float"
 defs["structs"]["ImGuiContext"][142] = {}
+defs["structs"]["ImGuiContext"][142]["comment"] = {}
 defs["structs"]["ImGuiContext"][142]["name"] = "MouseCursor"
 defs["structs"]["ImGuiContext"][142]["type"] = "ImGuiMouseCursor"
 defs["structs"]["ImGuiContext"][143] = {}
-defs["structs"]["ImGuiContext"][143]["comment"] = "    // Drag and Drop"
+defs["structs"]["ImGuiContext"][143]["comment"] = {}
+defs["structs"]["ImGuiContext"][143]["comment"]["prevcomments"] = "\
+    // Drag and Drop"
 defs["structs"]["ImGuiContext"][143]["name"] = "DragDropActive"
 defs["structs"]["ImGuiContext"][143]["type"] = "bool"
 defs["structs"]["ImGuiContext"][144] = {}
-defs["structs"]["ImGuiContext"][144]["comment"] = " // Set when within a BeginDragDropXXX/EndDragDropXXX block for a drag source."
+defs["structs"]["ImGuiContext"][144]["comment"] = {}
+defs["structs"]["ImGuiContext"][144]["comment"]["comments"] = " // Set when within a BeginDragDropXXX/EndDragDropXXX block for a drag source."
 defs["structs"]["ImGuiContext"][144]["name"] = "DragDropWithinSource"
 defs["structs"]["ImGuiContext"][144]["type"] = "bool"
 defs["structs"]["ImGuiContext"][145] = {}
-defs["structs"]["ImGuiContext"][145]["comment"] = " // Set when within a BeginDragDropXXX/EndDragDropXXX block for a drag target."
+defs["structs"]["ImGuiContext"][145]["comment"] = {}
+defs["structs"]["ImGuiContext"][145]["comment"]["comments"] = " // Set when within a BeginDragDropXXX/EndDragDropXXX block for a drag target."
 defs["structs"]["ImGuiContext"][145]["name"] = "DragDropWithinTarget"
 defs["structs"]["ImGuiContext"][145]["type"] = "bool"
 defs["structs"]["ImGuiContext"][146] = {}
+defs["structs"]["ImGuiContext"][146]["comment"] = {}
 defs["structs"]["ImGuiContext"][146]["name"] = "DragDropSourceFlags"
 defs["structs"]["ImGuiContext"][146]["type"] = "ImGuiDragDropFlags"
 defs["structs"]["ImGuiContext"][147] = {}
+defs["structs"]["ImGuiContext"][147]["comment"] = {}
 defs["structs"]["ImGuiContext"][147]["name"] = "DragDropSourceFrameCount"
 defs["structs"]["ImGuiContext"][147]["type"] = "int"
 defs["structs"]["ImGuiContext"][148] = {}
+defs["structs"]["ImGuiContext"][148]["comment"] = {}
 defs["structs"]["ImGuiContext"][148]["name"] = "DragDropMouseButton"
 defs["structs"]["ImGuiContext"][148]["type"] = "int"
 defs["structs"]["ImGuiContext"][149] = {}
+defs["structs"]["ImGuiContext"][149]["comment"] = {}
 defs["structs"]["ImGuiContext"][149]["name"] = "DragDropPayload"
 defs["structs"]["ImGuiContext"][149]["type"] = "ImGuiPayload"
 defs["structs"]["ImGuiContext"][150] = {}
-defs["structs"]["ImGuiContext"][150]["comment"] = " // Store rectangle of current target candidate (we favor small targets when overlapping)"
+defs["structs"]["ImGuiContext"][150]["comment"] = {}
+defs["structs"]["ImGuiContext"][150]["comment"]["comments"] = " // Store rectangle of current target candidate (we favor small targets when overlapping)"
 defs["structs"]["ImGuiContext"][150]["name"] = "DragDropTargetRect"
 defs["structs"]["ImGuiContext"][150]["type"] = "ImRect"
 defs["structs"]["ImGuiContext"][151] = {}
+defs["structs"]["ImGuiContext"][151]["comment"] = {}
 defs["structs"]["ImGuiContext"][151]["name"] = "DragDropTargetId"
 defs["structs"]["ImGuiContext"][151]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][152] = {}
+defs["structs"]["ImGuiContext"][152]["comment"] = {}
 defs["structs"]["ImGuiContext"][152]["name"] = "DragDropAcceptFlags"
 defs["structs"]["ImGuiContext"][152]["type"] = "ImGuiDragDropFlags"
 defs["structs"]["ImGuiContext"][153] = {}
-defs["structs"]["ImGuiContext"][153]["comment"] = " // Target item surface (we resolve overlapping targets by prioritizing the smaller surface)"
+defs["structs"]["ImGuiContext"][153]["comment"] = {}
+defs["structs"]["ImGuiContext"][153]["comment"]["comments"] = " // Target item surface (we resolve overlapping targets by prioritizing the smaller surface)"
 defs["structs"]["ImGuiContext"][153]["name"] = "DragDropAcceptIdCurrRectSurface"
 defs["structs"]["ImGuiContext"][153]["type"] = "float"
 defs["structs"]["ImGuiContext"][154] = {}
-defs["structs"]["ImGuiContext"][154]["comment"] = " // Target item id (set at the time of accepting the payload)"
+defs["structs"]["ImGuiContext"][154]["comment"] = {}
+defs["structs"]["ImGuiContext"][154]["comment"]["comments"] = " // Target item id (set at the time of accepting the payload)"
 defs["structs"]["ImGuiContext"][154]["name"] = "DragDropAcceptIdCurr"
 defs["structs"]["ImGuiContext"][154]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][155] = {}
-defs["structs"]["ImGuiContext"][155]["comment"] = " // Target item id from previous frame (we need to store this to allow for overlapping drag and drop targets)"
+defs["structs"]["ImGuiContext"][155]["comment"] = {}
+defs["structs"]["ImGuiContext"][155]["comment"]["comments"] = " // Target item id from previous frame (we need to store this to allow for overlapping drag and drop targets)"
 defs["structs"]["ImGuiContext"][155]["name"] = "DragDropAcceptIdPrev"
 defs["structs"]["ImGuiContext"][155]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][156] = {}
-defs["structs"]["ImGuiContext"][156]["comment"] = " // Last time a target expressed a desire to accept the source"
+defs["structs"]["ImGuiContext"][156]["comment"] = {}
+defs["structs"]["ImGuiContext"][156]["comment"]["comments"] = " // Last time a target expressed a desire to accept the source"
 defs["structs"]["ImGuiContext"][156]["name"] = "DragDropAcceptFrameCount"
 defs["structs"]["ImGuiContext"][156]["type"] = "int"
 defs["structs"]["ImGuiContext"][157] = {}
-defs["structs"]["ImGuiContext"][157]["comment"] = " // Set when holding a payload just made ButtonBehavior() return a press."
+defs["structs"]["ImGuiContext"][157]["comment"] = {}
+defs["structs"]["ImGuiContext"][157]["comment"]["comments"] = " // Set when holding a payload just made ButtonBehavior() return a press."
 defs["structs"]["ImGuiContext"][157]["name"] = "DragDropHoldJustPressedId"
 defs["structs"]["ImGuiContext"][157]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][158] = {}
-defs["structs"]["ImGuiContext"][158]["comment"] = " // We don't expose the ImVector<> directly, ImGuiPayload only holds pointer+size"
+defs["structs"]["ImGuiContext"][158]["comment"] = {}
+defs["structs"]["ImGuiContext"][158]["comment"]["comments"] = " // We don't expose the ImVector<> directly, ImGuiPayload only holds pointer+size"
 defs["structs"]["ImGuiContext"][158]["name"] = "DragDropPayloadBufHeap"
 defs["structs"]["ImGuiContext"][158]["template_type"] = "unsigned char"
 defs["structs"]["ImGuiContext"][158]["type"] = "ImVector_unsigned_char"
 defs["structs"]["ImGuiContext"][159] = {}
-defs["structs"]["ImGuiContext"][159]["comment"] = " // Local buffer for small payloads"
+defs["structs"]["ImGuiContext"][159]["comment"] = {}
+defs["structs"]["ImGuiContext"][159]["comment"]["comments"] = " // Local buffer for small payloads"
 defs["structs"]["ImGuiContext"][159]["name"] = "DragDropPayloadBufLocal[16]"
 defs["structs"]["ImGuiContext"][159]["size"] = 16
 defs["structs"]["ImGuiContext"][159]["type"] = "unsigned char"
 defs["structs"]["ImGuiContext"][160] = {}
-defs["structs"]["ImGuiContext"][160]["comment"] = "    // Clipper"
+defs["structs"]["ImGuiContext"][160]["comment"] = {}
+defs["structs"]["ImGuiContext"][160]["comment"]["prevcomments"] = "\
+    // Clipper"
 defs["structs"]["ImGuiContext"][160]["name"] = "ClipperTempDataStacked"
 defs["structs"]["ImGuiContext"][160]["type"] = "int"
 defs["structs"]["ImGuiContext"][161] = {}
+defs["structs"]["ImGuiContext"][161]["comment"] = {}
 defs["structs"]["ImGuiContext"][161]["name"] = "ClipperTempData"
 defs["structs"]["ImGuiContext"][161]["template_type"] = "ImGuiListClipperData"
 defs["structs"]["ImGuiContext"][161]["type"] = "ImVector_ImGuiListClipperData"
 defs["structs"]["ImGuiContext"][162] = {}
-defs["structs"]["ImGuiContext"][162]["comment"] = "    // Tables"
+defs["structs"]["ImGuiContext"][162]["comment"] = {}
+defs["structs"]["ImGuiContext"][162]["comment"]["prevcomments"] = "\
+    // Tables"
 defs["structs"]["ImGuiContext"][162]["name"] = "CurrentTable"
 defs["structs"]["ImGuiContext"][162]["type"] = "ImGuiTable*"
 defs["structs"]["ImGuiContext"][163] = {}
-defs["structs"]["ImGuiContext"][163]["comment"] = " // Temporary table data size (because we leave previous instances undestructed, we generally don't use TablesTempData.Size)"
+defs["structs"]["ImGuiContext"][163]["comment"] = {}
+defs["structs"]["ImGuiContext"][163]["comment"]["comments"] = " // Temporary table data size (because we leave previous instances undestructed, we generally don't use TablesTempData.Size)"
 defs["structs"]["ImGuiContext"][163]["name"] = "TablesTempDataStacked"
 defs["structs"]["ImGuiContext"][163]["type"] = "int"
 defs["structs"]["ImGuiContext"][164] = {}
-defs["structs"]["ImGuiContext"][164]["comment"] = " // Temporary table data (buffers reused/shared across instances, support nesting)"
+defs["structs"]["ImGuiContext"][164]["comment"] = {}
+defs["structs"]["ImGuiContext"][164]["comment"]["comments"] = " // Temporary table data (buffers reused/shared across instances, support nesting)"
 defs["structs"]["ImGuiContext"][164]["name"] = "TablesTempData"
 defs["structs"]["ImGuiContext"][164]["template_type"] = "ImGuiTableTempData"
 defs["structs"]["ImGuiContext"][164]["type"] = "ImVector_ImGuiTableTempData"
 defs["structs"]["ImGuiContext"][165] = {}
-defs["structs"]["ImGuiContext"][165]["comment"] = " // Persistent table data"
+defs["structs"]["ImGuiContext"][165]["comment"] = {}
+defs["structs"]["ImGuiContext"][165]["comment"]["comments"] = " // Persistent table data"
 defs["structs"]["ImGuiContext"][165]["name"] = "Tables"
 defs["structs"]["ImGuiContext"][165]["template_type"] = "ImGuiTable"
 defs["structs"]["ImGuiContext"][165]["type"] = "ImPool_ImGuiTable"
 defs["structs"]["ImGuiContext"][166] = {}
-defs["structs"]["ImGuiContext"][166]["comment"] = " // Last used timestamp of each tables (SOA, for efficient GC)"
+defs["structs"]["ImGuiContext"][166]["comment"] = {}
+defs["structs"]["ImGuiContext"][166]["comment"]["comments"] = " // Last used timestamp of each tables (SOA, for efficient GC)"
 defs["structs"]["ImGuiContext"][166]["name"] = "TablesLastTimeActive"
 defs["structs"]["ImGuiContext"][166]["template_type"] = "float"
 defs["structs"]["ImGuiContext"][166]["type"] = "ImVector_float"
 defs["structs"]["ImGuiContext"][167] = {}
+defs["structs"]["ImGuiContext"][167]["comment"] = {}
 defs["structs"]["ImGuiContext"][167]["name"] = "DrawChannelsTempMergeBuffer"
 defs["structs"]["ImGuiContext"][167]["template_type"] = "ImDrawChannel"
 defs["structs"]["ImGuiContext"][167]["type"] = "ImVector_ImDrawChannel"
 defs["structs"]["ImGuiContext"][168] = {}
-defs["structs"]["ImGuiContext"][168]["comment"] = "    // Tab bars"
+defs["structs"]["ImGuiContext"][168]["comment"] = {}
+defs["structs"]["ImGuiContext"][168]["comment"]["prevcomments"] = "\
+    // Tab bars"
 defs["structs"]["ImGuiContext"][168]["name"] = "CurrentTabBar"
 defs["structs"]["ImGuiContext"][168]["type"] = "ImGuiTabBar*"
 defs["structs"]["ImGuiContext"][169] = {}
+defs["structs"]["ImGuiContext"][169]["comment"] = {}
 defs["structs"]["ImGuiContext"][169]["name"] = "TabBars"
 defs["structs"]["ImGuiContext"][169]["template_type"] = "ImGuiTabBar"
 defs["structs"]["ImGuiContext"][169]["type"] = "ImPool_ImGuiTabBar"
 defs["structs"]["ImGuiContext"][170] = {}
+defs["structs"]["ImGuiContext"][170]["comment"] = {}
 defs["structs"]["ImGuiContext"][170]["name"] = "CurrentTabBarStack"
 defs["structs"]["ImGuiContext"][170]["template_type"] = "ImGuiPtrOrIndex"
 defs["structs"]["ImGuiContext"][170]["type"] = "ImVector_ImGuiPtrOrIndex"
 defs["structs"]["ImGuiContext"][171] = {}
+defs["structs"]["ImGuiContext"][171]["comment"] = {}
 defs["structs"]["ImGuiContext"][171]["name"] = "ShrinkWidthBuffer"
 defs["structs"]["ImGuiContext"][171]["template_type"] = "ImGuiShrinkWidthItem"
 defs["structs"]["ImGuiContext"][171]["type"] = "ImVector_ImGuiShrinkWidthItem"
 defs["structs"]["ImGuiContext"][172] = {}
-defs["structs"]["ImGuiContext"][172]["comment"] = "    // Widget state"
+defs["structs"]["ImGuiContext"][172]["comment"] = {}
+defs["structs"]["ImGuiContext"][172]["comment"]["prevcomments"] = "\
+    // Widget state"
 defs["structs"]["ImGuiContext"][172]["name"] = "MouseLastValidPos"
 defs["structs"]["ImGuiContext"][172]["type"] = "ImVec2"
 defs["structs"]["ImGuiContext"][173] = {}
+defs["structs"]["ImGuiContext"][173]["comment"] = {}
 defs["structs"]["ImGuiContext"][173]["name"] = "InputTextState"
 defs["structs"]["ImGuiContext"][173]["type"] = "ImGuiInputTextState"
 defs["structs"]["ImGuiContext"][174] = {}
+defs["structs"]["ImGuiContext"][174]["comment"] = {}
 defs["structs"]["ImGuiContext"][174]["name"] = "InputTextPasswordFont"
 defs["structs"]["ImGuiContext"][174]["type"] = "ImFont"
 defs["structs"]["ImGuiContext"][175] = {}
-defs["structs"]["ImGuiContext"][175]["comment"] = " // Temporary text input when CTRL+clicking on a slider, etc."
+defs["structs"]["ImGuiContext"][175]["comment"] = {}
+defs["structs"]["ImGuiContext"][175]["comment"]["comments"] = " // Temporary text input when CTRL+clicking on a slider, etc."
 defs["structs"]["ImGuiContext"][175]["name"] = "TempInputId"
 defs["structs"]["ImGuiContext"][175]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][176] = {}
-defs["structs"]["ImGuiContext"][176]["comment"] = " // Store user options for color edit widgets"
+defs["structs"]["ImGuiContext"][176]["comment"] = {}
+defs["structs"]["ImGuiContext"][176]["comment"]["comments"] = " // Store user options for color edit widgets"
 defs["structs"]["ImGuiContext"][176]["name"] = "ColorEditOptions"
 defs["structs"]["ImGuiContext"][176]["type"] = "ImGuiColorEditFlags"
 defs["structs"]["ImGuiContext"][177] = {}
-defs["structs"]["ImGuiContext"][177]["comment"] = " // Backup of last Hue associated to LastColor, so we can restore Hue in lossy RGB<>HSV round trips"
+defs["structs"]["ImGuiContext"][177]["comment"] = {}
+defs["structs"]["ImGuiContext"][177]["comment"]["comments"] = " // Backup of last Hue associated to LastColor, so we can restore Hue in lossy RGB<>HSV round trips"
 defs["structs"]["ImGuiContext"][177]["name"] = "ColorEditLastHue"
 defs["structs"]["ImGuiContext"][177]["type"] = "float"
 defs["structs"]["ImGuiContext"][178] = {}
-defs["structs"]["ImGuiContext"][178]["comment"] = " // Backup of last Saturation associated to LastColor, so we can restore Saturation in lossy RGB<>HSV round trips"
+defs["structs"]["ImGuiContext"][178]["comment"] = {}
+defs["structs"]["ImGuiContext"][178]["comment"]["comments"] = " // Backup of last Saturation associated to LastColor, so we can restore Saturation in lossy RGB<>HSV round trips"
 defs["structs"]["ImGuiContext"][178]["name"] = "ColorEditLastSat"
 defs["structs"]["ImGuiContext"][178]["type"] = "float"
 defs["structs"]["ImGuiContext"][179] = {}
-defs["structs"]["ImGuiContext"][179]["comment"] = " // RGB value with alpha set to 0."
+defs["structs"]["ImGuiContext"][179]["comment"] = {}
+defs["structs"]["ImGuiContext"][179]["comment"]["comments"] = " // RGB value with alpha set to 0."
 defs["structs"]["ImGuiContext"][179]["name"] = "ColorEditLastColor"
 defs["structs"]["ImGuiContext"][179]["type"] = "ImU32"
 defs["structs"]["ImGuiContext"][180] = {}
-defs["structs"]["ImGuiContext"][180]["comment"] = " // Initial/reference color at the time of opening the color picker."
+defs["structs"]["ImGuiContext"][180]["comment"] = {}
+defs["structs"]["ImGuiContext"][180]["comment"]["comments"] = " // Initial/reference color at the time of opening the color picker."
 defs["structs"]["ImGuiContext"][180]["name"] = "ColorPickerRef"
 defs["structs"]["ImGuiContext"][180]["type"] = "ImVec4"
 defs["structs"]["ImGuiContext"][181] = {}
+defs["structs"]["ImGuiContext"][181]["comment"] = {}
 defs["structs"]["ImGuiContext"][181]["name"] = "ComboPreviewData"
 defs["structs"]["ImGuiContext"][181]["type"] = "ImGuiComboPreviewData"
 defs["structs"]["ImGuiContext"][182] = {}
+defs["structs"]["ImGuiContext"][182]["comment"] = {}
 defs["structs"]["ImGuiContext"][182]["name"] = "SliderGrabClickOffset"
 defs["structs"]["ImGuiContext"][182]["type"] = "float"
 defs["structs"]["ImGuiContext"][183] = {}
-defs["structs"]["ImGuiContext"][183]["comment"] = " // Accumulated slider delta when using navigation controls."
+defs["structs"]["ImGuiContext"][183]["comment"] = {}
+defs["structs"]["ImGuiContext"][183]["comment"]["comments"] = " // Accumulated slider delta when using navigation controls."
 defs["structs"]["ImGuiContext"][183]["name"] = "SliderCurrentAccum"
 defs["structs"]["ImGuiContext"][183]["type"] = "float"
 defs["structs"]["ImGuiContext"][184] = {}
-defs["structs"]["ImGuiContext"][184]["comment"] = " // Has the accumulated slider delta changed since last time we tried to apply it?"
+defs["structs"]["ImGuiContext"][184]["comment"] = {}
+defs["structs"]["ImGuiContext"][184]["comment"]["comments"] = " // Has the accumulated slider delta changed since last time we tried to apply it?"
 defs["structs"]["ImGuiContext"][184]["name"] = "SliderCurrentAccumDirty"
 defs["structs"]["ImGuiContext"][184]["type"] = "bool"
 defs["structs"]["ImGuiContext"][185] = {}
+defs["structs"]["ImGuiContext"][185]["comment"] = {}
 defs["structs"]["ImGuiContext"][185]["name"] = "DragCurrentAccumDirty"
 defs["structs"]["ImGuiContext"][185]["type"] = "bool"
 defs["structs"]["ImGuiContext"][186] = {}
-defs["structs"]["ImGuiContext"][186]["comment"] = " // Accumulator for dragging modification. Always high-precision, not rounded by end-user precision settings"
+defs["structs"]["ImGuiContext"][186]["comment"] = {}
+defs["structs"]["ImGuiContext"][186]["comment"]["comments"] = " // Accumulator for dragging modification. Always high-precision, not rounded by end-user precision settings"
 defs["structs"]["ImGuiContext"][186]["name"] = "DragCurrentAccum"
 defs["structs"]["ImGuiContext"][186]["type"] = "float"
 defs["structs"]["ImGuiContext"][187] = {}
-defs["structs"]["ImGuiContext"][187]["comment"] = " // If speed == 0.0f, uses (max-min) * DragSpeedDefaultRatio"
+defs["structs"]["ImGuiContext"][187]["comment"] = {}
+defs["structs"]["ImGuiContext"][187]["comment"]["comments"] = " // If speed == 0.0f, uses (max-min) * DragSpeedDefaultRatio"
 defs["structs"]["ImGuiContext"][187]["name"] = "DragSpeedDefaultRatio"
 defs["structs"]["ImGuiContext"][187]["type"] = "float"
 defs["structs"]["ImGuiContext"][188] = {}
-defs["structs"]["ImGuiContext"][188]["comment"] = " // Distance between mouse and center of grab box, normalized in parent space. Use storage?"
+defs["structs"]["ImGuiContext"][188]["comment"] = {}
+defs["structs"]["ImGuiContext"][188]["comment"]["comments"] = " // Distance between mouse and center of grab box, normalized in parent space. Use storage?"
 defs["structs"]["ImGuiContext"][188]["name"] = "ScrollbarClickDeltaToGrabCenter"
 defs["structs"]["ImGuiContext"][188]["type"] = "float"
 defs["structs"]["ImGuiContext"][189] = {}
-defs["structs"]["ImGuiContext"][189]["comment"] = " // Backup for style.Alpha for BeginDisabled()"
+defs["structs"]["ImGuiContext"][189]["comment"] = {}
+defs["structs"]["ImGuiContext"][189]["comment"]["comments"] = " // Backup for style.Alpha for BeginDisabled()"
 defs["structs"]["ImGuiContext"][189]["name"] = "DisabledAlphaBackup"
 defs["structs"]["ImGuiContext"][189]["type"] = "float"
 defs["structs"]["ImGuiContext"][190] = {}
+defs["structs"]["ImGuiContext"][190]["comment"] = {}
 defs["structs"]["ImGuiContext"][190]["name"] = "DisabledStackSize"
 defs["structs"]["ImGuiContext"][190]["type"] = "short"
 defs["structs"]["ImGuiContext"][191] = {}
+defs["structs"]["ImGuiContext"][191]["comment"] = {}
 defs["structs"]["ImGuiContext"][191]["name"] = "TooltipOverrideCount"
 defs["structs"]["ImGuiContext"][191]["type"] = "short"
 defs["structs"]["ImGuiContext"][192] = {}
-defs["structs"]["ImGuiContext"][192]["comment"] = " // Time before slow tooltips appears (FIXME: This is temporary until we merge in tooltip timer+priority work)"
+defs["structs"]["ImGuiContext"][192]["comment"] = {}
+defs["structs"]["ImGuiContext"][192]["comment"]["comments"] = " // Time before slow tooltips appears (FIXME: This is temporary until we merge in tooltip timer+priority work)"
 defs["structs"]["ImGuiContext"][192]["name"] = "TooltipSlowDelay"
 defs["structs"]["ImGuiContext"][192]["type"] = "float"
 defs["structs"]["ImGuiContext"][193] = {}
-defs["structs"]["ImGuiContext"][193]["comment"] = " // If no custom clipboard handler is defined"
+defs["structs"]["ImGuiContext"][193]["comment"] = {}
+defs["structs"]["ImGuiContext"][193]["comment"]["comments"] = " // If no custom clipboard handler is defined"
 defs["structs"]["ImGuiContext"][193]["name"] = "ClipboardHandlerData"
 defs["structs"]["ImGuiContext"][193]["template_type"] = "char"
 defs["structs"]["ImGuiContext"][193]["type"] = "ImVector_char"
 defs["structs"]["ImGuiContext"][194] = {}
-defs["structs"]["ImGuiContext"][194]["comment"] = " // A list of menu IDs that were rendered at least once"
+defs["structs"]["ImGuiContext"][194]["comment"] = {}
+defs["structs"]["ImGuiContext"][194]["comment"]["comments"] = " // A list of menu IDs that were rendered at least once"
 defs["structs"]["ImGuiContext"][194]["name"] = "MenusIdSubmittedThisFrame"
 defs["structs"]["ImGuiContext"][194]["template_type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][194]["type"] = "ImVector_ImGuiID"
 defs["structs"]["ImGuiContext"][195] = {}
-defs["structs"]["ImGuiContext"][195]["comment"] = "    // Platform support // Data updated by current frame"
+defs["structs"]["ImGuiContext"][195]["comment"] = {}
+defs["structs"]["ImGuiContext"][195]["comment"]["comments"] = " // Data updated by current frame"
+defs["structs"]["ImGuiContext"][195]["comment"]["prevcomments"] = "\
+    // Platform support"
 defs["structs"]["ImGuiContext"][195]["name"] = "PlatformImeData"
 defs["structs"]["ImGuiContext"][195]["type"] = "ImGuiPlatformImeData"
 defs["structs"]["ImGuiContext"][196] = {}
-defs["structs"]["ImGuiContext"][196]["comment"] = " // Previous frame data (when changing we will call io.SetPlatformImeDataFn"
+defs["structs"]["ImGuiContext"][196]["comment"] = {}
+defs["structs"]["ImGuiContext"][196]["comment"]["comments"] = " // Previous frame data (when changing we will call io.SetPlatformImeDataFn"
 defs["structs"]["ImGuiContext"][196]["name"] = "PlatformImeDataPrev"
 defs["structs"]["ImGuiContext"][196]["type"] = "ImGuiPlatformImeData"
 defs["structs"]["ImGuiContext"][197] = {}
+defs["structs"]["ImGuiContext"][197]["comment"] = {}
 defs["structs"]["ImGuiContext"][197]["name"] = "PlatformImeViewport"
 defs["structs"]["ImGuiContext"][197]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][198] = {}
-defs["structs"]["ImGuiContext"][198]["comment"] = " // '.' or *localeconv()->decimal_point"
+defs["structs"]["ImGuiContext"][198]["comment"] = {}
+defs["structs"]["ImGuiContext"][198]["comment"]["comments"] = " // '.' or *localeconv()->decimal_point"
 defs["structs"]["ImGuiContext"][198]["name"] = "PlatformLocaleDecimalPoint"
 defs["structs"]["ImGuiContext"][198]["type"] = "char"
 defs["structs"]["ImGuiContext"][199] = {}
-defs["structs"]["ImGuiContext"][199]["comment"] = "    // Extensions\
+defs["structs"]["ImGuiContext"][199]["comment"] = {}
+defs["structs"]["ImGuiContext"][199]["comment"]["prevcomments"] = "\
+    // Extensions\
     // FIXME: We could provide an API to register one slot in an array held in ImGuiContext?"
 defs["structs"]["ImGuiContext"][199]["name"] = "DockContext"
 defs["structs"]["ImGuiContext"][199]["type"] = "ImGuiDockContext"
 defs["structs"]["ImGuiContext"][200] = {}
-defs["structs"]["ImGuiContext"][200]["comment"] = "    // Settings"
+defs["structs"]["ImGuiContext"][200]["comment"] = {}
+defs["structs"]["ImGuiContext"][200]["comment"]["prevcomments"] = "\
+    // Settings"
 defs["structs"]["ImGuiContext"][200]["name"] = "SettingsLoaded"
 defs["structs"]["ImGuiContext"][200]["type"] = "bool"
 defs["structs"]["ImGuiContext"][201] = {}
-defs["structs"]["ImGuiContext"][201]["comment"] = " // Save .ini Settings to memory when time reaches zero"
+defs["structs"]["ImGuiContext"][201]["comment"] = {}
+defs["structs"]["ImGuiContext"][201]["comment"]["comments"] = " // Save .ini Settings to memory when time reaches zero"
 defs["structs"]["ImGuiContext"][201]["name"] = "SettingsDirtyTimer"
 defs["structs"]["ImGuiContext"][201]["type"] = "float"
 defs["structs"]["ImGuiContext"][202] = {}
-defs["structs"]["ImGuiContext"][202]["comment"] = " // In memory .ini settings"
+defs["structs"]["ImGuiContext"][202]["comment"] = {}
+defs["structs"]["ImGuiContext"][202]["comment"]["comments"] = " // In memory .ini settings"
 defs["structs"]["ImGuiContext"][202]["name"] = "SettingsIniData"
 defs["structs"]["ImGuiContext"][202]["type"] = "ImGuiTextBuffer"
 defs["structs"]["ImGuiContext"][203] = {}
-defs["structs"]["ImGuiContext"][203]["comment"] = " // List of .ini settings handlers"
+defs["structs"]["ImGuiContext"][203]["comment"] = {}
+defs["structs"]["ImGuiContext"][203]["comment"]["comments"] = " // List of .ini settings handlers"
 defs["structs"]["ImGuiContext"][203]["name"] = "SettingsHandlers"
 defs["structs"]["ImGuiContext"][203]["template_type"] = "ImGuiSettingsHandler"
 defs["structs"]["ImGuiContext"][203]["type"] = "ImVector_ImGuiSettingsHandler"
 defs["structs"]["ImGuiContext"][204] = {}
-defs["structs"]["ImGuiContext"][204]["comment"] = " // ImGuiWindow .ini settings entries"
+defs["structs"]["ImGuiContext"][204]["comment"] = {}
+defs["structs"]["ImGuiContext"][204]["comment"]["comments"] = " // ImGuiWindow .ini settings entries"
 defs["structs"]["ImGuiContext"][204]["name"] = "SettingsWindows"
 defs["structs"]["ImGuiContext"][204]["template_type"] = "ImGuiWindowSettings"
 defs["structs"]["ImGuiContext"][204]["type"] = "ImChunkStream_ImGuiWindowSettings"
 defs["structs"]["ImGuiContext"][205] = {}
-defs["structs"]["ImGuiContext"][205]["comment"] = " // ImGuiTable .ini settings entries"
+defs["structs"]["ImGuiContext"][205]["comment"] = {}
+defs["structs"]["ImGuiContext"][205]["comment"]["comments"] = " // ImGuiTable .ini settings entries"
 defs["structs"]["ImGuiContext"][205]["name"] = "SettingsTables"
 defs["structs"]["ImGuiContext"][205]["template_type"] = "ImGuiTableSettings"
 defs["structs"]["ImGuiContext"][205]["type"] = "ImChunkStream_ImGuiTableSettings"
 defs["structs"]["ImGuiContext"][206] = {}
-defs["structs"]["ImGuiContext"][206]["comment"] = " // Hooks for extensions (e.g. test engine)"
+defs["structs"]["ImGuiContext"][206]["comment"] = {}
+defs["structs"]["ImGuiContext"][206]["comment"]["comments"] = " // Hooks for extensions (e.g. test engine)"
 defs["structs"]["ImGuiContext"][206]["name"] = "Hooks"
 defs["structs"]["ImGuiContext"][206]["template_type"] = "ImGuiContextHook"
 defs["structs"]["ImGuiContext"][206]["type"] = "ImVector_ImGuiContextHook"
 defs["structs"]["ImGuiContext"][207] = {}
-defs["structs"]["ImGuiContext"][207]["comment"] = " // Next available HookId"
+defs["structs"]["ImGuiContext"][207]["comment"] = {}
+defs["structs"]["ImGuiContext"][207]["comment"]["comments"] = " // Next available HookId"
 defs["structs"]["ImGuiContext"][207]["name"] = "HookIdNext"
 defs["structs"]["ImGuiContext"][207]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][208] = {}
-defs["structs"]["ImGuiContext"][208]["comment"] = "    // Capture/Logging // Currently capturing"
+defs["structs"]["ImGuiContext"][208]["comment"] = {}
+defs["structs"]["ImGuiContext"][208]["comment"]["comments"] = " // Currently capturing"
+defs["structs"]["ImGuiContext"][208]["comment"]["prevcomments"] = "\
+    // Capture/Logging"
 defs["structs"]["ImGuiContext"][208]["name"] = "LogEnabled"
 defs["structs"]["ImGuiContext"][208]["type"] = "bool"
 defs["structs"]["ImGuiContext"][209] = {}
-defs["structs"]["ImGuiContext"][209]["comment"] = " // Capture target"
+defs["structs"]["ImGuiContext"][209]["comment"] = {}
+defs["structs"]["ImGuiContext"][209]["comment"]["comments"] = " // Capture target"
 defs["structs"]["ImGuiContext"][209]["name"] = "LogType"
 defs["structs"]["ImGuiContext"][209]["type"] = "ImGuiLogType"
 defs["structs"]["ImGuiContext"][210] = {}
-defs["structs"]["ImGuiContext"][210]["comment"] = " // If != NULL log to stdout/ file"
+defs["structs"]["ImGuiContext"][210]["comment"] = {}
+defs["structs"]["ImGuiContext"][210]["comment"]["comments"] = " // If != NULL log to stdout/ file"
 defs["structs"]["ImGuiContext"][210]["name"] = "LogFile"
 defs["structs"]["ImGuiContext"][210]["type"] = "ImFileHandle"
 defs["structs"]["ImGuiContext"][211] = {}
-defs["structs"]["ImGuiContext"][211]["comment"] = " // Accumulation buffer when log to clipboard. This is pointer so our GImGui static constructor doesn't call heap allocators."
+defs["structs"]["ImGuiContext"][211]["comment"] = {}
+defs["structs"]["ImGuiContext"][211]["comment"]["comments"] = " // Accumulation buffer when log to clipboard. This is pointer so our GImGui static constructor doesn't call heap allocators."
 defs["structs"]["ImGuiContext"][211]["name"] = "LogBuffer"
 defs["structs"]["ImGuiContext"][211]["type"] = "ImGuiTextBuffer"
 defs["structs"]["ImGuiContext"][212] = {}
+defs["structs"]["ImGuiContext"][212]["comment"] = {}
 defs["structs"]["ImGuiContext"][212]["name"] = "LogNextPrefix"
 defs["structs"]["ImGuiContext"][212]["type"] = "const char*"
 defs["structs"]["ImGuiContext"][213] = {}
+defs["structs"]["ImGuiContext"][213]["comment"] = {}
 defs["structs"]["ImGuiContext"][213]["name"] = "LogNextSuffix"
 defs["structs"]["ImGuiContext"][213]["type"] = "const char*"
 defs["structs"]["ImGuiContext"][214] = {}
+defs["structs"]["ImGuiContext"][214]["comment"] = {}
 defs["structs"]["ImGuiContext"][214]["name"] = "LogLinePosY"
 defs["structs"]["ImGuiContext"][214]["type"] = "float"
 defs["structs"]["ImGuiContext"][215] = {}
+defs["structs"]["ImGuiContext"][215]["comment"] = {}
 defs["structs"]["ImGuiContext"][215]["name"] = "LogLineFirstItem"
 defs["structs"]["ImGuiContext"][215]["type"] = "bool"
 defs["structs"]["ImGuiContext"][216] = {}
+defs["structs"]["ImGuiContext"][216]["comment"] = {}
 defs["structs"]["ImGuiContext"][216]["name"] = "LogDepthRef"
 defs["structs"]["ImGuiContext"][216]["type"] = "int"
 defs["structs"]["ImGuiContext"][217] = {}
+defs["structs"]["ImGuiContext"][217]["comment"] = {}
 defs["structs"]["ImGuiContext"][217]["name"] = "LogDepthToExpand"
 defs["structs"]["ImGuiContext"][217]["type"] = "int"
 defs["structs"]["ImGuiContext"][218] = {}
-defs["structs"]["ImGuiContext"][218]["comment"] = " // Default/stored value for LogDepthMaxExpand if not specified in the LogXXX function call."
+defs["structs"]["ImGuiContext"][218]["comment"] = {}
+defs["structs"]["ImGuiContext"][218]["comment"]["comments"] = " // Default/stored value for LogDepthMaxExpand if not specified in the LogXXX function call."
 defs["structs"]["ImGuiContext"][218]["name"] = "LogDepthToExpandDefault"
 defs["structs"]["ImGuiContext"][218]["type"] = "int"
 defs["structs"]["ImGuiContext"][219] = {}
-defs["structs"]["ImGuiContext"][219]["comment"] = "    // Debug Tools"
+defs["structs"]["ImGuiContext"][219]["comment"] = {}
+defs["structs"]["ImGuiContext"][219]["comment"]["prevcomments"] = "\
+    // Debug Tools"
 defs["structs"]["ImGuiContext"][219]["name"] = "DebugLogFlags"
 defs["structs"]["ImGuiContext"][219]["type"] = "ImGuiDebugLogFlags"
 defs["structs"]["ImGuiContext"][220] = {}
+defs["structs"]["ImGuiContext"][220]["comment"] = {}
 defs["structs"]["ImGuiContext"][220]["name"] = "DebugLogBuf"
 defs["structs"]["ImGuiContext"][220]["type"] = "ImGuiTextBuffer"
 defs["structs"]["ImGuiContext"][221] = {}
-defs["structs"]["ImGuiContext"][221]["comment"] = " // Item picker is active (started with DebugStartItemPicker())"
+defs["structs"]["ImGuiContext"][221]["comment"] = {}
+defs["structs"]["ImGuiContext"][221]["comment"]["comments"] = " // Item picker is active (started with DebugStartItemPicker())"
 defs["structs"]["ImGuiContext"][221]["name"] = "DebugItemPickerActive"
 defs["structs"]["ImGuiContext"][221]["type"] = "bool"
 defs["structs"]["ImGuiContext"][222] = {}
-defs["structs"]["ImGuiContext"][222]["comment"] = " // Will call IM_DEBUG_BREAK() when encountering this ID"
+defs["structs"]["ImGuiContext"][222]["comment"] = {}
+defs["structs"]["ImGuiContext"][222]["comment"]["comments"] = " // Will call IM_DEBUG_BREAK() when encountering this ID"
 defs["structs"]["ImGuiContext"][222]["name"] = "DebugItemPickerBreakId"
 defs["structs"]["ImGuiContext"][222]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContext"][223] = {}
+defs["structs"]["ImGuiContext"][223]["comment"] = {}
 defs["structs"]["ImGuiContext"][223]["name"] = "DebugMetricsConfig"
 defs["structs"]["ImGuiContext"][223]["type"] = "ImGuiMetricsConfig"
 defs["structs"]["ImGuiContext"][224] = {}
+defs["structs"]["ImGuiContext"][224]["comment"] = {}
 defs["structs"]["ImGuiContext"][224]["name"] = "DebugStackTool"
 defs["structs"]["ImGuiContext"][224]["type"] = "ImGuiStackTool"
 defs["structs"]["ImGuiContext"][225] = {}
-defs["structs"]["ImGuiContext"][225]["comment"] = "    // Misc // Calculate estimate of framerate for user over the last 2 seconds."
+defs["structs"]["ImGuiContext"][225]["comment"] = {}
+defs["structs"]["ImGuiContext"][225]["comment"]["comments"] = " // Calculate estimate of framerate for user over the last 2 seconds."
+defs["structs"]["ImGuiContext"][225]["comment"]["prevcomments"] = "\
+    // Misc"
 defs["structs"]["ImGuiContext"][225]["name"] = "FramerateSecPerFrame[120]"
 defs["structs"]["ImGuiContext"][225]["size"] = 120
 defs["structs"]["ImGuiContext"][225]["type"] = "float"
 defs["structs"]["ImGuiContext"][226] = {}
+defs["structs"]["ImGuiContext"][226]["comment"] = {}
 defs["structs"]["ImGuiContext"][226]["name"] = "FramerateSecPerFrameIdx"
 defs["structs"]["ImGuiContext"][226]["type"] = "int"
 defs["structs"]["ImGuiContext"][227] = {}
+defs["structs"]["ImGuiContext"][227]["comment"] = {}
 defs["structs"]["ImGuiContext"][227]["name"] = "FramerateSecPerFrameCount"
 defs["structs"]["ImGuiContext"][227]["type"] = "int"
 defs["structs"]["ImGuiContext"][228] = {}
+defs["structs"]["ImGuiContext"][228]["comment"] = {}
 defs["structs"]["ImGuiContext"][228]["name"] = "FramerateSecPerFrameAccum"
 defs["structs"]["ImGuiContext"][228]["type"] = "float"
 defs["structs"]["ImGuiContext"][229] = {}
-defs["structs"]["ImGuiContext"][229]["comment"] = " // Explicit capture override via SetNextFrameWantCaptureMouse()/SetNextFrameWantCaptureKeyboard(). Default to -1."
+defs["structs"]["ImGuiContext"][229]["comment"] = {}
+defs["structs"]["ImGuiContext"][229]["comment"]["comments"] = " // Explicit capture override via SetNextFrameWantCaptureMouse()/SetNextFrameWantCaptureKeyboard(). Default to -1."
 defs["structs"]["ImGuiContext"][229]["name"] = "WantCaptureMouseNextFrame"
 defs["structs"]["ImGuiContext"][229]["type"] = "int"
 defs["structs"]["ImGuiContext"][230] = {}
-defs["structs"]["ImGuiContext"][230]["comment"] = " // \""
+defs["structs"]["ImGuiContext"][230]["comment"] = {}
+defs["structs"]["ImGuiContext"][230]["comment"]["comments"] = " // \""
 defs["structs"]["ImGuiContext"][230]["name"] = "WantCaptureKeyboardNextFrame"
 defs["structs"]["ImGuiContext"][230]["type"] = "int"
 defs["structs"]["ImGuiContext"][231] = {}
+defs["structs"]["ImGuiContext"][231]["comment"] = {}
 defs["structs"]["ImGuiContext"][231]["name"] = "WantTextInputNextFrame"
 defs["structs"]["ImGuiContext"][231]["type"] = "int"
 defs["structs"]["ImGuiContext"][232] = {}
-defs["structs"]["ImGuiContext"][232]["comment"] = " // Temporary text buffer"
+defs["structs"]["ImGuiContext"][232]["comment"] = {}
+defs["structs"]["ImGuiContext"][232]["comment"]["comments"] = " // Temporary text buffer"
 defs["structs"]["ImGuiContext"][232]["name"] = "TempBuffer"
 defs["structs"]["ImGuiContext"][232]["template_type"] = "char"
 defs["structs"]["ImGuiContext"][232]["type"] = "ImVector_char"
 defs["structs"]["ImGuiContextHook"] = {}
 defs["structs"]["ImGuiContextHook"][1] = {}
-defs["structs"]["ImGuiContextHook"][1]["comment"] = " // A unique ID assigned by AddContextHook()"
+defs["structs"]["ImGuiContextHook"][1]["comment"] = {}
+defs["structs"]["ImGuiContextHook"][1]["comment"]["comments"] = " // A unique ID assigned by AddContextHook()"
 defs["structs"]["ImGuiContextHook"][1]["name"] = "HookId"
 defs["structs"]["ImGuiContextHook"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContextHook"][2] = {}
+defs["structs"]["ImGuiContextHook"][2]["comment"] = {}
 defs["structs"]["ImGuiContextHook"][2]["name"] = "Type"
 defs["structs"]["ImGuiContextHook"][2]["type"] = "ImGuiContextHookType"
 defs["structs"]["ImGuiContextHook"][3] = {}
+defs["structs"]["ImGuiContextHook"][3]["comment"] = {}
 defs["structs"]["ImGuiContextHook"][3]["name"] = "Owner"
 defs["structs"]["ImGuiContextHook"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiContextHook"][4] = {}
+defs["structs"]["ImGuiContextHook"][4]["comment"] = {}
 defs["structs"]["ImGuiContextHook"][4]["name"] = "Callback"
 defs["structs"]["ImGuiContextHook"][4]["type"] = "ImGuiContextHookCallback"
 defs["structs"]["ImGuiContextHook"][5] = {}
+defs["structs"]["ImGuiContextHook"][5]["comment"] = {}
 defs["structs"]["ImGuiContextHook"][5]["name"] = "UserData"
 defs["structs"]["ImGuiContextHook"][5]["type"] = "void*"
 defs["structs"]["ImGuiDataTypeInfo"] = {}
 defs["structs"]["ImGuiDataTypeInfo"][1] = {}
-defs["structs"]["ImGuiDataTypeInfo"][1]["comment"] = " // Size in bytes"
+defs["structs"]["ImGuiDataTypeInfo"][1]["comment"] = {}
+defs["structs"]["ImGuiDataTypeInfo"][1]["comment"]["comments"] = " // Size in bytes"
 defs["structs"]["ImGuiDataTypeInfo"][1]["name"] = "Size"
 defs["structs"]["ImGuiDataTypeInfo"][1]["type"] = "size_t"
 defs["structs"]["ImGuiDataTypeInfo"][2] = {}
-defs["structs"]["ImGuiDataTypeInfo"][2]["comment"] = " // Short descriptive name for the type, for debugging"
+defs["structs"]["ImGuiDataTypeInfo"][2]["comment"] = {}
+defs["structs"]["ImGuiDataTypeInfo"][2]["comment"]["comments"] = " // Short descriptive name for the type, for debugging"
 defs["structs"]["ImGuiDataTypeInfo"][2]["name"] = "Name"
 defs["structs"]["ImGuiDataTypeInfo"][2]["type"] = "const char*"
 defs["structs"]["ImGuiDataTypeInfo"][3] = {}
-defs["structs"]["ImGuiDataTypeInfo"][3]["comment"] = " // Default printf format for the type"
+defs["structs"]["ImGuiDataTypeInfo"][3]["comment"] = {}
+defs["structs"]["ImGuiDataTypeInfo"][3]["comment"]["comments"] = " // Default printf format for the type"
 defs["structs"]["ImGuiDataTypeInfo"][3]["name"] = "PrintFmt"
 defs["structs"]["ImGuiDataTypeInfo"][3]["type"] = "const char*"
 defs["structs"]["ImGuiDataTypeInfo"][4] = {}
-defs["structs"]["ImGuiDataTypeInfo"][4]["comment"] = " // Default scanf format for the type"
+defs["structs"]["ImGuiDataTypeInfo"][4]["comment"] = {}
+defs["structs"]["ImGuiDataTypeInfo"][4]["comment"]["comments"] = " // Default scanf format for the type"
 defs["structs"]["ImGuiDataTypeInfo"][4]["name"] = "ScanFmt"
 defs["structs"]["ImGuiDataTypeInfo"][4]["type"] = "const char*"
 defs["structs"]["ImGuiDataTypeTempStorage"] = {}
 defs["structs"]["ImGuiDataTypeTempStorage"][1] = {}
-defs["structs"]["ImGuiDataTypeTempStorage"][1]["comment"] = " // Can fit any data up to ImGuiDataType_COUNT"
+defs["structs"]["ImGuiDataTypeTempStorage"][1]["comment"] = {}
+defs["structs"]["ImGuiDataTypeTempStorage"][1]["comment"]["comments"] = " // Can fit any data up to ImGuiDataType_COUNT"
 defs["structs"]["ImGuiDataTypeTempStorage"][1]["name"] = "Data[8]"
 defs["structs"]["ImGuiDataTypeTempStorage"][1]["size"] = 8
 defs["structs"]["ImGuiDataTypeTempStorage"][1]["type"] = "ImU8"
 defs["structs"]["ImGuiDockContext"] = {}
 defs["structs"]["ImGuiDockContext"][1] = {}
-defs["structs"]["ImGuiDockContext"][1]["comment"] = " // Map ID -> ImGuiDockNode*: Active nodes"
+defs["structs"]["ImGuiDockContext"][1]["comment"] = {}
+defs["structs"]["ImGuiDockContext"][1]["comment"]["comments"] = " // Map ID -> ImGuiDockNode*: Active nodes"
 defs["structs"]["ImGuiDockContext"][1]["name"] = "Nodes"
 defs["structs"]["ImGuiDockContext"][1]["type"] = "ImGuiStorage"
 defs["structs"]["ImGuiDockContext"][2] = {}
+defs["structs"]["ImGuiDockContext"][2]["comment"] = {}
 defs["structs"]["ImGuiDockContext"][2]["name"] = "Requests"
 defs["structs"]["ImGuiDockContext"][2]["template_type"] = "ImGuiDockRequest"
 defs["structs"]["ImGuiDockContext"][2]["type"] = "ImVector_ImGuiDockRequest"
 defs["structs"]["ImGuiDockContext"][3] = {}
+defs["structs"]["ImGuiDockContext"][3]["comment"] = {}
 defs["structs"]["ImGuiDockContext"][3]["name"] = "NodesSettings"
 defs["structs"]["ImGuiDockContext"][3]["template_type"] = "ImGuiDockNodeSettings"
 defs["structs"]["ImGuiDockContext"][3]["type"] = "ImVector_ImGuiDockNodeSettings"
 defs["structs"]["ImGuiDockContext"][4] = {}
+defs["structs"]["ImGuiDockContext"][4]["comment"] = {}
 defs["structs"]["ImGuiDockContext"][4]["name"] = "WantFullRebuild"
 defs["structs"]["ImGuiDockContext"][4]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"] = {}
 defs["structs"]["ImGuiDockNode"][1] = {}
+defs["structs"]["ImGuiDockNode"][1]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][1]["name"] = "ID"
 defs["structs"]["ImGuiDockNode"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiDockNode"][2] = {}
-defs["structs"]["ImGuiDockNode"][2]["comment"] = " // (Write) Flags shared by all nodes of a same dockspace hierarchy (inherited from the root node)"
+defs["structs"]["ImGuiDockNode"][2]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][2]["comment"]["comments"] = " // (Write) Flags shared by all nodes of a same dockspace hierarchy (inherited from the root node)"
 defs["structs"]["ImGuiDockNode"][2]["name"] = "SharedFlags"
 defs["structs"]["ImGuiDockNode"][2]["type"] = "ImGuiDockNodeFlags"
 defs["structs"]["ImGuiDockNode"][3] = {}
-defs["structs"]["ImGuiDockNode"][3]["comment"] = " // (Write) Flags specific to this node"
+defs["structs"]["ImGuiDockNode"][3]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][3]["comment"]["comments"] = " // (Write) Flags specific to this node"
 defs["structs"]["ImGuiDockNode"][3]["name"] = "LocalFlags"
 defs["structs"]["ImGuiDockNode"][3]["type"] = "ImGuiDockNodeFlags"
 defs["structs"]["ImGuiDockNode"][4] = {}
-defs["structs"]["ImGuiDockNode"][4]["comment"] = " // (Write) Flags specific to this node, applied from windows"
+defs["structs"]["ImGuiDockNode"][4]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][4]["comment"]["comments"] = " // (Write) Flags specific to this node, applied from windows"
 defs["structs"]["ImGuiDockNode"][4]["name"] = "LocalFlagsInWindows"
 defs["structs"]["ImGuiDockNode"][4]["type"] = "ImGuiDockNodeFlags"
 defs["structs"]["ImGuiDockNode"][5] = {}
-defs["structs"]["ImGuiDockNode"][5]["comment"] = " // (Read)  Effective flags (== SharedFlags | LocalFlagsInNode | LocalFlagsInWindows)"
+defs["structs"]["ImGuiDockNode"][5]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][5]["comment"]["comments"] = " // (Read)  Effective flags (== SharedFlags | LocalFlagsInNode | LocalFlagsInWindows)"
 defs["structs"]["ImGuiDockNode"][5]["name"] = "MergedFlags"
 defs["structs"]["ImGuiDockNode"][5]["type"] = "ImGuiDockNodeFlags"
 defs["structs"]["ImGuiDockNode"][6] = {}
+defs["structs"]["ImGuiDockNode"][6]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][6]["name"] = "State"
 defs["structs"]["ImGuiDockNode"][6]["type"] = "ImGuiDockNodeState"
 defs["structs"]["ImGuiDockNode"][7] = {}
+defs["structs"]["ImGuiDockNode"][7]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][7]["name"] = "ParentNode"
 defs["structs"]["ImGuiDockNode"][7]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiDockNode"][8] = {}
-defs["structs"]["ImGuiDockNode"][8]["comment"] = " // [Split node only] Child nodes (left/right or top/bottom). Consider switching to an array."
+defs["structs"]["ImGuiDockNode"][8]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][8]["comment"]["comments"] = " // [Split node only] Child nodes (left/right or top/bottom). Consider switching to an array."
 defs["structs"]["ImGuiDockNode"][8]["name"] = "ChildNodes[2]"
 defs["structs"]["ImGuiDockNode"][8]["size"] = 2
 defs["structs"]["ImGuiDockNode"][8]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiDockNode"][9] = {}
-defs["structs"]["ImGuiDockNode"][9]["comment"] = " // Note: unordered list! Iterate TabBar->Tabs for user-order."
+defs["structs"]["ImGuiDockNode"][9]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][9]["comment"]["comments"] = " // Note: unordered list! Iterate TabBar->Tabs for user-order."
 defs["structs"]["ImGuiDockNode"][9]["name"] = "Windows"
 defs["structs"]["ImGuiDockNode"][9]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiDockNode"][9]["type"] = "ImVector_ImGuiWindowPtr"
 defs["structs"]["ImGuiDockNode"][10] = {}
+defs["structs"]["ImGuiDockNode"][10]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][10]["name"] = "TabBar"
 defs["structs"]["ImGuiDockNode"][10]["type"] = "ImGuiTabBar*"
 defs["structs"]["ImGuiDockNode"][11] = {}
-defs["structs"]["ImGuiDockNode"][11]["comment"] = " // Current position"
+defs["structs"]["ImGuiDockNode"][11]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][11]["comment"]["comments"] = " // Current position"
 defs["structs"]["ImGuiDockNode"][11]["name"] = "Pos"
 defs["structs"]["ImGuiDockNode"][11]["type"] = "ImVec2"
 defs["structs"]["ImGuiDockNode"][12] = {}
-defs["structs"]["ImGuiDockNode"][12]["comment"] = " // Current size"
+defs["structs"]["ImGuiDockNode"][12]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][12]["comment"]["comments"] = " // Current size"
 defs["structs"]["ImGuiDockNode"][12]["name"] = "Size"
 defs["structs"]["ImGuiDockNode"][12]["type"] = "ImVec2"
 defs["structs"]["ImGuiDockNode"][13] = {}
-defs["structs"]["ImGuiDockNode"][13]["comment"] = " // [Split node only] Last explicitly written-to size (overridden when using a splitter affecting the node), used to calculate Size."
+defs["structs"]["ImGuiDockNode"][13]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][13]["comment"]["comments"] = " // [Split node only] Last explicitly written-to size (overridden when using a splitter affecting the node), used to calculate Size."
 defs["structs"]["ImGuiDockNode"][13]["name"] = "SizeRef"
 defs["structs"]["ImGuiDockNode"][13]["type"] = "ImVec2"
 defs["structs"]["ImGuiDockNode"][14] = {}
-defs["structs"]["ImGuiDockNode"][14]["comment"] = " // [Split node only] Split axis (X or Y)"
+defs["structs"]["ImGuiDockNode"][14]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][14]["comment"]["comments"] = " // [Split node only] Split axis (X or Y)"
 defs["structs"]["ImGuiDockNode"][14]["name"] = "SplitAxis"
 defs["structs"]["ImGuiDockNode"][14]["type"] = "ImGuiAxis"
 defs["structs"]["ImGuiDockNode"][15] = {}
-defs["structs"]["ImGuiDockNode"][15]["comment"] = " // [Root node only]"
+defs["structs"]["ImGuiDockNode"][15]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][15]["comment"]["comments"] = " // [Root node only]"
 defs["structs"]["ImGuiDockNode"][15]["name"] = "WindowClass"
 defs["structs"]["ImGuiDockNode"][15]["type"] = "ImGuiWindowClass"
 defs["structs"]["ImGuiDockNode"][16] = {}
+defs["structs"]["ImGuiDockNode"][16]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][16]["name"] = "LastBgColor"
 defs["structs"]["ImGuiDockNode"][16]["type"] = "ImU32"
 defs["structs"]["ImGuiDockNode"][17] = {}
+defs["structs"]["ImGuiDockNode"][17]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][17]["name"] = "HostWindow"
 defs["structs"]["ImGuiDockNode"][17]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiDockNode"][18] = {}
-defs["structs"]["ImGuiDockNode"][18]["comment"] = " // Generally point to window which is ID is == SelectedTabID, but when CTRL+Tabbing this can be a different window."
+defs["structs"]["ImGuiDockNode"][18]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][18]["comment"]["comments"] = " // Generally point to window which is ID is == SelectedTabID, but when CTRL+Tabbing this can be a different window."
 defs["structs"]["ImGuiDockNode"][18]["name"] = "VisibleWindow"
 defs["structs"]["ImGuiDockNode"][18]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiDockNode"][19] = {}
-defs["structs"]["ImGuiDockNode"][19]["comment"] = " // [Root node only] Pointer to central node."
+defs["structs"]["ImGuiDockNode"][19]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][19]["comment"]["comments"] = " // [Root node only] Pointer to central node."
 defs["structs"]["ImGuiDockNode"][19]["name"] = "CentralNode"
 defs["structs"]["ImGuiDockNode"][19]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiDockNode"][20] = {}
-defs["structs"]["ImGuiDockNode"][20]["comment"] = " // [Root node only] Set when there is a single visible node within the hierarchy."
+defs["structs"]["ImGuiDockNode"][20]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][20]["comment"]["comments"] = " // [Root node only] Set when there is a single visible node within the hierarchy."
 defs["structs"]["ImGuiDockNode"][20]["name"] = "OnlyNodeWithWindows"
 defs["structs"]["ImGuiDockNode"][20]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiDockNode"][21] = {}
-defs["structs"]["ImGuiDockNode"][21]["comment"] = " // [Root node only]"
+defs["structs"]["ImGuiDockNode"][21]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][21]["comment"]["comments"] = " // [Root node only]"
 defs["structs"]["ImGuiDockNode"][21]["name"] = "CountNodeWithWindows"
 defs["structs"]["ImGuiDockNode"][21]["type"] = "int"
 defs["structs"]["ImGuiDockNode"][22] = {}
-defs["structs"]["ImGuiDockNode"][22]["comment"] = " // Last frame number the node was updated or kept alive explicitly with DockSpace() + ImGuiDockNodeFlags_KeepAliveOnly"
+defs["structs"]["ImGuiDockNode"][22]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][22]["comment"]["comments"] = " // Last frame number the node was updated or kept alive explicitly with DockSpace() + ImGuiDockNodeFlags_KeepAliveOnly"
 defs["structs"]["ImGuiDockNode"][22]["name"] = "LastFrameAlive"
 defs["structs"]["ImGuiDockNode"][22]["type"] = "int"
 defs["structs"]["ImGuiDockNode"][23] = {}
-defs["structs"]["ImGuiDockNode"][23]["comment"] = " // Last frame number the node was updated."
+defs["structs"]["ImGuiDockNode"][23]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][23]["comment"]["comments"] = " // Last frame number the node was updated."
 defs["structs"]["ImGuiDockNode"][23]["name"] = "LastFrameActive"
 defs["structs"]["ImGuiDockNode"][23]["type"] = "int"
 defs["structs"]["ImGuiDockNode"][24] = {}
-defs["structs"]["ImGuiDockNode"][24]["comment"] = " // Last frame number the node was focused."
+defs["structs"]["ImGuiDockNode"][24]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][24]["comment"]["comments"] = " // Last frame number the node was focused."
 defs["structs"]["ImGuiDockNode"][24]["name"] = "LastFrameFocused"
 defs["structs"]["ImGuiDockNode"][24]["type"] = "int"
 defs["structs"]["ImGuiDockNode"][25] = {}
-defs["structs"]["ImGuiDockNode"][25]["comment"] = " // [Root node only] Which of our child docking node (any ancestor in the hierarchy) was last focused."
+defs["structs"]["ImGuiDockNode"][25]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][25]["comment"]["comments"] = " // [Root node only] Which of our child docking node (any ancestor in the hierarchy) was last focused."
 defs["structs"]["ImGuiDockNode"][25]["name"] = "LastFocusedNodeId"
 defs["structs"]["ImGuiDockNode"][25]["type"] = "ImGuiID"
 defs["structs"]["ImGuiDockNode"][26] = {}
-defs["structs"]["ImGuiDockNode"][26]["comment"] = " // [Leaf node only] Which of our tab/window is selected."
+defs["structs"]["ImGuiDockNode"][26]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][26]["comment"]["comments"] = " // [Leaf node only] Which of our tab/window is selected."
 defs["structs"]["ImGuiDockNode"][26]["name"] = "SelectedTabId"
 defs["structs"]["ImGuiDockNode"][26]["type"] = "ImGuiID"
 defs["structs"]["ImGuiDockNode"][27] = {}
-defs["structs"]["ImGuiDockNode"][27]["comment"] = " // [Leaf node only] Set when closing a specific tab/window."
+defs["structs"]["ImGuiDockNode"][27]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][27]["comment"]["comments"] = " // [Leaf node only] Set when closing a specific tab/window."
 defs["structs"]["ImGuiDockNode"][27]["name"] = "WantCloseTabId"
 defs["structs"]["ImGuiDockNode"][27]["type"] = "ImGuiID"
 defs["structs"]["ImGuiDockNode"][28] = {}
 defs["structs"]["ImGuiDockNode"][28]["bitfield"] = "3"
+defs["structs"]["ImGuiDockNode"][28]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][28]["name"] = "AuthorityForPos"
 defs["structs"]["ImGuiDockNode"][28]["type"] = "ImGuiDataAuthority"
 defs["structs"]["ImGuiDockNode"][29] = {}
 defs["structs"]["ImGuiDockNode"][29]["bitfield"] = "3"
+defs["structs"]["ImGuiDockNode"][29]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][29]["name"] = "AuthorityForSize"
 defs["structs"]["ImGuiDockNode"][29]["type"] = "ImGuiDataAuthority"
 defs["structs"]["ImGuiDockNode"][30] = {}
 defs["structs"]["ImGuiDockNode"][30]["bitfield"] = "3"
+defs["structs"]["ImGuiDockNode"][30]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][30]["name"] = "AuthorityForViewport"
 defs["structs"]["ImGuiDockNode"][30]["type"] = "ImGuiDataAuthority"
 defs["structs"]["ImGuiDockNode"][31] = {}
 defs["structs"]["ImGuiDockNode"][31]["bitfield"] = "1"
-defs["structs"]["ImGuiDockNode"][31]["comment"] = " // Set to false when the node is hidden (usually disabled as it has no active window)"
+defs["structs"]["ImGuiDockNode"][31]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][31]["comment"]["comments"] = " // Set to false when the node is hidden (usually disabled as it has no active window)"
 defs["structs"]["ImGuiDockNode"][31]["name"] = "IsVisible"
 defs["structs"]["ImGuiDockNode"][31]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][32] = {}
 defs["structs"]["ImGuiDockNode"][32]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][32]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][32]["name"] = "IsFocused"
 defs["structs"]["ImGuiDockNode"][32]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][33] = {}
 defs["structs"]["ImGuiDockNode"][33]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][33]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][33]["name"] = "IsBgDrawnThisFrame"
 defs["structs"]["ImGuiDockNode"][33]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][34] = {}
 defs["structs"]["ImGuiDockNode"][34]["bitfield"] = "1"
-defs["structs"]["ImGuiDockNode"][34]["comment"] = " // Provide space for a close button (if any of the docked window has one). Note that button may be hidden on window without one."
+defs["structs"]["ImGuiDockNode"][34]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][34]["comment"]["comments"] = " // Provide space for a close button (if any of the docked window has one). Note that button may be hidden on window without one."
 defs["structs"]["ImGuiDockNode"][34]["name"] = "HasCloseButton"
 defs["structs"]["ImGuiDockNode"][34]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][35] = {}
 defs["structs"]["ImGuiDockNode"][35]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][35]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][35]["name"] = "HasWindowMenuButton"
 defs["structs"]["ImGuiDockNode"][35]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][36] = {}
 defs["structs"]["ImGuiDockNode"][36]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][36]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][36]["name"] = "HasCentralNodeChild"
 defs["structs"]["ImGuiDockNode"][36]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][37] = {}
 defs["structs"]["ImGuiDockNode"][37]["bitfield"] = "1"
-defs["structs"]["ImGuiDockNode"][37]["comment"] = " // Set when closing all tabs at once."
+defs["structs"]["ImGuiDockNode"][37]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][37]["comment"]["comments"] = " // Set when closing all tabs at once."
 defs["structs"]["ImGuiDockNode"][37]["name"] = "WantCloseAll"
 defs["structs"]["ImGuiDockNode"][37]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][38] = {}
 defs["structs"]["ImGuiDockNode"][38]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][38]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][38]["name"] = "WantLockSizeOnce"
 defs["structs"]["ImGuiDockNode"][38]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][39] = {}
 defs["structs"]["ImGuiDockNode"][39]["bitfield"] = "1"
-defs["structs"]["ImGuiDockNode"][39]["comment"] = " // After a node extraction we need to transition toward moving the newly created host window"
+defs["structs"]["ImGuiDockNode"][39]["comment"] = {}
+defs["structs"]["ImGuiDockNode"][39]["comment"]["comments"] = " // After a node extraction we need to transition toward moving the newly created host window"
 defs["structs"]["ImGuiDockNode"][39]["name"] = "WantMouseMove"
 defs["structs"]["ImGuiDockNode"][39]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][40] = {}
 defs["structs"]["ImGuiDockNode"][40]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][40]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][40]["name"] = "WantHiddenTabBarUpdate"
 defs["structs"]["ImGuiDockNode"][40]["type"] = "bool"
 defs["structs"]["ImGuiDockNode"][41] = {}
 defs["structs"]["ImGuiDockNode"][41]["bitfield"] = "1"
+defs["structs"]["ImGuiDockNode"][41]["comment"] = {}
 defs["structs"]["ImGuiDockNode"][41]["name"] = "WantHiddenTabBarToggle"
 defs["structs"]["ImGuiDockNode"][41]["type"] = "bool"
 defs["structs"]["ImGuiGroupData"] = {}
 defs["structs"]["ImGuiGroupData"][1] = {}
+defs["structs"]["ImGuiGroupData"][1]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][1]["name"] = "WindowID"
 defs["structs"]["ImGuiGroupData"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiGroupData"][2] = {}
+defs["structs"]["ImGuiGroupData"][2]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][2]["name"] = "BackupCursorPos"
 defs["structs"]["ImGuiGroupData"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiGroupData"][3] = {}
+defs["structs"]["ImGuiGroupData"][3]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][3]["name"] = "BackupCursorMaxPos"
 defs["structs"]["ImGuiGroupData"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiGroupData"][4] = {}
+defs["structs"]["ImGuiGroupData"][4]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][4]["name"] = "BackupIndent"
 defs["structs"]["ImGuiGroupData"][4]["type"] = "ImVec1"
 defs["structs"]["ImGuiGroupData"][5] = {}
+defs["structs"]["ImGuiGroupData"][5]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][5]["name"] = "BackupGroupOffset"
 defs["structs"]["ImGuiGroupData"][5]["type"] = "ImVec1"
 defs["structs"]["ImGuiGroupData"][6] = {}
+defs["structs"]["ImGuiGroupData"][6]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][6]["name"] = "BackupCurrLineSize"
 defs["structs"]["ImGuiGroupData"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiGroupData"][7] = {}
+defs["structs"]["ImGuiGroupData"][7]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][7]["name"] = "BackupCurrLineTextBaseOffset"
 defs["structs"]["ImGuiGroupData"][7]["type"] = "float"
 defs["structs"]["ImGuiGroupData"][8] = {}
+defs["structs"]["ImGuiGroupData"][8]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][8]["name"] = "BackupActiveIdIsAlive"
 defs["structs"]["ImGuiGroupData"][8]["type"] = "ImGuiID"
 defs["structs"]["ImGuiGroupData"][9] = {}
+defs["structs"]["ImGuiGroupData"][9]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][9]["name"] = "BackupActiveIdPreviousFrameIsAlive"
 defs["structs"]["ImGuiGroupData"][9]["type"] = "bool"
 defs["structs"]["ImGuiGroupData"][10] = {}
+defs["structs"]["ImGuiGroupData"][10]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][10]["name"] = "BackupHoveredIdIsAlive"
 defs["structs"]["ImGuiGroupData"][10]["type"] = "bool"
 defs["structs"]["ImGuiGroupData"][11] = {}
+defs["structs"]["ImGuiGroupData"][11]["comment"] = {}
 defs["structs"]["ImGuiGroupData"][11]["name"] = "EmitItem"
 defs["structs"]["ImGuiGroupData"][11]["type"] = "bool"
 defs["structs"]["ImGuiIO"] = {}
 defs["structs"]["ImGuiIO"][1] = {}
-defs["structs"]["ImGuiIO"][1]["comment"] = "\
+defs["structs"]["ImGuiIO"][1]["comment"] = {}
+defs["structs"]["ImGuiIO"][1]["comment"]["comments"] = " // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc."
+defs["structs"]["ImGuiIO"][1]["comment"]["prevcomments"] = "\
     //------------------------------------------------------------------\
     // Configuration                            // Default value\
-    //------------------------------------------------------------------ // = 0              // See ImGuiConfigFlags_ enum. Set by user/application. Gamepad/keyboard navigation options, etc."
+    //------------------------------------------------------------------"
 defs["structs"]["ImGuiIO"][1]["name"] = "ConfigFlags"
 defs["structs"]["ImGuiIO"][1]["type"] = "ImGuiConfigFlags"
 defs["structs"]["ImGuiIO"][2] = {}
-defs["structs"]["ImGuiIO"][2]["comment"] = " // = 0              // See ImGuiBackendFlags_ enum. Set by backend (imgui_impl_xxx files or custom backend) to communicate features supported by the backend."
+defs["structs"]["ImGuiIO"][2]["comment"] = {}
+defs["structs"]["ImGuiIO"][2]["comment"]["comments"] = " // = 0              // See ImGuiBackendFlags_ enum. Set by backend (imgui_impl_xxx files or custom backend) to communicate features supported by the backend."
 defs["structs"]["ImGuiIO"][2]["name"] = "BackendFlags"
 defs["structs"]["ImGuiIO"][2]["type"] = "ImGuiBackendFlags"
 defs["structs"]["ImGuiIO"][3] = {}
-defs["structs"]["ImGuiIO"][3]["comment"] = " // <unset>          // Main display size, in pixels (generally == GetMainViewport()->Size). May change every frame."
+defs["structs"]["ImGuiIO"][3]["comment"] = {}
+defs["structs"]["ImGuiIO"][3]["comment"]["comments"] = " // <unset>          // Main display size, in pixels (generally == GetMainViewport()->Size). May change every frame."
 defs["structs"]["ImGuiIO"][3]["name"] = "DisplaySize"
 defs["structs"]["ImGuiIO"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][4] = {}
-defs["structs"]["ImGuiIO"][4]["comment"] = " // = 1.0f/60.0f     // Time elapsed since last frame, in seconds. May change every frame."
+defs["structs"]["ImGuiIO"][4]["comment"] = {}
+defs["structs"]["ImGuiIO"][4]["comment"]["comments"] = " // = 1.0f/60.0f     // Time elapsed since last frame, in seconds. May change every frame."
 defs["structs"]["ImGuiIO"][4]["name"] = "DeltaTime"
 defs["structs"]["ImGuiIO"][4]["type"] = "float"
 defs["structs"]["ImGuiIO"][5] = {}
-defs["structs"]["ImGuiIO"][5]["comment"] = " // = 5.0f           // Minimum time between saving positions/sizes to .ini file, in seconds."
+defs["structs"]["ImGuiIO"][5]["comment"] = {}
+defs["structs"]["ImGuiIO"][5]["comment"]["comments"] = " // = 5.0f           // Minimum time between saving positions/sizes to .ini file, in seconds."
 defs["structs"]["ImGuiIO"][5]["name"] = "IniSavingRate"
 defs["structs"]["ImGuiIO"][5]["type"] = "float"
 defs["structs"]["ImGuiIO"][6] = {}
-defs["structs"]["ImGuiIO"][6]["comment"] = " // = \"imgui.ini\"    // Path to .ini file (important: default \"imgui.ini\" is relative to current working dir!). Set NULL to disable automatic .ini loading/saving or if you want to manually call LoadIniSettingsXXX() / SaveIniSettingsXXX() functions."
+defs["structs"]["ImGuiIO"][6]["comment"] = {}
+defs["structs"]["ImGuiIO"][6]["comment"]["comments"] = " // = \"imgui.ini\"    // Path to .ini file (important: default \"imgui.ini\" is relative to current working dir!). Set NULL to disable automatic .ini loading/saving or if you want to manually call LoadIniSettingsXXX() / SaveIniSettingsXXX() functions."
 defs["structs"]["ImGuiIO"][6]["name"] = "IniFilename"
 defs["structs"]["ImGuiIO"][6]["type"] = "const char*"
 defs["structs"]["ImGuiIO"][7] = {}
-defs["structs"]["ImGuiIO"][7]["comment"] = " // = \"imgui_log.txt\"// Path to .log file (default parameter to ImGui::LogToFile when no file is specified)."
+defs["structs"]["ImGuiIO"][7]["comment"] = {}
+defs["structs"]["ImGuiIO"][7]["comment"]["comments"] = " // = \"imgui_log.txt\"// Path to .log file (default parameter to ImGui::LogToFile when no file is specified)."
 defs["structs"]["ImGuiIO"][7]["name"] = "LogFilename"
 defs["structs"]["ImGuiIO"][7]["type"] = "const char*"
 defs["structs"]["ImGuiIO"][8] = {}
-defs["structs"]["ImGuiIO"][8]["comment"] = " // = 0.30f          // Time for a double-click, in seconds."
+defs["structs"]["ImGuiIO"][8]["comment"] = {}
+defs["structs"]["ImGuiIO"][8]["comment"]["comments"] = " // = 0.30f          // Time for a double-click, in seconds."
 defs["structs"]["ImGuiIO"][8]["name"] = "MouseDoubleClickTime"
 defs["structs"]["ImGuiIO"][8]["type"] = "float"
 defs["structs"]["ImGuiIO"][9] = {}
-defs["structs"]["ImGuiIO"][9]["comment"] = " // = 6.0f           // Distance threshold to stay in to validate a double-click, in pixels."
+defs["structs"]["ImGuiIO"][9]["comment"] = {}
+defs["structs"]["ImGuiIO"][9]["comment"]["comments"] = " // = 6.0f           // Distance threshold to stay in to validate a double-click, in pixels."
 defs["structs"]["ImGuiIO"][9]["name"] = "MouseDoubleClickMaxDist"
 defs["structs"]["ImGuiIO"][9]["type"] = "float"
 defs["structs"]["ImGuiIO"][10] = {}
-defs["structs"]["ImGuiIO"][10]["comment"] = " // = 6.0f           // Distance threshold before considering we are dragging."
+defs["structs"]["ImGuiIO"][10]["comment"] = {}
+defs["structs"]["ImGuiIO"][10]["comment"]["comments"] = " // = 6.0f           // Distance threshold before considering we are dragging."
 defs["structs"]["ImGuiIO"][10]["name"] = "MouseDragThreshold"
 defs["structs"]["ImGuiIO"][10]["type"] = "float"
 defs["structs"]["ImGuiIO"][11] = {}
-defs["structs"]["ImGuiIO"][11]["comment"] = " // = 0.250f         // When holding a key/button, time before it starts repeating, in seconds (for buttons in Repeat mode, etc.)."
+defs["structs"]["ImGuiIO"][11]["comment"] = {}
+defs["structs"]["ImGuiIO"][11]["comment"]["comments"] = " // = 0.250f         // When holding a key/button, time before it starts repeating, in seconds (for buttons in Repeat mode, etc.)."
 defs["structs"]["ImGuiIO"][11]["name"] = "KeyRepeatDelay"
 defs["structs"]["ImGuiIO"][11]["type"] = "float"
 defs["structs"]["ImGuiIO"][12] = {}
-defs["structs"]["ImGuiIO"][12]["comment"] = " // = 0.050f         // When holding a key/button, rate at which it repeats, in seconds."
+defs["structs"]["ImGuiIO"][12]["comment"] = {}
+defs["structs"]["ImGuiIO"][12]["comment"]["comments"] = " // = 0.050f         // When holding a key/button, rate at which it repeats, in seconds."
 defs["structs"]["ImGuiIO"][12]["name"] = "KeyRepeatRate"
 defs["structs"]["ImGuiIO"][12]["type"] = "float"
 defs["structs"]["ImGuiIO"][13] = {}
-defs["structs"]["ImGuiIO"][13]["comment"] = " // = NULL           // Store your own data for retrieval by callbacks."
+defs["structs"]["ImGuiIO"][13]["comment"] = {}
+defs["structs"]["ImGuiIO"][13]["comment"]["comments"] = " // = NULL           // Store your own data for retrieval by callbacks."
 defs["structs"]["ImGuiIO"][13]["name"] = "UserData"
 defs["structs"]["ImGuiIO"][13]["type"] = "void*"
 defs["structs"]["ImGuiIO"][14] = {}
-defs["structs"]["ImGuiIO"][14]["comment"] = " // <auto>           // Font atlas: load, rasterize and pack one or more fonts into a single texture."
+defs["structs"]["ImGuiIO"][14]["comment"] = {}
+defs["structs"]["ImGuiIO"][14]["comment"]["comments"] = " // <auto>           // Font atlas: load, rasterize and pack one or more fonts into a single texture."
 defs["structs"]["ImGuiIO"][14]["name"] = "Fonts"
 defs["structs"]["ImGuiIO"][14]["type"] = "ImFontAtlas*"
 defs["structs"]["ImGuiIO"][15] = {}
-defs["structs"]["ImGuiIO"][15]["comment"] = " // = 1.0f           // Global scale all fonts"
+defs["structs"]["ImGuiIO"][15]["comment"] = {}
+defs["structs"]["ImGuiIO"][15]["comment"]["comments"] = " // = 1.0f           // Global scale all fonts"
 defs["structs"]["ImGuiIO"][15]["name"] = "FontGlobalScale"
 defs["structs"]["ImGuiIO"][15]["type"] = "float"
 defs["structs"]["ImGuiIO"][16] = {}
-defs["structs"]["ImGuiIO"][16]["comment"] = " // = false          // Allow user scaling text of individual window with CTRL+Wheel."
+defs["structs"]["ImGuiIO"][16]["comment"] = {}
+defs["structs"]["ImGuiIO"][16]["comment"]["comments"] = " // = false          // Allow user scaling text of individual window with CTRL+Wheel."
 defs["structs"]["ImGuiIO"][16]["name"] = "FontAllowUserScaling"
 defs["structs"]["ImGuiIO"][16]["type"] = "bool"
 defs["structs"]["ImGuiIO"][17] = {}
-defs["structs"]["ImGuiIO"][17]["comment"] = " // = NULL           // Font to use on NewFrame(). Use NULL to uses Fonts->Fonts[0]."
+defs["structs"]["ImGuiIO"][17]["comment"] = {}
+defs["structs"]["ImGuiIO"][17]["comment"]["comments"] = " // = NULL           // Font to use on NewFrame(). Use NULL to uses Fonts->Fonts[0]."
 defs["structs"]["ImGuiIO"][17]["name"] = "FontDefault"
 defs["structs"]["ImGuiIO"][17]["type"] = "ImFont*"
 defs["structs"]["ImGuiIO"][18] = {}
-defs["structs"]["ImGuiIO"][18]["comment"] = " // = (1, 1)         // For retina display or other situations where window coordinates are different from framebuffer coordinates. This generally ends up in ImDrawData::FramebufferScale."
+defs["structs"]["ImGuiIO"][18]["comment"] = {}
+defs["structs"]["ImGuiIO"][18]["comment"]["comments"] = " // = (1, 1)         // For retina display or other situations where window coordinates are different from framebuffer coordinates. This generally ends up in ImDrawData::FramebufferScale."
 defs["structs"]["ImGuiIO"][18]["name"] = "DisplayFramebufferScale"
 defs["structs"]["ImGuiIO"][18]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][19] = {}
-defs["structs"]["ImGuiIO"][19]["comment"] = "    // Docking options (when ImGuiConfigFlags_DockingEnable is set) // = false          // Simplified docking mode: disable window splitting, so docking is limited to merging multiple windows together into tab-bars."
+defs["structs"]["ImGuiIO"][19]["comment"] = {}
+defs["structs"]["ImGuiIO"][19]["comment"]["comments"] = " // = false          // Simplified docking mode: disable window splitting, so docking is limited to merging multiple windows together into tab-bars."
+defs["structs"]["ImGuiIO"][19]["comment"]["prevcomments"] = "\
+    // Docking options (when ImGuiConfigFlags_DockingEnable is set)"
 defs["structs"]["ImGuiIO"][19]["name"] = "ConfigDockingNoSplit"
 defs["structs"]["ImGuiIO"][19]["type"] = "bool"
 defs["structs"]["ImGuiIO"][20] = {}
-defs["structs"]["ImGuiIO"][20]["comment"] = " // = false          // Enable docking with holding Shift key (reduce visual noise, allows dropping in wider space)"
+defs["structs"]["ImGuiIO"][20]["comment"] = {}
+defs["structs"]["ImGuiIO"][20]["comment"]["comments"] = " // = false          // Enable docking with holding Shift key (reduce visual noise, allows dropping in wider space)"
 defs["structs"]["ImGuiIO"][20]["name"] = "ConfigDockingWithShift"
 defs["structs"]["ImGuiIO"][20]["type"] = "bool"
 defs["structs"]["ImGuiIO"][21] = {}
-defs["structs"]["ImGuiIO"][21]["comment"] = " // = false          // [BETA] [FIXME: This currently creates regression with auto-sizing and general overhead] Make every single floating window display within a docking node."
+defs["structs"]["ImGuiIO"][21]["comment"] = {}
+defs["structs"]["ImGuiIO"][21]["comment"]["comments"] = " // = false          // [BETA] [FIXME: This currently creates regression with auto-sizing and general overhead] Make every single floating window display within a docking node."
 defs["structs"]["ImGuiIO"][21]["name"] = "ConfigDockingAlwaysTabBar"
 defs["structs"]["ImGuiIO"][21]["type"] = "bool"
 defs["structs"]["ImGuiIO"][22] = {}
-defs["structs"]["ImGuiIO"][22]["comment"] = "// = false          // [BETA] Make window or viewport transparent when docking and only display docking boxes on the target viewport. Useful if rendering of multiple viewport cannot be synced. Best used with ConfigViewportsNoAutoMerge."
+defs["structs"]["ImGuiIO"][22]["comment"] = {}
+defs["structs"]["ImGuiIO"][22]["comment"]["comments"] = "// = false          // [BETA] Make window or viewport transparent when docking and only display docking boxes on the target viewport. Useful if rendering of multiple viewport cannot be synced. Best used with ConfigViewportsNoAutoMerge."
 defs["structs"]["ImGuiIO"][22]["name"] = "ConfigDockingTransparentPayload"
 defs["structs"]["ImGuiIO"][22]["type"] = "bool"
 defs["structs"]["ImGuiIO"][23] = {}
-defs["structs"]["ImGuiIO"][23]["comment"] = "    // Viewport options (when ImGuiConfigFlags_ViewportsEnable is set) // = false;         // Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it. May also set ImGuiViewportFlags_NoAutoMerge on individual viewport."
+defs["structs"]["ImGuiIO"][23]["comment"] = {}
+defs["structs"]["ImGuiIO"][23]["comment"]["comments"] = " // = false;         // Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it. May also set ImGuiViewportFlags_NoAutoMerge on individual viewport."
+defs["structs"]["ImGuiIO"][23]["comment"]["prevcomments"] = "\
+    // Viewport options (when ImGuiConfigFlags_ViewportsEnable is set)"
 defs["structs"]["ImGuiIO"][23]["name"] = "ConfigViewportsNoAutoMerge"
 defs["structs"]["ImGuiIO"][23]["type"] = "bool"
 defs["structs"]["ImGuiIO"][24] = {}
-defs["structs"]["ImGuiIO"][24]["comment"] = " // = false          // Disable default OS task bar icon flag for secondary viewports. When a viewport doesn't want a task bar icon, ImGuiViewportFlags_NoTaskBarIcon will be set on it."
+defs["structs"]["ImGuiIO"][24]["comment"] = {}
+defs["structs"]["ImGuiIO"][24]["comment"]["comments"] = " // = false          // Disable default OS task bar icon flag for secondary viewports. When a viewport doesn't want a task bar icon, ImGuiViewportFlags_NoTaskBarIcon will be set on it."
 defs["structs"]["ImGuiIO"][24]["name"] = "ConfigViewportsNoTaskBarIcon"
 defs["structs"]["ImGuiIO"][24]["type"] = "bool"
 defs["structs"]["ImGuiIO"][25] = {}
-defs["structs"]["ImGuiIO"][25]["comment"] = " // = true           // Disable default OS window decoration flag for secondary viewports. When a viewport doesn't want window decorations, ImGuiViewportFlags_NoDecoration will be set on it. Enabling decoration can create subsequent issues at OS levels (e.g. minimum window size)."
+defs["structs"]["ImGuiIO"][25]["comment"] = {}
+defs["structs"]["ImGuiIO"][25]["comment"]["comments"] = " // = true           // Disable default OS window decoration flag for secondary viewports. When a viewport doesn't want window decorations, ImGuiViewportFlags_NoDecoration will be set on it. Enabling decoration can create subsequent issues at OS levels (e.g. minimum window size)."
 defs["structs"]["ImGuiIO"][25]["name"] = "ConfigViewportsNoDecoration"
 defs["structs"]["ImGuiIO"][25]["type"] = "bool"
 defs["structs"]["ImGuiIO"][26] = {}
-defs["structs"]["ImGuiIO"][26]["comment"] = " // = false          // Disable default OS parenting to main viewport for secondary viewports. By default, viewports are marked with ParentViewportId = <main_viewport>, expecting the platform backend to setup a parent/child relationship between the OS windows (some backend may ignore this). Set to true if you want the default to be 0, then all viewports will be top-level OS windows."
+defs["structs"]["ImGuiIO"][26]["comment"] = {}
+defs["structs"]["ImGuiIO"][26]["comment"]["comments"] = " // = false          // Disable default OS parenting to main viewport for secondary viewports. By default, viewports are marked with ParentViewportId = <main_viewport>, expecting the platform backend to setup a parent/child relationship between the OS windows (some backend may ignore this). Set to true if you want the default to be 0, then all viewports will be top-level OS windows."
 defs["structs"]["ImGuiIO"][26]["name"] = "ConfigViewportsNoDefaultParent"
 defs["structs"]["ImGuiIO"][26]["type"] = "bool"
 defs["structs"]["ImGuiIO"][27] = {}
-defs["structs"]["ImGuiIO"][27]["comment"] = "    // Miscellaneous options // = false          // Request ImGui to draw a mouse cursor for you (if you are on a platform without a mouse cursor). Cannot be easily renamed to 'io.ConfigXXX' because this is frequently used by backend implementations."
+defs["structs"]["ImGuiIO"][27]["comment"] = {}
+defs["structs"]["ImGuiIO"][27]["comment"]["comments"] = " // = false          // Request ImGui to draw a mouse cursor for you (if you are on a platform without a mouse cursor). Cannot be easily renamed to 'io.ConfigXXX' because this is frequently used by backend implementations."
+defs["structs"]["ImGuiIO"][27]["comment"]["prevcomments"] = "\
+    // Miscellaneous options"
 defs["structs"]["ImGuiIO"][27]["name"] = "MouseDrawCursor"
 defs["structs"]["ImGuiIO"][27]["type"] = "bool"
 defs["structs"]["ImGuiIO"][28] = {}
-defs["structs"]["ImGuiIO"][28]["comment"] = " // = defined(__APPLE__) // OS X style: Text editing cursor movement using Alt instead of Ctrl, Shortcuts using Cmd/Super instead of Ctrl, Line/Text Start and End using Cmd+Arrows instead of Home/End, Double click selects by word instead of selecting whole text, Multi-selection in lists uses Cmd/Super instead of Ctrl."
+defs["structs"]["ImGuiIO"][28]["comment"] = {}
+defs["structs"]["ImGuiIO"][28]["comment"]["comments"] = " // = defined(__APPLE__) // OS X style: Text editing cursor movement using Alt instead of Ctrl, Shortcuts using Cmd/Super instead of Ctrl, Line/Text Start and End using Cmd+Arrows instead of Home/End, Double click selects by word instead of selecting whole text, Multi-selection in lists uses Cmd/Super instead of Ctrl."
 defs["structs"]["ImGuiIO"][28]["name"] = "ConfigMacOSXBehaviors"
 defs["structs"]["ImGuiIO"][28]["type"] = "bool"
 defs["structs"]["ImGuiIO"][29] = {}
-defs["structs"]["ImGuiIO"][29]["comment"] = " // = true           // Enable input queue trickling: some types of events submitted during the same frame (e.g. button down + up) will be spread over multiple frames, improving interactions with low framerates."
+defs["structs"]["ImGuiIO"][29]["comment"] = {}
+defs["structs"]["ImGuiIO"][29]["comment"]["comments"] = " // = true           // Enable input queue trickling: some types of events submitted during the same frame (e.g. button down + up) will be spread over multiple frames, improving interactions with low framerates."
 defs["structs"]["ImGuiIO"][29]["name"] = "ConfigInputTrickleEventQueue"
 defs["structs"]["ImGuiIO"][29]["type"] = "bool"
 defs["structs"]["ImGuiIO"][30] = {}
-defs["structs"]["ImGuiIO"][30]["comment"] = " // = true           // Enable blinking cursor (optional as some users consider it to be distracting)."
+defs["structs"]["ImGuiIO"][30]["comment"] = {}
+defs["structs"]["ImGuiIO"][30]["comment"]["comments"] = " // = true           // Enable blinking cursor (optional as some users consider it to be distracting)."
 defs["structs"]["ImGuiIO"][30]["name"] = "ConfigInputTextCursorBlink"
 defs["structs"]["ImGuiIO"][30]["type"] = "bool"
 defs["structs"]["ImGuiIO"][31] = {}
-defs["structs"]["ImGuiIO"][31]["comment"] = " // = false          // [BETA] Enable turning DragXXX widgets into text input with a simple mouse click-release (without moving). Not desirable on devices without a keyboard."
+defs["structs"]["ImGuiIO"][31]["comment"] = {}
+defs["structs"]["ImGuiIO"][31]["comment"]["comments"] = " // = false          // [BETA] Enable turning DragXXX widgets into text input with a simple mouse click-release (without moving). Not desirable on devices without a keyboard."
 defs["structs"]["ImGuiIO"][31]["name"] = "ConfigDragClickToInputText"
 defs["structs"]["ImGuiIO"][31]["type"] = "bool"
 defs["structs"]["ImGuiIO"][32] = {}
-defs["structs"]["ImGuiIO"][32]["comment"] = " // = true           // Enable resizing of windows from their edges and from the lower-left corner. This requires (io.BackendFlags & ImGuiBackendFlags_HasMouseCursors) because it needs mouse cursor feedback. (This used to be a per-window ImGuiWindowFlags_ResizeFromAnySide flag)"
+defs["structs"]["ImGuiIO"][32]["comment"] = {}
+defs["structs"]["ImGuiIO"][32]["comment"]["comments"] = " // = true           // Enable resizing of windows from their edges and from the lower-left corner. This requires (io.BackendFlags & ImGuiBackendFlags_HasMouseCursors) because it needs mouse cursor feedback. (This used to be a per-window ImGuiWindowFlags_ResizeFromAnySide flag)"
 defs["structs"]["ImGuiIO"][32]["name"] = "ConfigWindowsResizeFromEdges"
 defs["structs"]["ImGuiIO"][32]["type"] = "bool"
 defs["structs"]["ImGuiIO"][33] = {}
-defs["structs"]["ImGuiIO"][33]["comment"] = " // = false       // Enable allowing to move windows only when clicking on their title bar. Does not apply to windows without a title bar."
+defs["structs"]["ImGuiIO"][33]["comment"] = {}
+defs["structs"]["ImGuiIO"][33]["comment"]["comments"] = " // = false       // Enable allowing to move windows only when clicking on their title bar. Does not apply to windows without a title bar."
 defs["structs"]["ImGuiIO"][33]["name"] = "ConfigWindowsMoveFromTitleBarOnly"
 defs["structs"]["ImGuiIO"][33]["type"] = "bool"
 defs["structs"]["ImGuiIO"][34] = {}
-defs["structs"]["ImGuiIO"][34]["comment"] = " // = 60.0f          // Timer (in seconds) to free transient windows/tables memory buffers when unused. Set to -1.0f to disable."
+defs["structs"]["ImGuiIO"][34]["comment"] = {}
+defs["structs"]["ImGuiIO"][34]["comment"]["comments"] = " // = 60.0f          // Timer (in seconds) to free transient windows/tables memory buffers when unused. Set to -1.0f to disable."
 defs["structs"]["ImGuiIO"][34]["name"] = "ConfigMemoryCompactTimer"
 defs["structs"]["ImGuiIO"][34]["type"] = "float"
 defs["structs"]["ImGuiIO"][35] = {}
-defs["structs"]["ImGuiIO"][35]["comment"] = "    // Optional: Platform/Renderer backend name (informational only! will be displayed in About Window) + User data for backend/wrappers to store their own stuff. // = NULL"
+defs["structs"]["ImGuiIO"][35]["comment"] = {}
+defs["structs"]["ImGuiIO"][35]["comment"]["comments"] = " // = NULL"
+defs["structs"]["ImGuiIO"][35]["comment"]["prevcomments"] = "\
+    //------------------------------------------------------------------\
+    // Platform Functions\
+    // (the imgui_impl_xxxx backend files are setting those up for you)\
+    //------------------------------------------------------------------\
+    // Optional: Platform/Renderer backend name (informational only! will be displayed in About Window) + User data for backend/wrappers to store their own stuff."
 defs["structs"]["ImGuiIO"][35]["name"] = "BackendPlatformName"
 defs["structs"]["ImGuiIO"][35]["type"] = "const char*"
 defs["structs"]["ImGuiIO"][36] = {}
-defs["structs"]["ImGuiIO"][36]["comment"] = " // = NULL"
+defs["structs"]["ImGuiIO"][36]["comment"] = {}
+defs["structs"]["ImGuiIO"][36]["comment"]["comments"] = " // = NULL"
 defs["structs"]["ImGuiIO"][36]["name"] = "BackendRendererName"
 defs["structs"]["ImGuiIO"][36]["type"] = "const char*"
 defs["structs"]["ImGuiIO"][37] = {}
-defs["structs"]["ImGuiIO"][37]["comment"] = " // = NULL           // User data for platform backend"
+defs["structs"]["ImGuiIO"][37]["comment"] = {}
+defs["structs"]["ImGuiIO"][37]["comment"]["comments"] = " // = NULL           // User data for platform backend"
 defs["structs"]["ImGuiIO"][37]["name"] = "BackendPlatformUserData"
 defs["structs"]["ImGuiIO"][37]["type"] = "void*"
 defs["structs"]["ImGuiIO"][38] = {}
-defs["structs"]["ImGuiIO"][38]["comment"] = " // = NULL           // User data for renderer backend"
+defs["structs"]["ImGuiIO"][38]["comment"] = {}
+defs["structs"]["ImGuiIO"][38]["comment"]["comments"] = " // = NULL           // User data for renderer backend"
 defs["structs"]["ImGuiIO"][38]["name"] = "BackendRendererUserData"
 defs["structs"]["ImGuiIO"][38]["type"] = "void*"
 defs["structs"]["ImGuiIO"][39] = {}
-defs["structs"]["ImGuiIO"][39]["comment"] = " // = NULL           // User data for non C++ programming language backend"
+defs["structs"]["ImGuiIO"][39]["comment"] = {}
+defs["structs"]["ImGuiIO"][39]["comment"]["comments"] = " // = NULL           // User data for non C++ programming language backend"
 defs["structs"]["ImGuiIO"][39]["name"] = "BackendLanguageUserData"
 defs["structs"]["ImGuiIO"][39]["type"] = "void*"
 defs["structs"]["ImGuiIO"][40] = {}
-defs["structs"]["ImGuiIO"][40]["comment"] = "    // Optional: Access OS clipboard\
+defs["structs"]["ImGuiIO"][40]["comment"] = {}
+defs["structs"]["ImGuiIO"][40]["comment"]["prevcomments"] = "\
+    // Optional: Access OS clipboard\
     // (default to use native Win32 clipboard on Windows, otherwise uses a private clipboard. Override to access OS clipboard on other architectures)"
 defs["structs"]["ImGuiIO"][40]["name"] = "GetClipboardTextFn"
 defs["structs"]["ImGuiIO"][40]["type"] = "const char*(*)(void* user_data)"
 defs["structs"]["ImGuiIO"][41] = {}
+defs["structs"]["ImGuiIO"][41]["comment"] = {}
 defs["structs"]["ImGuiIO"][41]["name"] = "SetClipboardTextFn"
 defs["structs"]["ImGuiIO"][41]["type"] = "void(*)(void* user_data,const char* text)"
 defs["structs"]["ImGuiIO"][42] = {}
+defs["structs"]["ImGuiIO"][42]["comment"] = {}
 defs["structs"]["ImGuiIO"][42]["name"] = "ClipboardUserData"
 defs["structs"]["ImGuiIO"][42]["type"] = "void*"
 defs["structs"]["ImGuiIO"][43] = {}
-defs["structs"]["ImGuiIO"][43]["comment"] = "    // Optional: Notify OS Input Method Editor of the screen position of your cursor for text input position (e.g. when using Japanese/Chinese IME on Windows)\
+defs["structs"]["ImGuiIO"][43]["comment"] = {}
+defs["structs"]["ImGuiIO"][43]["comment"]["prevcomments"] = "\
+    // Optional: Notify OS Input Method Editor of the screen position of your cursor for text input position (e.g. when using Japanese/Chinese IME on Windows)\
     // (default to use native imm32 api on Windows)"
 defs["structs"]["ImGuiIO"][43]["name"] = "SetPlatformImeDataFn"
 defs["structs"]["ImGuiIO"][43]["type"] = "void(*)(ImGuiViewport* viewport,ImGuiPlatformImeData* data)"
 defs["structs"]["ImGuiIO"][44] = {}
-defs["structs"]["ImGuiIO"][44]["comment"] = " // Unused field to keep data structure the same size."
+defs["structs"]["ImGuiIO"][44]["comment"] = {}
+defs["structs"]["ImGuiIO"][44]["comment"]["comments"] = " // Unused field to keep data structure the same size."
 defs["structs"]["ImGuiIO"][44]["name"] = "_UnusedPadding"
 defs["structs"]["ImGuiIO"][44]["type"] = "void*"
 defs["structs"]["ImGuiIO"][45] = {}
-defs["structs"]["ImGuiIO"][45]["comment"] = "    //------------------------------------------------------------------\
+defs["structs"]["ImGuiIO"][45]["comment"] = {}
+defs["structs"]["ImGuiIO"][45]["comment"]["comments"] = " // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.)."
+defs["structs"]["ImGuiIO"][45]["comment"]["prevcomments"] = "\
+    //------------------------------------------------------------------\
     // Output - Updated by NewFrame() or EndFrame()/Render()\
     // (when reading from the io.WantCaptureMouse, io.WantCaptureKeyboard flags to dispatch your inputs, it is\
     //  generally easier and more correct to use their state BEFORE calling NewFrame(). See FAQ for details!)\
-    //------------------------------------------------------------------ // Set when Dear ImGui will use mouse inputs, in this case do not dispatch them to your main game/application (either way, always pass on mouse inputs to imgui). (e.g. unclicked mouse is hovering over an imgui window, widget is active, mouse was clicked over an imgui window, etc.)."
+    //------------------------------------------------------------------"
 defs["structs"]["ImGuiIO"][45]["name"] = "WantCaptureMouse"
 defs["structs"]["ImGuiIO"][45]["type"] = "bool"
 defs["structs"]["ImGuiIO"][46] = {}
-defs["structs"]["ImGuiIO"][46]["comment"] = " // Set when Dear ImGui will use keyboard inputs, in this case do not dispatch them to your main game/application (either way, always pass keyboard inputs to imgui). (e.g. InputText active, or an imgui window is focused and navigation is enabled, etc.)."
+defs["structs"]["ImGuiIO"][46]["comment"] = {}
+defs["structs"]["ImGuiIO"][46]["comment"]["comments"] = " // Set when Dear ImGui will use keyboard inputs, in this case do not dispatch them to your main game/application (either way, always pass keyboard inputs to imgui). (e.g. InputText active, or an imgui window is focused and navigation is enabled, etc.)."
 defs["structs"]["ImGuiIO"][46]["name"] = "WantCaptureKeyboard"
 defs["structs"]["ImGuiIO"][46]["type"] = "bool"
 defs["structs"]["ImGuiIO"][47] = {}
-defs["structs"]["ImGuiIO"][47]["comment"] = " // Mobile/console: when set, you may display an on-screen keyboard. This is set by Dear ImGui when it wants textual keyboard input to happen (e.g. when a InputText widget is active)."
+defs["structs"]["ImGuiIO"][47]["comment"] = {}
+defs["structs"]["ImGuiIO"][47]["comment"]["comments"] = " // Mobile/console: when set, you may display an on-screen keyboard. This is set by Dear ImGui when it wants textual keyboard input to happen (e.g. when a InputText widget is active)."
 defs["structs"]["ImGuiIO"][47]["name"] = "WantTextInput"
 defs["structs"]["ImGuiIO"][47]["type"] = "bool"
 defs["structs"]["ImGuiIO"][48] = {}
-defs["structs"]["ImGuiIO"][48]["comment"] = " // MousePos has been altered, backend should reposition mouse on next frame. Rarely used! Set only when ImGuiConfigFlags_NavEnableSetMousePos flag is enabled."
+defs["structs"]["ImGuiIO"][48]["comment"] = {}
+defs["structs"]["ImGuiIO"][48]["comment"]["comments"] = " // MousePos has been altered, backend should reposition mouse on next frame. Rarely used! Set only when ImGuiConfigFlags_NavEnableSetMousePos flag is enabled."
 defs["structs"]["ImGuiIO"][48]["name"] = "WantSetMousePos"
 defs["structs"]["ImGuiIO"][48]["type"] = "bool"
 defs["structs"]["ImGuiIO"][49] = {}
-defs["structs"]["ImGuiIO"][49]["comment"] = " // When manual .ini load/save is active (io.IniFilename == NULL), this will be set to notify your application that you can call SaveIniSettingsToMemory() and save yourself. Important: clear io.WantSaveIniSettings yourself after saving!"
+defs["structs"]["ImGuiIO"][49]["comment"] = {}
+defs["structs"]["ImGuiIO"][49]["comment"]["comments"] = " // When manual .ini load/save is active (io.IniFilename == NULL), this will be set to notify your application that you can call SaveIniSettingsToMemory() and save yourself. Important: clear io.WantSaveIniSettings yourself after saving!"
 defs["structs"]["ImGuiIO"][49]["name"] = "WantSaveIniSettings"
 defs["structs"]["ImGuiIO"][49]["type"] = "bool"
 defs["structs"]["ImGuiIO"][50] = {}
-defs["structs"]["ImGuiIO"][50]["comment"] = " // Keyboard/Gamepad navigation is currently allowed (will handle ImGuiKey_NavXXX events) = a window is focused and it doesn't use the ImGuiWindowFlags_NoNavInputs flag."
+defs["structs"]["ImGuiIO"][50]["comment"] = {}
+defs["structs"]["ImGuiIO"][50]["comment"]["comments"] = " // Keyboard/Gamepad navigation is currently allowed (will handle ImGuiKey_NavXXX events) = a window is focused and it doesn't use the ImGuiWindowFlags_NoNavInputs flag."
 defs["structs"]["ImGuiIO"][50]["name"] = "NavActive"
 defs["structs"]["ImGuiIO"][50]["type"] = "bool"
 defs["structs"]["ImGuiIO"][51] = {}
-defs["structs"]["ImGuiIO"][51]["comment"] = " // Keyboard/Gamepad navigation is visible and allowed (will handle ImGuiKey_NavXXX events)."
+defs["structs"]["ImGuiIO"][51]["comment"] = {}
+defs["structs"]["ImGuiIO"][51]["comment"]["comments"] = " // Keyboard/Gamepad navigation is visible and allowed (will handle ImGuiKey_NavXXX events)."
 defs["structs"]["ImGuiIO"][51]["name"] = "NavVisible"
 defs["structs"]["ImGuiIO"][51]["type"] = "bool"
 defs["structs"]["ImGuiIO"][52] = {}
-defs["structs"]["ImGuiIO"][52]["comment"] = " // Rough estimate of application framerate, in frame per second. Solely for convenience. Rolling average estimation based on io.DeltaTime over 120 frames."
+defs["structs"]["ImGuiIO"][52]["comment"] = {}
+defs["structs"]["ImGuiIO"][52]["comment"]["comments"] = " // Rough estimate of application framerate, in frame per second. Solely for convenience. Rolling average estimation based on io.DeltaTime over 120 frames."
 defs["structs"]["ImGuiIO"][52]["name"] = "Framerate"
 defs["structs"]["ImGuiIO"][52]["type"] = "float"
 defs["structs"]["ImGuiIO"][53] = {}
-defs["structs"]["ImGuiIO"][53]["comment"] = " // Vertices output during last call to Render()"
+defs["structs"]["ImGuiIO"][53]["comment"] = {}
+defs["structs"]["ImGuiIO"][53]["comment"]["comments"] = " // Vertices output during last call to Render()"
 defs["structs"]["ImGuiIO"][53]["name"] = "MetricsRenderVertices"
 defs["structs"]["ImGuiIO"][53]["type"] = "int"
 defs["structs"]["ImGuiIO"][54] = {}
-defs["structs"]["ImGuiIO"][54]["comment"] = " // Indices output during last call to Render() = number of triangles * 3"
+defs["structs"]["ImGuiIO"][54]["comment"] = {}
+defs["structs"]["ImGuiIO"][54]["comment"]["comments"] = " // Indices output during last call to Render() = number of triangles * 3"
 defs["structs"]["ImGuiIO"][54]["name"] = "MetricsRenderIndices"
 defs["structs"]["ImGuiIO"][54]["type"] = "int"
 defs["structs"]["ImGuiIO"][55] = {}
-defs["structs"]["ImGuiIO"][55]["comment"] = " // Number of visible windows"
+defs["structs"]["ImGuiIO"][55]["comment"] = {}
+defs["structs"]["ImGuiIO"][55]["comment"]["comments"] = " // Number of visible windows"
 defs["structs"]["ImGuiIO"][55]["name"] = "MetricsRenderWindows"
 defs["structs"]["ImGuiIO"][55]["type"] = "int"
 defs["structs"]["ImGuiIO"][56] = {}
-defs["structs"]["ImGuiIO"][56]["comment"] = " // Number of active windows"
+defs["structs"]["ImGuiIO"][56]["comment"] = {}
+defs["structs"]["ImGuiIO"][56]["comment"]["comments"] = " // Number of active windows"
 defs["structs"]["ImGuiIO"][56]["name"] = "MetricsActiveWindows"
 defs["structs"]["ImGuiIO"][56]["type"] = "int"
 defs["structs"]["ImGuiIO"][57] = {}
-defs["structs"]["ImGuiIO"][57]["comment"] = " // Number of active allocations, updated by MemAlloc/MemFree based on current context. May be off if you have multiple imgui contexts."
+defs["structs"]["ImGuiIO"][57]["comment"] = {}
+defs["structs"]["ImGuiIO"][57]["comment"]["comments"] = " // Number of active allocations, updated by MemAlloc/MemFree based on current context. May be off if you have multiple imgui contexts."
 defs["structs"]["ImGuiIO"][57]["name"] = "MetricsActiveAllocations"
 defs["structs"]["ImGuiIO"][57]["type"] = "int"
 defs["structs"]["ImGuiIO"][58] = {}
-defs["structs"]["ImGuiIO"][58]["comment"] = " // Mouse delta. Note that this is zero if either current or previous position are invalid (-FLT_MAX,-FLT_MAX), so a disappearing/reappearing mouse won't have a huge delta."
+defs["structs"]["ImGuiIO"][58]["comment"] = {}
+defs["structs"]["ImGuiIO"][58]["comment"]["comments"] = " // Mouse delta. Note that this is zero if either current or previous position are invalid (-FLT_MAX,-FLT_MAX), so a disappearing/reappearing mouse won't have a huge delta."
 defs["structs"]["ImGuiIO"][58]["name"] = "MouseDelta"
 defs["structs"]["ImGuiIO"][58]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][59] = {}
-defs["structs"]["ImGuiIO"][59]["comment"] = "    // Legacy: before 1.87, we required backend to fill io.KeyMap[] (imgui->native map) during initialization and io.KeysDown[] (native indices) every frame.\
-    // This is still temporarily supported as a legacy feature. However the new preferred scheme is for backend to call io.AddKeyEvent(). // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512."
+defs["structs"]["ImGuiIO"][59]["comment"] = {}
+defs["structs"]["ImGuiIO"][59]["comment"]["comments"] = " // [LEGACY] Input: map of indices into the KeysDown[512] entries array which represent your \"native\" keyboard state. The first 512 are now unused and should be kept zero. Legacy backend will write into KeyMap[] using ImGuiKey_ indices which are always >512."
+defs["structs"]["ImGuiIO"][59]["comment"]["prevcomments"] = "\
+    // Legacy: before 1.87, we required backend to fill io.KeyMap[] (imgui->native map) during initialization and io.KeysDown[] (native indices) every frame.\
+    // This is still temporarily supported as a legacy feature. However the new preferred scheme is for backend to call io.AddKeyEvent()."
 defs["structs"]["ImGuiIO"][59]["name"] = "KeyMap[ImGuiKey_COUNT]"
 defs["structs"]["ImGuiIO"][59]["size"] = 645
 defs["structs"]["ImGuiIO"][59]["type"] = "int"
 defs["structs"]["ImGuiIO"][60] = {}
-defs["structs"]["ImGuiIO"][60]["comment"] = " // [LEGACY] Input: Keyboard keys that are pressed (ideally left in the \"native\" order your engine has access to keyboard keys, so you can use your own defines/enums for keys). This used to be [512] sized. It is now ImGuiKey_COUNT to allow legacy io.KeysDown[GetKeyIndex(...)] to work without an overflow."
+defs["structs"]["ImGuiIO"][60]["comment"] = {}
+defs["structs"]["ImGuiIO"][60]["comment"]["comments"] = " // [LEGACY] Input: Keyboard keys that are pressed (ideally left in the \"native\" order your engine has access to keyboard keys, so you can use your own defines/enums for keys). This used to be [512] sized. It is now ImGuiKey_COUNT to allow legacy io.KeysDown[GetKeyIndex(...)] to work without an overflow."
 defs["structs"]["ImGuiIO"][60]["name"] = "KeysDown[ImGuiKey_COUNT]"
 defs["structs"]["ImGuiIO"][60]["size"] = 645
 defs["structs"]["ImGuiIO"][60]["type"] = "bool"
 defs["structs"]["ImGuiIO"][61] = {}
-defs["structs"]["ImGuiIO"][61]["comment"] = "    // Main Input State\
+defs["structs"]["ImGuiIO"][61]["comment"] = {}
+defs["structs"]["ImGuiIO"][61]["comment"]["comments"] = " // Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.)"
+defs["structs"]["ImGuiIO"][61]["comment"]["prevcomments"] = "\
+    //------------------------------------------------------------------\
+    // [Internal] Dear ImGui will maintain those fields. Forward compatibility not guaranteed!\
+    //------------------------------------------------------------------\
+    // Main Input State\
     // (this block used to be written by backend, since 1.87 it is best to NOT write to those directly, call the AddXXX functions above instead)\
-    // (reading from those variables is fair game, as they are extremely unlikely to be moving anywhere) // Mouse position, in pixels. Set to ImVec2(-FLT_MAX, -FLT_MAX) if mouse is unavailable (on another screen, etc.)"
+    // (reading from those variables is fair game, as they are extremely unlikely to be moving anywhere)"
 defs["structs"]["ImGuiIO"][61]["name"] = "MousePos"
 defs["structs"]["ImGuiIO"][61]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][62] = {}
-defs["structs"]["ImGuiIO"][62]["comment"] = " // Mouse buttons: 0=left, 1=right, 2=middle + extras (ImGuiMouseButton_COUNT == 5). Dear ImGui mostly uses left and right buttons. Others buttons allows us to track if the mouse is being used by your application + available to user as a convenience via IsMouse** API."
+defs["structs"]["ImGuiIO"][62]["comment"] = {}
+defs["structs"]["ImGuiIO"][62]["comment"]["comments"] = " // Mouse buttons: 0=left, 1=right, 2=middle + extras (ImGuiMouseButton_COUNT == 5). Dear ImGui mostly uses left and right buttons. Others buttons allows us to track if the mouse is being used by your application + available to user as a convenience via IsMouse** API."
 defs["structs"]["ImGuiIO"][62]["name"] = "MouseDown[5]"
 defs["structs"]["ImGuiIO"][62]["size"] = 5
 defs["structs"]["ImGuiIO"][62]["type"] = "bool"
 defs["structs"]["ImGuiIO"][63] = {}
-defs["structs"]["ImGuiIO"][63]["comment"] = " // Mouse wheel Vertical: 1 unit scrolls about 5 lines text."
+defs["structs"]["ImGuiIO"][63]["comment"] = {}
+defs["structs"]["ImGuiIO"][63]["comment"]["comments"] = " // Mouse wheel Vertical: 1 unit scrolls about 5 lines text."
 defs["structs"]["ImGuiIO"][63]["name"] = "MouseWheel"
 defs["structs"]["ImGuiIO"][63]["type"] = "float"
 defs["structs"]["ImGuiIO"][64] = {}
-defs["structs"]["ImGuiIO"][64]["comment"] = " // Mouse wheel Horizontal. Most users don't have a mouse with an horizontal wheel, may not be filled by all backends."
+defs["structs"]["ImGuiIO"][64]["comment"] = {}
+defs["structs"]["ImGuiIO"][64]["comment"]["comments"] = " // Mouse wheel Horizontal. Most users don't have a mouse with an horizontal wheel, may not be filled by all backends."
 defs["structs"]["ImGuiIO"][64]["name"] = "MouseWheelH"
 defs["structs"]["ImGuiIO"][64]["type"] = "float"
 defs["structs"]["ImGuiIO"][65] = {}
-defs["structs"]["ImGuiIO"][65]["comment"] = " // (Optional) Modify using io.AddMouseViewportEvent(). With multi-viewports: viewport the OS mouse is hovering. If possible _IGNORING_ viewports with the ImGuiViewportFlags_NoInputs flag is much better (few backends can handle that). Set io.BackendFlags |= ImGuiBackendFlags_HasMouseHoveredViewport if you can provide this info. If you don't imgui will infer the value using the rectangles and last focused time of the viewports it knows about (ignoring other OS windows)."
+defs["structs"]["ImGuiIO"][65]["comment"] = {}
+defs["structs"]["ImGuiIO"][65]["comment"]["comments"] = " // (Optional) Modify using io.AddMouseViewportEvent(). With multi-viewports: viewport the OS mouse is hovering. If possible _IGNORING_ viewports with the ImGuiViewportFlags_NoInputs flag is much better (few backends can handle that). Set io.BackendFlags |= ImGuiBackendFlags_HasMouseHoveredViewport if you can provide this info. If you don't imgui will infer the value using the rectangles and last focused time of the viewports it knows about (ignoring other OS windows)."
 defs["structs"]["ImGuiIO"][65]["name"] = "MouseHoveredViewport"
 defs["structs"]["ImGuiIO"][65]["type"] = "ImGuiID"
 defs["structs"]["ImGuiIO"][66] = {}
-defs["structs"]["ImGuiIO"][66]["comment"] = " // Keyboard modifier down: Control"
+defs["structs"]["ImGuiIO"][66]["comment"] = {}
+defs["structs"]["ImGuiIO"][66]["comment"]["comments"] = " // Keyboard modifier down: Control"
 defs["structs"]["ImGuiIO"][66]["name"] = "KeyCtrl"
 defs["structs"]["ImGuiIO"][66]["type"] = "bool"
 defs["structs"]["ImGuiIO"][67] = {}
-defs["structs"]["ImGuiIO"][67]["comment"] = " // Keyboard modifier down: Shift"
+defs["structs"]["ImGuiIO"][67]["comment"] = {}
+defs["structs"]["ImGuiIO"][67]["comment"]["comments"] = " // Keyboard modifier down: Shift"
 defs["structs"]["ImGuiIO"][67]["name"] = "KeyShift"
 defs["structs"]["ImGuiIO"][67]["type"] = "bool"
 defs["structs"]["ImGuiIO"][68] = {}
-defs["structs"]["ImGuiIO"][68]["comment"] = " // Keyboard modifier down: Alt"
+defs["structs"]["ImGuiIO"][68]["comment"] = {}
+defs["structs"]["ImGuiIO"][68]["comment"]["comments"] = " // Keyboard modifier down: Alt"
 defs["structs"]["ImGuiIO"][68]["name"] = "KeyAlt"
 defs["structs"]["ImGuiIO"][68]["type"] = "bool"
 defs["structs"]["ImGuiIO"][69] = {}
-defs["structs"]["ImGuiIO"][69]["comment"] = " // Keyboard modifier down: Cmd/Super/Windows"
+defs["structs"]["ImGuiIO"][69]["comment"] = {}
+defs["structs"]["ImGuiIO"][69]["comment"]["comments"] = " // Keyboard modifier down: Cmd/Super/Windows"
 defs["structs"]["ImGuiIO"][69]["name"] = "KeySuper"
 defs["structs"]["ImGuiIO"][69]["type"] = "bool"
 defs["structs"]["ImGuiIO"][70] = {}
-defs["structs"]["ImGuiIO"][70]["comment"] = " // Gamepad inputs. Cleared back to zero by EndFrame(). Keyboard keys will be auto-mapped and be written here by NewFrame()."
+defs["structs"]["ImGuiIO"][70]["comment"] = {}
+defs["structs"]["ImGuiIO"][70]["comment"]["comments"] = " // Gamepad inputs. Cleared back to zero by EndFrame(). Keyboard keys will be auto-mapped and be written here by NewFrame()."
 defs["structs"]["ImGuiIO"][70]["name"] = "NavInputs[ImGuiNavInput_COUNT]"
 defs["structs"]["ImGuiIO"][70]["size"] = 20
 defs["structs"]["ImGuiIO"][70]["type"] = "float"
 defs["structs"]["ImGuiIO"][71] = {}
-defs["structs"]["ImGuiIO"][71]["comment"] = "    // Other state maintained from data above + IO function calls // Key mods flags (same as io.KeyCtrl/KeyShift/KeyAlt/KeySuper but merged into flags), updated by NewFrame()"
+defs["structs"]["ImGuiIO"][71]["comment"] = {}
+defs["structs"]["ImGuiIO"][71]["comment"]["comments"] = " // Key mods flags (same as io.KeyCtrl/KeyShift/KeyAlt/KeySuper but merged into flags), updated by NewFrame()"
+defs["structs"]["ImGuiIO"][71]["comment"]["prevcomments"] = "\
+    // Other state maintained from data above + IO function calls"
 defs["structs"]["ImGuiIO"][71]["name"] = "KeyMods"
 defs["structs"]["ImGuiIO"][71]["type"] = "ImGuiModFlags"
 defs["structs"]["ImGuiIO"][72] = {}
-defs["structs"]["ImGuiIO"][72]["comment"] = " // Key state for all known keys. Use IsKeyXXX() functions to access this."
+defs["structs"]["ImGuiIO"][72]["comment"] = {}
+defs["structs"]["ImGuiIO"][72]["comment"]["comments"] = " // Key state for all known keys. Use IsKeyXXX() functions to access this."
 defs["structs"]["ImGuiIO"][72]["name"] = "KeysData[ImGuiKey_KeysData_SIZE]"
 defs["structs"]["ImGuiIO"][72]["size"] = 645
 defs["structs"]["ImGuiIO"][72]["type"] = "ImGuiKeyData"
 defs["structs"]["ImGuiIO"][73] = {}
-defs["structs"]["ImGuiIO"][73]["comment"] = " // Alternative to WantCaptureMouse: (WantCaptureMouse == true && WantCaptureMouseUnlessPopupClose == false) when a click over void is expected to close a popup."
+defs["structs"]["ImGuiIO"][73]["comment"] = {}
+defs["structs"]["ImGuiIO"][73]["comment"]["comments"] = " // Alternative to WantCaptureMouse: (WantCaptureMouse == true && WantCaptureMouseUnlessPopupClose == false) when a click over void is expected to close a popup."
 defs["structs"]["ImGuiIO"][73]["name"] = "WantCaptureMouseUnlessPopupClose"
 defs["structs"]["ImGuiIO"][73]["type"] = "bool"
 defs["structs"]["ImGuiIO"][74] = {}
-defs["structs"]["ImGuiIO"][74]["comment"] = " // Previous mouse position (note that MouseDelta is not necessary == MousePos-MousePosPrev, in case either position is invalid)"
+defs["structs"]["ImGuiIO"][74]["comment"] = {}
+defs["structs"]["ImGuiIO"][74]["comment"]["comments"] = " // Previous mouse position (note that MouseDelta is not necessary == MousePos-MousePosPrev, in case either position is invalid)"
 defs["structs"]["ImGuiIO"][74]["name"] = "MousePosPrev"
 defs["structs"]["ImGuiIO"][74]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][75] = {}
-defs["structs"]["ImGuiIO"][75]["comment"] = " // Position at time of clicking"
+defs["structs"]["ImGuiIO"][75]["comment"] = {}
+defs["structs"]["ImGuiIO"][75]["comment"]["comments"] = " // Position at time of clicking"
 defs["structs"]["ImGuiIO"][75]["name"] = "MouseClickedPos[5]"
 defs["structs"]["ImGuiIO"][75]["size"] = 5
 defs["structs"]["ImGuiIO"][75]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][76] = {}
-defs["structs"]["ImGuiIO"][76]["comment"] = " // Time of last click (used to figure out double-click)"
+defs["structs"]["ImGuiIO"][76]["comment"] = {}
+defs["structs"]["ImGuiIO"][76]["comment"]["comments"] = " // Time of last click (used to figure out double-click)"
 defs["structs"]["ImGuiIO"][76]["name"] = "MouseClickedTime[5]"
 defs["structs"]["ImGuiIO"][76]["size"] = 5
 defs["structs"]["ImGuiIO"][76]["type"] = "double"
 defs["structs"]["ImGuiIO"][77] = {}
-defs["structs"]["ImGuiIO"][77]["comment"] = " // Mouse button went from !Down to Down (same as MouseClickedCount[x] != 0)"
+defs["structs"]["ImGuiIO"][77]["comment"] = {}
+defs["structs"]["ImGuiIO"][77]["comment"]["comments"] = " // Mouse button went from !Down to Down (same as MouseClickedCount[x] != 0)"
 defs["structs"]["ImGuiIO"][77]["name"] = "MouseClicked[5]"
 defs["structs"]["ImGuiIO"][77]["size"] = 5
 defs["structs"]["ImGuiIO"][77]["type"] = "bool"
 defs["structs"]["ImGuiIO"][78] = {}
-defs["structs"]["ImGuiIO"][78]["comment"] = " // Has mouse button been double-clicked? (same as MouseClickedCount[x] == 2)"
+defs["structs"]["ImGuiIO"][78]["comment"] = {}
+defs["structs"]["ImGuiIO"][78]["comment"]["comments"] = " // Has mouse button been double-clicked? (same as MouseClickedCount[x] == 2)"
 defs["structs"]["ImGuiIO"][78]["name"] = "MouseDoubleClicked[5]"
 defs["structs"]["ImGuiIO"][78]["size"] = 5
 defs["structs"]["ImGuiIO"][78]["type"] = "bool"
 defs["structs"]["ImGuiIO"][79] = {}
-defs["structs"]["ImGuiIO"][79]["comment"] = " // == 0 (not clicked), == 1 (same as MouseClicked[]), == 2 (double-clicked), == 3 (triple-clicked) etc. when going from !Down to Down"
+defs["structs"]["ImGuiIO"][79]["comment"] = {}
+defs["structs"]["ImGuiIO"][79]["comment"]["comments"] = " // == 0 (not clicked), == 1 (same as MouseClicked[]), == 2 (double-clicked), == 3 (triple-clicked) etc. when going from !Down to Down"
 defs["structs"]["ImGuiIO"][79]["name"] = "MouseClickedCount[5]"
 defs["structs"]["ImGuiIO"][79]["size"] = 5
 defs["structs"]["ImGuiIO"][79]["type"] = "ImU16"
 defs["structs"]["ImGuiIO"][80] = {}
-defs["structs"]["ImGuiIO"][80]["comment"] = " // Count successive number of clicks. Stays valid after mouse release. Reset after another click is done."
+defs["structs"]["ImGuiIO"][80]["comment"] = {}
+defs["structs"]["ImGuiIO"][80]["comment"]["comments"] = " // Count successive number of clicks. Stays valid after mouse release. Reset after another click is done."
 defs["structs"]["ImGuiIO"][80]["name"] = "MouseClickedLastCount[5]"
 defs["structs"]["ImGuiIO"][80]["size"] = 5
 defs["structs"]["ImGuiIO"][80]["type"] = "ImU16"
 defs["structs"]["ImGuiIO"][81] = {}
-defs["structs"]["ImGuiIO"][81]["comment"] = " // Mouse button went from Down to !Down"
+defs["structs"]["ImGuiIO"][81]["comment"] = {}
+defs["structs"]["ImGuiIO"][81]["comment"]["comments"] = " // Mouse button went from Down to !Down"
 defs["structs"]["ImGuiIO"][81]["name"] = "MouseReleased[5]"
 defs["structs"]["ImGuiIO"][81]["size"] = 5
 defs["structs"]["ImGuiIO"][81]["type"] = "bool"
 defs["structs"]["ImGuiIO"][82] = {}
-defs["structs"]["ImGuiIO"][82]["comment"] = " // Track if button was clicked inside a dear imgui window or over void blocked by a popup. We don't request mouse capture from the application if click started outside ImGui bounds."
+defs["structs"]["ImGuiIO"][82]["comment"] = {}
+defs["structs"]["ImGuiIO"][82]["comment"]["comments"] = " // Track if button was clicked inside a dear imgui window or over void blocked by a popup. We don't request mouse capture from the application if click started outside ImGui bounds."
 defs["structs"]["ImGuiIO"][82]["name"] = "MouseDownOwned[5]"
 defs["structs"]["ImGuiIO"][82]["size"] = 5
 defs["structs"]["ImGuiIO"][82]["type"] = "bool"
 defs["structs"]["ImGuiIO"][83] = {}
-defs["structs"]["ImGuiIO"][83]["comment"] = " // Track if button was clicked inside a dear imgui window."
+defs["structs"]["ImGuiIO"][83]["comment"] = {}
+defs["structs"]["ImGuiIO"][83]["comment"]["comments"] = " // Track if button was clicked inside a dear imgui window."
 defs["structs"]["ImGuiIO"][83]["name"] = "MouseDownOwnedUnlessPopupClose[5]"
 defs["structs"]["ImGuiIO"][83]["size"] = 5
 defs["structs"]["ImGuiIO"][83]["type"] = "bool"
 defs["structs"]["ImGuiIO"][84] = {}
-defs["structs"]["ImGuiIO"][84]["comment"] = " // Duration the mouse button has been down (0.0f == just clicked)"
+defs["structs"]["ImGuiIO"][84]["comment"] = {}
+defs["structs"]["ImGuiIO"][84]["comment"]["comments"] = " // Duration the mouse button has been down (0.0f == just clicked)"
 defs["structs"]["ImGuiIO"][84]["name"] = "MouseDownDuration[5]"
 defs["structs"]["ImGuiIO"][84]["size"] = 5
 defs["structs"]["ImGuiIO"][84]["type"] = "float"
 defs["structs"]["ImGuiIO"][85] = {}
-defs["structs"]["ImGuiIO"][85]["comment"] = " // Previous time the mouse button has been down"
+defs["structs"]["ImGuiIO"][85]["comment"] = {}
+defs["structs"]["ImGuiIO"][85]["comment"]["comments"] = " // Previous time the mouse button has been down"
 defs["structs"]["ImGuiIO"][85]["name"] = "MouseDownDurationPrev[5]"
 defs["structs"]["ImGuiIO"][85]["size"] = 5
 defs["structs"]["ImGuiIO"][85]["type"] = "float"
 defs["structs"]["ImGuiIO"][86] = {}
-defs["structs"]["ImGuiIO"][86]["comment"] = " // Maximum distance, absolute, on each axis, of how much mouse has traveled from the clicking point"
+defs["structs"]["ImGuiIO"][86]["comment"] = {}
+defs["structs"]["ImGuiIO"][86]["comment"]["comments"] = " // Maximum distance, absolute, on each axis, of how much mouse has traveled from the clicking point"
 defs["structs"]["ImGuiIO"][86]["name"] = "MouseDragMaxDistanceAbs[5]"
 defs["structs"]["ImGuiIO"][86]["size"] = 5
 defs["structs"]["ImGuiIO"][86]["type"] = "ImVec2"
 defs["structs"]["ImGuiIO"][87] = {}
-defs["structs"]["ImGuiIO"][87]["comment"] = " // Squared maximum distance of how much mouse has traveled from the clicking point (used for moving thresholds)"
+defs["structs"]["ImGuiIO"][87]["comment"] = {}
+defs["structs"]["ImGuiIO"][87]["comment"]["comments"] = " // Squared maximum distance of how much mouse has traveled from the clicking point (used for moving thresholds)"
 defs["structs"]["ImGuiIO"][87]["name"] = "MouseDragMaxDistanceSqr[5]"
 defs["structs"]["ImGuiIO"][87]["size"] = 5
 defs["structs"]["ImGuiIO"][87]["type"] = "float"
 defs["structs"]["ImGuiIO"][88] = {}
+defs["structs"]["ImGuiIO"][88]["comment"] = {}
 defs["structs"]["ImGuiIO"][88]["name"] = "NavInputsDownDuration[ImGuiNavInput_COUNT]"
 defs["structs"]["ImGuiIO"][88]["size"] = 20
 defs["structs"]["ImGuiIO"][88]["type"] = "float"
 defs["structs"]["ImGuiIO"][89] = {}
+defs["structs"]["ImGuiIO"][89]["comment"] = {}
 defs["structs"]["ImGuiIO"][89]["name"] = "NavInputsDownDurationPrev[ImGuiNavInput_COUNT]"
 defs["structs"]["ImGuiIO"][89]["size"] = 20
 defs["structs"]["ImGuiIO"][89]["type"] = "float"
 defs["structs"]["ImGuiIO"][90] = {}
-defs["structs"]["ImGuiIO"][90]["comment"] = " // Touch/Pen pressure (0.0f to 1.0f, should be >0.0f only when MouseDown[0] == true). Helper storage currently unused by Dear ImGui."
+defs["structs"]["ImGuiIO"][90]["comment"] = {}
+defs["structs"]["ImGuiIO"][90]["comment"]["comments"] = " // Touch/Pen pressure (0.0f to 1.0f, should be >0.0f only when MouseDown[0] == true). Helper storage currently unused by Dear ImGui."
 defs["structs"]["ImGuiIO"][90]["name"] = "PenPressure"
 defs["structs"]["ImGuiIO"][90]["type"] = "float"
 defs["structs"]["ImGuiIO"][91] = {}
-defs["structs"]["ImGuiIO"][91]["comment"] = " // Only modify via AddFocusEvent()"
+defs["structs"]["ImGuiIO"][91]["comment"] = {}
+defs["structs"]["ImGuiIO"][91]["comment"]["comments"] = " // Only modify via AddFocusEvent()"
 defs["structs"]["ImGuiIO"][91]["name"] = "AppFocusLost"
 defs["structs"]["ImGuiIO"][91]["type"] = "bool"
 defs["structs"]["ImGuiIO"][92] = {}
-defs["structs"]["ImGuiIO"][92]["comment"] = " // Only modify via SetAppAcceptingEvents()"
+defs["structs"]["ImGuiIO"][92]["comment"] = {}
+defs["structs"]["ImGuiIO"][92]["comment"]["comments"] = " // Only modify via SetAppAcceptingEvents()"
 defs["structs"]["ImGuiIO"][92]["name"] = "AppAcceptingEvents"
 defs["structs"]["ImGuiIO"][92]["type"] = "bool"
 defs["structs"]["ImGuiIO"][93] = {}
-defs["structs"]["ImGuiIO"][93]["comment"] = " // -1: unknown, 0: using AddKeyEvent(), 1: using legacy io.KeysDown[]"
+defs["structs"]["ImGuiIO"][93]["comment"] = {}
+defs["structs"]["ImGuiIO"][93]["comment"]["comments"] = " // -1: unknown, 0: using AddKeyEvent(), 1: using legacy io.KeysDown[]"
 defs["structs"]["ImGuiIO"][93]["name"] = "BackendUsingLegacyKeyArrays"
 defs["structs"]["ImGuiIO"][93]["type"] = "ImS8"
 defs["structs"]["ImGuiIO"][94] = {}
-defs["structs"]["ImGuiIO"][94]["comment"] = " // 0: using AddKeyAnalogEvent(), 1: writing to legacy io.NavInputs[] directly"
+defs["structs"]["ImGuiIO"][94]["comment"] = {}
+defs["structs"]["ImGuiIO"][94]["comment"]["comments"] = " // 0: using AddKeyAnalogEvent(), 1: writing to legacy io.NavInputs[] directly"
 defs["structs"]["ImGuiIO"][94]["name"] = "BackendUsingLegacyNavInputArray"
 defs["structs"]["ImGuiIO"][94]["type"] = "bool"
 defs["structs"]["ImGuiIO"][95] = {}
-defs["structs"]["ImGuiIO"][95]["comment"] = " // For AddInputCharacterUTF16()"
+defs["structs"]["ImGuiIO"][95]["comment"] = {}
+defs["structs"]["ImGuiIO"][95]["comment"]["comments"] = " // For AddInputCharacterUTF16()"
 defs["structs"]["ImGuiIO"][95]["name"] = "InputQueueSurrogate"
 defs["structs"]["ImGuiIO"][95]["type"] = "ImWchar16"
 defs["structs"]["ImGuiIO"][96] = {}
-defs["structs"]["ImGuiIO"][96]["comment"] = " // Queue of _characters_ input (obtained by platform backend). Fill using AddInputCharacter() helper."
+defs["structs"]["ImGuiIO"][96]["comment"] = {}
+defs["structs"]["ImGuiIO"][96]["comment"]["comments"] = " // Queue of _characters_ input (obtained by platform backend). Fill using AddInputCharacter() helper."
 defs["structs"]["ImGuiIO"][96]["name"] = "InputQueueCharacters"
 defs["structs"]["ImGuiIO"][96]["template_type"] = "ImWchar"
 defs["structs"]["ImGuiIO"][96]["type"] = "ImVector_ImWchar"
 defs["structs"]["ImGuiInputEvent"] = {}
 defs["structs"]["ImGuiInputEvent"][1] = {}
+defs["structs"]["ImGuiInputEvent"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEvent"][1]["name"] = "Type"
 defs["structs"]["ImGuiInputEvent"][1]["type"] = "ImGuiInputEventType"
 defs["structs"]["ImGuiInputEvent"][2] = {}
+defs["structs"]["ImGuiInputEvent"][2]["comment"] = {}
 defs["structs"]["ImGuiInputEvent"][2]["name"] = "Source"
 defs["structs"]["ImGuiInputEvent"][2]["type"] = "ImGuiInputSource"
 defs["structs"]["ImGuiInputEvent"][3] = {}
+defs["structs"]["ImGuiInputEvent"][3]["comment"] = {}
 defs["structs"]["ImGuiInputEvent"][3]["name"] = ""
 defs["structs"]["ImGuiInputEvent"][3]["type"] = "union { ImGuiInputEventMousePos MousePos; // if Type==ImGuiInputEventType_MousePos ImGuiInputEventMouseWheel MouseWheel; // if Type==ImGuiInputEventType_MouseWheel ImGuiInputEventMouseButton MouseButton; // if Type==ImGuiInputEventType_MouseButton ImGuiInputEventMouseViewport MouseViewport; // if Type==ImGuiInputEventType_MouseViewport ImGuiInputEventKey Key; // if Type==ImGuiInputEventType_Key ImGuiInputEventText Text; // if Type==ImGuiInputEventType_Text ImGuiInputEventAppFocused AppFocused; // if Type==ImGuiInputEventType_Focus}"
 defs["structs"]["ImGuiInputEvent"][4] = {}
+defs["structs"]["ImGuiInputEvent"][4]["comment"] = {}
 defs["structs"]["ImGuiInputEvent"][4]["name"] = "AddedByTestEngine"
 defs["structs"]["ImGuiInputEvent"][4]["type"] = "bool"
 defs["structs"]["ImGuiInputEventAppFocused"] = {}
 defs["structs"]["ImGuiInputEventAppFocused"][1] = {}
+defs["structs"]["ImGuiInputEventAppFocused"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventAppFocused"][1]["name"] = "Focused"
 defs["structs"]["ImGuiInputEventAppFocused"][1]["type"] = "bool"
 defs["structs"]["ImGuiInputEventKey"] = {}
 defs["structs"]["ImGuiInputEventKey"][1] = {}
+defs["structs"]["ImGuiInputEventKey"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventKey"][1]["name"] = "Key"
 defs["structs"]["ImGuiInputEventKey"][1]["type"] = "ImGuiKey"
 defs["structs"]["ImGuiInputEventKey"][2] = {}
+defs["structs"]["ImGuiInputEventKey"][2]["comment"] = {}
 defs["structs"]["ImGuiInputEventKey"][2]["name"] = "Down"
 defs["structs"]["ImGuiInputEventKey"][2]["type"] = "bool"
 defs["structs"]["ImGuiInputEventKey"][3] = {}
+defs["structs"]["ImGuiInputEventKey"][3]["comment"] = {}
 defs["structs"]["ImGuiInputEventKey"][3]["name"] = "AnalogValue"
 defs["structs"]["ImGuiInputEventKey"][3]["type"] = "float"
 defs["structs"]["ImGuiInputEventMouseButton"] = {}
 defs["structs"]["ImGuiInputEventMouseButton"][1] = {}
+defs["structs"]["ImGuiInputEventMouseButton"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventMouseButton"][1]["name"] = "Button"
 defs["structs"]["ImGuiInputEventMouseButton"][1]["type"] = "int"
 defs["structs"]["ImGuiInputEventMouseButton"][2] = {}
+defs["structs"]["ImGuiInputEventMouseButton"][2]["comment"] = {}
 defs["structs"]["ImGuiInputEventMouseButton"][2]["name"] = "Down"
 defs["structs"]["ImGuiInputEventMouseButton"][2]["type"] = "bool"
 defs["structs"]["ImGuiInputEventMousePos"] = {}
 defs["structs"]["ImGuiInputEventMousePos"][1] = {}
+defs["structs"]["ImGuiInputEventMousePos"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventMousePos"][1]["name"] = "PosX"
 defs["structs"]["ImGuiInputEventMousePos"][1]["type"] = "float"
 defs["structs"]["ImGuiInputEventMousePos"][2] = {}
+defs["structs"]["ImGuiInputEventMousePos"][2]["comment"] = defs["structs"]["ImGuiInputEventMousePos"][1]["comment"]
 defs["structs"]["ImGuiInputEventMousePos"][2]["name"] = "PosY"
 defs["structs"]["ImGuiInputEventMousePos"][2]["type"] = "float"
 defs["structs"]["ImGuiInputEventMouseViewport"] = {}
 defs["structs"]["ImGuiInputEventMouseViewport"][1] = {}
+defs["structs"]["ImGuiInputEventMouseViewport"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventMouseViewport"][1]["name"] = "HoveredViewportID"
 defs["structs"]["ImGuiInputEventMouseViewport"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiInputEventMouseWheel"] = {}
 defs["structs"]["ImGuiInputEventMouseWheel"][1] = {}
+defs["structs"]["ImGuiInputEventMouseWheel"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventMouseWheel"][1]["name"] = "WheelX"
 defs["structs"]["ImGuiInputEventMouseWheel"][1]["type"] = "float"
 defs["structs"]["ImGuiInputEventMouseWheel"][2] = {}
+defs["structs"]["ImGuiInputEventMouseWheel"][2]["comment"] = defs["structs"]["ImGuiInputEventMouseWheel"][1]["comment"]
 defs["structs"]["ImGuiInputEventMouseWheel"][2]["name"] = "WheelY"
 defs["structs"]["ImGuiInputEventMouseWheel"][2]["type"] = "float"
 defs["structs"]["ImGuiInputEventText"] = {}
 defs["structs"]["ImGuiInputEventText"][1] = {}
+defs["structs"]["ImGuiInputEventText"][1]["comment"] = {}
 defs["structs"]["ImGuiInputEventText"][1]["name"] = "Char"
 defs["structs"]["ImGuiInputEventText"][1]["type"] = "unsigned int"
 defs["structs"]["ImGuiInputTextCallbackData"] = {}
 defs["structs"]["ImGuiInputTextCallbackData"][1] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][1]["comment"] = " // One ImGuiInputTextFlags_Callback*    // Read-only"
+defs["structs"]["ImGuiInputTextCallbackData"][1]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][1]["comment"]["comments"] = " // One ImGuiInputTextFlags_Callback*    // Read-only"
 defs["structs"]["ImGuiInputTextCallbackData"][1]["name"] = "EventFlag"
 defs["structs"]["ImGuiInputTextCallbackData"][1]["type"] = "ImGuiInputTextFlags"
 defs["structs"]["ImGuiInputTextCallbackData"][2] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][2]["comment"] = " // What user passed to InputText()      // Read-only"
+defs["structs"]["ImGuiInputTextCallbackData"][2]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][2]["comment"]["comments"] = " // What user passed to InputText()      // Read-only"
 defs["structs"]["ImGuiInputTextCallbackData"][2]["name"] = "Flags"
 defs["structs"]["ImGuiInputTextCallbackData"][2]["type"] = "ImGuiInputTextFlags"
 defs["structs"]["ImGuiInputTextCallbackData"][3] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][3]["comment"] = " // What user passed to InputText()      // Read-only"
+defs["structs"]["ImGuiInputTextCallbackData"][3]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][3]["comment"]["comments"] = " // What user passed to InputText()      // Read-only"
 defs["structs"]["ImGuiInputTextCallbackData"][3]["name"] = "UserData"
 defs["structs"]["ImGuiInputTextCallbackData"][3]["type"] = "void*"
 defs["structs"]["ImGuiInputTextCallbackData"][4] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"] = "    // Arguments for the different callback events\
+defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"]["comments"] = " // Character input                      // Read-write   // [CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;"
+defs["structs"]["ImGuiInputTextCallbackData"][4]["comment"]["prevcomments"] = "\
+    // Arguments for the different callback events\
     // - To modify the text buffer in a callback, prefer using the InsertChars() / DeleteChars() function. InsertChars() will take care of calling the resize callback if necessary.\
-    // - If you know your edits are not going to resize the underlying buffer allocation, you may modify the contents of 'Buf[]' directly. You need to update 'BufTextLen' accordingly (0 <= BufTextLen < BufSize) and set 'BufDirty'' to true so InputText can update its internal state. // Character input                      // Read-write   // [CharFilter] Replace character with another one, or set to zero to drop. return 1 is equivalent to setting EventChar=0;"
+    // - If you know your edits are not going to resize the underlying buffer allocation, you may modify the contents of 'Buf[]' directly. You need to update 'BufTextLen' accordingly (0 <= BufTextLen < BufSize) and set 'BufDirty'' to true so InputText can update its internal state."
 defs["structs"]["ImGuiInputTextCallbackData"][4]["name"] = "EventChar"
 defs["structs"]["ImGuiInputTextCallbackData"][4]["type"] = "ImWchar"
 defs["structs"]["ImGuiInputTextCallbackData"][5] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][5]["comment"] = " // Key pressed (Up/Down/TAB)            // Read-only    // [Completion,History]"
+defs["structs"]["ImGuiInputTextCallbackData"][5]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][5]["comment"]["comments"] = " // Key pressed (Up/Down/TAB)            // Read-only    // [Completion,History]"
 defs["structs"]["ImGuiInputTextCallbackData"][5]["name"] = "EventKey"
 defs["structs"]["ImGuiInputTextCallbackData"][5]["type"] = "ImGuiKey"
 defs["structs"]["ImGuiInputTextCallbackData"][6] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][6]["comment"] = " // Text buffer                          // Read-write   // [Resize] Can replace pointer / [Completion,History,Always] Only write to pointed data, don't replace the actual pointer!"
+defs["structs"]["ImGuiInputTextCallbackData"][6]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][6]["comment"]["comments"] = " // Text buffer                          // Read-write   // [Resize] Can replace pointer / [Completion,History,Always] Only write to pointed data, don't replace the actual pointer!"
 defs["structs"]["ImGuiInputTextCallbackData"][6]["name"] = "Buf"
 defs["structs"]["ImGuiInputTextCallbackData"][6]["type"] = "char*"
 defs["structs"]["ImGuiInputTextCallbackData"][7] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][7]["comment"] = " // Text length (in bytes)               // Read-write   // [Resize,Completion,History,Always] Exclude zero-terminator storage. In C land: == strlen(some_text), in C++ land: string.length()"
+defs["structs"]["ImGuiInputTextCallbackData"][7]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][7]["comment"]["comments"] = " // Text length (in bytes)               // Read-write   // [Resize,Completion,History,Always] Exclude zero-terminator storage. In C land: == strlen(some_text), in C++ land: string.length()"
 defs["structs"]["ImGuiInputTextCallbackData"][7]["name"] = "BufTextLen"
 defs["structs"]["ImGuiInputTextCallbackData"][7]["type"] = "int"
 defs["structs"]["ImGuiInputTextCallbackData"][8] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][8]["comment"] = " // Buffer size (in bytes) = capacity+1  // Read-only    // [Resize,Completion,History,Always] Include zero-terminator storage. In C land == ARRAYSIZE(my_char_array), in C++ land: string.capacity()+1"
+defs["structs"]["ImGuiInputTextCallbackData"][8]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][8]["comment"]["comments"] = " // Buffer size (in bytes) = capacity+1  // Read-only    // [Resize,Completion,History,Always] Include zero-terminator storage. In C land == ARRAYSIZE(my_char_array), in C++ land: string.capacity()+1"
 defs["structs"]["ImGuiInputTextCallbackData"][8]["name"] = "BufSize"
 defs["structs"]["ImGuiInputTextCallbackData"][8]["type"] = "int"
 defs["structs"]["ImGuiInputTextCallbackData"][9] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][9]["comment"] = " // Set if you modify Buf/BufTextLen!    // Write        // [Completion,History,Always]"
+defs["structs"]["ImGuiInputTextCallbackData"][9]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][9]["comment"]["comments"] = " // Set if you modify Buf/BufTextLen!    // Write        // [Completion,History,Always]"
 defs["structs"]["ImGuiInputTextCallbackData"][9]["name"] = "BufDirty"
 defs["structs"]["ImGuiInputTextCallbackData"][9]["type"] = "bool"
 defs["structs"]["ImGuiInputTextCallbackData"][10] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][10]["comment"] = " //                                      // Read-write   // [Completion,History,Always]"
+defs["structs"]["ImGuiInputTextCallbackData"][10]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][10]["comment"]["comments"] = " //                                      // Read-write   // [Completion,History,Always]"
 defs["structs"]["ImGuiInputTextCallbackData"][10]["name"] = "CursorPos"
 defs["structs"]["ImGuiInputTextCallbackData"][10]["type"] = "int"
 defs["structs"]["ImGuiInputTextCallbackData"][11] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][11]["comment"] = " //                                      // Read-write   // [Completion,History,Always] == to SelectionEnd when no selection)"
+defs["structs"]["ImGuiInputTextCallbackData"][11]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][11]["comment"]["comments"] = " //                                      // Read-write   // [Completion,History,Always] == to SelectionEnd when no selection)"
 defs["structs"]["ImGuiInputTextCallbackData"][11]["name"] = "SelectionStart"
 defs["structs"]["ImGuiInputTextCallbackData"][11]["type"] = "int"
 defs["structs"]["ImGuiInputTextCallbackData"][12] = {}
-defs["structs"]["ImGuiInputTextCallbackData"][12]["comment"] = " //                                      // Read-write   // [Completion,History,Always]"
+defs["structs"]["ImGuiInputTextCallbackData"][12]["comment"] = {}
+defs["structs"]["ImGuiInputTextCallbackData"][12]["comment"]["comments"] = " //                                      // Read-write   // [Completion,History,Always]"
 defs["structs"]["ImGuiInputTextCallbackData"][12]["name"] = "SelectionEnd"
 defs["structs"]["ImGuiInputTextCallbackData"][12]["type"] = "int"
 defs["structs"]["ImGuiInputTextState"] = {}
 defs["structs"]["ImGuiInputTextState"][1] = {}
-defs["structs"]["ImGuiInputTextState"][1]["comment"] = " // widget id owning the text state"
+defs["structs"]["ImGuiInputTextState"][1]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][1]["comment"]["comments"] = " // widget id owning the text state"
 defs["structs"]["ImGuiInputTextState"][1]["name"] = "ID"
 defs["structs"]["ImGuiInputTextState"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiInputTextState"][2] = {}
-defs["structs"]["ImGuiInputTextState"][2]["comment"] = " // we need to maintain our buffer length in both UTF-8 and wchar format. UTF-8 length is valid even if TextA is not."
+defs["structs"]["ImGuiInputTextState"][2]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][2]["comment"]["comments"] = " // we need to maintain our buffer length in both UTF-8 and wchar format. UTF-8 length is valid even if TextA is not."
 defs["structs"]["ImGuiInputTextState"][2]["name"] = "CurLenW"
 defs["structs"]["ImGuiInputTextState"][2]["type"] = "int"
 defs["structs"]["ImGuiInputTextState"][3] = {}
-defs["structs"]["ImGuiInputTextState"][3]["comment"] = " // we need to maintain our buffer length in both UTF-8 and wchar format. UTF-8 length is valid even if TextA is not."
+defs["structs"]["ImGuiInputTextState"][3]["comment"] = defs["structs"]["ImGuiInputTextState"][2]["comment"]
 defs["structs"]["ImGuiInputTextState"][3]["name"] = "CurLenA"
 defs["structs"]["ImGuiInputTextState"][3]["type"] = "int"
 defs["structs"]["ImGuiInputTextState"][4] = {}
-defs["structs"]["ImGuiInputTextState"][4]["comment"] = " // edit buffer, we need to persist but can't guarantee the persistence of the user-provided buffer. so we copy into own buffer."
+defs["structs"]["ImGuiInputTextState"][4]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][4]["comment"]["comments"] = " // edit buffer, we need to persist but can't guarantee the persistence of the user-provided buffer. so we copy into own buffer."
 defs["structs"]["ImGuiInputTextState"][4]["name"] = "TextW"
 defs["structs"]["ImGuiInputTextState"][4]["template_type"] = "ImWchar"
 defs["structs"]["ImGuiInputTextState"][4]["type"] = "ImVector_ImWchar"
 defs["structs"]["ImGuiInputTextState"][5] = {}
-defs["structs"]["ImGuiInputTextState"][5]["comment"] = " // temporary UTF8 buffer for callbacks and other operations. this is not updated in every code-path! size=capacity."
+defs["structs"]["ImGuiInputTextState"][5]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][5]["comment"]["comments"] = " // temporary UTF8 buffer for callbacks and other operations. this is not updated in every code-path! size=capacity."
 defs["structs"]["ImGuiInputTextState"][5]["name"] = "TextA"
 defs["structs"]["ImGuiInputTextState"][5]["template_type"] = "char"
 defs["structs"]["ImGuiInputTextState"][5]["type"] = "ImVector_char"
 defs["structs"]["ImGuiInputTextState"][6] = {}
-defs["structs"]["ImGuiInputTextState"][6]["comment"] = " // backup of end-user buffer at the time of focus (in UTF-8, unaltered)"
+defs["structs"]["ImGuiInputTextState"][6]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][6]["comment"]["comments"] = " // backup of end-user buffer at the time of focus (in UTF-8, unaltered)"
 defs["structs"]["ImGuiInputTextState"][6]["name"] = "InitialTextA"
 defs["structs"]["ImGuiInputTextState"][6]["template_type"] = "char"
 defs["structs"]["ImGuiInputTextState"][6]["type"] = "ImVector_char"
 defs["structs"]["ImGuiInputTextState"][7] = {}
-defs["structs"]["ImGuiInputTextState"][7]["comment"] = " // temporary UTF8 buffer is not initially valid before we make the widget active (until then we pull the data from user argument)"
+defs["structs"]["ImGuiInputTextState"][7]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][7]["comment"]["comments"] = " // temporary UTF8 buffer is not initially valid before we make the widget active (until then we pull the data from user argument)"
 defs["structs"]["ImGuiInputTextState"][7]["name"] = "TextAIsValid"
 defs["structs"]["ImGuiInputTextState"][7]["type"] = "bool"
 defs["structs"]["ImGuiInputTextState"][8] = {}
-defs["structs"]["ImGuiInputTextState"][8]["comment"] = " // end-user buffer capacity"
+defs["structs"]["ImGuiInputTextState"][8]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][8]["comment"]["comments"] = " // end-user buffer capacity"
 defs["structs"]["ImGuiInputTextState"][8]["name"] = "BufCapacityA"
 defs["structs"]["ImGuiInputTextState"][8]["type"] = "int"
 defs["structs"]["ImGuiInputTextState"][9] = {}
-defs["structs"]["ImGuiInputTextState"][9]["comment"] = " // horizontal scrolling/offset"
+defs["structs"]["ImGuiInputTextState"][9]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][9]["comment"]["comments"] = " // horizontal scrolling/offset"
 defs["structs"]["ImGuiInputTextState"][9]["name"] = "ScrollX"
 defs["structs"]["ImGuiInputTextState"][9]["type"] = "float"
 defs["structs"]["ImGuiInputTextState"][10] = {}
-defs["structs"]["ImGuiInputTextState"][10]["comment"] = " // state for stb_textedit.h"
+defs["structs"]["ImGuiInputTextState"][10]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][10]["comment"]["comments"] = " // state for stb_textedit.h"
 defs["structs"]["ImGuiInputTextState"][10]["name"] = "Stb"
 defs["structs"]["ImGuiInputTextState"][10]["type"] = "STB_TexteditState"
 defs["structs"]["ImGuiInputTextState"][11] = {}
-defs["structs"]["ImGuiInputTextState"][11]["comment"] = " // timer for cursor blink, reset on every user action so the cursor reappears immediately"
+defs["structs"]["ImGuiInputTextState"][11]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][11]["comment"]["comments"] = " // timer for cursor blink, reset on every user action so the cursor reappears immediately"
 defs["structs"]["ImGuiInputTextState"][11]["name"] = "CursorAnim"
 defs["structs"]["ImGuiInputTextState"][11]["type"] = "float"
 defs["structs"]["ImGuiInputTextState"][12] = {}
-defs["structs"]["ImGuiInputTextState"][12]["comment"] = " // set when we want scrolling to follow the current cursor position (not always!)"
+defs["structs"]["ImGuiInputTextState"][12]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][12]["comment"]["comments"] = " // set when we want scrolling to follow the current cursor position (not always!)"
 defs["structs"]["ImGuiInputTextState"][12]["name"] = "CursorFollow"
 defs["structs"]["ImGuiInputTextState"][12]["type"] = "bool"
 defs["structs"]["ImGuiInputTextState"][13] = {}
-defs["structs"]["ImGuiInputTextState"][13]["comment"] = " // after a double-click to select all, we ignore further mouse drags to update selection"
+defs["structs"]["ImGuiInputTextState"][13]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][13]["comment"]["comments"] = " // after a double-click to select all, we ignore further mouse drags to update selection"
 defs["structs"]["ImGuiInputTextState"][13]["name"] = "SelectedAllMouseLock"
 defs["structs"]["ImGuiInputTextState"][13]["type"] = "bool"
 defs["structs"]["ImGuiInputTextState"][14] = {}
-defs["structs"]["ImGuiInputTextState"][14]["comment"] = " // edited this frame"
+defs["structs"]["ImGuiInputTextState"][14]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][14]["comment"]["comments"] = " // edited this frame"
 defs["structs"]["ImGuiInputTextState"][14]["name"] = "Edited"
 defs["structs"]["ImGuiInputTextState"][14]["type"] = "bool"
 defs["structs"]["ImGuiInputTextState"][15] = {}
-defs["structs"]["ImGuiInputTextState"][15]["comment"] = " // copy of InputText() flags"
+defs["structs"]["ImGuiInputTextState"][15]["comment"] = {}
+defs["structs"]["ImGuiInputTextState"][15]["comment"]["comments"] = " // copy of InputText() flags"
 defs["structs"]["ImGuiInputTextState"][15]["name"] = "Flags"
 defs["structs"]["ImGuiInputTextState"][15]["type"] = "ImGuiInputTextFlags"
 defs["structs"]["ImGuiKeyData"] = {}
 defs["structs"]["ImGuiKeyData"][1] = {}
-defs["structs"]["ImGuiKeyData"][1]["comment"] = " // True for if key is down"
+defs["structs"]["ImGuiKeyData"][1]["comment"] = {}
+defs["structs"]["ImGuiKeyData"][1]["comment"]["comments"] = " // True for if key is down"
 defs["structs"]["ImGuiKeyData"][1]["name"] = "Down"
 defs["structs"]["ImGuiKeyData"][1]["type"] = "bool"
 defs["structs"]["ImGuiKeyData"][2] = {}
-defs["structs"]["ImGuiKeyData"][2]["comment"] = " // Duration the key has been down (<0.0f: not pressed, 0.0f: just pressed, >0.0f: time held)"
+defs["structs"]["ImGuiKeyData"][2]["comment"] = {}
+defs["structs"]["ImGuiKeyData"][2]["comment"]["comments"] = " // Duration the key has been down (<0.0f: not pressed, 0.0f: just pressed, >0.0f: time held)"
 defs["structs"]["ImGuiKeyData"][2]["name"] = "DownDuration"
 defs["structs"]["ImGuiKeyData"][2]["type"] = "float"
 defs["structs"]["ImGuiKeyData"][3] = {}
-defs["structs"]["ImGuiKeyData"][3]["comment"] = " // Last frame duration the key has been down"
+defs["structs"]["ImGuiKeyData"][3]["comment"] = {}
+defs["structs"]["ImGuiKeyData"][3]["comment"]["comments"] = " // Last frame duration the key has been down"
 defs["structs"]["ImGuiKeyData"][3]["name"] = "DownDurationPrev"
 defs["structs"]["ImGuiKeyData"][3]["type"] = "float"
 defs["structs"]["ImGuiKeyData"][4] = {}
-defs["structs"]["ImGuiKeyData"][4]["comment"] = " // 0.0f..1.0f for gamepad values"
+defs["structs"]["ImGuiKeyData"][4]["comment"] = {}
+defs["structs"]["ImGuiKeyData"][4]["comment"]["comments"] = " // 0.0f..1.0f for gamepad values"
 defs["structs"]["ImGuiKeyData"][4]["name"] = "AnalogValue"
 defs["structs"]["ImGuiKeyData"][4]["type"] = "float"
 defs["structs"]["ImGuiLastItemData"] = {}
 defs["structs"]["ImGuiLastItemData"][1] = {}
+defs["structs"]["ImGuiLastItemData"][1]["comment"] = {}
 defs["structs"]["ImGuiLastItemData"][1]["name"] = "ID"
 defs["structs"]["ImGuiLastItemData"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiLastItemData"][2] = {}
-defs["structs"]["ImGuiLastItemData"][2]["comment"] = " // See ImGuiItemFlags_"
+defs["structs"]["ImGuiLastItemData"][2]["comment"] = {}
+defs["structs"]["ImGuiLastItemData"][2]["comment"]["comments"] = " // See ImGuiItemFlags_"
 defs["structs"]["ImGuiLastItemData"][2]["name"] = "InFlags"
 defs["structs"]["ImGuiLastItemData"][2]["type"] = "ImGuiItemFlags"
 defs["structs"]["ImGuiLastItemData"][3] = {}
-defs["structs"]["ImGuiLastItemData"][3]["comment"] = " // See ImGuiItemStatusFlags_"
+defs["structs"]["ImGuiLastItemData"][3]["comment"] = {}
+defs["structs"]["ImGuiLastItemData"][3]["comment"]["comments"] = " // See ImGuiItemStatusFlags_"
 defs["structs"]["ImGuiLastItemData"][3]["name"] = "StatusFlags"
 defs["structs"]["ImGuiLastItemData"][3]["type"] = "ImGuiItemStatusFlags"
 defs["structs"]["ImGuiLastItemData"][4] = {}
-defs["structs"]["ImGuiLastItemData"][4]["comment"] = " // Full rectangle"
+defs["structs"]["ImGuiLastItemData"][4]["comment"] = {}
+defs["structs"]["ImGuiLastItemData"][4]["comment"]["comments"] = " // Full rectangle"
 defs["structs"]["ImGuiLastItemData"][4]["name"] = "Rect"
 defs["structs"]["ImGuiLastItemData"][4]["type"] = "ImRect"
 defs["structs"]["ImGuiLastItemData"][5] = {}
-defs["structs"]["ImGuiLastItemData"][5]["comment"] = " // Navigation scoring rectangle (not displayed)"
+defs["structs"]["ImGuiLastItemData"][5]["comment"] = {}
+defs["structs"]["ImGuiLastItemData"][5]["comment"]["comments"] = " // Navigation scoring rectangle (not displayed)"
 defs["structs"]["ImGuiLastItemData"][5]["name"] = "NavRect"
 defs["structs"]["ImGuiLastItemData"][5]["type"] = "ImRect"
 defs["structs"]["ImGuiLastItemData"][6] = {}
-defs["structs"]["ImGuiLastItemData"][6]["comment"] = " // Display rectangle (only if ImGuiItemStatusFlags_HasDisplayRect is set)"
+defs["structs"]["ImGuiLastItemData"][6]["comment"] = {}
+defs["structs"]["ImGuiLastItemData"][6]["comment"]["comments"] = " // Display rectangle (only if ImGuiItemStatusFlags_HasDisplayRect is set)"
 defs["structs"]["ImGuiLastItemData"][6]["name"] = "DisplayRect"
 defs["structs"]["ImGuiLastItemData"][6]["type"] = "ImRect"
 defs["structs"]["ImGuiListClipper"] = {}
 defs["structs"]["ImGuiListClipper"][1] = {}
-defs["structs"]["ImGuiListClipper"][1]["comment"] = " // First item to display, updated by each call to Step()"
+defs["structs"]["ImGuiListClipper"][1]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][1]["comment"]["comments"] = " // First item to display, updated by each call to Step()"
 defs["structs"]["ImGuiListClipper"][1]["name"] = "DisplayStart"
 defs["structs"]["ImGuiListClipper"][1]["type"] = "int"
 defs["structs"]["ImGuiListClipper"][2] = {}
-defs["structs"]["ImGuiListClipper"][2]["comment"] = " // End of items to display (exclusive)"
+defs["structs"]["ImGuiListClipper"][2]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][2]["comment"]["comments"] = " // End of items to display (exclusive)"
 defs["structs"]["ImGuiListClipper"][2]["name"] = "DisplayEnd"
 defs["structs"]["ImGuiListClipper"][2]["type"] = "int"
 defs["structs"]["ImGuiListClipper"][3] = {}
-defs["structs"]["ImGuiListClipper"][3]["comment"] = " // [Internal] Number of items"
+defs["structs"]["ImGuiListClipper"][3]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][3]["comment"]["comments"] = " // [Internal] Number of items"
 defs["structs"]["ImGuiListClipper"][3]["name"] = "ItemsCount"
 defs["structs"]["ImGuiListClipper"][3]["type"] = "int"
 defs["structs"]["ImGuiListClipper"][4] = {}
-defs["structs"]["ImGuiListClipper"][4]["comment"] = " // [Internal] Height of item after a first step and item submission can calculate it"
+defs["structs"]["ImGuiListClipper"][4]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][4]["comment"]["comments"] = " // [Internal] Height of item after a first step and item submission can calculate it"
 defs["structs"]["ImGuiListClipper"][4]["name"] = "ItemsHeight"
 defs["structs"]["ImGuiListClipper"][4]["type"] = "float"
 defs["structs"]["ImGuiListClipper"][5] = {}
-defs["structs"]["ImGuiListClipper"][5]["comment"] = " // [Internal] Cursor position at the time of Begin() or after table frozen rows are all processed"
+defs["structs"]["ImGuiListClipper"][5]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][5]["comment"]["comments"] = " // [Internal] Cursor position at the time of Begin() or after table frozen rows are all processed"
 defs["structs"]["ImGuiListClipper"][5]["name"] = "StartPosY"
 defs["structs"]["ImGuiListClipper"][5]["type"] = "float"
 defs["structs"]["ImGuiListClipper"][6] = {}
-defs["structs"]["ImGuiListClipper"][6]["comment"] = " // [Internal] Internal data"
+defs["structs"]["ImGuiListClipper"][6]["comment"] = {}
+defs["structs"]["ImGuiListClipper"][6]["comment"]["comments"] = " // [Internal] Internal data"
 defs["structs"]["ImGuiListClipper"][6]["name"] = "TempData"
 defs["structs"]["ImGuiListClipper"][6]["type"] = "void*"
 defs["structs"]["ImGuiListClipperData"] = {}
 defs["structs"]["ImGuiListClipperData"][1] = {}
+defs["structs"]["ImGuiListClipperData"][1]["comment"] = {}
 defs["structs"]["ImGuiListClipperData"][1]["name"] = "ListClipper"
 defs["structs"]["ImGuiListClipperData"][1]["type"] = "ImGuiListClipper*"
 defs["structs"]["ImGuiListClipperData"][2] = {}
+defs["structs"]["ImGuiListClipperData"][2]["comment"] = {}
 defs["structs"]["ImGuiListClipperData"][2]["name"] = "LossynessOffset"
 defs["structs"]["ImGuiListClipperData"][2]["type"] = "float"
 defs["structs"]["ImGuiListClipperData"][3] = {}
+defs["structs"]["ImGuiListClipperData"][3]["comment"] = {}
 defs["structs"]["ImGuiListClipperData"][3]["name"] = "StepNo"
 defs["structs"]["ImGuiListClipperData"][3]["type"] = "int"
 defs["structs"]["ImGuiListClipperData"][4] = {}
+defs["structs"]["ImGuiListClipperData"][4]["comment"] = {}
 defs["structs"]["ImGuiListClipperData"][4]["name"] = "ItemsFrozen"
 defs["structs"]["ImGuiListClipperData"][4]["type"] = "int"
 defs["structs"]["ImGuiListClipperData"][5] = {}
+defs["structs"]["ImGuiListClipperData"][5]["comment"] = {}
 defs["structs"]["ImGuiListClipperData"][5]["name"] = "Ranges"
 defs["structs"]["ImGuiListClipperData"][5]["template_type"] = "ImGuiListClipperRange"
 defs["structs"]["ImGuiListClipperData"][5]["type"] = "ImVector_ImGuiListClipperRange"
 defs["structs"]["ImGuiListClipperRange"] = {}
 defs["structs"]["ImGuiListClipperRange"][1] = {}
+defs["structs"]["ImGuiListClipperRange"][1]["comment"] = {}
 defs["structs"]["ImGuiListClipperRange"][1]["name"] = "Min"
 defs["structs"]["ImGuiListClipperRange"][1]["type"] = "int"
 defs["structs"]["ImGuiListClipperRange"][2] = {}
+defs["structs"]["ImGuiListClipperRange"][2]["comment"] = {}
 defs["structs"]["ImGuiListClipperRange"][2]["name"] = "Max"
 defs["structs"]["ImGuiListClipperRange"][2]["type"] = "int"
 defs["structs"]["ImGuiListClipperRange"][3] = {}
-defs["structs"]["ImGuiListClipperRange"][3]["comment"] = " // Begin/End are absolute position (will be converted to indices later)"
+defs["structs"]["ImGuiListClipperRange"][3]["comment"] = {}
+defs["structs"]["ImGuiListClipperRange"][3]["comment"]["comments"] = " // Begin/End are absolute position (will be converted to indices later)"
 defs["structs"]["ImGuiListClipperRange"][3]["name"] = "PosToIndexConvert"
 defs["structs"]["ImGuiListClipperRange"][3]["type"] = "bool"
 defs["structs"]["ImGuiListClipperRange"][4] = {}
-defs["structs"]["ImGuiListClipperRange"][4]["comment"] = " // Add to Min after converting to indices"
+defs["structs"]["ImGuiListClipperRange"][4]["comment"] = {}
+defs["structs"]["ImGuiListClipperRange"][4]["comment"]["comments"] = " // Add to Min after converting to indices"
 defs["structs"]["ImGuiListClipperRange"][4]["name"] = "PosToIndexOffsetMin"
 defs["structs"]["ImGuiListClipperRange"][4]["type"] = "ImS8"
 defs["structs"]["ImGuiListClipperRange"][5] = {}
-defs["structs"]["ImGuiListClipperRange"][5]["comment"] = " // Add to Min after converting to indices"
+defs["structs"]["ImGuiListClipperRange"][5]["comment"] = {}
+defs["structs"]["ImGuiListClipperRange"][5]["comment"]["comments"] = " // Add to Min after converting to indices"
 defs["structs"]["ImGuiListClipperRange"][5]["name"] = "PosToIndexOffsetMax"
 defs["structs"]["ImGuiListClipperRange"][5]["type"] = "ImS8"
 defs["structs"]["ImGuiMenuColumns"] = {}
 defs["structs"]["ImGuiMenuColumns"][1] = {}
+defs["structs"]["ImGuiMenuColumns"][1]["comment"] = {}
 defs["structs"]["ImGuiMenuColumns"][1]["name"] = "TotalWidth"
 defs["structs"]["ImGuiMenuColumns"][1]["type"] = "ImU32"
 defs["structs"]["ImGuiMenuColumns"][2] = {}
+defs["structs"]["ImGuiMenuColumns"][2]["comment"] = {}
 defs["structs"]["ImGuiMenuColumns"][2]["name"] = "NextTotalWidth"
 defs["structs"]["ImGuiMenuColumns"][2]["type"] = "ImU32"
 defs["structs"]["ImGuiMenuColumns"][3] = {}
+defs["structs"]["ImGuiMenuColumns"][3]["comment"] = {}
 defs["structs"]["ImGuiMenuColumns"][3]["name"] = "Spacing"
 defs["structs"]["ImGuiMenuColumns"][3]["type"] = "ImU16"
 defs["structs"]["ImGuiMenuColumns"][4] = {}
-defs["structs"]["ImGuiMenuColumns"][4]["comment"] = " // Always zero for now"
+defs["structs"]["ImGuiMenuColumns"][4]["comment"] = {}
+defs["structs"]["ImGuiMenuColumns"][4]["comment"]["comments"] = " // Always zero for now"
 defs["structs"]["ImGuiMenuColumns"][4]["name"] = "OffsetIcon"
 defs["structs"]["ImGuiMenuColumns"][4]["type"] = "ImU16"
 defs["structs"]["ImGuiMenuColumns"][5] = {}
-defs["structs"]["ImGuiMenuColumns"][5]["comment"] = " // Offsets are locked in Update()"
+defs["structs"]["ImGuiMenuColumns"][5]["comment"] = {}
+defs["structs"]["ImGuiMenuColumns"][5]["comment"]["comments"] = " // Offsets are locked in Update()"
 defs["structs"]["ImGuiMenuColumns"][5]["name"] = "OffsetLabel"
 defs["structs"]["ImGuiMenuColumns"][5]["type"] = "ImU16"
 defs["structs"]["ImGuiMenuColumns"][6] = {}
+defs["structs"]["ImGuiMenuColumns"][6]["comment"] = {}
 defs["structs"]["ImGuiMenuColumns"][6]["name"] = "OffsetShortcut"
 defs["structs"]["ImGuiMenuColumns"][6]["type"] = "ImU16"
 defs["structs"]["ImGuiMenuColumns"][7] = {}
+defs["structs"]["ImGuiMenuColumns"][7]["comment"] = {}
 defs["structs"]["ImGuiMenuColumns"][7]["name"] = "OffsetMark"
 defs["structs"]["ImGuiMenuColumns"][7]["type"] = "ImU16"
 defs["structs"]["ImGuiMenuColumns"][8] = {}
-defs["structs"]["ImGuiMenuColumns"][8]["comment"] = " // Width of:   Icon, Label, Shortcut, Mark  (accumulators for current frame)"
+defs["structs"]["ImGuiMenuColumns"][8]["comment"] = {}
+defs["structs"]["ImGuiMenuColumns"][8]["comment"]["comments"] = " // Width of:   Icon, Label, Shortcut, Mark  (accumulators for current frame)"
 defs["structs"]["ImGuiMenuColumns"][8]["name"] = "Widths[4]"
 defs["structs"]["ImGuiMenuColumns"][8]["size"] = 4
 defs["structs"]["ImGuiMenuColumns"][8]["type"] = "ImU16"
 defs["structs"]["ImGuiMetricsConfig"] = {}
 defs["structs"]["ImGuiMetricsConfig"][1] = {}
+defs["structs"]["ImGuiMetricsConfig"][1]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][1]["name"] = "ShowDebugLog"
 defs["structs"]["ImGuiMetricsConfig"][1]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][2] = {}
+defs["structs"]["ImGuiMetricsConfig"][2]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][2]["name"] = "ShowStackTool"
 defs["structs"]["ImGuiMetricsConfig"][2]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][3] = {}
+defs["structs"]["ImGuiMetricsConfig"][3]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][3]["name"] = "ShowWindowsRects"
 defs["structs"]["ImGuiMetricsConfig"][3]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][4] = {}
+defs["structs"]["ImGuiMetricsConfig"][4]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][4]["name"] = "ShowWindowsBeginOrder"
 defs["structs"]["ImGuiMetricsConfig"][4]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][5] = {}
+defs["structs"]["ImGuiMetricsConfig"][5]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][5]["name"] = "ShowTablesRects"
 defs["structs"]["ImGuiMetricsConfig"][5]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][6] = {}
+defs["structs"]["ImGuiMetricsConfig"][6]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][6]["name"] = "ShowDrawCmdMesh"
 defs["structs"]["ImGuiMetricsConfig"][6]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][7] = {}
+defs["structs"]["ImGuiMetricsConfig"][7]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][7]["name"] = "ShowDrawCmdBoundingBoxes"
 defs["structs"]["ImGuiMetricsConfig"][7]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][8] = {}
+defs["structs"]["ImGuiMetricsConfig"][8]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][8]["name"] = "ShowDockingNodes"
 defs["structs"]["ImGuiMetricsConfig"][8]["type"] = "bool"
 defs["structs"]["ImGuiMetricsConfig"][9] = {}
+defs["structs"]["ImGuiMetricsConfig"][9]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][9]["name"] = "ShowWindowsRectsType"
 defs["structs"]["ImGuiMetricsConfig"][9]["type"] = "int"
 defs["structs"]["ImGuiMetricsConfig"][10] = {}
+defs["structs"]["ImGuiMetricsConfig"][10]["comment"] = {}
 defs["structs"]["ImGuiMetricsConfig"][10]["name"] = "ShowTablesRectsType"
 defs["structs"]["ImGuiMetricsConfig"][10]["type"] = "int"
 defs["structs"]["ImGuiNavItemData"] = {}
 defs["structs"]["ImGuiNavItemData"][1] = {}
-defs["structs"]["ImGuiNavItemData"][1]["comment"] = " // Init,Move    // Best candidate window (result->ItemWindow->RootWindowForNav == request->Window)"
+defs["structs"]["ImGuiNavItemData"][1]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][1]["comment"]["comments"] = " // Init,Move    // Best candidate window (result->ItemWindow->RootWindowForNav == request->Window)"
 defs["structs"]["ImGuiNavItemData"][1]["name"] = "Window"
 defs["structs"]["ImGuiNavItemData"][1]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiNavItemData"][2] = {}
-defs["structs"]["ImGuiNavItemData"][2]["comment"] = " // Init,Move    // Best candidate item ID"
+defs["structs"]["ImGuiNavItemData"][2]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][2]["comment"]["comments"] = " // Init,Move    // Best candidate item ID"
 defs["structs"]["ImGuiNavItemData"][2]["name"] = "ID"
 defs["structs"]["ImGuiNavItemData"][2]["type"] = "ImGuiID"
 defs["structs"]["ImGuiNavItemData"][3] = {}
-defs["structs"]["ImGuiNavItemData"][3]["comment"] = " // Init,Move    // Best candidate focus scope ID"
+defs["structs"]["ImGuiNavItemData"][3]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][3]["comment"]["comments"] = " // Init,Move    // Best candidate focus scope ID"
 defs["structs"]["ImGuiNavItemData"][3]["name"] = "FocusScopeId"
 defs["structs"]["ImGuiNavItemData"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiNavItemData"][4] = {}
-defs["structs"]["ImGuiNavItemData"][4]["comment"] = " // Init,Move    // Best candidate bounding box in window relative space"
+defs["structs"]["ImGuiNavItemData"][4]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][4]["comment"]["comments"] = " // Init,Move    // Best candidate bounding box in window relative space"
 defs["structs"]["ImGuiNavItemData"][4]["name"] = "RectRel"
 defs["structs"]["ImGuiNavItemData"][4]["type"] = "ImRect"
 defs["structs"]["ImGuiNavItemData"][5] = {}
-defs["structs"]["ImGuiNavItemData"][5]["comment"] = " // ????,Move    // Best candidate item flags"
+defs["structs"]["ImGuiNavItemData"][5]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][5]["comment"]["comments"] = " // ????,Move    // Best candidate item flags"
 defs["structs"]["ImGuiNavItemData"][5]["name"] = "InFlags"
 defs["structs"]["ImGuiNavItemData"][5]["type"] = "ImGuiItemFlags"
 defs["structs"]["ImGuiNavItemData"][6] = {}
-defs["structs"]["ImGuiNavItemData"][6]["comment"] = " //      Move    // Best candidate box distance to current NavId"
+defs["structs"]["ImGuiNavItemData"][6]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][6]["comment"]["comments"] = " //      Move    // Best candidate box distance to current NavId"
 defs["structs"]["ImGuiNavItemData"][6]["name"] = "DistBox"
 defs["structs"]["ImGuiNavItemData"][6]["type"] = "float"
 defs["structs"]["ImGuiNavItemData"][7] = {}
-defs["structs"]["ImGuiNavItemData"][7]["comment"] = " //      Move    // Best candidate center distance to current NavId"
+defs["structs"]["ImGuiNavItemData"][7]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][7]["comment"]["comments"] = " //      Move    // Best candidate center distance to current NavId"
 defs["structs"]["ImGuiNavItemData"][7]["name"] = "DistCenter"
 defs["structs"]["ImGuiNavItemData"][7]["type"] = "float"
 defs["structs"]["ImGuiNavItemData"][8] = {}
-defs["structs"]["ImGuiNavItemData"][8]["comment"] = " //      Move    // Best candidate axial distance to current NavId"
+defs["structs"]["ImGuiNavItemData"][8]["comment"] = {}
+defs["structs"]["ImGuiNavItemData"][8]["comment"]["comments"] = " //      Move    // Best candidate axial distance to current NavId"
 defs["structs"]["ImGuiNavItemData"][8]["name"] = "DistAxial"
 defs["structs"]["ImGuiNavItemData"][8]["type"] = "float"
 defs["structs"]["ImGuiNextItemData"] = {}
 defs["structs"]["ImGuiNextItemData"][1] = {}
+defs["structs"]["ImGuiNextItemData"][1]["comment"] = {}
 defs["structs"]["ImGuiNextItemData"][1]["name"] = "Flags"
 defs["structs"]["ImGuiNextItemData"][1]["type"] = "ImGuiNextItemDataFlags"
 defs["structs"]["ImGuiNextItemData"][2] = {}
-defs["structs"]["ImGuiNextItemData"][2]["comment"] = " // Set by SetNextItemWidth()"
+defs["structs"]["ImGuiNextItemData"][2]["comment"] = {}
+defs["structs"]["ImGuiNextItemData"][2]["comment"]["comments"] = " // Set by SetNextItemWidth()"
 defs["structs"]["ImGuiNextItemData"][2]["name"] = "Width"
 defs["structs"]["ImGuiNextItemData"][2]["type"] = "float"
 defs["structs"]["ImGuiNextItemData"][3] = {}
-defs["structs"]["ImGuiNextItemData"][3]["comment"] = " // Set by SetNextItemMultiSelectData() (!= 0 signify value has been set, so it's an alternate version of HasSelectionData, we don't use Flags for this because they are cleared too early. This is mostly used for debugging)"
+defs["structs"]["ImGuiNextItemData"][3]["comment"] = {}
+defs["structs"]["ImGuiNextItemData"][3]["comment"]["comments"] = " // Set by SetNextItemMultiSelectData() (!= 0 signify value has been set, so it's an alternate version of HasSelectionData, we don't use Flags for this because they are cleared too early. This is mostly used for debugging)"
 defs["structs"]["ImGuiNextItemData"][3]["name"] = "FocusScopeId"
 defs["structs"]["ImGuiNextItemData"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiNextItemData"][4] = {}
+defs["structs"]["ImGuiNextItemData"][4]["comment"] = {}
 defs["structs"]["ImGuiNextItemData"][4]["name"] = "OpenCond"
 defs["structs"]["ImGuiNextItemData"][4]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiNextItemData"][5] = {}
-defs["structs"]["ImGuiNextItemData"][5]["comment"] = " // Set by SetNextItemOpen()"
+defs["structs"]["ImGuiNextItemData"][5]["comment"] = {}
+defs["structs"]["ImGuiNextItemData"][5]["comment"]["comments"] = " // Set by SetNextItemOpen()"
 defs["structs"]["ImGuiNextItemData"][5]["name"] = "OpenVal"
 defs["structs"]["ImGuiNextItemData"][5]["type"] = "bool"
 defs["structs"]["ImGuiNextWindowData"] = {}
 defs["structs"]["ImGuiNextWindowData"][1] = {}
+defs["structs"]["ImGuiNextWindowData"][1]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][1]["name"] = "Flags"
 defs["structs"]["ImGuiNextWindowData"][1]["type"] = "ImGuiNextWindowDataFlags"
 defs["structs"]["ImGuiNextWindowData"][2] = {}
+defs["structs"]["ImGuiNextWindowData"][2]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][2]["name"] = "PosCond"
 defs["structs"]["ImGuiNextWindowData"][2]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiNextWindowData"][3] = {}
+defs["structs"]["ImGuiNextWindowData"][3]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][3]["name"] = "SizeCond"
 defs["structs"]["ImGuiNextWindowData"][3]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiNextWindowData"][4] = {}
+defs["structs"]["ImGuiNextWindowData"][4]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][4]["name"] = "CollapsedCond"
 defs["structs"]["ImGuiNextWindowData"][4]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiNextWindowData"][5] = {}
+defs["structs"]["ImGuiNextWindowData"][5]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][5]["name"] = "DockCond"
 defs["structs"]["ImGuiNextWindowData"][5]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiNextWindowData"][6] = {}
+defs["structs"]["ImGuiNextWindowData"][6]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][6]["name"] = "PosVal"
 defs["structs"]["ImGuiNextWindowData"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiNextWindowData"][7] = {}
+defs["structs"]["ImGuiNextWindowData"][7]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][7]["name"] = "PosPivotVal"
 defs["structs"]["ImGuiNextWindowData"][7]["type"] = "ImVec2"
 defs["structs"]["ImGuiNextWindowData"][8] = {}
+defs["structs"]["ImGuiNextWindowData"][8]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][8]["name"] = "SizeVal"
 defs["structs"]["ImGuiNextWindowData"][8]["type"] = "ImVec2"
 defs["structs"]["ImGuiNextWindowData"][9] = {}
+defs["structs"]["ImGuiNextWindowData"][9]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][9]["name"] = "ContentSizeVal"
 defs["structs"]["ImGuiNextWindowData"][9]["type"] = "ImVec2"
 defs["structs"]["ImGuiNextWindowData"][10] = {}
+defs["structs"]["ImGuiNextWindowData"][10]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][10]["name"] = "ScrollVal"
 defs["structs"]["ImGuiNextWindowData"][10]["type"] = "ImVec2"
 defs["structs"]["ImGuiNextWindowData"][11] = {}
+defs["structs"]["ImGuiNextWindowData"][11]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][11]["name"] = "PosUndock"
 defs["structs"]["ImGuiNextWindowData"][11]["type"] = "bool"
 defs["structs"]["ImGuiNextWindowData"][12] = {}
+defs["structs"]["ImGuiNextWindowData"][12]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][12]["name"] = "CollapsedVal"
 defs["structs"]["ImGuiNextWindowData"][12]["type"] = "bool"
 defs["structs"]["ImGuiNextWindowData"][13] = {}
+defs["structs"]["ImGuiNextWindowData"][13]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][13]["name"] = "SizeConstraintRect"
 defs["structs"]["ImGuiNextWindowData"][13]["type"] = "ImRect"
 defs["structs"]["ImGuiNextWindowData"][14] = {}
+defs["structs"]["ImGuiNextWindowData"][14]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][14]["name"] = "SizeCallback"
 defs["structs"]["ImGuiNextWindowData"][14]["type"] = "ImGuiSizeCallback"
 defs["structs"]["ImGuiNextWindowData"][15] = {}
+defs["structs"]["ImGuiNextWindowData"][15]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][15]["name"] = "SizeCallbackUserData"
 defs["structs"]["ImGuiNextWindowData"][15]["type"] = "void*"
 defs["structs"]["ImGuiNextWindowData"][16] = {}
-defs["structs"]["ImGuiNextWindowData"][16]["comment"] = " // Override background alpha"
+defs["structs"]["ImGuiNextWindowData"][16]["comment"] = {}
+defs["structs"]["ImGuiNextWindowData"][16]["comment"]["comments"] = " // Override background alpha"
 defs["structs"]["ImGuiNextWindowData"][16]["name"] = "BgAlphaVal"
 defs["structs"]["ImGuiNextWindowData"][16]["type"] = "float"
 defs["structs"]["ImGuiNextWindowData"][17] = {}
+defs["structs"]["ImGuiNextWindowData"][17]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][17]["name"] = "ViewportId"
 defs["structs"]["ImGuiNextWindowData"][17]["type"] = "ImGuiID"
 defs["structs"]["ImGuiNextWindowData"][18] = {}
+defs["structs"]["ImGuiNextWindowData"][18]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][18]["name"] = "DockId"
 defs["structs"]["ImGuiNextWindowData"][18]["type"] = "ImGuiID"
 defs["structs"]["ImGuiNextWindowData"][19] = {}
+defs["structs"]["ImGuiNextWindowData"][19]["comment"] = {}
 defs["structs"]["ImGuiNextWindowData"][19]["name"] = "WindowClass"
 defs["structs"]["ImGuiNextWindowData"][19]["type"] = "ImGuiWindowClass"
 defs["structs"]["ImGuiNextWindowData"][20] = {}
-defs["structs"]["ImGuiNextWindowData"][20]["comment"] = " // (Always on) This is not exposed publicly, so we don't clear it and it doesn't have a corresponding flag (could we? for consistency?)"
+defs["structs"]["ImGuiNextWindowData"][20]["comment"] = {}
+defs["structs"]["ImGuiNextWindowData"][20]["comment"]["comments"] = " // (Always on) This is not exposed publicly, so we don't clear it and it doesn't have a corresponding flag (could we? for consistency?)"
 defs["structs"]["ImGuiNextWindowData"][20]["name"] = "MenuBarOffsetMinVal"
 defs["structs"]["ImGuiNextWindowData"][20]["type"] = "ImVec2"
 defs["structs"]["ImGuiOldColumnData"] = {}
 defs["structs"]["ImGuiOldColumnData"][1] = {}
-defs["structs"]["ImGuiOldColumnData"][1]["comment"] = " // Column start offset, normalized 0.0 (far left) -> 1.0 (far right)"
+defs["structs"]["ImGuiOldColumnData"][1]["comment"] = {}
+defs["structs"]["ImGuiOldColumnData"][1]["comment"]["comments"] = " // Column start offset, normalized 0.0 (far left) -> 1.0 (far right)"
 defs["structs"]["ImGuiOldColumnData"][1]["name"] = "OffsetNorm"
 defs["structs"]["ImGuiOldColumnData"][1]["type"] = "float"
 defs["structs"]["ImGuiOldColumnData"][2] = {}
+defs["structs"]["ImGuiOldColumnData"][2]["comment"] = {}
 defs["structs"]["ImGuiOldColumnData"][2]["name"] = "OffsetNormBeforeResize"
 defs["structs"]["ImGuiOldColumnData"][2]["type"] = "float"
 defs["structs"]["ImGuiOldColumnData"][3] = {}
-defs["structs"]["ImGuiOldColumnData"][3]["comment"] = " // Not exposed"
+defs["structs"]["ImGuiOldColumnData"][3]["comment"] = {}
+defs["structs"]["ImGuiOldColumnData"][3]["comment"]["comments"] = " // Not exposed"
 defs["structs"]["ImGuiOldColumnData"][3]["name"] = "Flags"
 defs["structs"]["ImGuiOldColumnData"][3]["type"] = "ImGuiOldColumnFlags"
 defs["structs"]["ImGuiOldColumnData"][4] = {}
+defs["structs"]["ImGuiOldColumnData"][4]["comment"] = {}
 defs["structs"]["ImGuiOldColumnData"][4]["name"] = "ClipRect"
 defs["structs"]["ImGuiOldColumnData"][4]["type"] = "ImRect"
 defs["structs"]["ImGuiOldColumns"] = {}
 defs["structs"]["ImGuiOldColumns"][1] = {}
+defs["structs"]["ImGuiOldColumns"][1]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][1]["name"] = "ID"
 defs["structs"]["ImGuiOldColumns"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiOldColumns"][2] = {}
+defs["structs"]["ImGuiOldColumns"][2]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][2]["name"] = "Flags"
 defs["structs"]["ImGuiOldColumns"][2]["type"] = "ImGuiOldColumnFlags"
 defs["structs"]["ImGuiOldColumns"][3] = {}
+defs["structs"]["ImGuiOldColumns"][3]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][3]["name"] = "IsFirstFrame"
 defs["structs"]["ImGuiOldColumns"][3]["type"] = "bool"
 defs["structs"]["ImGuiOldColumns"][4] = {}
+defs["structs"]["ImGuiOldColumns"][4]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][4]["name"] = "IsBeingResized"
 defs["structs"]["ImGuiOldColumns"][4]["type"] = "bool"
 defs["structs"]["ImGuiOldColumns"][5] = {}
+defs["structs"]["ImGuiOldColumns"][5]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][5]["name"] = "Current"
 defs["structs"]["ImGuiOldColumns"][5]["type"] = "int"
 defs["structs"]["ImGuiOldColumns"][6] = {}
+defs["structs"]["ImGuiOldColumns"][6]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][6]["name"] = "Count"
 defs["structs"]["ImGuiOldColumns"][6]["type"] = "int"
 defs["structs"]["ImGuiOldColumns"][7] = {}
-defs["structs"]["ImGuiOldColumns"][7]["comment"] = " // Offsets from HostWorkRect.Min.x"
+defs["structs"]["ImGuiOldColumns"][7]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][7]["comment"]["comments"] = " // Offsets from HostWorkRect.Min.x"
 defs["structs"]["ImGuiOldColumns"][7]["name"] = "OffMinX"
 defs["structs"]["ImGuiOldColumns"][7]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][8] = {}
-defs["structs"]["ImGuiOldColumns"][8]["comment"] = " // Offsets from HostWorkRect.Min.x"
+defs["structs"]["ImGuiOldColumns"][8]["comment"] = defs["structs"]["ImGuiOldColumns"][7]["comment"]
 defs["structs"]["ImGuiOldColumns"][8]["name"] = "OffMaxX"
 defs["structs"]["ImGuiOldColumns"][8]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][9] = {}
+defs["structs"]["ImGuiOldColumns"][9]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][9]["name"] = "LineMinY"
 defs["structs"]["ImGuiOldColumns"][9]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][10] = {}
+defs["structs"]["ImGuiOldColumns"][10]["comment"] = defs["structs"]["ImGuiOldColumns"][9]["comment"]
 defs["structs"]["ImGuiOldColumns"][10]["name"] = "LineMaxY"
 defs["structs"]["ImGuiOldColumns"][10]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][11] = {}
-defs["structs"]["ImGuiOldColumns"][11]["comment"] = " // Backup of CursorPos at the time of BeginColumns()"
+defs["structs"]["ImGuiOldColumns"][11]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][11]["comment"]["comments"] = " // Backup of CursorPos at the time of BeginColumns()"
 defs["structs"]["ImGuiOldColumns"][11]["name"] = "HostCursorPosY"
 defs["structs"]["ImGuiOldColumns"][11]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][12] = {}
-defs["structs"]["ImGuiOldColumns"][12]["comment"] = " // Backup of CursorMaxPos at the time of BeginColumns()"
+defs["structs"]["ImGuiOldColumns"][12]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][12]["comment"]["comments"] = " // Backup of CursorMaxPos at the time of BeginColumns()"
 defs["structs"]["ImGuiOldColumns"][12]["name"] = "HostCursorMaxPosX"
 defs["structs"]["ImGuiOldColumns"][12]["type"] = "float"
 defs["structs"]["ImGuiOldColumns"][13] = {}
-defs["structs"]["ImGuiOldColumns"][13]["comment"] = " // Backup of ClipRect at the time of BeginColumns()"
+defs["structs"]["ImGuiOldColumns"][13]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][13]["comment"]["comments"] = " // Backup of ClipRect at the time of BeginColumns()"
 defs["structs"]["ImGuiOldColumns"][13]["name"] = "HostInitialClipRect"
 defs["structs"]["ImGuiOldColumns"][13]["type"] = "ImRect"
 defs["structs"]["ImGuiOldColumns"][14] = {}
-defs["structs"]["ImGuiOldColumns"][14]["comment"] = " // Backup of ClipRect during PushColumnsBackground()/PopColumnsBackground()"
+defs["structs"]["ImGuiOldColumns"][14]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][14]["comment"]["comments"] = " // Backup of ClipRect during PushColumnsBackground()/PopColumnsBackground()"
 defs["structs"]["ImGuiOldColumns"][14]["name"] = "HostBackupClipRect"
 defs["structs"]["ImGuiOldColumns"][14]["type"] = "ImRect"
 defs["structs"]["ImGuiOldColumns"][15] = {}
-defs["structs"]["ImGuiOldColumns"][15]["comment"] = "//Backup of WorkRect at the time of BeginColumns()"
+defs["structs"]["ImGuiOldColumns"][15]["comment"] = {}
+defs["structs"]["ImGuiOldColumns"][15]["comment"]["comments"] = "//Backup of WorkRect at the time of BeginColumns()"
 defs["structs"]["ImGuiOldColumns"][15]["name"] = "HostBackupParentWorkRect"
 defs["structs"]["ImGuiOldColumns"][15]["type"] = "ImRect"
 defs["structs"]["ImGuiOldColumns"][16] = {}
+defs["structs"]["ImGuiOldColumns"][16]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][16]["name"] = "Columns"
 defs["structs"]["ImGuiOldColumns"][16]["template_type"] = "ImGuiOldColumnData"
 defs["structs"]["ImGuiOldColumns"][16]["type"] = "ImVector_ImGuiOldColumnData"
 defs["structs"]["ImGuiOldColumns"][17] = {}
+defs["structs"]["ImGuiOldColumns"][17]["comment"] = {}
 defs["structs"]["ImGuiOldColumns"][17]["name"] = "Splitter"
 defs["structs"]["ImGuiOldColumns"][17]["type"] = "ImDrawListSplitter"
 defs["structs"]["ImGuiOnceUponAFrame"] = {}
 defs["structs"]["ImGuiOnceUponAFrame"][1] = {}
+defs["structs"]["ImGuiOnceUponAFrame"][1]["comment"] = {}
 defs["structs"]["ImGuiOnceUponAFrame"][1]["name"] = "RefFrame"
 defs["structs"]["ImGuiOnceUponAFrame"][1]["type"] = "int"
 defs["structs"]["ImGuiPayload"] = {}
 defs["structs"]["ImGuiPayload"][1] = {}
-defs["structs"]["ImGuiPayload"][1]["comment"] = "\
-    // Members // Data (copied and owned by dear imgui)"
+defs["structs"]["ImGuiPayload"][1]["comment"] = {}
+defs["structs"]["ImGuiPayload"][1]["comment"]["comments"] = " // Data (copied and owned by dear imgui)"
+defs["structs"]["ImGuiPayload"][1]["comment"]["prevcomments"] = "\
+    // Members"
 defs["structs"]["ImGuiPayload"][1]["name"] = "Data"
 defs["structs"]["ImGuiPayload"][1]["type"] = "void*"
 defs["structs"]["ImGuiPayload"][2] = {}
-defs["structs"]["ImGuiPayload"][2]["comment"] = " // Data size"
+defs["structs"]["ImGuiPayload"][2]["comment"] = {}
+defs["structs"]["ImGuiPayload"][2]["comment"]["comments"] = " // Data size"
 defs["structs"]["ImGuiPayload"][2]["name"] = "DataSize"
 defs["structs"]["ImGuiPayload"][2]["type"] = "int"
 defs["structs"]["ImGuiPayload"][3] = {}
-defs["structs"]["ImGuiPayload"][3]["comment"] = "    // [Internal] // Source item id"
+defs["structs"]["ImGuiPayload"][3]["comment"] = {}
+defs["structs"]["ImGuiPayload"][3]["comment"]["comments"] = " // Source item id"
+defs["structs"]["ImGuiPayload"][3]["comment"]["prevcomments"] = "\
+    // [Internal]"
 defs["structs"]["ImGuiPayload"][3]["name"] = "SourceId"
 defs["structs"]["ImGuiPayload"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiPayload"][4] = {}
-defs["structs"]["ImGuiPayload"][4]["comment"] = " // Source parent id (if available)"
+defs["structs"]["ImGuiPayload"][4]["comment"] = {}
+defs["structs"]["ImGuiPayload"][4]["comment"]["comments"] = " // Source parent id (if available)"
 defs["structs"]["ImGuiPayload"][4]["name"] = "SourceParentId"
 defs["structs"]["ImGuiPayload"][4]["type"] = "ImGuiID"
 defs["structs"]["ImGuiPayload"][5] = {}
-defs["structs"]["ImGuiPayload"][5]["comment"] = " // Data timestamp"
+defs["structs"]["ImGuiPayload"][5]["comment"] = {}
+defs["structs"]["ImGuiPayload"][5]["comment"]["comments"] = " // Data timestamp"
 defs["structs"]["ImGuiPayload"][5]["name"] = "DataFrameCount"
 defs["structs"]["ImGuiPayload"][5]["type"] = "int"
 defs["structs"]["ImGuiPayload"][6] = {}
-defs["structs"]["ImGuiPayload"][6]["comment"] = " // Data type tag (short user-supplied string, 32 characters max)"
+defs["structs"]["ImGuiPayload"][6]["comment"] = {}
+defs["structs"]["ImGuiPayload"][6]["comment"]["comments"] = " // Data type tag (short user-supplied string, 32 characters max)"
 defs["structs"]["ImGuiPayload"][6]["name"] = "DataType[32+1]"
 defs["structs"]["ImGuiPayload"][6]["size"] = 33
 defs["structs"]["ImGuiPayload"][6]["type"] = "char"
 defs["structs"]["ImGuiPayload"][7] = {}
-defs["structs"]["ImGuiPayload"][7]["comment"] = " // Set when AcceptDragDropPayload() was called and mouse has been hovering the target item (nb: handle overlapping drag targets)"
+defs["structs"]["ImGuiPayload"][7]["comment"] = {}
+defs["structs"]["ImGuiPayload"][7]["comment"]["comments"] = " // Set when AcceptDragDropPayload() was called and mouse has been hovering the target item (nb: handle overlapping drag targets)"
 defs["structs"]["ImGuiPayload"][7]["name"] = "Preview"
 defs["structs"]["ImGuiPayload"][7]["type"] = "bool"
 defs["structs"]["ImGuiPayload"][8] = {}
-defs["structs"]["ImGuiPayload"][8]["comment"] = " // Set when AcceptDragDropPayload() was called and mouse button is released over the target item."
+defs["structs"]["ImGuiPayload"][8]["comment"] = {}
+defs["structs"]["ImGuiPayload"][8]["comment"]["comments"] = " // Set when AcceptDragDropPayload() was called and mouse button is released over the target item."
 defs["structs"]["ImGuiPayload"][8]["name"] = "Delivery"
 defs["structs"]["ImGuiPayload"][8]["type"] = "bool"
 defs["structs"]["ImGuiPlatformIO"] = {}
 defs["structs"]["ImGuiPlatformIO"][1] = {}
-defs["structs"]["ImGuiPlatformIO"][1]["comment"] = "    // Platform function --------------------------------------------------- Called by ----- // . . U . .  // Create a new platform window for the given viewport"
+defs["structs"]["ImGuiPlatformIO"][1]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][1]["comment"]["comments"] = " // . . U . .  // Create a new platform window for the given viewport"
+defs["structs"]["ImGuiPlatformIO"][1]["comment"]["prevcomments"] = "\
+    //------------------------------------------------------------------\
+    // Input - Backend interface/functions + Monitor List\
+    //------------------------------------------------------------------\
+    // (Optional) Platform functions (e.g. Win32, GLFW, SDL2)\
+    // For reference, the second column shows which function are generally calling the Platform Functions:\
+    //   N = ImGui::NewFrame()                        ~ beginning of the dear imgui frame: read info from platform/OS windows (latest size/position)\
+    //   F = ImGui::Begin(), ImGui::EndFrame()        ~ during the dear imgui frame\
+    //   U = ImGui::UpdatePlatformWindows()           ~ after the dear imgui frame: create and update all platform/OS windows\
+    //   R = ImGui::RenderPlatformWindowsDefault()    ~ render\
+    //   D = ImGui::DestroyPlatformWindows()          ~ shutdown\
+    // The general idea is that NewFrame() we will read the current Platform/OS state, and UpdatePlatformWindows() will write to it.\
+    //\
+    // The functions are designed so we can mix and match 2 imgui_impl_xxxx files, one for the Platform (~window/input handling), one for Renderer.\
+    // Custom engine backends will often provide both Platform and Renderer interfaces and so may not need to use all functions.\
+    // Platform functions are typically called before their Renderer counterpart, apart from Destroy which are called the other way.\
+    // Platform function --------------------------------------------------- Called by -----"
 defs["structs"]["ImGuiPlatformIO"][1]["name"] = "Platform_CreateWindow"
 defs["structs"]["ImGuiPlatformIO"][1]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][2] = {}
-defs["structs"]["ImGuiPlatformIO"][2]["comment"] = " // N . U . D  //"
+defs["structs"]["ImGuiPlatformIO"][2]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][2]["comment"]["comments"] = " // N . U . D  //"
 defs["structs"]["ImGuiPlatformIO"][2]["name"] = "Platform_DestroyWindow"
 defs["structs"]["ImGuiPlatformIO"][2]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][3] = {}
-defs["structs"]["ImGuiPlatformIO"][3]["comment"] = " // . . U . .  // Newly created windows are initially hidden so SetWindowPos/Size/Title can be called on them before showing the window"
+defs["structs"]["ImGuiPlatformIO"][3]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][3]["comment"]["comments"] = " // . . U . .  // Newly created windows are initially hidden so SetWindowPos/Size/Title can be called on them before showing the window"
 defs["structs"]["ImGuiPlatformIO"][3]["name"] = "Platform_ShowWindow"
 defs["structs"]["ImGuiPlatformIO"][3]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][4] = {}
-defs["structs"]["ImGuiPlatformIO"][4]["comment"] = " // . . U . .  // Set platform window position (given the upper-left corner of client area)"
+defs["structs"]["ImGuiPlatformIO"][4]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][4]["comment"]["comments"] = " // . . U . .  // Set platform window position (given the upper-left corner of client area)"
 defs["structs"]["ImGuiPlatformIO"][4]["name"] = "Platform_SetWindowPos"
 defs["structs"]["ImGuiPlatformIO"][4]["type"] = "void(*)(ImGuiViewport* vp,ImVec2 pos)"
 defs["structs"]["ImGuiPlatformIO"][5] = {}
-defs["structs"]["ImGuiPlatformIO"][5]["comment"] = " // N . . . .  //"
+defs["structs"]["ImGuiPlatformIO"][5]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][5]["comment"]["comments"] = " // N . . . .  //"
 defs["structs"]["ImGuiPlatformIO"][5]["name"] = "Platform_GetWindowPos"
 defs["structs"]["ImGuiPlatformIO"][5]["type"] = "ImVec2(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][6] = {}
-defs["structs"]["ImGuiPlatformIO"][6]["comment"] = " // . . U . .  // Set platform window client area size (ignoring OS decorations such as OS title bar etc.)"
+defs["structs"]["ImGuiPlatformIO"][6]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][6]["comment"]["comments"] = " // . . U . .  // Set platform window client area size (ignoring OS decorations such as OS title bar etc.)"
 defs["structs"]["ImGuiPlatformIO"][6]["name"] = "Platform_SetWindowSize"
 defs["structs"]["ImGuiPlatformIO"][6]["type"] = "void(*)(ImGuiViewport* vp,ImVec2 size)"
 defs["structs"]["ImGuiPlatformIO"][7] = {}
-defs["structs"]["ImGuiPlatformIO"][7]["comment"] = " // N . . . .  // Get platform window client area size"
+defs["structs"]["ImGuiPlatformIO"][7]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][7]["comment"]["comments"] = " // N . . . .  // Get platform window client area size"
 defs["structs"]["ImGuiPlatformIO"][7]["name"] = "Platform_GetWindowSize"
 defs["structs"]["ImGuiPlatformIO"][7]["type"] = "ImVec2(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][8] = {}
-defs["structs"]["ImGuiPlatformIO"][8]["comment"] = " // N . . . .  // Move window to front and set input focus"
+defs["structs"]["ImGuiPlatformIO"][8]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][8]["comment"]["comments"] = " // N . . . .  // Move window to front and set input focus"
 defs["structs"]["ImGuiPlatformIO"][8]["name"] = "Platform_SetWindowFocus"
 defs["structs"]["ImGuiPlatformIO"][8]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][9] = {}
-defs["structs"]["ImGuiPlatformIO"][9]["comment"] = " // . . U . .  //"
+defs["structs"]["ImGuiPlatformIO"][9]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][9]["comment"]["comments"] = " // . . U . .  //"
 defs["structs"]["ImGuiPlatformIO"][9]["name"] = "Platform_GetWindowFocus"
 defs["structs"]["ImGuiPlatformIO"][9]["type"] = "bool(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][10] = {}
-defs["structs"]["ImGuiPlatformIO"][10]["comment"] = " // N . . . .  // Get platform window minimized state. When minimized, we generally won't attempt to get/set size and contents will be culled more easily"
+defs["structs"]["ImGuiPlatformIO"][10]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][10]["comment"]["comments"] = " // N . . . .  // Get platform window minimized state. When minimized, we generally won't attempt to get/set size and contents will be culled more easily"
 defs["structs"]["ImGuiPlatformIO"][10]["name"] = "Platform_GetWindowMinimized"
 defs["structs"]["ImGuiPlatformIO"][10]["type"] = "bool(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][11] = {}
-defs["structs"]["ImGuiPlatformIO"][11]["comment"] = " // . . U . .  // Set platform window title (given an UTF-8 string)"
+defs["structs"]["ImGuiPlatformIO"][11]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][11]["comment"]["comments"] = " // . . U . .  // Set platform window title (given an UTF-8 string)"
 defs["structs"]["ImGuiPlatformIO"][11]["name"] = "Platform_SetWindowTitle"
 defs["structs"]["ImGuiPlatformIO"][11]["type"] = "void(*)(ImGuiViewport* vp,const char* str)"
 defs["structs"]["ImGuiPlatformIO"][12] = {}
-defs["structs"]["ImGuiPlatformIO"][12]["comment"] = " // . . U . .  // (Optional) Setup global transparency (not per-pixel transparency)"
+defs["structs"]["ImGuiPlatformIO"][12]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][12]["comment"]["comments"] = " // . . U . .  // (Optional) Setup global transparency (not per-pixel transparency)"
 defs["structs"]["ImGuiPlatformIO"][12]["name"] = "Platform_SetWindowAlpha"
 defs["structs"]["ImGuiPlatformIO"][12]["type"] = "void(*)(ImGuiViewport* vp,float alpha)"
 defs["structs"]["ImGuiPlatformIO"][13] = {}
-defs["structs"]["ImGuiPlatformIO"][13]["comment"] = " // . . U . .  // (Optional) Called by UpdatePlatformWindows(). Optional hook to allow the platform backend from doing general book-keeping every frame."
+defs["structs"]["ImGuiPlatformIO"][13]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][13]["comment"]["comments"] = " // . . U . .  // (Optional) Called by UpdatePlatformWindows(). Optional hook to allow the platform backend from doing general book-keeping every frame."
 defs["structs"]["ImGuiPlatformIO"][13]["name"] = "Platform_UpdateWindow"
 defs["structs"]["ImGuiPlatformIO"][13]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][14] = {}
-defs["structs"]["ImGuiPlatformIO"][14]["comment"] = " // . . . R .  // (Optional) Main rendering (platform side! This is often unused, or just setting a \"current\" context for OpenGL bindings). 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
+defs["structs"]["ImGuiPlatformIO"][14]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][14]["comment"]["comments"] = " // . . . R .  // (Optional) Main rendering (platform side! This is often unused, or just setting a \"current\" context for OpenGL bindings). 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
 defs["structs"]["ImGuiPlatformIO"][14]["name"] = "Platform_RenderWindow"
 defs["structs"]["ImGuiPlatformIO"][14]["type"] = "void(*)(ImGuiViewport* vp,void* render_arg)"
 defs["structs"]["ImGuiPlatformIO"][15] = {}
-defs["structs"]["ImGuiPlatformIO"][15]["comment"] = " // . . . R .  // (Optional) Call Present/SwapBuffers (platform side! This is often unused!). 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
+defs["structs"]["ImGuiPlatformIO"][15]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][15]["comment"]["comments"] = " // . . . R .  // (Optional) Call Present/SwapBuffers (platform side! This is often unused!). 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
 defs["structs"]["ImGuiPlatformIO"][15]["name"] = "Platform_SwapBuffers"
 defs["structs"]["ImGuiPlatformIO"][15]["type"] = "void(*)(ImGuiViewport* vp,void* render_arg)"
 defs["structs"]["ImGuiPlatformIO"][16] = {}
-defs["structs"]["ImGuiPlatformIO"][16]["comment"] = " // N . . . .  // (Optional) [BETA] FIXME-DPI: DPI handling: Return DPI scale for this viewport. 1.0f = 96 DPI."
+defs["structs"]["ImGuiPlatformIO"][16]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][16]["comment"]["comments"] = " // N . . . .  // (Optional) [BETA] FIXME-DPI: DPI handling: Return DPI scale for this viewport. 1.0f = 96 DPI."
 defs["structs"]["ImGuiPlatformIO"][16]["name"] = "Platform_GetWindowDpiScale"
 defs["structs"]["ImGuiPlatformIO"][16]["type"] = "float(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][17] = {}
-defs["structs"]["ImGuiPlatformIO"][17]["comment"] = " // . F . . .  // (Optional) [BETA] FIXME-DPI: DPI handling: Called during Begin() every time the viewport we are outputting into changes, so backend has a chance to swap fonts to adjust style."
+defs["structs"]["ImGuiPlatformIO"][17]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][17]["comment"]["comments"] = " // . F . . .  // (Optional) [BETA] FIXME-DPI: DPI handling: Called during Begin() every time the viewport we are outputting into changes, so backend has a chance to swap fonts to adjust style."
 defs["structs"]["ImGuiPlatformIO"][17]["name"] = "Platform_OnChangedViewport"
 defs["structs"]["ImGuiPlatformIO"][17]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][18] = {}
-defs["structs"]["ImGuiPlatformIO"][18]["comment"] = " // (Optional) For a Vulkan Renderer to call into Platform code (since the surface creation needs to tie them both)."
+defs["structs"]["ImGuiPlatformIO"][18]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][18]["comment"]["comments"] = " // (Optional) For a Vulkan Renderer to call into Platform code (since the surface creation needs to tie them both)."
 defs["structs"]["ImGuiPlatformIO"][18]["name"] = "Platform_CreateVkSurface"
 defs["structs"]["ImGuiPlatformIO"][18]["type"] = "int(*)(ImGuiViewport* vp,ImU64 vk_inst,const void* vk_allocators,ImU64* out_vk_surface)"
 defs["structs"]["ImGuiPlatformIO"][19] = {}
-defs["structs"]["ImGuiPlatformIO"][19]["comment"] = "    // (Optional) Renderer functions (e.g. DirectX, OpenGL, Vulkan) // . . U . .  // Create swap chain, frame buffers etc. (called after Platform_CreateWindow)"
+defs["structs"]["ImGuiPlatformIO"][19]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][19]["comment"]["comments"] = " // . . U . .  // Create swap chain, frame buffers etc. (called after Platform_CreateWindow)"
+defs["structs"]["ImGuiPlatformIO"][19]["comment"]["prevcomments"] = "\
+    // (Optional) Renderer functions (e.g. DirectX, OpenGL, Vulkan)"
 defs["structs"]["ImGuiPlatformIO"][19]["name"] = "Renderer_CreateWindow"
 defs["structs"]["ImGuiPlatformIO"][19]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][20] = {}
-defs["structs"]["ImGuiPlatformIO"][20]["comment"] = " // N . U . D  // Destroy swap chain, frame buffers etc. (called before Platform_DestroyWindow)"
+defs["structs"]["ImGuiPlatformIO"][20]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][20]["comment"]["comments"] = " // N . U . D  // Destroy swap chain, frame buffers etc. (called before Platform_DestroyWindow)"
 defs["structs"]["ImGuiPlatformIO"][20]["name"] = "Renderer_DestroyWindow"
 defs["structs"]["ImGuiPlatformIO"][20]["type"] = "void(*)(ImGuiViewport* vp)"
 defs["structs"]["ImGuiPlatformIO"][21] = {}
-defs["structs"]["ImGuiPlatformIO"][21]["comment"] = " // . . U . .  // Resize swap chain, frame buffers etc. (called after Platform_SetWindowSize)"
+defs["structs"]["ImGuiPlatformIO"][21]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][21]["comment"]["comments"] = " // . . U . .  // Resize swap chain, frame buffers etc. (called after Platform_SetWindowSize)"
 defs["structs"]["ImGuiPlatformIO"][21]["name"] = "Renderer_SetWindowSize"
 defs["structs"]["ImGuiPlatformIO"][21]["type"] = "void(*)(ImGuiViewport* vp,ImVec2 size)"
 defs["structs"]["ImGuiPlatformIO"][22] = {}
-defs["structs"]["ImGuiPlatformIO"][22]["comment"] = " // . . . R .  // (Optional) Clear framebuffer, setup render target, then render the viewport->DrawData. 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
+defs["structs"]["ImGuiPlatformIO"][22]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][22]["comment"]["comments"] = " // . . . R .  // (Optional) Clear framebuffer, setup render target, then render the viewport->DrawData. 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
 defs["structs"]["ImGuiPlatformIO"][22]["name"] = "Renderer_RenderWindow"
 defs["structs"]["ImGuiPlatformIO"][22]["type"] = "void(*)(ImGuiViewport* vp,void* render_arg)"
 defs["structs"]["ImGuiPlatformIO"][23] = {}
-defs["structs"]["ImGuiPlatformIO"][23]["comment"] = " // . . . R .  // (Optional) Call Present/SwapBuffers. 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
+defs["structs"]["ImGuiPlatformIO"][23]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][23]["comment"]["comments"] = " // . . . R .  // (Optional) Call Present/SwapBuffers. 'render_arg' is the value passed to RenderPlatformWindowsDefault()."
 defs["structs"]["ImGuiPlatformIO"][23]["name"] = "Renderer_SwapBuffers"
 defs["structs"]["ImGuiPlatformIO"][23]["type"] = "void(*)(ImGuiViewport* vp,void* render_arg)"
 defs["structs"]["ImGuiPlatformIO"][24] = {}
-defs["structs"]["ImGuiPlatformIO"][24]["comment"] = "    // (Optional) Monitor list\
+defs["structs"]["ImGuiPlatformIO"][24]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][24]["comment"]["prevcomments"] = "\
+    // (Optional) Monitor list\
     // - Updated by: app/backend. Update every frame to dynamically support changing monitor or DPI configuration.\
     // - Used by: dear imgui to query DPI info, clamp popups/tooltips within same monitor and not have them straddle monitors."
 defs["structs"]["ImGuiPlatformIO"][24]["name"] = "Monitors"
 defs["structs"]["ImGuiPlatformIO"][24]["template_type"] = "ImGuiPlatformMonitor"
 defs["structs"]["ImGuiPlatformIO"][24]["type"] = "ImVector_ImGuiPlatformMonitor"
 defs["structs"]["ImGuiPlatformIO"][25] = {}
-defs["structs"]["ImGuiPlatformIO"][25]["comment"] = "    // Viewports list (the list is updated by calling ImGui::EndFrame or ImGui::Render)\
-    // (in the future we will attempt to organize this feature to remove the need for a \"main viewport\") // Main viewports, followed by all secondary viewports."
+defs["structs"]["ImGuiPlatformIO"][25]["comment"] = {}
+defs["structs"]["ImGuiPlatformIO"][25]["comment"]["comments"] = " // Main viewports, followed by all secondary viewports."
+defs["structs"]["ImGuiPlatformIO"][25]["comment"]["prevcomments"] = "\
+    //------------------------------------------------------------------\
+    // Output - List of viewports to render into platform windows\
+    //------------------------------------------------------------------\
+    // Viewports list (the list is updated by calling ImGui::EndFrame or ImGui::Render)\
+    // (in the future we will attempt to organize this feature to remove the need for a \"main viewport\")"
 defs["structs"]["ImGuiPlatformIO"][25]["name"] = "Viewports"
 defs["structs"]["ImGuiPlatformIO"][25]["template_type"] = "ImGuiViewport*"
 defs["structs"]["ImGuiPlatformIO"][25]["type"] = "ImVector_ImGuiViewportPtr"
 defs["structs"]["ImGuiPlatformImeData"] = {}
 defs["structs"]["ImGuiPlatformImeData"][1] = {}
-defs["structs"]["ImGuiPlatformImeData"][1]["comment"] = " // A widget wants the IME to be visible"
+defs["structs"]["ImGuiPlatformImeData"][1]["comment"] = {}
+defs["structs"]["ImGuiPlatformImeData"][1]["comment"]["comments"] = " // A widget wants the IME to be visible"
 defs["structs"]["ImGuiPlatformImeData"][1]["name"] = "WantVisible"
 defs["structs"]["ImGuiPlatformImeData"][1]["type"] = "bool"
 defs["structs"]["ImGuiPlatformImeData"][2] = {}
-defs["structs"]["ImGuiPlatformImeData"][2]["comment"] = " // Position of the input cursor"
+defs["structs"]["ImGuiPlatformImeData"][2]["comment"] = {}
+defs["structs"]["ImGuiPlatformImeData"][2]["comment"]["comments"] = " // Position of the input cursor"
 defs["structs"]["ImGuiPlatformImeData"][2]["name"] = "InputPos"
 defs["structs"]["ImGuiPlatformImeData"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiPlatformImeData"][3] = {}
-defs["structs"]["ImGuiPlatformImeData"][3]["comment"] = " // Line height"
+defs["structs"]["ImGuiPlatformImeData"][3]["comment"] = {}
+defs["structs"]["ImGuiPlatformImeData"][3]["comment"]["comments"] = " // Line height"
 defs["structs"]["ImGuiPlatformImeData"][3]["name"] = "InputLineHeight"
 defs["structs"]["ImGuiPlatformImeData"][3]["type"] = "float"
 defs["structs"]["ImGuiPlatformMonitor"] = {}
 defs["structs"]["ImGuiPlatformMonitor"][1] = {}
-defs["structs"]["ImGuiPlatformMonitor"][1]["comment"] = " // Coordinates of the area displayed on this monitor (Min = upper left, Max = bottom right)"
+defs["structs"]["ImGuiPlatformMonitor"][1]["comment"] = {}
+defs["structs"]["ImGuiPlatformMonitor"][1]["comment"]["comments"] = " // Coordinates of the area displayed on this monitor (Min = upper left, Max = bottom right)"
 defs["structs"]["ImGuiPlatformMonitor"][1]["name"] = "MainPos"
 defs["structs"]["ImGuiPlatformMonitor"][1]["type"] = "ImVec2"
 defs["structs"]["ImGuiPlatformMonitor"][2] = {}
-defs["structs"]["ImGuiPlatformMonitor"][2]["comment"] = " // Coordinates of the area displayed on this monitor (Min = upper left, Max = bottom right)"
+defs["structs"]["ImGuiPlatformMonitor"][2]["comment"] = defs["structs"]["ImGuiPlatformMonitor"][1]["comment"]
 defs["structs"]["ImGuiPlatformMonitor"][2]["name"] = "MainSize"
 defs["structs"]["ImGuiPlatformMonitor"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiPlatformMonitor"][3] = {}
-defs["structs"]["ImGuiPlatformMonitor"][3]["comment"] = " // Coordinates without task bars / side bars / menu bars. Used to avoid positioning popups/tooltips inside this region. If you don't have this info, please copy the value for MainPos/MainSize."
+defs["structs"]["ImGuiPlatformMonitor"][3]["comment"] = {}
+defs["structs"]["ImGuiPlatformMonitor"][3]["comment"]["comments"] = " // Coordinates without task bars / side bars / menu bars. Used to avoid positioning popups/tooltips inside this region. If you don't have this info, please copy the value for MainPos/MainSize."
 defs["structs"]["ImGuiPlatformMonitor"][3]["name"] = "WorkPos"
 defs["structs"]["ImGuiPlatformMonitor"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiPlatformMonitor"][4] = {}
-defs["structs"]["ImGuiPlatformMonitor"][4]["comment"] = " // Coordinates without task bars / side bars / menu bars. Used to avoid positioning popups/tooltips inside this region. If you don't have this info, please copy the value for MainPos/MainSize."
+defs["structs"]["ImGuiPlatformMonitor"][4]["comment"] = defs["structs"]["ImGuiPlatformMonitor"][3]["comment"]
 defs["structs"]["ImGuiPlatformMonitor"][4]["name"] = "WorkSize"
 defs["structs"]["ImGuiPlatformMonitor"][4]["type"] = "ImVec2"
 defs["structs"]["ImGuiPlatformMonitor"][5] = {}
-defs["structs"]["ImGuiPlatformMonitor"][5]["comment"] = " // 1.0f = 96 DPI"
+defs["structs"]["ImGuiPlatformMonitor"][5]["comment"] = {}
+defs["structs"]["ImGuiPlatformMonitor"][5]["comment"]["comments"] = " // 1.0f = 96 DPI"
 defs["structs"]["ImGuiPlatformMonitor"][5]["name"] = "DpiScale"
 defs["structs"]["ImGuiPlatformMonitor"][5]["type"] = "float"
 defs["structs"]["ImGuiPopupData"] = {}
 defs["structs"]["ImGuiPopupData"][1] = {}
-defs["structs"]["ImGuiPopupData"][1]["comment"] = " // Set on OpenPopup()"
+defs["structs"]["ImGuiPopupData"][1]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][1]["comment"]["comments"] = " // Set on OpenPopup()"
 defs["structs"]["ImGuiPopupData"][1]["name"] = "PopupId"
 defs["structs"]["ImGuiPopupData"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiPopupData"][2] = {}
-defs["structs"]["ImGuiPopupData"][2]["comment"] = " // Resolved on BeginPopup() - may stay unresolved if user never calls OpenPopup()"
+defs["structs"]["ImGuiPopupData"][2]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][2]["comment"]["comments"] = " // Resolved on BeginPopup() - may stay unresolved if user never calls OpenPopup()"
 defs["structs"]["ImGuiPopupData"][2]["name"] = "Window"
 defs["structs"]["ImGuiPopupData"][2]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiPopupData"][3] = {}
-defs["structs"]["ImGuiPopupData"][3]["comment"] = " // Set on OpenPopup() copy of NavWindow at the time of opening the popup"
+defs["structs"]["ImGuiPopupData"][3]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][3]["comment"]["comments"] = " // Set on OpenPopup() copy of NavWindow at the time of opening the popup"
 defs["structs"]["ImGuiPopupData"][3]["name"] = "SourceWindow"
 defs["structs"]["ImGuiPopupData"][3]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiPopupData"][4] = {}
-defs["structs"]["ImGuiPopupData"][4]["comment"] = " // Resolved on BeginPopup(). Actually a ImGuiNavLayer type (declared down below), initialized to -1 which is not part of an enum, but serves well-enough as \"not any of layers\" value"
+defs["structs"]["ImGuiPopupData"][4]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][4]["comment"]["comments"] = " // Resolved on BeginPopup(). Actually a ImGuiNavLayer type (declared down below), initialized to -1 which is not part of an enum, but serves well-enough as \"not any of layers\" value"
 defs["structs"]["ImGuiPopupData"][4]["name"] = "ParentNavLayer"
 defs["structs"]["ImGuiPopupData"][4]["type"] = "int"
 defs["structs"]["ImGuiPopupData"][5] = {}
-defs["structs"]["ImGuiPopupData"][5]["comment"] = " // Set on OpenPopup()"
+defs["structs"]["ImGuiPopupData"][5]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][5]["comment"]["comments"] = " // Set on OpenPopup()"
 defs["structs"]["ImGuiPopupData"][5]["name"] = "OpenFrameCount"
 defs["structs"]["ImGuiPopupData"][5]["type"] = "int"
 defs["structs"]["ImGuiPopupData"][6] = {}
-defs["structs"]["ImGuiPopupData"][6]["comment"] = " // Set on OpenPopup(), we need this to differentiate multiple menu sets from each others (e.g. inside menu bar vs loose menu items)"
+defs["structs"]["ImGuiPopupData"][6]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][6]["comment"]["comments"] = " // Set on OpenPopup(), we need this to differentiate multiple menu sets from each others (e.g. inside menu bar vs loose menu items)"
 defs["structs"]["ImGuiPopupData"][6]["name"] = "OpenParentId"
 defs["structs"]["ImGuiPopupData"][6]["type"] = "ImGuiID"
 defs["structs"]["ImGuiPopupData"][7] = {}
-defs["structs"]["ImGuiPopupData"][7]["comment"] = " // Set on OpenPopup(), preferred popup position (typically == OpenMousePos when using mouse)"
+defs["structs"]["ImGuiPopupData"][7]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][7]["comment"]["comments"] = " // Set on OpenPopup(), preferred popup position (typically == OpenMousePos when using mouse)"
 defs["structs"]["ImGuiPopupData"][7]["name"] = "OpenPopupPos"
 defs["structs"]["ImGuiPopupData"][7]["type"] = "ImVec2"
 defs["structs"]["ImGuiPopupData"][8] = {}
-defs["structs"]["ImGuiPopupData"][8]["comment"] = " // Set on OpenPopup(), copy of mouse position at the time of opening popup"
+defs["structs"]["ImGuiPopupData"][8]["comment"] = {}
+defs["structs"]["ImGuiPopupData"][8]["comment"]["comments"] = " // Set on OpenPopup(), copy of mouse position at the time of opening popup"
 defs["structs"]["ImGuiPopupData"][8]["name"] = "OpenMousePos"
 defs["structs"]["ImGuiPopupData"][8]["type"] = "ImVec2"
 defs["structs"]["ImGuiPtrOrIndex"] = {}
 defs["structs"]["ImGuiPtrOrIndex"][1] = {}
-defs["structs"]["ImGuiPtrOrIndex"][1]["comment"] = " // Either field can be set, not both. e.g. Dock node tab bars are loose while BeginTabBar() ones are in a pool."
+defs["structs"]["ImGuiPtrOrIndex"][1]["comment"] = {}
+defs["structs"]["ImGuiPtrOrIndex"][1]["comment"]["comments"] = " // Either field can be set, not both. e.g. Dock node tab bars are loose while BeginTabBar() ones are in a pool."
 defs["structs"]["ImGuiPtrOrIndex"][1]["name"] = "Ptr"
 defs["structs"]["ImGuiPtrOrIndex"][1]["type"] = "void*"
 defs["structs"]["ImGuiPtrOrIndex"][2] = {}
-defs["structs"]["ImGuiPtrOrIndex"][2]["comment"] = " // Usually index in a main pool."
+defs["structs"]["ImGuiPtrOrIndex"][2]["comment"] = {}
+defs["structs"]["ImGuiPtrOrIndex"][2]["comment"]["comments"] = " // Usually index in a main pool."
 defs["structs"]["ImGuiPtrOrIndex"][2]["name"] = "Index"
 defs["structs"]["ImGuiPtrOrIndex"][2]["type"] = "int"
 defs["structs"]["ImGuiSettingsHandler"] = {}
 defs["structs"]["ImGuiSettingsHandler"][1] = {}
-defs["structs"]["ImGuiSettingsHandler"][1]["comment"] = " // Short description stored in .ini file. Disallowed characters: '[' ']'"
+defs["structs"]["ImGuiSettingsHandler"][1]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][1]["comment"]["comments"] = " // Short description stored in .ini file. Disallowed characters: '[' ']'"
 defs["structs"]["ImGuiSettingsHandler"][1]["name"] = "TypeName"
 defs["structs"]["ImGuiSettingsHandler"][1]["type"] = "const char*"
 defs["structs"]["ImGuiSettingsHandler"][2] = {}
-defs["structs"]["ImGuiSettingsHandler"][2]["comment"] = " // == ImHashStr(TypeName)"
+defs["structs"]["ImGuiSettingsHandler"][2]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][2]["comment"]["comments"] = " // == ImHashStr(TypeName)"
 defs["structs"]["ImGuiSettingsHandler"][2]["name"] = "TypeHash"
 defs["structs"]["ImGuiSettingsHandler"][2]["type"] = "ImGuiID"
 defs["structs"]["ImGuiSettingsHandler"][3] = {}
-defs["structs"]["ImGuiSettingsHandler"][3]["comment"] = " // Clear all settings data"
+defs["structs"]["ImGuiSettingsHandler"][3]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][3]["comment"]["comments"] = " // Clear all settings data"
 defs["structs"]["ImGuiSettingsHandler"][3]["name"] = "ClearAllFn"
 defs["structs"]["ImGuiSettingsHandler"][3]["type"] = "void(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler)"
 defs["structs"]["ImGuiSettingsHandler"][4] = {}
-defs["structs"]["ImGuiSettingsHandler"][4]["comment"] = " // Read: Called before reading (in registration order)"
+defs["structs"]["ImGuiSettingsHandler"][4]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][4]["comment"]["comments"] = " // Read: Called before reading (in registration order)"
 defs["structs"]["ImGuiSettingsHandler"][4]["name"] = "ReadInitFn"
 defs["structs"]["ImGuiSettingsHandler"][4]["type"] = "void(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler)"
 defs["structs"]["ImGuiSettingsHandler"][5] = {}
-defs["structs"]["ImGuiSettingsHandler"][5]["comment"] = " // Read: Called when entering into a new ini entry e.g. \"[Window][Name]\""
+defs["structs"]["ImGuiSettingsHandler"][5]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][5]["comment"]["comments"] = " // Read: Called when entering into a new ini entry e.g. \"[Window][Name]\""
 defs["structs"]["ImGuiSettingsHandler"][5]["name"] = "ReadOpenFn"
 defs["structs"]["ImGuiSettingsHandler"][5]["type"] = "void*(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler,const char* name)"
 defs["structs"]["ImGuiSettingsHandler"][6] = {}
-defs["structs"]["ImGuiSettingsHandler"][6]["comment"] = " // Read: Called for every line of text within an ini entry"
+defs["structs"]["ImGuiSettingsHandler"][6]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][6]["comment"]["comments"] = " // Read: Called for every line of text within an ini entry"
 defs["structs"]["ImGuiSettingsHandler"][6]["name"] = "ReadLineFn"
 defs["structs"]["ImGuiSettingsHandler"][6]["type"] = "void(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler,void* entry,const char* line)"
 defs["structs"]["ImGuiSettingsHandler"][7] = {}
-defs["structs"]["ImGuiSettingsHandler"][7]["comment"] = " // Read: Called after reading (in registration order)"
+defs["structs"]["ImGuiSettingsHandler"][7]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][7]["comment"]["comments"] = " // Read: Called after reading (in registration order)"
 defs["structs"]["ImGuiSettingsHandler"][7]["name"] = "ApplyAllFn"
 defs["structs"]["ImGuiSettingsHandler"][7]["type"] = "void(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler)"
 defs["structs"]["ImGuiSettingsHandler"][8] = {}
-defs["structs"]["ImGuiSettingsHandler"][8]["comment"] = " // Write: Output every entries into 'out_buf'"
+defs["structs"]["ImGuiSettingsHandler"][8]["comment"] = {}
+defs["structs"]["ImGuiSettingsHandler"][8]["comment"]["comments"] = " // Write: Output every entries into 'out_buf'"
 defs["structs"]["ImGuiSettingsHandler"][8]["name"] = "WriteAllFn"
 defs["structs"]["ImGuiSettingsHandler"][8]["type"] = "void(*)(ImGuiContext* ctx,ImGuiSettingsHandler* handler,ImGuiTextBuffer* out_buf)"
 defs["structs"]["ImGuiSettingsHandler"][9] = {}
+defs["structs"]["ImGuiSettingsHandler"][9]["comment"] = {}
 defs["structs"]["ImGuiSettingsHandler"][9]["name"] = "UserData"
 defs["structs"]["ImGuiSettingsHandler"][9]["type"] = "void*"
 defs["structs"]["ImGuiShrinkWidthItem"] = {}
 defs["structs"]["ImGuiShrinkWidthItem"][1] = {}
+defs["structs"]["ImGuiShrinkWidthItem"][1]["comment"] = {}
 defs["structs"]["ImGuiShrinkWidthItem"][1]["name"] = "Index"
 defs["structs"]["ImGuiShrinkWidthItem"][1]["type"] = "int"
 defs["structs"]["ImGuiShrinkWidthItem"][2] = {}
+defs["structs"]["ImGuiShrinkWidthItem"][2]["comment"] = {}
 defs["structs"]["ImGuiShrinkWidthItem"][2]["name"] = "Width"
 defs["structs"]["ImGuiShrinkWidthItem"][2]["type"] = "float"
 defs["structs"]["ImGuiShrinkWidthItem"][3] = {}
+defs["structs"]["ImGuiShrinkWidthItem"][3]["comment"] = {}
 defs["structs"]["ImGuiShrinkWidthItem"][3]["name"] = "InitialWidth"
 defs["structs"]["ImGuiShrinkWidthItem"][3]["type"] = "float"
 defs["structs"]["ImGuiSizeCallbackData"] = {}
 defs["structs"]["ImGuiSizeCallbackData"][1] = {}
-defs["structs"]["ImGuiSizeCallbackData"][1]["comment"] = " // Read-only.   What user passed to SetNextWindowSizeConstraints()"
+defs["structs"]["ImGuiSizeCallbackData"][1]["comment"] = {}
+defs["structs"]["ImGuiSizeCallbackData"][1]["comment"]["comments"] = " // Read-only.   What user passed to SetNextWindowSizeConstraints()"
 defs["structs"]["ImGuiSizeCallbackData"][1]["name"] = "UserData"
 defs["structs"]["ImGuiSizeCallbackData"][1]["type"] = "void*"
 defs["structs"]["ImGuiSizeCallbackData"][2] = {}
-defs["structs"]["ImGuiSizeCallbackData"][2]["comment"] = " // Read-only.   Window position, for reference."
+defs["structs"]["ImGuiSizeCallbackData"][2]["comment"] = {}
+defs["structs"]["ImGuiSizeCallbackData"][2]["comment"]["comments"] = " // Read-only.   Window position, for reference."
 defs["structs"]["ImGuiSizeCallbackData"][2]["name"] = "Pos"
 defs["structs"]["ImGuiSizeCallbackData"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiSizeCallbackData"][3] = {}
-defs["structs"]["ImGuiSizeCallbackData"][3]["comment"] = " // Read-only.   Current window size."
+defs["structs"]["ImGuiSizeCallbackData"][3]["comment"] = {}
+defs["structs"]["ImGuiSizeCallbackData"][3]["comment"]["comments"] = " // Read-only.   Current window size."
 defs["structs"]["ImGuiSizeCallbackData"][3]["name"] = "CurrentSize"
 defs["structs"]["ImGuiSizeCallbackData"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiSizeCallbackData"][4] = {}
-defs["structs"]["ImGuiSizeCallbackData"][4]["comment"] = " // Read-write.  Desired size, based on user's mouse position. Write to this field to restrain resizing."
+defs["structs"]["ImGuiSizeCallbackData"][4]["comment"] = {}
+defs["structs"]["ImGuiSizeCallbackData"][4]["comment"]["comments"] = " // Read-write.  Desired size, based on user's mouse position. Write to this field to restrain resizing."
 defs["structs"]["ImGuiSizeCallbackData"][4]["name"] = "DesiredSize"
 defs["structs"]["ImGuiSizeCallbackData"][4]["type"] = "ImVec2"
 defs["structs"]["ImGuiStackLevelInfo"] = {}
 defs["structs"]["ImGuiStackLevelInfo"][1] = {}
+defs["structs"]["ImGuiStackLevelInfo"][1]["comment"] = {}
 defs["structs"]["ImGuiStackLevelInfo"][1]["name"] = "ID"
 defs["structs"]["ImGuiStackLevelInfo"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiStackLevelInfo"][2] = {}
-defs["structs"]["ImGuiStackLevelInfo"][2]["comment"] = " // >= 1: Query in progress"
+defs["structs"]["ImGuiStackLevelInfo"][2]["comment"] = {}
+defs["structs"]["ImGuiStackLevelInfo"][2]["comment"]["comments"] = " // >= 1: Query in progress"
 defs["structs"]["ImGuiStackLevelInfo"][2]["name"] = "QueryFrameCount"
 defs["structs"]["ImGuiStackLevelInfo"][2]["type"] = "ImS8"
 defs["structs"]["ImGuiStackLevelInfo"][3] = {}
-defs["structs"]["ImGuiStackLevelInfo"][3]["comment"] = " // Obtained result from DebugHookIdInfo()"
+defs["structs"]["ImGuiStackLevelInfo"][3]["comment"] = {}
+defs["structs"]["ImGuiStackLevelInfo"][3]["comment"]["comments"] = " // Obtained result from DebugHookIdInfo()"
 defs["structs"]["ImGuiStackLevelInfo"][3]["name"] = "QuerySuccess"
 defs["structs"]["ImGuiStackLevelInfo"][3]["type"] = "bool"
 defs["structs"]["ImGuiStackLevelInfo"][4] = {}
 defs["structs"]["ImGuiStackLevelInfo"][4]["bitfield"] = "8"
+defs["structs"]["ImGuiStackLevelInfo"][4]["comment"] = {}
 defs["structs"]["ImGuiStackLevelInfo"][4]["name"] = "DataType"
 defs["structs"]["ImGuiStackLevelInfo"][4]["type"] = "ImGuiDataType"
 defs["structs"]["ImGuiStackLevelInfo"][5] = {}
-defs["structs"]["ImGuiStackLevelInfo"][5]["comment"] = " // Arbitrarily sized buffer to hold a result (FIXME: could replace Results[] with a chunk stream?) FIXME: Now that we added CTRL+C this should be fixed."
+defs["structs"]["ImGuiStackLevelInfo"][5]["comment"] = {}
+defs["structs"]["ImGuiStackLevelInfo"][5]["comment"]["comments"] = " // Arbitrarily sized buffer to hold a result (FIXME: could replace Results[] with a chunk stream?) FIXME: Now that we added CTRL+C this should be fixed."
 defs["structs"]["ImGuiStackLevelInfo"][5]["name"] = "Desc[57]"
 defs["structs"]["ImGuiStackLevelInfo"][5]["size"] = 57
 defs["structs"]["ImGuiStackLevelInfo"][5]["type"] = "char"
 defs["structs"]["ImGuiStackSizes"] = {}
 defs["structs"]["ImGuiStackSizes"][1] = {}
+defs["structs"]["ImGuiStackSizes"][1]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][1]["name"] = "SizeOfIDStack"
 defs["structs"]["ImGuiStackSizes"][1]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][2] = {}
+defs["structs"]["ImGuiStackSizes"][2]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][2]["name"] = "SizeOfColorStack"
 defs["structs"]["ImGuiStackSizes"][2]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][3] = {}
+defs["structs"]["ImGuiStackSizes"][3]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][3]["name"] = "SizeOfStyleVarStack"
 defs["structs"]["ImGuiStackSizes"][3]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][4] = {}
+defs["structs"]["ImGuiStackSizes"][4]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][4]["name"] = "SizeOfFontStack"
 defs["structs"]["ImGuiStackSizes"][4]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][5] = {}
+defs["structs"]["ImGuiStackSizes"][5]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][5]["name"] = "SizeOfFocusScopeStack"
 defs["structs"]["ImGuiStackSizes"][5]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][6] = {}
+defs["structs"]["ImGuiStackSizes"][6]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][6]["name"] = "SizeOfGroupStack"
 defs["structs"]["ImGuiStackSizes"][6]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][7] = {}
+defs["structs"]["ImGuiStackSizes"][7]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][7]["name"] = "SizeOfItemFlagsStack"
 defs["structs"]["ImGuiStackSizes"][7]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][8] = {}
+defs["structs"]["ImGuiStackSizes"][8]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][8]["name"] = "SizeOfBeginPopupStack"
 defs["structs"]["ImGuiStackSizes"][8]["type"] = "short"
 defs["structs"]["ImGuiStackSizes"][9] = {}
+defs["structs"]["ImGuiStackSizes"][9]["comment"] = {}
 defs["structs"]["ImGuiStackSizes"][9]["name"] = "SizeOfDisabledStack"
 defs["structs"]["ImGuiStackSizes"][9]["type"] = "short"
 defs["structs"]["ImGuiStackTool"] = {}
 defs["structs"]["ImGuiStackTool"][1] = {}
+defs["structs"]["ImGuiStackTool"][1]["comment"] = {}
 defs["structs"]["ImGuiStackTool"][1]["name"] = "LastActiveFrame"
 defs["structs"]["ImGuiStackTool"][1]["type"] = "int"
 defs["structs"]["ImGuiStackTool"][2] = {}
-defs["structs"]["ImGuiStackTool"][2]["comment"] = " // -1: query stack and resize Results, >= 0: individual stack level"
+defs["structs"]["ImGuiStackTool"][2]["comment"] = {}
+defs["structs"]["ImGuiStackTool"][2]["comment"]["comments"] = " // -1: query stack and resize Results, >= 0: individual stack level"
 defs["structs"]["ImGuiStackTool"][2]["name"] = "StackLevel"
 defs["structs"]["ImGuiStackTool"][2]["type"] = "int"
 defs["structs"]["ImGuiStackTool"][3] = {}
-defs["structs"]["ImGuiStackTool"][3]["comment"] = " // ID to query details for"
+defs["structs"]["ImGuiStackTool"][3]["comment"] = {}
+defs["structs"]["ImGuiStackTool"][3]["comment"]["comments"] = " // ID to query details for"
 defs["structs"]["ImGuiStackTool"][3]["name"] = "QueryId"
 defs["structs"]["ImGuiStackTool"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiStackTool"][4] = {}
+defs["structs"]["ImGuiStackTool"][4]["comment"] = {}
 defs["structs"]["ImGuiStackTool"][4]["name"] = "Results"
 defs["structs"]["ImGuiStackTool"][4]["template_type"] = "ImGuiStackLevelInfo"
 defs["structs"]["ImGuiStackTool"][4]["type"] = "ImVector_ImGuiStackLevelInfo"
 defs["structs"]["ImGuiStackTool"][5] = {}
+defs["structs"]["ImGuiStackTool"][5]["comment"] = {}
 defs["structs"]["ImGuiStackTool"][5]["name"] = "CopyToClipboardOnCtrlC"
 defs["structs"]["ImGuiStackTool"][5]["type"] = "bool"
 defs["structs"]["ImGuiStackTool"][6] = {}
+defs["structs"]["ImGuiStackTool"][6]["comment"] = {}
 defs["structs"]["ImGuiStackTool"][6]["name"] = "CopyToClipboardLastTime"
 defs["structs"]["ImGuiStackTool"][6]["type"] = "float"
 defs["structs"]["ImGuiStorage"] = {}
 defs["structs"]["ImGuiStorage"][1] = {}
+defs["structs"]["ImGuiStorage"][1]["comment"] = {}
 defs["structs"]["ImGuiStorage"][1]["name"] = "Data"
 defs["structs"]["ImGuiStorage"][1]["template_type"] = "ImGuiStoragePair"
 defs["structs"]["ImGuiStorage"][1]["type"] = "ImVector_ImGuiStoragePair"
 defs["structs"]["ImGuiStoragePair"] = {}
 defs["structs"]["ImGuiStoragePair"][1] = {}
+defs["structs"]["ImGuiStoragePair"][1]["comment"] = {}
 defs["structs"]["ImGuiStoragePair"][1]["name"] = "key"
 defs["structs"]["ImGuiStoragePair"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiStoragePair"][2] = {}
+defs["structs"]["ImGuiStoragePair"][2]["comment"] = {}
 defs["structs"]["ImGuiStoragePair"][2]["name"] = ""
 defs["structs"]["ImGuiStoragePair"][2]["type"] = "union { int val_i; float val_f; void* val_p;}"
 defs["structs"]["ImGuiStyle"] = {}
 defs["structs"]["ImGuiStyle"][1] = {}
-defs["structs"]["ImGuiStyle"][1]["comment"] = " // Global alpha applies to everything in Dear ImGui."
+defs["structs"]["ImGuiStyle"][1]["comment"] = {}
+defs["structs"]["ImGuiStyle"][1]["comment"]["comments"] = " // Global alpha applies to everything in Dear ImGui."
 defs["structs"]["ImGuiStyle"][1]["name"] = "Alpha"
 defs["structs"]["ImGuiStyle"][1]["type"] = "float"
 defs["structs"]["ImGuiStyle"][2] = {}
-defs["structs"]["ImGuiStyle"][2]["comment"] = " // Additional alpha multiplier applied by BeginDisabled(). Multiply over current value of Alpha."
+defs["structs"]["ImGuiStyle"][2]["comment"] = {}
+defs["structs"]["ImGuiStyle"][2]["comment"]["comments"] = " // Additional alpha multiplier applied by BeginDisabled(). Multiply over current value of Alpha."
 defs["structs"]["ImGuiStyle"][2]["name"] = "DisabledAlpha"
 defs["structs"]["ImGuiStyle"][2]["type"] = "float"
 defs["structs"]["ImGuiStyle"][3] = {}
-defs["structs"]["ImGuiStyle"][3]["comment"] = " // Padding within a window."
+defs["structs"]["ImGuiStyle"][3]["comment"] = {}
+defs["structs"]["ImGuiStyle"][3]["comment"]["comments"] = " // Padding within a window."
 defs["structs"]["ImGuiStyle"][3]["name"] = "WindowPadding"
 defs["structs"]["ImGuiStyle"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][4] = {}
-defs["structs"]["ImGuiStyle"][4]["comment"] = " // Radius of window corners rounding. Set to 0.0f to have rectangular windows. Large values tend to lead to variety of artifacts and are not recommended."
+defs["structs"]["ImGuiStyle"][4]["comment"] = {}
+defs["structs"]["ImGuiStyle"][4]["comment"]["comments"] = " // Radius of window corners rounding. Set to 0.0f to have rectangular windows. Large values tend to lead to variety of artifacts and are not recommended."
 defs["structs"]["ImGuiStyle"][4]["name"] = "WindowRounding"
 defs["structs"]["ImGuiStyle"][4]["type"] = "float"
 defs["structs"]["ImGuiStyle"][5] = {}
-defs["structs"]["ImGuiStyle"][5]["comment"] = " // Thickness of border around windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
+defs["structs"]["ImGuiStyle"][5]["comment"] = {}
+defs["structs"]["ImGuiStyle"][5]["comment"]["comments"] = " // Thickness of border around windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
 defs["structs"]["ImGuiStyle"][5]["name"] = "WindowBorderSize"
 defs["structs"]["ImGuiStyle"][5]["type"] = "float"
 defs["structs"]["ImGuiStyle"][6] = {}
-defs["structs"]["ImGuiStyle"][6]["comment"] = " // Minimum window size. This is a global setting. If you want to constraint individual windows, use SetNextWindowSizeConstraints()."
+defs["structs"]["ImGuiStyle"][6]["comment"] = {}
+defs["structs"]["ImGuiStyle"][6]["comment"]["comments"] = " // Minimum window size. This is a global setting. If you want to constraint individual windows, use SetNextWindowSizeConstraints()."
 defs["structs"]["ImGuiStyle"][6]["name"] = "WindowMinSize"
 defs["structs"]["ImGuiStyle"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][7] = {}
-defs["structs"]["ImGuiStyle"][7]["comment"] = " // Alignment for title bar text. Defaults to (0.0f,0.5f) for left-aligned,vertically centered."
+defs["structs"]["ImGuiStyle"][7]["comment"] = {}
+defs["structs"]["ImGuiStyle"][7]["comment"]["comments"] = " // Alignment for title bar text. Defaults to (0.0f,0.5f) for left-aligned,vertically centered."
 defs["structs"]["ImGuiStyle"][7]["name"] = "WindowTitleAlign"
 defs["structs"]["ImGuiStyle"][7]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][8] = {}
-defs["structs"]["ImGuiStyle"][8]["comment"] = " // Side of the collapsing/docking button in the title bar (None/Left/Right). Defaults to ImGuiDir_Left."
+defs["structs"]["ImGuiStyle"][8]["comment"] = {}
+defs["structs"]["ImGuiStyle"][8]["comment"]["comments"] = " // Side of the collapsing/docking button in the title bar (None/Left/Right). Defaults to ImGuiDir_Left."
 defs["structs"]["ImGuiStyle"][8]["name"] = "WindowMenuButtonPosition"
 defs["structs"]["ImGuiStyle"][8]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiStyle"][9] = {}
-defs["structs"]["ImGuiStyle"][9]["comment"] = " // Radius of child window corners rounding. Set to 0.0f to have rectangular windows."
+defs["structs"]["ImGuiStyle"][9]["comment"] = {}
+defs["structs"]["ImGuiStyle"][9]["comment"]["comments"] = " // Radius of child window corners rounding. Set to 0.0f to have rectangular windows."
 defs["structs"]["ImGuiStyle"][9]["name"] = "ChildRounding"
 defs["structs"]["ImGuiStyle"][9]["type"] = "float"
 defs["structs"]["ImGuiStyle"][10] = {}
-defs["structs"]["ImGuiStyle"][10]["comment"] = " // Thickness of border around child windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
+defs["structs"]["ImGuiStyle"][10]["comment"] = {}
+defs["structs"]["ImGuiStyle"][10]["comment"]["comments"] = " // Thickness of border around child windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
 defs["structs"]["ImGuiStyle"][10]["name"] = "ChildBorderSize"
 defs["structs"]["ImGuiStyle"][10]["type"] = "float"
 defs["structs"]["ImGuiStyle"][11] = {}
-defs["structs"]["ImGuiStyle"][11]["comment"] = " // Radius of popup window corners rounding. (Note that tooltip windows use WindowRounding)"
+defs["structs"]["ImGuiStyle"][11]["comment"] = {}
+defs["structs"]["ImGuiStyle"][11]["comment"]["comments"] = " // Radius of popup window corners rounding. (Note that tooltip windows use WindowRounding)"
 defs["structs"]["ImGuiStyle"][11]["name"] = "PopupRounding"
 defs["structs"]["ImGuiStyle"][11]["type"] = "float"
 defs["structs"]["ImGuiStyle"][12] = {}
-defs["structs"]["ImGuiStyle"][12]["comment"] = " // Thickness of border around popup/tooltip windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
+defs["structs"]["ImGuiStyle"][12]["comment"] = {}
+defs["structs"]["ImGuiStyle"][12]["comment"]["comments"] = " // Thickness of border around popup/tooltip windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
 defs["structs"]["ImGuiStyle"][12]["name"] = "PopupBorderSize"
 defs["structs"]["ImGuiStyle"][12]["type"] = "float"
 defs["structs"]["ImGuiStyle"][13] = {}
-defs["structs"]["ImGuiStyle"][13]["comment"] = " // Padding within a framed rectangle (used by most widgets)."
+defs["structs"]["ImGuiStyle"][13]["comment"] = {}
+defs["structs"]["ImGuiStyle"][13]["comment"]["comments"] = " // Padding within a framed rectangle (used by most widgets)."
 defs["structs"]["ImGuiStyle"][13]["name"] = "FramePadding"
 defs["structs"]["ImGuiStyle"][13]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][14] = {}
-defs["structs"]["ImGuiStyle"][14]["comment"] = " // Radius of frame corners rounding. Set to 0.0f to have rectangular frame (used by most widgets)."
+defs["structs"]["ImGuiStyle"][14]["comment"] = {}
+defs["structs"]["ImGuiStyle"][14]["comment"]["comments"] = " // Radius of frame corners rounding. Set to 0.0f to have rectangular frame (used by most widgets)."
 defs["structs"]["ImGuiStyle"][14]["name"] = "FrameRounding"
 defs["structs"]["ImGuiStyle"][14]["type"] = "float"
 defs["structs"]["ImGuiStyle"][15] = {}
-defs["structs"]["ImGuiStyle"][15]["comment"] = " // Thickness of border around frames. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
+defs["structs"]["ImGuiStyle"][15]["comment"] = {}
+defs["structs"]["ImGuiStyle"][15]["comment"]["comments"] = " // Thickness of border around frames. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)."
 defs["structs"]["ImGuiStyle"][15]["name"] = "FrameBorderSize"
 defs["structs"]["ImGuiStyle"][15]["type"] = "float"
 defs["structs"]["ImGuiStyle"][16] = {}
-defs["structs"]["ImGuiStyle"][16]["comment"] = " // Horizontal and vertical spacing between widgets/lines."
+defs["structs"]["ImGuiStyle"][16]["comment"] = {}
+defs["structs"]["ImGuiStyle"][16]["comment"]["comments"] = " // Horizontal and vertical spacing between widgets/lines."
 defs["structs"]["ImGuiStyle"][16]["name"] = "ItemSpacing"
 defs["structs"]["ImGuiStyle"][16]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][17] = {}
-defs["structs"]["ImGuiStyle"][17]["comment"] = " // Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label)."
+defs["structs"]["ImGuiStyle"][17]["comment"] = {}
+defs["structs"]["ImGuiStyle"][17]["comment"]["comments"] = " // Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label)."
 defs["structs"]["ImGuiStyle"][17]["name"] = "ItemInnerSpacing"
 defs["structs"]["ImGuiStyle"][17]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][18] = {}
-defs["structs"]["ImGuiStyle"][18]["comment"] = " // Padding within a table cell"
+defs["structs"]["ImGuiStyle"][18]["comment"] = {}
+defs["structs"]["ImGuiStyle"][18]["comment"]["comments"] = " // Padding within a table cell"
 defs["structs"]["ImGuiStyle"][18]["name"] = "CellPadding"
 defs["structs"]["ImGuiStyle"][18]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][19] = {}
-defs["structs"]["ImGuiStyle"][19]["comment"] = " // Expand reactive bounding box for touch-based system where touch position is not accurate enough. Unfortunately we don't sort widgets so priority on overlap will always be given to the first widget. So don't grow this too much!"
+defs["structs"]["ImGuiStyle"][19]["comment"] = {}
+defs["structs"]["ImGuiStyle"][19]["comment"]["comments"] = " // Expand reactive bounding box for touch-based system where touch position is not accurate enough. Unfortunately we don't sort widgets so priority on overlap will always be given to the first widget. So don't grow this too much!"
 defs["structs"]["ImGuiStyle"][19]["name"] = "TouchExtraPadding"
 defs["structs"]["ImGuiStyle"][19]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][20] = {}
-defs["structs"]["ImGuiStyle"][20]["comment"] = " // Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2)."
+defs["structs"]["ImGuiStyle"][20]["comment"] = {}
+defs["structs"]["ImGuiStyle"][20]["comment"]["comments"] = " // Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2)."
 defs["structs"]["ImGuiStyle"][20]["name"] = "IndentSpacing"
 defs["structs"]["ImGuiStyle"][20]["type"] = "float"
 defs["structs"]["ImGuiStyle"][21] = {}
-defs["structs"]["ImGuiStyle"][21]["comment"] = " // Minimum horizontal spacing between two columns. Preferably > (FramePadding.x + 1)."
+defs["structs"]["ImGuiStyle"][21]["comment"] = {}
+defs["structs"]["ImGuiStyle"][21]["comment"]["comments"] = " // Minimum horizontal spacing between two columns. Preferably > (FramePadding.x + 1)."
 defs["structs"]["ImGuiStyle"][21]["name"] = "ColumnsMinSpacing"
 defs["structs"]["ImGuiStyle"][21]["type"] = "float"
 defs["structs"]["ImGuiStyle"][22] = {}
-defs["structs"]["ImGuiStyle"][22]["comment"] = " // Width of the vertical scrollbar, Height of the horizontal scrollbar."
+defs["structs"]["ImGuiStyle"][22]["comment"] = {}
+defs["structs"]["ImGuiStyle"][22]["comment"]["comments"] = " // Width of the vertical scrollbar, Height of the horizontal scrollbar."
 defs["structs"]["ImGuiStyle"][22]["name"] = "ScrollbarSize"
 defs["structs"]["ImGuiStyle"][22]["type"] = "float"
 defs["structs"]["ImGuiStyle"][23] = {}
-defs["structs"]["ImGuiStyle"][23]["comment"] = " // Radius of grab corners for scrollbar."
+defs["structs"]["ImGuiStyle"][23]["comment"] = {}
+defs["structs"]["ImGuiStyle"][23]["comment"]["comments"] = " // Radius of grab corners for scrollbar."
 defs["structs"]["ImGuiStyle"][23]["name"] = "ScrollbarRounding"
 defs["structs"]["ImGuiStyle"][23]["type"] = "float"
 defs["structs"]["ImGuiStyle"][24] = {}
-defs["structs"]["ImGuiStyle"][24]["comment"] = " // Minimum width/height of a grab box for slider/scrollbar."
+defs["structs"]["ImGuiStyle"][24]["comment"] = {}
+defs["structs"]["ImGuiStyle"][24]["comment"]["comments"] = " // Minimum width/height of a grab box for slider/scrollbar."
 defs["structs"]["ImGuiStyle"][24]["name"] = "GrabMinSize"
 defs["structs"]["ImGuiStyle"][24]["type"] = "float"
 defs["structs"]["ImGuiStyle"][25] = {}
-defs["structs"]["ImGuiStyle"][25]["comment"] = " // Radius of grabs corners rounding. Set to 0.0f to have rectangular slider grabs."
+defs["structs"]["ImGuiStyle"][25]["comment"] = {}
+defs["structs"]["ImGuiStyle"][25]["comment"]["comments"] = " // Radius of grabs corners rounding. Set to 0.0f to have rectangular slider grabs."
 defs["structs"]["ImGuiStyle"][25]["name"] = "GrabRounding"
 defs["structs"]["ImGuiStyle"][25]["type"] = "float"
 defs["structs"]["ImGuiStyle"][26] = {}
-defs["structs"]["ImGuiStyle"][26]["comment"] = " // The size in pixels of the dead-zone around zero on logarithmic sliders that cross zero."
+defs["structs"]["ImGuiStyle"][26]["comment"] = {}
+defs["structs"]["ImGuiStyle"][26]["comment"]["comments"] = " // The size in pixels of the dead-zone around zero on logarithmic sliders that cross zero."
 defs["structs"]["ImGuiStyle"][26]["name"] = "LogSliderDeadzone"
 defs["structs"]["ImGuiStyle"][26]["type"] = "float"
 defs["structs"]["ImGuiStyle"][27] = {}
-defs["structs"]["ImGuiStyle"][27]["comment"] = " // Radius of upper corners of a tab. Set to 0.0f to have rectangular tabs."
+defs["structs"]["ImGuiStyle"][27]["comment"] = {}
+defs["structs"]["ImGuiStyle"][27]["comment"]["comments"] = " // Radius of upper corners of a tab. Set to 0.0f to have rectangular tabs."
 defs["structs"]["ImGuiStyle"][27]["name"] = "TabRounding"
 defs["structs"]["ImGuiStyle"][27]["type"] = "float"
 defs["structs"]["ImGuiStyle"][28] = {}
-defs["structs"]["ImGuiStyle"][28]["comment"] = " // Thickness of border around tabs."
+defs["structs"]["ImGuiStyle"][28]["comment"] = {}
+defs["structs"]["ImGuiStyle"][28]["comment"]["comments"] = " // Thickness of border around tabs."
 defs["structs"]["ImGuiStyle"][28]["name"] = "TabBorderSize"
 defs["structs"]["ImGuiStyle"][28]["type"] = "float"
 defs["structs"]["ImGuiStyle"][29] = {}
-defs["structs"]["ImGuiStyle"][29]["comment"] = " // Minimum width for close button to appears on an unselected tab when hovered. Set to 0.0f to always show when hovering, set to FLT_MAX to never show close button unless selected."
+defs["structs"]["ImGuiStyle"][29]["comment"] = {}
+defs["structs"]["ImGuiStyle"][29]["comment"]["comments"] = " // Minimum width for close button to appears on an unselected tab when hovered. Set to 0.0f to always show when hovering, set to FLT_MAX to never show close button unless selected."
 defs["structs"]["ImGuiStyle"][29]["name"] = "TabMinWidthForCloseButton"
 defs["structs"]["ImGuiStyle"][29]["type"] = "float"
 defs["structs"]["ImGuiStyle"][30] = {}
-defs["structs"]["ImGuiStyle"][30]["comment"] = " // Side of the color button in the ColorEdit4 widget (left/right). Defaults to ImGuiDir_Right."
+defs["structs"]["ImGuiStyle"][30]["comment"] = {}
+defs["structs"]["ImGuiStyle"][30]["comment"]["comments"] = " // Side of the color button in the ColorEdit4 widget (left/right). Defaults to ImGuiDir_Right."
 defs["structs"]["ImGuiStyle"][30]["name"] = "ColorButtonPosition"
 defs["structs"]["ImGuiStyle"][30]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiStyle"][31] = {}
-defs["structs"]["ImGuiStyle"][31]["comment"] = " // Alignment of button text when button is larger than text. Defaults to (0.5f, 0.5f) (centered)."
+defs["structs"]["ImGuiStyle"][31]["comment"] = {}
+defs["structs"]["ImGuiStyle"][31]["comment"]["comments"] = " // Alignment of button text when button is larger than text. Defaults to (0.5f, 0.5f) (centered)."
 defs["structs"]["ImGuiStyle"][31]["name"] = "ButtonTextAlign"
 defs["structs"]["ImGuiStyle"][31]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][32] = {}
-defs["structs"]["ImGuiStyle"][32]["comment"] = " // Alignment of selectable text. Defaults to (0.0f, 0.0f) (top-left aligned). It's generally important to keep this left-aligned if you want to lay multiple items on a same line."
+defs["structs"]["ImGuiStyle"][32]["comment"] = {}
+defs["structs"]["ImGuiStyle"][32]["comment"]["comments"] = " // Alignment of selectable text. Defaults to (0.0f, 0.0f) (top-left aligned). It's generally important to keep this left-aligned if you want to lay multiple items on a same line."
 defs["structs"]["ImGuiStyle"][32]["name"] = "SelectableTextAlign"
 defs["structs"]["ImGuiStyle"][32]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][33] = {}
-defs["structs"]["ImGuiStyle"][33]["comment"] = " // Window position are clamped to be visible within the display area or monitors by at least this amount. Only applies to regular windows."
+defs["structs"]["ImGuiStyle"][33]["comment"] = {}
+defs["structs"]["ImGuiStyle"][33]["comment"]["comments"] = " // Window position are clamped to be visible within the display area or monitors by at least this amount. Only applies to regular windows."
 defs["structs"]["ImGuiStyle"][33]["name"] = "DisplayWindowPadding"
 defs["structs"]["ImGuiStyle"][33]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][34] = {}
-defs["structs"]["ImGuiStyle"][34]["comment"] = " // If you cannot see the edges of your screen (e.g. on a TV) increase the safe area padding. Apply to popups/tooltips as well regular windows. NB: Prefer configuring your TV sets correctly!"
+defs["structs"]["ImGuiStyle"][34]["comment"] = {}
+defs["structs"]["ImGuiStyle"][34]["comment"]["comments"] = " // If you cannot see the edges of your screen (e.g. on a TV) increase the safe area padding. Apply to popups/tooltips as well regular windows. NB: Prefer configuring your TV sets correctly!"
 defs["structs"]["ImGuiStyle"][34]["name"] = "DisplaySafeAreaPadding"
 defs["structs"]["ImGuiStyle"][34]["type"] = "ImVec2"
 defs["structs"]["ImGuiStyle"][35] = {}
-defs["structs"]["ImGuiStyle"][35]["comment"] = " // Scale software rendered mouse cursor (when io.MouseDrawCursor is enabled). We apply per-monitor DPI scaling over this scale. May be removed later."
+defs["structs"]["ImGuiStyle"][35]["comment"] = {}
+defs["structs"]["ImGuiStyle"][35]["comment"]["comments"] = " // Scale software rendered mouse cursor (when io.MouseDrawCursor is enabled). We apply per-monitor DPI scaling over this scale. May be removed later."
 defs["structs"]["ImGuiStyle"][35]["name"] = "MouseCursorScale"
 defs["structs"]["ImGuiStyle"][35]["type"] = "float"
 defs["structs"]["ImGuiStyle"][36] = {}
-defs["structs"]["ImGuiStyle"][36]["comment"] = " // Enable anti-aliased lines/borders. Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList)."
+defs["structs"]["ImGuiStyle"][36]["comment"] = {}
+defs["structs"]["ImGuiStyle"][36]["comment"]["comments"] = " // Enable anti-aliased lines/borders. Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList)."
 defs["structs"]["ImGuiStyle"][36]["name"] = "AntiAliasedLines"
 defs["structs"]["ImGuiStyle"][36]["type"] = "bool"
 defs["structs"]["ImGuiStyle"][37] = {}
-defs["structs"]["ImGuiStyle"][37]["comment"] = " // Enable anti-aliased lines/borders using textures where possible. Require backend to render with bilinear filtering (NOT point/nearest filtering). Latched at the beginning of the frame (copied to ImDrawList)."
+defs["structs"]["ImGuiStyle"][37]["comment"] = {}
+defs["structs"]["ImGuiStyle"][37]["comment"]["comments"] = " // Enable anti-aliased lines/borders using textures where possible. Require backend to render with bilinear filtering (NOT point/nearest filtering). Latched at the beginning of the frame (copied to ImDrawList)."
 defs["structs"]["ImGuiStyle"][37]["name"] = "AntiAliasedLinesUseTex"
 defs["structs"]["ImGuiStyle"][37]["type"] = "bool"
 defs["structs"]["ImGuiStyle"][38] = {}
-defs["structs"]["ImGuiStyle"][38]["comment"] = " // Enable anti-aliased edges around filled shapes (rounded rectangles, circles, etc.). Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList)."
+defs["structs"]["ImGuiStyle"][38]["comment"] = {}
+defs["structs"]["ImGuiStyle"][38]["comment"]["comments"] = " // Enable anti-aliased edges around filled shapes (rounded rectangles, circles, etc.). Disable if you are really tight on CPU/GPU. Latched at the beginning of the frame (copied to ImDrawList)."
 defs["structs"]["ImGuiStyle"][38]["name"] = "AntiAliasedFill"
 defs["structs"]["ImGuiStyle"][38]["type"] = "bool"
 defs["structs"]["ImGuiStyle"][39] = {}
-defs["structs"]["ImGuiStyle"][39]["comment"] = " // Tessellation tolerance when using PathBezierCurveTo() without a specific number of segments. Decrease for highly tessellated curves (higher quality, more polygons), increase to reduce quality."
+defs["structs"]["ImGuiStyle"][39]["comment"] = {}
+defs["structs"]["ImGuiStyle"][39]["comment"]["comments"] = " // Tessellation tolerance when using PathBezierCurveTo() without a specific number of segments. Decrease for highly tessellated curves (higher quality, more polygons), increase to reduce quality."
 defs["structs"]["ImGuiStyle"][39]["name"] = "CurveTessellationTol"
 defs["structs"]["ImGuiStyle"][39]["type"] = "float"
 defs["structs"]["ImGuiStyle"][40] = {}
-defs["structs"]["ImGuiStyle"][40]["comment"] = " // Maximum error (in pixels) allowed when using AddCircle()/AddCircleFilled() or drawing rounded corner rectangles with no explicit segment count specified. Decrease for higher quality but more geometry."
+defs["structs"]["ImGuiStyle"][40]["comment"] = {}
+defs["structs"]["ImGuiStyle"][40]["comment"]["comments"] = " // Maximum error (in pixels) allowed when using AddCircle()/AddCircleFilled() or drawing rounded corner rectangles with no explicit segment count specified. Decrease for higher quality but more geometry."
 defs["structs"]["ImGuiStyle"][40]["name"] = "CircleTessellationMaxError"
 defs["structs"]["ImGuiStyle"][40]["type"] = "float"
 defs["structs"]["ImGuiStyle"][41] = {}
+defs["structs"]["ImGuiStyle"][41]["comment"] = {}
 defs["structs"]["ImGuiStyle"][41]["name"] = "Colors[ImGuiCol_COUNT]"
 defs["structs"]["ImGuiStyle"][41]["size"] = 55
 defs["structs"]["ImGuiStyle"][41]["type"] = "ImVec4"
 defs["structs"]["ImGuiStyleMod"] = {}
 defs["structs"]["ImGuiStyleMod"][1] = {}
+defs["structs"]["ImGuiStyleMod"][1]["comment"] = {}
 defs["structs"]["ImGuiStyleMod"][1]["name"] = "VarIdx"
 defs["structs"]["ImGuiStyleMod"][1]["type"] = "ImGuiStyleVar"
 defs["structs"]["ImGuiStyleMod"][2] = {}
+defs["structs"]["ImGuiStyleMod"][2]["comment"] = {}
 defs["structs"]["ImGuiStyleMod"][2]["name"] = ""
 defs["structs"]["ImGuiStyleMod"][2]["type"] = "union { int BackupInt[2]; float BackupFloat[2];}"
 defs["structs"]["ImGuiTabBar"] = {}
 defs["structs"]["ImGuiTabBar"][1] = {}
+defs["structs"]["ImGuiTabBar"][1]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][1]["name"] = "Tabs"
 defs["structs"]["ImGuiTabBar"][1]["template_type"] = "ImGuiTabItem"
 defs["structs"]["ImGuiTabBar"][1]["type"] = "ImVector_ImGuiTabItem"
 defs["structs"]["ImGuiTabBar"][2] = {}
+defs["structs"]["ImGuiTabBar"][2]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][2]["name"] = "Flags"
 defs["structs"]["ImGuiTabBar"][2]["type"] = "ImGuiTabBarFlags"
 defs["structs"]["ImGuiTabBar"][3] = {}
-defs["structs"]["ImGuiTabBar"][3]["comment"] = " // Zero for tab-bars used by docking"
+defs["structs"]["ImGuiTabBar"][3]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][3]["comment"]["comments"] = " // Zero for tab-bars used by docking"
 defs["structs"]["ImGuiTabBar"][3]["name"] = "ID"
 defs["structs"]["ImGuiTabBar"][3]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabBar"][4] = {}
-defs["structs"]["ImGuiTabBar"][4]["comment"] = " // Selected tab/window"
+defs["structs"]["ImGuiTabBar"][4]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][4]["comment"]["comments"] = " // Selected tab/window"
 defs["structs"]["ImGuiTabBar"][4]["name"] = "SelectedTabId"
 defs["structs"]["ImGuiTabBar"][4]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabBar"][5] = {}
-defs["structs"]["ImGuiTabBar"][5]["comment"] = " // Next selected tab/window. Will also trigger a scrolling animation"
+defs["structs"]["ImGuiTabBar"][5]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][5]["comment"]["comments"] = " // Next selected tab/window. Will also trigger a scrolling animation"
 defs["structs"]["ImGuiTabBar"][5]["name"] = "NextSelectedTabId"
 defs["structs"]["ImGuiTabBar"][5]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabBar"][6] = {}
-defs["structs"]["ImGuiTabBar"][6]["comment"] = " // Can occasionally be != SelectedTabId (e.g. when previewing contents for CTRL+TAB preview)"
+defs["structs"]["ImGuiTabBar"][6]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][6]["comment"]["comments"] = " // Can occasionally be != SelectedTabId (e.g. when previewing contents for CTRL+TAB preview)"
 defs["structs"]["ImGuiTabBar"][6]["name"] = "VisibleTabId"
 defs["structs"]["ImGuiTabBar"][6]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabBar"][7] = {}
+defs["structs"]["ImGuiTabBar"][7]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][7]["name"] = "CurrFrameVisible"
 defs["structs"]["ImGuiTabBar"][7]["type"] = "int"
 defs["structs"]["ImGuiTabBar"][8] = {}
+defs["structs"]["ImGuiTabBar"][8]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][8]["name"] = "PrevFrameVisible"
 defs["structs"]["ImGuiTabBar"][8]["type"] = "int"
 defs["structs"]["ImGuiTabBar"][9] = {}
+defs["structs"]["ImGuiTabBar"][9]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][9]["name"] = "BarRect"
 defs["structs"]["ImGuiTabBar"][9]["type"] = "ImRect"
 defs["structs"]["ImGuiTabBar"][10] = {}
+defs["structs"]["ImGuiTabBar"][10]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][10]["name"] = "CurrTabsContentsHeight"
 defs["structs"]["ImGuiTabBar"][10]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][11] = {}
-defs["structs"]["ImGuiTabBar"][11]["comment"] = " // Record the height of contents submitted below the tab bar"
+defs["structs"]["ImGuiTabBar"][11]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][11]["comment"]["comments"] = " // Record the height of contents submitted below the tab bar"
 defs["structs"]["ImGuiTabBar"][11]["name"] = "PrevTabsContentsHeight"
 defs["structs"]["ImGuiTabBar"][11]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][12] = {}
-defs["structs"]["ImGuiTabBar"][12]["comment"] = " // Actual width of all tabs (locked during layout)"
+defs["structs"]["ImGuiTabBar"][12]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][12]["comment"]["comments"] = " // Actual width of all tabs (locked during layout)"
 defs["structs"]["ImGuiTabBar"][12]["name"] = "WidthAllTabs"
 defs["structs"]["ImGuiTabBar"][12]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][13] = {}
-defs["structs"]["ImGuiTabBar"][13]["comment"] = " // Ideal width if all tabs were visible and not clipped"
+defs["structs"]["ImGuiTabBar"][13]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][13]["comment"]["comments"] = " // Ideal width if all tabs were visible and not clipped"
 defs["structs"]["ImGuiTabBar"][13]["name"] = "WidthAllTabsIdeal"
 defs["structs"]["ImGuiTabBar"][13]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][14] = {}
+defs["structs"]["ImGuiTabBar"][14]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][14]["name"] = "ScrollingAnim"
 defs["structs"]["ImGuiTabBar"][14]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][15] = {}
+defs["structs"]["ImGuiTabBar"][15]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][15]["name"] = "ScrollingTarget"
 defs["structs"]["ImGuiTabBar"][15]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][16] = {}
+defs["structs"]["ImGuiTabBar"][16]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][16]["name"] = "ScrollingTargetDistToVisibility"
 defs["structs"]["ImGuiTabBar"][16]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][17] = {}
+defs["structs"]["ImGuiTabBar"][17]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][17]["name"] = "ScrollingSpeed"
 defs["structs"]["ImGuiTabBar"][17]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][18] = {}
+defs["structs"]["ImGuiTabBar"][18]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][18]["name"] = "ScrollingRectMinX"
 defs["structs"]["ImGuiTabBar"][18]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][19] = {}
+defs["structs"]["ImGuiTabBar"][19]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][19]["name"] = "ScrollingRectMaxX"
 defs["structs"]["ImGuiTabBar"][19]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][20] = {}
+defs["structs"]["ImGuiTabBar"][20]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][20]["name"] = "ReorderRequestTabId"
 defs["structs"]["ImGuiTabBar"][20]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabBar"][21] = {}
+defs["structs"]["ImGuiTabBar"][21]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][21]["name"] = "ReorderRequestOffset"
 defs["structs"]["ImGuiTabBar"][21]["type"] = "ImS16"
 defs["structs"]["ImGuiTabBar"][22] = {}
+defs["structs"]["ImGuiTabBar"][22]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][22]["name"] = "BeginCount"
 defs["structs"]["ImGuiTabBar"][22]["type"] = "ImS8"
 defs["structs"]["ImGuiTabBar"][23] = {}
+defs["structs"]["ImGuiTabBar"][23]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][23]["name"] = "WantLayout"
 defs["structs"]["ImGuiTabBar"][23]["type"] = "bool"
 defs["structs"]["ImGuiTabBar"][24] = {}
+defs["structs"]["ImGuiTabBar"][24]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][24]["name"] = "VisibleTabWasSubmitted"
 defs["structs"]["ImGuiTabBar"][24]["type"] = "bool"
 defs["structs"]["ImGuiTabBar"][25] = {}
-defs["structs"]["ImGuiTabBar"][25]["comment"] = " // Set to true when a new tab item or button has been added to the tab bar during last frame"
+defs["structs"]["ImGuiTabBar"][25]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][25]["comment"]["comments"] = " // Set to true when a new tab item or button has been added to the tab bar during last frame"
 defs["structs"]["ImGuiTabBar"][25]["name"] = "TabsAddedNew"
 defs["structs"]["ImGuiTabBar"][25]["type"] = "bool"
 defs["structs"]["ImGuiTabBar"][26] = {}
-defs["structs"]["ImGuiTabBar"][26]["comment"] = " // Number of tabs submitted this frame."
+defs["structs"]["ImGuiTabBar"][26]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][26]["comment"]["comments"] = " // Number of tabs submitted this frame."
 defs["structs"]["ImGuiTabBar"][26]["name"] = "TabsActiveCount"
 defs["structs"]["ImGuiTabBar"][26]["type"] = "ImS16"
 defs["structs"]["ImGuiTabBar"][27] = {}
-defs["structs"]["ImGuiTabBar"][27]["comment"] = " // Index of last BeginTabItem() tab for use by EndTabItem()"
+defs["structs"]["ImGuiTabBar"][27]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][27]["comment"]["comments"] = " // Index of last BeginTabItem() tab for use by EndTabItem()"
 defs["structs"]["ImGuiTabBar"][27]["name"] = "LastTabItemIdx"
 defs["structs"]["ImGuiTabBar"][27]["type"] = "ImS16"
 defs["structs"]["ImGuiTabBar"][28] = {}
+defs["structs"]["ImGuiTabBar"][28]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][28]["name"] = "ItemSpacingY"
 defs["structs"]["ImGuiTabBar"][28]["type"] = "float"
 defs["structs"]["ImGuiTabBar"][29] = {}
-defs["structs"]["ImGuiTabBar"][29]["comment"] = " // style.FramePadding locked at the time of BeginTabBar()"
+defs["structs"]["ImGuiTabBar"][29]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][29]["comment"]["comments"] = " // style.FramePadding locked at the time of BeginTabBar()"
 defs["structs"]["ImGuiTabBar"][29]["name"] = "FramePadding"
 defs["structs"]["ImGuiTabBar"][29]["type"] = "ImVec2"
 defs["structs"]["ImGuiTabBar"][30] = {}
+defs["structs"]["ImGuiTabBar"][30]["comment"] = {}
 defs["structs"]["ImGuiTabBar"][30]["name"] = "BackupCursorPos"
 defs["structs"]["ImGuiTabBar"][30]["type"] = "ImVec2"
 defs["structs"]["ImGuiTabBar"][31] = {}
-defs["structs"]["ImGuiTabBar"][31]["comment"] = " // For non-docking tab bar we re-append names in a contiguous buffer."
+defs["structs"]["ImGuiTabBar"][31]["comment"] = {}
+defs["structs"]["ImGuiTabBar"][31]["comment"]["comments"] = " // For non-docking tab bar we re-append names in a contiguous buffer."
 defs["structs"]["ImGuiTabBar"][31]["name"] = "TabsNames"
 defs["structs"]["ImGuiTabBar"][31]["type"] = "ImGuiTextBuffer"
 defs["structs"]["ImGuiTabItem"] = {}
 defs["structs"]["ImGuiTabItem"][1] = {}
+defs["structs"]["ImGuiTabItem"][1]["comment"] = {}
 defs["structs"]["ImGuiTabItem"][1]["name"] = "ID"
 defs["structs"]["ImGuiTabItem"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTabItem"][2] = {}
+defs["structs"]["ImGuiTabItem"][2]["comment"] = {}
 defs["structs"]["ImGuiTabItem"][2]["name"] = "Flags"
 defs["structs"]["ImGuiTabItem"][2]["type"] = "ImGuiTabItemFlags"
 defs["structs"]["ImGuiTabItem"][3] = {}
-defs["structs"]["ImGuiTabItem"][3]["comment"] = " // When TabItem is part of a DockNode's TabBar, we hold on to a window."
+defs["structs"]["ImGuiTabItem"][3]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][3]["comment"]["comments"] = " // When TabItem is part of a DockNode's TabBar, we hold on to a window."
 defs["structs"]["ImGuiTabItem"][3]["name"] = "Window"
 defs["structs"]["ImGuiTabItem"][3]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiTabItem"][4] = {}
+defs["structs"]["ImGuiTabItem"][4]["comment"] = {}
 defs["structs"]["ImGuiTabItem"][4]["name"] = "LastFrameVisible"
 defs["structs"]["ImGuiTabItem"][4]["type"] = "int"
 defs["structs"]["ImGuiTabItem"][5] = {}
-defs["structs"]["ImGuiTabItem"][5]["comment"] = " // This allows us to infer an ordered list of the last activated tabs with little maintenance"
+defs["structs"]["ImGuiTabItem"][5]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][5]["comment"]["comments"] = " // This allows us to infer an ordered list of the last activated tabs with little maintenance"
 defs["structs"]["ImGuiTabItem"][5]["name"] = "LastFrameSelected"
 defs["structs"]["ImGuiTabItem"][5]["type"] = "int"
 defs["structs"]["ImGuiTabItem"][6] = {}
-defs["structs"]["ImGuiTabItem"][6]["comment"] = " // Position relative to beginning of tab"
+defs["structs"]["ImGuiTabItem"][6]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][6]["comment"]["comments"] = " // Position relative to beginning of tab"
 defs["structs"]["ImGuiTabItem"][6]["name"] = "Offset"
 defs["structs"]["ImGuiTabItem"][6]["type"] = "float"
 defs["structs"]["ImGuiTabItem"][7] = {}
-defs["structs"]["ImGuiTabItem"][7]["comment"] = " // Width currently displayed"
+defs["structs"]["ImGuiTabItem"][7]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][7]["comment"]["comments"] = " // Width currently displayed"
 defs["structs"]["ImGuiTabItem"][7]["name"] = "Width"
 defs["structs"]["ImGuiTabItem"][7]["type"] = "float"
 defs["structs"]["ImGuiTabItem"][8] = {}
-defs["structs"]["ImGuiTabItem"][8]["comment"] = " // Width of label, stored during BeginTabItem() call"
+defs["structs"]["ImGuiTabItem"][8]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][8]["comment"]["comments"] = " // Width of label, stored during BeginTabItem() call"
 defs["structs"]["ImGuiTabItem"][8]["name"] = "ContentWidth"
 defs["structs"]["ImGuiTabItem"][8]["type"] = "float"
 defs["structs"]["ImGuiTabItem"][9] = {}
-defs["structs"]["ImGuiTabItem"][9]["comment"] = " // Width optionally requested by caller, -1.0f is unused"
+defs["structs"]["ImGuiTabItem"][9]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][9]["comment"]["comments"] = " // Width optionally requested by caller, -1.0f is unused"
 defs["structs"]["ImGuiTabItem"][9]["name"] = "RequestedWidth"
 defs["structs"]["ImGuiTabItem"][9]["type"] = "float"
 defs["structs"]["ImGuiTabItem"][10] = {}
-defs["structs"]["ImGuiTabItem"][10]["comment"] = " // When Window==NULL, offset to name within parent ImGuiTabBar::TabsNames"
+defs["structs"]["ImGuiTabItem"][10]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][10]["comment"]["comments"] = " // When Window==NULL, offset to name within parent ImGuiTabBar::TabsNames"
 defs["structs"]["ImGuiTabItem"][10]["name"] = "NameOffset"
 defs["structs"]["ImGuiTabItem"][10]["type"] = "ImS32"
 defs["structs"]["ImGuiTabItem"][11] = {}
-defs["structs"]["ImGuiTabItem"][11]["comment"] = " // BeginTabItem() order, used to re-order tabs after toggling ImGuiTabBarFlags_Reorderable"
+defs["structs"]["ImGuiTabItem"][11]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][11]["comment"]["comments"] = " // BeginTabItem() order, used to re-order tabs after toggling ImGuiTabBarFlags_Reorderable"
 defs["structs"]["ImGuiTabItem"][11]["name"] = "BeginOrder"
 defs["structs"]["ImGuiTabItem"][11]["type"] = "ImS16"
 defs["structs"]["ImGuiTabItem"][12] = {}
-defs["structs"]["ImGuiTabItem"][12]["comment"] = " // Index only used during TabBarLayout()"
+defs["structs"]["ImGuiTabItem"][12]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][12]["comment"]["comments"] = " // Index only used during TabBarLayout()"
 defs["structs"]["ImGuiTabItem"][12]["name"] = "IndexDuringLayout"
 defs["structs"]["ImGuiTabItem"][12]["type"] = "ImS16"
 defs["structs"]["ImGuiTabItem"][13] = {}
-defs["structs"]["ImGuiTabItem"][13]["comment"] = " // Marked as closed by SetTabItemClosed()"
+defs["structs"]["ImGuiTabItem"][13]["comment"] = {}
+defs["structs"]["ImGuiTabItem"][13]["comment"]["comments"] = " // Marked as closed by SetTabItemClosed()"
 defs["structs"]["ImGuiTabItem"][13]["name"] = "WantClose"
 defs["structs"]["ImGuiTabItem"][13]["type"] = "bool"
 defs["structs"]["ImGuiTable"] = {}
 defs["structs"]["ImGuiTable"][1] = {}
+defs["structs"]["ImGuiTable"][1]["comment"] = {}
 defs["structs"]["ImGuiTable"][1]["name"] = "ID"
 defs["structs"]["ImGuiTable"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTable"][2] = {}
+defs["structs"]["ImGuiTable"][2]["comment"] = {}
 defs["structs"]["ImGuiTable"][2]["name"] = "Flags"
 defs["structs"]["ImGuiTable"][2]["type"] = "ImGuiTableFlags"
 defs["structs"]["ImGuiTable"][3] = {}
-defs["structs"]["ImGuiTable"][3]["comment"] = " // Single allocation to hold Columns[], DisplayOrderToIndex[] and RowCellData[]"
+defs["structs"]["ImGuiTable"][3]["comment"] = {}
+defs["structs"]["ImGuiTable"][3]["comment"]["comments"] = " // Single allocation to hold Columns[], DisplayOrderToIndex[] and RowCellData[]"
 defs["structs"]["ImGuiTable"][3]["name"] = "RawData"
 defs["structs"]["ImGuiTable"][3]["type"] = "void*"
 defs["structs"]["ImGuiTable"][4] = {}
-defs["structs"]["ImGuiTable"][4]["comment"] = " // Transient data while table is active. Point within g.CurrentTableStack[]"
+defs["structs"]["ImGuiTable"][4]["comment"] = {}
+defs["structs"]["ImGuiTable"][4]["comment"]["comments"] = " // Transient data while table is active. Point within g.CurrentTableStack[]"
 defs["structs"]["ImGuiTable"][4]["name"] = "TempData"
 defs["structs"]["ImGuiTable"][4]["type"] = "ImGuiTableTempData*"
 defs["structs"]["ImGuiTable"][5] = {}
-defs["structs"]["ImGuiTable"][5]["comment"] = " // Point within RawData[]"
+defs["structs"]["ImGuiTable"][5]["comment"] = {}
+defs["structs"]["ImGuiTable"][5]["comment"]["comments"] = " // Point within RawData[]"
 defs["structs"]["ImGuiTable"][5]["name"] = "Columns"
 defs["structs"]["ImGuiTable"][5]["template_type"] = "ImGuiTableColumn"
 defs["structs"]["ImGuiTable"][5]["type"] = "ImSpan_ImGuiTableColumn"
 defs["structs"]["ImGuiTable"][6] = {}
-defs["structs"]["ImGuiTable"][6]["comment"] = " // Point within RawData[]. Store display order of columns (when not reordered, the values are 0...Count-1)"
+defs["structs"]["ImGuiTable"][6]["comment"] = {}
+defs["structs"]["ImGuiTable"][6]["comment"]["comments"] = " // Point within RawData[]. Store display order of columns (when not reordered, the values are 0...Count-1)"
 defs["structs"]["ImGuiTable"][6]["name"] = "DisplayOrderToIndex"
 defs["structs"]["ImGuiTable"][6]["template_type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][6]["type"] = "ImSpan_ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][7] = {}
-defs["structs"]["ImGuiTable"][7]["comment"] = " // Point within RawData[]. Store cells background requests for current row."
+defs["structs"]["ImGuiTable"][7]["comment"] = {}
+defs["structs"]["ImGuiTable"][7]["comment"]["comments"] = " // Point within RawData[]. Store cells background requests for current row."
 defs["structs"]["ImGuiTable"][7]["name"] = "RowCellData"
 defs["structs"]["ImGuiTable"][7]["template_type"] = "ImGuiTableCellData"
 defs["structs"]["ImGuiTable"][7]["type"] = "ImSpan_ImGuiTableCellData"
 defs["structs"]["ImGuiTable"][8] = {}
-defs["structs"]["ImGuiTable"][8]["comment"] = " // Column DisplayOrder -> IsEnabled map"
+defs["structs"]["ImGuiTable"][8]["comment"] = {}
+defs["structs"]["ImGuiTable"][8]["comment"]["comments"] = " // Column DisplayOrder -> IsEnabled map"
 defs["structs"]["ImGuiTable"][8]["name"] = "EnabledMaskByDisplayOrder"
 defs["structs"]["ImGuiTable"][8]["type"] = "ImU64"
 defs["structs"]["ImGuiTable"][9] = {}
-defs["structs"]["ImGuiTable"][9]["comment"] = " // Column Index -> IsEnabled map (== not hidden by user/api) in a format adequate for iterating column without touching cold data"
+defs["structs"]["ImGuiTable"][9]["comment"] = {}
+defs["structs"]["ImGuiTable"][9]["comment"]["comments"] = " // Column Index -> IsEnabled map (== not hidden by user/api) in a format adequate for iterating column without touching cold data"
 defs["structs"]["ImGuiTable"][9]["name"] = "EnabledMaskByIndex"
 defs["structs"]["ImGuiTable"][9]["type"] = "ImU64"
 defs["structs"]["ImGuiTable"][10] = {}
-defs["structs"]["ImGuiTable"][10]["comment"] = " // Column Index -> IsVisibleX|IsVisibleY map (== not hidden by user/api && not hidden by scrolling/cliprect)"
+defs["structs"]["ImGuiTable"][10]["comment"] = {}
+defs["structs"]["ImGuiTable"][10]["comment"]["comments"] = " // Column Index -> IsVisibleX|IsVisibleY map (== not hidden by user/api && not hidden by scrolling/cliprect)"
 defs["structs"]["ImGuiTable"][10]["name"] = "VisibleMaskByIndex"
 defs["structs"]["ImGuiTable"][10]["type"] = "ImU64"
 defs["structs"]["ImGuiTable"][11] = {}
-defs["structs"]["ImGuiTable"][11]["comment"] = " // Column Index -> IsVisible || AutoFit (== expect user to submit items)"
+defs["structs"]["ImGuiTable"][11]["comment"] = {}
+defs["structs"]["ImGuiTable"][11]["comment"]["comments"] = " // Column Index -> IsVisible || AutoFit (== expect user to submit items)"
 defs["structs"]["ImGuiTable"][11]["name"] = "RequestOutputMaskByIndex"
 defs["structs"]["ImGuiTable"][11]["type"] = "ImU64"
 defs["structs"]["ImGuiTable"][12] = {}
-defs["structs"]["ImGuiTable"][12]["comment"] = " // Which data were loaded from the .ini file (e.g. when order is not altered we won't save order)"
+defs["structs"]["ImGuiTable"][12]["comment"] = {}
+defs["structs"]["ImGuiTable"][12]["comment"]["comments"] = " // Which data were loaded from the .ini file (e.g. when order is not altered we won't save order)"
 defs["structs"]["ImGuiTable"][12]["name"] = "SettingsLoadedFlags"
 defs["structs"]["ImGuiTable"][12]["type"] = "ImGuiTableFlags"
 defs["structs"]["ImGuiTable"][13] = {}
-defs["structs"]["ImGuiTable"][13]["comment"] = " // Offset in g.SettingsTables"
+defs["structs"]["ImGuiTable"][13]["comment"] = {}
+defs["structs"]["ImGuiTable"][13]["comment"]["comments"] = " // Offset in g.SettingsTables"
 defs["structs"]["ImGuiTable"][13]["name"] = "SettingsOffset"
 defs["structs"]["ImGuiTable"][13]["type"] = "int"
 defs["structs"]["ImGuiTable"][14] = {}
+defs["structs"]["ImGuiTable"][14]["comment"] = {}
 defs["structs"]["ImGuiTable"][14]["name"] = "LastFrameActive"
 defs["structs"]["ImGuiTable"][14]["type"] = "int"
 defs["structs"]["ImGuiTable"][15] = {}
-defs["structs"]["ImGuiTable"][15]["comment"] = " // Number of columns declared in BeginTable()"
+defs["structs"]["ImGuiTable"][15]["comment"] = {}
+defs["structs"]["ImGuiTable"][15]["comment"]["comments"] = " // Number of columns declared in BeginTable()"
 defs["structs"]["ImGuiTable"][15]["name"] = "ColumnsCount"
 defs["structs"]["ImGuiTable"][15]["type"] = "int"
 defs["structs"]["ImGuiTable"][16] = {}
+defs["structs"]["ImGuiTable"][16]["comment"] = {}
 defs["structs"]["ImGuiTable"][16]["name"] = "CurrentRow"
 defs["structs"]["ImGuiTable"][16]["type"] = "int"
 defs["structs"]["ImGuiTable"][17] = {}
+defs["structs"]["ImGuiTable"][17]["comment"] = {}
 defs["structs"]["ImGuiTable"][17]["name"] = "CurrentColumn"
 defs["structs"]["ImGuiTable"][17]["type"] = "int"
 defs["structs"]["ImGuiTable"][18] = {}
-defs["structs"]["ImGuiTable"][18]["comment"] = " // Count of BeginTable() calls with same ID in the same frame (generally 0). This is a little bit similar to BeginCount for a window, but multiple table with same ID look are multiple tables, they are just synched."
+defs["structs"]["ImGuiTable"][18]["comment"] = {}
+defs["structs"]["ImGuiTable"][18]["comment"]["comments"] = " // Count of BeginTable() calls with same ID in the same frame (generally 0). This is a little bit similar to BeginCount for a window, but multiple table with same ID look are multiple tables, they are just synched."
 defs["structs"]["ImGuiTable"][18]["name"] = "InstanceCurrent"
 defs["structs"]["ImGuiTable"][18]["type"] = "ImS16"
 defs["structs"]["ImGuiTable"][19] = {}
-defs["structs"]["ImGuiTable"][19]["comment"] = " // Mark which instance (generally 0) of the same ID is being interacted with"
+defs["structs"]["ImGuiTable"][19]["comment"] = {}
+defs["structs"]["ImGuiTable"][19]["comment"]["comments"] = " // Mark which instance (generally 0) of the same ID is being interacted with"
 defs["structs"]["ImGuiTable"][19]["name"] = "InstanceInteracted"
 defs["structs"]["ImGuiTable"][19]["type"] = "ImS16"
 defs["structs"]["ImGuiTable"][20] = {}
+defs["structs"]["ImGuiTable"][20]["comment"] = {}
 defs["structs"]["ImGuiTable"][20]["name"] = "RowPosY1"
 defs["structs"]["ImGuiTable"][20]["type"] = "float"
 defs["structs"]["ImGuiTable"][21] = {}
+defs["structs"]["ImGuiTable"][21]["comment"] = {}
 defs["structs"]["ImGuiTable"][21]["name"] = "RowPosY2"
 defs["structs"]["ImGuiTable"][21]["type"] = "float"
 defs["structs"]["ImGuiTable"][22] = {}
-defs["structs"]["ImGuiTable"][22]["comment"] = " // Height submitted to TableNextRow()"
+defs["structs"]["ImGuiTable"][22]["comment"] = {}
+defs["structs"]["ImGuiTable"][22]["comment"]["comments"] = " // Height submitted to TableNextRow()"
 defs["structs"]["ImGuiTable"][22]["name"] = "RowMinHeight"
 defs["structs"]["ImGuiTable"][22]["type"] = "float"
 defs["structs"]["ImGuiTable"][23] = {}
+defs["structs"]["ImGuiTable"][23]["comment"] = {}
 defs["structs"]["ImGuiTable"][23]["name"] = "RowTextBaseline"
 defs["structs"]["ImGuiTable"][23]["type"] = "float"
 defs["structs"]["ImGuiTable"][24] = {}
+defs["structs"]["ImGuiTable"][24]["comment"] = {}
 defs["structs"]["ImGuiTable"][24]["name"] = "RowIndentOffsetX"
 defs["structs"]["ImGuiTable"][24]["type"] = "float"
 defs["structs"]["ImGuiTable"][25] = {}
 defs["structs"]["ImGuiTable"][25]["bitfield"] = "16"
-defs["structs"]["ImGuiTable"][25]["comment"] = " // Current row flags, see ImGuiTableRowFlags_"
+defs["structs"]["ImGuiTable"][25]["comment"] = {}
+defs["structs"]["ImGuiTable"][25]["comment"]["comments"] = " // Current row flags, see ImGuiTableRowFlags_"
 defs["structs"]["ImGuiTable"][25]["name"] = "RowFlags"
 defs["structs"]["ImGuiTable"][25]["type"] = "ImGuiTableRowFlags"
 defs["structs"]["ImGuiTable"][26] = {}
 defs["structs"]["ImGuiTable"][26]["bitfield"] = "16"
+defs["structs"]["ImGuiTable"][26]["comment"] = {}
 defs["structs"]["ImGuiTable"][26]["name"] = "LastRowFlags"
 defs["structs"]["ImGuiTable"][26]["type"] = "ImGuiTableRowFlags"
 defs["structs"]["ImGuiTable"][27] = {}
-defs["structs"]["ImGuiTable"][27]["comment"] = " // Counter for alternating background colors (can be fast-forwarded by e.g clipper), not same as CurrentRow because header rows typically don't increase this."
+defs["structs"]["ImGuiTable"][27]["comment"] = {}
+defs["structs"]["ImGuiTable"][27]["comment"]["comments"] = " // Counter for alternating background colors (can be fast-forwarded by e.g clipper), not same as CurrentRow because header rows typically don't increase this."
 defs["structs"]["ImGuiTable"][27]["name"] = "RowBgColorCounter"
 defs["structs"]["ImGuiTable"][27]["type"] = "int"
 defs["structs"]["ImGuiTable"][28] = {}
-defs["structs"]["ImGuiTable"][28]["comment"] = " // Background color override for current row."
+defs["structs"]["ImGuiTable"][28]["comment"] = {}
+defs["structs"]["ImGuiTable"][28]["comment"]["comments"] = " // Background color override for current row."
 defs["structs"]["ImGuiTable"][28]["name"] = "RowBgColor[2]"
 defs["structs"]["ImGuiTable"][28]["size"] = 2
 defs["structs"]["ImGuiTable"][28]["type"] = "ImU32"
 defs["structs"]["ImGuiTable"][29] = {}
+defs["structs"]["ImGuiTable"][29]["comment"] = {}
 defs["structs"]["ImGuiTable"][29]["name"] = "BorderColorStrong"
 defs["structs"]["ImGuiTable"][29]["type"] = "ImU32"
 defs["structs"]["ImGuiTable"][30] = {}
+defs["structs"]["ImGuiTable"][30]["comment"] = {}
 defs["structs"]["ImGuiTable"][30]["name"] = "BorderColorLight"
 defs["structs"]["ImGuiTable"][30]["type"] = "ImU32"
 defs["structs"]["ImGuiTable"][31] = {}
+defs["structs"]["ImGuiTable"][31]["comment"] = {}
 defs["structs"]["ImGuiTable"][31]["name"] = "BorderX1"
 defs["structs"]["ImGuiTable"][31]["type"] = "float"
 defs["structs"]["ImGuiTable"][32] = {}
+defs["structs"]["ImGuiTable"][32]["comment"] = {}
 defs["structs"]["ImGuiTable"][32]["name"] = "BorderX2"
 defs["structs"]["ImGuiTable"][32]["type"] = "float"
 defs["structs"]["ImGuiTable"][33] = {}
+defs["structs"]["ImGuiTable"][33]["comment"] = {}
 defs["structs"]["ImGuiTable"][33]["name"] = "HostIndentX"
 defs["structs"]["ImGuiTable"][33]["type"] = "float"
 defs["structs"]["ImGuiTable"][34] = {}
+defs["structs"]["ImGuiTable"][34]["comment"] = {}
 defs["structs"]["ImGuiTable"][34]["name"] = "MinColumnWidth"
 defs["structs"]["ImGuiTable"][34]["type"] = "float"
 defs["structs"]["ImGuiTable"][35] = {}
+defs["structs"]["ImGuiTable"][35]["comment"] = {}
 defs["structs"]["ImGuiTable"][35]["name"] = "OuterPaddingX"
 defs["structs"]["ImGuiTable"][35]["type"] = "float"
 defs["structs"]["ImGuiTable"][36] = {}
-defs["structs"]["ImGuiTable"][36]["comment"] = " // Padding from each borders"
+defs["structs"]["ImGuiTable"][36]["comment"] = {}
+defs["structs"]["ImGuiTable"][36]["comment"]["comments"] = " // Padding from each borders"
 defs["structs"]["ImGuiTable"][36]["name"] = "CellPaddingX"
 defs["structs"]["ImGuiTable"][36]["type"] = "float"
 defs["structs"]["ImGuiTable"][37] = {}
+defs["structs"]["ImGuiTable"][37]["comment"] = {}
 defs["structs"]["ImGuiTable"][37]["name"] = "CellPaddingY"
 defs["structs"]["ImGuiTable"][37]["type"] = "float"
 defs["structs"]["ImGuiTable"][38] = {}
-defs["structs"]["ImGuiTable"][38]["comment"] = " // Spacing between non-bordered cells"
+defs["structs"]["ImGuiTable"][38]["comment"] = {}
+defs["structs"]["ImGuiTable"][38]["comment"]["comments"] = " // Spacing between non-bordered cells"
 defs["structs"]["ImGuiTable"][38]["name"] = "CellSpacingX1"
 defs["structs"]["ImGuiTable"][38]["type"] = "float"
 defs["structs"]["ImGuiTable"][39] = {}
+defs["structs"]["ImGuiTable"][39]["comment"] = {}
 defs["structs"]["ImGuiTable"][39]["name"] = "CellSpacingX2"
 defs["structs"]["ImGuiTable"][39]["type"] = "float"
 defs["structs"]["ImGuiTable"][40] = {}
-defs["structs"]["ImGuiTable"][40]["comment"] = " // User value passed to BeginTable(), see comments at the top of BeginTable() for details."
+defs["structs"]["ImGuiTable"][40]["comment"] = {}
+defs["structs"]["ImGuiTable"][40]["comment"]["comments"] = " // User value passed to BeginTable(), see comments at the top of BeginTable() for details."
 defs["structs"]["ImGuiTable"][40]["name"] = "InnerWidth"
 defs["structs"]["ImGuiTable"][40]["type"] = "float"
 defs["structs"]["ImGuiTable"][41] = {}
-defs["structs"]["ImGuiTable"][41]["comment"] = " // Sum of current column width"
+defs["structs"]["ImGuiTable"][41]["comment"] = {}
+defs["structs"]["ImGuiTable"][41]["comment"]["comments"] = " // Sum of current column width"
 defs["structs"]["ImGuiTable"][41]["name"] = "ColumnsGivenWidth"
 defs["structs"]["ImGuiTable"][41]["type"] = "float"
 defs["structs"]["ImGuiTable"][42] = {}
-defs["structs"]["ImGuiTable"][42]["comment"] = " // Sum of ideal column width in order nothing to be clipped, used for auto-fitting and content width submission in outer window"
+defs["structs"]["ImGuiTable"][42]["comment"] = {}
+defs["structs"]["ImGuiTable"][42]["comment"]["comments"] = " // Sum of ideal column width in order nothing to be clipped, used for auto-fitting and content width submission in outer window"
 defs["structs"]["ImGuiTable"][42]["name"] = "ColumnsAutoFitWidth"
 defs["structs"]["ImGuiTable"][42]["type"] = "float"
 defs["structs"]["ImGuiTable"][43] = {}
-defs["structs"]["ImGuiTable"][43]["comment"] = " // Sum of weight of all enabled stretching columns"
+defs["structs"]["ImGuiTable"][43]["comment"] = {}
+defs["structs"]["ImGuiTable"][43]["comment"]["comments"] = " // Sum of weight of all enabled stretching columns"
 defs["structs"]["ImGuiTable"][43]["name"] = "ColumnsStretchSumWeights"
 defs["structs"]["ImGuiTable"][43]["type"] = "float"
 defs["structs"]["ImGuiTable"][44] = {}
+defs["structs"]["ImGuiTable"][44]["comment"] = {}
 defs["structs"]["ImGuiTable"][44]["name"] = "ResizedColumnNextWidth"
 defs["structs"]["ImGuiTable"][44]["type"] = "float"
 defs["structs"]["ImGuiTable"][45] = {}
-defs["structs"]["ImGuiTable"][45]["comment"] = " // Lock minimum contents width while resizing down in order to not create feedback loops. But we allow growing the table."
+defs["structs"]["ImGuiTable"][45]["comment"] = {}
+defs["structs"]["ImGuiTable"][45]["comment"]["comments"] = " // Lock minimum contents width while resizing down in order to not create feedback loops. But we allow growing the table."
 defs["structs"]["ImGuiTable"][45]["name"] = "ResizeLockMinContentsX2"
 defs["structs"]["ImGuiTable"][45]["type"] = "float"
 defs["structs"]["ImGuiTable"][46] = {}
-defs["structs"]["ImGuiTable"][46]["comment"] = " // Reference scale to be able to rescale columns on font/dpi changes."
+defs["structs"]["ImGuiTable"][46]["comment"] = {}
+defs["structs"]["ImGuiTable"][46]["comment"]["comments"] = " // Reference scale to be able to rescale columns on font/dpi changes."
 defs["structs"]["ImGuiTable"][46]["name"] = "RefScale"
 defs["structs"]["ImGuiTable"][46]["type"] = "float"
 defs["structs"]["ImGuiTable"][47] = {}
-defs["structs"]["ImGuiTable"][47]["comment"] = " // Note: for non-scrolling table, OuterRect.Max.y is often FLT_MAX until EndTable(), unless a height has been specified in BeginTable()."
+defs["structs"]["ImGuiTable"][47]["comment"] = {}
+defs["structs"]["ImGuiTable"][47]["comment"]["comments"] = " // Note: for non-scrolling table, OuterRect.Max.y is often FLT_MAX until EndTable(), unless a height has been specified in BeginTable()."
 defs["structs"]["ImGuiTable"][47]["name"] = "OuterRect"
 defs["structs"]["ImGuiTable"][47]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][48] = {}
-defs["structs"]["ImGuiTable"][48]["comment"] = " // InnerRect but without decoration. As with OuterRect, for non-scrolling tables, InnerRect.Max.y is"
+defs["structs"]["ImGuiTable"][48]["comment"] = {}
+defs["structs"]["ImGuiTable"][48]["comment"]["comments"] = " // InnerRect but without decoration. As with OuterRect, for non-scrolling tables, InnerRect.Max.y is"
 defs["structs"]["ImGuiTable"][48]["name"] = "InnerRect"
 defs["structs"]["ImGuiTable"][48]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][49] = {}
+defs["structs"]["ImGuiTable"][49]["comment"] = {}
 defs["structs"]["ImGuiTable"][49]["name"] = "WorkRect"
 defs["structs"]["ImGuiTable"][49]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][50] = {}
+defs["structs"]["ImGuiTable"][50]["comment"] = {}
 defs["structs"]["ImGuiTable"][50]["name"] = "InnerClipRect"
 defs["structs"]["ImGuiTable"][50]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][51] = {}
-defs["structs"]["ImGuiTable"][51]["comment"] = " // We use this to cpu-clip cell background color fill, evolve during the frame as we cross frozen rows boundaries"
+defs["structs"]["ImGuiTable"][51]["comment"] = {}
+defs["structs"]["ImGuiTable"][51]["comment"]["comments"] = " // We use this to cpu-clip cell background color fill, evolve during the frame as we cross frozen rows boundaries"
 defs["structs"]["ImGuiTable"][51]["name"] = "BgClipRect"
 defs["structs"]["ImGuiTable"][51]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][52] = {}
-defs["structs"]["ImGuiTable"][52]["comment"] = " // Actual ImDrawCmd clip rect for BG0/1 channel. This tends to be == OuterWindow->ClipRect at BeginTable() because output in BG0/BG1 is cpu-clipped"
+defs["structs"]["ImGuiTable"][52]["comment"] = {}
+defs["structs"]["ImGuiTable"][52]["comment"]["comments"] = " // Actual ImDrawCmd clip rect for BG0/1 channel. This tends to be == OuterWindow->ClipRect at BeginTable() because output in BG0/BG1 is cpu-clipped"
 defs["structs"]["ImGuiTable"][52]["name"] = "Bg0ClipRectForDrawCmd"
 defs["structs"]["ImGuiTable"][52]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][53] = {}
-defs["structs"]["ImGuiTable"][53]["comment"] = " // Actual ImDrawCmd clip rect for BG2 channel. This tends to be a correct, tight-fit, because output to BG2 are done by widgets relying on regular ClipRect."
+defs["structs"]["ImGuiTable"][53]["comment"] = {}
+defs["structs"]["ImGuiTable"][53]["comment"]["comments"] = " // Actual ImDrawCmd clip rect for BG2 channel. This tends to be a correct, tight-fit, because output to BG2 are done by widgets relying on regular ClipRect."
 defs["structs"]["ImGuiTable"][53]["name"] = "Bg2ClipRectForDrawCmd"
 defs["structs"]["ImGuiTable"][53]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][54] = {}
-defs["structs"]["ImGuiTable"][54]["comment"] = " // This is used to check if we can eventually merge our columns draw calls into the current draw call of the current window."
+defs["structs"]["ImGuiTable"][54]["comment"] = {}
+defs["structs"]["ImGuiTable"][54]["comment"]["comments"] = " // This is used to check if we can eventually merge our columns draw calls into the current draw call of the current window."
 defs["structs"]["ImGuiTable"][54]["name"] = "HostClipRect"
 defs["structs"]["ImGuiTable"][54]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][55] = {}
-defs["structs"]["ImGuiTable"][55]["comment"] = " // Backup of InnerWindow->ClipRect during PushTableBackground()/PopTableBackground()"
+defs["structs"]["ImGuiTable"][55]["comment"] = {}
+defs["structs"]["ImGuiTable"][55]["comment"]["comments"] = " // Backup of InnerWindow->ClipRect during PushTableBackground()/PopTableBackground()"
 defs["structs"]["ImGuiTable"][55]["name"] = "HostBackupInnerClipRect"
 defs["structs"]["ImGuiTable"][55]["type"] = "ImRect"
 defs["structs"]["ImGuiTable"][56] = {}
-defs["structs"]["ImGuiTable"][56]["comment"] = " // Parent window for the table"
+defs["structs"]["ImGuiTable"][56]["comment"] = {}
+defs["structs"]["ImGuiTable"][56]["comment"]["comments"] = " // Parent window for the table"
 defs["structs"]["ImGuiTable"][56]["name"] = "OuterWindow"
 defs["structs"]["ImGuiTable"][56]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiTable"][57] = {}
-defs["structs"]["ImGuiTable"][57]["comment"] = " // Window holding the table data (== OuterWindow or a child window)"
+defs["structs"]["ImGuiTable"][57]["comment"] = {}
+defs["structs"]["ImGuiTable"][57]["comment"]["comments"] = " // Window holding the table data (== OuterWindow or a child window)"
 defs["structs"]["ImGuiTable"][57]["name"] = "InnerWindow"
 defs["structs"]["ImGuiTable"][57]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiTable"][58] = {}
-defs["structs"]["ImGuiTable"][58]["comment"] = " // Contiguous buffer holding columns names"
+defs["structs"]["ImGuiTable"][58]["comment"] = {}
+defs["structs"]["ImGuiTable"][58]["comment"]["comments"] = " // Contiguous buffer holding columns names"
 defs["structs"]["ImGuiTable"][58]["name"] = "ColumnsNames"
 defs["structs"]["ImGuiTable"][58]["type"] = "ImGuiTextBuffer"
 defs["structs"]["ImGuiTable"][59] = {}
-defs["structs"]["ImGuiTable"][59]["comment"] = " // Shortcut to TempData->DrawSplitter while in table. Isolate draw commands per columns to avoid switching clip rect constantly"
+defs["structs"]["ImGuiTable"][59]["comment"] = {}
+defs["structs"]["ImGuiTable"][59]["comment"]["comments"] = " // Shortcut to TempData->DrawSplitter while in table. Isolate draw commands per columns to avoid switching clip rect constantly"
 defs["structs"]["ImGuiTable"][59]["name"] = "DrawSplitter"
 defs["structs"]["ImGuiTable"][59]["type"] = "ImDrawListSplitter*"
 defs["structs"]["ImGuiTable"][60] = {}
+defs["structs"]["ImGuiTable"][60]["comment"] = {}
 defs["structs"]["ImGuiTable"][60]["name"] = "InstanceDataFirst"
 defs["structs"]["ImGuiTable"][60]["type"] = "ImGuiTableInstanceData"
 defs["structs"]["ImGuiTable"][61] = {}
-defs["structs"]["ImGuiTable"][61]["comment"] = " // FIXME-OPT: Using a small-vector pattern would be good."
+defs["structs"]["ImGuiTable"][61]["comment"] = {}
+defs["structs"]["ImGuiTable"][61]["comment"]["comments"] = " // FIXME-OPT: Using a small-vector pattern would be good."
 defs["structs"]["ImGuiTable"][61]["name"] = "InstanceDataExtra"
 defs["structs"]["ImGuiTable"][61]["template_type"] = "ImGuiTableInstanceData"
 defs["structs"]["ImGuiTable"][61]["type"] = "ImVector_ImGuiTableInstanceData"
 defs["structs"]["ImGuiTable"][62] = {}
+defs["structs"]["ImGuiTable"][62]["comment"] = {}
 defs["structs"]["ImGuiTable"][62]["name"] = "SortSpecsSingle"
 defs["structs"]["ImGuiTable"][62]["type"] = "ImGuiTableColumnSortSpecs"
 defs["structs"]["ImGuiTable"][63] = {}
-defs["structs"]["ImGuiTable"][63]["comment"] = " // FIXME-OPT: Using a small-vector pattern would be good."
+defs["structs"]["ImGuiTable"][63]["comment"] = {}
+defs["structs"]["ImGuiTable"][63]["comment"]["comments"] = " // FIXME-OPT: Using a small-vector pattern would be good."
 defs["structs"]["ImGuiTable"][63]["name"] = "SortSpecsMulti"
 defs["structs"]["ImGuiTable"][63]["template_type"] = "ImGuiTableColumnSortSpecs"
 defs["structs"]["ImGuiTable"][63]["type"] = "ImVector_ImGuiTableColumnSortSpecs"
 defs["structs"]["ImGuiTable"][64] = {}
-defs["structs"]["ImGuiTable"][64]["comment"] = " // Public facing sorts specs, this is what we return in TableGetSortSpecs()"
+defs["structs"]["ImGuiTable"][64]["comment"] = {}
+defs["structs"]["ImGuiTable"][64]["comment"]["comments"] = " // Public facing sorts specs, this is what we return in TableGetSortSpecs()"
 defs["structs"]["ImGuiTable"][64]["name"] = "SortSpecs"
 defs["structs"]["ImGuiTable"][64]["type"] = "ImGuiTableSortSpecs"
 defs["structs"]["ImGuiTable"][65] = {}
+defs["structs"]["ImGuiTable"][65]["comment"] = {}
 defs["structs"]["ImGuiTable"][65]["name"] = "SortSpecsCount"
 defs["structs"]["ImGuiTable"][65]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][66] = {}
-defs["structs"]["ImGuiTable"][66]["comment"] = " // Number of enabled columns (<= ColumnsCount)"
+defs["structs"]["ImGuiTable"][66]["comment"] = {}
+defs["structs"]["ImGuiTable"][66]["comment"]["comments"] = " // Number of enabled columns (<= ColumnsCount)"
 defs["structs"]["ImGuiTable"][66]["name"] = "ColumnsEnabledCount"
 defs["structs"]["ImGuiTable"][66]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][67] = {}
-defs["structs"]["ImGuiTable"][67]["comment"] = " // Number of enabled columns (<= ColumnsCount)"
+defs["structs"]["ImGuiTable"][67]["comment"] = {}
+defs["structs"]["ImGuiTable"][67]["comment"]["comments"] = " // Number of enabled columns (<= ColumnsCount)"
 defs["structs"]["ImGuiTable"][67]["name"] = "ColumnsEnabledFixedCount"
 defs["structs"]["ImGuiTable"][67]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][68] = {}
-defs["structs"]["ImGuiTable"][68]["comment"] = " // Count calls to TableSetupColumn()"
+defs["structs"]["ImGuiTable"][68]["comment"] = {}
+defs["structs"]["ImGuiTable"][68]["comment"]["comments"] = " // Count calls to TableSetupColumn()"
 defs["structs"]["ImGuiTable"][68]["name"] = "DeclColumnsCount"
 defs["structs"]["ImGuiTable"][68]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][69] = {}
-defs["structs"]["ImGuiTable"][69]["comment"] = " // Index of column whose visible region is being hovered. Important: == ColumnsCount when hovering empty region after the right-most column!"
+defs["structs"]["ImGuiTable"][69]["comment"] = {}
+defs["structs"]["ImGuiTable"][69]["comment"]["comments"] = " // Index of column whose visible region is being hovered. Important: == ColumnsCount when hovering empty region after the right-most column!"
 defs["structs"]["ImGuiTable"][69]["name"] = "HoveredColumnBody"
 defs["structs"]["ImGuiTable"][69]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][70] = {}
-defs["structs"]["ImGuiTable"][70]["comment"] = " // Index of column whose right-border is being hovered (for resizing)."
+defs["structs"]["ImGuiTable"][70]["comment"] = {}
+defs["structs"]["ImGuiTable"][70]["comment"]["comments"] = " // Index of column whose right-border is being hovered (for resizing)."
 defs["structs"]["ImGuiTable"][70]["name"] = "HoveredColumnBorder"
 defs["structs"]["ImGuiTable"][70]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][71] = {}
-defs["structs"]["ImGuiTable"][71]["comment"] = " // Index of single column requesting auto-fit."
+defs["structs"]["ImGuiTable"][71]["comment"] = {}
+defs["structs"]["ImGuiTable"][71]["comment"]["comments"] = " // Index of single column requesting auto-fit."
 defs["structs"]["ImGuiTable"][71]["name"] = "AutoFitSingleColumn"
 defs["structs"]["ImGuiTable"][71]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][72] = {}
-defs["structs"]["ImGuiTable"][72]["comment"] = " // Index of column being resized. Reset when InstanceCurrent==0."
+defs["structs"]["ImGuiTable"][72]["comment"] = {}
+defs["structs"]["ImGuiTable"][72]["comment"]["comments"] = " // Index of column being resized. Reset when InstanceCurrent==0."
 defs["structs"]["ImGuiTable"][72]["name"] = "ResizedColumn"
 defs["structs"]["ImGuiTable"][72]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][73] = {}
-defs["structs"]["ImGuiTable"][73]["comment"] = " // Index of column being resized from previous frame."
+defs["structs"]["ImGuiTable"][73]["comment"] = {}
+defs["structs"]["ImGuiTable"][73]["comment"]["comments"] = " // Index of column being resized from previous frame."
 defs["structs"]["ImGuiTable"][73]["name"] = "LastResizedColumn"
 defs["structs"]["ImGuiTable"][73]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][74] = {}
-defs["structs"]["ImGuiTable"][74]["comment"] = " // Index of column header being held."
+defs["structs"]["ImGuiTable"][74]["comment"] = {}
+defs["structs"]["ImGuiTable"][74]["comment"]["comments"] = " // Index of column header being held."
 defs["structs"]["ImGuiTable"][74]["name"] = "HeldHeaderColumn"
 defs["structs"]["ImGuiTable"][74]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][75] = {}
-defs["structs"]["ImGuiTable"][75]["comment"] = " // Index of column being reordered. (not cleared)"
+defs["structs"]["ImGuiTable"][75]["comment"] = {}
+defs["structs"]["ImGuiTable"][75]["comment"]["comments"] = " // Index of column being reordered. (not cleared)"
 defs["structs"]["ImGuiTable"][75]["name"] = "ReorderColumn"
 defs["structs"]["ImGuiTable"][75]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][76] = {}
-defs["structs"]["ImGuiTable"][76]["comment"] = " // -1 or +1"
+defs["structs"]["ImGuiTable"][76]["comment"] = {}
+defs["structs"]["ImGuiTable"][76]["comment"]["comments"] = " // -1 or +1"
 defs["structs"]["ImGuiTable"][76]["name"] = "ReorderColumnDir"
 defs["structs"]["ImGuiTable"][76]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][77] = {}
-defs["structs"]["ImGuiTable"][77]["comment"] = " // Index of left-most non-hidden column."
+defs["structs"]["ImGuiTable"][77]["comment"] = {}
+defs["structs"]["ImGuiTable"][77]["comment"]["comments"] = " // Index of left-most non-hidden column."
 defs["structs"]["ImGuiTable"][77]["name"] = "LeftMostEnabledColumn"
 defs["structs"]["ImGuiTable"][77]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][78] = {}
-defs["structs"]["ImGuiTable"][78]["comment"] = " // Index of right-most non-hidden column."
+defs["structs"]["ImGuiTable"][78]["comment"] = {}
+defs["structs"]["ImGuiTable"][78]["comment"]["comments"] = " // Index of right-most non-hidden column."
 defs["structs"]["ImGuiTable"][78]["name"] = "RightMostEnabledColumn"
 defs["structs"]["ImGuiTable"][78]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][79] = {}
-defs["structs"]["ImGuiTable"][79]["comment"] = " // Index of left-most stretched column."
+defs["structs"]["ImGuiTable"][79]["comment"] = {}
+defs["structs"]["ImGuiTable"][79]["comment"]["comments"] = " // Index of left-most stretched column."
 defs["structs"]["ImGuiTable"][79]["name"] = "LeftMostStretchedColumn"
 defs["structs"]["ImGuiTable"][79]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][80] = {}
-defs["structs"]["ImGuiTable"][80]["comment"] = " // Index of right-most stretched column."
+defs["structs"]["ImGuiTable"][80]["comment"] = {}
+defs["structs"]["ImGuiTable"][80]["comment"]["comments"] = " // Index of right-most stretched column."
 defs["structs"]["ImGuiTable"][80]["name"] = "RightMostStretchedColumn"
 defs["structs"]["ImGuiTable"][80]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][81] = {}
-defs["structs"]["ImGuiTable"][81]["comment"] = " // Column right-clicked on, of -1 if opening context menu from a neutral/empty spot"
+defs["structs"]["ImGuiTable"][81]["comment"] = {}
+defs["structs"]["ImGuiTable"][81]["comment"]["comments"] = " // Column right-clicked on, of -1 if opening context menu from a neutral/empty spot"
 defs["structs"]["ImGuiTable"][81]["name"] = "ContextPopupColumn"
 defs["structs"]["ImGuiTable"][81]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][82] = {}
-defs["structs"]["ImGuiTable"][82]["comment"] = " // Requested frozen rows count"
+defs["structs"]["ImGuiTable"][82]["comment"] = {}
+defs["structs"]["ImGuiTable"][82]["comment"]["comments"] = " // Requested frozen rows count"
 defs["structs"]["ImGuiTable"][82]["name"] = "FreezeRowsRequest"
 defs["structs"]["ImGuiTable"][82]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][83] = {}
-defs["structs"]["ImGuiTable"][83]["comment"] = " // Actual frozen row count (== FreezeRowsRequest, or == 0 when no scrolling offset)"
+defs["structs"]["ImGuiTable"][83]["comment"] = {}
+defs["structs"]["ImGuiTable"][83]["comment"]["comments"] = " // Actual frozen row count (== FreezeRowsRequest, or == 0 when no scrolling offset)"
 defs["structs"]["ImGuiTable"][83]["name"] = "FreezeRowsCount"
 defs["structs"]["ImGuiTable"][83]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][84] = {}
-defs["structs"]["ImGuiTable"][84]["comment"] = " // Requested frozen columns count"
+defs["structs"]["ImGuiTable"][84]["comment"] = {}
+defs["structs"]["ImGuiTable"][84]["comment"]["comments"] = " // Requested frozen columns count"
 defs["structs"]["ImGuiTable"][84]["name"] = "FreezeColumnsRequest"
 defs["structs"]["ImGuiTable"][84]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][85] = {}
-defs["structs"]["ImGuiTable"][85]["comment"] = " // Actual frozen columns count (== FreezeColumnsRequest, or == 0 when no scrolling offset)"
+defs["structs"]["ImGuiTable"][85]["comment"] = {}
+defs["structs"]["ImGuiTable"][85]["comment"]["comments"] = " // Actual frozen columns count (== FreezeColumnsRequest, or == 0 when no scrolling offset)"
 defs["structs"]["ImGuiTable"][85]["name"] = "FreezeColumnsCount"
 defs["structs"]["ImGuiTable"][85]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][86] = {}
-defs["structs"]["ImGuiTable"][86]["comment"] = " // Index of current RowCellData[] entry in current row"
+defs["structs"]["ImGuiTable"][86]["comment"] = {}
+defs["structs"]["ImGuiTable"][86]["comment"]["comments"] = " // Index of current RowCellData[] entry in current row"
 defs["structs"]["ImGuiTable"][86]["name"] = "RowCellDataCurrent"
 defs["structs"]["ImGuiTable"][86]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTable"][87] = {}
-defs["structs"]["ImGuiTable"][87]["comment"] = " // Redirect non-visible columns here."
+defs["structs"]["ImGuiTable"][87]["comment"] = {}
+defs["structs"]["ImGuiTable"][87]["comment"]["comments"] = " // Redirect non-visible columns here."
 defs["structs"]["ImGuiTable"][87]["name"] = "DummyDrawChannel"
 defs["structs"]["ImGuiTable"][87]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTable"][88] = {}
-defs["structs"]["ImGuiTable"][88]["comment"] = " // For Selectable() and other widgets drawing across columns after the freezing line. Index within DrawSplitter.Channels[]"
+defs["structs"]["ImGuiTable"][88]["comment"] = {}
+defs["structs"]["ImGuiTable"][88]["comment"]["comments"] = " // For Selectable() and other widgets drawing across columns after the freezing line. Index within DrawSplitter.Channels[]"
 defs["structs"]["ImGuiTable"][88]["name"] = "Bg2DrawChannelCurrent"
 defs["structs"]["ImGuiTable"][88]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTable"][89] = {}
+defs["structs"]["ImGuiTable"][89]["comment"] = {}
 defs["structs"]["ImGuiTable"][89]["name"] = "Bg2DrawChannelUnfrozen"
 defs["structs"]["ImGuiTable"][89]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTable"][90] = {}
-defs["structs"]["ImGuiTable"][90]["comment"] = " // Set by TableUpdateLayout() which is called when beginning the first row."
+defs["structs"]["ImGuiTable"][90]["comment"] = {}
+defs["structs"]["ImGuiTable"][90]["comment"]["comments"] = " // Set by TableUpdateLayout() which is called when beginning the first row."
 defs["structs"]["ImGuiTable"][90]["name"] = "IsLayoutLocked"
 defs["structs"]["ImGuiTable"][90]["type"] = "bool"
 defs["structs"]["ImGuiTable"][91] = {}
-defs["structs"]["ImGuiTable"][91]["comment"] = " // Set when inside TableBeginRow()/TableEndRow()."
+defs["structs"]["ImGuiTable"][91]["comment"] = {}
+defs["structs"]["ImGuiTable"][91]["comment"]["comments"] = " // Set when inside TableBeginRow()/TableEndRow()."
 defs["structs"]["ImGuiTable"][91]["name"] = "IsInsideRow"
 defs["structs"]["ImGuiTable"][91]["type"] = "bool"
 defs["structs"]["ImGuiTable"][92] = {}
+defs["structs"]["ImGuiTable"][92]["comment"] = {}
 defs["structs"]["ImGuiTable"][92]["name"] = "IsInitializing"
 defs["structs"]["ImGuiTable"][92]["type"] = "bool"
 defs["structs"]["ImGuiTable"][93] = {}
+defs["structs"]["ImGuiTable"][93]["comment"] = {}
 defs["structs"]["ImGuiTable"][93]["name"] = "IsSortSpecsDirty"
 defs["structs"]["ImGuiTable"][93]["type"] = "bool"
 defs["structs"]["ImGuiTable"][94] = {}
-defs["structs"]["ImGuiTable"][94]["comment"] = " // Set when the first row had the ImGuiTableRowFlags_Headers flag."
+defs["structs"]["ImGuiTable"][94]["comment"] = {}
+defs["structs"]["ImGuiTable"][94]["comment"]["comments"] = " // Set when the first row had the ImGuiTableRowFlags_Headers flag."
 defs["structs"]["ImGuiTable"][94]["name"] = "IsUsingHeaders"
 defs["structs"]["ImGuiTable"][94]["type"] = "bool"
 defs["structs"]["ImGuiTable"][95] = {}
-defs["structs"]["ImGuiTable"][95]["comment"] = " // Set when default context menu is open (also see: ContextPopupColumn, InstanceInteracted)."
+defs["structs"]["ImGuiTable"][95]["comment"] = {}
+defs["structs"]["ImGuiTable"][95]["comment"]["comments"] = " // Set when default context menu is open (also see: ContextPopupColumn, InstanceInteracted)."
 defs["structs"]["ImGuiTable"][95]["name"] = "IsContextPopupOpen"
 defs["structs"]["ImGuiTable"][95]["type"] = "bool"
 defs["structs"]["ImGuiTable"][96] = {}
+defs["structs"]["ImGuiTable"][96]["comment"] = {}
 defs["structs"]["ImGuiTable"][96]["name"] = "IsSettingsRequestLoad"
 defs["structs"]["ImGuiTable"][96]["type"] = "bool"
 defs["structs"]["ImGuiTable"][97] = {}
-defs["structs"]["ImGuiTable"][97]["comment"] = " // Set when table settings have changed and needs to be reported into ImGuiTableSetttings data."
+defs["structs"]["ImGuiTable"][97]["comment"] = {}
+defs["structs"]["ImGuiTable"][97]["comment"]["comments"] = " // Set when table settings have changed and needs to be reported into ImGuiTableSetttings data."
 defs["structs"]["ImGuiTable"][97]["name"] = "IsSettingsDirty"
 defs["structs"]["ImGuiTable"][97]["type"] = "bool"
 defs["structs"]["ImGuiTable"][98] = {}
-defs["structs"]["ImGuiTable"][98]["comment"] = " // Set when display order is unchanged from default (DisplayOrder contains 0...Count-1)"
+defs["structs"]["ImGuiTable"][98]["comment"] = {}
+defs["structs"]["ImGuiTable"][98]["comment"]["comments"] = " // Set when display order is unchanged from default (DisplayOrder contains 0...Count-1)"
 defs["structs"]["ImGuiTable"][98]["name"] = "IsDefaultDisplayOrder"
 defs["structs"]["ImGuiTable"][98]["type"] = "bool"
 defs["structs"]["ImGuiTable"][99] = {}
+defs["structs"]["ImGuiTable"][99]["comment"] = {}
 defs["structs"]["ImGuiTable"][99]["name"] = "IsResetAllRequest"
 defs["structs"]["ImGuiTable"][99]["type"] = "bool"
 defs["structs"]["ImGuiTable"][100] = {}
+defs["structs"]["ImGuiTable"][100]["comment"] = {}
 defs["structs"]["ImGuiTable"][100]["name"] = "IsResetDisplayOrderRequest"
 defs["structs"]["ImGuiTable"][100]["type"] = "bool"
 defs["structs"]["ImGuiTable"][101] = {}
-defs["structs"]["ImGuiTable"][101]["comment"] = " // Set when we got past the frozen row."
+defs["structs"]["ImGuiTable"][101]["comment"] = {}
+defs["structs"]["ImGuiTable"][101]["comment"]["comments"] = " // Set when we got past the frozen row."
 defs["structs"]["ImGuiTable"][101]["name"] = "IsUnfrozenRows"
 defs["structs"]["ImGuiTable"][101]["type"] = "bool"
 defs["structs"]["ImGuiTable"][102] = {}
-defs["structs"]["ImGuiTable"][102]["comment"] = " // Set if user didn't explicitly set a sizing policy in BeginTable()"
+defs["structs"]["ImGuiTable"][102]["comment"] = {}
+defs["structs"]["ImGuiTable"][102]["comment"]["comments"] = " // Set if user didn't explicitly set a sizing policy in BeginTable()"
 defs["structs"]["ImGuiTable"][102]["name"] = "IsDefaultSizingPolicy"
 defs["structs"]["ImGuiTable"][102]["type"] = "bool"
 defs["structs"]["ImGuiTable"][103] = {}
+defs["structs"]["ImGuiTable"][103]["comment"] = {}
 defs["structs"]["ImGuiTable"][103]["name"] = "MemoryCompacted"
 defs["structs"]["ImGuiTable"][103]["type"] = "bool"
 defs["structs"]["ImGuiTable"][104] = {}
-defs["structs"]["ImGuiTable"][104]["comment"] = " // Backup of InnerWindow->SkipItem at the end of BeginTable(), because we will overwrite InnerWindow->SkipItem on a per-column basis"
+defs["structs"]["ImGuiTable"][104]["comment"] = {}
+defs["structs"]["ImGuiTable"][104]["comment"]["comments"] = " // Backup of InnerWindow->SkipItem at the end of BeginTable(), because we will overwrite InnerWindow->SkipItem on a per-column basis"
 defs["structs"]["ImGuiTable"][104]["name"] = "HostSkipItems"
 defs["structs"]["ImGuiTable"][104]["type"] = "bool"
 defs["structs"]["ImGuiTableCellData"] = {}
 defs["structs"]["ImGuiTableCellData"][1] = {}
-defs["structs"]["ImGuiTableCellData"][1]["comment"] = " // Actual color"
+defs["structs"]["ImGuiTableCellData"][1]["comment"] = {}
+defs["structs"]["ImGuiTableCellData"][1]["comment"]["comments"] = " // Actual color"
 defs["structs"]["ImGuiTableCellData"][1]["name"] = "BgColor"
 defs["structs"]["ImGuiTableCellData"][1]["type"] = "ImU32"
 defs["structs"]["ImGuiTableCellData"][2] = {}
-defs["structs"]["ImGuiTableCellData"][2]["comment"] = " // Column number"
+defs["structs"]["ImGuiTableCellData"][2]["comment"] = {}
+defs["structs"]["ImGuiTableCellData"][2]["comment"]["comments"] = " // Column number"
 defs["structs"]["ImGuiTableCellData"][2]["name"] = "Column"
 defs["structs"]["ImGuiTableCellData"][2]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"] = {}
 defs["structs"]["ImGuiTableColumn"][1] = {}
-defs["structs"]["ImGuiTableColumn"][1]["comment"] = " // Flags after some patching (not directly same as provided by user). See ImGuiTableColumnFlags_"
+defs["structs"]["ImGuiTableColumn"][1]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][1]["comment"]["comments"] = " // Flags after some patching (not directly same as provided by user). See ImGuiTableColumnFlags_"
 defs["structs"]["ImGuiTableColumn"][1]["name"] = "Flags"
 defs["structs"]["ImGuiTableColumn"][1]["type"] = "ImGuiTableColumnFlags"
 defs["structs"]["ImGuiTableColumn"][2] = {}
-defs["structs"]["ImGuiTableColumn"][2]["comment"] = " // Final/actual width visible == (MaxX - MinX), locked in TableUpdateLayout(). May be > WidthRequest to honor minimum width, may be < WidthRequest to honor shrinking columns down in tight space."
+defs["structs"]["ImGuiTableColumn"][2]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][2]["comment"]["comments"] = " // Final/actual width visible == (MaxX - MinX), locked in TableUpdateLayout(). May be > WidthRequest to honor minimum width, may be < WidthRequest to honor shrinking columns down in tight space."
 defs["structs"]["ImGuiTableColumn"][2]["name"] = "WidthGiven"
 defs["structs"]["ImGuiTableColumn"][2]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][3] = {}
-defs["structs"]["ImGuiTableColumn"][3]["comment"] = " // Absolute positions"
+defs["structs"]["ImGuiTableColumn"][3]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][3]["comment"]["comments"] = " // Absolute positions"
 defs["structs"]["ImGuiTableColumn"][3]["name"] = "MinX"
 defs["structs"]["ImGuiTableColumn"][3]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][4] = {}
+defs["structs"]["ImGuiTableColumn"][4]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][4]["name"] = "MaxX"
 defs["structs"]["ImGuiTableColumn"][4]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][5] = {}
-defs["structs"]["ImGuiTableColumn"][5]["comment"] = " // Master width absolute value when !(Flags & _WidthStretch). When Stretch this is derived every frame from StretchWeight in TableUpdateLayout()"
+defs["structs"]["ImGuiTableColumn"][5]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][5]["comment"]["comments"] = " // Master width absolute value when !(Flags & _WidthStretch). When Stretch this is derived every frame from StretchWeight in TableUpdateLayout()"
 defs["structs"]["ImGuiTableColumn"][5]["name"] = "WidthRequest"
 defs["structs"]["ImGuiTableColumn"][5]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][6] = {}
-defs["structs"]["ImGuiTableColumn"][6]["comment"] = " // Automatic width"
+defs["structs"]["ImGuiTableColumn"][6]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][6]["comment"]["comments"] = " // Automatic width"
 defs["structs"]["ImGuiTableColumn"][6]["name"] = "WidthAuto"
 defs["structs"]["ImGuiTableColumn"][6]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][7] = {}
-defs["structs"]["ImGuiTableColumn"][7]["comment"] = " // Master width weight when (Flags & _WidthStretch). Often around ~1.0f initially."
+defs["structs"]["ImGuiTableColumn"][7]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][7]["comment"]["comments"] = " // Master width weight when (Flags & _WidthStretch). Often around ~1.0f initially."
 defs["structs"]["ImGuiTableColumn"][7]["name"] = "StretchWeight"
 defs["structs"]["ImGuiTableColumn"][7]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][8] = {}
-defs["structs"]["ImGuiTableColumn"][8]["comment"] = " // Value passed to TableSetupColumn(). For Width it is a content width (_without padding_)."
+defs["structs"]["ImGuiTableColumn"][8]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][8]["comment"]["comments"] = " // Value passed to TableSetupColumn(). For Width it is a content width (_without padding_)."
 defs["structs"]["ImGuiTableColumn"][8]["name"] = "InitStretchWeightOrWidth"
 defs["structs"]["ImGuiTableColumn"][8]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][9] = {}
-defs["structs"]["ImGuiTableColumn"][9]["comment"] = " // Clipping rectangle for the column"
+defs["structs"]["ImGuiTableColumn"][9]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][9]["comment"]["comments"] = " // Clipping rectangle for the column"
 defs["structs"]["ImGuiTableColumn"][9]["name"] = "ClipRect"
 defs["structs"]["ImGuiTableColumn"][9]["type"] = "ImRect"
 defs["structs"]["ImGuiTableColumn"][10] = {}
-defs["structs"]["ImGuiTableColumn"][10]["comment"] = " // Optional, value passed to TableSetupColumn()"
+defs["structs"]["ImGuiTableColumn"][10]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][10]["comment"]["comments"] = " // Optional, value passed to TableSetupColumn()"
 defs["structs"]["ImGuiTableColumn"][10]["name"] = "UserID"
 defs["structs"]["ImGuiTableColumn"][10]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTableColumn"][11] = {}
-defs["structs"]["ImGuiTableColumn"][11]["comment"] = " // Contents region min ~(MinX + CellPaddingX + CellSpacingX1) == cursor start position when entering column"
+defs["structs"]["ImGuiTableColumn"][11]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][11]["comment"]["comments"] = " // Contents region min ~(MinX + CellPaddingX + CellSpacingX1) == cursor start position when entering column"
 defs["structs"]["ImGuiTableColumn"][11]["name"] = "WorkMinX"
 defs["structs"]["ImGuiTableColumn"][11]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][12] = {}
-defs["structs"]["ImGuiTableColumn"][12]["comment"] = " // Contents region max ~(MaxX - CellPaddingX - CellSpacingX2)"
+defs["structs"]["ImGuiTableColumn"][12]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][12]["comment"]["comments"] = " // Contents region max ~(MaxX - CellPaddingX - CellSpacingX2)"
 defs["structs"]["ImGuiTableColumn"][12]["name"] = "WorkMaxX"
 defs["structs"]["ImGuiTableColumn"][12]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][13] = {}
-defs["structs"]["ImGuiTableColumn"][13]["comment"] = " // Current item width for the column, preserved across rows"
+defs["structs"]["ImGuiTableColumn"][13]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][13]["comment"]["comments"] = " // Current item width for the column, preserved across rows"
 defs["structs"]["ImGuiTableColumn"][13]["name"] = "ItemWidth"
 defs["structs"]["ImGuiTableColumn"][13]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][14] = {}
-defs["structs"]["ImGuiTableColumn"][14]["comment"] = " // Contents maximum position for frozen rows (apart from headers), from which we can infer content width."
+defs["structs"]["ImGuiTableColumn"][14]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][14]["comment"]["comments"] = " // Contents maximum position for frozen rows (apart from headers), from which we can infer content width."
 defs["structs"]["ImGuiTableColumn"][14]["name"] = "ContentMaxXFrozen"
 defs["structs"]["ImGuiTableColumn"][14]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][15] = {}
+defs["structs"]["ImGuiTableColumn"][15]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][15]["name"] = "ContentMaxXUnfrozen"
 defs["structs"]["ImGuiTableColumn"][15]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][16] = {}
-defs["structs"]["ImGuiTableColumn"][16]["comment"] = " // Contents maximum position for headers rows (regardless of freezing). TableHeader() automatically softclip itself + report ideal desired size, to avoid creating extraneous draw calls"
+defs["structs"]["ImGuiTableColumn"][16]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][16]["comment"]["comments"] = " // Contents maximum position for headers rows (regardless of freezing). TableHeader() automatically softclip itself + report ideal desired size, to avoid creating extraneous draw calls"
 defs["structs"]["ImGuiTableColumn"][16]["name"] = "ContentMaxXHeadersUsed"
 defs["structs"]["ImGuiTableColumn"][16]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][17] = {}
+defs["structs"]["ImGuiTableColumn"][17]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][17]["name"] = "ContentMaxXHeadersIdeal"
 defs["structs"]["ImGuiTableColumn"][17]["type"] = "float"
 defs["structs"]["ImGuiTableColumn"][18] = {}
-defs["structs"]["ImGuiTableColumn"][18]["comment"] = " // Offset into parent ColumnsNames[]"
+defs["structs"]["ImGuiTableColumn"][18]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][18]["comment"]["comments"] = " // Offset into parent ColumnsNames[]"
 defs["structs"]["ImGuiTableColumn"][18]["name"] = "NameOffset"
 defs["structs"]["ImGuiTableColumn"][18]["type"] = "ImS16"
 defs["structs"]["ImGuiTableColumn"][19] = {}
-defs["structs"]["ImGuiTableColumn"][19]["comment"] = " // Index within Table's IndexToDisplayOrder[] (column may be reordered by users)"
+defs["structs"]["ImGuiTableColumn"][19]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][19]["comment"]["comments"] = " // Index within Table's IndexToDisplayOrder[] (column may be reordered by users)"
 defs["structs"]["ImGuiTableColumn"][19]["name"] = "DisplayOrder"
 defs["structs"]["ImGuiTableColumn"][19]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"][20] = {}
-defs["structs"]["ImGuiTableColumn"][20]["comment"] = " // Index within enabled/visible set (<= IndexToDisplayOrder)"
+defs["structs"]["ImGuiTableColumn"][20]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][20]["comment"]["comments"] = " // Index within enabled/visible set (<= IndexToDisplayOrder)"
 defs["structs"]["ImGuiTableColumn"][20]["name"] = "IndexWithinEnabledSet"
 defs["structs"]["ImGuiTableColumn"][20]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"][21] = {}
-defs["structs"]["ImGuiTableColumn"][21]["comment"] = " // Index of prev enabled/visible column within Columns[], -1 if first enabled/visible column"
+defs["structs"]["ImGuiTableColumn"][21]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][21]["comment"]["comments"] = " // Index of prev enabled/visible column within Columns[], -1 if first enabled/visible column"
 defs["structs"]["ImGuiTableColumn"][21]["name"] = "PrevEnabledColumn"
 defs["structs"]["ImGuiTableColumn"][21]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"][22] = {}
-defs["structs"]["ImGuiTableColumn"][22]["comment"] = " // Index of next enabled/visible column within Columns[], -1 if last enabled/visible column"
+defs["structs"]["ImGuiTableColumn"][22]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][22]["comment"]["comments"] = " // Index of next enabled/visible column within Columns[], -1 if last enabled/visible column"
 defs["structs"]["ImGuiTableColumn"][22]["name"] = "NextEnabledColumn"
 defs["structs"]["ImGuiTableColumn"][22]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"][23] = {}
-defs["structs"]["ImGuiTableColumn"][23]["comment"] = " // Index of this column within sort specs, -1 if not sorting on this column, 0 for single-sort, may be >0 on multi-sort"
+defs["structs"]["ImGuiTableColumn"][23]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][23]["comment"]["comments"] = " // Index of this column within sort specs, -1 if not sorting on this column, 0 for single-sort, may be >0 on multi-sort"
 defs["structs"]["ImGuiTableColumn"][23]["name"] = "SortOrder"
 defs["structs"]["ImGuiTableColumn"][23]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumn"][24] = {}
-defs["structs"]["ImGuiTableColumn"][24]["comment"] = " // Index within DrawSplitter.Channels[]"
+defs["structs"]["ImGuiTableColumn"][24]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][24]["comment"]["comments"] = " // Index within DrawSplitter.Channels[]"
 defs["structs"]["ImGuiTableColumn"][24]["name"] = "DrawChannelCurrent"
 defs["structs"]["ImGuiTableColumn"][24]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTableColumn"][25] = {}
-defs["structs"]["ImGuiTableColumn"][25]["comment"] = " // Draw channels for frozen rows (often headers)"
+defs["structs"]["ImGuiTableColumn"][25]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][25]["comment"]["comments"] = " // Draw channels for frozen rows (often headers)"
 defs["structs"]["ImGuiTableColumn"][25]["name"] = "DrawChannelFrozen"
 defs["structs"]["ImGuiTableColumn"][25]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTableColumn"][26] = {}
-defs["structs"]["ImGuiTableColumn"][26]["comment"] = " // Draw channels for unfrozen rows"
+defs["structs"]["ImGuiTableColumn"][26]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][26]["comment"]["comments"] = " // Draw channels for unfrozen rows"
 defs["structs"]["ImGuiTableColumn"][26]["name"] = "DrawChannelUnfrozen"
 defs["structs"]["ImGuiTableColumn"][26]["type"] = "ImGuiTableDrawChannelIdx"
 defs["structs"]["ImGuiTableColumn"][27] = {}
-defs["structs"]["ImGuiTableColumn"][27]["comment"] = " // IsUserEnabled && (Flags & ImGuiTableColumnFlags_Disabled) == 0"
+defs["structs"]["ImGuiTableColumn"][27]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][27]["comment"]["comments"] = " // IsUserEnabled && (Flags & ImGuiTableColumnFlags_Disabled) == 0"
 defs["structs"]["ImGuiTableColumn"][27]["name"] = "IsEnabled"
 defs["structs"]["ImGuiTableColumn"][27]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][28] = {}
-defs["structs"]["ImGuiTableColumn"][28]["comment"] = " // Is the column not marked Hidden by the user? (unrelated to being off view, e.g. clipped by scrolling)."
+defs["structs"]["ImGuiTableColumn"][28]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][28]["comment"]["comments"] = " // Is the column not marked Hidden by the user? (unrelated to being off view, e.g. clipped by scrolling)."
 defs["structs"]["ImGuiTableColumn"][28]["name"] = "IsUserEnabled"
 defs["structs"]["ImGuiTableColumn"][28]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][29] = {}
+defs["structs"]["ImGuiTableColumn"][29]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][29]["name"] = "IsUserEnabledNextFrame"
 defs["structs"]["ImGuiTableColumn"][29]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][30] = {}
-defs["structs"]["ImGuiTableColumn"][30]["comment"] = " // Is actually in view (e.g. overlapping the host window clipping rectangle, not scrolled)."
+defs["structs"]["ImGuiTableColumn"][30]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][30]["comment"]["comments"] = " // Is actually in view (e.g. overlapping the host window clipping rectangle, not scrolled)."
 defs["structs"]["ImGuiTableColumn"][30]["name"] = "IsVisibleX"
 defs["structs"]["ImGuiTableColumn"][30]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][31] = {}
+defs["structs"]["ImGuiTableColumn"][31]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][31]["name"] = "IsVisibleY"
 defs["structs"]["ImGuiTableColumn"][31]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][32] = {}
-defs["structs"]["ImGuiTableColumn"][32]["comment"] = " // Return value for TableSetColumnIndex() / TableNextColumn(): whether we request user to output contents or not."
+defs["structs"]["ImGuiTableColumn"][32]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][32]["comment"]["comments"] = " // Return value for TableSetColumnIndex() / TableNextColumn(): whether we request user to output contents or not."
 defs["structs"]["ImGuiTableColumn"][32]["name"] = "IsRequestOutput"
 defs["structs"]["ImGuiTableColumn"][32]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][33] = {}
-defs["structs"]["ImGuiTableColumn"][33]["comment"] = " // Do we want item submissions to this column to be completely ignored (no layout will happen)."
+defs["structs"]["ImGuiTableColumn"][33]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][33]["comment"]["comments"] = " // Do we want item submissions to this column to be completely ignored (no layout will happen)."
 defs["structs"]["ImGuiTableColumn"][33]["name"] = "IsSkipItems"
 defs["structs"]["ImGuiTableColumn"][33]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][34] = {}
+defs["structs"]["ImGuiTableColumn"][34]["comment"] = {}
 defs["structs"]["ImGuiTableColumn"][34]["name"] = "IsPreserveWidthAuto"
 defs["structs"]["ImGuiTableColumn"][34]["type"] = "bool"
 defs["structs"]["ImGuiTableColumn"][35] = {}
-defs["structs"]["ImGuiTableColumn"][35]["comment"] = " // ImGuiNavLayer in 1 byte"
+defs["structs"]["ImGuiTableColumn"][35]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][35]["comment"]["comments"] = " // ImGuiNavLayer in 1 byte"
 defs["structs"]["ImGuiTableColumn"][35]["name"] = "NavLayerCurrent"
 defs["structs"]["ImGuiTableColumn"][35]["type"] = "ImS8"
 defs["structs"]["ImGuiTableColumn"][36] = {}
-defs["structs"]["ImGuiTableColumn"][36]["comment"] = " // Queue of 8 values for the next 8 frames to request auto-fit"
+defs["structs"]["ImGuiTableColumn"][36]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][36]["comment"]["comments"] = " // Queue of 8 values for the next 8 frames to request auto-fit"
 defs["structs"]["ImGuiTableColumn"][36]["name"] = "AutoFitQueue"
 defs["structs"]["ImGuiTableColumn"][36]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumn"][37] = {}
-defs["structs"]["ImGuiTableColumn"][37]["comment"] = " // Queue of 8 values for the next 8 frames to disable Clipped/SkipItem"
+defs["structs"]["ImGuiTableColumn"][37]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][37]["comment"]["comments"] = " // Queue of 8 values for the next 8 frames to disable Clipped/SkipItem"
 defs["structs"]["ImGuiTableColumn"][37]["name"] = "CannotSkipItemsQueue"
 defs["structs"]["ImGuiTableColumn"][37]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumn"][38] = {}
 defs["structs"]["ImGuiTableColumn"][38]["bitfield"] = "2"
-defs["structs"]["ImGuiTableColumn"][38]["comment"] = " // ImGuiSortDirection_Ascending or ImGuiSortDirection_Descending"
+defs["structs"]["ImGuiTableColumn"][38]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][38]["comment"]["comments"] = " // ImGuiSortDirection_Ascending or ImGuiSortDirection_Descending"
 defs["structs"]["ImGuiTableColumn"][38]["name"] = "SortDirection"
 defs["structs"]["ImGuiTableColumn"][38]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumn"][39] = {}
 defs["structs"]["ImGuiTableColumn"][39]["bitfield"] = "2"
-defs["structs"]["ImGuiTableColumn"][39]["comment"] = " // Number of available sort directions (0 to 3)"
+defs["structs"]["ImGuiTableColumn"][39]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][39]["comment"]["comments"] = " // Number of available sort directions (0 to 3)"
 defs["structs"]["ImGuiTableColumn"][39]["name"] = "SortDirectionsAvailCount"
 defs["structs"]["ImGuiTableColumn"][39]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumn"][40] = {}
 defs["structs"]["ImGuiTableColumn"][40]["bitfield"] = "4"
-defs["structs"]["ImGuiTableColumn"][40]["comment"] = " // Mask of available sort directions (1-bit each)"
+defs["structs"]["ImGuiTableColumn"][40]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][40]["comment"]["comments"] = " // Mask of available sort directions (1-bit each)"
 defs["structs"]["ImGuiTableColumn"][40]["name"] = "SortDirectionsAvailMask"
 defs["structs"]["ImGuiTableColumn"][40]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumn"][41] = {}
-defs["structs"]["ImGuiTableColumn"][41]["comment"] = " // Ordered of available sort directions (2-bits each)"
+defs["structs"]["ImGuiTableColumn"][41]["comment"] = {}
+defs["structs"]["ImGuiTableColumn"][41]["comment"]["comments"] = " // Ordered of available sort directions (2-bits each)"
 defs["structs"]["ImGuiTableColumn"][41]["name"] = "SortDirectionsAvailList"
 defs["structs"]["ImGuiTableColumn"][41]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumnSettings"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][1] = {}
+defs["structs"]["ImGuiTableColumnSettings"][1]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][1]["name"] = "WidthOrWeight"
 defs["structs"]["ImGuiTableColumnSettings"][1]["type"] = "float"
 defs["structs"]["ImGuiTableColumnSettings"][2] = {}
+defs["structs"]["ImGuiTableColumnSettings"][2]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][2]["name"] = "UserID"
 defs["structs"]["ImGuiTableColumnSettings"][2]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTableColumnSettings"][3] = {}
+defs["structs"]["ImGuiTableColumnSettings"][3]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][3]["name"] = "Index"
 defs["structs"]["ImGuiTableColumnSettings"][3]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumnSettings"][4] = {}
+defs["structs"]["ImGuiTableColumnSettings"][4]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][4]["name"] = "DisplayOrder"
 defs["structs"]["ImGuiTableColumnSettings"][4]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumnSettings"][5] = {}
+defs["structs"]["ImGuiTableColumnSettings"][5]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][5]["name"] = "SortOrder"
 defs["structs"]["ImGuiTableColumnSettings"][5]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableColumnSettings"][6] = {}
 defs["structs"]["ImGuiTableColumnSettings"][6]["bitfield"] = "2"
+defs["structs"]["ImGuiTableColumnSettings"][6]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][6]["name"] = "SortDirection"
 defs["structs"]["ImGuiTableColumnSettings"][6]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumnSettings"][7] = {}
 defs["structs"]["ImGuiTableColumnSettings"][7]["bitfield"] = "1"
-defs["structs"]["ImGuiTableColumnSettings"][7]["comment"] = " // \"Visible\" in ini file"
+defs["structs"]["ImGuiTableColumnSettings"][7]["comment"] = {}
+defs["structs"]["ImGuiTableColumnSettings"][7]["comment"]["comments"] = " // \"Visible\" in ini file"
 defs["structs"]["ImGuiTableColumnSettings"][7]["name"] = "IsEnabled"
 defs["structs"]["ImGuiTableColumnSettings"][7]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumnSettings"][8] = {}
 defs["structs"]["ImGuiTableColumnSettings"][8]["bitfield"] = "1"
+defs["structs"]["ImGuiTableColumnSettings"][8]["comment"] = {}
 defs["structs"]["ImGuiTableColumnSettings"][8]["name"] = "IsStretch"
 defs["structs"]["ImGuiTableColumnSettings"][8]["type"] = "ImU8"
 defs["structs"]["ImGuiTableColumnSortSpecs"] = {}
 defs["structs"]["ImGuiTableColumnSortSpecs"][1] = {}
-defs["structs"]["ImGuiTableColumnSortSpecs"][1]["comment"] = " // User id of the column (if specified by a TableSetupColumn() call)"
+defs["structs"]["ImGuiTableColumnSortSpecs"][1]["comment"] = {}
+defs["structs"]["ImGuiTableColumnSortSpecs"][1]["comment"]["comments"] = " // User id of the column (if specified by a TableSetupColumn() call)"
 defs["structs"]["ImGuiTableColumnSortSpecs"][1]["name"] = "ColumnUserID"
 defs["structs"]["ImGuiTableColumnSortSpecs"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTableColumnSortSpecs"][2] = {}
-defs["structs"]["ImGuiTableColumnSortSpecs"][2]["comment"] = " // Index of the column"
+defs["structs"]["ImGuiTableColumnSortSpecs"][2]["comment"] = {}
+defs["structs"]["ImGuiTableColumnSortSpecs"][2]["comment"]["comments"] = " // Index of the column"
 defs["structs"]["ImGuiTableColumnSortSpecs"][2]["name"] = "ColumnIndex"
 defs["structs"]["ImGuiTableColumnSortSpecs"][2]["type"] = "ImS16"
 defs["structs"]["ImGuiTableColumnSortSpecs"][3] = {}
-defs["structs"]["ImGuiTableColumnSortSpecs"][3]["comment"] = " // Index within parent ImGuiTableSortSpecs (always stored in order starting from 0, tables sorted on a single criteria will always have a 0 here)"
+defs["structs"]["ImGuiTableColumnSortSpecs"][3]["comment"] = {}
+defs["structs"]["ImGuiTableColumnSortSpecs"][3]["comment"]["comments"] = " // Index within parent ImGuiTableSortSpecs (always stored in order starting from 0, tables sorted on a single criteria will always have a 0 here)"
 defs["structs"]["ImGuiTableColumnSortSpecs"][3]["name"] = "SortOrder"
 defs["structs"]["ImGuiTableColumnSortSpecs"][3]["type"] = "ImS16"
 defs["structs"]["ImGuiTableColumnSortSpecs"][4] = {}
 defs["structs"]["ImGuiTableColumnSortSpecs"][4]["bitfield"] = "8"
-defs["structs"]["ImGuiTableColumnSortSpecs"][4]["comment"] = " // ImGuiSortDirection_Ascending or ImGuiSortDirection_Descending (you can use this or SortSign, whichever is more convenient for your sort function)"
+defs["structs"]["ImGuiTableColumnSortSpecs"][4]["comment"] = {}
+defs["structs"]["ImGuiTableColumnSortSpecs"][4]["comment"]["comments"] = " // ImGuiSortDirection_Ascending or ImGuiSortDirection_Descending (you can use this or SortSign, whichever is more convenient for your sort function)"
 defs["structs"]["ImGuiTableColumnSortSpecs"][4]["name"] = "SortDirection"
 defs["structs"]["ImGuiTableColumnSortSpecs"][4]["type"] = "ImGuiSortDirection"
 defs["structs"]["ImGuiTableInstanceData"] = {}
 defs["structs"]["ImGuiTableInstanceData"][1] = {}
-defs["structs"]["ImGuiTableInstanceData"][1]["comment"] = " // Outer height from last frame // FIXME: multi-instance issue (#3955)"
+defs["structs"]["ImGuiTableInstanceData"][1]["comment"] = {}
+defs["structs"]["ImGuiTableInstanceData"][1]["comment"]["comments"] = " // Outer height from last frame // FIXME: multi-instance issue (#3955)"
 defs["structs"]["ImGuiTableInstanceData"][1]["name"] = "LastOuterHeight"
 defs["structs"]["ImGuiTableInstanceData"][1]["type"] = "float"
 defs["structs"]["ImGuiTableInstanceData"][2] = {}
-defs["structs"]["ImGuiTableInstanceData"][2]["comment"] = " // Height of first row from last frame // FIXME: possible multi-instance issue?"
+defs["structs"]["ImGuiTableInstanceData"][2]["comment"] = {}
+defs["structs"]["ImGuiTableInstanceData"][2]["comment"]["comments"] = " // Height of first row from last frame // FIXME: possible multi-instance issue?"
 defs["structs"]["ImGuiTableInstanceData"][2]["name"] = "LastFirstRowHeight"
 defs["structs"]["ImGuiTableInstanceData"][2]["type"] = "float"
 defs["structs"]["ImGuiTableSettings"] = {}
 defs["structs"]["ImGuiTableSettings"][1] = {}
-defs["structs"]["ImGuiTableSettings"][1]["comment"] = " // Set to 0 to invalidate/delete the setting"
+defs["structs"]["ImGuiTableSettings"][1]["comment"] = {}
+defs["structs"]["ImGuiTableSettings"][1]["comment"]["comments"] = " // Set to 0 to invalidate/delete the setting"
 defs["structs"]["ImGuiTableSettings"][1]["name"] = "ID"
 defs["structs"]["ImGuiTableSettings"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiTableSettings"][2] = {}
-defs["structs"]["ImGuiTableSettings"][2]["comment"] = " // Indicate data we want to save using the Resizable/Reorderable/Sortable/Hideable flags (could be using its own flags..)"
+defs["structs"]["ImGuiTableSettings"][2]["comment"] = {}
+defs["structs"]["ImGuiTableSettings"][2]["comment"]["comments"] = " // Indicate data we want to save using the Resizable/Reorderable/Sortable/Hideable flags (could be using its own flags..)"
 defs["structs"]["ImGuiTableSettings"][2]["name"] = "SaveFlags"
 defs["structs"]["ImGuiTableSettings"][2]["type"] = "ImGuiTableFlags"
 defs["structs"]["ImGuiTableSettings"][3] = {}
-defs["structs"]["ImGuiTableSettings"][3]["comment"] = " // Reference scale to be able to rescale columns on font/dpi changes."
+defs["structs"]["ImGuiTableSettings"][3]["comment"] = {}
+defs["structs"]["ImGuiTableSettings"][3]["comment"]["comments"] = " // Reference scale to be able to rescale columns on font/dpi changes."
 defs["structs"]["ImGuiTableSettings"][3]["name"] = "RefScale"
 defs["structs"]["ImGuiTableSettings"][3]["type"] = "float"
 defs["structs"]["ImGuiTableSettings"][4] = {}
+defs["structs"]["ImGuiTableSettings"][4]["comment"] = {}
 defs["structs"]["ImGuiTableSettings"][4]["name"] = "ColumnsCount"
 defs["structs"]["ImGuiTableSettings"][4]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableSettings"][5] = {}
-defs["structs"]["ImGuiTableSettings"][5]["comment"] = " // Maximum number of columns this settings instance can store, we can recycle a settings instance with lower number of columns but not higher"
+defs["structs"]["ImGuiTableSettings"][5]["comment"] = {}
+defs["structs"]["ImGuiTableSettings"][5]["comment"]["comments"] = " // Maximum number of columns this settings instance can store, we can recycle a settings instance with lower number of columns but not higher"
 defs["structs"]["ImGuiTableSettings"][5]["name"] = "ColumnsCountMax"
 defs["structs"]["ImGuiTableSettings"][5]["type"] = "ImGuiTableColumnIdx"
 defs["structs"]["ImGuiTableSettings"][6] = {}
-defs["structs"]["ImGuiTableSettings"][6]["comment"] = " // Set when loaded from .ini data (to enable merging/loading .ini data into an already running context)"
+defs["structs"]["ImGuiTableSettings"][6]["comment"] = {}
+defs["structs"]["ImGuiTableSettings"][6]["comment"]["comments"] = " // Set when loaded from .ini data (to enable merging/loading .ini data into an already running context)"
 defs["structs"]["ImGuiTableSettings"][6]["name"] = "WantApply"
 defs["structs"]["ImGuiTableSettings"][6]["type"] = "bool"
 defs["structs"]["ImGuiTableSortSpecs"] = {}
 defs["structs"]["ImGuiTableSortSpecs"][1] = {}
-defs["structs"]["ImGuiTableSortSpecs"][1]["comment"] = " // Pointer to sort spec array."
+defs["structs"]["ImGuiTableSortSpecs"][1]["comment"] = {}
+defs["structs"]["ImGuiTableSortSpecs"][1]["comment"]["comments"] = " // Pointer to sort spec array."
 defs["structs"]["ImGuiTableSortSpecs"][1]["name"] = "Specs"
 defs["structs"]["ImGuiTableSortSpecs"][1]["type"] = "const ImGuiTableColumnSortSpecs*"
 defs["structs"]["ImGuiTableSortSpecs"][2] = {}
-defs["structs"]["ImGuiTableSortSpecs"][2]["comment"] = " // Sort spec count. Most often 1. May be > 1 when ImGuiTableFlags_SortMulti is enabled. May be == 0 when ImGuiTableFlags_SortTristate is enabled."
+defs["structs"]["ImGuiTableSortSpecs"][2]["comment"] = {}
+defs["structs"]["ImGuiTableSortSpecs"][2]["comment"]["comments"] = " // Sort spec count. Most often 1. May be > 1 when ImGuiTableFlags_SortMulti is enabled. May be == 0 when ImGuiTableFlags_SortTristate is enabled."
 defs["structs"]["ImGuiTableSortSpecs"][2]["name"] = "SpecsCount"
 defs["structs"]["ImGuiTableSortSpecs"][2]["type"] = "int"
 defs["structs"]["ImGuiTableSortSpecs"][3] = {}
-defs["structs"]["ImGuiTableSortSpecs"][3]["comment"] = " // Set to true when specs have changed since last time! Use this to sort again, then clear the flag."
+defs["structs"]["ImGuiTableSortSpecs"][3]["comment"] = {}
+defs["structs"]["ImGuiTableSortSpecs"][3]["comment"]["comments"] = " // Set to true when specs have changed since last time! Use this to sort again, then clear the flag."
 defs["structs"]["ImGuiTableSortSpecs"][3]["name"] = "SpecsDirty"
 defs["structs"]["ImGuiTableSortSpecs"][3]["type"] = "bool"
 defs["structs"]["ImGuiTableTempData"] = {}
 defs["structs"]["ImGuiTableTempData"][1] = {}
-defs["structs"]["ImGuiTableTempData"][1]["comment"] = " // Index in g.Tables.Buf[] pool"
+defs["structs"]["ImGuiTableTempData"][1]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][1]["comment"]["comments"] = " // Index in g.Tables.Buf[] pool"
 defs["structs"]["ImGuiTableTempData"][1]["name"] = "TableIndex"
 defs["structs"]["ImGuiTableTempData"][1]["type"] = "int"
 defs["structs"]["ImGuiTableTempData"][2] = {}
-defs["structs"]["ImGuiTableTempData"][2]["comment"] = " // Last timestamp this structure was used"
+defs["structs"]["ImGuiTableTempData"][2]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][2]["comment"]["comments"] = " // Last timestamp this structure was used"
 defs["structs"]["ImGuiTableTempData"][2]["name"] = "LastTimeActive"
 defs["structs"]["ImGuiTableTempData"][2]["type"] = "float"
 defs["structs"]["ImGuiTableTempData"][3] = {}
-defs["structs"]["ImGuiTableTempData"][3]["comment"] = " // outer_size.x passed to BeginTable()"
+defs["structs"]["ImGuiTableTempData"][3]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][3]["comment"]["comments"] = " // outer_size.x passed to BeginTable()"
 defs["structs"]["ImGuiTableTempData"][3]["name"] = "UserOuterSize"
 defs["structs"]["ImGuiTableTempData"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiTableTempData"][4] = {}
+defs["structs"]["ImGuiTableTempData"][4]["comment"] = {}
 defs["structs"]["ImGuiTableTempData"][4]["name"] = "DrawSplitter"
 defs["structs"]["ImGuiTableTempData"][4]["type"] = "ImDrawListSplitter"
 defs["structs"]["ImGuiTableTempData"][5] = {}
-defs["structs"]["ImGuiTableTempData"][5]["comment"] = " // Backup of InnerWindow->WorkRect at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][5]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][5]["comment"]["comments"] = " // Backup of InnerWindow->WorkRect at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][5]["name"] = "HostBackupWorkRect"
 defs["structs"]["ImGuiTableTempData"][5]["type"] = "ImRect"
 defs["structs"]["ImGuiTableTempData"][6] = {}
-defs["structs"]["ImGuiTableTempData"][6]["comment"] = " // Backup of InnerWindow->ParentWorkRect at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][6]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][6]["comment"]["comments"] = " // Backup of InnerWindow->ParentWorkRect at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][6]["name"] = "HostBackupParentWorkRect"
 defs["structs"]["ImGuiTableTempData"][6]["type"] = "ImRect"
 defs["structs"]["ImGuiTableTempData"][7] = {}
-defs["structs"]["ImGuiTableTempData"][7]["comment"] = " // Backup of InnerWindow->DC.PrevLineSize at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][7]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][7]["comment"]["comments"] = " // Backup of InnerWindow->DC.PrevLineSize at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][7]["name"] = "HostBackupPrevLineSize"
 defs["structs"]["ImGuiTableTempData"][7]["type"] = "ImVec2"
 defs["structs"]["ImGuiTableTempData"][8] = {}
-defs["structs"]["ImGuiTableTempData"][8]["comment"] = " // Backup of InnerWindow->DC.CurrLineSize at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][8]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][8]["comment"]["comments"] = " // Backup of InnerWindow->DC.CurrLineSize at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][8]["name"] = "HostBackupCurrLineSize"
 defs["structs"]["ImGuiTableTempData"][8]["type"] = "ImVec2"
 defs["structs"]["ImGuiTableTempData"][9] = {}
-defs["structs"]["ImGuiTableTempData"][9]["comment"] = " // Backup of InnerWindow->DC.CursorMaxPos at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][9]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][9]["comment"]["comments"] = " // Backup of InnerWindow->DC.CursorMaxPos at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][9]["name"] = "HostBackupCursorMaxPos"
 defs["structs"]["ImGuiTableTempData"][9]["type"] = "ImVec2"
 defs["structs"]["ImGuiTableTempData"][10] = {}
-defs["structs"]["ImGuiTableTempData"][10]["comment"] = " // Backup of OuterWindow->DC.ColumnsOffset at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][10]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][10]["comment"]["comments"] = " // Backup of OuterWindow->DC.ColumnsOffset at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][10]["name"] = "HostBackupColumnsOffset"
 defs["structs"]["ImGuiTableTempData"][10]["type"] = "ImVec1"
 defs["structs"]["ImGuiTableTempData"][11] = {}
-defs["structs"]["ImGuiTableTempData"][11]["comment"] = " // Backup of OuterWindow->DC.ItemWidth at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][11]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][11]["comment"]["comments"] = " // Backup of OuterWindow->DC.ItemWidth at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][11]["name"] = "HostBackupItemWidth"
 defs["structs"]["ImGuiTableTempData"][11]["type"] = "float"
 defs["structs"]["ImGuiTableTempData"][12] = {}
-defs["structs"]["ImGuiTableTempData"][12]["comment"] = "//Backup of OuterWindow->DC.ItemWidthStack.Size at the end of BeginTable()"
+defs["structs"]["ImGuiTableTempData"][12]["comment"] = {}
+defs["structs"]["ImGuiTableTempData"][12]["comment"]["comments"] = "//Backup of OuterWindow->DC.ItemWidthStack.Size at the end of BeginTable()"
 defs["structs"]["ImGuiTableTempData"][12]["name"] = "HostBackupItemWidthStackSize"
 defs["structs"]["ImGuiTableTempData"][12]["type"] = "int"
 defs["structs"]["ImGuiTextBuffer"] = {}
 defs["structs"]["ImGuiTextBuffer"][1] = {}
+defs["structs"]["ImGuiTextBuffer"][1]["comment"] = {}
 defs["structs"]["ImGuiTextBuffer"][1]["name"] = "Buf"
 defs["structs"]["ImGuiTextBuffer"][1]["template_type"] = "char"
 defs["structs"]["ImGuiTextBuffer"][1]["type"] = "ImVector_char"
 defs["structs"]["ImGuiTextFilter"] = {}
 defs["structs"]["ImGuiTextFilter"][1] = {}
+defs["structs"]["ImGuiTextFilter"][1]["comment"] = {}
 defs["structs"]["ImGuiTextFilter"][1]["name"] = "InputBuf[256]"
 defs["structs"]["ImGuiTextFilter"][1]["size"] = 256
 defs["structs"]["ImGuiTextFilter"][1]["type"] = "char"
 defs["structs"]["ImGuiTextFilter"][2] = {}
+defs["structs"]["ImGuiTextFilter"][2]["comment"] = {}
 defs["structs"]["ImGuiTextFilter"][2]["name"] = "Filters"
 defs["structs"]["ImGuiTextFilter"][2]["template_type"] = "ImGuiTextRange"
 defs["structs"]["ImGuiTextFilter"][2]["type"] = "ImVector_ImGuiTextRange"
 defs["structs"]["ImGuiTextFilter"][3] = {}
+defs["structs"]["ImGuiTextFilter"][3]["comment"] = {}
 defs["structs"]["ImGuiTextFilter"][3]["name"] = "CountGrep"
 defs["structs"]["ImGuiTextFilter"][3]["type"] = "int"
 defs["structs"]["ImGuiTextRange"] = {}
 defs["structs"]["ImGuiTextRange"][1] = {}
+defs["structs"]["ImGuiTextRange"][1]["comment"] = {}
 defs["structs"]["ImGuiTextRange"][1]["name"] = "b"
 defs["structs"]["ImGuiTextRange"][1]["type"] = "const char*"
 defs["structs"]["ImGuiTextRange"][2] = {}
+defs["structs"]["ImGuiTextRange"][2]["comment"] = {}
 defs["structs"]["ImGuiTextRange"][2]["name"] = "e"
 defs["structs"]["ImGuiTextRange"][2]["type"] = "const char*"
 defs["structs"]["ImGuiViewport"] = {}
 defs["structs"]["ImGuiViewport"][1] = {}
-defs["structs"]["ImGuiViewport"][1]["comment"] = " // Unique identifier for the viewport"
+defs["structs"]["ImGuiViewport"][1]["comment"] = {}
+defs["structs"]["ImGuiViewport"][1]["comment"]["comments"] = " // Unique identifier for the viewport"
 defs["structs"]["ImGuiViewport"][1]["name"] = "ID"
 defs["structs"]["ImGuiViewport"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiViewport"][2] = {}
-defs["structs"]["ImGuiViewport"][2]["comment"] = " // See ImGuiViewportFlags_"
+defs["structs"]["ImGuiViewport"][2]["comment"] = {}
+defs["structs"]["ImGuiViewport"][2]["comment"]["comments"] = " // See ImGuiViewportFlags_"
 defs["structs"]["ImGuiViewport"][2]["name"] = "Flags"
 defs["structs"]["ImGuiViewport"][2]["type"] = "ImGuiViewportFlags"
 defs["structs"]["ImGuiViewport"][3] = {}
-defs["structs"]["ImGuiViewport"][3]["comment"] = " // Main Area: Position of the viewport (Dear ImGui coordinates are the same as OS desktop/native coordinates)"
+defs["structs"]["ImGuiViewport"][3]["comment"] = {}
+defs["structs"]["ImGuiViewport"][3]["comment"]["comments"] = " // Main Area: Position of the viewport (Dear ImGui coordinates are the same as OS desktop/native coordinates)"
 defs["structs"]["ImGuiViewport"][3]["name"] = "Pos"
 defs["structs"]["ImGuiViewport"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewport"][4] = {}
-defs["structs"]["ImGuiViewport"][4]["comment"] = " // Main Area: Size of the viewport."
+defs["structs"]["ImGuiViewport"][4]["comment"] = {}
+defs["structs"]["ImGuiViewport"][4]["comment"]["comments"] = " // Main Area: Size of the viewport."
 defs["structs"]["ImGuiViewport"][4]["name"] = "Size"
 defs["structs"]["ImGuiViewport"][4]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewport"][5] = {}
-defs["structs"]["ImGuiViewport"][5]["comment"] = " // Work Area: Position of the viewport minus task bars, menus bars, status bars (>= Pos)"
+defs["structs"]["ImGuiViewport"][5]["comment"] = {}
+defs["structs"]["ImGuiViewport"][5]["comment"]["comments"] = " // Work Area: Position of the viewport minus task bars, menus bars, status bars (>= Pos)"
 defs["structs"]["ImGuiViewport"][5]["name"] = "WorkPos"
 defs["structs"]["ImGuiViewport"][5]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewport"][6] = {}
-defs["structs"]["ImGuiViewport"][6]["comment"] = " // Work Area: Size of the viewport minus task bars, menu bars, status bars (<= Size)"
+defs["structs"]["ImGuiViewport"][6]["comment"] = {}
+defs["structs"]["ImGuiViewport"][6]["comment"]["comments"] = " // Work Area: Size of the viewport minus task bars, menu bars, status bars (<= Size)"
 defs["structs"]["ImGuiViewport"][6]["name"] = "WorkSize"
 defs["structs"]["ImGuiViewport"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewport"][7] = {}
-defs["structs"]["ImGuiViewport"][7]["comment"] = " // 1.0f = 96 DPI = No extra scale."
+defs["structs"]["ImGuiViewport"][7]["comment"] = {}
+defs["structs"]["ImGuiViewport"][7]["comment"]["comments"] = " // 1.0f = 96 DPI = No extra scale."
 defs["structs"]["ImGuiViewport"][7]["name"] = "DpiScale"
 defs["structs"]["ImGuiViewport"][7]["type"] = "float"
 defs["structs"]["ImGuiViewport"][8] = {}
-defs["structs"]["ImGuiViewport"][8]["comment"] = " // (Advanced) 0: no parent. Instruct the platform backend to setup a parent/child relationship between platform windows."
+defs["structs"]["ImGuiViewport"][8]["comment"] = {}
+defs["structs"]["ImGuiViewport"][8]["comment"]["comments"] = " // (Advanced) 0: no parent. Instruct the platform backend to setup a parent/child relationship between platform windows."
 defs["structs"]["ImGuiViewport"][8]["name"] = "ParentViewportId"
 defs["structs"]["ImGuiViewport"][8]["type"] = "ImGuiID"
 defs["structs"]["ImGuiViewport"][9] = {}
-defs["structs"]["ImGuiViewport"][9]["comment"] = " // The ImDrawData corresponding to this viewport. Valid after Render() and until the next call to NewFrame()."
+defs["structs"]["ImGuiViewport"][9]["comment"] = {}
+defs["structs"]["ImGuiViewport"][9]["comment"]["comments"] = " // The ImDrawData corresponding to this viewport. Valid after Render() and until the next call to NewFrame()."
 defs["structs"]["ImGuiViewport"][9]["name"] = "DrawData"
 defs["structs"]["ImGuiViewport"][9]["type"] = "ImDrawData*"
 defs["structs"]["ImGuiViewport"][10] = {}
-defs["structs"]["ImGuiViewport"][10]["comment"] = "    // Platform/Backend Dependent Data\
+defs["structs"]["ImGuiViewport"][10]["comment"] = {}
+defs["structs"]["ImGuiViewport"][10]["comment"]["comments"] = " // void* to hold custom data structure for the renderer (e.g. swap chain, framebuffers etc.). generally set by your Renderer_CreateWindow function."
+defs["structs"]["ImGuiViewport"][10]["comment"]["prevcomments"] = "\
+    // Platform/Backend Dependent Data\
     // Our design separate the Renderer and Platform backends to facilitate combining default backends with each others.\
     // When our create your own backend for a custom engine, it is possible that both Renderer and Platform will be handled\
     // by the same system and you may not need to use all the UserData/Handle fields.\
-    // The library never uses those fields, they are merely storage to facilitate backend implementation. // void* to hold custom data structure for the renderer (e.g. swap chain, framebuffers etc.). generally set by your Renderer_CreateWindow function."
+    // The library never uses those fields, they are merely storage to facilitate backend implementation."
 defs["structs"]["ImGuiViewport"][10]["name"] = "RendererUserData"
 defs["structs"]["ImGuiViewport"][10]["type"] = "void*"
 defs["structs"]["ImGuiViewport"][11] = {}
-defs["structs"]["ImGuiViewport"][11]["comment"] = " // void* to hold custom data structure for the OS / platform (e.g. windowing info, render context). generally set by your Platform_CreateWindow function."
+defs["structs"]["ImGuiViewport"][11]["comment"] = {}
+defs["structs"]["ImGuiViewport"][11]["comment"]["comments"] = " // void* to hold custom data structure for the OS / platform (e.g. windowing info, render context). generally set by your Platform_CreateWindow function."
 defs["structs"]["ImGuiViewport"][11]["name"] = "PlatformUserData"
 defs["structs"]["ImGuiViewport"][11]["type"] = "void*"
 defs["structs"]["ImGuiViewport"][12] = {}
-defs["structs"]["ImGuiViewport"][12]["comment"] = " // void* for FindViewportByPlatformHandle(). (e.g. suggested to use natural platform handle such as HWND, GLFWWindow*, SDL_Window*)"
+defs["structs"]["ImGuiViewport"][12]["comment"] = {}
+defs["structs"]["ImGuiViewport"][12]["comment"]["comments"] = " // void* for FindViewportByPlatformHandle(). (e.g. suggested to use natural platform handle such as HWND, GLFWWindow*, SDL_Window*)"
 defs["structs"]["ImGuiViewport"][12]["name"] = "PlatformHandle"
 defs["structs"]["ImGuiViewport"][12]["type"] = "void*"
 defs["structs"]["ImGuiViewport"][13] = {}
-defs["structs"]["ImGuiViewport"][13]["comment"] = " // void* to hold lower-level, platform-native window handle (under Win32 this is expected to be a HWND, unused for other platforms), when using an abstraction layer like GLFW or SDL (where PlatformHandle would be a SDL_Window*)"
+defs["structs"]["ImGuiViewport"][13]["comment"] = {}
+defs["structs"]["ImGuiViewport"][13]["comment"]["comments"] = " // void* to hold lower-level, platform-native window handle (under Win32 this is expected to be a HWND, unused for other platforms), when using an abstraction layer like GLFW or SDL (where PlatformHandle would be a SDL_Window*)"
 defs["structs"]["ImGuiViewport"][13]["name"] = "PlatformHandleRaw"
 defs["structs"]["ImGuiViewport"][13]["type"] = "void*"
 defs["structs"]["ImGuiViewport"][14] = {}
-defs["structs"]["ImGuiViewport"][14]["comment"] = " // Platform window requested move (e.g. window was moved by the OS / host window manager, authoritative position will be OS window position)"
+defs["structs"]["ImGuiViewport"][14]["comment"] = {}
+defs["structs"]["ImGuiViewport"][14]["comment"]["comments"] = " // Platform window requested move (e.g. window was moved by the OS / host window manager, authoritative position will be OS window position)"
 defs["structs"]["ImGuiViewport"][14]["name"] = "PlatformRequestMove"
 defs["structs"]["ImGuiViewport"][14]["type"] = "bool"
 defs["structs"]["ImGuiViewport"][15] = {}
-defs["structs"]["ImGuiViewport"][15]["comment"] = " // Platform window requested resize (e.g. window was resized by the OS / host window manager, authoritative size will be OS window size)"
+defs["structs"]["ImGuiViewport"][15]["comment"] = {}
+defs["structs"]["ImGuiViewport"][15]["comment"]["comments"] = " // Platform window requested resize (e.g. window was resized by the OS / host window manager, authoritative size will be OS window size)"
 defs["structs"]["ImGuiViewport"][15]["name"] = "PlatformRequestResize"
 defs["structs"]["ImGuiViewport"][15]["type"] = "bool"
 defs["structs"]["ImGuiViewport"][16] = {}
-defs["structs"]["ImGuiViewport"][16]["comment"] = " // Platform window requested closure (e.g. window was moved by the OS / host window manager, e.g. pressing ALT-F4)"
+defs["structs"]["ImGuiViewport"][16]["comment"] = {}
+defs["structs"]["ImGuiViewport"][16]["comment"]["comments"] = " // Platform window requested closure (e.g. window was moved by the OS / host window manager, e.g. pressing ALT-F4)"
 defs["structs"]["ImGuiViewport"][16]["name"] = "PlatformRequestClose"
 defs["structs"]["ImGuiViewport"][16]["type"] = "bool"
 defs["structs"]["ImGuiViewportP"] = {}
@@ -8699,771 +10452,979 @@ defs["structs"]["ImGuiViewportP"][1] = {}
 defs["structs"]["ImGuiViewportP"][1]["name"] = "_ImGuiViewport"
 defs["structs"]["ImGuiViewportP"][1]["type"] = "ImGuiViewport"
 defs["structs"]["ImGuiViewportP"][2] = {}
+defs["structs"]["ImGuiViewportP"][2]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][2]["name"] = "Idx"
 defs["structs"]["ImGuiViewportP"][2]["type"] = "int"
 defs["structs"]["ImGuiViewportP"][3] = {}
-defs["structs"]["ImGuiViewportP"][3]["comment"] = " // Last frame number this viewport was activated by a window"
+defs["structs"]["ImGuiViewportP"][3]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][3]["comment"]["comments"] = " // Last frame number this viewport was activated by a window"
 defs["structs"]["ImGuiViewportP"][3]["name"] = "LastFrameActive"
 defs["structs"]["ImGuiViewportP"][3]["type"] = "int"
 defs["structs"]["ImGuiViewportP"][4] = {}
-defs["structs"]["ImGuiViewportP"][4]["comment"] = "// Last stamp number from when a window hosted by this viewport was made front-most (by comparing this value between two viewport we have an implicit viewport z-order"
+defs["structs"]["ImGuiViewportP"][4]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][4]["comment"]["comments"] = "// Last stamp number from when a window hosted by this viewport was made front-most (by comparing this value between two viewport we have an implicit viewport z-order"
 defs["structs"]["ImGuiViewportP"][4]["name"] = "LastFrontMostStampCount"
 defs["structs"]["ImGuiViewportP"][4]["type"] = "int"
 defs["structs"]["ImGuiViewportP"][5] = {}
+defs["structs"]["ImGuiViewportP"][5]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][5]["name"] = "LastNameHash"
 defs["structs"]["ImGuiViewportP"][5]["type"] = "ImGuiID"
 defs["structs"]["ImGuiViewportP"][6] = {}
+defs["structs"]["ImGuiViewportP"][6]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][6]["name"] = "LastPos"
 defs["structs"]["ImGuiViewportP"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][7] = {}
-defs["structs"]["ImGuiViewportP"][7]["comment"] = " // Window opacity (when dragging dockable windows/viewports we make them transparent)"
+defs["structs"]["ImGuiViewportP"][7]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][7]["comment"]["comments"] = " // Window opacity (when dragging dockable windows/viewports we make them transparent)"
 defs["structs"]["ImGuiViewportP"][7]["name"] = "Alpha"
 defs["structs"]["ImGuiViewportP"][7]["type"] = "float"
 defs["structs"]["ImGuiViewportP"][8] = {}
+defs["structs"]["ImGuiViewportP"][8]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][8]["name"] = "LastAlpha"
 defs["structs"]["ImGuiViewportP"][8]["type"] = "float"
 defs["structs"]["ImGuiViewportP"][9] = {}
+defs["structs"]["ImGuiViewportP"][9]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][9]["name"] = "PlatformMonitor"
 defs["structs"]["ImGuiViewportP"][9]["type"] = "short"
 defs["structs"]["ImGuiViewportP"][10] = {}
+defs["structs"]["ImGuiViewportP"][10]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][10]["name"] = "PlatformWindowCreated"
 defs["structs"]["ImGuiViewportP"][10]["type"] = "bool"
 defs["structs"]["ImGuiViewportP"][11] = {}
-defs["structs"]["ImGuiViewportP"][11]["comment"] = " // Set when the viewport is owned by a window (and ImGuiViewportFlags_CanHostOtherWindows is NOT set)"
+defs["structs"]["ImGuiViewportP"][11]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][11]["comment"]["comments"] = " // Set when the viewport is owned by a window (and ImGuiViewportFlags_CanHostOtherWindows is NOT set)"
 defs["structs"]["ImGuiViewportP"][11]["name"] = "Window"
 defs["structs"]["ImGuiViewportP"][11]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiViewportP"][12] = {}
-defs["structs"]["ImGuiViewportP"][12]["comment"] = " // Last frame number the background (0) and foreground (1) draw lists were used"
+defs["structs"]["ImGuiViewportP"][12]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][12]["comment"]["comments"] = " // Last frame number the background (0) and foreground (1) draw lists were used"
 defs["structs"]["ImGuiViewportP"][12]["name"] = "DrawListsLastFrame[2]"
 defs["structs"]["ImGuiViewportP"][12]["size"] = 2
 defs["structs"]["ImGuiViewportP"][12]["type"] = "int"
 defs["structs"]["ImGuiViewportP"][13] = {}
-defs["structs"]["ImGuiViewportP"][13]["comment"] = " // Convenience background (0) and foreground (1) draw lists. We use them to draw software mouser cursor when io.MouseDrawCursor is set and to draw most debug overlays."
+defs["structs"]["ImGuiViewportP"][13]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][13]["comment"]["comments"] = " // Convenience background (0) and foreground (1) draw lists. We use them to draw software mouser cursor when io.MouseDrawCursor is set and to draw most debug overlays."
 defs["structs"]["ImGuiViewportP"][13]["name"] = "DrawLists[2]"
 defs["structs"]["ImGuiViewportP"][13]["size"] = 2
 defs["structs"]["ImGuiViewportP"][13]["type"] = "ImDrawList*"
 defs["structs"]["ImGuiViewportP"][14] = {}
+defs["structs"]["ImGuiViewportP"][14]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][14]["name"] = "DrawDataP"
 defs["structs"]["ImGuiViewportP"][14]["type"] = "ImDrawData"
 defs["structs"]["ImGuiViewportP"][15] = {}
+defs["structs"]["ImGuiViewportP"][15]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][15]["name"] = "DrawDataBuilder"
 defs["structs"]["ImGuiViewportP"][15]["type"] = "ImDrawDataBuilder"
 defs["structs"]["ImGuiViewportP"][16] = {}
+defs["structs"]["ImGuiViewportP"][16]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][16]["name"] = "LastPlatformPos"
 defs["structs"]["ImGuiViewportP"][16]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][17] = {}
+defs["structs"]["ImGuiViewportP"][17]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][17]["name"] = "LastPlatformSize"
 defs["structs"]["ImGuiViewportP"][17]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][18] = {}
+defs["structs"]["ImGuiViewportP"][18]["comment"] = {}
 defs["structs"]["ImGuiViewportP"][18]["name"] = "LastRendererSize"
 defs["structs"]["ImGuiViewportP"][18]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][19] = {}
-defs["structs"]["ImGuiViewportP"][19]["comment"] = " // Work Area: Offset from Pos to top-left corner of Work Area. Generally (0,0) or (0,+main_menu_bar_height). Work Area is Full Area but without menu-bars/status-bars (so WorkArea always fit inside Pos/Size!)"
+defs["structs"]["ImGuiViewportP"][19]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][19]["comment"]["comments"] = " // Work Area: Offset from Pos to top-left corner of Work Area. Generally (0,0) or (0,+main_menu_bar_height). Work Area is Full Area but without menu-bars/status-bars (so WorkArea always fit inside Pos/Size!)"
 defs["structs"]["ImGuiViewportP"][19]["name"] = "WorkOffsetMin"
 defs["structs"]["ImGuiViewportP"][19]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][20] = {}
-defs["structs"]["ImGuiViewportP"][20]["comment"] = " // Work Area: Offset from Pos+Size to bottom-right corner of Work Area. Generally (0,0) or (0,-status_bar_height)."
+defs["structs"]["ImGuiViewportP"][20]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][20]["comment"]["comments"] = " // Work Area: Offset from Pos+Size to bottom-right corner of Work Area. Generally (0,0) or (0,-status_bar_height)."
 defs["structs"]["ImGuiViewportP"][20]["name"] = "WorkOffsetMax"
 defs["structs"]["ImGuiViewportP"][20]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][21] = {}
-defs["structs"]["ImGuiViewportP"][21]["comment"] = " // Work Area: Offset being built during current frame. Generally >= 0.0f."
+defs["structs"]["ImGuiViewportP"][21]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][21]["comment"]["comments"] = " // Work Area: Offset being built during current frame. Generally >= 0.0f."
 defs["structs"]["ImGuiViewportP"][21]["name"] = "BuildWorkOffsetMin"
 defs["structs"]["ImGuiViewportP"][21]["type"] = "ImVec2"
 defs["structs"]["ImGuiViewportP"][22] = {}
-defs["structs"]["ImGuiViewportP"][22]["comment"] = " // Work Area: Offset being built during current frame. Generally <= 0.0f."
+defs["structs"]["ImGuiViewportP"][22]["comment"] = {}
+defs["structs"]["ImGuiViewportP"][22]["comment"]["comments"] = " // Work Area: Offset being built during current frame. Generally <= 0.0f."
 defs["structs"]["ImGuiViewportP"][22]["name"] = "BuildWorkOffsetMax"
 defs["structs"]["ImGuiViewportP"][22]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"] = {}
 defs["structs"]["ImGuiWindow"][1] = {}
-defs["structs"]["ImGuiWindow"][1]["comment"] = " // Window name, owned by the window."
+defs["structs"]["ImGuiWindow"][1]["comment"] = {}
+defs["structs"]["ImGuiWindow"][1]["comment"]["comments"] = " // Window name, owned by the window."
 defs["structs"]["ImGuiWindow"][1]["name"] = "Name"
 defs["structs"]["ImGuiWindow"][1]["type"] = "char*"
 defs["structs"]["ImGuiWindow"][2] = {}
-defs["structs"]["ImGuiWindow"][2]["comment"] = " // == ImHashStr(Name)"
+defs["structs"]["ImGuiWindow"][2]["comment"] = {}
+defs["structs"]["ImGuiWindow"][2]["comment"]["comments"] = " // == ImHashStr(Name)"
 defs["structs"]["ImGuiWindow"][2]["name"] = "ID"
 defs["structs"]["ImGuiWindow"][2]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][3] = {}
-defs["structs"]["ImGuiWindow"][3]["comment"] = " // See enum ImGuiWindowFlags_"
+defs["structs"]["ImGuiWindow"][3]["comment"] = {}
+defs["structs"]["ImGuiWindow"][3]["comment"]["comments"] = " // See enum ImGuiWindowFlags_"
 defs["structs"]["ImGuiWindow"][3]["name"] = "Flags"
 defs["structs"]["ImGuiWindow"][3]["type"] = "ImGuiWindowFlags"
 defs["structs"]["ImGuiWindow"][4] = {}
-defs["structs"]["ImGuiWindow"][4]["comment"] = " // See enum ImGuiWindowFlags_"
+defs["structs"]["ImGuiWindow"][4]["comment"] = defs["structs"]["ImGuiWindow"][3]["comment"]
 defs["structs"]["ImGuiWindow"][4]["name"] = "FlagsPreviousFrame"
 defs["structs"]["ImGuiWindow"][4]["type"] = "ImGuiWindowFlags"
 defs["structs"]["ImGuiWindow"][5] = {}
-defs["structs"]["ImGuiWindow"][5]["comment"] = " // Advanced users only. Set with SetNextWindowClass()"
+defs["structs"]["ImGuiWindow"][5]["comment"] = {}
+defs["structs"]["ImGuiWindow"][5]["comment"]["comments"] = " // Advanced users only. Set with SetNextWindowClass()"
 defs["structs"]["ImGuiWindow"][5]["name"] = "WindowClass"
 defs["structs"]["ImGuiWindow"][5]["type"] = "ImGuiWindowClass"
 defs["structs"]["ImGuiWindow"][6] = {}
-defs["structs"]["ImGuiWindow"][6]["comment"] = " // Always set in Begin(). Inactive windows may have a NULL value here if their viewport was discarded."
+defs["structs"]["ImGuiWindow"][6]["comment"] = {}
+defs["structs"]["ImGuiWindow"][6]["comment"]["comments"] = " // Always set in Begin(). Inactive windows may have a NULL value here if their viewport was discarded."
 defs["structs"]["ImGuiWindow"][6]["name"] = "Viewport"
 defs["structs"]["ImGuiWindow"][6]["type"] = "ImGuiViewportP*"
 defs["structs"]["ImGuiWindow"][7] = {}
-defs["structs"]["ImGuiWindow"][7]["comment"] = " // We backup the viewport id (since the viewport may disappear or never be created if the window is inactive)"
+defs["structs"]["ImGuiWindow"][7]["comment"] = {}
+defs["structs"]["ImGuiWindow"][7]["comment"]["comments"] = " // We backup the viewport id (since the viewport may disappear or never be created if the window is inactive)"
 defs["structs"]["ImGuiWindow"][7]["name"] = "ViewportId"
 defs["structs"]["ImGuiWindow"][7]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][8] = {}
-defs["structs"]["ImGuiWindow"][8]["comment"] = " // We backup the viewport position (since the viewport may disappear or never be created if the window is inactive)"
+defs["structs"]["ImGuiWindow"][8]["comment"] = {}
+defs["structs"]["ImGuiWindow"][8]["comment"]["comments"] = " // We backup the viewport position (since the viewport may disappear or never be created if the window is inactive)"
 defs["structs"]["ImGuiWindow"][8]["name"] = "ViewportPos"
 defs["structs"]["ImGuiWindow"][8]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][9] = {}
-defs["structs"]["ImGuiWindow"][9]["comment"] = " // Reset to -1 every frame (index is guaranteed to be valid between NewFrame..EndFrame), only used in the Appearing frame of a tooltip/popup to enforce clamping to a given monitor"
+defs["structs"]["ImGuiWindow"][9]["comment"] = {}
+defs["structs"]["ImGuiWindow"][9]["comment"]["comments"] = " // Reset to -1 every frame (index is guaranteed to be valid between NewFrame..EndFrame), only used in the Appearing frame of a tooltip/popup to enforce clamping to a given monitor"
 defs["structs"]["ImGuiWindow"][9]["name"] = "ViewportAllowPlatformMonitorExtend"
 defs["structs"]["ImGuiWindow"][9]["type"] = "int"
 defs["structs"]["ImGuiWindow"][10] = {}
-defs["structs"]["ImGuiWindow"][10]["comment"] = " // Position (always rounded-up to nearest pixel)"
+defs["structs"]["ImGuiWindow"][10]["comment"] = {}
+defs["structs"]["ImGuiWindow"][10]["comment"]["comments"] = " // Position (always rounded-up to nearest pixel)"
 defs["structs"]["ImGuiWindow"][10]["name"] = "Pos"
 defs["structs"]["ImGuiWindow"][10]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][11] = {}
-defs["structs"]["ImGuiWindow"][11]["comment"] = " // Current size (==SizeFull or collapsed title bar size)"
+defs["structs"]["ImGuiWindow"][11]["comment"] = {}
+defs["structs"]["ImGuiWindow"][11]["comment"]["comments"] = " // Current size (==SizeFull or collapsed title bar size)"
 defs["structs"]["ImGuiWindow"][11]["name"] = "Size"
 defs["structs"]["ImGuiWindow"][11]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][12] = {}
-defs["structs"]["ImGuiWindow"][12]["comment"] = " // Size when non collapsed"
+defs["structs"]["ImGuiWindow"][12]["comment"] = {}
+defs["structs"]["ImGuiWindow"][12]["comment"]["comments"] = " // Size when non collapsed"
 defs["structs"]["ImGuiWindow"][12]["name"] = "SizeFull"
 defs["structs"]["ImGuiWindow"][12]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][13] = {}
-defs["structs"]["ImGuiWindow"][13]["comment"] = " // Size of contents/scrollable client area (calculated from the extents reach of the cursor) from previous frame. Does not include window decoration or window padding."
+defs["structs"]["ImGuiWindow"][13]["comment"] = {}
+defs["structs"]["ImGuiWindow"][13]["comment"]["comments"] = " // Size of contents/scrollable client area (calculated from the extents reach of the cursor) from previous frame. Does not include window decoration or window padding."
 defs["structs"]["ImGuiWindow"][13]["name"] = "ContentSize"
 defs["structs"]["ImGuiWindow"][13]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][14] = {}
+defs["structs"]["ImGuiWindow"][14]["comment"] = {}
 defs["structs"]["ImGuiWindow"][14]["name"] = "ContentSizeIdeal"
 defs["structs"]["ImGuiWindow"][14]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][15] = {}
-defs["structs"]["ImGuiWindow"][15]["comment"] = " // Size of contents/scrollable client area explicitly request by the user via SetNextWindowContentSize()."
+defs["structs"]["ImGuiWindow"][15]["comment"] = {}
+defs["structs"]["ImGuiWindow"][15]["comment"]["comments"] = " // Size of contents/scrollable client area explicitly request by the user via SetNextWindowContentSize()."
 defs["structs"]["ImGuiWindow"][15]["name"] = "ContentSizeExplicit"
 defs["structs"]["ImGuiWindow"][15]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][16] = {}
-defs["structs"]["ImGuiWindow"][16]["comment"] = " // Window padding at the time of Begin()."
+defs["structs"]["ImGuiWindow"][16]["comment"] = {}
+defs["structs"]["ImGuiWindow"][16]["comment"]["comments"] = " // Window padding at the time of Begin()."
 defs["structs"]["ImGuiWindow"][16]["name"] = "WindowPadding"
 defs["structs"]["ImGuiWindow"][16]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][17] = {}
-defs["structs"]["ImGuiWindow"][17]["comment"] = " // Window rounding at the time of Begin(). May be clamped lower to avoid rendering artifacts with title bar, menu bar etc."
+defs["structs"]["ImGuiWindow"][17]["comment"] = {}
+defs["structs"]["ImGuiWindow"][17]["comment"]["comments"] = " // Window rounding at the time of Begin(). May be clamped lower to avoid rendering artifacts with title bar, menu bar etc."
 defs["structs"]["ImGuiWindow"][17]["name"] = "WindowRounding"
 defs["structs"]["ImGuiWindow"][17]["type"] = "float"
 defs["structs"]["ImGuiWindow"][18] = {}
-defs["structs"]["ImGuiWindow"][18]["comment"] = " // Window border size at the time of Begin()."
+defs["structs"]["ImGuiWindow"][18]["comment"] = {}
+defs["structs"]["ImGuiWindow"][18]["comment"]["comments"] = " // Window border size at the time of Begin()."
 defs["structs"]["ImGuiWindow"][18]["name"] = "WindowBorderSize"
 defs["structs"]["ImGuiWindow"][18]["type"] = "float"
 defs["structs"]["ImGuiWindow"][19] = {}
-defs["structs"]["ImGuiWindow"][19]["comment"] = " // Size of buffer storing Name. May be larger than strlen(Name)!"
+defs["structs"]["ImGuiWindow"][19]["comment"] = {}
+defs["structs"]["ImGuiWindow"][19]["comment"]["comments"] = " // Size of buffer storing Name. May be larger than strlen(Name)!"
 defs["structs"]["ImGuiWindow"][19]["name"] = "NameBufLen"
 defs["structs"]["ImGuiWindow"][19]["type"] = "int"
 defs["structs"]["ImGuiWindow"][20] = {}
-defs["structs"]["ImGuiWindow"][20]["comment"] = " // == window->GetID(\"#MOVE\")"
+defs["structs"]["ImGuiWindow"][20]["comment"] = {}
+defs["structs"]["ImGuiWindow"][20]["comment"]["comments"] = " // == window->GetID(\"#MOVE\")"
 defs["structs"]["ImGuiWindow"][20]["name"] = "MoveId"
 defs["structs"]["ImGuiWindow"][20]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][21] = {}
-defs["structs"]["ImGuiWindow"][21]["comment"] = " // == window->GetID(\"#TAB\")"
+defs["structs"]["ImGuiWindow"][21]["comment"] = {}
+defs["structs"]["ImGuiWindow"][21]["comment"]["comments"] = " // == window->GetID(\"#TAB\")"
 defs["structs"]["ImGuiWindow"][21]["name"] = "TabId"
 defs["structs"]["ImGuiWindow"][21]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][22] = {}
-defs["structs"]["ImGuiWindow"][22]["comment"] = " // ID of corresponding item in parent window (for navigation to return from child window to parent window)"
+defs["structs"]["ImGuiWindow"][22]["comment"] = {}
+defs["structs"]["ImGuiWindow"][22]["comment"]["comments"] = " // ID of corresponding item in parent window (for navigation to return from child window to parent window)"
 defs["structs"]["ImGuiWindow"][22]["name"] = "ChildId"
 defs["structs"]["ImGuiWindow"][22]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][23] = {}
+defs["structs"]["ImGuiWindow"][23]["comment"] = {}
 defs["structs"]["ImGuiWindow"][23]["name"] = "Scroll"
 defs["structs"]["ImGuiWindow"][23]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][24] = {}
+defs["structs"]["ImGuiWindow"][24]["comment"] = {}
 defs["structs"]["ImGuiWindow"][24]["name"] = "ScrollMax"
 defs["structs"]["ImGuiWindow"][24]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][25] = {}
-defs["structs"]["ImGuiWindow"][25]["comment"] = " // target scroll position. stored as cursor position with scrolling canceled out, so the highest point is always 0.0f. (FLT_MAX for no change)"
+defs["structs"]["ImGuiWindow"][25]["comment"] = {}
+defs["structs"]["ImGuiWindow"][25]["comment"]["comments"] = " // target scroll position. stored as cursor position with scrolling canceled out, so the highest point is always 0.0f. (FLT_MAX for no change)"
 defs["structs"]["ImGuiWindow"][25]["name"] = "ScrollTarget"
 defs["structs"]["ImGuiWindow"][25]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][26] = {}
-defs["structs"]["ImGuiWindow"][26]["comment"] = " // 0.0f = scroll so that target position is at top, 0.5f = scroll so that target position is centered"
+defs["structs"]["ImGuiWindow"][26]["comment"] = {}
+defs["structs"]["ImGuiWindow"][26]["comment"]["comments"] = " // 0.0f = scroll so that target position is at top, 0.5f = scroll so that target position is centered"
 defs["structs"]["ImGuiWindow"][26]["name"] = "ScrollTargetCenterRatio"
 defs["structs"]["ImGuiWindow"][26]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][27] = {}
-defs["structs"]["ImGuiWindow"][27]["comment"] = " // 0.0f = no snapping, >0.0f snapping threshold"
+defs["structs"]["ImGuiWindow"][27]["comment"] = {}
+defs["structs"]["ImGuiWindow"][27]["comment"]["comments"] = " // 0.0f = no snapping, >0.0f snapping threshold"
 defs["structs"]["ImGuiWindow"][27]["name"] = "ScrollTargetEdgeSnapDist"
 defs["structs"]["ImGuiWindow"][27]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][28] = {}
-defs["structs"]["ImGuiWindow"][28]["comment"] = " // Size taken by each scrollbars on their smaller axis. Pay attention! ScrollbarSizes.x == width of the vertical scrollbar, ScrollbarSizes.y = height of the horizontal scrollbar."
+defs["structs"]["ImGuiWindow"][28]["comment"] = {}
+defs["structs"]["ImGuiWindow"][28]["comment"]["comments"] = " // Size taken by each scrollbars on their smaller axis. Pay attention! ScrollbarSizes.x == width of the vertical scrollbar, ScrollbarSizes.y = height of the horizontal scrollbar."
 defs["structs"]["ImGuiWindow"][28]["name"] = "ScrollbarSizes"
 defs["structs"]["ImGuiWindow"][28]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][29] = {}
-defs["structs"]["ImGuiWindow"][29]["comment"] = " // Are scrollbars visible?"
+defs["structs"]["ImGuiWindow"][29]["comment"] = {}
+defs["structs"]["ImGuiWindow"][29]["comment"]["comments"] = " // Are scrollbars visible?"
 defs["structs"]["ImGuiWindow"][29]["name"] = "ScrollbarX"
 defs["structs"]["ImGuiWindow"][29]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][30] = {}
-defs["structs"]["ImGuiWindow"][30]["comment"] = " // Are scrollbars visible?"
+defs["structs"]["ImGuiWindow"][30]["comment"] = defs["structs"]["ImGuiWindow"][29]["comment"]
 defs["structs"]["ImGuiWindow"][30]["name"] = "ScrollbarY"
 defs["structs"]["ImGuiWindow"][30]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][31] = {}
+defs["structs"]["ImGuiWindow"][31]["comment"] = {}
 defs["structs"]["ImGuiWindow"][31]["name"] = "ViewportOwned"
 defs["structs"]["ImGuiWindow"][31]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][32] = {}
-defs["structs"]["ImGuiWindow"][32]["comment"] = " // Set to true on Begin(), unless Collapsed"
+defs["structs"]["ImGuiWindow"][32]["comment"] = {}
+defs["structs"]["ImGuiWindow"][32]["comment"]["comments"] = " // Set to true on Begin(), unless Collapsed"
 defs["structs"]["ImGuiWindow"][32]["name"] = "Active"
 defs["structs"]["ImGuiWindow"][32]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][33] = {}
+defs["structs"]["ImGuiWindow"][33]["comment"] = {}
 defs["structs"]["ImGuiWindow"][33]["name"] = "WasActive"
 defs["structs"]["ImGuiWindow"][33]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][34] = {}
-defs["structs"]["ImGuiWindow"][34]["comment"] = " // Set to true when any widget access the current window"
+defs["structs"]["ImGuiWindow"][34]["comment"] = {}
+defs["structs"]["ImGuiWindow"][34]["comment"]["comments"] = " // Set to true when any widget access the current window"
 defs["structs"]["ImGuiWindow"][34]["name"] = "WriteAccessed"
 defs["structs"]["ImGuiWindow"][34]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][35] = {}
-defs["structs"]["ImGuiWindow"][35]["comment"] = " // Set when collapsing window to become only title-bar"
+defs["structs"]["ImGuiWindow"][35]["comment"] = {}
+defs["structs"]["ImGuiWindow"][35]["comment"]["comments"] = " // Set when collapsing window to become only title-bar"
 defs["structs"]["ImGuiWindow"][35]["name"] = "Collapsed"
 defs["structs"]["ImGuiWindow"][35]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][36] = {}
+defs["structs"]["ImGuiWindow"][36]["comment"] = {}
 defs["structs"]["ImGuiWindow"][36]["name"] = "WantCollapseToggle"
 defs["structs"]["ImGuiWindow"][36]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][37] = {}
-defs["structs"]["ImGuiWindow"][37]["comment"] = " // Set when items can safely be all clipped (e.g. window not visible or collapsed)"
+defs["structs"]["ImGuiWindow"][37]["comment"] = {}
+defs["structs"]["ImGuiWindow"][37]["comment"]["comments"] = " // Set when items can safely be all clipped (e.g. window not visible or collapsed)"
 defs["structs"]["ImGuiWindow"][37]["name"] = "SkipItems"
 defs["structs"]["ImGuiWindow"][37]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][38] = {}
-defs["structs"]["ImGuiWindow"][38]["comment"] = " // Set during the frame where the window is appearing (or re-appearing)"
+defs["structs"]["ImGuiWindow"][38]["comment"] = {}
+defs["structs"]["ImGuiWindow"][38]["comment"]["comments"] = " // Set during the frame where the window is appearing (or re-appearing)"
 defs["structs"]["ImGuiWindow"][38]["name"] = "Appearing"
 defs["structs"]["ImGuiWindow"][38]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][39] = {}
-defs["structs"]["ImGuiWindow"][39]["comment"] = " // Do not display (== HiddenFrames*** > 0)"
+defs["structs"]["ImGuiWindow"][39]["comment"] = {}
+defs["structs"]["ImGuiWindow"][39]["comment"]["comments"] = " // Do not display (== HiddenFrames*** > 0)"
 defs["structs"]["ImGuiWindow"][39]["name"] = "Hidden"
 defs["structs"]["ImGuiWindow"][39]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][40] = {}
-defs["structs"]["ImGuiWindow"][40]["comment"] = " // Set on the \"Debug##Default\" window."
+defs["structs"]["ImGuiWindow"][40]["comment"] = {}
+defs["structs"]["ImGuiWindow"][40]["comment"]["comments"] = " // Set on the \"Debug##Default\" window."
 defs["structs"]["ImGuiWindow"][40]["name"] = "IsFallbackWindow"
 defs["structs"]["ImGuiWindow"][40]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][41] = {}
-defs["structs"]["ImGuiWindow"][41]["comment"] = " // Set when passed _ChildWindow, left to false by BeginDocked()"
+defs["structs"]["ImGuiWindow"][41]["comment"] = {}
+defs["structs"]["ImGuiWindow"][41]["comment"]["comments"] = " // Set when passed _ChildWindow, left to false by BeginDocked()"
 defs["structs"]["ImGuiWindow"][41]["name"] = "IsExplicitChild"
 defs["structs"]["ImGuiWindow"][41]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][42] = {}
-defs["structs"]["ImGuiWindow"][42]["comment"] = " // Set when the window has a close button (p_open != NULL)"
+defs["structs"]["ImGuiWindow"][42]["comment"] = {}
+defs["structs"]["ImGuiWindow"][42]["comment"]["comments"] = " // Set when the window has a close button (p_open != NULL)"
 defs["structs"]["ImGuiWindow"][42]["name"] = "HasCloseButton"
 defs["structs"]["ImGuiWindow"][42]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][43] = {}
-defs["structs"]["ImGuiWindow"][43]["comment"] = " // Current border being held for resize (-1: none, otherwise 0-3)"
+defs["structs"]["ImGuiWindow"][43]["comment"] = {}
+defs["structs"]["ImGuiWindow"][43]["comment"]["comments"] = " // Current border being held for resize (-1: none, otherwise 0-3)"
 defs["structs"]["ImGuiWindow"][43]["name"] = "ResizeBorderHeld"
 defs["structs"]["ImGuiWindow"][43]["type"] = "signed char"
 defs["structs"]["ImGuiWindow"][44] = {}
-defs["structs"]["ImGuiWindow"][44]["comment"] = " // Number of Begin() during the current frame (generally 0 or 1, 1+ if appending via multiple Begin/End pairs)"
+defs["structs"]["ImGuiWindow"][44]["comment"] = {}
+defs["structs"]["ImGuiWindow"][44]["comment"]["comments"] = " // Number of Begin() during the current frame (generally 0 or 1, 1+ if appending via multiple Begin/End pairs)"
 defs["structs"]["ImGuiWindow"][44]["name"] = "BeginCount"
 defs["structs"]["ImGuiWindow"][44]["type"] = "short"
 defs["structs"]["ImGuiWindow"][45] = {}
-defs["structs"]["ImGuiWindow"][45]["comment"] = " // Begin() order within immediate parent window, if we are a child window. Otherwise 0."
+defs["structs"]["ImGuiWindow"][45]["comment"] = {}
+defs["structs"]["ImGuiWindow"][45]["comment"]["comments"] = " // Begin() order within immediate parent window, if we are a child window. Otherwise 0."
 defs["structs"]["ImGuiWindow"][45]["name"] = "BeginOrderWithinParent"
 defs["structs"]["ImGuiWindow"][45]["type"] = "short"
 defs["structs"]["ImGuiWindow"][46] = {}
-defs["structs"]["ImGuiWindow"][46]["comment"] = " // Begin() order within entire imgui context. This is mostly used for debugging submission order related issues."
+defs["structs"]["ImGuiWindow"][46]["comment"] = {}
+defs["structs"]["ImGuiWindow"][46]["comment"]["comments"] = " // Begin() order within entire imgui context. This is mostly used for debugging submission order related issues."
 defs["structs"]["ImGuiWindow"][46]["name"] = "BeginOrderWithinContext"
 defs["structs"]["ImGuiWindow"][46]["type"] = "short"
 defs["structs"]["ImGuiWindow"][47] = {}
-defs["structs"]["ImGuiWindow"][47]["comment"] = " // Order within WindowsFocusOrder[], altered when windows are focused."
+defs["structs"]["ImGuiWindow"][47]["comment"] = {}
+defs["structs"]["ImGuiWindow"][47]["comment"]["comments"] = " // Order within WindowsFocusOrder[], altered when windows are focused."
 defs["structs"]["ImGuiWindow"][47]["name"] = "FocusOrder"
 defs["structs"]["ImGuiWindow"][47]["type"] = "short"
 defs["structs"]["ImGuiWindow"][48] = {}
-defs["structs"]["ImGuiWindow"][48]["comment"] = " // ID in the popup stack when this window is used as a popup/menu (because we use generic Name/ID for recycling)"
+defs["structs"]["ImGuiWindow"][48]["comment"] = {}
+defs["structs"]["ImGuiWindow"][48]["comment"]["comments"] = " // ID in the popup stack when this window is used as a popup/menu (because we use generic Name/ID for recycling)"
 defs["structs"]["ImGuiWindow"][48]["name"] = "PopupId"
 defs["structs"]["ImGuiWindow"][48]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][49] = {}
+defs["structs"]["ImGuiWindow"][49]["comment"] = {}
 defs["structs"]["ImGuiWindow"][49]["name"] = "AutoFitFramesX"
 defs["structs"]["ImGuiWindow"][49]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][50] = {}
+defs["structs"]["ImGuiWindow"][50]["comment"] = defs["structs"]["ImGuiWindow"][49]["comment"]
 defs["structs"]["ImGuiWindow"][50]["name"] = "AutoFitFramesY"
 defs["structs"]["ImGuiWindow"][50]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][51] = {}
+defs["structs"]["ImGuiWindow"][51]["comment"] = {}
 defs["structs"]["ImGuiWindow"][51]["name"] = "AutoFitChildAxises"
 defs["structs"]["ImGuiWindow"][51]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][52] = {}
+defs["structs"]["ImGuiWindow"][52]["comment"] = {}
 defs["structs"]["ImGuiWindow"][52]["name"] = "AutoFitOnlyGrows"
 defs["structs"]["ImGuiWindow"][52]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][53] = {}
+defs["structs"]["ImGuiWindow"][53]["comment"] = {}
 defs["structs"]["ImGuiWindow"][53]["name"] = "AutoPosLastDirection"
 defs["structs"]["ImGuiWindow"][53]["type"] = "ImGuiDir"
 defs["structs"]["ImGuiWindow"][54] = {}
-defs["structs"]["ImGuiWindow"][54]["comment"] = " // Hide the window for N frames"
+defs["structs"]["ImGuiWindow"][54]["comment"] = {}
+defs["structs"]["ImGuiWindow"][54]["comment"]["comments"] = " // Hide the window for N frames"
 defs["structs"]["ImGuiWindow"][54]["name"] = "HiddenFramesCanSkipItems"
 defs["structs"]["ImGuiWindow"][54]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][55] = {}
-defs["structs"]["ImGuiWindow"][55]["comment"] = " // Hide the window for N frames while allowing items to be submitted so we can measure their size"
+defs["structs"]["ImGuiWindow"][55]["comment"] = {}
+defs["structs"]["ImGuiWindow"][55]["comment"]["comments"] = " // Hide the window for N frames while allowing items to be submitted so we can measure their size"
 defs["structs"]["ImGuiWindow"][55]["name"] = "HiddenFramesCannotSkipItems"
 defs["structs"]["ImGuiWindow"][55]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][56] = {}
-defs["structs"]["ImGuiWindow"][56]["comment"] = " // Hide the window until frame N at Render() time only"
+defs["structs"]["ImGuiWindow"][56]["comment"] = {}
+defs["structs"]["ImGuiWindow"][56]["comment"]["comments"] = " // Hide the window until frame N at Render() time only"
 defs["structs"]["ImGuiWindow"][56]["name"] = "HiddenFramesForRenderOnly"
 defs["structs"]["ImGuiWindow"][56]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][57] = {}
-defs["structs"]["ImGuiWindow"][57]["comment"] = " // Disable window interactions for N frames"
+defs["structs"]["ImGuiWindow"][57]["comment"] = {}
+defs["structs"]["ImGuiWindow"][57]["comment"]["comments"] = " // Disable window interactions for N frames"
 defs["structs"]["ImGuiWindow"][57]["name"] = "DisableInputsFrames"
 defs["structs"]["ImGuiWindow"][57]["type"] = "ImS8"
 defs["structs"]["ImGuiWindow"][58] = {}
 defs["structs"]["ImGuiWindow"][58]["bitfield"] = "8"
-defs["structs"]["ImGuiWindow"][58]["comment"] = " // store acceptable condition flags for SetNextWindowPos() use."
+defs["structs"]["ImGuiWindow"][58]["comment"] = {}
+defs["structs"]["ImGuiWindow"][58]["comment"]["comments"] = " // store acceptable condition flags for SetNextWindowPos() use."
 defs["structs"]["ImGuiWindow"][58]["name"] = "SetWindowPosAllowFlags"
 defs["structs"]["ImGuiWindow"][58]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiWindow"][59] = {}
 defs["structs"]["ImGuiWindow"][59]["bitfield"] = "8"
-defs["structs"]["ImGuiWindow"][59]["comment"] = " // store acceptable condition flags for SetNextWindowSize() use."
+defs["structs"]["ImGuiWindow"][59]["comment"] = {}
+defs["structs"]["ImGuiWindow"][59]["comment"]["comments"] = " // store acceptable condition flags for SetNextWindowSize() use."
 defs["structs"]["ImGuiWindow"][59]["name"] = "SetWindowSizeAllowFlags"
 defs["structs"]["ImGuiWindow"][59]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiWindow"][60] = {}
 defs["structs"]["ImGuiWindow"][60]["bitfield"] = "8"
-defs["structs"]["ImGuiWindow"][60]["comment"] = " // store acceptable condition flags for SetNextWindowCollapsed() use."
+defs["structs"]["ImGuiWindow"][60]["comment"] = {}
+defs["structs"]["ImGuiWindow"][60]["comment"]["comments"] = " // store acceptable condition flags for SetNextWindowCollapsed() use."
 defs["structs"]["ImGuiWindow"][60]["name"] = "SetWindowCollapsedAllowFlags"
 defs["structs"]["ImGuiWindow"][60]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiWindow"][61] = {}
 defs["structs"]["ImGuiWindow"][61]["bitfield"] = "8"
-defs["structs"]["ImGuiWindow"][61]["comment"] = " // store acceptable condition flags for SetNextWindowDock() use."
+defs["structs"]["ImGuiWindow"][61]["comment"] = {}
+defs["structs"]["ImGuiWindow"][61]["comment"]["comments"] = " // store acceptable condition flags for SetNextWindowDock() use."
 defs["structs"]["ImGuiWindow"][61]["name"] = "SetWindowDockAllowFlags"
 defs["structs"]["ImGuiWindow"][61]["type"] = "ImGuiCond"
 defs["structs"]["ImGuiWindow"][62] = {}
-defs["structs"]["ImGuiWindow"][62]["comment"] = " // store window position when using a non-zero Pivot (position set needs to be processed when we know the window size)"
+defs["structs"]["ImGuiWindow"][62]["comment"] = {}
+defs["structs"]["ImGuiWindow"][62]["comment"]["comments"] = " // store window position when using a non-zero Pivot (position set needs to be processed when we know the window size)"
 defs["structs"]["ImGuiWindow"][62]["name"] = "SetWindowPosVal"
 defs["structs"]["ImGuiWindow"][62]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][63] = {}
-defs["structs"]["ImGuiWindow"][63]["comment"] = " // store window pivot for positioning. ImVec2(0, 0) when positioning from top-left corner; ImVec2(0.5f, 0.5f) for centering; ImVec2(1, 1) for bottom right."
+defs["structs"]["ImGuiWindow"][63]["comment"] = {}
+defs["structs"]["ImGuiWindow"][63]["comment"]["comments"] = " // store window pivot for positioning. ImVec2(0, 0) when positioning from top-left corner; ImVec2(0.5f, 0.5f) for centering; ImVec2(1, 1) for bottom right."
 defs["structs"]["ImGuiWindow"][63]["name"] = "SetWindowPosPivot"
 defs["structs"]["ImGuiWindow"][63]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindow"][64] = {}
-defs["structs"]["ImGuiWindow"][64]["comment"] = " // ID stack. ID are hashes seeded with the value at the top of the stack. (In theory this should be in the TempData structure)"
+defs["structs"]["ImGuiWindow"][64]["comment"] = {}
+defs["structs"]["ImGuiWindow"][64]["comment"]["comments"] = " // ID stack. ID are hashes seeded with the value at the top of the stack. (In theory this should be in the TempData structure)"
 defs["structs"]["ImGuiWindow"][64]["name"] = "IDStack"
 defs["structs"]["ImGuiWindow"][64]["template_type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][64]["type"] = "ImVector_ImGuiID"
 defs["structs"]["ImGuiWindow"][65] = {}
-defs["structs"]["ImGuiWindow"][65]["comment"] = " // Temporary per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the \"DC\" variable name."
+defs["structs"]["ImGuiWindow"][65]["comment"] = {}
+defs["structs"]["ImGuiWindow"][65]["comment"]["comments"] = " // Temporary per-window data, reset at the beginning of the frame. This used to be called ImGuiDrawContext, hence the \"DC\" variable name."
 defs["structs"]["ImGuiWindow"][65]["name"] = "DC"
 defs["structs"]["ImGuiWindow"][65]["type"] = "ImGuiWindowTempData"
 defs["structs"]["ImGuiWindow"][66] = {}
-defs["structs"]["ImGuiWindow"][66]["comment"] = "    // The best way to understand what those rectangles are is to use the 'Metrics->Tools->Show Windows Rectangles' viewer.\
-    // The main 'OuterRect', omitted as a field, is window->Rect(). // == Window->Rect() just after setup in Begin(). == window->Rect() for root window."
+defs["structs"]["ImGuiWindow"][66]["comment"] = {}
+defs["structs"]["ImGuiWindow"][66]["comment"]["comments"] = " // == Window->Rect() just after setup in Begin(). == window->Rect() for root window."
+defs["structs"]["ImGuiWindow"][66]["comment"]["prevcomments"] = "\
+    // The best way to understand what those rectangles are is to use the 'Metrics->Tools->Show Windows Rectangles' viewer.\
+    // The main 'OuterRect', omitted as a field, is window->Rect()."
 defs["structs"]["ImGuiWindow"][66]["name"] = "OuterRectClipped"
 defs["structs"]["ImGuiWindow"][66]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][67] = {}
-defs["structs"]["ImGuiWindow"][67]["comment"] = " // Inner rectangle (omit title bar, menu bar, scroll bar)"
+defs["structs"]["ImGuiWindow"][67]["comment"] = {}
+defs["structs"]["ImGuiWindow"][67]["comment"]["comments"] = " // Inner rectangle (omit title bar, menu bar, scroll bar)"
 defs["structs"]["ImGuiWindow"][67]["name"] = "InnerRect"
 defs["structs"]["ImGuiWindow"][67]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][68] = {}
-defs["structs"]["ImGuiWindow"][68]["comment"] = " // == InnerRect shrunk by WindowPadding*0.5f on each side, clipped within viewport or parent clip rect."
+defs["structs"]["ImGuiWindow"][68]["comment"] = {}
+defs["structs"]["ImGuiWindow"][68]["comment"]["comments"] = " // == InnerRect shrunk by WindowPadding*0.5f on each side, clipped within viewport or parent clip rect."
 defs["structs"]["ImGuiWindow"][68]["name"] = "InnerClipRect"
 defs["structs"]["ImGuiWindow"][68]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][69] = {}
-defs["structs"]["ImGuiWindow"][69]["comment"] = " // Initially covers the whole scrolling region. Reduced by containers e.g columns/tables when active. Shrunk by WindowPadding*1.0f on each side. This is meant to replace ContentRegionRect over time (from 1.71+ onward)."
+defs["structs"]["ImGuiWindow"][69]["comment"] = {}
+defs["structs"]["ImGuiWindow"][69]["comment"]["comments"] = " // Initially covers the whole scrolling region. Reduced by containers e.g columns/tables when active. Shrunk by WindowPadding*1.0f on each side. This is meant to replace ContentRegionRect over time (from 1.71+ onward)."
 defs["structs"]["ImGuiWindow"][69]["name"] = "WorkRect"
 defs["structs"]["ImGuiWindow"][69]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][70] = {}
-defs["structs"]["ImGuiWindow"][70]["comment"] = " // Backup of WorkRect before entering a container such as columns/tables. Used by e.g. SpanAllColumns functions to easily access. Stacked containers are responsible for maintaining this. // FIXME-WORKRECT: Could be a stack?"
+defs["structs"]["ImGuiWindow"][70]["comment"] = {}
+defs["structs"]["ImGuiWindow"][70]["comment"]["comments"] = " // Backup of WorkRect before entering a container such as columns/tables. Used by e.g. SpanAllColumns functions to easily access. Stacked containers are responsible for maintaining this. // FIXME-WORKRECT: Could be a stack?"
 defs["structs"]["ImGuiWindow"][70]["name"] = "ParentWorkRect"
 defs["structs"]["ImGuiWindow"][70]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][71] = {}
-defs["structs"]["ImGuiWindow"][71]["comment"] = " // Current clipping/scissoring rectangle, evolve as we are using PushClipRect(), etc. == DrawList->clip_rect_stack.back()."
+defs["structs"]["ImGuiWindow"][71]["comment"] = {}
+defs["structs"]["ImGuiWindow"][71]["comment"]["comments"] = " // Current clipping/scissoring rectangle, evolve as we are using PushClipRect(), etc. == DrawList->clip_rect_stack.back()."
 defs["structs"]["ImGuiWindow"][71]["name"] = "ClipRect"
 defs["structs"]["ImGuiWindow"][71]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][72] = {}
-defs["structs"]["ImGuiWindow"][72]["comment"] = " // FIXME: This is currently confusing/misleading. It is essentially WorkRect but not handling of scrolling. We currently rely on it as right/bottom aligned sizing operation need some size to rely on."
+defs["structs"]["ImGuiWindow"][72]["comment"] = {}
+defs["structs"]["ImGuiWindow"][72]["comment"]["comments"] = " // FIXME: This is currently confusing/misleading. It is essentially WorkRect but not handling of scrolling. We currently rely on it as right/bottom aligned sizing operation need some size to rely on."
 defs["structs"]["ImGuiWindow"][72]["name"] = "ContentRegionRect"
 defs["structs"]["ImGuiWindow"][72]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][73] = {}
-defs["structs"]["ImGuiWindow"][73]["comment"] = " // Define an optional rectangular hole where mouse will pass-through the window."
+defs["structs"]["ImGuiWindow"][73]["comment"] = {}
+defs["structs"]["ImGuiWindow"][73]["comment"]["comments"] = " // Define an optional rectangular hole where mouse will pass-through the window."
 defs["structs"]["ImGuiWindow"][73]["name"] = "HitTestHoleSize"
 defs["structs"]["ImGuiWindow"][73]["type"] = "ImVec2ih"
 defs["structs"]["ImGuiWindow"][74] = {}
+defs["structs"]["ImGuiWindow"][74]["comment"] = {}
 defs["structs"]["ImGuiWindow"][74]["name"] = "HitTestHoleOffset"
 defs["structs"]["ImGuiWindow"][74]["type"] = "ImVec2ih"
 defs["structs"]["ImGuiWindow"][75] = {}
-defs["structs"]["ImGuiWindow"][75]["comment"] = " // Last frame number the window was Active."
+defs["structs"]["ImGuiWindow"][75]["comment"] = {}
+defs["structs"]["ImGuiWindow"][75]["comment"]["comments"] = " // Last frame number the window was Active."
 defs["structs"]["ImGuiWindow"][75]["name"] = "LastFrameActive"
 defs["structs"]["ImGuiWindow"][75]["type"] = "int"
 defs["structs"]["ImGuiWindow"][76] = {}
-defs["structs"]["ImGuiWindow"][76]["comment"] = " // Last frame number the window was made Focused."
+defs["structs"]["ImGuiWindow"][76]["comment"] = {}
+defs["structs"]["ImGuiWindow"][76]["comment"]["comments"] = " // Last frame number the window was made Focused."
 defs["structs"]["ImGuiWindow"][76]["name"] = "LastFrameJustFocused"
 defs["structs"]["ImGuiWindow"][76]["type"] = "int"
 defs["structs"]["ImGuiWindow"][77] = {}
-defs["structs"]["ImGuiWindow"][77]["comment"] = " // Last timestamp the window was Active (using float as we don't need high precision there)"
+defs["structs"]["ImGuiWindow"][77]["comment"] = {}
+defs["structs"]["ImGuiWindow"][77]["comment"]["comments"] = " // Last timestamp the window was Active (using float as we don't need high precision there)"
 defs["structs"]["ImGuiWindow"][77]["name"] = "LastTimeActive"
 defs["structs"]["ImGuiWindow"][77]["type"] = "float"
 defs["structs"]["ImGuiWindow"][78] = {}
+defs["structs"]["ImGuiWindow"][78]["comment"] = {}
 defs["structs"]["ImGuiWindow"][78]["name"] = "ItemWidthDefault"
 defs["structs"]["ImGuiWindow"][78]["type"] = "float"
 defs["structs"]["ImGuiWindow"][79] = {}
+defs["structs"]["ImGuiWindow"][79]["comment"] = {}
 defs["structs"]["ImGuiWindow"][79]["name"] = "StateStorage"
 defs["structs"]["ImGuiWindow"][79]["type"] = "ImGuiStorage"
 defs["structs"]["ImGuiWindow"][80] = {}
+defs["structs"]["ImGuiWindow"][80]["comment"] = {}
 defs["structs"]["ImGuiWindow"][80]["name"] = "ColumnsStorage"
 defs["structs"]["ImGuiWindow"][80]["template_type"] = "ImGuiOldColumns"
 defs["structs"]["ImGuiWindow"][80]["type"] = "ImVector_ImGuiOldColumns"
 defs["structs"]["ImGuiWindow"][81] = {}
-defs["structs"]["ImGuiWindow"][81]["comment"] = " // User scale multiplier per-window, via SetWindowFontScale()"
+defs["structs"]["ImGuiWindow"][81]["comment"] = {}
+defs["structs"]["ImGuiWindow"][81]["comment"]["comments"] = " // User scale multiplier per-window, via SetWindowFontScale()"
 defs["structs"]["ImGuiWindow"][81]["name"] = "FontWindowScale"
 defs["structs"]["ImGuiWindow"][81]["type"] = "float"
 defs["structs"]["ImGuiWindow"][82] = {}
+defs["structs"]["ImGuiWindow"][82]["comment"] = {}
 defs["structs"]["ImGuiWindow"][82]["name"] = "FontDpiScale"
 defs["structs"]["ImGuiWindow"][82]["type"] = "float"
 defs["structs"]["ImGuiWindow"][83] = {}
-defs["structs"]["ImGuiWindow"][83]["comment"] = " // Offset into SettingsWindows[] (offsets are always valid as we only grow the array from the back)"
+defs["structs"]["ImGuiWindow"][83]["comment"] = {}
+defs["structs"]["ImGuiWindow"][83]["comment"]["comments"] = " // Offset into SettingsWindows[] (offsets are always valid as we only grow the array from the back)"
 defs["structs"]["ImGuiWindow"][83]["name"] = "SettingsOffset"
 defs["structs"]["ImGuiWindow"][83]["type"] = "int"
 defs["structs"]["ImGuiWindow"][84] = {}
-defs["structs"]["ImGuiWindow"][84]["comment"] = " // == &DrawListInst (for backward compatibility reason with code using imgui_internal.h we keep this a pointer)"
+defs["structs"]["ImGuiWindow"][84]["comment"] = {}
+defs["structs"]["ImGuiWindow"][84]["comment"]["comments"] = " // == &DrawListInst (for backward compatibility reason with code using imgui_internal.h we keep this a pointer)"
 defs["structs"]["ImGuiWindow"][84]["name"] = "DrawList"
 defs["structs"]["ImGuiWindow"][84]["type"] = "ImDrawList*"
 defs["structs"]["ImGuiWindow"][85] = {}
+defs["structs"]["ImGuiWindow"][85]["comment"] = {}
 defs["structs"]["ImGuiWindow"][85]["name"] = "DrawListInst"
 defs["structs"]["ImGuiWindow"][85]["type"] = "ImDrawList"
 defs["structs"]["ImGuiWindow"][86] = {}
-defs["structs"]["ImGuiWindow"][86]["comment"] = " // If we are a child _or_ popup _or_ docked window, this is pointing to our parent. Otherwise NULL."
+defs["structs"]["ImGuiWindow"][86]["comment"] = {}
+defs["structs"]["ImGuiWindow"][86]["comment"]["comments"] = " // If we are a child _or_ popup _or_ docked window, this is pointing to our parent. Otherwise NULL."
 defs["structs"]["ImGuiWindow"][86]["name"] = "ParentWindow"
 defs["structs"]["ImGuiWindow"][86]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][87] = {}
+defs["structs"]["ImGuiWindow"][87]["comment"] = {}
 defs["structs"]["ImGuiWindow"][87]["name"] = "ParentWindowInBeginStack"
 defs["structs"]["ImGuiWindow"][87]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][88] = {}
-defs["structs"]["ImGuiWindow"][88]["comment"] = " // Point to ourself or first ancestor that is not a child window. Doesn't cross through popups/dock nodes."
+defs["structs"]["ImGuiWindow"][88]["comment"] = {}
+defs["structs"]["ImGuiWindow"][88]["comment"]["comments"] = " // Point to ourself or first ancestor that is not a child window. Doesn't cross through popups/dock nodes."
 defs["structs"]["ImGuiWindow"][88]["name"] = "RootWindow"
 defs["structs"]["ImGuiWindow"][88]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][89] = {}
-defs["structs"]["ImGuiWindow"][89]["comment"] = " // Point to ourself or first ancestor that is not a child window. Cross through popups parent<>child."
+defs["structs"]["ImGuiWindow"][89]["comment"] = {}
+defs["structs"]["ImGuiWindow"][89]["comment"]["comments"] = " // Point to ourself or first ancestor that is not a child window. Cross through popups parent<>child."
 defs["structs"]["ImGuiWindow"][89]["name"] = "RootWindowPopupTree"
 defs["structs"]["ImGuiWindow"][89]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][90] = {}
-defs["structs"]["ImGuiWindow"][90]["comment"] = " // Point to ourself or first ancestor that is not a child window. Cross through dock nodes."
+defs["structs"]["ImGuiWindow"][90]["comment"] = {}
+defs["structs"]["ImGuiWindow"][90]["comment"]["comments"] = " // Point to ourself or first ancestor that is not a child window. Cross through dock nodes."
 defs["structs"]["ImGuiWindow"][90]["name"] = "RootWindowDockTree"
 defs["structs"]["ImGuiWindow"][90]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][91] = {}
-defs["structs"]["ImGuiWindow"][91]["comment"] = " // Point to ourself or first ancestor which will display TitleBgActive color when this window is active."
+defs["structs"]["ImGuiWindow"][91]["comment"] = {}
+defs["structs"]["ImGuiWindow"][91]["comment"]["comments"] = " // Point to ourself or first ancestor which will display TitleBgActive color when this window is active."
 defs["structs"]["ImGuiWindow"][91]["name"] = "RootWindowForTitleBarHighlight"
 defs["structs"]["ImGuiWindow"][91]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][92] = {}
-defs["structs"]["ImGuiWindow"][92]["comment"] = " // Point to ourself or first ancestor which doesn't have the NavFlattened flag."
+defs["structs"]["ImGuiWindow"][92]["comment"] = {}
+defs["structs"]["ImGuiWindow"][92]["comment"]["comments"] = " // Point to ourself or first ancestor which doesn't have the NavFlattened flag."
 defs["structs"]["ImGuiWindow"][92]["name"] = "RootWindowForNav"
 defs["structs"]["ImGuiWindow"][92]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][93] = {}
-defs["structs"]["ImGuiWindow"][93]["comment"] = " // When going to the menu bar, we remember the child window we came from. (This could probably be made implicit if we kept g.Windows sorted by last focused including child window.)"
+defs["structs"]["ImGuiWindow"][93]["comment"] = {}
+defs["structs"]["ImGuiWindow"][93]["comment"]["comments"] = " // When going to the menu bar, we remember the child window we came from. (This could probably be made implicit if we kept g.Windows sorted by last focused including child window.)"
 defs["structs"]["ImGuiWindow"][93]["name"] = "NavLastChildNavWindow"
 defs["structs"]["ImGuiWindow"][93]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindow"][94] = {}
-defs["structs"]["ImGuiWindow"][94]["comment"] = " // Last known NavId for this window, per layer (0/1)"
+defs["structs"]["ImGuiWindow"][94]["comment"] = {}
+defs["structs"]["ImGuiWindow"][94]["comment"]["comments"] = " // Last known NavId for this window, per layer (0/1)"
 defs["structs"]["ImGuiWindow"][94]["name"] = "NavLastIds[ImGuiNavLayer_COUNT]"
 defs["structs"]["ImGuiWindow"][94]["size"] = 2
 defs["structs"]["ImGuiWindow"][94]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][95] = {}
-defs["structs"]["ImGuiWindow"][95]["comment"] = " // Reference rectangle, in window relative space"
+defs["structs"]["ImGuiWindow"][95]["comment"] = {}
+defs["structs"]["ImGuiWindow"][95]["comment"]["comments"] = " // Reference rectangle, in window relative space"
 defs["structs"]["ImGuiWindow"][95]["name"] = "NavRectRel[ImGuiNavLayer_COUNT]"
 defs["structs"]["ImGuiWindow"][95]["size"] = 2
 defs["structs"]["ImGuiWindow"][95]["type"] = "ImRect"
 defs["structs"]["ImGuiWindow"][96] = {}
-defs["structs"]["ImGuiWindow"][96]["comment"] = " // Backup of last idx/vtx count, so when waking up the window we can preallocate and avoid iterative alloc/copy"
+defs["structs"]["ImGuiWindow"][96]["comment"] = {}
+defs["structs"]["ImGuiWindow"][96]["comment"]["comments"] = " // Backup of last idx/vtx count, so when waking up the window we can preallocate and avoid iterative alloc/copy"
 defs["structs"]["ImGuiWindow"][96]["name"] = "MemoryDrawListIdxCapacity"
 defs["structs"]["ImGuiWindow"][96]["type"] = "int"
 defs["structs"]["ImGuiWindow"][97] = {}
+defs["structs"]["ImGuiWindow"][97]["comment"] = {}
 defs["structs"]["ImGuiWindow"][97]["name"] = "MemoryDrawListVtxCapacity"
 defs["structs"]["ImGuiWindow"][97]["type"] = "int"
 defs["structs"]["ImGuiWindow"][98] = {}
-defs["structs"]["ImGuiWindow"][98]["comment"] = " // Set when window extraneous data have been garbage collected"
+defs["structs"]["ImGuiWindow"][98]["comment"] = {}
+defs["structs"]["ImGuiWindow"][98]["comment"]["comments"] = " // Set when window extraneous data have been garbage collected"
 defs["structs"]["ImGuiWindow"][98]["name"] = "MemoryCompacted"
 defs["structs"]["ImGuiWindow"][98]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][99] = {}
 defs["structs"]["ImGuiWindow"][99]["bitfield"] = "1"
-defs["structs"]["ImGuiWindow"][99]["comment"] = "    // Docking // When docking artifacts are actually visible. When this is set, DockNode is guaranteed to be != NULL. ~~ (DockNode != NULL) && (DockNode->Windows.Size > 1)."
+defs["structs"]["ImGuiWindow"][99]["comment"] = {}
+defs["structs"]["ImGuiWindow"][99]["comment"]["comments"] = " // When docking artifacts are actually visible. When this is set, DockNode is guaranteed to be != NULL. ~~ (DockNode != NULL) && (DockNode->Windows.Size > 1)."
+defs["structs"]["ImGuiWindow"][99]["comment"]["prevcomments"] = "\
+    // Docking"
 defs["structs"]["ImGuiWindow"][99]["name"] = "DockIsActive"
 defs["structs"]["ImGuiWindow"][99]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][100] = {}
 defs["structs"]["ImGuiWindow"][100]["bitfield"] = "1"
+defs["structs"]["ImGuiWindow"][100]["comment"] = {}
 defs["structs"]["ImGuiWindow"][100]["name"] = "DockNodeIsVisible"
 defs["structs"]["ImGuiWindow"][100]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][101] = {}
 defs["structs"]["ImGuiWindow"][101]["bitfield"] = "1"
-defs["structs"]["ImGuiWindow"][101]["comment"] = " // Is our window visible this frame? ~~ is the corresponding tab selected?"
+defs["structs"]["ImGuiWindow"][101]["comment"] = {}
+defs["structs"]["ImGuiWindow"][101]["comment"]["comments"] = " // Is our window visible this frame? ~~ is the corresponding tab selected?"
 defs["structs"]["ImGuiWindow"][101]["name"] = "DockTabIsVisible"
 defs["structs"]["ImGuiWindow"][101]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][102] = {}
 defs["structs"]["ImGuiWindow"][102]["bitfield"] = "1"
+defs["structs"]["ImGuiWindow"][102]["comment"] = {}
 defs["structs"]["ImGuiWindow"][102]["name"] = "DockTabWantClose"
 defs["structs"]["ImGuiWindow"][102]["type"] = "bool"
 defs["structs"]["ImGuiWindow"][103] = {}
-defs["structs"]["ImGuiWindow"][103]["comment"] = " // Order of the last time the window was visible within its DockNode. This is used to reorder windows that are reappearing on the same frame. Same value between windows that were active and windows that were none are possible."
+defs["structs"]["ImGuiWindow"][103]["comment"] = {}
+defs["structs"]["ImGuiWindow"][103]["comment"]["comments"] = " // Order of the last time the window was visible within its DockNode. This is used to reorder windows that are reappearing on the same frame. Same value between windows that were active and windows that were none are possible."
 defs["structs"]["ImGuiWindow"][103]["name"] = "DockOrder"
 defs["structs"]["ImGuiWindow"][103]["type"] = "short"
 defs["structs"]["ImGuiWindow"][104] = {}
+defs["structs"]["ImGuiWindow"][104]["comment"] = {}
 defs["structs"]["ImGuiWindow"][104]["name"] = "DockStyle"
 defs["structs"]["ImGuiWindow"][104]["type"] = "ImGuiWindowDockStyle"
 defs["structs"]["ImGuiWindow"][105] = {}
-defs["structs"]["ImGuiWindow"][105]["comment"] = " // Which node are we docked into. Important: Prefer testing DockIsActive in many cases as this will still be set when the dock node is hidden."
+defs["structs"]["ImGuiWindow"][105]["comment"] = {}
+defs["structs"]["ImGuiWindow"][105]["comment"]["comments"] = " // Which node are we docked into. Important: Prefer testing DockIsActive in many cases as this will still be set when the dock node is hidden."
 defs["structs"]["ImGuiWindow"][105]["name"] = "DockNode"
 defs["structs"]["ImGuiWindow"][105]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiWindow"][106] = {}
-defs["structs"]["ImGuiWindow"][106]["comment"] = " // Which node are we owning (for parent windows)"
+defs["structs"]["ImGuiWindow"][106]["comment"] = {}
+defs["structs"]["ImGuiWindow"][106]["comment"]["comments"] = " // Which node are we owning (for parent windows)"
 defs["structs"]["ImGuiWindow"][106]["name"] = "DockNodeAsHost"
 defs["structs"]["ImGuiWindow"][106]["type"] = "ImGuiDockNode*"
 defs["structs"]["ImGuiWindow"][107] = {}
-defs["structs"]["ImGuiWindow"][107]["comment"] = " // Backup of last valid DockNode->ID, so single window remember their dock node id even when they are not bound any more"
+defs["structs"]["ImGuiWindow"][107]["comment"] = {}
+defs["structs"]["ImGuiWindow"][107]["comment"]["comments"] = " // Backup of last valid DockNode->ID, so single window remember their dock node id even when they are not bound any more"
 defs["structs"]["ImGuiWindow"][107]["name"] = "DockId"
 defs["structs"]["ImGuiWindow"][107]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindow"][108] = {}
+defs["structs"]["ImGuiWindow"][108]["comment"] = {}
 defs["structs"]["ImGuiWindow"][108]["name"] = "DockTabItemStatusFlags"
 defs["structs"]["ImGuiWindow"][108]["type"] = "ImGuiItemStatusFlags"
 defs["structs"]["ImGuiWindow"][109] = {}
+defs["structs"]["ImGuiWindow"][109]["comment"] = {}
 defs["structs"]["ImGuiWindow"][109]["name"] = "DockTabItemRect"
 defs["structs"]["ImGuiWindow"][109]["type"] = "ImRect"
 defs["structs"]["ImGuiWindowClass"] = {}
 defs["structs"]["ImGuiWindowClass"][1] = {}
-defs["structs"]["ImGuiWindowClass"][1]["comment"] = " // User data. 0 = Default class (unclassed). Windows of different classes cannot be docked with each others."
+defs["structs"]["ImGuiWindowClass"][1]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][1]["comment"]["comments"] = " // User data. 0 = Default class (unclassed). Windows of different classes cannot be docked with each others."
 defs["structs"]["ImGuiWindowClass"][1]["name"] = "ClassId"
 defs["structs"]["ImGuiWindowClass"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowClass"][2] = {}
-defs["structs"]["ImGuiWindowClass"][2]["comment"] = " // Hint for the platform backend. -1: use default. 0: request platform backend to not parent the platform. != 0: request platform backend to create a parent<>child relationship between the platform windows. Not conforming backends are free to e.g. parent every viewport to the main viewport or not."
+defs["structs"]["ImGuiWindowClass"][2]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][2]["comment"]["comments"] = " // Hint for the platform backend. -1: use default. 0: request platform backend to not parent the platform. != 0: request platform backend to create a parent<>child relationship between the platform windows. Not conforming backends are free to e.g. parent every viewport to the main viewport or not."
 defs["structs"]["ImGuiWindowClass"][2]["name"] = "ParentViewportId"
 defs["structs"]["ImGuiWindowClass"][2]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowClass"][3] = {}
-defs["structs"]["ImGuiWindowClass"][3]["comment"] = " // Viewport flags to set when a window of this class owns a viewport. This allows you to enforce OS decoration or task bar icon, override the defaults on a per-window basis."
+defs["structs"]["ImGuiWindowClass"][3]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][3]["comment"]["comments"] = " // Viewport flags to set when a window of this class owns a viewport. This allows you to enforce OS decoration or task bar icon, override the defaults on a per-window basis."
 defs["structs"]["ImGuiWindowClass"][3]["name"] = "ViewportFlagsOverrideSet"
 defs["structs"]["ImGuiWindowClass"][3]["type"] = "ImGuiViewportFlags"
 defs["structs"]["ImGuiWindowClass"][4] = {}
-defs["structs"]["ImGuiWindowClass"][4]["comment"] = " // Viewport flags to clear when a window of this class owns a viewport. This allows you to enforce OS decoration or task bar icon, override the defaults on a per-window basis."
+defs["structs"]["ImGuiWindowClass"][4]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][4]["comment"]["comments"] = " // Viewport flags to clear when a window of this class owns a viewport. This allows you to enforce OS decoration or task bar icon, override the defaults on a per-window basis."
 defs["structs"]["ImGuiWindowClass"][4]["name"] = "ViewportFlagsOverrideClear"
 defs["structs"]["ImGuiWindowClass"][4]["type"] = "ImGuiViewportFlags"
 defs["structs"]["ImGuiWindowClass"][5] = {}
-defs["structs"]["ImGuiWindowClass"][5]["comment"] = " // [EXPERIMENTAL] TabItem flags to set when a window of this class gets submitted into a dock node tab bar. May use with ImGuiTabItemFlags_Leading or ImGuiTabItemFlags_Trailing."
+defs["structs"]["ImGuiWindowClass"][5]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][5]["comment"]["comments"] = " // [EXPERIMENTAL] TabItem flags to set when a window of this class gets submitted into a dock node tab bar. May use with ImGuiTabItemFlags_Leading or ImGuiTabItemFlags_Trailing."
 defs["structs"]["ImGuiWindowClass"][5]["name"] = "TabItemFlagsOverrideSet"
 defs["structs"]["ImGuiWindowClass"][5]["type"] = "ImGuiTabItemFlags"
 defs["structs"]["ImGuiWindowClass"][6] = {}
-defs["structs"]["ImGuiWindowClass"][6]["comment"] = " // [EXPERIMENTAL] Dock node flags to set when a window of this class is hosted by a dock node (it doesn't have to be selected!)"
+defs["structs"]["ImGuiWindowClass"][6]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][6]["comment"]["comments"] = " // [EXPERIMENTAL] Dock node flags to set when a window of this class is hosted by a dock node (it doesn't have to be selected!)"
 defs["structs"]["ImGuiWindowClass"][6]["name"] = "DockNodeFlagsOverrideSet"
 defs["structs"]["ImGuiWindowClass"][6]["type"] = "ImGuiDockNodeFlags"
 defs["structs"]["ImGuiWindowClass"][7] = {}
-defs["structs"]["ImGuiWindowClass"][7]["comment"] = " // Set to true to enforce single floating windows of this class always having their own docking node (equivalent of setting the global io.ConfigDockingAlwaysTabBar)"
+defs["structs"]["ImGuiWindowClass"][7]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][7]["comment"]["comments"] = " // Set to true to enforce single floating windows of this class always having their own docking node (equivalent of setting the global io.ConfigDockingAlwaysTabBar)"
 defs["structs"]["ImGuiWindowClass"][7]["name"] = "DockingAlwaysTabBar"
 defs["structs"]["ImGuiWindowClass"][7]["type"] = "bool"
 defs["structs"]["ImGuiWindowClass"][8] = {}
-defs["structs"]["ImGuiWindowClass"][8]["comment"] = " // Set to true to allow windows of this class to be docked/merged with an unclassed window. // FIXME-DOCK: Move to DockNodeFlags override?"
+defs["structs"]["ImGuiWindowClass"][8]["comment"] = {}
+defs["structs"]["ImGuiWindowClass"][8]["comment"]["comments"] = " // Set to true to allow windows of this class to be docked/merged with an unclassed window. // FIXME-DOCK: Move to DockNodeFlags override?"
 defs["structs"]["ImGuiWindowClass"][8]["name"] = "DockingAllowUnclassed"
 defs["structs"]["ImGuiWindowClass"][8]["type"] = "bool"
 defs["structs"]["ImGuiWindowDockStyle"] = {}
 defs["structs"]["ImGuiWindowDockStyle"][1] = {}
+defs["structs"]["ImGuiWindowDockStyle"][1]["comment"] = {}
 defs["structs"]["ImGuiWindowDockStyle"][1]["name"] = "Colors[ImGuiWindowDockStyleCol_COUNT]"
 defs["structs"]["ImGuiWindowDockStyle"][1]["size"] = 6
 defs["structs"]["ImGuiWindowDockStyle"][1]["type"] = "ImU32"
 defs["structs"]["ImGuiWindowSettings"] = {}
 defs["structs"]["ImGuiWindowSettings"][1] = {}
+defs["structs"]["ImGuiWindowSettings"][1]["comment"] = {}
 defs["structs"]["ImGuiWindowSettings"][1]["name"] = "ID"
 defs["structs"]["ImGuiWindowSettings"][1]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowSettings"][2] = {}
-defs["structs"]["ImGuiWindowSettings"][2]["comment"] = " // NB: Settings position are stored RELATIVE to the viewport! Whereas runtime ones are absolute positions."
+defs["structs"]["ImGuiWindowSettings"][2]["comment"] = {}
+defs["structs"]["ImGuiWindowSettings"][2]["comment"]["comments"] = " // NB: Settings position are stored RELATIVE to the viewport! Whereas runtime ones are absolute positions."
 defs["structs"]["ImGuiWindowSettings"][2]["name"] = "Pos"
 defs["structs"]["ImGuiWindowSettings"][2]["type"] = "ImVec2ih"
 defs["structs"]["ImGuiWindowSettings"][3] = {}
+defs["structs"]["ImGuiWindowSettings"][3]["comment"] = {}
 defs["structs"]["ImGuiWindowSettings"][3]["name"] = "Size"
 defs["structs"]["ImGuiWindowSettings"][3]["type"] = "ImVec2ih"
 defs["structs"]["ImGuiWindowSettings"][4] = {}
+defs["structs"]["ImGuiWindowSettings"][4]["comment"] = {}
 defs["structs"]["ImGuiWindowSettings"][4]["name"] = "ViewportPos"
 defs["structs"]["ImGuiWindowSettings"][4]["type"] = "ImVec2ih"
 defs["structs"]["ImGuiWindowSettings"][5] = {}
+defs["structs"]["ImGuiWindowSettings"][5]["comment"] = {}
 defs["structs"]["ImGuiWindowSettings"][5]["name"] = "ViewportId"
 defs["structs"]["ImGuiWindowSettings"][5]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowSettings"][6] = {}
-defs["structs"]["ImGuiWindowSettings"][6]["comment"] = " // ID of last known DockNode (even if the DockNode is invisible because it has only 1 active window), or 0 if none."
+defs["structs"]["ImGuiWindowSettings"][6]["comment"] = {}
+defs["structs"]["ImGuiWindowSettings"][6]["comment"]["comments"] = " // ID of last known DockNode (even if the DockNode is invisible because it has only 1 active window), or 0 if none."
 defs["structs"]["ImGuiWindowSettings"][6]["name"] = "DockId"
 defs["structs"]["ImGuiWindowSettings"][6]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowSettings"][7] = {}
-defs["structs"]["ImGuiWindowSettings"][7]["comment"] = " // ID of window class if specified"
+defs["structs"]["ImGuiWindowSettings"][7]["comment"] = {}
+defs["structs"]["ImGuiWindowSettings"][7]["comment"]["comments"] = " // ID of window class if specified"
 defs["structs"]["ImGuiWindowSettings"][7]["name"] = "ClassId"
 defs["structs"]["ImGuiWindowSettings"][7]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowSettings"][8] = {}
-defs["structs"]["ImGuiWindowSettings"][8]["comment"] = " // Order of the last time the window was visible within its DockNode. This is used to reorder windows that are reappearing on the same frame. Same value between windows that were active and windows that were none are possible."
+defs["structs"]["ImGuiWindowSettings"][8]["comment"] = {}
+defs["structs"]["ImGuiWindowSettings"][8]["comment"]["comments"] = " // Order of the last time the window was visible within its DockNode. This is used to reorder windows that are reappearing on the same frame. Same value between windows that were active and windows that were none are possible."
 defs["structs"]["ImGuiWindowSettings"][8]["name"] = "DockOrder"
 defs["structs"]["ImGuiWindowSettings"][8]["type"] = "short"
 defs["structs"]["ImGuiWindowSettings"][9] = {}
+defs["structs"]["ImGuiWindowSettings"][9]["comment"] = {}
 defs["structs"]["ImGuiWindowSettings"][9]["name"] = "Collapsed"
 defs["structs"]["ImGuiWindowSettings"][9]["type"] = "bool"
 defs["structs"]["ImGuiWindowSettings"][10] = {}
-defs["structs"]["ImGuiWindowSettings"][10]["comment"] = " // Set when loaded from .ini data (to enable merging/loading .ini data into an already running context)"
+defs["structs"]["ImGuiWindowSettings"][10]["comment"] = {}
+defs["structs"]["ImGuiWindowSettings"][10]["comment"]["comments"] = " // Set when loaded from .ini data (to enable merging/loading .ini data into an already running context)"
 defs["structs"]["ImGuiWindowSettings"][10]["name"] = "WantApply"
 defs["structs"]["ImGuiWindowSettings"][10]["type"] = "bool"
 defs["structs"]["ImGuiWindowStackData"] = {}
 defs["structs"]["ImGuiWindowStackData"][1] = {}
+defs["structs"]["ImGuiWindowStackData"][1]["comment"] = {}
 defs["structs"]["ImGuiWindowStackData"][1]["name"] = "Window"
 defs["structs"]["ImGuiWindowStackData"][1]["type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindowStackData"][2] = {}
+defs["structs"]["ImGuiWindowStackData"][2]["comment"] = {}
 defs["structs"]["ImGuiWindowStackData"][2]["name"] = "ParentLastItemDataBackup"
 defs["structs"]["ImGuiWindowStackData"][2]["type"] = "ImGuiLastItemData"
 defs["structs"]["ImGuiWindowStackData"][3] = {}
-defs["structs"]["ImGuiWindowStackData"][3]["comment"] = " // Store size of various stacks for asserting"
+defs["structs"]["ImGuiWindowStackData"][3]["comment"] = {}
+defs["structs"]["ImGuiWindowStackData"][3]["comment"]["comments"] = " // Store size of various stacks for asserting"
 defs["structs"]["ImGuiWindowStackData"][3]["name"] = "StackSizesOnBegin"
 defs["structs"]["ImGuiWindowStackData"][3]["type"] = "ImGuiStackSizes"
 defs["structs"]["ImGuiWindowTempData"] = {}
 defs["structs"]["ImGuiWindowTempData"][1] = {}
-defs["structs"]["ImGuiWindowTempData"][1]["comment"] = "\
-    // Layout // Current emitting position, in absolute coordinates."
+defs["structs"]["ImGuiWindowTempData"][1]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][1]["comment"]["comments"] = " // Current emitting position, in absolute coordinates."
+defs["structs"]["ImGuiWindowTempData"][1]["comment"]["prevcomments"] = "\
+    // Layout"
 defs["structs"]["ImGuiWindowTempData"][1]["name"] = "CursorPos"
 defs["structs"]["ImGuiWindowTempData"][1]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][2] = {}
+defs["structs"]["ImGuiWindowTempData"][2]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][2]["name"] = "CursorPosPrevLine"
 defs["structs"]["ImGuiWindowTempData"][2]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][3] = {}
-defs["structs"]["ImGuiWindowTempData"][3]["comment"] = " // Initial position after Begin(), generally ~ window position + WindowPadding."
+defs["structs"]["ImGuiWindowTempData"][3]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][3]["comment"]["comments"] = " // Initial position after Begin(), generally ~ window position + WindowPadding."
 defs["structs"]["ImGuiWindowTempData"][3]["name"] = "CursorStartPos"
 defs["structs"]["ImGuiWindowTempData"][3]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][4] = {}
-defs["structs"]["ImGuiWindowTempData"][4]["comment"] = " // Used to implicitly calculate ContentSize at the beginning of next frame, for scrolling range and auto-resize. Always growing during the frame."
+defs["structs"]["ImGuiWindowTempData"][4]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][4]["comment"]["comments"] = " // Used to implicitly calculate ContentSize at the beginning of next frame, for scrolling range and auto-resize. Always growing during the frame."
 defs["structs"]["ImGuiWindowTempData"][4]["name"] = "CursorMaxPos"
 defs["structs"]["ImGuiWindowTempData"][4]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][5] = {}
-defs["structs"]["ImGuiWindowTempData"][5]["comment"] = " // Used to implicitly calculate ContentSizeIdeal at the beginning of next frame, for auto-resize only. Always growing during the frame."
+defs["structs"]["ImGuiWindowTempData"][5]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][5]["comment"]["comments"] = " // Used to implicitly calculate ContentSizeIdeal at the beginning of next frame, for auto-resize only. Always growing during the frame."
 defs["structs"]["ImGuiWindowTempData"][5]["name"] = "IdealMaxPos"
 defs["structs"]["ImGuiWindowTempData"][5]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][6] = {}
+defs["structs"]["ImGuiWindowTempData"][6]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][6]["name"] = "CurrLineSize"
 defs["structs"]["ImGuiWindowTempData"][6]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][7] = {}
+defs["structs"]["ImGuiWindowTempData"][7]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][7]["name"] = "PrevLineSize"
 defs["structs"]["ImGuiWindowTempData"][7]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][8] = {}
-defs["structs"]["ImGuiWindowTempData"][8]["comment"] = " // Baseline offset (0.0f by default on a new line, generally == style.FramePadding.y when a framed item has been added)."
+defs["structs"]["ImGuiWindowTempData"][8]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][8]["comment"]["comments"] = " // Baseline offset (0.0f by default on a new line, generally == style.FramePadding.y when a framed item has been added)."
 defs["structs"]["ImGuiWindowTempData"][8]["name"] = "CurrLineTextBaseOffset"
 defs["structs"]["ImGuiWindowTempData"][8]["type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][9] = {}
+defs["structs"]["ImGuiWindowTempData"][9]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][9]["name"] = "PrevLineTextBaseOffset"
 defs["structs"]["ImGuiWindowTempData"][9]["type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][10] = {}
+defs["structs"]["ImGuiWindowTempData"][10]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][10]["name"] = "IsSameLine"
 defs["structs"]["ImGuiWindowTempData"][10]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][11] = {}
-defs["structs"]["ImGuiWindowTempData"][11]["comment"] = " // Indentation / start position from left of window (increased by TreePush/TreePop, etc.)"
+defs["structs"]["ImGuiWindowTempData"][11]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][11]["comment"]["comments"] = " // Indentation / start position from left of window (increased by TreePush/TreePop, etc.)"
 defs["structs"]["ImGuiWindowTempData"][11]["name"] = "Indent"
 defs["structs"]["ImGuiWindowTempData"][11]["type"] = "ImVec1"
 defs["structs"]["ImGuiWindowTempData"][12] = {}
-defs["structs"]["ImGuiWindowTempData"][12]["comment"] = " // Offset to the current column (if ColumnsCurrent > 0). FIXME: This and the above should be a stack to allow use cases like Tree->Column->Tree. Need revamp columns API."
+defs["structs"]["ImGuiWindowTempData"][12]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][12]["comment"]["comments"] = " // Offset to the current column (if ColumnsCurrent > 0). FIXME: This and the above should be a stack to allow use cases like Tree->Column->Tree. Need revamp columns API."
 defs["structs"]["ImGuiWindowTempData"][12]["name"] = "ColumnsOffset"
 defs["structs"]["ImGuiWindowTempData"][12]["type"] = "ImVec1"
 defs["structs"]["ImGuiWindowTempData"][13] = {}
+defs["structs"]["ImGuiWindowTempData"][13]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][13]["name"] = "GroupOffset"
 defs["structs"]["ImGuiWindowTempData"][13]["type"] = "ImVec1"
 defs["structs"]["ImGuiWindowTempData"][14] = {}
-defs["structs"]["ImGuiWindowTempData"][14]["comment"] = "// Record the loss of precision of CursorStartPos due to really large scrolling amount. This is used by clipper to compensentate and fix the most common use case of large scroll area."
+defs["structs"]["ImGuiWindowTempData"][14]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][14]["comment"]["comments"] = "// Record the loss of precision of CursorStartPos due to really large scrolling amount. This is used by clipper to compensentate and fix the most common use case of large scroll area."
 defs["structs"]["ImGuiWindowTempData"][14]["name"] = "CursorStartPosLossyness"
 defs["structs"]["ImGuiWindowTempData"][14]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][15] = {}
-defs["structs"]["ImGuiWindowTempData"][15]["comment"] = "    // Keyboard/Gamepad navigation // Current layer, 0..31 (we currently only use 0..1)"
+defs["structs"]["ImGuiWindowTempData"][15]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][15]["comment"]["comments"] = " // Current layer, 0..31 (we currently only use 0..1)"
+defs["structs"]["ImGuiWindowTempData"][15]["comment"]["prevcomments"] = "\
+    // Keyboard/Gamepad navigation"
 defs["structs"]["ImGuiWindowTempData"][15]["name"] = "NavLayerCurrent"
 defs["structs"]["ImGuiWindowTempData"][15]["type"] = "ImGuiNavLayer"
 defs["structs"]["ImGuiWindowTempData"][16] = {}
-defs["structs"]["ImGuiWindowTempData"][16]["comment"] = " // Which layers have been written to (result from previous frame)"
+defs["structs"]["ImGuiWindowTempData"][16]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][16]["comment"]["comments"] = " // Which layers have been written to (result from previous frame)"
 defs["structs"]["ImGuiWindowTempData"][16]["name"] = "NavLayersActiveMask"
 defs["structs"]["ImGuiWindowTempData"][16]["type"] = "short"
 defs["structs"]["ImGuiWindowTempData"][17] = {}
-defs["structs"]["ImGuiWindowTempData"][17]["comment"] = "// Which layers have been written to (accumulator for current frame)"
+defs["structs"]["ImGuiWindowTempData"][17]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][17]["comment"]["comments"] = "// Which layers have been written to (accumulator for current frame)"
 defs["structs"]["ImGuiWindowTempData"][17]["name"] = "NavLayersActiveMaskNext"
 defs["structs"]["ImGuiWindowTempData"][17]["type"] = "short"
 defs["structs"]["ImGuiWindowTempData"][18] = {}
-defs["structs"]["ImGuiWindowTempData"][18]["comment"] = " // Current focus scope ID while appending"
+defs["structs"]["ImGuiWindowTempData"][18]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][18]["comment"]["comments"] = " // Current focus scope ID while appending"
 defs["structs"]["ImGuiWindowTempData"][18]["name"] = "NavFocusScopeIdCurrent"
 defs["structs"]["ImGuiWindowTempData"][18]["type"] = "ImGuiID"
 defs["structs"]["ImGuiWindowTempData"][19] = {}
+defs["structs"]["ImGuiWindowTempData"][19]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][19]["name"] = "NavHideHighlightOneFrame"
 defs["structs"]["ImGuiWindowTempData"][19]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][20] = {}
-defs["structs"]["ImGuiWindowTempData"][20]["comment"] = " // Set when scrolling can be used (ScrollMax > 0.0f)"
+defs["structs"]["ImGuiWindowTempData"][20]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][20]["comment"]["comments"] = " // Set when scrolling can be used (ScrollMax > 0.0f)"
 defs["structs"]["ImGuiWindowTempData"][20]["name"] = "NavHasScroll"
 defs["structs"]["ImGuiWindowTempData"][20]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][21] = {}
-defs["structs"]["ImGuiWindowTempData"][21]["comment"] = "    // Miscellaneous // FIXME: Remove this"
+defs["structs"]["ImGuiWindowTempData"][21]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][21]["comment"]["comments"] = " // FIXME: Remove this"
+defs["structs"]["ImGuiWindowTempData"][21]["comment"]["prevcomments"] = "\
+    // Miscellaneous"
 defs["structs"]["ImGuiWindowTempData"][21]["name"] = "MenuBarAppending"
 defs["structs"]["ImGuiWindowTempData"][21]["type"] = "bool"
 defs["structs"]["ImGuiWindowTempData"][22] = {}
-defs["structs"]["ImGuiWindowTempData"][22]["comment"] = " // MenuBarOffset.x is sort of equivalent of a per-layer CursorPos.x, saved/restored as we switch to the menu bar. The only situation when MenuBarOffset.y is > 0 if when (SafeAreaPadding.y > FramePadding.y), often used on TVs."
+defs["structs"]["ImGuiWindowTempData"][22]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][22]["comment"]["comments"] = " // MenuBarOffset.x is sort of equivalent of a per-layer CursorPos.x, saved/restored as we switch to the menu bar. The only situation when MenuBarOffset.y is > 0 if when (SafeAreaPadding.y > FramePadding.y), often used on TVs."
 defs["structs"]["ImGuiWindowTempData"][22]["name"] = "MenuBarOffset"
 defs["structs"]["ImGuiWindowTempData"][22]["type"] = "ImVec2"
 defs["structs"]["ImGuiWindowTempData"][23] = {}
-defs["structs"]["ImGuiWindowTempData"][23]["comment"] = " // Simplified columns storage for menu items measurement"
+defs["structs"]["ImGuiWindowTempData"][23]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][23]["comment"]["comments"] = " // Simplified columns storage for menu items measurement"
 defs["structs"]["ImGuiWindowTempData"][23]["name"] = "MenuColumns"
 defs["structs"]["ImGuiWindowTempData"][23]["type"] = "ImGuiMenuColumns"
 defs["structs"]["ImGuiWindowTempData"][24] = {}
-defs["structs"]["ImGuiWindowTempData"][24]["comment"] = " // Current tree depth."
+defs["structs"]["ImGuiWindowTempData"][24]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][24]["comment"]["comments"] = " // Current tree depth."
 defs["structs"]["ImGuiWindowTempData"][24]["name"] = "TreeDepth"
 defs["structs"]["ImGuiWindowTempData"][24]["type"] = "int"
 defs["structs"]["ImGuiWindowTempData"][25] = {}
-defs["structs"]["ImGuiWindowTempData"][25]["comment"] = " // Store a copy of !g.NavIdIsAlive for TreeDepth 0..31.. Could be turned into a ImU64 if necessary."
+defs["structs"]["ImGuiWindowTempData"][25]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][25]["comment"]["comments"] = " // Store a copy of !g.NavIdIsAlive for TreeDepth 0..31.. Could be turned into a ImU64 if necessary."
 defs["structs"]["ImGuiWindowTempData"][25]["name"] = "TreeJumpToParentOnPopMask"
 defs["structs"]["ImGuiWindowTempData"][25]["type"] = "ImU32"
 defs["structs"]["ImGuiWindowTempData"][26] = {}
+defs["structs"]["ImGuiWindowTempData"][26]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][26]["name"] = "ChildWindows"
 defs["structs"]["ImGuiWindowTempData"][26]["template_type"] = "ImGuiWindow*"
 defs["structs"]["ImGuiWindowTempData"][26]["type"] = "ImVector_ImGuiWindowPtr"
 defs["structs"]["ImGuiWindowTempData"][27] = {}
-defs["structs"]["ImGuiWindowTempData"][27]["comment"] = " // Current persistent per-window storage (store e.g. tree node open/close state)"
+defs["structs"]["ImGuiWindowTempData"][27]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][27]["comment"]["comments"] = " // Current persistent per-window storage (store e.g. tree node open/close state)"
 defs["structs"]["ImGuiWindowTempData"][27]["name"] = "StateStorage"
 defs["structs"]["ImGuiWindowTempData"][27]["type"] = "ImGuiStorage*"
 defs["structs"]["ImGuiWindowTempData"][28] = {}
-defs["structs"]["ImGuiWindowTempData"][28]["comment"] = " // Current columns set"
+defs["structs"]["ImGuiWindowTempData"][28]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][28]["comment"]["comments"] = " // Current columns set"
 defs["structs"]["ImGuiWindowTempData"][28]["name"] = "CurrentColumns"
 defs["structs"]["ImGuiWindowTempData"][28]["type"] = "ImGuiOldColumns*"
 defs["structs"]["ImGuiWindowTempData"][29] = {}
-defs["structs"]["ImGuiWindowTempData"][29]["comment"] = " // Current table index (into g.Tables)"
+defs["structs"]["ImGuiWindowTempData"][29]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][29]["comment"]["comments"] = " // Current table index (into g.Tables)"
 defs["structs"]["ImGuiWindowTempData"][29]["name"] = "CurrentTableIdx"
 defs["structs"]["ImGuiWindowTempData"][29]["type"] = "int"
 defs["structs"]["ImGuiWindowTempData"][30] = {}
+defs["structs"]["ImGuiWindowTempData"][30]["comment"] = {}
 defs["structs"]["ImGuiWindowTempData"][30]["name"] = "LayoutType"
 defs["structs"]["ImGuiWindowTempData"][30]["type"] = "ImGuiLayoutType"
 defs["structs"]["ImGuiWindowTempData"][31] = {}
-defs["structs"]["ImGuiWindowTempData"][31]["comment"] = " // Layout type of parent window at the time of Begin()"
+defs["structs"]["ImGuiWindowTempData"][31]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][31]["comment"]["comments"] = " // Layout type of parent window at the time of Begin()"
 defs["structs"]["ImGuiWindowTempData"][31]["name"] = "ParentLayoutType"
 defs["structs"]["ImGuiWindowTempData"][31]["type"] = "ImGuiLayoutType"
 defs["structs"]["ImGuiWindowTempData"][32] = {}
-defs["structs"]["ImGuiWindowTempData"][32]["comment"] = "    // Local parameters stacks\
-    // We store the current settings outside of the vectors to increase memory locality (reduce cache misses). The vectors are rarely modified. Also it allows us to not heap allocate for short-lived windows which are not using those settings. // Current item width (>0.0: width in pixels, <0.0: align xx pixels to the right of window)."
+defs["structs"]["ImGuiWindowTempData"][32]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][32]["comment"]["comments"] = " // Current item width (>0.0: width in pixels, <0.0: align xx pixels to the right of window)."
+defs["structs"]["ImGuiWindowTempData"][32]["comment"]["prevcomments"] = "\
+    // Local parameters stacks\
+    // We store the current settings outside of the vectors to increase memory locality (reduce cache misses). The vectors are rarely modified. Also it allows us to not heap allocate for short-lived windows which are not using those settings."
 defs["structs"]["ImGuiWindowTempData"][32]["name"] = "ItemWidth"
 defs["structs"]["ImGuiWindowTempData"][32]["type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][33] = {}
-defs["structs"]["ImGuiWindowTempData"][33]["comment"] = " // Current text wrap pos."
+defs["structs"]["ImGuiWindowTempData"][33]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][33]["comment"]["comments"] = " // Current text wrap pos."
 defs["structs"]["ImGuiWindowTempData"][33]["name"] = "TextWrapPos"
 defs["structs"]["ImGuiWindowTempData"][33]["type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][34] = {}
-defs["structs"]["ImGuiWindowTempData"][34]["comment"] = " // Store item widths to restore (attention: .back() is not == ItemWidth)"
+defs["structs"]["ImGuiWindowTempData"][34]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][34]["comment"]["comments"] = " // Store item widths to restore (attention: .back() is not == ItemWidth)"
 defs["structs"]["ImGuiWindowTempData"][34]["name"] = "ItemWidthStack"
 defs["structs"]["ImGuiWindowTempData"][34]["template_type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][34]["type"] = "ImVector_float"
 defs["structs"]["ImGuiWindowTempData"][35] = {}
-defs["structs"]["ImGuiWindowTempData"][35]["comment"] = " // Store text wrap pos to restore (attention: .back() is not == TextWrapPos)"
+defs["structs"]["ImGuiWindowTempData"][35]["comment"] = {}
+defs["structs"]["ImGuiWindowTempData"][35]["comment"]["comments"] = " // Store text wrap pos to restore (attention: .back() is not == TextWrapPos)"
 defs["structs"]["ImGuiWindowTempData"][35]["name"] = "TextWrapPosStack"
 defs["structs"]["ImGuiWindowTempData"][35]["template_type"] = "float"
 defs["structs"]["ImGuiWindowTempData"][35]["type"] = "ImVector_float"
 defs["structs"]["ImRect"] = {}
 defs["structs"]["ImRect"][1] = {}
-defs["structs"]["ImRect"][1]["comment"] = " // Upper-left"
+defs["structs"]["ImRect"][1]["comment"] = {}
+defs["structs"]["ImRect"][1]["comment"]["comments"] = " // Upper-left"
 defs["structs"]["ImRect"][1]["name"] = "Min"
 defs["structs"]["ImRect"][1]["type"] = "ImVec2"
 defs["structs"]["ImRect"][2] = {}
-defs["structs"]["ImRect"][2]["comment"] = " // Lower-right"
+defs["structs"]["ImRect"][2]["comment"] = {}
+defs["structs"]["ImRect"][2]["comment"]["comments"] = " // Lower-right"
 defs["structs"]["ImRect"][2]["name"] = "Max"
 defs["structs"]["ImRect"][2]["type"] = "ImVec2"
 defs["structs"]["ImVec1"] = {}
 defs["structs"]["ImVec1"][1] = {}
+defs["structs"]["ImVec1"][1]["comment"] = {}
 defs["structs"]["ImVec1"][1]["name"] = "x"
 defs["structs"]["ImVec1"][1]["type"] = "float"
 defs["structs"]["ImVec2"] = {}
 defs["structs"]["ImVec2"][1] = {}
+defs["structs"]["ImVec2"][1]["comment"] = {}
 defs["structs"]["ImVec2"][1]["name"] = "x"
 defs["structs"]["ImVec2"][1]["type"] = "float"
 defs["structs"]["ImVec2"][2] = {}
+defs["structs"]["ImVec2"][2]["comment"] = defs["structs"]["ImVec2"][1]["comment"]
 defs["structs"]["ImVec2"][2]["name"] = "y"
 defs["structs"]["ImVec2"][2]["type"] = "float"
 defs["structs"]["ImVec2ih"] = {}
 defs["structs"]["ImVec2ih"][1] = {}
+defs["structs"]["ImVec2ih"][1]["comment"] = {}
 defs["structs"]["ImVec2ih"][1]["name"] = "x"
 defs["structs"]["ImVec2ih"][1]["type"] = "short"
 defs["structs"]["ImVec2ih"][2] = {}
+defs["structs"]["ImVec2ih"][2]["comment"] = defs["structs"]["ImVec2ih"][1]["comment"]
 defs["structs"]["ImVec2ih"][2]["name"] = "y"
 defs["structs"]["ImVec2ih"][2]["type"] = "short"
 defs["structs"]["ImVec4"] = {}
 defs["structs"]["ImVec4"][1] = {}
+defs["structs"]["ImVec4"][1]["comment"] = {}
 defs["structs"]["ImVec4"][1]["name"] = "x"
 defs["structs"]["ImVec4"][1]["type"] = "float"
 defs["structs"]["ImVec4"][2] = {}
+defs["structs"]["ImVec4"][2]["comment"] = defs["structs"]["ImVec4"][1]["comment"]
 defs["structs"]["ImVec4"][2]["name"] = "y"
 defs["structs"]["ImVec4"][2]["type"] = "float"
 defs["structs"]["ImVec4"][3] = {}
+defs["structs"]["ImVec4"][3]["comment"] = defs["structs"]["ImVec4"][1]["comment"]
 defs["structs"]["ImVec4"][3]["name"] = "z"
 defs["structs"]["ImVec4"][3]["type"] = "float"
 defs["structs"]["ImVec4"][4] = {}
+defs["structs"]["ImVec4"][4]["comment"] = defs["structs"]["ImVec4"][1]["comment"]
 defs["structs"]["ImVec4"][4]["name"] = "w"
 defs["structs"]["ImVec4"][4]["type"] = "float"
 defs["structs"]["STB_TexteditState"] = {}
 defs["structs"]["STB_TexteditState"][1] = {}
-defs["structs"]["STB_TexteditState"][1]["comment"] = "\
+defs["structs"]["STB_TexteditState"][1]["comment"] = {}
+defs["structs"]["STB_TexteditState"][1]["comment"]["prevcomments"] = "\
    /////////////////////\
    //\
    // public data\
@@ -9471,15 +11432,19 @@ defs["structs"]["STB_TexteditState"][1]["comment"] = "\
 defs["structs"]["STB_TexteditState"][1]["name"] = "cursor"
 defs["structs"]["STB_TexteditState"][1]["type"] = "int"
 defs["structs"]["STB_TexteditState"][2] = {}
-defs["structs"]["STB_TexteditState"][2]["comment"] = "\
-   // position of the text cursor within the string // selection start point"
+defs["structs"]["STB_TexteditState"][2]["comment"] = {}
+defs["structs"]["STB_TexteditState"][2]["comment"]["comments"] = " // selection start point"
+defs["structs"]["STB_TexteditState"][2]["comment"]["prevcomments"] = "\
+   // position of the text cursor within the string"
 defs["structs"]["STB_TexteditState"][2]["name"] = "select_start"
 defs["structs"]["STB_TexteditState"][2]["type"] = "int"
 defs["structs"]["STB_TexteditState"][3] = {}
+defs["structs"]["STB_TexteditState"][3]["comment"] = {}
 defs["structs"]["STB_TexteditState"][3]["name"] = "select_end"
 defs["structs"]["STB_TexteditState"][3]["type"] = "int"
 defs["structs"]["STB_TexteditState"][4] = {}
-defs["structs"]["STB_TexteditState"][4]["comment"] = "\
+defs["structs"]["STB_TexteditState"][4]["comment"] = {}
+defs["structs"]["STB_TexteditState"][4]["comment"]["prevcomments"] = "\
    // selection start and end point in characters; if equal, no selection.\
    // note that start may be less than or greater than end (e.g. when\
    // dragging the mouse, start is where the initial click was, and you\
@@ -9487,163 +11452,207 @@ defs["structs"]["STB_TexteditState"][4]["comment"] = "\
 defs["structs"]["STB_TexteditState"][4]["name"] = "insert_mode"
 defs["structs"]["STB_TexteditState"][4]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][5] = {}
-defs["structs"]["STB_TexteditState"][5]["comment"] = "\
+defs["structs"]["STB_TexteditState"][5]["comment"] = {}
+defs["structs"]["STB_TexteditState"][5]["comment"]["prevcomments"] = "\
    // each textfield keeps its own insert mode state. to keep an app-wide\
    // insert mode, copy this value in/out of the app state"
 defs["structs"]["STB_TexteditState"][5]["name"] = "row_count_per_page"
 defs["structs"]["STB_TexteditState"][5]["type"] = "int"
 defs["structs"]["STB_TexteditState"][6] = {}
-defs["structs"]["STB_TexteditState"][6]["comment"] = "   /////////////////////\
+defs["structs"]["STB_TexteditState"][6]["comment"] = {}
+defs["structs"]["STB_TexteditState"][6]["comment"]["comments"] = " // not implemented yet"
+defs["structs"]["STB_TexteditState"][6]["comment"]["prevcomments"] = "\
+   // page size in number of row.\
+   // this value MUST be set to >0 for pageup or pagedown in multilines documents.\
+   /////////////////////\
    //\
    // private data\
-   // // not implemented yet"
+   //"
 defs["structs"]["STB_TexteditState"][6]["name"] = "cursor_at_end_of_line"
 defs["structs"]["STB_TexteditState"][6]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][7] = {}
+defs["structs"]["STB_TexteditState"][7]["comment"] = {}
 defs["structs"]["STB_TexteditState"][7]["name"] = "initialized"
 defs["structs"]["STB_TexteditState"][7]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][8] = {}
+defs["structs"]["STB_TexteditState"][8]["comment"] = {}
 defs["structs"]["STB_TexteditState"][8]["name"] = "has_preferred_x"
 defs["structs"]["STB_TexteditState"][8]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][9] = {}
+defs["structs"]["STB_TexteditState"][9]["comment"] = {}
 defs["structs"]["STB_TexteditState"][9]["name"] = "single_line"
 defs["structs"]["STB_TexteditState"][9]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][10] = {}
+defs["structs"]["STB_TexteditState"][10]["comment"] = {}
 defs["structs"]["STB_TexteditState"][10]["name"] = "padding1"
 defs["structs"]["STB_TexteditState"][10]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][11] = {}
+defs["structs"]["STB_TexteditState"][11]["comment"] = defs["structs"]["STB_TexteditState"][10]["comment"]
 defs["structs"]["STB_TexteditState"][11]["name"] = "padding2"
 defs["structs"]["STB_TexteditState"][11]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][12] = {}
+defs["structs"]["STB_TexteditState"][12]["comment"] = defs["structs"]["STB_TexteditState"][10]["comment"]
 defs["structs"]["STB_TexteditState"][12]["name"] = "padding3"
 defs["structs"]["STB_TexteditState"][12]["type"] = "unsigned char"
 defs["structs"]["STB_TexteditState"][13] = {}
-defs["structs"]["STB_TexteditState"][13]["comment"] = " // this determines where the cursor up/down tries to seek to along x"
+defs["structs"]["STB_TexteditState"][13]["comment"] = {}
+defs["structs"]["STB_TexteditState"][13]["comment"]["comments"] = " // this determines where the cursor up/down tries to seek to along x"
 defs["structs"]["STB_TexteditState"][13]["name"] = "preferred_x"
 defs["structs"]["STB_TexteditState"][13]["type"] = "float"
 defs["structs"]["STB_TexteditState"][14] = {}
+defs["structs"]["STB_TexteditState"][14]["comment"] = {}
 defs["structs"]["STB_TexteditState"][14]["name"] = "undostate"
 defs["structs"]["STB_TexteditState"][14]["type"] = "StbUndoState"
 defs["structs"]["StbTexteditRow"] = {}
 defs["structs"]["StbTexteditRow"][1] = {}
-defs["structs"]["StbTexteditRow"][1]["comment"] = " // starting x location, end x location (allows for align=right, etc)"
+defs["structs"]["StbTexteditRow"][1]["comment"] = {}
+defs["structs"]["StbTexteditRow"][1]["comment"]["comments"] = " // starting x location, end x location (allows for align=right, etc)"
 defs["structs"]["StbTexteditRow"][1]["name"] = "x0"
 defs["structs"]["StbTexteditRow"][1]["type"] = "float"
 defs["structs"]["StbTexteditRow"][2] = {}
-defs["structs"]["StbTexteditRow"][2]["comment"] = " // starting x location, end x location (allows for align=right, etc)"
+defs["structs"]["StbTexteditRow"][2]["comment"] = defs["structs"]["StbTexteditRow"][1]["comment"]
 defs["structs"]["StbTexteditRow"][2]["name"] = "x1"
 defs["structs"]["StbTexteditRow"][2]["type"] = "float"
 defs["structs"]["StbTexteditRow"][3] = {}
-defs["structs"]["StbTexteditRow"][3]["comment"] = " // position of baseline relative to previous row's baseline"
+defs["structs"]["StbTexteditRow"][3]["comment"] = {}
+defs["structs"]["StbTexteditRow"][3]["comment"]["comments"] = " // position of baseline relative to previous row's baseline"
 defs["structs"]["StbTexteditRow"][3]["name"] = "baseline_y_delta"
 defs["structs"]["StbTexteditRow"][3]["type"] = "float"
 defs["structs"]["StbTexteditRow"][4] = {}
-defs["structs"]["StbTexteditRow"][4]["comment"] = " // height of row above and below baseline"
+defs["structs"]["StbTexteditRow"][4]["comment"] = {}
+defs["structs"]["StbTexteditRow"][4]["comment"]["comments"] = " // height of row above and below baseline"
 defs["structs"]["StbTexteditRow"][4]["name"] = "ymin"
 defs["structs"]["StbTexteditRow"][4]["type"] = "float"
 defs["structs"]["StbTexteditRow"][5] = {}
-defs["structs"]["StbTexteditRow"][5]["comment"] = " // height of row above and below baseline"
+defs["structs"]["StbTexteditRow"][5]["comment"] = defs["structs"]["StbTexteditRow"][4]["comment"]
 defs["structs"]["StbTexteditRow"][5]["name"] = "ymax"
 defs["structs"]["StbTexteditRow"][5]["type"] = "float"
 defs["structs"]["StbTexteditRow"][6] = {}
+defs["structs"]["StbTexteditRow"][6]["comment"] = {}
 defs["structs"]["StbTexteditRow"][6]["name"] = "num_chars"
 defs["structs"]["StbTexteditRow"][6]["type"] = "int"
 defs["structs"]["StbUndoRecord"] = {}
 defs["structs"]["StbUndoRecord"][1] = {}
-defs["structs"]["StbUndoRecord"][1]["comment"] = "\
+defs["structs"]["StbUndoRecord"][1]["comment"] = {}
+defs["structs"]["StbUndoRecord"][1]["comment"]["prevcomments"] = "\
    // private data"
 defs["structs"]["StbUndoRecord"][1]["name"] = "where"
 defs["structs"]["StbUndoRecord"][1]["type"] = "int"
 defs["structs"]["StbUndoRecord"][2] = {}
+defs["structs"]["StbUndoRecord"][2]["comment"] = {}
 defs["structs"]["StbUndoRecord"][2]["name"] = "insert_length"
 defs["structs"]["StbUndoRecord"][2]["type"] = "int"
 defs["structs"]["StbUndoRecord"][3] = {}
+defs["structs"]["StbUndoRecord"][3]["comment"] = {}
 defs["structs"]["StbUndoRecord"][3]["name"] = "delete_length"
 defs["structs"]["StbUndoRecord"][3]["type"] = "int"
 defs["structs"]["StbUndoRecord"][4] = {}
+defs["structs"]["StbUndoRecord"][4]["comment"] = {}
 defs["structs"]["StbUndoRecord"][4]["name"] = "char_storage"
 defs["structs"]["StbUndoRecord"][4]["type"] = "int"
 defs["structs"]["StbUndoState"] = {}
 defs["structs"]["StbUndoState"][1] = {}
-defs["structs"]["StbUndoState"][1]["comment"] = "\
+defs["structs"]["StbUndoState"][1]["comment"] = {}
+defs["structs"]["StbUndoState"][1]["comment"]["prevcomments"] = "\
    // private data"
 defs["structs"]["StbUndoState"][1]["name"] = "undo_rec[99]"
 defs["structs"]["StbUndoState"][1]["size"] = 99
 defs["structs"]["StbUndoState"][1]["type"] = "StbUndoRecord"
 defs["structs"]["StbUndoState"][2] = {}
+defs["structs"]["StbUndoState"][2]["comment"] = {}
 defs["structs"]["StbUndoState"][2]["name"] = "undo_char[999]"
 defs["structs"]["StbUndoState"][2]["size"] = 999
 defs["structs"]["StbUndoState"][2]["type"] = "ImWchar"
 defs["structs"]["StbUndoState"][3] = {}
+defs["structs"]["StbUndoState"][3]["comment"] = {}
 defs["structs"]["StbUndoState"][3]["name"] = "undo_point"
 defs["structs"]["StbUndoState"][3]["type"] = "short"
 defs["structs"]["StbUndoState"][4] = {}
+defs["structs"]["StbUndoState"][4]["comment"] = defs["structs"]["StbUndoState"][3]["comment"]
 defs["structs"]["StbUndoState"][4]["name"] = "redo_point"
 defs["structs"]["StbUndoState"][4]["type"] = "short"
 defs["structs"]["StbUndoState"][5] = {}
+defs["structs"]["StbUndoState"][5]["comment"] = {}
 defs["structs"]["StbUndoState"][5]["name"] = "undo_char_point"
 defs["structs"]["StbUndoState"][5]["type"] = "int"
 defs["structs"]["StbUndoState"][6] = {}
+defs["structs"]["StbUndoState"][6]["comment"] = defs["structs"]["StbUndoState"][5]["comment"]
 defs["structs"]["StbUndoState"][6]["name"] = "redo_char_point"
 defs["structs"]["StbUndoState"][6]["type"] = "int"
 defs["templated_structs"] = {}
 defs["templated_structs"]["ImBitArray"] = {}
 defs["templated_structs"]["ImBitArray"][1] = {}
+defs["templated_structs"]["ImBitArray"][1]["comment"] = {}
 defs["templated_structs"]["ImBitArray"][1]["name"] = "Storage[(BITCOUNT+31)>>5]"
 defs["templated_structs"]["ImBitArray"][1]["type"] = "ImU32"
 defs["templated_structs"]["ImChunkStream"] = {}
 defs["templated_structs"]["ImChunkStream"][1] = {}
+defs["templated_structs"]["ImChunkStream"][1]["comment"] = {}
 defs["templated_structs"]["ImChunkStream"][1]["name"] = "Buf"
 defs["templated_structs"]["ImChunkStream"][1]["template_type"] = "char"
 defs["templated_structs"]["ImChunkStream"][1]["type"] = "ImVector_char"
 defs["templated_structs"]["ImPool"] = {}
 defs["templated_structs"]["ImPool"][1] = {}
-defs["templated_structs"]["ImPool"][1]["comment"] = " // Contiguous data"
+defs["templated_structs"]["ImPool"][1]["comment"] = {}
+defs["templated_structs"]["ImPool"][1]["comment"]["comments"] = " // Contiguous data"
 defs["templated_structs"]["ImPool"][1]["name"] = "Buf"
 defs["templated_structs"]["ImPool"][1]["type"] = "ImVector<T>"
 defs["templated_structs"]["ImPool"][2] = {}
-defs["templated_structs"]["ImPool"][2]["comment"] = " // ID->Index"
+defs["templated_structs"]["ImPool"][2]["comment"] = {}
+defs["templated_structs"]["ImPool"][2]["comment"]["comments"] = " // ID->Index"
 defs["templated_structs"]["ImPool"][2]["name"] = "Map"
 defs["templated_structs"]["ImPool"][2]["type"] = "ImGuiStorage"
 defs["templated_structs"]["ImPool"][3] = {}
-defs["templated_structs"]["ImPool"][3]["comment"] = " // Next free idx to use"
+defs["templated_structs"]["ImPool"][3]["comment"] = {}
+defs["templated_structs"]["ImPool"][3]["comment"]["comments"] = " // Next free idx to use"
 defs["templated_structs"]["ImPool"][3]["name"] = "FreeIdx"
 defs["templated_structs"]["ImPool"][3]["type"] = "ImPoolIdx"
 defs["templated_structs"]["ImPool"][4] = {}
-defs["templated_structs"]["ImPool"][4]["comment"] = " // Number of active/alive items (for display purpose)"
+defs["templated_structs"]["ImPool"][4]["comment"] = {}
+defs["templated_structs"]["ImPool"][4]["comment"]["comments"] = " // Number of active/alive items (for display purpose)"
 defs["templated_structs"]["ImPool"][4]["name"] = "AliveCount"
 defs["templated_structs"]["ImPool"][4]["type"] = "ImPoolIdx"
 defs["templated_structs"]["ImSpan"] = {}
 defs["templated_structs"]["ImSpan"][1] = {}
+defs["templated_structs"]["ImSpan"][1]["comment"] = {}
 defs["templated_structs"]["ImSpan"][1]["name"] = "Data"
 defs["templated_structs"]["ImSpan"][1]["type"] = "T*"
 defs["templated_structs"]["ImSpan"][2] = {}
+defs["templated_structs"]["ImSpan"][2]["comment"] = {}
 defs["templated_structs"]["ImSpan"][2]["name"] = "DataEnd"
 defs["templated_structs"]["ImSpan"][2]["type"] = "T*"
 defs["templated_structs"]["ImSpanAllocator"] = {}
 defs["templated_structs"]["ImSpanAllocator"][1] = {}
+defs["templated_structs"]["ImSpanAllocator"][1]["comment"] = {}
 defs["templated_structs"]["ImSpanAllocator"][1]["name"] = "BasePtr"
 defs["templated_structs"]["ImSpanAllocator"][1]["type"] = "char*"
 defs["templated_structs"]["ImSpanAllocator"][2] = {}
+defs["templated_structs"]["ImSpanAllocator"][2]["comment"] = {}
 defs["templated_structs"]["ImSpanAllocator"][2]["name"] = "CurrOff"
 defs["templated_structs"]["ImSpanAllocator"][2]["type"] = "int"
 defs["templated_structs"]["ImSpanAllocator"][3] = {}
+defs["templated_structs"]["ImSpanAllocator"][3]["comment"] = {}
 defs["templated_structs"]["ImSpanAllocator"][3]["name"] = "CurrIdx"
 defs["templated_structs"]["ImSpanAllocator"][3]["type"] = "int"
 defs["templated_structs"]["ImSpanAllocator"][4] = {}
+defs["templated_structs"]["ImSpanAllocator"][4]["comment"] = {}
 defs["templated_structs"]["ImSpanAllocator"][4]["name"] = "Offsets[CHUNKS]"
 defs["templated_structs"]["ImSpanAllocator"][4]["type"] = "int"
 defs["templated_structs"]["ImSpanAllocator"][5] = {}
+defs["templated_structs"]["ImSpanAllocator"][5]["comment"] = {}
 defs["templated_structs"]["ImSpanAllocator"][5]["name"] = "Sizes[CHUNKS]"
 defs["templated_structs"]["ImSpanAllocator"][5]["type"] = "int"
 defs["templated_structs"]["ImVector"] = {}
 defs["templated_structs"]["ImVector"][1] = {}
+defs["templated_structs"]["ImVector"][1]["comment"] = {}
 defs["templated_structs"]["ImVector"][1]["name"] = "Size"
 defs["templated_structs"]["ImVector"][1]["type"] = "int"
 defs["templated_structs"]["ImVector"][2] = {}
+defs["templated_structs"]["ImVector"][2]["comment"] = {}
 defs["templated_structs"]["ImVector"][2]["name"] = "Capacity"
 defs["templated_structs"]["ImVector"][2]["type"] = "int"
 defs["templated_structs"]["ImVector"][3] = {}
+defs["templated_structs"]["ImVector"][3]["comment"] = {}
 defs["templated_structs"]["ImVector"][3]["name"] = "Data"
 defs["templated_structs"]["ImVector"][3]["type"] = "T*"
 defs["templates_done"] = {}

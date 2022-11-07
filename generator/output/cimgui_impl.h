@@ -1,10 +1,7 @@
 #ifdef CIMGUI_USE_GLFW
 
 typedef struct GLFWwindow GLFWwindow;
-typedef struct GLFWmonitor GLFWmonitor;
-       
-
-struct GLFWwindow;
+typedef struct GLFWmonitor GLFWmonitor;struct GLFWwindow;
 struct GLFWmonitor;CIMGUI_API bool ImGui_ImplGlfw_InitForOpenGL(GLFWwindow* window,bool install_callbacks);
 CIMGUI_API bool ImGui_ImplGlfw_InitForVulkan(GLFWwindow* window,bool install_callbacks);
 CIMGUI_API bool ImGui_ImplGlfw_InitForOther(GLFWwindow* window,bool install_callbacks);
@@ -47,10 +44,7 @@ CIMGUI_API void ImGui_ImplOpenGL2_DestroyDeviceObjects(void);
 #ifdef CIMGUI_USE_SDL
 
 typedef struct SDL_Window SDL_Window;
-typedef struct SDL_Renderer SDL_Renderer;
-       
-
-struct SDL_Window;
+typedef struct SDL_Renderer SDL_Renderer;struct SDL_Window;
 struct SDL_Renderer;
 typedef union SDL_Event SDL_Event;CIMGUI_API bool ImGui_ImplSDL2_InitForOpenGL(SDL_Window* window,void* sdl_gl_context);
 CIMGUI_API bool ImGui_ImplSDL2_InitForVulkan(SDL_Window* window);

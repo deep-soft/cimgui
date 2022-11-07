@@ -133,9 +133,10 @@ end
 local function clean_outercomms(oc)
 	local oc2 = {}
 	for i,v in ipairs(oc) do
-		if v:match"^\n*%s+\n" then
-			--print(string.format("%q %q",v,v:match"^\n*%s*\n"))
-			v=v:gsub("\n*%s+\n","")
+		print(string.format("%d\n%q",i,v))
+		if v:match"\n%s*\n" then
+			print(string.format("match:\n%q",v))--,v:match"\n%s*\n"))
+			v=v:gsub("\n%s*\n","")
 			--print("clean",v)
 			oc2 = {}
 		else
@@ -333,11 +334,13 @@ local function getRE()
 	functionD_re = "^([^;{}]-%b()[\n%s%w]*%b{}%s-;*)",
 	--functionD_re = "^([^;{}]-%b()[^{}%(%)]*%b{})",
 	functype_re = "^%s*[%w%s%*]+%(%*[%w_]+%)%([^%(%)]*%)%s*;",
-	comment_re = "^%s*//[^\n]*",
-	comment2_re = "^%s*/%*.-%*/"
+	comment_re = "^\n*%s*//[^\n]*",
+	comment2_re = "^%s*/%*.-%*/",
+	emptyline_re = "^\n%s*\n"
 	}
 	
-	local resN = {"comment2_re","comment_re","functypedef_re","functype_re","function_re","functionD_re","typedef_st_re","struct_re","enum_re","union_re","namespace_re","class_re","typedef_re","vardef_re"}
+	local resN = {"comment2_re","comment_re","emptyline_re",
+	"functypedef_re","functype_re","function_re","functionD_re","typedef_st_re","struct_re","enum_re","union_re","namespace_re","class_re","typedef_re","vardef_re"}
 	
 	return res,resN
 end
@@ -364,7 +367,7 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 			if i then
 				
 				item = txt:sub(i,e)
-				--print("re_name",re_name,item)
+				print("re_name:",re_name,string.format("%q",item))
 				------------------
 				--[[
 				--if re~=functionD_re then --skip defined functions
@@ -375,7 +378,7 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 				table.insert(items[re_name],item)
 				--]]
 				--------------------
-				if re_name=="comment_re" or re_name=="comment2_re" then
+				if re_name=="comment_re" or re_name=="comment2_re" or re_name=="emptyline_re" then
 					--print("parit",item)
 					--[[
 					table.insert(outercomms,item)
@@ -435,7 +438,7 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 					else
 						error"no linenumdict"
 					end
-					table.insert(itemarr,{re_name=re_name,item=item,locat=loca,comments=comments})
+					table.insert(itemarr,{re_name=re_name,item=item,locat=loca,prevcomments=comments})
 					items[re_name] = items[re_name] or {}
 					table.insert(items[re_name],item)
 				end
@@ -1431,14 +1434,14 @@ function M.Parser()
 					it2 = it2:gsub("%s*=.+;",";")
 				end
 				table.insert(outtab,it2)
-				table.insert(commtab,it.comments or "")
+				table.insert(commtab,{prevcomments=it.prevcomments,comments=it.comments})--it.comments or "")
 				end
 			elseif it.re_name == "struct_re" then
 				--check if has declaration
 				local decl = it.item:match"%b{}%s*([^%s}{]+)%s*;"
 				if decl then
 					table.insert(outtab,"\n    "..it.name.." "..decl..";")
-					table.insert(commtab,it.comments or "")
+					table.insert(commtab,{prevcomments=it.prevcomments,comments=it.comments})--it.comments or "")
 				end
 				local cleanst,structname,strtab,comstab,predec = self:clean_structR1(it,doheader)
 				if doheader then
@@ -1695,7 +1698,7 @@ function M.Parser()
 			print("enumtype",enumtype) 
 			outtab.enumtypes[enumname] = enumtype
 		end
-		outtab.enum_comments[enumname] = it.comments
+		outtab.enum_comments[enumname] = {comments=it.comments, prevcomments=it.prevcomments}
 		outtab.enums[enumname] = {}
 		table.insert(enumsordered,enumname)
 		local inner = strip_end(it.item:match("%b{}"):sub(2,-2))
@@ -1778,7 +1781,7 @@ function M.Parser()
 				if not structname then print("NO NAME",cleanst,it.item) end
 				if structname and not self.typenames[structname] then
 					outtab.structs[structname] = {}
-					outtab.struct_comments[structname] = {comments=it.comments}
+					outtab.struct_comments[structname] = {comments=it.comments,prevcomments=it.prevcomments}
 					outtab.locations[structname] = it.locat
 					for j=3,#strtab-1 do
 						self:parse_struct_line(strtab[j],outtab.structs[structname],comstab[j])
@@ -2206,7 +2209,7 @@ local function location(file,locpathT,defines,COMPILER)
                 local loc_num_real = loc_num + loc_num_incr
                 loc_num_incr = loc_num_incr + 1
 				--if doprint then print(which_locationold,which_location) end
-				--if line:match("%S") then --nothing on emptyline
+				if line:match("%S") then --nothing on emptyline
                 if (which_locationold~=which_location) or (loc_num_realold and loc_num_realold < loc_num_real) then
                     --old line complete
 					--doprint = false
@@ -2218,7 +2221,7 @@ local function location(file,locpathT,defines,COMPILER)
                     which_locationold,loc_num_realold = which_location,loc_num_real
                 --return line,loc_num_real, which_location
                 end
-				--end
+				end
             end
         until false --forever
     end
