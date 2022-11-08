@@ -388,6 +388,13 @@ local function parseItems(txt,linenumdict, itparent, dumpit)
 						itemarr[#itemarr].comments = prev .. item 
 					end
 					--]]
+					--clean initial spaces
+					--item = item:gsub("^%s*(//.-)$","%1")
+					--if item:match"^[^\n%S]*" then
+						--print("commspace1",string.format("%q",item))
+						item = item:gsub("^[^\n%S]*(//.-)$","%1")
+						--print("commspace2",string.format("%q",item))
+					--end
 					--comments begining with \n will go to next item
 					if item:match("^%s*\n") then
 						table.insert(outercomms,item)
