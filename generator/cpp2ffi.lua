@@ -1206,7 +1206,7 @@ function M.Parser()
 		end
 		local defines = {}
 		local preprocessed = {}--
-		for line,loca,loca2 in M.location(pipe,names,defines,compiler) do
+		for line,loca,loca2 in M.location(pipe,names,defines,compiler,self.COMMENTS_GENERATION) do
 			self:insert(line, tostring(loca)..":"..tostring(loca2))
 			table.insert(preprocessed,line)--
 		end
@@ -2157,7 +2157,7 @@ M.serializeTableF = function(t)
 	return M.serializeTable("defs",t).."\nreturn defs"
 end
 --iterates lines from a gcc/clang -E in a specific location
-local function location(file,locpathT,defines,COMPILER)
+local function location(file,locpathT,defines,COMPILER,keepemptylines)
 	local define_re = "^#define%s+([^%s]+)%s+(.+)$"
 	local number_re = "^-?[0-9]+u*$"
 	local hex_re = "0x[0-9a-fA-F]+u*$"
@@ -2222,7 +2222,7 @@ local function location(file,locpathT,defines,COMPILER)
                 local loc_num_real = loc_num + loc_num_incr
                 loc_num_incr = loc_num_incr + 1
 				--if doprint then print(which_locationold,which_location) end
-				--if line:match("%S") then --nothing on emptyline
+				if keepemptylines or line:match("%S") then --nothing on emptyline
                 if (which_locationold~=which_location) or (loc_num_realold and loc_num_realold < loc_num_real) then
                     --old line complete
 					--doprint = false
@@ -2234,7 +2234,7 @@ local function location(file,locpathT,defines,COMPILER)
                     which_locationold,loc_num_realold = which_location,loc_num_real
                 --return line,loc_num_real, which_location
                 end
-				--end
+				end
             end
         until false --forever
     end
