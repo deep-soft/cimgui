@@ -1434,14 +1434,14 @@ function M.Parser()
 					it2 = it2:gsub("%s*=.+;",";")
 				end
 				table.insert(outtab,it2)
-				table.insert(commtab,{prevcomments=it.prevcomments,comments=it.comments})--it.comments or "")
+				table.insert(commtab,{above=it.prevcomments,sameline=it.comments})--it.comments or "")
 				end
 			elseif it.re_name == "struct_re" then
 				--check if has declaration
 				local decl = it.item:match"%b{}%s*([^%s}{]+)%s*;"
 				if decl then
 					table.insert(outtab,"\n    "..it.name.." "..decl..";")
-					table.insert(commtab,{prevcomments=it.prevcomments,comments=it.comments})--it.comments or "")
+					table.insert(commtab,{above=it.prevcomments,sameline=it.comments})--it.comments or "")
 				end
 				local cleanst,structname,strtab,comstab,predec = self:clean_structR1(it,doheader)
 				if doheader then
@@ -1645,7 +1645,11 @@ function M.Parser()
 	end
 	-----------
 	function par:parse_struct_line(line,outtab,comment)
-		comment = comment ~= "" and comment or nil
+		if type(comment)=="string" then
+			comment = comment ~= "" and comment or nil
+		else
+			comment = next(comment) and comment or nil
+		end
 		local functype_re = "^%s*[%w%s%*]+%(%*[%w_]+%)%([^%(%)]*%)"
 		local functype_reex = "^(%s*[%w%s%*]+%(%*)([%w_]+)(%)%([^%(%)]*%))"
 		line = clean_spaces(line)
@@ -1698,7 +1702,8 @@ function M.Parser()
 			print("enumtype",enumtype) 
 			outtab.enumtypes[enumname] = enumtype
 		end
-		outtab.enum_comments[enumname] = {comments=it.comments, prevcomments=it.prevcomments}
+		outtab.enum_comments[enumname] = {sameline=it.comments, above=it.prevcomments}
+		outtab.enum_comments[enumname] = next(outtab.enum_comments[enumname]) and outtab.enum_comments[enumname] or nil
 		outtab.enums[enumname] = {}
 		table.insert(enumsordered,enumname)
 		local inner = strip_end(it.item:match("%b{}"):sub(2,-2))
@@ -1781,7 +1786,8 @@ function M.Parser()
 				if not structname then print("NO NAME",cleanst,it.item) end
 				if structname and not self.typenames[structname] then
 					outtab.structs[structname] = {}
-					outtab.struct_comments[structname] = {comments=it.comments,prevcomments=it.prevcomments}
+					outtab.struct_comments[structname] = {sameline=it.comments,above=it.prevcomments}
+					outtab.struct_comments[structname] = next(outtab.struct_comments[structname]) and outtab.struct_comments[structname] or nil
 					outtab.locations[structname] = it.locat
 					for j=3,#strtab-1 do
 						self:parse_struct_line(strtab[j],outtab.structs[structname],comstab[j])
