@@ -175,37 +175,37 @@
       },
       {
         "calc_value": 1,
-        "comment": " // PathStroke(), AddPolyline(): specify that shape should be closed (Important: this is always == 1 for legacy reason)",
+        "comment": "// PathStroke(), AddPolyline(): specify that shape should be closed (Important: this is always == 1 for legacy reason)",
         "name": "ImDrawFlags_Closed",
         "value": "1 << 0"
       },
       {
         "calc_value": 16,
-        "comment": " // AddRect(), AddRectFilled(), PathRect(): enable rounding top-left corner only (when rounding > 0.0f, we default to all corners). Was 0x01.",
+        "comment": "// AddRect(), AddRectFilled(), PathRect(): enable rounding top-left corner only (when rounding > 0.0f, we default to all corners). Was 0x01.",
         "name": "ImDrawFlags_RoundCornersTopLeft",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // AddRect(), AddRectFilled(), PathRect(): enable rounding top-right corner only (when rounding > 0.0f, we default to all corners). Was 0x02.",
+        "comment": "// AddRect(), AddRectFilled(), PathRect(): enable rounding top-right corner only (when rounding > 0.0f, we default to all corners). Was 0x02.",
         "name": "ImDrawFlags_RoundCornersTopRight",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // AddRect(), AddRectFilled(), PathRect(): enable rounding bottom-left corner only (when rounding > 0.0f, we default to all corners). Was 0x04.",
+        "comment": "// AddRect(), AddRectFilled(), PathRect(): enable rounding bottom-left corner only (when rounding > 0.0f, we default to all corners). Was 0x04.",
         "name": "ImDrawFlags_RoundCornersBottomLeft",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // AddRect(), AddRectFilled(), PathRect(): enable rounding bottom-right corner only (when rounding > 0.0f, we default to all corners). Wax 0x08.",
+        "comment": "// AddRect(), AddRectFilled(), PathRect(): enable rounding bottom-right corner only (when rounding > 0.0f, we default to all corners). Wax 0x08.",
         "name": "ImDrawFlags_RoundCornersBottomRight",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // AddRect(), AddRectFilled(), PathRect(): disable rounding on all corners (when rounding > 0.0f). This is NOT zero, NOT an implicit flag!",
+        "comment": "// AddRect(), AddRectFilled(), PathRect(): disable rounding on all corners (when rounding > 0.0f). This is NOT zero, NOT an implicit flag!",
         "name": "ImDrawFlags_RoundCornersNone",
         "value": "1 << 8"
       },
@@ -236,7 +236,7 @@
       },
       {
         "calc_value": 240,
-        "comment": " // Default to ALL corners if none of the _RoundCornersXX flags are specified.",
+        "comment": "// Default to ALL corners if none of the _RoundCornersXX flags are specified.",
         "name": "ImDrawFlags_RoundCornersDefault_",
         "value": "ImDrawFlags_RoundCornersAll"
       },
@@ -254,25 +254,25 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Enable anti-aliased lines/borders (*2 the number of triangles for 1.0f wide line or lines thin enough to be drawn using textures, otherwise *3 the number of triangles)",
+        "comment": "// Enable anti-aliased lines/borders (*2 the number of triangles for 1.0f wide line or lines thin enough to be drawn using textures, otherwise *3 the number of triangles)",
         "name": "ImDrawListFlags_AntiAliasedLines",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Enable anti-aliased lines/borders using textures when possible. Require backend to render with bilinear filtering (NOT point/nearest filtering).",
+        "comment": "// Enable anti-aliased lines/borders using textures when possible. Require backend to render with bilinear filtering (NOT point/nearest filtering).",
         "name": "ImDrawListFlags_AntiAliasedLinesUseTex",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Enable anti-aliased edge around filled shapes (rounded rectangles, circles).",
+        "comment": "// Enable anti-aliased edge around filled shapes (rounded rectangles, circles).",
         "name": "ImDrawListFlags_AntiAliasedFill",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Can emit 'VtxOffset > 0' to allow large meshes. Set when 'ImGuiBackendFlags_RendererHasVtxOffset' is enabled.",
+        "comment": "// Can emit 'VtxOffset > 0' to allow large meshes. Set when 'ImGuiBackendFlags_RendererHasVtxOffset' is enabled.",
         "name": "ImDrawListFlags_AllowVtxOffset",
         "value": "1 << 3"
       }
@@ -285,19 +285,19 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Don't round the height to next power of two",
+        "comment": "// Don't round the height to next power of two",
         "name": "ImFontAtlasFlags_NoPowerOfTwoHeight",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Don't build software mouse cursors into the atlas (save a little texture memory)",
+        "comment": "// Don't build software mouse cursors into the atlas (save a little texture memory)",
         "name": "ImFontAtlasFlags_NoMouseCursors",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Don't build thick line textures into the atlas (save a little texture memory, allow support for point/nearest filtering). The AntiAliasedLinesUseTex features uses them, otherwise they will be rendered using polygons (more expensive for CPU/GPU).",
+        "comment": "// Don't build thick line textures into the atlas (save a little texture memory, allow support for point/nearest filtering). The AntiAliasedLinesUseTex features uses them, otherwise they will be rendered using polygons (more expensive for CPU/GPU).",
         "name": "ImFontAtlasFlags_NoBakedLines",
         "value": "1 << 2"
       }
@@ -310,19 +310,19 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Favor activation that requires keyboard text input (e.g. for Slider/Drag). Default if keyboard is available.",
+        "comment": "// Favor activation that requires keyboard text input (e.g. for Slider/Drag). Default if keyboard is available.",
         "name": "ImGuiActivateFlags_PreferInput",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Favor activation for tweaking with arrows or gamepad (e.g. for Slider/Drag). Default if keyboard is not available.",
+        "comment": "// Favor activation for tweaking with arrows or gamepad (e.g. for Slider/Drag). Default if keyboard is not available.",
         "name": "ImGuiActivateFlags_PreferTweak",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Request widget to preserve state if it can (e.g. InputText will try to preserve cursor/selection)",
+        "comment": "// Request widget to preserve state if it can (e.g. InputText will try to preserve cursor/selection)",
         "name": "ImGuiActivateFlags_TryToPreserveState",
         "value": "1 << 2"
       }
@@ -352,43 +352,43 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Backend Platform supports gamepad and currently has one connected.",
+        "comment": "// Backend Platform supports gamepad and currently has one connected.",
         "name": "ImGuiBackendFlags_HasGamepad",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Backend Platform supports honoring GetMouseCursor() value to change the OS cursor shape.",
+        "comment": "// Backend Platform supports honoring GetMouseCursor() value to change the OS cursor shape.",
         "name": "ImGuiBackendFlags_HasMouseCursors",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Backend Platform supports io.WantSetMousePos requests to reposition the OS mouse position (only used if ImGuiConfigFlags_NavEnableSetMousePos is set).",
+        "comment": "// Backend Platform supports io.WantSetMousePos requests to reposition the OS mouse position (only used if ImGuiConfigFlags_NavEnableSetMousePos is set).",
         "name": "ImGuiBackendFlags_HasSetMousePos",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Backend Renderer supports ImDrawCmd::VtxOffset. This enables output of large meshes (64K+ vertices) while still using 16-bit indices.",
+        "comment": "// Backend Renderer supports ImDrawCmd::VtxOffset. This enables output of large meshes (64K+ vertices) while still using 16-bit indices.",
         "name": "ImGuiBackendFlags_RendererHasVtxOffset",
         "value": "1 << 3"
       },
       {
         "calc_value": 1024,
-        "comment": " // Backend Platform supports multiple viewports.",
+        "comment": "// Backend Platform supports multiple viewports.",
         "name": "ImGuiBackendFlags_PlatformHasViewports",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Backend Platform supports calling io.AddMouseViewportEvent() with the viewport under the mouse. IF POSSIBLE, ignore viewports with the ImGuiViewportFlags_NoInputs flag (Win32 backend, GLFW 3.30+ backend can do this, SDL backend cannot). If this cannot be done, Dear ImGui needs to use a flawed heuristic to find the viewport under.",
+        "comment": "// Backend Platform supports calling io.AddMouseViewportEvent() with the viewport under the mouse. IF POSSIBLE, ignore viewports with the ImGuiViewportFlags_NoInputs flag (Win32 backend, GLFW 3.30+ backend can do this, SDL backend cannot). If this cannot be done, Dear ImGui needs to use a flawed heuristic to find the viewport under.",
         "name": "ImGuiBackendFlags_HasMouseHoveredViewport",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Backend Renderer supports multiple viewports.",
+        "comment": "// Backend Renderer supports multiple viewports.",
         "name": "ImGuiBackendFlags_RendererHasViewports",
         "value": "1 << 12"
       }
@@ -396,91 +396,91 @@
     "ImGuiButtonFlagsPrivate_": [
       {
         "calc_value": 16,
-        "comment": " // return true on click (mouse down event)",
+        "comment": "// return true on click (mouse down event)",
         "name": "ImGuiButtonFlags_PressedOnClick",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // [Default] return true on click + release on same item <-- this is what the majority of Button are using",
+        "comment": "// [Default] return true on click + release on same item <-- this is what the majority of Button are using",
         "name": "ImGuiButtonFlags_PressedOnClickRelease",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // return true on click + release even if the release event is not done while hovering the item",
+        "comment": "// return true on click + release even if the release event is not done while hovering the item",
         "name": "ImGuiButtonFlags_PressedOnClickReleaseAnywhere",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // return true on release (default requires click+release)",
+        "comment": "// return true on release (default requires click+release)",
         "name": "ImGuiButtonFlags_PressedOnRelease",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // return true on double-click (default requires click+release)",
+        "comment": "// return true on double-click (default requires click+release)",
         "name": "ImGuiButtonFlags_PressedOnDoubleClick",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // return true when held into while we are drag and dropping another item (used by e.g. tree nodes, collapsing headers)",
+        "comment": "// return true when held into while we are drag and dropping another item (used by e.g. tree nodes, collapsing headers)",
         "name": "ImGuiButtonFlags_PressedOnDragDropHold",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // hold to repeat",
+        "comment": "// hold to repeat",
         "name": "ImGuiButtonFlags_Repeat",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // allow interactions even if a child window is overlapping",
+        "comment": "// allow interactions even if a child window is overlapping",
         "name": "ImGuiButtonFlags_FlattenChildren",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // require previous frame HoveredId to either match id or be null before being usable, use along with SetItemAllowOverlap()",
+        "comment": "// require previous frame HoveredId to either match id or be null before being usable, use along with SetItemAllowOverlap()",
         "name": "ImGuiButtonFlags_AllowItemOverlap",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // disable automatically closing parent popup on press // [UNUSED]",
+        "comment": "// disable automatically closing parent popup on press // [UNUSED]",
         "name": "ImGuiButtonFlags_DontClosePopups",
         "value": "1 << 13"
       },
       {
         "calc_value": 32768,
-        "comment": " // vertically align button to match text baseline - ButtonEx() only // FIXME: Should be removed and handled by SmallButton(), not possible currently because of DC.CursorPosPrevLine",
+        "comment": "// vertically align button to match text baseline - ButtonEx() only // FIXME: Should be removed and handled by SmallButton(), not possible currently because of DC.CursorPosPrevLine",
         "name": "ImGuiButtonFlags_AlignTextBaseLine",
         "value": "1 << 15"
       },
       {
         "calc_value": 65536,
-        "comment": " // disable mouse interaction if a key modifier is held",
+        "comment": "// disable mouse interaction if a key modifier is held",
         "name": "ImGuiButtonFlags_NoKeyModifiers",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " // don't set ActiveId while holding the mouse (ImGuiButtonFlags_PressedOnClick only)",
+        "comment": "// don't set ActiveId while holding the mouse (ImGuiButtonFlags_PressedOnClick only)",
         "name": "ImGuiButtonFlags_NoHoldingActiveId",
         "value": "1 << 17"
       },
       {
         "calc_value": 262144,
-        "comment": " // don't override navigation focus when activated",
+        "comment": "// don't override navigation focus when activated",
         "name": "ImGuiButtonFlags_NoNavFocus",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " // don't report as hovered when nav focus is on this item",
+        "comment": "// don't report as hovered when nav focus is on this item",
         "name": "ImGuiButtonFlags_NoHoveredOnFocus",
         "value": "1 << 19"
       },
@@ -503,19 +503,19 @@
       },
       {
         "calc_value": 1,
-        "comment": " // React on left mouse button (default)",
+        "comment": "// React on left mouse button (default)",
         "name": "ImGuiButtonFlags_MouseButtonLeft",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // React on right mouse button",
+        "comment": "// React on right mouse button",
         "name": "ImGuiButtonFlags_MouseButtonRight",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // React on center mouse button",
+        "comment": "// React on center mouse button",
         "name": "ImGuiButtonFlags_MouseButtonMiddle",
         "value": "1 << 2"
       },
@@ -543,19 +543,19 @@
       },
       {
         "calc_value": 2,
-        "comment": " // Background of normal windows",
+        "comment": "// Background of normal windows",
         "name": "ImGuiCol_WindowBg",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // Background of child windows",
+        "comment": "// Background of child windows",
         "name": "ImGuiCol_ChildBg",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": " // Background of popups, menus, tooltips windows",
+        "comment": "// Background of popups, menus, tooltips windows",
         "name": "ImGuiCol_PopupBg",
         "value": "4"
       },
@@ -571,7 +571,7 @@
       },
       {
         "calc_value": 7,
-        "comment": " // Background of checkbox, radio button, plot, slider, text input",
+        "comment": "// Background of checkbox, radio button, plot, slider, text input",
         "name": "ImGuiCol_FrameBg",
         "value": "7"
       },
@@ -657,7 +657,7 @@
       },
       {
         "calc_value": 24,
-        "comment": " // Header* colors are used for CollapsingHeader, TreeNode, Selectable, MenuItem",
+        "comment": "// Header* colors are used for CollapsingHeader, TreeNode, Selectable, MenuItem",
         "name": "ImGuiCol_Header",
         "value": "24"
       },
@@ -688,7 +688,7 @@
       },
       {
         "calc_value": 30,
-        "comment": " // Resize grip in lower-right and lower-left corners of windows.",
+        "comment": "// Resize grip in lower-right and lower-left corners of windows.",
         "name": "ImGuiCol_ResizeGrip",
         "value": "30"
       },
@@ -704,7 +704,7 @@
       },
       {
         "calc_value": 33,
-        "comment": " // TabItem in a TabBar",
+        "comment": "// TabItem in a TabBar",
         "name": "ImGuiCol_Tab",
         "value": "33"
       },
@@ -730,13 +730,13 @@
       },
       {
         "calc_value": 38,
-        "comment": " // Preview overlay color when about to docking something",
+        "comment": "// Preview overlay color when about to docking something",
         "name": "ImGuiCol_DockingPreview",
         "value": "38"
       },
       {
         "calc_value": 39,
-        "comment": " // Background color for empty node (e.g. CentralNode with no window docked into it)",
+        "comment": "// Background color for empty node (e.g. CentralNode with no window docked into it)",
         "name": "ImGuiCol_DockingEmptyBg",
         "value": "39"
       },
@@ -762,31 +762,31 @@
       },
       {
         "calc_value": 44,
-        "comment": " // Table header background",
+        "comment": "// Table header background",
         "name": "ImGuiCol_TableHeaderBg",
         "value": "44"
       },
       {
         "calc_value": 45,
-        "comment": " // Table outer and header borders (prefer using Alpha=1.0 here)",
+        "comment": "// Table outer and header borders (prefer using Alpha=1.0 here)",
         "name": "ImGuiCol_TableBorderStrong",
         "value": "45"
       },
       {
         "calc_value": 46,
-        "comment": " // Table inner borders (prefer using Alpha=1.0 here)",
+        "comment": "// Table inner borders (prefer using Alpha=1.0 here)",
         "name": "ImGuiCol_TableBorderLight",
         "value": "46"
       },
       {
         "calc_value": 47,
-        "comment": " // Table row background (even rows)",
+        "comment": "// Table row background (even rows)",
         "name": "ImGuiCol_TableRowBg",
         "value": "47"
       },
       {
         "calc_value": 48,
-        "comment": " // Table row background (odd rows)",
+        "comment": "// Table row background (odd rows)",
         "name": "ImGuiCol_TableRowBgAlt",
         "value": "48"
       },
@@ -797,31 +797,31 @@
       },
       {
         "calc_value": 50,
-        "comment": " // Rectangle highlighting a drop target",
+        "comment": "// Rectangle highlighting a drop target",
         "name": "ImGuiCol_DragDropTarget",
         "value": "50"
       },
       {
         "calc_value": 51,
-        "comment": " // Gamepad/keyboard: current highlighted item",
+        "comment": "// Gamepad/keyboard: current highlighted item",
         "name": "ImGuiCol_NavHighlight",
         "value": "51"
       },
       {
         "calc_value": 52,
-        "comment": " // Highlight window when using CTRL+TAB",
+        "comment": "// Highlight window when using CTRL+TAB",
         "name": "ImGuiCol_NavWindowingHighlight",
         "value": "52"
       },
       {
         "calc_value": 53,
-        "comment": " // Darken/colorize entire screen behind the CTRL+TAB window list, when active",
+        "comment": "// Darken/colorize entire screen behind the CTRL+TAB window list, when active",
         "name": "ImGuiCol_NavWindowingDimBg",
         "value": "53"
       },
       {
         "calc_value": 54,
-        "comment": " // Darken/colorize entire screen behind a modal window, when one is active",
+        "comment": "// Darken/colorize entire screen behind a modal window, when one is active",
         "name": "ImGuiCol_ModalWindowDimBg",
         "value": "54"
       },
@@ -839,139 +839,139 @@
       },
       {
         "calc_value": 2,
-        "comment": " //              // ColorEdit, ColorPicker, ColorButton: ignore Alpha component (will only read 3 components from the input pointer).",
+        "comment": "//              // ColorEdit, ColorPicker, ColorButton: ignore Alpha component (will only read 3 components from the input pointer).",
         "name": "ImGuiColorEditFlags_NoAlpha",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " //              // ColorEdit: disable picker when clicking on color square.",
+        "comment": "//              // ColorEdit: disable picker when clicking on color square.",
         "name": "ImGuiColorEditFlags_NoPicker",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " //              // ColorEdit: disable toggling options menu when right-clicking on inputs/small preview.",
+        "comment": "//              // ColorEdit: disable toggling options menu when right-clicking on inputs/small preview.",
         "name": "ImGuiColorEditFlags_NoOptions",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " //              // ColorEdit, ColorPicker: disable color square preview next to the inputs. (e.g. to show only the inputs)",
+        "comment": "//              // ColorEdit, ColorPicker: disable color square preview next to the inputs. (e.g. to show only the inputs)",
         "name": "ImGuiColorEditFlags_NoSmallPreview",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " //              // ColorEdit, ColorPicker: disable inputs sliders/text widgets (e.g. to show only the small preview color square).",
+        "comment": "//              // ColorEdit, ColorPicker: disable inputs sliders/text widgets (e.g. to show only the small preview color square).",
         "name": "ImGuiColorEditFlags_NoInputs",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " //              // ColorEdit, ColorPicker, ColorButton: disable tooltip when hovering the preview.",
+        "comment": "//              // ColorEdit, ColorPicker, ColorButton: disable tooltip when hovering the preview.",
         "name": "ImGuiColorEditFlags_NoTooltip",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " //              // ColorEdit, ColorPicker: disable display of inline text label (the label is still forwarded to the tooltip and picker).",
+        "comment": "//              // ColorEdit, ColorPicker: disable display of inline text label (the label is still forwarded to the tooltip and picker).",
         "name": "ImGuiColorEditFlags_NoLabel",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " //              // ColorPicker: disable bigger color preview on right side of the picker, use small color square preview instead.",
+        "comment": "//              // ColorPicker: disable bigger color preview on right side of the picker, use small color square preview instead.",
         "name": "ImGuiColorEditFlags_NoSidePreview",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " //              // ColorEdit: disable drag and drop target. ColorButton: disable drag and drop source.",
+        "comment": "//              // ColorEdit: disable drag and drop target. ColorButton: disable drag and drop source.",
         "name": "ImGuiColorEditFlags_NoDragDrop",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " //              // ColorButton: disable border (which is enforced by default)",
+        "comment": "//              // ColorButton: disable border (which is enforced by default)",
         "name": "ImGuiColorEditFlags_NoBorder",
         "value": "1 << 10"
       },
       {
         "calc_value": 65536,
-        "comment": " //              // ColorEdit, ColorPicker: show vertical alpha bar/gradient in picker.",
+        "comment": "//              // ColorEdit, ColorPicker: show vertical alpha bar/gradient in picker.",
         "name": "ImGuiColorEditFlags_AlphaBar",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " //              // ColorEdit, ColorPicker, ColorButton: display preview as a transparent color over a checkerboard, instead of opaque.",
+        "comment": "//              // ColorEdit, ColorPicker, ColorButton: display preview as a transparent color over a checkerboard, instead of opaque.",
         "name": "ImGuiColorEditFlags_AlphaPreview",
         "value": "1 << 17"
       },
       {
         "calc_value": 262144,
-        "comment": " //              // ColorEdit, ColorPicker, ColorButton: display half opaque / half checkerboard, instead of opaque.",
+        "comment": "//              // ColorEdit, ColorPicker, ColorButton: display half opaque / half checkerboard, instead of opaque.",
         "name": "ImGuiColorEditFlags_AlphaPreviewHalf",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " //              // (WIP) ColorEdit: Currently only disable 0.0f..1.0f limits in RGBA edition (note: you probably want to use ImGuiColorEditFlags_Float flag as well).",
+        "comment": "//              // (WIP) ColorEdit: Currently only disable 0.0f..1.0f limits in RGBA edition (note: you probably want to use ImGuiColorEditFlags_Float flag as well).",
         "name": "ImGuiColorEditFlags_HDR",
         "value": "1 << 19"
       },
       {
         "calc_value": 1048576,
-        "comment": " // [Display]    // ColorEdit: override _display_ type among RGB/HSV/Hex. ColorPicker: select any combination using one or more of RGB/HSV/Hex.",
+        "comment": "// [Display]    // ColorEdit: override _display_ type among RGB/HSV/Hex. ColorPicker: select any combination using one or more of RGB/HSV/Hex.",
         "name": "ImGuiColorEditFlags_DisplayRGB",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // [Display]    // \"",
+        "comment": "// [Display]    // \"",
         "name": "ImGuiColorEditFlags_DisplayHSV",
         "value": "1 << 21"
       },
       {
         "calc_value": 4194304,
-        "comment": " // [Display]    // \"",
+        "comment": "// [Display]    // \"",
         "name": "ImGuiColorEditFlags_DisplayHex",
         "value": "1 << 22"
       },
       {
         "calc_value": 8388608,
-        "comment": " // [DataType]   // ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0..255.",
+        "comment": "// [DataType]   // ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0..255.",
         "name": "ImGuiColorEditFlags_Uint8",
         "value": "1 << 23"
       },
       {
         "calc_value": 16777216,
-        "comment": " // [DataType]   // ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0.0f..1.0f floats instead of 0..255 integers. No round-trip of value via integers.",
+        "comment": "// [DataType]   // ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0.0f..1.0f floats instead of 0..255 integers. No round-trip of value via integers.",
         "name": "ImGuiColorEditFlags_Float",
         "value": "1 << 24"
       },
       {
         "calc_value": 33554432,
-        "comment": " // [Picker]     // ColorPicker: bar for Hue, rectangle for Sat/Value.",
+        "comment": "// [Picker]     // ColorPicker: bar for Hue, rectangle for Sat/Value.",
         "name": "ImGuiColorEditFlags_PickerHueBar",
         "value": "1 << 25"
       },
       {
         "calc_value": 67108864,
-        "comment": " // [Picker]     // ColorPicker: wheel for Hue, triangle for Sat/Value.",
+        "comment": "// [Picker]     // ColorPicker: wheel for Hue, triangle for Sat/Value.",
         "name": "ImGuiColorEditFlags_PickerHueWheel",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // [Input]      // ColorEdit, ColorPicker: input and output data in RGB format.",
+        "comment": "// [Input]      // ColorEdit, ColorPicker: input and output data in RGB format.",
         "name": "ImGuiColorEditFlags_InputRGB",
         "value": "1 << 27"
       },
       {
         "calc_value": 268435456,
-        "comment": " // [Input]      // ColorEdit, ColorPicker: input and output data in HSV format.",
+        "comment": "// [Input]      // ColorEdit, ColorPicker: input and output data in HSV format.",
         "name": "ImGuiColorEditFlags_InputHSV",
         "value": "1 << 28"
       },
@@ -1004,7 +1004,7 @@
     "ImGuiComboFlagsPrivate_": [
       {
         "calc_value": 1048576,
-        "comment": " // enable BeginComboPreview()",
+        "comment": "// enable BeginComboPreview()",
         "name": "ImGuiComboFlags_CustomPreview",
         "value": "1 << 20"
       }
@@ -1017,43 +1017,43 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Align the popup toward the left by default",
+        "comment": "// Align the popup toward the left by default",
         "name": "ImGuiComboFlags_PopupAlignLeft",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Max ~4 items visible. Tip: If you want your combo popup to be a specific size you can use SetNextWindowSizeConstraints() prior to calling BeginCombo()",
+        "comment": "// Max ~4 items visible. Tip: If you want your combo popup to be a specific size you can use SetNextWindowSizeConstraints() prior to calling BeginCombo()",
         "name": "ImGuiComboFlags_HeightSmall",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Max ~8 items visible (default)",
+        "comment": "// Max ~8 items visible (default)",
         "name": "ImGuiComboFlags_HeightRegular",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Max ~20 items visible",
+        "comment": "// Max ~20 items visible",
         "name": "ImGuiComboFlags_HeightLarge",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // As many fitting items as possible",
+        "comment": "// As many fitting items as possible",
         "name": "ImGuiComboFlags_HeightLargest",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Display on the preview box without the square arrow button",
+        "comment": "// Display on the preview box without the square arrow button",
         "name": "ImGuiComboFlags_NoArrowButton",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Display only a square arrow button",
+        "comment": "// Display only a square arrow button",
         "name": "ImGuiComboFlags_NoPreview",
         "value": "1 << 6"
       },
@@ -1066,31 +1066,31 @@
     "ImGuiCond_": [
       {
         "calc_value": 0,
-        "comment": " // No condition (always set the variable), same as _Always",
+        "comment": "// No condition (always set the variable), same as _Always",
         "name": "ImGuiCond_None",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // No condition (always set the variable)",
+        "comment": "// No condition (always set the variable)",
         "name": "ImGuiCond_Always",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Set the variable once per runtime session (only the first call will succeed)",
+        "comment": "// Set the variable once per runtime session (only the first call will succeed)",
         "name": "ImGuiCond_Once",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Set the variable if the object/window has no persistently saved data (no entry in .ini file)",
+        "comment": "// Set the variable if the object/window has no persistently saved data (no entry in .ini file)",
         "name": "ImGuiCond_FirstUseEver",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Set the variable if the object/window is appearing after being hidden/inactive (or the first time)",
+        "comment": "// Set the variable if the object/window is appearing after being hidden/inactive (or the first time)",
         "name": "ImGuiCond_Appearing",
         "value": "1 << 3"
       }
@@ -1103,73 +1103,73 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Master keyboard navigation enable flag. NewFrame() will automatically fill io.NavInputs[] based on io.AddKeyEvent() calls",
+        "comment": "// Master keyboard navigation enable flag. NewFrame() will automatically fill io.NavInputs[] based on io.AddKeyEvent() calls",
         "name": "ImGuiConfigFlags_NavEnableKeyboard",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Master gamepad navigation enable flag. This is mostly to instruct your imgui backend to fill io.NavInputs[]. Backend also needs to set ImGuiBackendFlags_HasGamepad.",
+        "comment": "// Master gamepad navigation enable flag. This is mostly to instruct your imgui backend to fill io.NavInputs[]. Backend also needs to set ImGuiBackendFlags_HasGamepad.",
         "name": "ImGuiConfigFlags_NavEnableGamepad",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Instruct navigation to move the mouse cursor. May be useful on TV/console systems where moving a virtual mouse is awkward. Will update io.MousePos and set io.WantSetMousePos=true. If enabled you MUST honor io.WantSetMousePos requests in your backend, otherwise ImGui will react as if the mouse is jumping around back and forth.",
+        "comment": "// Instruct navigation to move the mouse cursor. May be useful on TV/console systems where moving a virtual mouse is awkward. Will update io.MousePos and set io.WantSetMousePos=true. If enabled you MUST honor io.WantSetMousePos requests in your backend, otherwise ImGui will react as if the mouse is jumping around back and forth.",
         "name": "ImGuiConfigFlags_NavEnableSetMousePos",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Instruct navigation to not set the io.WantCaptureKeyboard flag when io.NavActive is set.",
+        "comment": "// Instruct navigation to not set the io.WantCaptureKeyboard flag when io.NavActive is set.",
         "name": "ImGuiConfigFlags_NavNoCaptureKeyboard",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Instruct imgui to clear mouse position/buttons in NewFrame(). This allows ignoring the mouse information set by the backend.",
+        "comment": "// Instruct imgui to clear mouse position/buttons in NewFrame(). This allows ignoring the mouse information set by the backend.",
         "name": "ImGuiConfigFlags_NoMouse",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Instruct backend to not alter mouse cursor shape and visibility. Use if the backend cursor changes are interfering with yours and you don't want to use SetMouseCursor() to change mouse cursor. You may want to honor requests from imgui by reading GetMouseCursor() yourself instead.",
+        "comment": "// Instruct backend to not alter mouse cursor shape and visibility. Use if the backend cursor changes are interfering with yours and you don't want to use SetMouseCursor() to change mouse cursor. You may want to honor requests from imgui by reading GetMouseCursor() yourself instead.",
         "name": "ImGuiConfigFlags_NoMouseCursorChange",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Docking enable flags.",
+        "comment": "// Docking enable flags.",
         "name": "ImGuiConfigFlags_DockingEnable",
         "value": "1 << 6"
       },
       {
         "calc_value": 1024,
-        "comment": " // Viewport enable flags (require both ImGuiBackendFlags_PlatformHasViewports + ImGuiBackendFlags_RendererHasViewports set by the respective backends)",
+        "comment": "// Viewport enable flags (require both ImGuiBackendFlags_PlatformHasViewports + ImGuiBackendFlags_RendererHasViewports set by the respective backends)",
         "name": "ImGuiConfigFlags_ViewportsEnable",
         "value": "1 << 10"
       },
       {
         "calc_value": 16384,
-        "comment": " // [BETA: Don't use] FIXME-DPI: Reposition and resize imgui windows when the DpiScale of a viewport changed (mostly useful for the main viewport hosting other window). Note that resizing the main window itself is up to your application.",
+        "comment": "// [BETA: Don't use] FIXME-DPI: Reposition and resize imgui windows when the DpiScale of a viewport changed (mostly useful for the main viewport hosting other window). Note that resizing the main window itself is up to your application.",
         "name": "ImGuiConfigFlags_DpiEnableScaleViewports",
         "value": "1 << 14"
       },
       {
         "calc_value": 32768,
-        "comment": " // [BETA: Don't use] FIXME-DPI: Request bitmap-scaled fonts to match DpiScale. This is a very low-quality workaround. The correct way to handle DPI is _currently_ to replace the atlas and/or fonts in the Platform_OnChangedViewport callback, but this is all early work in progress.",
+        "comment": "// [BETA: Don't use] FIXME-DPI: Request bitmap-scaled fonts to match DpiScale. This is a very low-quality workaround. The correct way to handle DPI is _currently_ to replace the atlas and/or fonts in the Platform_OnChangedViewport callback, but this is all early work in progress.",
         "name": "ImGuiConfigFlags_DpiEnableScaleFonts",
         "value": "1 << 15"
       },
       {
         "calc_value": 1048576,
-        "comment": " // Application is SRGB-aware.",
+        "comment": "// Application is SRGB-aware.",
         "name": "ImGuiConfigFlags_IsSRGB",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // Application is using a touch screen instead of a mouse.",
+        "comment": "// Application is using a touch screen instead of a mouse.",
         "name": "ImGuiConfigFlags_IsTouchScreen",
         "value": "1 << 21"
       }
@@ -1253,61 +1253,61 @@
     "ImGuiDataType_": [
       {
         "calc_value": 0,
-        "comment": " // signed char / char (with sensible compilers)",
+        "comment": "// signed char / char (with sensible compilers)",
         "name": "ImGuiDataType_S8",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // unsigned char",
+        "comment": "// unsigned char",
         "name": "ImGuiDataType_U8",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // short",
+        "comment": "// short",
         "name": "ImGuiDataType_S16",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // unsigned short",
+        "comment": "// unsigned short",
         "name": "ImGuiDataType_U16",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": " // int",
+        "comment": "// int",
         "name": "ImGuiDataType_S32",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": " // unsigned int",
+        "comment": "// unsigned int",
         "name": "ImGuiDataType_U32",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": " // long long / __int64",
+        "comment": "// long long / __int64",
         "name": "ImGuiDataType_S64",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": " // unsigned long long / unsigned __int64",
+        "comment": "// unsigned long long / unsigned __int64",
         "name": "ImGuiDataType_U64",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": " // float",
+        "comment": "// float",
         "name": "ImGuiDataType_Float",
         "value": "8"
       },
       {
         "calc_value": 9,
-        "comment": " // double",
+        "comment": "// double",
         "name": "ImGuiDataType_Double",
         "value": "9"
       },
@@ -1365,7 +1365,7 @@
       },
       {
         "calc_value": 1024,
-        "comment": " // Also send output to TTY",
+        "comment": "// Also send output to TTY",
         "name": "ImGuiDebugLogFlags_OutputToTTY",
         "value": "1 << 10"
       }
@@ -1405,85 +1405,85 @@
     "ImGuiDockNodeFlagsPrivate_": [
       {
         "calc_value": 1024,
-        "comment": " // Local, Saved  // A dockspace is a node that occupy space within an existing user window. Otherwise the node is floating and create its own window.",
+        "comment": "// Local, Saved  // A dockspace is a node that occupy space within an existing user window. Otherwise the node is floating and create its own window.",
         "name": "ImGuiDockNodeFlags_DockSpace",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Local, Saved  // The central node has 2 main properties: stay visible when empty, only use \"remaining\" spaces from its neighbor.",
+        "comment": "// Local, Saved  // The central node has 2 main properties: stay visible when empty, only use \"remaining\" spaces from its neighbor.",
         "name": "ImGuiDockNodeFlags_CentralNode",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Local, Saved  // Tab bar is completely unavailable. No triangle in the corner to enable it back.",
+        "comment": "// Local, Saved  // Tab bar is completely unavailable. No triangle in the corner to enable it back.",
         "name": "ImGuiDockNodeFlags_NoTabBar",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // Local, Saved  // Tab bar is hidden, with a triangle in the corner to show it again (NB: actual tab-bar instance may be destroyed as this is only used for single-window tab bar)",
+        "comment": "// Local, Saved  // Tab bar is hidden, with a triangle in the corner to show it again (NB: actual tab-bar instance may be destroyed as this is only used for single-window tab bar)",
         "name": "ImGuiDockNodeFlags_HiddenTabBar",
         "value": "1 << 13"
       },
       {
         "calc_value": 16384,
-        "comment": " // Local, Saved  // Disable window/docking menu (that one that appears instead of the collapse button)",
+        "comment": "// Local, Saved  // Disable window/docking menu (that one that appears instead of the collapse button)",
         "name": "ImGuiDockNodeFlags_NoWindowMenuButton",
         "value": "1 << 14"
       },
       {
         "calc_value": 32768,
-        "comment": " // Local, Saved  //",
+        "comment": "// Local, Saved  //",
         "name": "ImGuiDockNodeFlags_NoCloseButton",
         "value": "1 << 15"
       },
       {
         "calc_value": 65536,
-        "comment": " // Local, Saved  // Disable any form of docking in this dockspace or individual node. (On a whole dockspace, this pretty much defeat the purpose of using a dockspace at all). Note: when turned on, existing docked nodes will be preserved.",
+        "comment": "// Local, Saved  // Disable any form of docking in this dockspace or individual node. (On a whole dockspace, this pretty much defeat the purpose of using a dockspace at all). Note: when turned on, existing docked nodes will be preserved.",
         "name": "ImGuiDockNodeFlags_NoDocking",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " // [EXPERIMENTAL] Prevent another window/node from splitting this node.",
+        "comment": "// [EXPERIMENTAL] Prevent another window/node from splitting this node.",
         "name": "ImGuiDockNodeFlags_NoDockingSplitMe",
         "value": "1 << 17"
       },
       {
         "calc_value": 262144,
-        "comment": " // [EXPERIMENTAL] Prevent this node from splitting another window/node.",
+        "comment": "// [EXPERIMENTAL] Prevent this node from splitting another window/node.",
         "name": "ImGuiDockNodeFlags_NoDockingSplitOther",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " // [EXPERIMENTAL] Prevent another window/node to be docked over this node.",
+        "comment": "// [EXPERIMENTAL] Prevent another window/node to be docked over this node.",
         "name": "ImGuiDockNodeFlags_NoDockingOverMe",
         "value": "1 << 19"
       },
       {
         "calc_value": 1048576,
-        "comment": " // [EXPERIMENTAL] Prevent this node to be docked over another window or non-empty node.",
+        "comment": "// [EXPERIMENTAL] Prevent this node to be docked over another window or non-empty node.",
         "name": "ImGuiDockNodeFlags_NoDockingOverOther",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // [EXPERIMENTAL] Prevent this node to be docked over an empty node (e.g. DockSpace with no other windows)",
+        "comment": "// [EXPERIMENTAL] Prevent this node to be docked over an empty node (e.g. DockSpace with no other windows)",
         "name": "ImGuiDockNodeFlags_NoDockingOverEmpty",
         "value": "1 << 21"
       },
       {
         "calc_value": 4194304,
-        "comment": " // [EXPERIMENTAL]",
+        "comment": "// [EXPERIMENTAL]",
         "name": "ImGuiDockNodeFlags_NoResizeX",
         "value": "1 << 22"
       },
       {
         "calc_value": 8388608,
-        "comment": " // [EXPERIMENTAL]",
+        "comment": "// [EXPERIMENTAL]",
         "name": "ImGuiDockNodeFlags_NoResizeY",
         "value": "1 << 23"
       },
@@ -1504,7 +1504,7 @@
       },
       {
         "calc_value": 12712048,
-        "comment": " // When splitting those flags are moved to the inheriting child, never duplicated",
+        "comment": "// When splitting those flags are moved to the inheriting child, never duplicated",
         "name": "ImGuiDockNodeFlags_LocalFlagsTransferMask_",
         "value": "ImGuiDockNodeFlags_LocalFlagsMask_ & ~ImGuiDockNodeFlags_DockSpace"
       },
@@ -1522,37 +1522,37 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Shared       // Don't display the dockspace node but keep it alive. Windows docked into this dockspace node won't be undocked.",
+        "comment": "// Shared       // Don't display the dockspace node but keep it alive. Windows docked into this dockspace node won't be undocked.",
         "name": "ImGuiDockNodeFlags_KeepAliveOnly",
         "value": "1 << 0"
       },
       {
         "calc_value": 4,
-        "comment": " // Shared       // Disable docking inside the Central Node, which will be always kept empty.",
+        "comment": "// Shared       // Disable docking inside the Central Node, which will be always kept empty.",
         "name": "ImGuiDockNodeFlags_NoDockingInCentralNode",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Shared       // Enable passthru dockspace: 1) DockSpace() will render a ImGuiCol_WindowBg background covering everything excepted the Central Node when empty. Meaning the host window should probably use SetNextWindowBgAlpha(0.0f) prior to Begin() when using this. 2) When Central Node is empty: let inputs pass-through + won't display a DockingEmptyBg background. See demo for details.",
+        "comment": "// Shared       // Enable passthru dockspace: 1) DockSpace() will render a ImGuiCol_WindowBg background covering everything excepted the Central Node when empty. Meaning the host window should probably use SetNextWindowBgAlpha(0.0f) prior to Begin() when using this. 2) When Central Node is empty: let inputs pass-through + won't display a DockingEmptyBg background. See demo for details.",
         "name": "ImGuiDockNodeFlags_PassthruCentralNode",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Shared/Local // Disable splitting the node into smaller nodes. Useful e.g. when embedding dockspaces into a main root one (the root one may have splitting disabled to reduce confusion). Note: when turned off, existing splits will be preserved.",
+        "comment": "// Shared/Local // Disable splitting the node into smaller nodes. Useful e.g. when embedding dockspaces into a main root one (the root one may have splitting disabled to reduce confusion). Note: when turned off, existing splits will be preserved.",
         "name": "ImGuiDockNodeFlags_NoSplit",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Shared/Local // Disable resizing node using the splitter/separators. Useful with programmatically setup dockspaces.",
+        "comment": "// Shared/Local // Disable resizing node using the splitter/separators. Useful with programmatically setup dockspaces.",
         "name": "ImGuiDockNodeFlags_NoResize",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Shared/Local // Tab bar will automatically hide when there is a single window in the dock node.",
+        "comment": "// Shared/Local // Tab bar will automatically hide when there is a single window in the dock node.",
         "name": "ImGuiDockNodeFlags_AutoHideTabBar",
         "value": "1 << 6"
       }
@@ -1587,61 +1587,61 @@
       },
       {
         "calc_value": 1,
-        "comment": " // By default, a successful call to BeginDragDropSource opens a tooltip so you can display a preview or description of the source contents. This flag disable this behavior.",
+        "comment": "// By default, a successful call to BeginDragDropSource opens a tooltip so you can display a preview or description of the source contents. This flag disable this behavior.",
         "name": "ImGuiDragDropFlags_SourceNoPreviewTooltip",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // By default, when dragging we clear data so that IsItemHovered() will return false, to avoid subsequent user code submitting tooltips. This flag disable this behavior so you can still call IsItemHovered() on the source item.",
+        "comment": "// By default, when dragging we clear data so that IsItemHovered() will return false, to avoid subsequent user code submitting tooltips. This flag disable this behavior so you can still call IsItemHovered() on the source item.",
         "name": "ImGuiDragDropFlags_SourceNoDisableHover",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Disable the behavior that allows to open tree nodes and collapsing header by holding over them while dragging a source item.",
+        "comment": "// Disable the behavior that allows to open tree nodes and collapsing header by holding over them while dragging a source item.",
         "name": "ImGuiDragDropFlags_SourceNoHoldToOpenOthers",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Allow items such as Text(), Image() that have no unique identifier to be used as drag source, by manufacturing a temporary identifier based on their window-relative position. This is extremely unusual within the dear imgui ecosystem and so we made it explicit.",
+        "comment": "// Allow items such as Text(), Image() that have no unique identifier to be used as drag source, by manufacturing a temporary identifier based on their window-relative position. This is extremely unusual within the dear imgui ecosystem and so we made it explicit.",
         "name": "ImGuiDragDropFlags_SourceAllowNullID",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // External source (from outside of dear imgui), won't attempt to read current item/window info. Will always return true. Only one Extern source can be active simultaneously.",
+        "comment": "// External source (from outside of dear imgui), won't attempt to read current item/window info. Will always return true. Only one Extern source can be active simultaneously.",
         "name": "ImGuiDragDropFlags_SourceExtern",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Automatically expire the payload if the source cease to be submitted (otherwise payloads are persisting while being dragged)",
+        "comment": "// Automatically expire the payload if the source cease to be submitted (otherwise payloads are persisting while being dragged)",
         "name": "ImGuiDragDropFlags_SourceAutoExpirePayload",
         "value": "1 << 5"
       },
       {
         "calc_value": 1024,
-        "comment": " // AcceptDragDropPayload() will returns true even before the mouse button is released. You can then call IsDelivery() to test if the payload needs to be delivered.",
+        "comment": "// AcceptDragDropPayload() will returns true even before the mouse button is released. You can then call IsDelivery() to test if the payload needs to be delivered.",
         "name": "ImGuiDragDropFlags_AcceptBeforeDelivery",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Do not draw the default highlight rectangle when hovering over target.",
+        "comment": "// Do not draw the default highlight rectangle when hovering over target.",
         "name": "ImGuiDragDropFlags_AcceptNoDrawDefaultRect",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Request hiding the BeginDragDropSource tooltip from the BeginDragDropTarget site.",
+        "comment": "// Request hiding the BeginDragDropSource tooltip from the BeginDragDropTarget site.",
         "name": "ImGuiDragDropFlags_AcceptNoPreviewTooltip",
         "value": "1 << 12"
       },
       {
         "calc_value": 3072,
-        "comment": " // For peeking ahead and inspecting the payload before delivery.",
+        "comment": "// For peeking ahead and inspecting the payload before delivery.",
         "name": "ImGuiDragDropFlags_AcceptPeekOnly",
         "value": "ImGuiDragDropFlags_AcceptBeforeDelivery | ImGuiDragDropFlags_AcceptNoDrawDefaultRect"
       }
@@ -1654,31 +1654,31 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Return true if any children of the window is focused",
+        "comment": "// Return true if any children of the window is focused",
         "name": "ImGuiFocusedFlags_ChildWindows",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Test from root window (top most parent of the current hierarchy)",
+        "comment": "// Test from root window (top most parent of the current hierarchy)",
         "name": "ImGuiFocusedFlags_RootWindow",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Return true if any window is focused. Important: If you are trying to tell how to dispatch your low-level inputs, do NOT use this. Use 'io.WantCaptureMouse' instead! Please read the FAQ!",
+        "comment": "// Return true if any window is focused. Important: If you are trying to tell how to dispatch your low-level inputs, do NOT use this. Use 'io.WantCaptureMouse' instead! Please read the FAQ!",
         "name": "ImGuiFocusedFlags_AnyWindow",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Do not consider popup hierarchy (do not treat popup emitter as parent of popup) (when used with _ChildWindows or _RootWindow)",
+        "comment": "// Do not consider popup hierarchy (do not treat popup emitter as parent of popup) (when used with _ChildWindows or _RootWindow)",
         "name": "ImGuiFocusedFlags_NoPopupHierarchy",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Consider docking hierarchy (treat dockspace host as parent of docked window) (when used with _ChildWindows or _RootWindow)",
+        "comment": "// Consider docking hierarchy (treat dockspace host as parent of docked window) (when used with _ChildWindows or _RootWindow)",
         "name": "ImGuiFocusedFlags_DockHierarchy",
         "value": "1 << 4"
       },
@@ -1691,67 +1691,67 @@
     "ImGuiHoveredFlags_": [
       {
         "calc_value": 0,
-        "comment": " // Return true if directly over the item/window, not obstructed by another window, not obstructed by an active popup or modal blocking inputs under them.",
+        "comment": "// Return true if directly over the item/window, not obstructed by another window, not obstructed by an active popup or modal blocking inputs under them.",
         "name": "ImGuiHoveredFlags_None",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // IsWindowHovered() only: Return true if any children of the window is hovered",
+        "comment": "// IsWindowHovered() only: Return true if any children of the window is hovered",
         "name": "ImGuiHoveredFlags_ChildWindows",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // IsWindowHovered() only: Test from root window (top most parent of the current hierarchy)",
+        "comment": "// IsWindowHovered() only: Test from root window (top most parent of the current hierarchy)",
         "name": "ImGuiHoveredFlags_RootWindow",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // IsWindowHovered() only: Return true if any window is hovered",
+        "comment": "// IsWindowHovered() only: Return true if any window is hovered",
         "name": "ImGuiHoveredFlags_AnyWindow",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // IsWindowHovered() only: Do not consider popup hierarchy (do not treat popup emitter as parent of popup) (when used with _ChildWindows or _RootWindow)",
+        "comment": "// IsWindowHovered() only: Do not consider popup hierarchy (do not treat popup emitter as parent of popup) (when used with _ChildWindows or _RootWindow)",
         "name": "ImGuiHoveredFlags_NoPopupHierarchy",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // IsWindowHovered() only: Consider docking hierarchy (treat dockspace host as parent of docked window) (when used with _ChildWindows or _RootWindow)",
+        "comment": "// IsWindowHovered() only: Consider docking hierarchy (treat dockspace host as parent of docked window) (when used with _ChildWindows or _RootWindow)",
         "name": "ImGuiHoveredFlags_DockHierarchy",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Return true even if a popup window is normally blocking access to this item/window",
+        "comment": "// Return true even if a popup window is normally blocking access to this item/window",
         "name": "ImGuiHoveredFlags_AllowWhenBlockedByPopup",
         "value": "1 << 5"
       },
       {
         "calc_value": 128,
-        "comment": " // Return true even if an active item is blocking access to this item/window. Useful for Drag and Drop patterns.",
+        "comment": "// Return true even if an active item is blocking access to this item/window. Useful for Drag and Drop patterns.",
         "name": "ImGuiHoveredFlags_AllowWhenBlockedByActiveItem",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // IsItemHovered() only: Return true even if the position is obstructed or overlapped by another window",
+        "comment": "// IsItemHovered() only: Return true even if the position is obstructed or overlapped by another window",
         "name": "ImGuiHoveredFlags_AllowWhenOverlapped",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // IsItemHovered() only: Return true even if the item is disabled",
+        "comment": "// IsItemHovered() only: Return true even if the item is disabled",
         "name": "ImGuiHoveredFlags_AllowWhenDisabled",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Disable using gamepad/keyboard navigation state when active, always query mouse.",
+        "comment": "// Disable using gamepad/keyboard navigation state when active, always query mouse.",
         "name": "ImGuiHoveredFlags_NoNavOverride",
         "value": "1 << 10"
       },
@@ -1836,13 +1836,13 @@
       },
       {
         "calc_value": 4,
-        "comment": " // Currently only used by InputText()",
+        "comment": "// Currently only used by InputText()",
         "name": "ImGuiInputSource_Clipboard",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": " // Stored in g.ActiveIdSource only",
+        "comment": "// Stored in g.ActiveIdSource only",
         "name": "ImGuiInputSource_Nav",
         "value": "5"
       },
@@ -1855,19 +1855,19 @@
     "ImGuiInputTextFlagsPrivate_": [
       {
         "calc_value": 67108864,
-        "comment": " // For internal use by InputTextMultiline()",
+        "comment": "// For internal use by InputTextMultiline()",
         "name": "ImGuiInputTextFlags_Multiline",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // For internal use by functions using InputText() before reformatting data",
+        "comment": "// For internal use by functions using InputText() before reformatting data",
         "name": "ImGuiInputTextFlags_NoMarkEdited",
         "value": "1 << 27"
       },
       {
         "calc_value": 268435456,
-        "comment": " // For internal use by TempInputText(), will skip calling ItemAdd(). Require bounding-box to strictly match.",
+        "comment": "// For internal use by TempInputText(), will skip calling ItemAdd(). Require bounding-box to strictly match.",
         "name": "ImGuiInputTextFlags_MergedItem",
         "value": "1 << 28"
       }
@@ -1880,121 +1880,121 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Allow 0123456789.+-*/",
+        "comment": "// Allow 0123456789.+-*/",
         "name": "ImGuiInputTextFlags_CharsDecimal",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Allow 0123456789ABCDEFabcdef",
+        "comment": "// Allow 0123456789ABCDEFabcdef",
         "name": "ImGuiInputTextFlags_CharsHexadecimal",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Turn a..z into A..Z",
+        "comment": "// Turn a..z into A..Z",
         "name": "ImGuiInputTextFlags_CharsUppercase",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Filter out spaces, tabs",
+        "comment": "// Filter out spaces, tabs",
         "name": "ImGuiInputTextFlags_CharsNoBlank",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Select entire text when first taking mouse focus",
+        "comment": "// Select entire text when first taking mouse focus",
         "name": "ImGuiInputTextFlags_AutoSelectAll",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Return 'true' when Enter is pressed (as opposed to every time the value was modified). Consider looking at the IsItemDeactivatedAfterEdit() function.",
+        "comment": "// Return 'true' when Enter is pressed (as opposed to every time the value was modified). Consider looking at the IsItemDeactivatedAfterEdit() function.",
         "name": "ImGuiInputTextFlags_EnterReturnsTrue",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Callback on pressing TAB (for completion handling)",
+        "comment": "// Callback on pressing TAB (for completion handling)",
         "name": "ImGuiInputTextFlags_CallbackCompletion",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Callback on pressing Up/Down arrows (for history handling)",
+        "comment": "// Callback on pressing Up/Down arrows (for history handling)",
         "name": "ImGuiInputTextFlags_CallbackHistory",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Callback on each iteration. User code may query cursor position, modify text buffer.",
+        "comment": "// Callback on each iteration. User code may query cursor position, modify text buffer.",
         "name": "ImGuiInputTextFlags_CallbackAlways",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.",
+        "comment": "// Callback on character inputs to replace or discard them. Modify 'EventChar' to replace or discard, or return 1 in callback to discard.",
         "name": "ImGuiInputTextFlags_CallbackCharFilter",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Pressing TAB input a '\\t' character into the text field",
+        "comment": "// Pressing TAB input a '\\t' character into the text field",
         "name": "ImGuiInputTextFlags_AllowTabInput",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // In multi-line mode, unfocus with Enter, add new line with Ctrl+Enter (default is opposite: unfocus with Ctrl+Enter, add line with Enter).",
+        "comment": "// In multi-line mode, unfocus with Enter, add new line with Ctrl+Enter (default is opposite: unfocus with Ctrl+Enter, add line with Enter).",
         "name": "ImGuiInputTextFlags_CtrlEnterForNewLine",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Disable following the cursor horizontally",
+        "comment": "// Disable following the cursor horizontally",
         "name": "ImGuiInputTextFlags_NoHorizontalScroll",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // Overwrite mode",
+        "comment": "// Overwrite mode",
         "name": "ImGuiInputTextFlags_AlwaysOverwrite",
         "value": "1 << 13"
       },
       {
         "calc_value": 16384,
-        "comment": " // Read-only mode",
+        "comment": "// Read-only mode",
         "name": "ImGuiInputTextFlags_ReadOnly",
         "value": "1 << 14"
       },
       {
         "calc_value": 32768,
-        "comment": " // Password mode, display all characters as '*'",
+        "comment": "// Password mode, display all characters as '*'",
         "name": "ImGuiInputTextFlags_Password",
         "value": "1 << 15"
       },
       {
         "calc_value": 65536,
-        "comment": " // Disable undo/redo. Note that input text owns the text data while active, if you want to provide your own undo/redo stack you need e.g. to call ClearActiveID().",
+        "comment": "// Disable undo/redo. Note that input text owns the text data while active, if you want to provide your own undo/redo stack you need e.g. to call ClearActiveID().",
         "name": "ImGuiInputTextFlags_NoUndoRedo",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " // Allow 0123456789.+-*/eE (Scientific notation input)",
+        "comment": "// Allow 0123456789.+-*/eE (Scientific notation input)",
         "name": "ImGuiInputTextFlags_CharsScientific",
         "value": "1 << 17"
       },
       {
         "calc_value": 262144,
-        "comment": " // Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow. Notify when the string wants to be resized (for string types which hold a cache of their Size). You will be provided a new BufSize in the callback and NEED to honor it. (see misc/cpp/imgui_stdlib.h for an example of using this)",
+        "comment": "// Callback on buffer capacity changes request (beyond 'buf_size' parameter value), allowing the string to grow. Notify when the string wants to be resized (for string types which hold a cache of their Size). You will be provided a new BufSize in the callback and NEED to honor it. (see misc/cpp/imgui_stdlib.h for an example of using this)",
         "name": "ImGuiInputTextFlags_CallbackResize",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " // Callback on any edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)",
+        "comment": "// Callback on any edit (note that InputText() already returns true on edit, the callback is useful mainly to manipulate the underlying buffer while focus is active)",
         "name": "ImGuiInputTextFlags_CallbackEdit",
         "value": "1 << 19"
       }
@@ -2007,55 +2007,55 @@
       },
       {
         "calc_value": 1,
-        "comment": " // false     // Disable keyboard tabbing (FIXME: should merge with _NoNav)",
+        "comment": "// false     // Disable keyboard tabbing (FIXME: should merge with _NoNav)",
         "name": "ImGuiItemFlags_NoTabStop",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // false     // Button() will return true multiple times based on io.KeyRepeatDelay and io.KeyRepeatRate settings.",
+        "comment": "// false     // Button() will return true multiple times based on io.KeyRepeatDelay and io.KeyRepeatRate settings.",
         "name": "ImGuiItemFlags_ButtonRepeat",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // false     // Disable interactions but doesn't affect visuals. See BeginDisabled()/EndDisabled(). See github.com/ocornut/imgui/issues/211",
+        "comment": "// false     // Disable interactions but doesn't affect visuals. See BeginDisabled()/EndDisabled(). See github.com/ocornut/imgui/issues/211",
         "name": "ImGuiItemFlags_Disabled",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // false     // Disable keyboard/gamepad directional navigation (FIXME: should merge with _NoTabStop)",
+        "comment": "// false     // Disable keyboard/gamepad directional navigation (FIXME: should merge with _NoTabStop)",
         "name": "ImGuiItemFlags_NoNav",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // false     // Disable item being a candidate for default focus (e.g. used by title bar items)",
+        "comment": "// false     // Disable item being a candidate for default focus (e.g. used by title bar items)",
         "name": "ImGuiItemFlags_NoNavDefaultFocus",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // false     // Disable MenuItem/Selectable() automatically closing their popup window",
+        "comment": "// false     // Disable MenuItem/Selectable() automatically closing their popup window",
         "name": "ImGuiItemFlags_SelectableDontClosePopup",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // false     // [BETA] Represent a mixed/indeterminate value, generally multi-selection where values differ. Currently only supported by Checkbox() (later should support all sorts of widgets)",
+        "comment": "// false     // [BETA] Represent a mixed/indeterminate value, generally multi-selection where values differ. Currently only supported by Checkbox() (later should support all sorts of widgets)",
         "name": "ImGuiItemFlags_MixedValue",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // false     // [ALPHA] Allow hovering interactions but underlying value is not changed.",
+        "comment": "// false     // [ALPHA] Allow hovering interactions but underlying value is not changed.",
         "name": "ImGuiItemFlags_ReadOnly",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // false     // [WIP] Auto-activate input mode when tab focused. Currently only used and supported by a few items before it becomes a generic feature.",
+        "comment": "// false     // [WIP] Auto-activate input mode when tab focused. Currently only used and supported by a few items before it becomes a generic feature.",
         "name": "ImGuiItemFlags_Inputable",
         "value": "1 << 8"
       }
@@ -2068,55 +2068,55 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Mouse position is within item rectangle (does NOT mean that the window is in correct z-order and can be hovered!, this is only one part of the most-common IsItemHovered test)",
+        "comment": "// Mouse position is within item rectangle (does NOT mean that the window is in correct z-order and can be hovered!, this is only one part of the most-common IsItemHovered test)",
         "name": "ImGuiItemStatusFlags_HoveredRect",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // g.LastItemData.DisplayRect is valid",
+        "comment": "// g.LastItemData.DisplayRect is valid",
         "name": "ImGuiItemStatusFlags_HasDisplayRect",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Value exposed by item was edited in the current frame (should match the bool return value of most widgets)",
+        "comment": "// Value exposed by item was edited in the current frame (should match the bool return value of most widgets)",
         "name": "ImGuiItemStatusFlags_Edited",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Set when Selectable(), TreeNode() reports toggling a selection. We can't report \"Selected\", only state changes, in order to easily handle clipping with less issues.",
+        "comment": "// Set when Selectable(), TreeNode() reports toggling a selection. We can't report \"Selected\", only state changes, in order to easily handle clipping with less issues.",
         "name": "ImGuiItemStatusFlags_ToggledSelection",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Set when TreeNode() reports toggling their open state.",
+        "comment": "// Set when TreeNode() reports toggling their open state.",
         "name": "ImGuiItemStatusFlags_ToggledOpen",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Set if the widget/group is able to provide data for the ImGuiItemStatusFlags_Deactivated flag.",
+        "comment": "// Set if the widget/group is able to provide data for the ImGuiItemStatusFlags_Deactivated flag.",
         "name": "ImGuiItemStatusFlags_HasDeactivated",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Only valid if ImGuiItemStatusFlags_HasDeactivated is set.",
+        "comment": "// Only valid if ImGuiItemStatusFlags_HasDeactivated is set.",
         "name": "ImGuiItemStatusFlags_Deactivated",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Override the HoveredWindow test to allow cross-window hover testing.",
+        "comment": "// Override the HoveredWindow test to allow cross-window hover testing.",
         "name": "ImGuiItemStatusFlags_HoveredWindow",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Set when the Focusable item just got focused by Tabbing (FIXME: to be removed soon)",
+        "comment": "// Set when the Focusable item just got focused by Tabbing (FIXME: to be removed soon)",
         "name": "ImGuiItemStatusFlags_FocusedByTabbing",
         "value": "1 << 8"
       }
@@ -2151,7 +2151,7 @@
       },
       {
         "calc_value": 512,
-        "comment": " // == ImGuiKey_NamedKey_BEGIN",
+        "comment": "// == ImGuiKey_NamedKey_BEGIN",
         "name": "ImGuiKey_Tab",
         "value": "512"
       },
@@ -2512,67 +2512,67 @@
       },
       {
         "calc_value": 584,
-        "comment": " // '",
+        "comment": "// '",
         "name": "ImGuiKey_Apostrophe",
         "value": "584"
       },
       {
         "calc_value": 585,
-        "comment": " // ,",
+        "comment": "// ,",
         "name": "ImGuiKey_Comma",
         "value": "585"
       },
       {
         "calc_value": 586,
-        "comment": " // -",
+        "comment": "// -",
         "name": "ImGuiKey_Minus",
         "value": "586"
       },
       {
         "calc_value": 587,
-        "comment": " // .",
+        "comment": "// .",
         "name": "ImGuiKey_Period",
         "value": "587"
       },
       {
         "calc_value": 588,
-        "comment": " // /",
+        "comment": "// /",
         "name": "ImGuiKey_Slash",
         "value": "588"
       },
       {
         "calc_value": 589,
-        "comment": " // ;",
+        "comment": "// ;",
         "name": "ImGuiKey_Semicolon",
         "value": "589"
       },
       {
         "calc_value": 590,
-        "comment": " // =",
+        "comment": "// =",
         "name": "ImGuiKey_Equal",
         "value": "590"
       },
       {
         "calc_value": 591,
-        "comment": " // [",
+        "comment": "// [",
         "name": "ImGuiKey_LeftBracket",
         "value": "591"
       },
       {
         "calc_value": 592,
-        "comment": " // \\ (this text inhibit multiline comment caused by backslash)",
+        "comment": "// \\ (this text inhibit multiline comment caused by backslash)",
         "name": "ImGuiKey_Backslash",
         "value": "592"
       },
       {
         "calc_value": 593,
-        "comment": " // ]",
+        "comment": "// ]",
         "name": "ImGuiKey_RightBracket",
         "value": "593"
       },
       {
         "calc_value": 594,
-        "comment": " // `",
+        "comment": "// `",
         "name": "ImGuiKey_GraveAccent",
         "value": "594"
       },
@@ -2688,145 +2688,145 @@
       },
       {
         "calc_value": 617,
-        "comment": " // Menu (Xbox)          + (Switch)   Start/Options (PS) // --",
+        "comment": "// Menu (Xbox)          + (Switch)   Start/Options (PS) // --",
         "name": "ImGuiKey_GamepadStart",
         "value": "617"
       },
       {
         "calc_value": 618,
-        "comment": " // View (Xbox)          - (Switch)   Share (PS)         // --",
+        "comment": "// View (Xbox)          - (Switch)   Share (PS)         // --",
         "name": "ImGuiKey_GamepadBack",
         "value": "618"
       },
       {
         "calc_value": 619,
-        "comment": " // Y (Xbox)             X (Switch)   Triangle (PS)      // -> ImGuiNavInput_Input",
+        "comment": "// Y (Xbox)             X (Switch)   Triangle (PS)      // -> ImGuiNavInput_Input",
         "name": "ImGuiKey_GamepadFaceUp",
         "value": "619"
       },
       {
         "calc_value": 620,
-        "comment": " // A (Xbox)             B (Switch)   Cross (PS)         // -> ImGuiNavInput_Activate",
+        "comment": "// A (Xbox)             B (Switch)   Cross (PS)         // -> ImGuiNavInput_Activate",
         "name": "ImGuiKey_GamepadFaceDown",
         "value": "620"
       },
       {
         "calc_value": 621,
-        "comment": " // X (Xbox)             Y (Switch)   Square (PS)        // -> ImGuiNavInput_Menu",
+        "comment": "// X (Xbox)             Y (Switch)   Square (PS)        // -> ImGuiNavInput_Menu",
         "name": "ImGuiKey_GamepadFaceLeft",
         "value": "621"
       },
       {
         "calc_value": 622,
-        "comment": " // B (Xbox)             A (Switch)   Circle (PS)        // -> ImGuiNavInput_Cancel",
+        "comment": "// B (Xbox)             A (Switch)   Circle (PS)        // -> ImGuiNavInput_Cancel",
         "name": "ImGuiKey_GamepadFaceRight",
         "value": "622"
       },
       {
         "calc_value": 623,
-        "comment": " // D-pad Up                                             // -> ImGuiNavInput_DpadUp",
+        "comment": "// D-pad Up                                             // -> ImGuiNavInput_DpadUp",
         "name": "ImGuiKey_GamepadDpadUp",
         "value": "623"
       },
       {
         "calc_value": 624,
-        "comment": " // D-pad Down                                           // -> ImGuiNavInput_DpadDown",
+        "comment": "// D-pad Down                                           // -> ImGuiNavInput_DpadDown",
         "name": "ImGuiKey_GamepadDpadDown",
         "value": "624"
       },
       {
         "calc_value": 625,
-        "comment": " // D-pad Left                                           // -> ImGuiNavInput_DpadLeft",
+        "comment": "// D-pad Left                                           // -> ImGuiNavInput_DpadLeft",
         "name": "ImGuiKey_GamepadDpadLeft",
         "value": "625"
       },
       {
         "calc_value": 626,
-        "comment": " // D-pad Right                                          // -> ImGuiNavInput_DpadRight",
+        "comment": "// D-pad Right                                          // -> ImGuiNavInput_DpadRight",
         "name": "ImGuiKey_GamepadDpadRight",
         "value": "626"
       },
       {
         "calc_value": 627,
-        "comment": " // L Bumper (Xbox)      L (Switch)   L1 (PS)            // -> ImGuiNavInput_FocusPrev + ImGuiNavInput_TweakSlow",
+        "comment": "// L Bumper (Xbox)      L (Switch)   L1 (PS)            // -> ImGuiNavInput_FocusPrev + ImGuiNavInput_TweakSlow",
         "name": "ImGuiKey_GamepadL1",
         "value": "627"
       },
       {
         "calc_value": 628,
-        "comment": " // R Bumper (Xbox)      R (Switch)   R1 (PS)            // -> ImGuiNavInput_FocusNext + ImGuiNavInput_TweakFast",
+        "comment": "// R Bumper (Xbox)      R (Switch)   R1 (PS)            // -> ImGuiNavInput_FocusNext + ImGuiNavInput_TweakFast",
         "name": "ImGuiKey_GamepadR1",
         "value": "628"
       },
       {
         "calc_value": 629,
-        "comment": " // L Trigger (Xbox)     ZL (Switch)  L2 (PS) [Analog]",
+        "comment": "// L Trigger (Xbox)     ZL (Switch)  L2 (PS) [Analog]",
         "name": "ImGuiKey_GamepadL2",
         "value": "629"
       },
       {
         "calc_value": 630,
-        "comment": " // R Trigger (Xbox)     ZR (Switch)  R2 (PS) [Analog]",
+        "comment": "// R Trigger (Xbox)     ZR (Switch)  R2 (PS) [Analog]",
         "name": "ImGuiKey_GamepadR2",
         "value": "630"
       },
       {
         "calc_value": 631,
-        "comment": " // L Thumbstick (Xbox)  L3 (Switch)  L3 (PS)",
+        "comment": "// L Thumbstick (Xbox)  L3 (Switch)  L3 (PS)",
         "name": "ImGuiKey_GamepadL3",
         "value": "631"
       },
       {
         "calc_value": 632,
-        "comment": " // R Thumbstick (Xbox)  R3 (Switch)  R3 (PS)",
+        "comment": "// R Thumbstick (Xbox)  R3 (Switch)  R3 (PS)",
         "name": "ImGuiKey_GamepadR3",
         "value": "632"
       },
       {
         "calc_value": 633,
-        "comment": " // [Analog]                                             // -> ImGuiNavInput_LStickUp",
+        "comment": "// [Analog]                                             // -> ImGuiNavInput_LStickUp",
         "name": "ImGuiKey_GamepadLStickUp",
         "value": "633"
       },
       {
         "calc_value": 634,
-        "comment": " // [Analog]                                             // -> ImGuiNavInput_LStickDown",
+        "comment": "// [Analog]                                             // -> ImGuiNavInput_LStickDown",
         "name": "ImGuiKey_GamepadLStickDown",
         "value": "634"
       },
       {
         "calc_value": 635,
-        "comment": " // [Analog]                                             // -> ImGuiNavInput_LStickLeft",
+        "comment": "// [Analog]                                             // -> ImGuiNavInput_LStickLeft",
         "name": "ImGuiKey_GamepadLStickLeft",
         "value": "635"
       },
       {
         "calc_value": 636,
-        "comment": " // [Analog]                                             // -> ImGuiNavInput_LStickRight",
+        "comment": "// [Analog]                                             // -> ImGuiNavInput_LStickRight",
         "name": "ImGuiKey_GamepadLStickRight",
         "value": "636"
       },
       {
         "calc_value": 637,
-        "comment": " // [Analog]",
+        "comment": "// [Analog]",
         "name": "ImGuiKey_GamepadRStickUp",
         "value": "637"
       },
       {
         "calc_value": 638,
-        "comment": " // [Analog]",
+        "comment": "// [Analog]",
         "name": "ImGuiKey_GamepadRStickDown",
         "value": "638"
       },
       {
         "calc_value": 639,
-        "comment": " // [Analog]",
+        "comment": "// [Analog]",
         "name": "ImGuiKey_GamepadRStickLeft",
         "value": "639"
       },
       {
         "calc_value": 640,
-        "comment": " // [Analog]",
+        "comment": "// [Analog]",
         "name": "ImGuiKey_GamepadRStickRight",
         "value": "640"
       },
@@ -2852,7 +2852,7 @@
       },
       {
         "calc_value": 645,
-        "comment": " // No valid ImGuiKey is ever greater than this value",
+        "comment": "// No valid ImGuiKey is ever greater than this value",
         "name": "ImGuiKey_COUNT",
         "value": "645"
       },
@@ -2873,13 +2873,13 @@
       },
       {
         "calc_value": 645,
-        "comment": " // Size of KeysData[]: hold legacy 0..512 keycodes + named keys",
+        "comment": "// Size of KeysData[]: hold legacy 0..512 keycodes + named keys",
         "name": "ImGuiKey_KeysData_SIZE",
         "value": "ImGuiKey_COUNT"
       },
       {
         "calc_value": 0,
-        "comment": " // First key stored in io.KeysData[0]. Accesses to io.KeysData[] must use (key - ImGuiKey_KeysData_OFFSET).",
+        "comment": "// First key stored in io.KeysData[0]. Accesses to io.KeysData[] must use (key - ImGuiKey_KeysData_OFFSET).",
         "name": "ImGuiKey_KeysData_OFFSET",
         "value": "0"
       }
@@ -2941,13 +2941,13 @@
       },
       {
         "calc_value": 4,
-        "comment": " // Menu",
+        "comment": "// Menu",
         "name": "ImGuiModFlags_Alt",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Cmd/Super/Windows key",
+        "comment": "// Cmd/Super/Windows key",
         "name": "ImGuiModFlags_Super",
         "value": "1 << 3"
       }
@@ -2987,49 +2987,49 @@
       },
       {
         "calc_value": 1,
-        "comment": " // When hovering over InputText, etc.",
+        "comment": "// When hovering over InputText, etc.",
         "name": "ImGuiMouseCursor_TextInput",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // (Unused by Dear ImGui functions)",
+        "comment": "// (Unused by Dear ImGui functions)",
         "name": "ImGuiMouseCursor_ResizeAll",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // When hovering over an horizontal border",
+        "comment": "// When hovering over an horizontal border",
         "name": "ImGuiMouseCursor_ResizeNS",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": " // When hovering over a vertical border or a column",
+        "comment": "// When hovering over a vertical border or a column",
         "name": "ImGuiMouseCursor_ResizeEW",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": " // When hovering over the bottom-left corner of a window",
+        "comment": "// When hovering over the bottom-left corner of a window",
         "name": "ImGuiMouseCursor_ResizeNESW",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": " // When hovering over the bottom-right corner of a window",
+        "comment": "// When hovering over the bottom-right corner of a window",
         "name": "ImGuiMouseCursor_ResizeNWSE",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": " // (Unused by Dear ImGui functions. Use for e.g. hyperlinks)",
+        "comment": "// (Unused by Dear ImGui functions. Use for e.g. hyperlinks)",
         "name": "ImGuiMouseCursor_Hand",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": " // When hovering something with disallowed interaction. Usually a crossed circle.",
+        "comment": "// When hovering something with disallowed interaction. Usually a crossed circle.",
         "name": "ImGuiMouseCursor_NotAllowed",
         "value": "8"
       },
@@ -3047,7 +3047,7 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Raw keyboard (not pulled from nav), facilitate use of some functions before we can unify nav and keys",
+        "comment": "// Raw keyboard (not pulled from nav), facilitate use of some functions before we can unify nav and keys",
         "name": "ImGuiNavDirSourceFlags_RawKeyboard",
         "value": "1 << 0"
       },
@@ -3085,7 +3085,7 @@
       },
       {
         "calc_value": 4,
-        "comment": " // Draw rectangular highlight if (g.NavId == id) _even_ when using the mouse.",
+        "comment": "// Draw rectangular highlight if (g.NavId == id) _even_ when using the mouse.",
         "name": "ImGuiNavHighlightFlags_AlwaysDraw",
         "value": "1 << 2"
       },
@@ -3098,121 +3098,121 @@
     "ImGuiNavInput_": [
       {
         "calc_value": 0,
-        "comment": " // Activate / Open / Toggle / Tweak value       // e.g. Cross  (PS4), A (Xbox), A (Switch), Space (Keyboard)",
+        "comment": "// Activate / Open / Toggle / Tweak value       // e.g. Cross  (PS4), A (Xbox), A (Switch), Space (Keyboard)",
         "name": "ImGuiNavInput_Activate",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // Cancel / Close / Exit                        // e.g. Circle (PS4), B (Xbox), B (Switch), Escape (Keyboard)",
+        "comment": "// Cancel / Close / Exit                        // e.g. Circle (PS4), B (Xbox), B (Switch), Escape (Keyboard)",
         "name": "ImGuiNavInput_Cancel",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // Text input / On-Screen keyboard              // e.g. Triang.(PS4), Y (Xbox), X (Switch), Return (Keyboard)",
+        "comment": "// Text input / On-Screen keyboard              // e.g. Triang.(PS4), Y (Xbox), X (Switch), Return (Keyboard)",
         "name": "ImGuiNavInput_Input",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // Tap: Toggle menu / Hold: Focus, Move, Resize // e.g. Square (PS4), X (Xbox), Y (Switch), Alt (Keyboard)",
+        "comment": "// Tap: Toggle menu / Hold: Focus, Move, Resize // e.g. Square (PS4), X (Xbox), Y (Switch), Alt (Keyboard)",
         "name": "ImGuiNavInput_Menu",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": " // Move / Tweak / Resize window (w/ PadMenu)    // e.g. D-pad Left/Right/Up/Down (Gamepads), Arrow keys (Keyboard)",
+        "comment": "// Move / Tweak / Resize window (w/ PadMenu)    // e.g. D-pad Left/Right/Up/Down (Gamepads), Arrow keys (Keyboard)",
         "name": "ImGuiNavInput_DpadLeft",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_DpadRight",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_DpadUp",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_DpadDown",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": " // Scroll / Move window (w/ PadMenu)            // e.g. Left Analog Stick Left/Right/Up/Down",
+        "comment": "// Scroll / Move window (w/ PadMenu)            // e.g. Left Analog Stick Left/Right/Up/Down",
         "name": "ImGuiNavInput_LStickLeft",
         "value": "8"
       },
       {
         "calc_value": 9,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_LStickRight",
         "value": "9"
       },
       {
         "calc_value": 10,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_LStickUp",
         "value": "10"
       },
       {
         "calc_value": 11,
-        "comment": " //",
+        "comment": "//",
         "name": "ImGuiNavInput_LStickDown",
         "value": "11"
       },
       {
         "calc_value": 12,
-        "comment": " // Focus Next window (w/ PadMenu)               // e.g. L1 or L2 (PS4), LB or LT (Xbox), L or ZL (Switch)",
+        "comment": "// Focus Next window (w/ PadMenu)               // e.g. L1 or L2 (PS4), LB or LT (Xbox), L or ZL (Switch)",
         "name": "ImGuiNavInput_FocusPrev",
         "value": "12"
       },
       {
         "calc_value": 13,
-        "comment": " // Focus Prev window (w/ PadMenu)               // e.g. R1 or R2 (PS4), RB or RT (Xbox), R or ZL (Switch)",
+        "comment": "// Focus Prev window (w/ PadMenu)               // e.g. R1 or R2 (PS4), RB or RT (Xbox), R or ZL (Switch)",
         "name": "ImGuiNavInput_FocusNext",
         "value": "13"
       },
       {
         "calc_value": 14,
-        "comment": " // Slower tweaks                                // e.g. L1 or L2 (PS4), LB or LT (Xbox), L or ZL (Switch)",
+        "comment": "// Slower tweaks                                // e.g. L1 or L2 (PS4), LB or LT (Xbox), L or ZL (Switch)",
         "name": "ImGuiNavInput_TweakSlow",
         "value": "14"
       },
       {
         "calc_value": 15,
-        "comment": " // Faster tweaks                                // e.g. R1 or R2 (PS4), RB or RT (Xbox), R or ZL (Switch)",
+        "comment": "// Faster tweaks                                // e.g. R1 or R2 (PS4), RB or RT (Xbox), R or ZL (Switch)",
         "name": "ImGuiNavInput_TweakFast",
         "value": "15"
       },
       {
         "calc_value": 16,
-        "comment": " // Move left                                    // = Arrow keys",
+        "comment": "// Move left                                    // = Arrow keys",
         "name": "ImGuiNavInput_KeyLeft_",
         "value": "16"
       },
       {
         "calc_value": 17,
-        "comment": " // Move right",
+        "comment": "// Move right",
         "name": "ImGuiNavInput_KeyRight_",
         "value": "17"
       },
       {
         "calc_value": 18,
-        "comment": " // Move up",
+        "comment": "// Move up",
         "name": "ImGuiNavInput_KeyUp_",
         "value": "18"
       },
       {
         "calc_value": 19,
-        "comment": " // Move down",
+        "comment": "// Move down",
         "name": "ImGuiNavInput_KeyDown_",
         "value": "19"
       },
@@ -3225,13 +3225,13 @@
     "ImGuiNavLayer": [
       {
         "calc_value": 0,
-        "comment": " // Main scrolling layer",
+        "comment": "// Main scrolling layer",
         "name": "ImGuiNavLayer_Main",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // Menu layer (access with Alt/ImGuiNavInput_Menu)",
+        "comment": "// Menu layer (access with Alt/ImGuiNavInput_Menu)",
         "name": "ImGuiNavLayer_Menu",
         "value": "1"
       },
@@ -3249,7 +3249,7 @@
       },
       {
         "calc_value": 1,
-        "comment": " // On failed request, restart from opposite side",
+        "comment": "// On failed request, restart from opposite side",
         "name": "ImGuiNavMoveFlags_LoopX",
         "value": "1 << 0"
       },
@@ -3260,31 +3260,31 @@
       },
       {
         "calc_value": 4,
-        "comment": " // On failed request, request from opposite side one line down (when NavDir==right) or one line up (when NavDir==left)",
+        "comment": "// On failed request, request from opposite side one line down (when NavDir==right) or one line up (when NavDir==left)",
         "name": "ImGuiNavMoveFlags_WrapX",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // This is not super useful but provided for completeness",
+        "comment": "// This is not super useful but provided for completeness",
         "name": "ImGuiNavMoveFlags_WrapY",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Allow scoring and considering the current NavId as a move target candidate. This is used when the move source is offset (e.g. pressing PageDown actually needs to send a Up move request, if we are pressing PageDown from the bottom-most item we need to stay in place)",
+        "comment": "// Allow scoring and considering the current NavId as a move target candidate. This is used when the move source is offset (e.g. pressing PageDown actually needs to send a Up move request, if we are pressing PageDown from the bottom-most item we need to stay in place)",
         "name": "ImGuiNavMoveFlags_AllowCurrentNavId",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Store alternate result in NavMoveResultLocalVisible that only comprise elements that are already fully visible (used by PageUp/PageDown)",
+        "comment": "// Store alternate result in NavMoveResultLocalVisible that only comprise elements that are already fully visible (used by PageUp/PageDown)",
         "name": "ImGuiNavMoveFlags_AlsoScoreVisibleSet",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Force scrolling to min/max (used by Home/End) // FIXME-NAV: Aim to remove or reword, probably unnecessary",
+        "comment": "// Force scrolling to min/max (used by Home/End) // FIXME-NAV: Aim to remove or reword, probably unnecessary",
         "name": "ImGuiNavMoveFlags_ScrollToEdgeY",
         "value": "1 << 6"
       },
@@ -3295,7 +3295,7 @@
       },
       {
         "calc_value": 256,
-        "comment": " // Dummy scoring for debug purpose, don't apply result",
+        "comment": "// Dummy scoring for debug purpose, don't apply result",
         "name": "ImGuiNavMoveFlags_DebugNoResult",
         "value": "1 << 8"
       },
@@ -3306,7 +3306,7 @@
       },
       {
         "calc_value": 1024,
-        "comment": " // == Focus + Activate if item is Inputable + DontChangeNavHighlight",
+        "comment": "// == Focus + Activate if item is Inputable + DontChangeNavHighlight",
         "name": "ImGuiNavMoveFlags_Tabbing",
         "value": "1 << 10"
       },
@@ -3317,7 +3317,7 @@
       },
       {
         "calc_value": 4096,
-        "comment": " // Do not alter the visible state of keyboard vs mouse nav highlight",
+        "comment": "// Do not alter the visible state of keyboard vs mouse nav highlight",
         "name": "ImGuiNavMoveFlags_DontSetNavHighlight",
         "value": "1 << 12"
       }
@@ -3441,31 +3441,31 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Disable column dividers",
+        "comment": "// Disable column dividers",
         "name": "ImGuiOldColumnFlags_NoBorder",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Disable resizing columns when clicking on the dividers",
+        "comment": "// Disable resizing columns when clicking on the dividers",
         "name": "ImGuiOldColumnFlags_NoResize",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Disable column width preservation when adjusting columns",
+        "comment": "// Disable column width preservation when adjusting columns",
         "name": "ImGuiOldColumnFlags_NoPreserveWidths",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Disable forcing columns to fit within window",
+        "comment": "// Disable forcing columns to fit within window",
         "name": "ImGuiOldColumnFlags_NoForceWithinWindow",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // (WIP) Restore pre-1.51 behavior of extending the parent window contents size but _without affecting the columns width at all_. Will eventually remove.",
+        "comment": "// (WIP) Restore pre-1.51 behavior of extending the parent window contents size but _without affecting the columns width at all_. Will eventually remove.",
         "name": "ImGuiOldColumnFlags_GrowParentContentsSize",
         "value": "1 << 4"
       }
@@ -3490,19 +3490,19 @@
       },
       {
         "calc_value": 0,
-        "comment": " // For BeginPopupContext*(): open on Left Mouse release. Guaranteed to always be == 0 (same as ImGuiMouseButton_Left)",
+        "comment": "// For BeginPopupContext*(): open on Left Mouse release. Guaranteed to always be == 0 (same as ImGuiMouseButton_Left)",
         "name": "ImGuiPopupFlags_MouseButtonLeft",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // For BeginPopupContext*(): open on Right Mouse release. Guaranteed to always be == 1 (same as ImGuiMouseButton_Right)",
+        "comment": "// For BeginPopupContext*(): open on Right Mouse release. Guaranteed to always be == 1 (same as ImGuiMouseButton_Right)",
         "name": "ImGuiPopupFlags_MouseButtonRight",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // For BeginPopupContext*(): open on Middle Mouse release. Guaranteed to always be == 2 (same as ImGuiMouseButton_Middle)",
+        "comment": "// For BeginPopupContext*(): open on Middle Mouse release. Guaranteed to always be == 2 (same as ImGuiMouseButton_Middle)",
         "name": "ImGuiPopupFlags_MouseButtonMiddle",
         "value": "2"
       },
@@ -3518,25 +3518,25 @@
       },
       {
         "calc_value": 32,
-        "comment": " // For OpenPopup*(), BeginPopupContext*(): don't open if there's already a popup at the same level of the popup stack",
+        "comment": "// For OpenPopup*(), BeginPopupContext*(): don't open if there's already a popup at the same level of the popup stack",
         "name": "ImGuiPopupFlags_NoOpenOverExistingPopup",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // For BeginPopupContextWindow(): don't return true when hovering items, only when hovering empty space",
+        "comment": "// For BeginPopupContextWindow(): don't return true when hovering items, only when hovering empty space",
         "name": "ImGuiPopupFlags_NoOpenOverItems",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // For IsPopupOpen(): ignore the ImGuiID parameter and test for any popup.",
+        "comment": "// For IsPopupOpen(): ignore the ImGuiID parameter and test for any popup.",
         "name": "ImGuiPopupFlags_AnyPopupId",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // For IsPopupOpen(): search/test at any level of the popup stack (default test in the current level)",
+        "comment": "// For IsPopupOpen(): search/test at any level of the popup stack (default test in the current level)",
         "name": "ImGuiPopupFlags_AnyPopupLevel",
         "value": "1 << 8"
       },
@@ -3571,43 +3571,43 @@
       },
       {
         "calc_value": 1,
-        "comment": " // If item is not visible: scroll as little as possible on X axis to bring item back into view [default for X axis]",
+        "comment": "// If item is not visible: scroll as little as possible on X axis to bring item back into view [default for X axis]",
         "name": "ImGuiScrollFlags_KeepVisibleEdgeX",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // If item is not visible: scroll as little as possible on Y axis to bring item back into view [default for Y axis for windows that are already visible]",
+        "comment": "// If item is not visible: scroll as little as possible on Y axis to bring item back into view [default for Y axis for windows that are already visible]",
         "name": "ImGuiScrollFlags_KeepVisibleEdgeY",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // If item is not visible: scroll to make the item centered on X axis [rarely used]",
+        "comment": "// If item is not visible: scroll to make the item centered on X axis [rarely used]",
         "name": "ImGuiScrollFlags_KeepVisibleCenterX",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // If item is not visible: scroll to make the item centered on Y axis",
+        "comment": "// If item is not visible: scroll to make the item centered on Y axis",
         "name": "ImGuiScrollFlags_KeepVisibleCenterY",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Always center the result item on X axis [rarely used]",
+        "comment": "// Always center the result item on X axis [rarely used]",
         "name": "ImGuiScrollFlags_AlwaysCenterX",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Always center the result item on Y axis [default for Y axis for appearing window)",
+        "comment": "// Always center the result item on Y axis [default for Y axis for appearing window)",
         "name": "ImGuiScrollFlags_AlwaysCenterY",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Disable forwarding scrolling to parent window if required to keep item/rect visible (only scroll window the function was applied to).",
+        "comment": "// Disable forwarding scrolling to parent window if required to keep item/rect visible (only scroll window the function was applied to).",
         "name": "ImGuiScrollFlags_NoScrollParent",
         "value": "1 << 6"
       },
@@ -3630,43 +3630,43 @@
       },
       {
         "calc_value": 2097152,
-        "comment": " // (WIP) Auto-select when moved into. This is not exposed in public API as to handle multi-select and modifiers we will need user to explicitly control focus scope. May be replaced with a BeginSelection() API.",
+        "comment": "// (WIP) Auto-select when moved into. This is not exposed in public API as to handle multi-select and modifiers we will need user to explicitly control focus scope. May be replaced with a BeginSelection() API.",
         "name": "ImGuiSelectableFlags_SelectOnNav",
         "value": "1 << 21"
       },
       {
         "calc_value": 4194304,
-        "comment": " // Override button behavior to react on Click (default is Click+Release)",
+        "comment": "// Override button behavior to react on Click (default is Click+Release)",
         "name": "ImGuiSelectableFlags_SelectOnClick",
         "value": "1 << 22"
       },
       {
         "calc_value": 8388608,
-        "comment": " // Override button behavior to react on Release (default is Click+Release)",
+        "comment": "// Override button behavior to react on Release (default is Click+Release)",
         "name": "ImGuiSelectableFlags_SelectOnRelease",
         "value": "1 << 23"
       },
       {
         "calc_value": 16777216,
-        "comment": " // Span all avail width even if we declared less for layout purpose. FIXME: We may be able to remove this (added in 6251d379, 2bcafc86 for menus)",
+        "comment": "// Span all avail width even if we declared less for layout purpose. FIXME: We may be able to remove this (added in 6251d379, 2bcafc86 for menus)",
         "name": "ImGuiSelectableFlags_SpanAvailWidth",
         "value": "1 << 24"
       },
       {
         "calc_value": 33554432,
-        "comment": " // Always show active when held, even is not hovered. This concept could probably be renamed/formalized somehow.",
+        "comment": "// Always show active when held, even is not hovered. This concept could probably be renamed/formalized somehow.",
         "name": "ImGuiSelectableFlags_DrawHoveredWhenHeld",
         "value": "1 << 25"
       },
       {
         "calc_value": 67108864,
-        "comment": " // Set Nav/Focus ID on mouse hover (used by MenuItem)",
+        "comment": "// Set Nav/Focus ID on mouse hover (used by MenuItem)",
         "name": "ImGuiSelectableFlags_SetNavIdOnHover",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // Disable padding each side with ItemSpacing * 0.5f",
+        "comment": "// Disable padding each side with ItemSpacing * 0.5f",
         "name": "ImGuiSelectableFlags_NoPadWithHalfSpacing",
         "value": "1 << 27"
       }
@@ -3679,31 +3679,31 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Clicking this don't close parent popup window",
+        "comment": "// Clicking this don't close parent popup window",
         "name": "ImGuiSelectableFlags_DontClosePopups",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Selectable frame can span all columns (text will still fit in current column)",
+        "comment": "// Selectable frame can span all columns (text will still fit in current column)",
         "name": "ImGuiSelectableFlags_SpanAllColumns",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Generate press events on double clicks too",
+        "comment": "// Generate press events on double clicks too",
         "name": "ImGuiSelectableFlags_AllowDoubleClick",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Cannot be selected, display grayed out text",
+        "comment": "// Cannot be selected, display grayed out text",
         "name": "ImGuiSelectableFlags_Disabled",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // (WIP) Hit testing to allow subsequent widgets to overlap this one",
+        "comment": "// (WIP) Hit testing to allow subsequent widgets to overlap this one",
         "name": "ImGuiSelectableFlags_AllowItemOverlap",
         "value": "1 << 4"
       }
@@ -3716,7 +3716,7 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Axis default to current layout type, so generally Horizontal unless e.g. in a menu bar",
+        "comment": "// Axis default to current layout type, so generally Horizontal unless e.g. in a menu bar",
         "name": "ImGuiSeparatorFlags_Horizontal",
         "value": "1 << 0"
       },
@@ -3734,7 +3734,7 @@
     "ImGuiSliderFlagsPrivate_": [
       {
         "calc_value": 1048576,
-        "comment": " // Should this slider be orientated vertically?",
+        "comment": "// Should this slider be orientated vertically?",
         "name": "ImGuiSliderFlags_Vertical",
         "value": "1 << 20"
       },
@@ -3752,31 +3752,31 @@
       },
       {
         "calc_value": 16,
-        "comment": " // Clamp value to min/max bounds when input manually with CTRL+Click. By default CTRL+Click allows going out of bounds.",
+        "comment": "// Clamp value to min/max bounds when input manually with CTRL+Click. By default CTRL+Click allows going out of bounds.",
         "name": "ImGuiSliderFlags_AlwaysClamp",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Make the widget logarithmic (linear otherwise). Consider using ImGuiSliderFlags_NoRoundToFormat with this if using a format-string with small amount of digits.",
+        "comment": "// Make the widget logarithmic (linear otherwise). Consider using ImGuiSliderFlags_NoRoundToFormat with this if using a format-string with small amount of digits.",
         "name": "ImGuiSliderFlags_Logarithmic",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Disable rounding underlying value to match precision of the display format string (e.g. %.3f values are rounded to those 3 digits)",
+        "comment": "// Disable rounding underlying value to match precision of the display format string (e.g. %.3f values are rounded to those 3 digits)",
         "name": "ImGuiSliderFlags_NoRoundToFormat",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Disable CTRL+Click or Enter key allowing to input text directly into the widget",
+        "comment": "// Disable CTRL+Click or Enter key allowing to input text directly into the widget",
         "name": "ImGuiSliderFlags_NoInput",
         "value": "1 << 7"
       },
       {
         "calc_value": 1879048207,
-        "comment": " // [Internal] We treat using those bits as being potentially a 'float power' argument from the previous API that has got miscast to this enum, and will trigger an assert if needed.",
+        "comment": "// [Internal] We treat using those bits as being potentially a 'float power' argument from the previous API that has got miscast to this enum, and will trigger an assert if needed.",
         "name": "ImGuiSliderFlags_InvalidMask_",
         "value": "0x7000000F"
       }
@@ -3789,13 +3789,13 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Ascending = 0->9, A->Z etc.",
+        "comment": "// Ascending = 0->9, A->Z etc.",
         "name": "ImGuiSortDirection_Ascending",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // Descending = 9->0, Z->A etc.",
+        "comment": "// Descending = 9->0, Z->A etc.",
         "name": "ImGuiSortDirection_Descending",
         "value": "2"
       }
@@ -3803,151 +3803,151 @@
     "ImGuiStyleVar_": [
       {
         "calc_value": 0,
-        "comment": " // float     Alpha",
+        "comment": "// float     Alpha",
         "name": "ImGuiStyleVar_Alpha",
         "value": "0"
       },
       {
         "calc_value": 1,
-        "comment": " // float     DisabledAlpha",
+        "comment": "// float     DisabledAlpha",
         "name": "ImGuiStyleVar_DisabledAlpha",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // ImVec2    WindowPadding",
+        "comment": "// ImVec2    WindowPadding",
         "name": "ImGuiStyleVar_WindowPadding",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // float     WindowRounding",
+        "comment": "// float     WindowRounding",
         "name": "ImGuiStyleVar_WindowRounding",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "comment": " // float     WindowBorderSize",
+        "comment": "// float     WindowBorderSize",
         "name": "ImGuiStyleVar_WindowBorderSize",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "comment": " // ImVec2    WindowMinSize",
+        "comment": "// ImVec2    WindowMinSize",
         "name": "ImGuiStyleVar_WindowMinSize",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "comment": " // ImVec2    WindowTitleAlign",
+        "comment": "// ImVec2    WindowTitleAlign",
         "name": "ImGuiStyleVar_WindowTitleAlign",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "comment": " // float     ChildRounding",
+        "comment": "// float     ChildRounding",
         "name": "ImGuiStyleVar_ChildRounding",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "comment": " // float     ChildBorderSize",
+        "comment": "// float     ChildBorderSize",
         "name": "ImGuiStyleVar_ChildBorderSize",
         "value": "8"
       },
       {
         "calc_value": 9,
-        "comment": " // float     PopupRounding",
+        "comment": "// float     PopupRounding",
         "name": "ImGuiStyleVar_PopupRounding",
         "value": "9"
       },
       {
         "calc_value": 10,
-        "comment": " // float     PopupBorderSize",
+        "comment": "// float     PopupBorderSize",
         "name": "ImGuiStyleVar_PopupBorderSize",
         "value": "10"
       },
       {
         "calc_value": 11,
-        "comment": " // ImVec2    FramePadding",
+        "comment": "// ImVec2    FramePadding",
         "name": "ImGuiStyleVar_FramePadding",
         "value": "11"
       },
       {
         "calc_value": 12,
-        "comment": " // float     FrameRounding",
+        "comment": "// float     FrameRounding",
         "name": "ImGuiStyleVar_FrameRounding",
         "value": "12"
       },
       {
         "calc_value": 13,
-        "comment": " // float     FrameBorderSize",
+        "comment": "// float     FrameBorderSize",
         "name": "ImGuiStyleVar_FrameBorderSize",
         "value": "13"
       },
       {
         "calc_value": 14,
-        "comment": " // ImVec2    ItemSpacing",
+        "comment": "// ImVec2    ItemSpacing",
         "name": "ImGuiStyleVar_ItemSpacing",
         "value": "14"
       },
       {
         "calc_value": 15,
-        "comment": " // ImVec2    ItemInnerSpacing",
+        "comment": "// ImVec2    ItemInnerSpacing",
         "name": "ImGuiStyleVar_ItemInnerSpacing",
         "value": "15"
       },
       {
         "calc_value": 16,
-        "comment": " // float     IndentSpacing",
+        "comment": "// float     IndentSpacing",
         "name": "ImGuiStyleVar_IndentSpacing",
         "value": "16"
       },
       {
         "calc_value": 17,
-        "comment": " // ImVec2    CellPadding",
+        "comment": "// ImVec2    CellPadding",
         "name": "ImGuiStyleVar_CellPadding",
         "value": "17"
       },
       {
         "calc_value": 18,
-        "comment": " // float     ScrollbarSize",
+        "comment": "// float     ScrollbarSize",
         "name": "ImGuiStyleVar_ScrollbarSize",
         "value": "18"
       },
       {
         "calc_value": 19,
-        "comment": " // float     ScrollbarRounding",
+        "comment": "// float     ScrollbarRounding",
         "name": "ImGuiStyleVar_ScrollbarRounding",
         "value": "19"
       },
       {
         "calc_value": 20,
-        "comment": " // float     GrabMinSize",
+        "comment": "// float     GrabMinSize",
         "name": "ImGuiStyleVar_GrabMinSize",
         "value": "20"
       },
       {
         "calc_value": 21,
-        "comment": " // float     GrabRounding",
+        "comment": "// float     GrabRounding",
         "name": "ImGuiStyleVar_GrabRounding",
         "value": "21"
       },
       {
         "calc_value": 22,
-        "comment": " // float     TabRounding",
+        "comment": "// float     TabRounding",
         "name": "ImGuiStyleVar_TabRounding",
         "value": "22"
       },
       {
         "calc_value": 23,
-        "comment": " // ImVec2    ButtonTextAlign",
+        "comment": "// ImVec2    ButtonTextAlign",
         "name": "ImGuiStyleVar_ButtonTextAlign",
         "value": "23"
       },
       {
         "calc_value": 24,
-        "comment": " // ImVec2    SelectableTextAlign",
+        "comment": "// ImVec2    SelectableTextAlign",
         "name": "ImGuiStyleVar_SelectableTextAlign",
         "value": "24"
       },
@@ -3960,7 +3960,7 @@
     "ImGuiTabBarFlagsPrivate_": [
       {
         "calc_value": 1048576,
-        "comment": " // Part of a dock node [we don't use this in the master branch but it facilitate branch syncing to keep this around]",
+        "comment": "// Part of a dock node [we don't use this in the master branch but it facilitate branch syncing to keep this around]",
         "name": "ImGuiTabBarFlags_DockNode",
         "value": "1 << 20"
       },
@@ -3971,7 +3971,7 @@
       },
       {
         "calc_value": 4194304,
-        "comment": " // FIXME: Settings are handled by the docking system, this only request the tab bar to mark settings dirty when reordering tabs",
+        "comment": "// FIXME: Settings are handled by the docking system, this only request the tab bar to mark settings dirty when reordering tabs",
         "name": "ImGuiTabBarFlags_SaveSettings",
         "value": "1 << 22"
       }
@@ -3984,49 +3984,49 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Allow manually dragging tabs to re-order them + New tabs are appended at the end of list",
+        "comment": "// Allow manually dragging tabs to re-order them + New tabs are appended at the end of list",
         "name": "ImGuiTabBarFlags_Reorderable",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Automatically select new tabs when they appear",
+        "comment": "// Automatically select new tabs when they appear",
         "name": "ImGuiTabBarFlags_AutoSelectNewTabs",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Disable buttons to open the tab list popup",
+        "comment": "// Disable buttons to open the tab list popup",
         "name": "ImGuiTabBarFlags_TabListPopupButton",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Disable behavior of closing tabs (that are submitted with p_open != NULL) with middle mouse button. You can still repro this behavior on user's side with if (IsItemHovered() && IsMouseClicked(2)) *p_open = false.",
+        "comment": "// Disable behavior of closing tabs (that are submitted with p_open != NULL) with middle mouse button. You can still repro this behavior on user's side with if (IsItemHovered() && IsMouseClicked(2)) *p_open = false.",
         "name": "ImGuiTabBarFlags_NoCloseWithMiddleMouseButton",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Disable scrolling buttons (apply when fitting policy is ImGuiTabBarFlags_FittingPolicyScroll)",
+        "comment": "// Disable scrolling buttons (apply when fitting policy is ImGuiTabBarFlags_FittingPolicyScroll)",
         "name": "ImGuiTabBarFlags_NoTabListScrollingButtons",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Disable tooltips when hovering a tab",
+        "comment": "// Disable tooltips when hovering a tab",
         "name": "ImGuiTabBarFlags_NoTooltip",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Resize tabs when they don't fit",
+        "comment": "// Resize tabs when they don't fit",
         "name": "ImGuiTabBarFlags_FittingPolicyResizeDown",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Add scroll buttons when tabs don't fit",
+        "comment": "// Add scroll buttons when tabs don't fit",
         "name": "ImGuiTabBarFlags_FittingPolicyScroll",
         "value": "1 << 7"
       },
@@ -4049,25 +4049,25 @@
       },
       {
         "calc_value": 1048576,
-        "comment": " // Track whether p_open was set or not (we'll need this info on the next frame to recompute ContentWidth during layout)",
+        "comment": "// Track whether p_open was set or not (we'll need this info on the next frame to recompute ContentWidth during layout)",
         "name": "ImGuiTabItemFlags_NoCloseButton",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // Used by TabItemButton, change the tab item behavior to mimic a button",
+        "comment": "// Used by TabItemButton, change the tab item behavior to mimic a button",
         "name": "ImGuiTabItemFlags_Button",
         "value": "1 << 21"
       },
       {
         "calc_value": 4194304,
-        "comment": " // [Docking] Trailing tabs with the _Unsorted flag will be sorted based on the DockOrder of their Window.",
+        "comment": "// [Docking] Trailing tabs with the _Unsorted flag will be sorted based on the DockOrder of their Window.",
         "name": "ImGuiTabItemFlags_Unsorted",
         "value": "1 << 22"
       },
       {
         "calc_value": 8388608,
-        "comment": " // [Docking] Display tab shape for docking preview (height is adjusted slightly to compensate for the yet missing tab bar)",
+        "comment": "// [Docking] Display tab shape for docking preview (height is adjusted slightly to compensate for the yet missing tab bar)",
         "name": "ImGuiTabItemFlags_Preview",
         "value": "1 << 23"
       }
@@ -4080,49 +4080,49 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Display a dot next to the title + tab is selected when clicking the X + closure is not assumed (will wait for user to stop submitting the tab). Otherwise closure is assumed when pressing the X, so if you keep submitting the tab may reappear at end of tab bar.",
+        "comment": "// Display a dot next to the title + tab is selected when clicking the X + closure is not assumed (will wait for user to stop submitting the tab). Otherwise closure is assumed when pressing the X, so if you keep submitting the tab may reappear at end of tab bar.",
         "name": "ImGuiTabItemFlags_UnsavedDocument",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Trigger flag to programmatically make the tab selected when calling BeginTabItem()",
+        "comment": "// Trigger flag to programmatically make the tab selected when calling BeginTabItem()",
         "name": "ImGuiTabItemFlags_SetSelected",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Disable behavior of closing tabs (that are submitted with p_open != NULL) with middle mouse button. You can still repro this behavior on user's side with if (IsItemHovered() && IsMouseClicked(2)) *p_open = false.",
+        "comment": "// Disable behavior of closing tabs (that are submitted with p_open != NULL) with middle mouse button. You can still repro this behavior on user's side with if (IsItemHovered() && IsMouseClicked(2)) *p_open = false.",
         "name": "ImGuiTabItemFlags_NoCloseWithMiddleMouseButton",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Don't call PushID(tab->ID)/PopID() on BeginTabItem()/EndTabItem()",
+        "comment": "// Don't call PushID(tab->ID)/PopID() on BeginTabItem()/EndTabItem()",
         "name": "ImGuiTabItemFlags_NoPushId",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Disable tooltip for the given tab",
+        "comment": "// Disable tooltip for the given tab",
         "name": "ImGuiTabItemFlags_NoTooltip",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Disable reordering this tab or having another tab cross over this tab",
+        "comment": "// Disable reordering this tab or having another tab cross over this tab",
         "name": "ImGuiTabItemFlags_NoReorder",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Enforce the tab position to the left of the tab bar (after the tab list popup button)",
+        "comment": "// Enforce the tab position to the left of the tab bar (after the tab list popup button)",
         "name": "ImGuiTabItemFlags_Leading",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Enforce the tab position to the right of the tab bar (before the scrolling buttons)",
+        "comment": "// Enforce the tab position to the right of the tab bar (before the scrolling buttons)",
         "name": "ImGuiTabItemFlags_Trailing",
         "value": "1 << 7"
       }
@@ -4135,19 +4135,19 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Set row background color 0 (generally used for background, automatically set when ImGuiTableFlags_RowBg is used)",
+        "comment": "// Set row background color 0 (generally used for background, automatically set when ImGuiTableFlags_RowBg is used)",
         "name": "ImGuiTableBgTarget_RowBg0",
         "value": "1"
       },
       {
         "calc_value": 2,
-        "comment": " // Set row background color 1 (generally used for selection marking)",
+        "comment": "// Set row background color 1 (generally used for selection marking)",
         "name": "ImGuiTableBgTarget_RowBg1",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "comment": " // Set cell background color (top-most color)",
+        "comment": "// Set cell background color (top-most color)",
         "name": "ImGuiTableBgTarget_CellBg",
         "value": "3"
       }
@@ -4160,133 +4160,133 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Overriding/master disable flag: hide column, won't show in context menu (unlike calling TableSetColumnEnabled() which manipulates the user accessible state)",
+        "comment": "// Overriding/master disable flag: hide column, won't show in context menu (unlike calling TableSetColumnEnabled() which manipulates the user accessible state)",
         "name": "ImGuiTableColumnFlags_Disabled",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Default as a hidden/disabled column.",
+        "comment": "// Default as a hidden/disabled column.",
         "name": "ImGuiTableColumnFlags_DefaultHide",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Default as a sorting column.",
+        "comment": "// Default as a sorting column.",
         "name": "ImGuiTableColumnFlags_DefaultSort",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Column will stretch. Preferable with horizontal scrolling disabled (default if table sizing policy is _SizingStretchSame or _SizingStretchProp).",
+        "comment": "// Column will stretch. Preferable with horizontal scrolling disabled (default if table sizing policy is _SizingStretchSame or _SizingStretchProp).",
         "name": "ImGuiTableColumnFlags_WidthStretch",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Column will not stretch. Preferable with horizontal scrolling enabled (default if table sizing policy is _SizingFixedFit and table is resizable).",
+        "comment": "// Column will not stretch. Preferable with horizontal scrolling enabled (default if table sizing policy is _SizingFixedFit and table is resizable).",
         "name": "ImGuiTableColumnFlags_WidthFixed",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Disable manual resizing.",
+        "comment": "// Disable manual resizing.",
         "name": "ImGuiTableColumnFlags_NoResize",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Disable manual reordering this column, this will also prevent other columns from crossing over this column.",
+        "comment": "// Disable manual reordering this column, this will also prevent other columns from crossing over this column.",
         "name": "ImGuiTableColumnFlags_NoReorder",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Disable ability to hide/disable this column.",
+        "comment": "// Disable ability to hide/disable this column.",
         "name": "ImGuiTableColumnFlags_NoHide",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Disable clipping for this column (all NoClip columns will render in a same draw command).",
+        "comment": "// Disable clipping for this column (all NoClip columns will render in a same draw command).",
         "name": "ImGuiTableColumnFlags_NoClip",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Disable ability to sort on this field (even if ImGuiTableFlags_Sortable is set on the table).",
+        "comment": "// Disable ability to sort on this field (even if ImGuiTableFlags_Sortable is set on the table).",
         "name": "ImGuiTableColumnFlags_NoSort",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Disable ability to sort in the ascending direction.",
+        "comment": "// Disable ability to sort in the ascending direction.",
         "name": "ImGuiTableColumnFlags_NoSortAscending",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Disable ability to sort in the descending direction.",
+        "comment": "// Disable ability to sort in the descending direction.",
         "name": "ImGuiTableColumnFlags_NoSortDescending",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // TableHeadersRow() will not submit label for this column. Convenient for some small columns. Name will still appear in context menu.",
+        "comment": "// TableHeadersRow() will not submit label for this column. Convenient for some small columns. Name will still appear in context menu.",
         "name": "ImGuiTableColumnFlags_NoHeaderLabel",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // Disable header text width contribution to automatic column width.",
+        "comment": "// Disable header text width contribution to automatic column width.",
         "name": "ImGuiTableColumnFlags_NoHeaderWidth",
         "value": "1 << 13"
       },
       {
         "calc_value": 16384,
-        "comment": " // Make the initial sort direction Ascending when first sorting on this column (default).",
+        "comment": "// Make the initial sort direction Ascending when first sorting on this column (default).",
         "name": "ImGuiTableColumnFlags_PreferSortAscending",
         "value": "1 << 14"
       },
       {
         "calc_value": 32768,
-        "comment": " // Make the initial sort direction Descending when first sorting on this column.",
+        "comment": "// Make the initial sort direction Descending when first sorting on this column.",
         "name": "ImGuiTableColumnFlags_PreferSortDescending",
         "value": "1 << 15"
       },
       {
         "calc_value": 65536,
-        "comment": " // Use current Indent value when entering cell (default for column 0).",
+        "comment": "// Use current Indent value when entering cell (default for column 0).",
         "name": "ImGuiTableColumnFlags_IndentEnable",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " // Ignore current Indent value when entering cell (default for columns > 0). Indentation changes _within_ the cell will still be honored.",
+        "comment": "// Ignore current Indent value when entering cell (default for columns > 0). Indentation changes _within_ the cell will still be honored.",
         "name": "ImGuiTableColumnFlags_IndentDisable",
         "value": "1 << 17"
       },
       {
         "calc_value": 16777216,
-        "comment": " // Status: is enabled == not hidden by user/api (referred to as \"Hide\" in _DefaultHide and _NoHide) flags.",
+        "comment": "// Status: is enabled == not hidden by user/api (referred to as \"Hide\" in _DefaultHide and _NoHide) flags.",
         "name": "ImGuiTableColumnFlags_IsEnabled",
         "value": "1 << 24"
       },
       {
         "calc_value": 33554432,
-        "comment": " // Status: is visible == is enabled AND not clipped by scrolling.",
+        "comment": "// Status: is visible == is enabled AND not clipped by scrolling.",
         "name": "ImGuiTableColumnFlags_IsVisible",
         "value": "1 << 25"
       },
       {
         "calc_value": 67108864,
-        "comment": " // Status: is currently part of the sort specs",
+        "comment": "// Status: is currently part of the sort specs",
         "name": "ImGuiTableColumnFlags_IsSorted",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // Status: is hovered by mouse",
+        "comment": "// Status: is hovered by mouse",
         "name": "ImGuiTableColumnFlags_IsHovered",
         "value": "1 << 27"
       },
@@ -4307,7 +4307,7 @@
       },
       {
         "calc_value": 1073741824,
-        "comment": " // [Internal] Disable user resizing this column directly (it may however we resized indirectly from its left edge)",
+        "comment": "// [Internal] Disable user resizing this column directly (it may however we resized indirectly from its left edge)",
         "name": "ImGuiTableColumnFlags_NoDirectResize_",
         "value": "1 << 30"
       }
@@ -4320,205 +4320,205 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Enable resizing columns.",
+        "comment": "// Enable resizing columns.",
         "name": "ImGuiTableFlags_Resizable",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Enable reordering columns in header row (need calling TableSetupColumn() + TableHeadersRow() to display headers)",
+        "comment": "// Enable reordering columns in header row (need calling TableSetupColumn() + TableHeadersRow() to display headers)",
         "name": "ImGuiTableFlags_Reorderable",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Enable hiding/disabling columns in context menu.",
+        "comment": "// Enable hiding/disabling columns in context menu.",
         "name": "ImGuiTableFlags_Hideable",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Enable sorting. Call TableGetSortSpecs() to obtain sort specs. Also see ImGuiTableFlags_SortMulti and ImGuiTableFlags_SortTristate.",
+        "comment": "// Enable sorting. Call TableGetSortSpecs() to obtain sort specs. Also see ImGuiTableFlags_SortMulti and ImGuiTableFlags_SortTristate.",
         "name": "ImGuiTableFlags_Sortable",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Disable persisting columns order, width and sort settings in the .ini file.",
+        "comment": "// Disable persisting columns order, width and sort settings in the .ini file.",
         "name": "ImGuiTableFlags_NoSavedSettings",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Right-click on columns body/contents will display table context menu. By default it is available in TableHeadersRow().",
+        "comment": "// Right-click on columns body/contents will display table context menu. By default it is available in TableHeadersRow().",
         "name": "ImGuiTableFlags_ContextMenuInBody",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Set each RowBg color with ImGuiCol_TableRowBg or ImGuiCol_TableRowBgAlt (equivalent of calling TableSetBgColor with ImGuiTableBgFlags_RowBg0 on each row manually)",
+        "comment": "// Set each RowBg color with ImGuiCol_TableRowBg or ImGuiCol_TableRowBgAlt (equivalent of calling TableSetBgColor with ImGuiTableBgFlags_RowBg0 on each row manually)",
         "name": "ImGuiTableFlags_RowBg",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Draw horizontal borders between rows.",
+        "comment": "// Draw horizontal borders between rows.",
         "name": "ImGuiTableFlags_BordersInnerH",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Draw horizontal borders at the top and bottom.",
+        "comment": "// Draw horizontal borders at the top and bottom.",
         "name": "ImGuiTableFlags_BordersOuterH",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Draw vertical borders between columns.",
+        "comment": "// Draw vertical borders between columns.",
         "name": "ImGuiTableFlags_BordersInnerV",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Draw vertical borders on the left and right sides.",
+        "comment": "// Draw vertical borders on the left and right sides.",
         "name": "ImGuiTableFlags_BordersOuterV",
         "value": "1 << 10"
       },
       {
         "calc_value": 384,
-        "comment": " // Draw horizontal borders.",
+        "comment": "// Draw horizontal borders.",
         "name": "ImGuiTableFlags_BordersH",
         "value": "ImGuiTableFlags_BordersInnerH | ImGuiTableFlags_BordersOuterH"
       },
       {
         "calc_value": 1536,
-        "comment": " // Draw vertical borders.",
+        "comment": "// Draw vertical borders.",
         "name": "ImGuiTableFlags_BordersV",
         "value": "ImGuiTableFlags_BordersInnerV | ImGuiTableFlags_BordersOuterV"
       },
       {
         "calc_value": 640,
-        "comment": " // Draw inner borders.",
+        "comment": "// Draw inner borders.",
         "name": "ImGuiTableFlags_BordersInner",
         "value": "ImGuiTableFlags_BordersInnerV | ImGuiTableFlags_BordersInnerH"
       },
       {
         "calc_value": 1280,
-        "comment": " // Draw outer borders.",
+        "comment": "// Draw outer borders.",
         "name": "ImGuiTableFlags_BordersOuter",
         "value": "ImGuiTableFlags_BordersOuterV | ImGuiTableFlags_BordersOuterH"
       },
       {
         "calc_value": 1920,
-        "comment": " // Draw all borders.",
+        "comment": "// Draw all borders.",
         "name": "ImGuiTableFlags_Borders",
         "value": "ImGuiTableFlags_BordersInner | ImGuiTableFlags_BordersOuter"
       },
       {
         "calc_value": 2048,
-        "comment": " // [ALPHA] Disable vertical borders in columns Body (borders will always appears in Headers). -> May move to style",
+        "comment": "// [ALPHA] Disable vertical borders in columns Body (borders will always appears in Headers). -> May move to style",
         "name": "ImGuiTableFlags_NoBordersInBody",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // [ALPHA] Disable vertical borders in columns Body until hovered for resize (borders will always appears in Headers). -> May move to style",
+        "comment": "// [ALPHA] Disable vertical borders in columns Body until hovered for resize (borders will always appears in Headers). -> May move to style",
         "name": "ImGuiTableFlags_NoBordersInBodyUntilResize",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable), matching contents width.",
+        "comment": "// Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable), matching contents width.",
         "name": "ImGuiTableFlags_SizingFixedFit",
         "value": "1 << 13"
       },
       {
         "calc_value": 16384,
-        "comment": " // Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable), matching the maximum contents width of all columns. Implicitly enable ImGuiTableFlags_NoKeepColumnsVisible.",
+        "comment": "// Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable), matching the maximum contents width of all columns. Implicitly enable ImGuiTableFlags_NoKeepColumnsVisible.",
         "name": "ImGuiTableFlags_SizingFixedSame",
         "value": "2 << 13"
       },
       {
         "calc_value": 24576,
-        "comment": " // Columns default to _WidthStretch with default weights proportional to each columns contents widths.",
+        "comment": "// Columns default to _WidthStretch with default weights proportional to each columns contents widths.",
         "name": "ImGuiTableFlags_SizingStretchProp",
         "value": "3 << 13"
       },
       {
         "calc_value": 32768,
-        "comment": " // Columns default to _WidthStretch with default weights all equal, unless overridden by TableSetupColumn().",
+        "comment": "// Columns default to _WidthStretch with default weights all equal, unless overridden by TableSetupColumn().",
         "name": "ImGuiTableFlags_SizingStretchSame",
         "value": "4 << 13"
       },
       {
         "calc_value": 65536,
-        "comment": " // Make outer width auto-fit to columns, overriding outer_size.x value. Only available when ScrollX/ScrollY are disabled and Stretch columns are not used.",
+        "comment": "// Make outer width auto-fit to columns, overriding outer_size.x value. Only available when ScrollX/ScrollY are disabled and Stretch columns are not used.",
         "name": "ImGuiTableFlags_NoHostExtendX",
         "value": "1 << 16"
       },
       {
         "calc_value": 131072,
-        "comment": " // Make outer height stop exactly at outer_size.y (prevent auto-extending table past the limit). Only available when ScrollX/ScrollY are disabled. Data below the limit will be clipped and not visible.",
+        "comment": "// Make outer height stop exactly at outer_size.y (prevent auto-extending table past the limit). Only available when ScrollX/ScrollY are disabled. Data below the limit will be clipped and not visible.",
         "name": "ImGuiTableFlags_NoHostExtendY",
         "value": "1 << 17"
       },
       {
         "calc_value": 262144,
-        "comment": " // Disable keeping column always minimally visible when ScrollX is off and table gets too small. Not recommended if columns are resizable.",
+        "comment": "// Disable keeping column always minimally visible when ScrollX is off and table gets too small. Not recommended if columns are resizable.",
         "name": "ImGuiTableFlags_NoKeepColumnsVisible",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " // Disable distributing remainder width to stretched columns (width allocation on a 100-wide table with 3 columns: Without this flag: 33,33,34. With this flag: 33,33,33). With larger number of columns, resizing will appear to be less smooth.",
+        "comment": "// Disable distributing remainder width to stretched columns (width allocation on a 100-wide table with 3 columns: Without this flag: 33,33,34. With this flag: 33,33,33). With larger number of columns, resizing will appear to be less smooth.",
         "name": "ImGuiTableFlags_PreciseWidths",
         "value": "1 << 19"
       },
       {
         "calc_value": 1048576,
-        "comment": " // Disable clipping rectangle for every individual columns (reduce draw command count, items will be able to overflow into other columns). Generally incompatible with TableSetupScrollFreeze().",
+        "comment": "// Disable clipping rectangle for every individual columns (reduce draw command count, items will be able to overflow into other columns). Generally incompatible with TableSetupScrollFreeze().",
         "name": "ImGuiTableFlags_NoClip",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // Default if BordersOuterV is on. Enable outer-most padding. Generally desirable if you have headers.",
+        "comment": "// Default if BordersOuterV is on. Enable outer-most padding. Generally desirable if you have headers.",
         "name": "ImGuiTableFlags_PadOuterX",
         "value": "1 << 21"
       },
       {
         "calc_value": 4194304,
-        "comment": " // Default if BordersOuterV is off. Disable outer-most padding.",
+        "comment": "// Default if BordersOuterV is off. Disable outer-most padding.",
         "name": "ImGuiTableFlags_NoPadOuterX",
         "value": "1 << 22"
       },
       {
         "calc_value": 8388608,
-        "comment": " // Disable inner padding between columns (double inner padding if BordersOuterV is on, single inner padding if BordersOuterV is off).",
+        "comment": "// Disable inner padding between columns (double inner padding if BordersOuterV is on, single inner padding if BordersOuterV is off).",
         "name": "ImGuiTableFlags_NoPadInnerX",
         "value": "1 << 23"
       },
       {
         "calc_value": 16777216,
-        "comment": " // Enable horizontal scrolling. Require 'outer_size' parameter of BeginTable() to specify the container size. Changes default sizing policy. Because this create a child window, ScrollY is currently generally recommended when using ScrollX.",
+        "comment": "// Enable horizontal scrolling. Require 'outer_size' parameter of BeginTable() to specify the container size. Changes default sizing policy. Because this create a child window, ScrollY is currently generally recommended when using ScrollX.",
         "name": "ImGuiTableFlags_ScrollX",
         "value": "1 << 24"
       },
       {
         "calc_value": 33554432,
-        "comment": " // Enable vertical scrolling. Require 'outer_size' parameter of BeginTable() to specify the container size.",
+        "comment": "// Enable vertical scrolling. Require 'outer_size' parameter of BeginTable() to specify the container size.",
         "name": "ImGuiTableFlags_ScrollY",
         "value": "1 << 25"
       },
       {
         "calc_value": 67108864,
-        "comment": " // Hold shift when clicking headers to sort on multiple column. TableGetSortSpecs() may return specs where (SpecsCount > 1).",
+        "comment": "// Hold shift when clicking headers to sort on multiple column. TableGetSortSpecs() may return specs where (SpecsCount > 1).",
         "name": "ImGuiTableFlags_SortMulti",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // Allow no sorting, disable default sorting. TableGetSortSpecs() may return specs where (SpecsCount == 0).",
+        "comment": "// Allow no sorting, disable default sorting. TableGetSortSpecs() may return specs where (SpecsCount == 0).",
         "name": "ImGuiTableFlags_SortTristate",
         "value": "1 << 27"
       },
@@ -4536,7 +4536,7 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Identify header row (set default background color + width of its contents accounted differently for auto column width)",
+        "comment": "// Identify header row (set default background color + width of its contents accounted differently for auto column width)",
         "name": "ImGuiTableRowFlags_Headers",
         "value": "1 << 0"
       }
@@ -4561,7 +4561,7 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Override will clear/ignore previously submitted tooltip (defaults to append)",
+        "comment": "// Override will clear/ignore previously submitted tooltip (defaults to append)",
         "name": "ImGuiTooltipFlags_OverridePreviousTooltip",
         "value": "1 << 0"
       }
@@ -4581,85 +4581,85 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Draw as selected",
+        "comment": "// Draw as selected",
         "name": "ImGuiTreeNodeFlags_Selected",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Draw frame with background (e.g. for CollapsingHeader)",
+        "comment": "// Draw frame with background (e.g. for CollapsingHeader)",
         "name": "ImGuiTreeNodeFlags_Framed",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Hit testing to allow subsequent widgets to overlap this one",
+        "comment": "// Hit testing to allow subsequent widgets to overlap this one",
         "name": "ImGuiTreeNodeFlags_AllowItemOverlap",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Don't do a TreePush() when open (e.g. for CollapsingHeader) = no extra indent nor pushing on ID stack",
+        "comment": "// Don't do a TreePush() when open (e.g. for CollapsingHeader) = no extra indent nor pushing on ID stack",
         "name": "ImGuiTreeNodeFlags_NoTreePushOnOpen",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Don't automatically and temporarily open node when Logging is active (by default logging will automatically open tree nodes)",
+        "comment": "// Don't automatically and temporarily open node when Logging is active (by default logging will automatically open tree nodes)",
         "name": "ImGuiTreeNodeFlags_NoAutoOpenOnLog",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Default node to be open",
+        "comment": "// Default node to be open",
         "name": "ImGuiTreeNodeFlags_DefaultOpen",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Need double-click to open node",
+        "comment": "// Need double-click to open node",
         "name": "ImGuiTreeNodeFlags_OpenOnDoubleClick",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Only open when clicking on the arrow part. If ImGuiTreeNodeFlags_OpenOnDoubleClick is also set, single-click arrow or double-click all box to open.",
+        "comment": "// Only open when clicking on the arrow part. If ImGuiTreeNodeFlags_OpenOnDoubleClick is also set, single-click arrow or double-click all box to open.",
         "name": "ImGuiTreeNodeFlags_OpenOnArrow",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // No collapsing, no arrow (use as a convenience for leaf nodes).",
+        "comment": "// No collapsing, no arrow (use as a convenience for leaf nodes).",
         "name": "ImGuiTreeNodeFlags_Leaf",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Display a bullet instead of arrow",
+        "comment": "// Display a bullet instead of arrow",
         "name": "ImGuiTreeNodeFlags_Bullet",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Use FramePadding (even for an unframed text node) to vertically align text baseline to regular widget height. Equivalent to calling AlignTextToFramePadding().",
+        "comment": "// Use FramePadding (even for an unframed text node) to vertically align text baseline to regular widget height. Equivalent to calling AlignTextToFramePadding().",
         "name": "ImGuiTreeNodeFlags_FramePadding",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Extend hit box to the right-most edge, even if not framed. This is not the default in order to allow adding other items on the same line. In the future we may refactor the hit system to be front-to-back, allowing natural overlaps and then this can become the default.",
+        "comment": "// Extend hit box to the right-most edge, even if not framed. This is not the default in order to allow adding other items on the same line. In the future we may refactor the hit system to be front-to-back, allowing natural overlaps and then this can become the default.",
         "name": "ImGuiTreeNodeFlags_SpanAvailWidth",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Extend hit box to the left-most and right-most edges (bypass the indented area).",
+        "comment": "// Extend hit box to the left-most and right-most edges (bypass the indented area).",
         "name": "ImGuiTreeNodeFlags_SpanFullWidth",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // (WIP) Nav: left direction may move to this TreeNode() from any of its child (items submitted between TreeNode and TreePop)",
+        "comment": "// (WIP) Nav: left direction may move to this TreeNode() from any of its child (items submitted between TreeNode and TreePop)",
         "name": "ImGuiTreeNodeFlags_NavLeftJumpsBackHere",
         "value": "1 << 13"
       },
@@ -4677,79 +4677,79 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Represent a Platform Window",
+        "comment": "// Represent a Platform Window",
         "name": "ImGuiViewportFlags_IsPlatformWindow",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Represent a Platform Monitor (unused yet)",
+        "comment": "// Represent a Platform Monitor (unused yet)",
         "name": "ImGuiViewportFlags_IsPlatformMonitor",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Platform Window: is created/managed by the application (rather than a dear imgui backend)",
+        "comment": "// Platform Window: is created/managed by the application (rather than a dear imgui backend)",
         "name": "ImGuiViewportFlags_OwnedByApp",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Platform Window: Disable platform decorations: title bar, borders, etc. (generally set all windows, but if ImGuiConfigFlags_ViewportsDecoration is set we only set this on popups/tooltips)",
+        "comment": "// Platform Window: Disable platform decorations: title bar, borders, etc. (generally set all windows, but if ImGuiConfigFlags_ViewportsDecoration is set we only set this on popups/tooltips)",
         "name": "ImGuiViewportFlags_NoDecoration",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Platform Window: Disable platform task bar icon (generally set on popups/tooltips, or all windows if ImGuiConfigFlags_ViewportsNoTaskBarIcon is set)",
+        "comment": "// Platform Window: Disable platform task bar icon (generally set on popups/tooltips, or all windows if ImGuiConfigFlags_ViewportsNoTaskBarIcon is set)",
         "name": "ImGuiViewportFlags_NoTaskBarIcon",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Platform Window: Don't take focus when created.",
+        "comment": "// Platform Window: Don't take focus when created.",
         "name": "ImGuiViewportFlags_NoFocusOnAppearing",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Platform Window: Don't take focus when clicked on.",
+        "comment": "// Platform Window: Don't take focus when clicked on.",
         "name": "ImGuiViewportFlags_NoFocusOnClick",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Platform Window: Make mouse pass through so we can drag this window while peaking behind it.",
+        "comment": "// Platform Window: Make mouse pass through so we can drag this window while peaking behind it.",
         "name": "ImGuiViewportFlags_NoInputs",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Platform Window: Renderer doesn't need to clear the framebuffer ahead (because we will fill it entirely).",
+        "comment": "// Platform Window: Renderer doesn't need to clear the framebuffer ahead (because we will fill it entirely).",
         "name": "ImGuiViewportFlags_NoRendererClear",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Platform Window: Display on top (for tooltips only).",
+        "comment": "// Platform Window: Display on top (for tooltips only).",
         "name": "ImGuiViewportFlags_TopMost",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Platform Window: Window is minimized, can skip render. When minimized we tend to avoid using the viewport pos/size for clipping window or testing if they are contained in the viewport.",
+        "comment": "// Platform Window: Window is minimized, can skip render. When minimized we tend to avoid using the viewport pos/size for clipping window or testing if they are contained in the viewport.",
         "name": "ImGuiViewportFlags_Minimized",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Platform Window: Avoid merging this window into another host window. This can only be set via ImGuiWindowClass viewport flags override (because we need to now ahead if we are going to create a viewport in the first place!).",
+        "comment": "// Platform Window: Avoid merging this window into another host window. This can only be set via ImGuiWindowClass viewport flags override (because we need to now ahead if we are going to create a viewport in the first place!).",
         "name": "ImGuiViewportFlags_NoAutoMerge",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Main viewport: can host multiple imgui windows (secondary viewports are associated to a single window).",
+        "comment": "// Main viewport: can host multiple imgui windows (secondary viewports are associated to a single window).",
         "name": "ImGuiViewportFlags_CanHostOtherWindows",
         "value": "1 << 12"
       }
@@ -4799,127 +4799,127 @@
       },
       {
         "calc_value": 1,
-        "comment": " // Disable title-bar",
+        "comment": "// Disable title-bar",
         "name": "ImGuiWindowFlags_NoTitleBar",
         "value": "1 << 0"
       },
       {
         "calc_value": 2,
-        "comment": " // Disable user resizing with the lower-right grip",
+        "comment": "// Disable user resizing with the lower-right grip",
         "name": "ImGuiWindowFlags_NoResize",
         "value": "1 << 1"
       },
       {
         "calc_value": 4,
-        "comment": " // Disable user moving the window",
+        "comment": "// Disable user moving the window",
         "name": "ImGuiWindowFlags_NoMove",
         "value": "1 << 2"
       },
       {
         "calc_value": 8,
-        "comment": " // Disable scrollbars (window can still scroll with mouse or programmatically)",
+        "comment": "// Disable scrollbars (window can still scroll with mouse or programmatically)",
         "name": "ImGuiWindowFlags_NoScrollbar",
         "value": "1 << 3"
       },
       {
         "calc_value": 16,
-        "comment": " // Disable user vertically scrolling with mouse wheel. On child window, mouse wheel will be forwarded to the parent unless NoScrollbar is also set.",
+        "comment": "// Disable user vertically scrolling with mouse wheel. On child window, mouse wheel will be forwarded to the parent unless NoScrollbar is also set.",
         "name": "ImGuiWindowFlags_NoScrollWithMouse",
         "value": "1 << 4"
       },
       {
         "calc_value": 32,
-        "comment": " // Disable user collapsing window by double-clicking on it. Also referred to as Window Menu Button (e.g. within a docking node).",
+        "comment": "// Disable user collapsing window by double-clicking on it. Also referred to as Window Menu Button (e.g. within a docking node).",
         "name": "ImGuiWindowFlags_NoCollapse",
         "value": "1 << 5"
       },
       {
         "calc_value": 64,
-        "comment": " // Resize every window to its content every frame",
+        "comment": "// Resize every window to its content every frame",
         "name": "ImGuiWindowFlags_AlwaysAutoResize",
         "value": "1 << 6"
       },
       {
         "calc_value": 128,
-        "comment": " // Disable drawing background color (WindowBg, etc.) and outside border. Similar as using SetNextWindowBgAlpha(0.0f).",
+        "comment": "// Disable drawing background color (WindowBg, etc.) and outside border. Similar as using SetNextWindowBgAlpha(0.0f).",
         "name": "ImGuiWindowFlags_NoBackground",
         "value": "1 << 7"
       },
       {
         "calc_value": 256,
-        "comment": " // Never load/save settings in .ini file",
+        "comment": "// Never load/save settings in .ini file",
         "name": "ImGuiWindowFlags_NoSavedSettings",
         "value": "1 << 8"
       },
       {
         "calc_value": 512,
-        "comment": " // Disable catching mouse, hovering test with pass through.",
+        "comment": "// Disable catching mouse, hovering test with pass through.",
         "name": "ImGuiWindowFlags_NoMouseInputs",
         "value": "1 << 9"
       },
       {
         "calc_value": 1024,
-        "comment": " // Has a menu-bar",
+        "comment": "// Has a menu-bar",
         "name": "ImGuiWindowFlags_MenuBar",
         "value": "1 << 10"
       },
       {
         "calc_value": 2048,
-        "comment": " // Allow horizontal scrollbar to appear (off by default). You may use SetNextWindowContentSize(ImVec2(width,0.0f)); prior to calling Begin() to specify width. Read code in imgui_demo in the \"Horizontal Scrolling\" section.",
+        "comment": "// Allow horizontal scrollbar to appear (off by default). You may use SetNextWindowContentSize(ImVec2(width,0.0f)); prior to calling Begin() to specify width. Read code in imgui_demo in the \"Horizontal Scrolling\" section.",
         "name": "ImGuiWindowFlags_HorizontalScrollbar",
         "value": "1 << 11"
       },
       {
         "calc_value": 4096,
-        "comment": " // Disable taking focus when transitioning from hidden to visible state",
+        "comment": "// Disable taking focus when transitioning from hidden to visible state",
         "name": "ImGuiWindowFlags_NoFocusOnAppearing",
         "value": "1 << 12"
       },
       {
         "calc_value": 8192,
-        "comment": " // Disable bringing window to front when taking focus (e.g. clicking on it or programmatically giving it focus)",
+        "comment": "// Disable bringing window to front when taking focus (e.g. clicking on it or programmatically giving it focus)",
         "name": "ImGuiWindowFlags_NoBringToFrontOnFocus",
         "value": "1 << 13"
       },
       {
         "calc_value": 16384,
-        "comment": " // Always show vertical scrollbar (even if ContentSize.y < Size.y)",
+        "comment": "// Always show vertical scrollbar (even if ContentSize.y < Size.y)",
         "name": "ImGuiWindowFlags_AlwaysVerticalScrollbar",
         "value": "1 << 14"
       },
       {
         "calc_value": 32768,
-        "comment": " // Always show horizontal scrollbar (even if ContentSize.x < Size.x)",
+        "comment": "// Always show horizontal scrollbar (even if ContentSize.x < Size.x)",
         "name": "ImGuiWindowFlags_AlwaysHorizontalScrollbar",
         "value": "1<< 15"
       },
       {
         "calc_value": 65536,
-        "comment": " // Ensure child windows without border uses style.WindowPadding (ignored by default for non-bordered child windows, because more convenient)",
+        "comment": "// Ensure child windows without border uses style.WindowPadding (ignored by default for non-bordered child windows, because more convenient)",
         "name": "ImGuiWindowFlags_AlwaysUseWindowPadding",
         "value": "1 << 16"
       },
       {
         "calc_value": 262144,
-        "comment": " // No gamepad/keyboard navigation within the window",
+        "comment": "// No gamepad/keyboard navigation within the window",
         "name": "ImGuiWindowFlags_NoNavInputs",
         "value": "1 << 18"
       },
       {
         "calc_value": 524288,
-        "comment": " // No focusing toward this window with gamepad/keyboard navigation (e.g. skipped by CTRL+TAB)",
+        "comment": "// No focusing toward this window with gamepad/keyboard navigation (e.g. skipped by CTRL+TAB)",
         "name": "ImGuiWindowFlags_NoNavFocus",
         "value": "1 << 19"
       },
       {
         "calc_value": 1048576,
-        "comment": " // Display a dot next to the title. When used in a tab/docking context, tab is selected when clicking the X + closure is not assumed (will wait for user to stop submitting the tab). Otherwise closure is assumed when pressing the X, so if you keep submitting the tab may reappear at end of tab bar.",
+        "comment": "// Display a dot next to the title. When used in a tab/docking context, tab is selected when clicking the X + closure is not assumed (will wait for user to stop submitting the tab). Otherwise closure is assumed when pressing the X, so if you keep submitting the tab may reappear at end of tab bar.",
         "name": "ImGuiWindowFlags_UnsavedDocument",
         "value": "1 << 20"
       },
       {
         "calc_value": 2097152,
-        "comment": " // Disable docking of this window",
+        "comment": "// Disable docking of this window",
         "name": "ImGuiWindowFlags_NoDocking",
         "value": "1 << 21"
       },
@@ -4940,43 +4940,43 @@
       },
       {
         "calc_value": 8388608,
-        "comment": " // [BETA] On child window: allow gamepad/keyboard navigation to cross over parent border to this child or between sibling child windows.",
+        "comment": "// [BETA] On child window: allow gamepad/keyboard navigation to cross over parent border to this child or between sibling child windows.",
         "name": "ImGuiWindowFlags_NavFlattened",
         "value": "1 << 23"
       },
       {
         "calc_value": 16777216,
-        "comment": " // Don't use! For internal use by BeginChild()",
+        "comment": "// Don't use! For internal use by BeginChild()",
         "name": "ImGuiWindowFlags_ChildWindow",
         "value": "1 << 24"
       },
       {
         "calc_value": 33554432,
-        "comment": " // Don't use! For internal use by BeginTooltip()",
+        "comment": "// Don't use! For internal use by BeginTooltip()",
         "name": "ImGuiWindowFlags_Tooltip",
         "value": "1 << 25"
       },
       {
         "calc_value": 67108864,
-        "comment": " // Don't use! For internal use by BeginPopup()",
+        "comment": "// Don't use! For internal use by BeginPopup()",
         "name": "ImGuiWindowFlags_Popup",
         "value": "1 << 26"
       },
       {
         "calc_value": 134217728,
-        "comment": " // Don't use! For internal use by BeginPopupModal()",
+        "comment": "// Don't use! For internal use by BeginPopupModal()",
         "name": "ImGuiWindowFlags_Modal",
         "value": "1 << 27"
       },
       {
         "calc_value": 268435456,
-        "comment": " // Don't use! For internal use by BeginMenu()",
+        "comment": "// Don't use! For internal use by BeginMenu()",
         "name": "ImGuiWindowFlags_ChildMenu",
         "value": "1 << 28"
       },
       {
         "calc_value": 536870912,
-        "comment": " // Don't use! For internal use by Begin()/NewFrame()",
+        "comment": "// Don't use! For internal use by Begin()/NewFrame()",
         "name": "ImGuiWindowFlags_DockNodeHost",
         "value": "1 << 29"
       }

@@ -1732,6 +1732,7 @@ function M.Parser()
 		for j,line in ipairs(enumarr) do
 			local comment
 			line, comment = split_comment(line)
+			comment = comment and comment:gsub("^[^\n%S]*(//.-)$","%1") or nil
 			assert(line~="")
 			local name,value = line:match("%s*([%w_]+)%s*=%s*([^,]+)")
 			if value then
